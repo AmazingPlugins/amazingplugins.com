@@ -2,26 +2,26 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="WordPress Plugins That Actually Work" description="No crippled free versions, no bait-and-switch pricing. Just tools that save you time.">
+<BaseLayout title="Plugins That Actually Work — WooCommerce & Shopify" description="No crippled free versions, no bait-and-switch pricing. Just tools that save you time.">
 
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge">🚀 Free Plugin Available Now</div>
-      <h1 class="hero-title">WordPress plugins built<br />by a developer<br />who uses them.</h1>
+      <div class="hero-badge">🚀 Free Plugins Available Now</div>
+      <h1 class="hero-title">Plugins built<br />by a developer<br />who uses them.</h1>
       <p class="hero-sub">
         No crippled free versions. No bait-and-switch pricing.<br />
-        Just tools that save you time — starting with your WooCommerce store.
+        Just tools that save you time — for WooCommerce and Shopify stores.
       </p>
       <div class="hero-actions">
-        <a href="/plugins/woocommerce-accessibility-fixer" class="btn btn-primary btn-lg">
-          Get the Free Plugin →
-        </a>
-        <a href="/plugins" class="btn btn-outline btn-lg">
+        <a href="/plugins" class="btn btn-primary btn-lg">
           See All Plugins
         </a>
+        <a href="/plugins/shopify-accessibility-fixer" class="btn btn-outline btn-lg">
+          Shopify Accessibility Fixer
+        </a>
       </div>
-      <p class="hero-trust">Free plugin. No credit card. Works with WooCommerce 8.0+.</p>
+      <p class="hero-trust">Free versions that actually work. No credit card required.</p>
     </div>
   </section>
 
@@ -109,13 +109,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </article>
 
-        <article class="product-item coming-soon">
+        <article class="product-item">
           <div class="product-content">
-            <div class="product-badge badge-soon">Coming Soon</div>
-            <h3>Order Fixer for WooCommerce</h3>
-            <p>Edit orders without killing the math. Inline quantity edits, item removal, new item additions with variant search — all with automatic totals recalculation and audit logging. Because WooCommerce should let you fix honest mistakes.</p>
+            <div class="product-badge" style="background:#d1fae5;color:#065f46;">Free + Pro</div>
+            <h3>Shopify Accessibility Fixer</h3>
+            <p>The same 10 accessibility fixes, built for Shopify. Alt text, keyboard navigation, focus indicators, ARIA labels — all without an overlay. Real WCAG 2.1 AA compliance, not a JavaScript patch. Free version covers most stores. Pro adds batch scanning and PDF compliance reports.</p>
             <div class="product-actions">
-              <span class="btn btn-outline" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
+              <a href="/plugins/shopify-accessibility-fixer" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+          <div class="product-visual" aria-hidden="true">
+            <div class="visual-box">
+              <div class="visual-row"><span class="visual-dot green"></span>Alt text fixed</div>
+              <div class="visual-row"><span class="visual-dot green"></span>Keyboard nav improved</div>
+              <div class="visual-row"><span class="visual-dot green"></span>Focus indicators added</div>
+              <div class="visual-row"><span class="visual-dot green"></span>ARIA labels added</div>
+              <div class="visual-row"><span class="visual-dot green"></span>Color contrast checked</div>
+              <div class="visual-row muted">+5 more fixes</div>
             </div>
           </div>
         </article>
@@ -123,8 +133,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <article class="product-item coming-soon">
           <div class="product-content">
             <div class="product-badge badge-soon">Coming Soon</div>
-            <h3>WooCommerce Smart Bulk Editor</h3>
-            <p>The bulk editor WooCommerce should have shipped with. Inline edit, bulk operations, variation editing, preview before save, and one-click undo. Edit 10 products or 10,000 — same experience.</p>
+            <h3>Order Fixer for WooCommerce</h3>
+            <p>Edit orders without killing the math. Inline quantity edits, item removal, new item additions with variant search — all with automatic totals recalculation and audit logging. Because WooCommerce should let you fix honest mistakes.</p>
             <div class="product-actions">
               <span class="btn btn-outline" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
             </div>
@@ -139,9 +149,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section cta-section">
     <div class="container text-center">
       <h2>Stop doing data entry. Start shipping.</h2>
-      <p class="cta-sub">Your WooCommerce store deserves better than one-by-one editing.</p>
-      <a href="/plugins/woocommerce-accessibility-fixer" class="btn btn-primary btn-lg">
-        Get the Free Plugin →
+      <p class="cta-sub">Your store deserves better than one-by-one editing. Pick your platform and get started free.</p>
+      <a href="/plugins" class="btn btn-primary btn-lg">
+        Browse All Plugins →
       </a>
     </div>
   </section>

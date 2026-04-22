@@ -1,0 +1,399 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Shopify Accessibility Fixer"
+  description="Fix 10 common accessibility issues on your Shopify store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, and more. No overlays — real WCAG 2.1 AA compliance."
+>
+
+  <!-- Hero -->
+  <section class="plugin-hero">
+    <div class="container">
+      <div class="hero-badge-row">
+        <span class="badge badge-free">Free</span>
+        <span class="badge badge-pro">Pro $49/yr</span>
+      </div>
+      <h1>Shopify Accessibility Fixer</h1>
+      <p class="hero-desc">Fix 10 common accessibility issues on your Shopify store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, and more. No overlays — real WCAG 2.1 AA compliance.</p>
+      <div class="hero-actions">
+        <a href="#get-started" class="btn btn-primary btn-lg">
+          Install Free from Shopify App Store →
+        </a>
+      </div>
+      <p class="hero-note">Works with any Shopify theme. No developer account needed.</p>
+    </div>
+  </section>
+
+  <!-- What it fixes -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">10 Fixes, One Click</h2>
+      <p class="section-sub text-center">Same fixes as our WordPress plugin — adapted for Shopify's Liquid theme system and Storefront API.</p>
+
+      <div class="fixes-grid">
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🖼</div>
+          <h3>Alt Text for Product Images</h3>
+          <p>Auto-populates missing alt text on product images using the product title. Flags remaining gaps in your admin report.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">⌨</div>
+          <h3>Keyboard Navigation</h3>
+          <p>Fixes tab order traps in menus, modals, and drawers. All interactive elements are keyboard-accessible.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🔘</div>
+          <h3>Focus Indicators</h3>
+          <p>Injects visible focus CSS via theme Liquid snippets so keyboard users always know where they are.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🏷</div>
+          <h3>ARIA Form Labels</h3>
+          <p>Adds aria-label attributes to checkout and contact form inputs that lack visible labels.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🎨</div>
+          <h3>Color Contrast</h3>
+          <p>Scans your theme for text below WCAG AA contrast ratios (4.5:1) and flags issues in the dashboard.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">⬇</div>
+          <h3>Skip Links</h3>
+          <p>Injects a skip-to-content link as the first focusable element — standard WCAG requirement.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🔗</div>
+          <h3>Empty Button Text</h3>
+          <p>Adds aria-label to icon-only buttons so screen readers announce a meaningful action.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🌐</div>
+          <h3>Lang Attribute</h3>
+          <p>Ensures your theme's HTML document has the correct lang attribute for screen reader pronunciation.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">📝</div>
+          <h3>Link Distinguishing Text</h3>
+          <p>Flags duplicate "Read more" link text that confuses screen reader users who navigate by links.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🎯</div>
+          <h3>Accessible Input Names</h3>
+          <p>Adds accessible names to inputs that rely solely on placeholder text — a common screen reader issue.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why not overlays -->
+  <section class="section section-alt">
+    <div class="container" style="max-width: 720px;">
+      <h2 class="section-title">Why Not an Overlay?</h2>
+      <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: 1.5rem;">
+        Most accessibility tools in the Shopify App Store are JavaScript overlays — they sit on top of broken HTML and claim to "fix" accessibility without touching the underlying code. Courts have consistently rejected overlay compliance as evidence. The FTC fined accessiBe $1M in April 2025 specifically for this reason.
+      </p>
+      <p style="color: var(--color-text-light); line-height: 1.8;">
+        We fix the actual HTML. Our plugin modifies your Liquid theme templates and Storefront DOM — producing genuine, documentable WCAG 2.1 AA compliance. When your lawyer asks, you have a real audit trail.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">Simple, Honest Pricing</h2>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="plan-name">Free</div>
+          <div class="plan-price">$0 <span>/ forever</span></div>
+          <p class="plan-desc">All 10 fixers. Manual application. No store size limits.</p>
+          <ul class="plan-features">
+            <li>✓ All 10 accessibility fixers</li>
+            <li>✓ Manual fixer application</li>
+            <li>✓ Accessibility report</li>
+            <li>✓ No product or order limits</li>
+            <li>— Batch auto-fix (Pro)</li>
+            <li>— Priority support</li>
+          </ul>
+          <a href="#get-started" class="btn btn-outline">Install Free</a>
+        </div>
+
+        <div class="pricing-card pricing-featured">
+          <div class="plan-badge">Best Value</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">$49 <span>/ year</span></div>
+          <p class="plan-desc">Everything in Free, plus auto-fix mode, batch scanning, and PDF compliance report.</p>
+          <ul class="plan-features">
+            <li>✓ All 10 accessibility fixers</li>
+            <li>✓ Auto-fix mode</li>
+            <li>✓ Batch scan all products</li>
+            <li>✓ PDF compliance report</li>
+            <li>✓ No product or order limits</li>
+            <li>✓ Priority email support</li>
+          </ul>
+          <a href="#get-pro" class="btn btn-primary">Get Pro Access</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-name">Agency</div>
+          <div class="plan-price">$149 <span>/ year</span></div>
+          <p class="plan-desc">For agencies managing multiple client stores. White-label reports and bulk operations.</p>
+          <ul class="plan-features">
+            <li>✓ Everything in Pro</li>
+            <li>✓ Unlimited client stores</li>
+            <li>✓ White-label PDF reports</li>
+            <li>✓ API access for bulk ops</li>
+            <li>✓ Dedicated Slack support</li>
+          </ul>
+          <a href="#get-agency" class="btn btn-outline">Get Agency Access</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-alt">
+    <div class="container" style="max-width: 720px;">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q">Does this work with any Shopify theme?</summary>
+          <p class="faq-a">Yes. Our Liquid snippet injection targets standard Shopify theme hooks. If you use a well-coded theme (Dawn, Prestige, Turbo, etc.) it works out of the box. Custom themes may need minor adjustments — we're here to help.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Is this an overlay?</summary>
+          <p class="faq-a">No. We modify your actual theme HTML — Liquid templates and Storefront API output. No JavaScript injection overlay. This produces genuine WCAG 2.1 AA compliance, not a visual patch.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Will this slow down my store?</summary>
+          <p class="faq-a">No runtime performance impact. The fixers run at theme render time — they don't add client-side JavaScript to your storefront.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What's in the PDF compliance report?</summary>
+          <p class="faq-a">A full WCAG 2.1 AA audit of your store, listing every issue found, the specific criterion it violates, and the action the fixer took. Court-admissible documentation for EU EAA compliance.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Do I need a Shopify developer account?</summary>
+          <p class="faq-a">No. The app installs from the Shopify App Store like any other app. No custom setup, no developer tools required.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .plugin-hero {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(180deg, #f0fdf4 0%, #fff 100%);
+    text-align: center;
+  }
+
+  .hero-badge-row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+  }
+
+  .badge-free { background: #d1fae5; color: #065f46; }
+  .badge-pro { background: #dbeafe; color: #1e40af; }
+
+  .plugin-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    max-width: 55ch;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  .hero-note {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .section-sub {
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+  }
+
+  .fixes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .fix-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  .fix-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .fix-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .fix-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .pricing-featured {
+    border-color: #059669;
+    box-shadow: 0 0 0 4px rgba(5,150,105,0.1);
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #059669;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.875rem;
+    border-radius: 999px;
+  }
+
+  .plan-name {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .plan-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .plan-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+  }
+
+  .plan-desc {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .plan-features li {
+    color: var(--color-text-light);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-q {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-q::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  details[open] .faq-q::after {
+    content: '−';
+  }
+
+  .faq-a {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    padding-bottom: 1.25rem;
+    font-size: 0.9375rem;
+  }
+</style>
