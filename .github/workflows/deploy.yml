@@ -36,5 +36,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist/client --project-name=amazingplugins-com
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          CF_API_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+          wranglerVersion: '3'
