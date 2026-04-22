@@ -1,0 +1,114 @@
+---
+const navLinks = [
+  { href: '/plugins', label: 'Plugins' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/privacy', label: 'Privacy' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo" aria-label="AmazingPlugins Home">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#2563eb"/>
+        <path d="M16 6L8 10v6c0 5.55 3.4 10.74 8 12 4.6-1.26 8-6.45 8-12v-6l-8-4z" fill="white" opacity="0.9"/>
+        <path d="M12 15l3 3 5-5" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>AmazingPlugins</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        {navLinks.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
+              aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a href="https://wordpress.org/plugins/woocommerce-accessibility-fixer/" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+      Free Download
+    </a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .logo:hover {
+    text-decoration: none;
+    color: var(--color-primary);
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.5rem 0.875rem;
+    border-radius: var(--radius);
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--color-bg-alt);
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 640px) {
+    .nav-list {
+      display: none;
+    }
+  }
+</style>

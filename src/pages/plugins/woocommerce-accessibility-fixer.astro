@@ -1,0 +1,388 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="WooCommerce Accessibility Fixer"
+  description="Fix 10 common accessibility issues on your WooCommerce store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, and more."
+>
+
+  <!-- Hero -->
+  <section class="plugin-hero">
+    <div class="container">
+      <div class="hero-badge-row">
+        <span class="badge badge-free">Free</span>
+        <span class="badge badge-pro">Pro $19/mo</span>
+      </div>
+      <h1>WooCommerce Accessibility Fixer</h1>
+      <p class="hero-desc">Fix 10 common accessibility issues on your WooCommerce store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, color contrast, and more.</p>
+      <div class="hero-actions">
+        <a href="https://wordpress.org/plugins/woocommerce-accessibility-fixer/" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+          Install Free on WordPress.org →
+        </a>
+      </div>
+      <p class="hero-note">Works with WooCommerce 8.0+. No subscription required for the free version.</p>
+    </div>
+  </section>
+
+  <!-- What it fixes -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title text-center">10 Fixes, One Click</h2>
+      <p class="section-sub text-center">Each fixer runs independently. You choose what to apply.</p>
+
+      <div class="fixes-grid">
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🖼</div>
+          <h3>Alt Text for Product Images</h3>
+          <p>Automatically adds descriptive alt text to product images that are missing it. Uses the product name as fallback.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">⌨</div>
+          <h3>Keyboard Navigation</h3>
+          <p>Fixes tab order traps and ensures all interactive elements are reachable via keyboard.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🔘</div>
+          <h3>Focus Indicators</h3>
+          <p>Adds visible focus outlines to elements that lose their focus states when styled with CSS.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🏷</div>
+          <h3>ARIA Form Labels</h3>
+          <p>Adds aria-label attributes to form inputs that lack visible labels — checkout fields, search boxes, filter dropdowns.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🎨</div>
+          <h3>Color Contrast</h3>
+          <p>Detects text with contrast ratios below WCAG AA (4.5:1) and flags them for review.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">⬇</div>
+          <h3>Skip Links</h3>
+          <p>Injects skip-to-content links so keyboard users can bypass navigation and jump straight to the main content.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🔗</div>
+          <h3>Empty Button Text</h3>
+          <p>Finds buttons with no text content (icon-only) and adds accessible aria-label names.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🌐</div>
+          <h3>Lang Attribute</h3>
+          <p>Ensures the HTML document has a lang attribute set correctly for screen readers.</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">📝</div>
+          <h3>Link Distinguishing Text</h3>
+          <p>Flags links that use identical text but point to different destinations ("Read more" links, etc).</p>
+        </article>
+
+        <article class="fix-card">
+          <div class="fix-icon" aria-hidden="true">🎯</div>
+          <h3>Accessible Input Names</h3>
+          <p>Adds accessible names to inputs that rely solely on placeholder text — a common screen reader issue.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title text-center">Simple, Honest Pricing</h2>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <div class="plan-name">Free</div>
+          <div class="plan-price">$0 <span>/ forever</span></div>
+          <p class="plan-desc">All 10 fixers. Manual application. No limit on how many products you fix.</p>
+          <ul class="plan-features">
+            <li>✓ All 10 accessibility fixers</li>
+            <li>✓ Manual fixer application</li>
+            <li>✓ PDF accessibility report</li>
+            <li>✓ No product limits</li>
+            <li>— Batch scanning (Pro)</li>
+            <li>— Priority support</li>
+          </ul>
+          <a href="https://wordpress.org/plugins/woocommerce-accessibility-fixer/" class="btn btn-outline" target="_blank" rel="noopener">Download Free</a>
+        </div>
+
+        <div class="pricing-card pricing-featured">
+          <div class="plan-badge">Best Value</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">$19 <span>/ month</span></div>
+          <p class="plan-desc">Everything in Free, plus batch scanning, auto-fix mode, and priority support.</p>
+          <ul class="plan-features">
+            <li>✓ All 10 accessibility fixers</li>
+            <li>✓ Manual + auto-fix mode</li>
+            <li>✓ Batch scan all products</li>
+            <li>✓ PDF accessibility report</li>
+            <li>✓ No product limits</li>
+            <li>✓ Priority email support</li>
+          </ul>
+          <a href="#get-pro" class="btn btn-primary">Get Pro Access</a>
+        </div>
+
+        <div class="pricing-card">
+          <div class="plan-name">Agency</div>
+          <div class="plan-price">$49 <span>/ month</span></div>
+          <p class="plan-desc">For agencies managing multiple client stores. Same as Pro, for unlimited sites.</p>
+          <ul class="plan-features">
+            <li>✓ Everything in Pro</li>
+            <li>✓ Unlimited client sites</li>
+            <li>✓ White-label reports</li>
+            <li>✓ Priority Slack support</li>
+            <li>✓ Onboarding call</li>
+          </ul>
+          <a href="#get-agency" class="btn btn-outline">Get Agency Access</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container" style="max-width: 720px;">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-q">Does the free version have product limits?</summary>
+          <p class="faq-a">No. The free version applies all 10 fixers without any product cap. You can fix as many products as you want.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Will this slow down my store?</summary>
+          <p class="faq-a">No runtime performance impact. The fixers modify your HTML output — they don't add any JavaScript to your storefront.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Does it work with my theme?</summary>
+          <p class="faq-a">Yes. The plugin targets standard WooCommerce hooks and filters, so it works with any well-coded theme. Let us know if you hit a conflict.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Will it break my store?</summary>
+          <p class="faq-a">Each fixer is isolated and reversible. You can disable any fixer at any time from the admin panel.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What's in the PDF report?</summary>
+          <p class="faq-a">A full accessibility audit of your store, listing all issues found, their WCAG criterion, and the fixer's action taken.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .plugin-hero {
+    padding: 5rem 0 4rem;
+    background: linear-gradient(180deg, #eff6ff 0%, #fff 100%);
+    text-align: center;
+  }
+
+  .hero-badge-row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+  }
+
+  .badge-free { background: #d1fae5; color: #065f46; }
+  .badge-pro { background: #fef3c7; color: #92400e; }
+
+  .plugin-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-desc {
+    font-size: 1.125rem;
+    color: var(--color-text-light);
+    max-width: 55ch;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  .hero-note {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 0.75rem;
+  }
+
+  .section-sub {
+    color: var(--color-text-light);
+    margin-bottom: 3rem;
+  }
+
+  .fixes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .fix-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  .fix-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .fix-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .fix-card p {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Pricing */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+  }
+
+  .pricing-featured {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.1);
+  }
+
+  .plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.875rem;
+    border-radius: 999px;
+  }
+
+  .plan-name {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .plan-price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+  }
+
+  .plan-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+  }
+
+  .plan-desc {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .plan-features li {
+    color: var(--color-text-light);
+  }
+
+  /* FAQ */
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-q {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 1.25rem 0;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-q::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-q::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  details[open] .faq-q::after {
+    content: '−';
+  }
+
+  .faq-a {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    padding-bottom: 1.25rem;
+    font-size: 0.9375rem;
+  }
+</style>

@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Plugins" description="WordPress plugins built by a developer who uses them. No crippled free versions, no bait-and-switch pricing.">
+
+  <section class="section" style="padding-bottom: 2rem;">
+    <div class="container">
+      <h1>The Plugins</h1>
+      <p class="page-intro">Built for real WooCommerce stores. Free versions that actually work. No gimics.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" style="padding-top: 0;">
+    <div class="container">
+
+      <article class="plugin-card">
+        <div class="plugin-header">
+          <div>
+            <div class="plugin-badges">
+              <span class="badge badge-free">Free</span>
+              <span class="badge badge-pro">Pro $19/mo</span>
+            </div>
+            <h2>WooCommerce Accessibility Fixer</h2>
+            <p class="plugin-desc">Fix 10 common accessibility issues on your WooCommerce store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, color contrast, and more.</p>
+          </div>
+        </div>
+
+        <div class="fixer-grid">
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Missing alt text on product images</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Keyboard navigation traps</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Missing focus indicators</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Missing ARIA form labels</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Low color contrast text</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Missing skip links</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Empty button text</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Missing lang attribute</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Links without distinguishing text</span>
+          </div>
+          <div class="fixer-item">
+            <span class="fixer-check">✓</span>
+            <span>Missing accessible names on inputs</span>
+          </div>
+        </div>
+
+        <div class="plugin-actions">
+          <a href="/plugins/woocommerce-accessibility-fixer" class="btn btn-primary">View Full Details</a>
+          <a href="https://wordpress.org/plugins/woocommerce-accessibility-fixer/" class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
+        </div>
+      </article>
+
+      <div class="coming-soon-section">
+        <h2>Coming Soon</h2>
+        <div class="coming-grid">
+          <div class="coming-card">
+            <span class="badge badge-soon">Coming Soon</span>
+            <h3>Order Fixer for WooCommerce</h3>
+            <p>Edit orders inline: quantities, items, variants — with automatic totals recalculation and audit logging.</p>
+          </div>
+          <div class="coming-card">
+            <span class="badge badge-soon">Coming Soon</span>
+            <h3>WooCommerce Smart Bulk Editor</h3>
+            <p>Inline edit, bulk operations, variation editing, preview before save, one-click undo. Edit 10 or 10,000 products.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .page-intro {
+    color: var(--color-text-light);
+    font-size: 1.125rem;
+    margin-top: 0.75rem;
+  }
+
+  .plugin-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .plugin-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+  }
+
+  .badge-free {
+    background: #d1fae5;
+    color: #065f46;
+  }
+
+  .badge-pro {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .badge-soon {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  .plugin-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .plugin-desc {
+    color: var(--color-text-light);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    max-width: 65ch;
+    margin-bottom: 2rem;
+  }
+
+  .fixer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .fixer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    padding: 0.625rem 0.875rem;
+    background: var(--color-bg-alt);
+    border-radius: 6px;
+  }
+
+  .fixer-check {
+    color: #059669;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .plugin-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .coming-soon-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .coming-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .coming-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  .coming-card h3 {
+    font-size: 1.125rem;
+    margin: 0.75rem 0 0.5rem;
+  }
+
+  .coming-card p {
+    color: var(--color-text-light);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+</style>

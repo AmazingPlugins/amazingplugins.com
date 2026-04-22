@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Terms of Service" description="Terms of service for AmazingPlugins.">
+
+  <section class="section">
+    <div class="container prose">
+      <h1>Terms of Service</h1>
+      <p>Last updated: April 2026</p>
+
+      <h2>Use At Your Own Risk</h2>
+      <p>AmazingPlugins software is provided "as is". We test thoroughly, but your store is your responsibility. Always test on a staging site before applying fixers to production.</p>
+
+      <h2>License</h2>
+      <p>The free WordPress.org version is licensed under <strong>GPL v2</strong>. Pro versions are licensed per site, per month. One license grants one production site unless you have an Agency plan.</p>
+
+      <h2>Support</h2>
+      <p>Pro support is provided via email at <a href="mailto:info@amazingplugins.com">info@amazingplugins.com</a>. We aim to respond within 2 business days. Support does not include custom development or third-party theme compatibility fixes.</p>
+
+      <h2>Refunds</h2>
+      <p>Monthly plans can be cancelled at any time. We don't offer refunds for partial months. Annual plans have a 14-day money-back guarantee.</p>
+
+      <h2>Contact</h2>
+      <p><a href="mailto:info@amazingplugins.com">info@amazingplugins.com</a></p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 720px;
+  }
+
+  .prose h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose h2 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .prose a {
+    color: var(--color-primary);
+  }
+</style>

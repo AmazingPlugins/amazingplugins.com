@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy" description="Privacy policy for AmazingPlugins.">
+
+  <section class="section">
+    <div class="container prose">
+      <h1>Privacy Policy</h1>
+      <p>Last updated: April 2026</p>
+
+      <h2>What We Collect</h2>
+      <p>The WooCommerce Accessibility Fixer plugin collects <strong>anonymous usage statistics</strong> to improve the plugin — which fixers are run most, WooCommerce version, and error reports. No personal data, no product data, no URLs.</p>
+
+      <h2>第三方服务</h2>
+      <p>We use <strong>Resend</strong> for transactional emails (if you contact support) and <strong>WordPress.org</strong> for plugin distribution. Their privacy policies apply.</p>
+
+      <h2>Cookies</h2>
+      <p>This website uses no tracking cookies. The plugin uses no cookies.</p>
+
+      <h2>Data Retention</h2>
+      <p>We retain anonymous usage data for up to 12 months. You can request deletion of any data associated with your email by contacting <a href="mailto:info@amazingplugins.com">info@amazingplugins.com</a>.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy concerns: <a href="mailto:info@amazingplugins.com">info@amazingplugins.com</a></p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 720px;
+  }
+
+  .prose h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose h2 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .prose a {
+    color: var(--color-primary);
+  }
+</style>

@@ -1,0 +1,7 @@
+name = "amazingplugins-com"
+compatibility_date = "2026-04-21"
+account_id = "304e81247a32466dfc206e68d3c57943"
+
+[assets]
+directory = "dist/client"
+not_found_handling = "404-page"
