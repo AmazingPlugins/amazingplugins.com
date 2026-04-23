@@ -1,6 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AmazingPlugins",
+  "url": "https://amazingplugins.com",
+  "logo": "https://amazingplugins.com/favicon.svg",
+  "sameAs": [
+    "https://twitter.com/amazingplugins"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "support@amazingplugins.com",
+    "contactType": "customer support"
+  }
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "AmazingPlugins Products",
+  "itemListElement": [
+    {
+      "@type": "SoftwareApplication",
+      "position": 1,
+      "name": "WooCommerce Accessibility Fixer",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "WooCommerce",
+      "url": "https://amazingplugins.com/plugins/woocommerce-accessibility-fixer",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "position": 2,
+      "name": "Shopify Accessibility Fixer",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Shopify",
+      "url": "https://amazingplugins.com/plugins/shopify-accessibility-fixer",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
 
 <BaseLayout title="Plugins That Actually Work — WooCommerce & Shopify" description="No crippled free versions, no bait-and-switch pricing. Just tools that save you time.">
 

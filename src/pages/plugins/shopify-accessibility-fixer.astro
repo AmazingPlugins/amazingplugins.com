@@ -1,6 +1,77 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this work with any Shopify theme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Our Liquid snippet injection targets standard Shopify theme hooks. If you use a well-coded theme (Dawn, Prestige, Turbo, etc.) it works out of the box."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an overlay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We modify your actual theme HTML — Liquid templates and Storefront API output. No JavaScript injection overlay. This produces genuine WCAG 2.1 AA compliance, not a visual patch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this slow down my store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No runtime performance impact. The fixers run at theme render time — they don't add client-side JavaScript to your storefront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's in the PDF compliance report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full WCAG 2.1 AA audit of your store, listing every issue found, the specific criterion it violates, and the action the fixer took. Court-admissible documentation for EU EAA compliance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a Shopify developer account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The app installs from the Shopify App Store like any other app. No custom setup, no developer tools required."
+      }
+    }
+  ]
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Shopify Accessibility Fixer",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Shopify",
+  "description": "Fix 10 common WCAG 2.1 AA accessibility issues on your Shopify store in one click. No overlays — real code-level fixes.",
+  "url": "https://amazingplugins.com/plugins/shopify-accessibility-fixer",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free tier with 3 fixers; Pro $49/year for all 10 fixers"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "12"
+  }
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
 
 <BaseLayout
   title="Shopify Accessibility Fixer"

@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const generalFaqs = [
+  {
+    q: "What does WCAG 2.1 AA mean for my store?",
+    a: "WCAG 2.1 AA (Web Content Accessibility Guidelines) is the international standard for web accessibility. It requires things like alt text on images, keyboard navigation support, sufficient color contrast, and proper form labels. EN 301 549 (EU) and ADA Title III (US) both reference it. Meeting AA standards is the legal expectation for e-commerce stores in most jurisdictions.",
+  },
+  {
+    q: "Is this an overlay or JavaScript patch?",
+    a: "No. Both our WooCommerce plugin and Shopify app modify your actual HTML and CSS — they don't inject a JavaScript layer that sits on top of your page. Real code changes, real compliance documentation.",
+  },
+  {
+    q: "What happens when WooCommerce or Shopify updates?",
+    a: "Our fixers hook into platform-specific rendering events. If a platform update changes a hook or template pattern, some fixers might briefly pause and our system will flag which ones need re-verification. You can re-run a scan at any time from the dashboard.",
+  },
+  {
+    q: "Does the free version limit how many products I can fix?",
+    a: "No. The free version gives you all 10 fixers with no product cap. You can run as many scans and apply as many fixes as you want. The Pro upgrade adds PDF compliance reports, priority support, and multi-site management.",
+  },
+  {
+    q: "Will this slow down my store?",
+    a: "No runtime performance impact. The WooCommerce fixers run at PHP render time (server-side). The Shopify fixers run at Liquid template render time. Neither adds client-side JavaScript to your storefront.",
+  },
+  {
+    q: "What stores are most at risk of accessibility lawsuits?",
+    a: "US-based stores face the most ADA Title III litigation risk — demand letters and federal lawsuits targeting accessibility gaps are prolific, especially in California, New York, and Florida. EU-based stores face EN 301 549 and the EU Accessibility Act enforcement which began in June 2025. Both are real risks that good documentation (our PDF reports) helps mitigate.",
+  },
+];
+
+const wooFaqs = [
+  {
+    q: "Does it work with my theme?",
+    a: "Yes. The plugin targets standard WooCommerce hooks and filters. If your theme is well-coded and follows WooCommerce conventions, the fixers work automatically. If you hit a conflict, contact support with your theme name and we'll investigate.",
+  },
+  {
+    q: "Will it break my checkout?",
+    a: "No. Each fixer is fully isolated and reversible. You can disable any individual fixer from the WordPress admin panel at any time. We also log every change so you can audit what was applied.",
+  },
+  {
+    q: "How do I install it?",
+    a: "Search 'WooCommerce Accessibility Fixer' in your WordPress admin → Plugins → Add New, or download from wordpress.org and upload manually. Once activated, go to WooCommerce → Accessibility Fixer to run your first scan.",
+  },
+  {
+    q: "What WordPress and WooCommerce versions are supported?",
+    a: "Requires WordPress 5.8+ and WooCommerce 6.0+. Tested up to WordPress 6.4 and WooCommerce 8.x.",
+  },
+];
+
+const shopifyFaqs = [
+  {
+    q: "Does this work with any Shopify theme?",
+    a: "Yes. Our Liquid snippet injection targets standard Shopify theme hooks. If you use a well-coded theme (Dawn, Prestige, Turbo, etc.) it works out of the box. Custom themes may need minor verification.",
+  },
+  {
+    q: "Do I need a Shopify developer account?",
+    a: "No. The app installs from the Shopify App Store like any other app. No developer tools, no custom setup, no code required on your end.",
+  },
+  {
+    q: "How is the Shopify app different from the WooCommerce plugin?",
+    a: "Same fixer logic, same 10 fixes, same compliance reports. The difference is the integration layer — WooCommerce uses PHP hooks, Shopify uses Liquid template injection. Both produce real HTML/CSS changes, not overlays.",
+  },
+  {
+    q: "How do I install the Shopify app?",
+    a: "Search 'Accessibility Fixer' in the Shopify App Store, or visit amazingplugins.com and click the Shopify install link. You'll be redirected to authorize the app in your Shopify admin.",
+  },
+];
+---
+
+<BaseLayout
+  title="FAQ"
+  description="Frequently asked questions about AmazingPlugins accessibility fixers for WooCommerce and Shopify."
+>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Frequently Asked Questions</h1>
+      <p class="lead">Everything you need to know about making your store accessible.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container faq-container">
+      <details class="faq-item">
+        <summary class="faq-q">What regulations apply to my e-commerce store?</summary>
+        <p class="faq-a">In the US, <strong>ADA Title III</strong> is the main driver — courts have consistently ruled that commercial websites are "places of public accommodation." In the EU, <strong>EN 301 549</strong> and the <strong>EU Accessibility Act</strong> (enforced from June 2025) require WCAG 2.1 AA compliance for e-commerce. If you sell to customers in either jurisdiction, accessibility compliance applies to you.</p>
+      </details>
+
+      {generalFaqs.map(faq => (
+        <details class="faq-item">
+          <summary class="faq-q">{faq.q}</summary>
+          <p class="faq-a">{faq.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">WooCommerce Plugin</h2>
+      <div class="faq-container">
+        {wooFaqs.map(faq => (
+          <details class="faq-item">
+            <summary class="faq-q">{faq.q}</summary>
+            <p class="faq-a">{faq.a}</p>
+          </details>
+        ))}
+        <details class="faq-item">
+          <summary class="faq-q">What WordPress and WooCommerce versions are supported?</summary>
+          <p class="faq-a">Requires WordPress 5.8+ and WooCommerce 6.0+. Tested up to WordPress 6.4 and WooCommerce 8.x.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">How do I install it?</summary>
+          <p class="faq-a">Search 'WooCommerce Accessibility Fixer' in your WordPress admin → Plugins → Add New, or download from wordpress.org and upload manually. Once activated, go to <strong>WooCommerce → Accessibility Fixer</strong> to run your first scan.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Shopify App</h2>
+      <div class="faq-container">
+        {shopifyFaqs.map(faq => (
+          <details class="faq-item">
+            <summary class="faq-q">{faq.q}</summary>
+            <p class="faq-a">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cta">
+    <div class="container" style="text-align:center">
+      <h2>Still have questions?</h2>
+      <p style="margin: 1rem 0 2rem">Reach out and we'll get back to you within one business day.</p>
+      <a href="mailto:support@amazingplugins.com" class="btn btn-primary">Contact Support</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    background: var(--color-primary, #1e3a5f);
+    color: white;
+    padding: 5rem 0 4rem;
+    text-align: center;
+  }
+  .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+  .lead { font-size: 1.25rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+
+  .faq-container {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .faq-q {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: background 0.15s;
+  }
+  .faq-q::-webkit-details-marker { display: none; }
+  .faq-q::after { content: '+'; font-size: 1.5rem; color: var(--color-accent, #10b981); }
+  details[open] .faq-q::after { content: '−'; }
+  .faq-q:hover { background: #f9fafb; }
+
+  .faq-a {
+    padding: 1rem 1.25rem;
+    margin: 0;
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    color: #374151;
+    line-height: 1.7;
+  }
+
+  .section-cta {
+    background: #f0fdf4;
+    padding: 4rem 0;
+  }
+</style>

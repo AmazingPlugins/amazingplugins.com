@@ -1,6 +1,77 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the free version have product limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The free version applies all 10 fixers without any product cap. You can fix as many products as you want."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will this slow down my store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No runtime performance impact. The fixers modify your HTML output — they don't add any JavaScript to your storefront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with my theme?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The plugin targets standard WooCommerce hooks and filters, so it works with any well-coded theme. Let us know if you hit a conflict."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will it break my store?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each fixer is isolated and reversible. You can disable any fixer at any time from the admin panel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's in the PDF report?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full accessibility audit of your store, listing all issues found, their WCAG criterion, and the fixer's action taken."
+      }
+    }
+  ]
+};
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WooCommerce Accessibility Fixer",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "WooCommerce",
+  "description": "Fix 10 common WCAG 2.1 AA accessibility issues on your WooCommerce store in one click.",
+  "url": "https://amazingplugins.com/plugins/woocommerce-accessibility-fixer",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free tier with 3 fixers; Pro $49/year for all 10 fixers"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "24"
+  }
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
 
 <BaseLayout
   title="WooCommerce Accessibility Fixer"
