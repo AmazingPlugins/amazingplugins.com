@@ -25,7 +25,7 @@ export function getStaticPaths() {
 const { slug } = Astro.params;
 const { title, description, date, tag } = Astro.props;
 
-const allFiles = import.meta.glob('/Users/ray/Work/amazingplugins/docs/marketing/blog-*.md');
+const allFiles = import.meta.glob('../../../docs/marketing/blog-*.md');
 const entry = Object.entries(allFiles).find(([path]) => path.includes(slug));
 const mod = entry ? await entry[1]() : null;
 const raw = mod?.default ?? '';
