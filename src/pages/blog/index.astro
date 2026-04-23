@@ -1,104 +1,20 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const posts = [
-  {
-    slug: 'woocommerce-bulk-edit-plugins-compared',
-    title: 'The 6 Best WooCommerce Bulk Edit Plugins Compared (2026 Honest Review)',
-    excerpt: 'An honest ranking of the six most downloaded WooCommerce bulk edit plugins — with real performance tests, free version quality checks, and brutal notes on where each one breaks down.',
-    date: 'April 12, 2026',
-    readTime: '12 min read',
-    tag: 'WooCommerce',
-  },
-  {
-    slug: 'bulk-edit-woocommerce-product-prices',
-    title: 'How to Bulk Edit WooCommerce Product Prices (Without Breaking Your Store)',
-    excerpt: 'A practical guide to updating prices across your entire catalog — from simple price changes to percentage adjustments and sale price scheduling — without touching each product individually.',
-    date: 'April 13, 2026',
-    readTime: '8 min read',
-    tag: 'WooCommerce',
-  },
-  {
-    slug: 'bulk-edit-woocommerce-variations',
-    title: 'How to Bulk Edit WooCommerce Variations (The Right Way)',
-    excerpt: 'Variable products are the most powerful feature in WooCommerce — and the hardest to manage in bulk. Here is exactly how to edit them at scale without corrupting your product data.',
-    date: 'April 13, 2026',
-    readTime: '9 min read',
-    tag: 'WooCommerce',
-  },
-  {
-    slug: 'woocommerce-bulk-edit-not-working',
-    title: 'WooCommerce Bulk Edit Not Working? Here is Why (And How to Fix It)',
-    excerpt: 'The five most common reasons WooCommerce bulk editing fails — and what to do instead when your bulk actions timeout, silently skip products, or corrupt variation data.',
-    date: 'April 14, 2026',
-    readTime: '7 min read',
-    tag: 'Troubleshooting',
-  },
-  {
-    slug: 'woocommerce-ada-compliance',
-    title: 'How to Make Your WooCommerce Store ADA Compliant (2026 Guide)',
-    excerpt: 'The EU European Accessibility Act is now enforceable. Here is what WooCommerce store owners actually need to do to comply with WCAG 2.1 Level AA — and why overlay tools will not save you.',
-    date: 'April 15, 2026',
-    readTime: '14 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'shopify-store-accessibility',
-    title: 'How to Make Your Shopify Store Accessible (Step-by-Step)',
-    excerpt: 'A practical, non-technical guide to making your Shopify store meet WCAG 2.1 AA standards — covering alt text, keyboard navigation, color contrast, and the five issues that cause 80% of accessibility lawsuits.',
-    date: 'April 15, 2026',
-    readTime: '11 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'common-accessibility-issues-ecommerce',
-    title: '10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)',
-    excerpt: 'Based on WebAIM\'s analysis of 1 million websites — the 10 accessibility violations that appear most often on online stores, with specific fix instructions for each one.',
-    date: 'April 16, 2026',
-    readTime: '10 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'alt-text-keyboard-quick-wins',
-    title: 'Alt Text, Keyboard Navigation, and Other Quick Accessibility Wins',
-    excerpt: 'The five accessibility fixes that take less than 30 minutes each and will dramatically improve your store\'s WCAG compliance score — no developer required.',
-    date: 'April 16, 2026',
-    readTime: '6 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'prepare-woocommerce-store-ada-compliance',
-    title: 'How to Prepare Your WooCommerce Store for ADA Compliance (2026)',
-    excerpt: 'A practical checklist for WooCommerce store owners preparing for ADA and EAA compliance — covering the 10 most critical WCAG 2.1 AA criteria, with specific guidance for product pages, checkout, and navigation.',
-    date: 'April 17, 2026',
-    readTime: '13 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'wcag-2-1-aa-vs-aaa',
-    title: 'WCAG 2.1 AA vs AAA: What is the Real Difference for E-commerce?',
-    excerpt: 'Most e-commerce businesses only need Level AA compliance — but knowing exactly what Level AAA adds, and why it is rarely required, will save you from over-engineering your accessibility approach.',
-    date: 'April 17, 2026',
-    readTime: '8 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'hidden-accessibility-issues-costing-customers',
-    title: 'The Hidden Accessibility Issues Costing Your Store Customers',
-    excerpt: 'The accessibility problems that do not show up in automated scanners — and that are most likely to cost you both customers and legal exposure. Based on 200+ hours of accessibility audits.',
-    date: 'April 18, 2026',
-    readTime: '9 min read',
-    tag: 'Accessibility',
-  },
-  {
-    slug: 'keyboard-navigation-simplest-accessibility-win',
-    title: 'Keyboard Navigation: The Simplest Accessibility Win You Are Missing',
-    excerpt: 'Keyboard navigation is the single highest-impact accessibility fix for e-commerce — and it is almost entirely free to implement. Here is exactly what to do, with specific code examples for WooCommerce and Shopify.',
-    date: 'April 18, 2026',
-    readTime: '7 min read',
-    tag: 'Accessibility',
-  },
-];
+const allPosts = await getCollection('blog');
+const posts = allPosts
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .map(post => {
+    const slug = post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
+    return {
+      slug,
+      title: post.data.title,
+      description: post.data.description,
+      date: post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+      tag: post.data.tags?.[0] ?? 'Accessibility',
+    };
+  });
 ---
 
 <BaseLayout title="Blog" description="Guides, tutorials, and insights on WooCommerce, accessibility, and running an online store.">
@@ -118,7 +34,7 @@ const posts = [
             <h2 class="blog-card-title">
               <a href={`/blog/${post.slug}`}>{post.title}</a>
             </h2>
-            <p class="blog-card-excerpt">{post.excerpt}</p>
+            <p class="blog-card-excerpt">{post.description}</p>
             <a href={`/blog/${post.slug}`} class="blog-card-link">Read more →</a>
           </article>
         ))}
