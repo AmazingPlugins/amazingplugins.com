@@ -7,7 +7,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <div class="pricing-header">
         <h1>Free to start. No monthly fees.</h1>
-        <p>Every plugin starts free. Upgrade only when you need the features that actually matter.</p>
+        <p>Every plugin installs free. Upgrade only when you need the features that actually matter.</p>
       </div>
 
       <div class="pricing-grid">
@@ -15,70 +15,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <!-- WooCommerce Accessibility Fixer -->
         <div class="pricing-card">
           <div class="pricing-card-header">
+            <div class="plugin-badge">WordPress</div>
             <h2>WooCommerce Accessibility Fixer</h2>
             <p>WCAG 2.1 AA compliance for your store</p>
           </div>
-          <div class="pricing-price">
-            <span class="price-free">Free</span>
-            <span class="price-pro">Pro — $49<span>/year</span></span>
+          <div class="plan-summary">
+            <div class="plan-row">
+              <span class="plan-label">Free</span>
+              <span class="plan-desc">3 fixes, unlimited scans, basic reports</span>
+            </div>
+            <div class="plan-row pro">
+              <span class="plan-label">Pro</span>
+              <span class="plan-desc">All 10 fixes, PDF reports, auto-rescan, priority support</span>
+            </div>
           </div>
-          <ul class="pricing-features">
-            <li><strong>Free:</strong> 3 automatic fixes — skip links, focus indicators, product image alt text</li>
-            <li><strong>Free:</strong> Unlimited scans</li>
-            <li><strong>Free:</strong> Basic violation report</li>
-            <li><strong>Pro:</strong> All 10 automatic fixes</li>
-            <li><strong>Pro:</strong> PDF compliance report with WCAG citations</li>
-            <li><strong>Pro:</strong> Auto-rescan on theme updates</li>
-            <li><strong>Pro:</strong> Priority support</li>
-          </ul>
-          <a href="/plugins/woocommerce-accessibility-fixer" class="btn btn-primary">Learn more</a>
+          <a href="/plugins/woocommerce-accessibility-fixer#pricing" class="btn btn-primary">Get PRO</a>
+          <a href="/plugins/woocommerce-accessibility-fixer" class="btn btn-secondary">Learn more</a>
+        </div>
+
+        <!-- Shopify Accessibility Fixer -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <div class="plugin-badge shopify">Shopify</div>
+            <h2>Shopify Accessibility Fixer</h2>
+            <p>WCAG 2.1 AA compliance for Shopify stores</p>
+          </div>
+          <div class="plan-summary">
+            <div class="plan-row">
+              <span class="plan-label">Free</span>
+              <span class="plan-desc">3 fixes, unlimited scans, basic reports</span>
+            </div>
+            <div class="plan-row pro">
+              <span class="plan-label">Agency</span>
+              <span class="plan-desc">Unlimited stores, white-label reports, dedicated support</span>
+            </div>
+          </div>
+          <a href="/plugins/shopify-accessibility-fixer" class="btn btn-primary">Get PRO</a>
+          <a href="/plugins/shopify-accessibility-fixer" class="btn btn-secondary">Learn more</a>
         </div>
 
         <!-- WooCommerce Smart Bulk Editor -->
         <div class="pricing-card">
           <div class="pricing-card-header">
+            <div class="plugin-badge">WordPress</div>
             <h2>WooCommerce Smart Bulk Editor</h2>
             <p>Edit your entire catalog without the pain</p>
           </div>
-          <div class="pricing-price">
-            <span class="price-free">Free</span>
-            <span class="price-pro">Pro — $79<span>/year</span></span>
+          <div class="plan-summary">
+            <div class="plan-row">
+              <span class="plan-label">Free</span>
+              <span class="plan-desc">Inline editing, variation support, filter by anything</span>
+            </div>
+            <div class="plan-row pro">
+              <span class="plan-label">Pro</span>
+              <span class="plan-desc">Saved presets, scheduled operations, CSV import/export</span>
+            </div>
           </div>
-          <ul class="pricing-features">
-            <li><strong>Free:</strong> Inline spreadsheet editing for all core product fields</li>
-            <li><strong>Free:</strong> Variable product & variation editing</li>
-            <li><strong>Free:</strong> Filter by category, stock, price, keyword</li>
-            <li><strong>Free:</strong> Bulk price operations (fixed/percentage)</li>
-            <li><strong>Free:</strong> Single-step undo with preview</li>
-            <li><strong>Free:</strong> Up to 200 products per page</li>
-            <li><strong>Pro:</strong> Saved filter presets</li>
-            <li><strong>Pro:</strong> Scheduled bulk operations</li>
-            <li><strong>Pro:</strong> CSV import/export</li>
-            <li><strong>Pro:</strong> Multi-step rollback history</li>
-          </ul>
-          <a href="/plugins" class="btn btn-primary">Coming soon</a>
-        </div>
-
-        <!-- Shopify App -->
-        <div class="pricing-card">
-          <div class="pricing-card-header">
-            <h2>Shopify Accessibility Fixer</h2>
-            <p>WCAG 2.1 AA compliance for Shopify stores</p>
-          </div>
-          <div class="pricing-price">
-            <span class="price-free">Free</span>
-            <span class="price-pro">Pro — $49<span>/year</span></span>
-          </div>
-          <ul class="pricing-features">
-            <li><strong>Free:</strong> 3 automatic fixes — skip links, focus indicators, alt text</li>
-            <li><strong>Free:</strong> Unlimited scans</li>
-            <li><strong>Free:</strong> Basic violation report</li>
-            <li><strong>Pro:</strong> All 10 automatic fixes</li>
-            <li><strong>Pro:</strong> PDF compliance report for legal documentation</li>
-            <li><strong>Pro:</strong> Auto-rescan on theme publish</li>
-            <li><strong>Agency:</strong> Up to 25 stores, white-label reports</li>
-          </ul>
-          <a href="/plugins" class="btn btn-primary">Coming soon</a>
+          <div class="coming-soon-tag">Coming soon</div>
         </div>
 
       </div>
@@ -92,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="faq-item">
             <h3>Can I cancel anytime?</h3>
-            <p>Yes. Annual plans can be cancelled before renewal. Your plugin keeps working — you just lose Pro features at the end of the billing period.</p>
+            <p>Yes. Annual plans can be cancelled before renewal. Your plugin keeps working -- you just lose Pro features at the end of the billing period.</p>
           </div>
           <div class="faq-item">
             <h3>What happens to my data if I cancel?</h3>
@@ -100,7 +93,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
           <div class="faq-item">
             <h3>Do you offer refunds?</h3>
-            <p>Yes, within 14 days of purchase for any reason — just email support.</p>
+            <p>Yes, within 14 days of purchase for any reason -- just email support.</p>
           </div>
           <div class="faq-item">
             <h3>Can I use these on client stores?</h3>
@@ -150,74 +143,77 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .pricing-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .plugin-badge {
+    display: inline-block;
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: fit-content;
+  }
+
+  .plugin-badge.shopify {
+    background: #5C6AC4;
   }
 
   .pricing-card-header h2 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    margin: 0 0 0.5rem;
+    margin: 0;
   }
 
   .pricing-card-header p {
     color: var(--color-text-light);
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     margin: 0;
   }
 
-  .pricing-price {
+  .plan-summary {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid var(--color-border);
   }
 
-  .price-free {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--color-text);
-  }
-
-  .price-pro {
-    font-size: 1rem;
-    color: var(--color-text-light);
-    font-weight: 400;
-  }
-
-  .price-pro span {
-    font-weight: 600;
-  }
-
-  .pricing-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  .plan-row {
     display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    flex: 1;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    align-items: baseline;
   }
 
-  .pricing-features li {
-    font-size: 0.9rem;
-    color: var(--color-text);
-    padding-left: 1.25rem;
-    position: relative;
-  }
-
-  .pricing-features li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
+  .plan-row.pro .plan-label {
     color: var(--color-primary);
-    font-weight: 700;
   }
 
-  .pricing-features strong {
-    color: var(--color-heading);
+  .plan-label {
+    font-weight: 700;
+    min-width: 52px;
+    color: var(--color-text);
+  }
+
+  .plan-desc {
+    color: var(--color-text-light);
   }
 
   .btn {
-    display: inline-block;
+    display: block;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -226,7 +222,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     transition: all 0.2s;
     cursor: pointer;
     border: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .btn-primary {
@@ -236,6 +232,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   .btn-primary:hover {
     background: var(--color-primary-dark);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .coming-soon-tag {
+    display: inline-block;
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background: var(--color-bg-alt);
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px dashed var(--color-border);
   }
 
   .pricing-faq {
