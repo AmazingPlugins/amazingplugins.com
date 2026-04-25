@@ -1,7 +1,7 @@
 # Guest Post Pitch — The A11Y Project
 
 **Date:** 2026-04-13
-**Status:** Draft — ready to send
+**Status:** Pitch filed — https://github.com/a11yproject/a11yproject.com/issues/1651
 **Target:** The A11Y Project (a11yproject.com)
 **Content Type:** How-to
 

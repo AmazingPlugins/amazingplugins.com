@@ -1,7 +1,7 @@
 # AlternativeTo.net — Submission Draft
 **Product:** WooCommerce Accessibility Auto-Fixer
 **Date:** 2026-04-12
-**Status:** Draft — not yet submitted
+**Status:** Draft — ready to submit
 
 ---
 
@@ -18,7 +18,7 @@
 **Product Name:** WooCommerce Accessibility Auto-Fixer by AmazingPlugins
 **Tagline:** Code-level WCAG 2.1 AA compliance for WooCommerce — not an overlay
 **Website:** https://amazingplugins.com
-**Pricing:** Free (3 fixes) | Pro $19/mo
+**Pricing:** Free (3 fixes) | Pro $49/year
 
 ---
 
