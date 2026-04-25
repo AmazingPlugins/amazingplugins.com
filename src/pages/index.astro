@@ -1,413 +1,397 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "AmazingPlugins",
-  "url": "https://amazingplugins.com",
-  "logo": "https://amazingplugins.com/images/logo.png",
-  "sameAs": [
-    "https://twitter.com/amazingplugins"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "support@amazingplugins.com",
-    "contactType": "customer support"
-  }
-};
-
-const softwareSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "AmazingPlugins Products",
-  "itemListElement": [
-    {
-      "@type": "SoftwareApplication",
-      "position": 1,
-      "name": "WooCommerce Accessibility Fixer",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "WooCommerce",
-      "url": "https://amazingplugins.com/plugins/woocommerce-accessibility-fixer",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "position": 2,
-      "name": "Shopify Accessibility Fixer",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Shopify",
-      "url": "https://amazingplugins.com/plugins/shopify-accessibility-fixer",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
-    }
-  ]
-};
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
-
-<BaseLayout title="Plugins That Actually Work  --  WooCommerce & Shopify" description="No crippled free versions, no bait-and-switch pricing. Just tools that save you time.">
+<BaseLayout title="A house of plugins for Shopify and WooCommerce" description="Small, sharp tools that fix real problems for store owners. Some free, some paid, all crafted.">
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-badge">🚀 Free Plugins Available Now</div>
-      <h1 class="hero-title">Plugins built<br />by a developer<br />who uses them.</h1>
-      <p class="hero-sub">
-        No crippled free versions. No bait-and-switch pricing.<br />
-        Just tools that save you time  --  for WooCommerce and Shopify stores.
+  <section class="hero-wrap" id="hero-section">
+    <div class="ribbon-bg ribbon-anim" style="top:-120px;right:-200px;width:1100px;opacity:0.55;" aria-hidden="true">
+      <svg viewBox="0 0 1000 320" fill="none" width="1100">
+        <defs><linearGradient id="rg-a" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F4A93C" stop-opacity="0.9"/><stop offset="40%" stop-color="#F26B3A"/><stop offset="70%" stop-color="#E85A78"/><stop offset="100%" stop-color="#5B3A6B"/></linearGradient></defs>
+        <path d="M 50 200 Q 200 80 380 180 T 720 220 Q 880 240 950 120" stroke="url(#rg-a)" stroke-width="64" stroke-linecap="round" fill="none"/>
+        <path d="M 50 200 Q 200 80 380 180 T 720 220 Q 880 240 950 120" stroke="rgba(255,255,255,0.25)" stroke-width="20" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="ribbon-bg ribbon-anim" style="bottom:-200px;left:-150px;width:900px;opacity:0.22;animation-delay:2s;" aria-hidden="true">
+      <svg viewBox="0 0 1000 320" fill="none" width="900">
+        <defs><linearGradient id="rg-b" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F4A93C" stop-opacity="0.9"/><stop offset="40%" stop-color="#F26B3A"/><stop offset="70%" stop-color="#E85A78"/><stop offset="100%" stop-color="#5B3A6B"/></linearGradient></defs>
+        <path d="M 0 100 Q 200 220 400 140 T 800 200" stroke="url(#rg-b)" stroke-width="64" stroke-linecap="round" fill="none"/>
+        <path d="M 0 100 Q 200 220 400 140 T 800 200" stroke="rgba(255,255,255,0.25)" stroke-width="20" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="grain"></div>
+    <div class="wrap hero-content">
+      <div class="chip" style="margin-bottom:36px;">
+        <span class="chip-dot"></span>
+        <span>A small studio. Eight plugins. Two platforms.</span>
+      </div>
+      <h1 class="display hero-h1">
+        A <em>house</em> of plugins for Shopify and WooCommerce.
+      </h1>
+      <p class="lede hero-lede">
+        We build small, sharp tools that fix real problems for store owners. Some are free, some are paid, all are crafted with the patience of someone who runs a store too.
       </p>
-      <div class="hero-actions">
-        <a href="/plugins" class="btn btn-primary btn-lg">
-          See All Plugins
+      <div class="hero-btns">
+        <a href="/plugins" class="btn btn-primary" style="padding:16px 28px;font-size:16px;">
+          Browse plugins
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </a>
-        <a href="/plugins/shopify-accessibility-fixer" class="btn btn-outline btn-lg">
-          Shopify Accessibility Fixer
+        <a href="/pricing" class="btn btn-ghost" style="padding:16px 28px;font-size:16px;">
+          Get Pro
         </a>
-      </div>
-      <p class="hero-trust">Free versions that actually work. No credit card required.</p>
-    </div>
-  </section>
-
-  <!-- Pain -->
-  <section class="section section-alt pain-section">
-    <div class="container">
-      <div class="pain-card">
-        <p class="pain-text">
-          WooCommerce's built-in bulk editor times out, loses changes, and cannot touch variations.
-          You end up editing products one by one. That is not bulk editing.
-          That is data entry.
-        </p>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Stats -->
+  <section class="section" style="padding-top:40px;">
+    <div class="wrap">
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num count-up" data-target="12400">0<span class="unit">+</span></div>
+          <div class="stat-lbl">stores running our plugins</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">8</div>
+          <div class="stat-lbl">plugins shipped, no bloat</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4</div>
+          <div class="stat-lbl">free, 4 paid, 2 freemium</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4.9<span class="unit">/5</span></div>
+          <div class="stat-lbl">across 2,300 reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plugin Tiles -->
   <section class="section">
-    <div class="container">
-      <h2 class="text-center section-title">What Makes This Different</h2>
-      <div class="grid-3">
-        <article class="card feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect width="40" height="40" rx="10" fill="#dbeafe"/>
-              <path d="M20 12v8M20 24v4" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round"/>
-              <circle cx="20" cy="20" r="3" fill="var(--color-primary)"/>
-            </svg>
+    <div class="wrap">
+      <div class="catalog-header">
+        <div>
+          <div class="eyebrow" style="margin-bottom:16px;">The catalog</div>
+          <h2 class="display" style="font-size:clamp(36px,5vw,72px);max-width:18ch;">
+            Eight rooms, one <em>house</em>.
+          </h2>
+        </div>
+        <a href="/plugins" class="btn btn-ghost">
+          View all plugins
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+      <div class="tiles-grid">
+        <a href="/plugins/shopify-accessibility-fixer" class="tile tile-grad-1" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;">01 · Shopify</span>
+            <span class="price-tag price-tag-dark">Pro</span>
           </div>
-          <h3>Free version that works</h3>
-          <p>Edit all core fields, including variations, without paying. Not a demo. Not 10-products-per-page. A real tool.</p>
-        </article>
-
-        <article class="card feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect width="40" height="40" rx="10" fill="#d1fae5"/>
-              <path d="M13 20l5 5 9-9" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Accessibility Fixer</h3>
+        </a>
+        <a href="/plugins/woocommerce-accessibility-fixer" class="tile tile-grad-2" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;">02 · WooCommerce</span>
+            <span class="price-tag price-tag-dark">Pro</span>
           </div>
-          <h3>Preview before you save</h3>
-          <p>See exactly what will change before committing. Red for old values, green for new. No more praying after a bulk update.</p>
-        </article>
-
-        <article class="card feature-card">
-          <div class="feature-icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <rect width="40" height="40" rx="10" fill="#fef3c7"/>
-              <path d="M20 14v12M14 20h12" stroke="#d97706" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M14 28l-2-2M26 28l2-2" stroke="#d97706" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Accessibility Fixer</h3>
+        </a>
+        <a href="/plugins" class="tile tile-grad-3" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;">03 · WooCommerce</span>
+            <span class="price-tag price-tag-dark">Free + Pro</span>
           </div>
-          <h3>Built-in undo</h3>
-          <p>Made a mistake? Roll it back in one click. Your data is safe. Always.</p>
-        </article>
+          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Bulk Edit Pro</h3>
+        </a>
+        <a href="/plugins" class="tile tile-grad-4" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;">04 · Shopify</span>
+            <span class="price-tag price-tag-dark">Pro</span>
+          </div>
+          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Digital Delivery</h3>
+        </a>
+        <a href="/plugins" class="tile tile-grad-cream" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.55;">05 · Both</span>
+            <span class="price-tag price-free">Free</span>
+          </div>
+          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Inventory Sync</h3>
+        </a>
+        <a href="/plugins" class="tile tile-grad-cream" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+            <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.55;">06 · Both</span>
+            <span class="price-tag price-free">Free</span>
+          </div>
+          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Review Importer</h3>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Products -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="text-center section-title">The Plugins</h2>
-      <div class="products-list">
+  <!-- Beliefs -->
+  <section class="section">
+    <div class="wrap">
+      <div class="beliefs-header">
+        <div><div class="eyebrow" style="margin-bottom:16px;">What we believe</div></div>
+        <h2 class="display" style="font-size:clamp(36px,5vw,64px);max-width:20ch;">
+          Quiet plugins. Loud results. <em>No nonsense</em> in between.
+        </h2>
+      </div>
+      <div class="beliefs-grid">
+        <div class="belief-cell">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--coral);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">01 · Small</div>
+          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">Two people, one shared inbox.</h3>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">You write us, one of us writes back. Probably the person who built the thing you are asking about.</p>
+        </div>
+        <div class="belief-cell">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--coral);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">02 · Sharp</div>
+          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">One plugin, one job.</h3>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">No suite, no upsell tabs inside the dashboard. Each plugin solves one specific problem and gets out of the way.</p>
+        </div>
+        <div class="belief-cell">
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--coral);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">03 · Honest</div>
+          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">The price you sign at is the price you renew at.</h3>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">No surprise increases, no usage cliffs, no walls in front of the basics. Cancel anytime, take your data with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <article class="product-item">
-          <div class="product-content">
-            <div class="product-badge">Free + Pro</div>
-            <h3>WooCommerce Accessibility Fixer</h3>
-            <p>Fix 10 common accessibility issues on your WooCommerce store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, and more. The free version covers most stores. Pro adds batch scanning and priority support.</p>
-            <div class="product-actions">
-              <a href="/plugins/woocommerce-accessibility-fixer" class="btn btn-primary">Learn More</a>
-              <a href="https://wordpress.org/plugins/woocommerce-accessibility-fixer/" class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
-            </div>
+  <!-- Platform picker -->
+  <section class="section" style="background:var(--cream-2);">
+    <div class="wrap">
+      <div class="eyebrow" style="margin-bottom:16px;">Pick your platform</div>
+      <h2 class="display" style="font-size:clamp(36px,5vw,64px);margin-bottom:56px;max-width:18ch;">
+        Two platforms, same studio.
+      </h2>
+      <div class="platform-grid">
+        <a href="/plugins" class="card" style="padding:40px;display:block;cursor:pointer;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;">
+            <div class="eyebrow" style="color:var(--coral);">Plus, Advanced, and standard plans</div>
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-          <div class="product-visual" aria-hidden="true">
-            <div class="visual-box">
-              <div class="visual-row"><span class="visual-dot green"></span>Alt text fixed</div>
-              <div class="visual-row"><span class="visual-dot green"></span>Keyboard nav improved</div>
-              <div class="visual-row"><span class="visual-dot green"></span>Focus indicators added</div>
-              <div class="visual-row"><span class="visual-dot green"></span>ARIA labels added</div>
-              <div class="visual-row"><span class="visual-dot green"></span>Color contrast checked</div>
-              <div class="visual-row muted">+5 more fixes</div>
-            </div>
+          <h3 class="display" style="font-size:56px;margin-bottom:18px;letter-spacing:-0.03em;">Shopify</h3>
+          <p style="color:var(--ink-2);max-width:32ch;">Embedded apps. No theme edits. Works with Liquid, Hydrogen, and Online Store 2.0.</p>
+        </a>
+        <a href="/plugins" class="card" style="padding:40px;display:block;cursor:pointer;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;">
+            <div class="eyebrow" style="color:var(--plum);">WordPress 6.4+, WooCommerce 8.0+</div>
+            <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
-        </article>
+          <h3 class="display" style="font-size:56px;margin-bottom:18px;letter-spacing:-0.03em;">WooCommerce</h3>
+          <p style="color:var(--ink-2);max-width:32ch;">Standard WP plugin install. FSE themes, classic themes, every WooCommerce-compatible builder.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
-        <article class="product-item">
-          <div class="product-content">
-            <div class="product-badge" style="background:#d1fae5;color:#065f46;">Free + Pro</div>
-            <h3>Shopify Accessibility Fixer</h3>
-            <p>The same 10 accessibility fixes, built for Shopify. Alt text, keyboard navigation, focus indicators, ARIA labels  --  all without an overlay. Real WCAG 2.1 AA compliance, not a JavaScript patch. Free version covers most stores. Pro adds batch scanning and PDF compliance reports.</p>
-            <div class="product-actions">
-              <a href="/plugins/shopify-accessibility-fixer" class="btn btn-primary">Learn More</a>
-            </div>
+  <!-- How we ship -->
+  <section class="section">
+    <div class="wrap">
+      <div class="eyebrow" style="margin-bottom:16px;">How we ship</div>
+      <h2 class="display" style="font-size:clamp(36px,5vw,64px);margin-bottom:56px;max-width:20ch;">
+        The promises behind every <em>plugin</em>.
+      </h2>
+      <div class="principles-grid">
+        <div class="card" style="padding:36px;">
+          <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">01</span>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Real audits, not overlays</h3>
           </div>
-          <div class="product-visual" aria-hidden="true">
-            <div class="visual-box">
-              <div class="visual-row"><span class="visual-dot green"></span>Alt text fixed</div>
-              <div class="visual-row"><span class="visual-dot green"></span>Keyboard nav improved</div>
-              <div class="visual-row"><span class="visual-dot green"></span>Focus indicators added</div>
-              <div class="visual-row"><span class="visual-dot green"></span>ARIA labels added</div>
-              <div class="visual-row"><span class="visual-dot green"></span>Color contrast checked</div>
-              <div class="visual-row muted">+5 more fixes</div>
-            </div>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Our accessibility plugins fix the underlying markup. No iframe widget that hides issues from your audit but leaves them in your code.</p>
+        </div>
+        <div class="card" style="padding:36px;">
+          <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">02</span>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Every plugin ships with rollback</h3>
           </div>
-        </article>
-
-        <article class="product-item coming-soon">
-          <div class="product-content">
-            <div class="product-badge badge-soon">Coming Soon</div>
-            <h3>Order Fixer for WooCommerce</h3>
-            <p>Edit orders without killing the math. Inline quantity edits, item removal, new item additions with variant search  --  all with automatic totals recalculation and audit logging. Because WooCommerce should let you fix honest mistakes.</p>
-            <div class="product-actions">
-              <span class="btn btn-outline" style="opacity:0.5;cursor:not-allowed">Coming Soon</span>
-            </div>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Bulk operations preview their changes before they run, and one click reverts the whole batch. We refuse to ship destructive features without an undo.</p>
+        </div>
+        <div class="card" style="padding:36px;">
+          <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">03</span>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Two-week release cadence</h3>
           </div>
-        </article>
-
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Predictable, small, boring releases. Changelogs in plain English. No marketing blasts dressed up as product updates.</p>
+        </div>
+        <div class="card" style="padding:36px;">
+          <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
+            <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">04</span>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">You own your data on the way out</h3>
+          </div>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Cancel a plugin and we hand back a clean export. No lock-in, no held-hostage settings, no confused renewal flows.</p>
+        </div>
+      </div>
+      <div class="studio-stats">
+        <div><div class="display" style="font-size:40px;letter-spacing:-0.025em;">2</div><div style="font-size:13px;color:var(--ink-3);">people in the studio</div></div>
+        <div><div class="display" style="font-size:40px;letter-spacing:-0.025em;">14d</div><div style="font-size:13px;color:var(--ink-3);">release cadence</div></div>
+        <div><div class="display" style="font-size:40px;letter-spacing:-0.025em;">~6h</div><div style="font-size:13px;color:var(--ink-3);">support response</div></div>
+        <div><div class="display" style="font-size:40px;letter-spacing:-0.025em;">30d</div><div style="font-size:13px;color:var(--ink-3);">full refund window</div></div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section cta-section">
-    <div class="container text-center">
-      <h2>Stop doing data entry. Start shipping.</h2>
-      <p class="cta-sub">Your store deserves better than one-by-one editing. Pick your platform and get started free.</p>
-      <a href="/plugins" class="btn btn-primary btn-lg">
-        Browse All Plugins →
-      </a>
+  <section class="cta-dark">
+    <div class="ribbon-bg ribbon-anim" style="top:-30%;right:-20%;width:1200px;opacity:0.65;" aria-hidden="true">
+      <svg viewBox="0 0 1000 320" fill="none" width="1200">
+        <defs><linearGradient id="rg-cta" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F4A93C" stop-opacity="0.9"/><stop offset="40%" stop-color="#F26B3A"/><stop offset="70%" stop-color="#E85A78"/><stop offset="100%" stop-color="#5B3A6B"/></linearGradient></defs>
+        <path d="M 50 200 Q 200 80 380 180 T 720 220 Q 880 240 950 120" stroke="url(#rg-cta)" stroke-width="64" stroke-linecap="round" fill="none"/>
+        <path d="M 50 200 Q 200 80 380 180 T 720 220 Q 880 240 950 120" stroke="rgba(255,255,255,0.25)" stroke-width="20" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div class="wrap" style="position:relative;">
+      <h2 class="display cta-h2">
+        Find the plugin you actually <em>need</em>.
+      </h2>
+      <p style="font-size:18px;color:rgba(244,236,219,0.7);max-width:50ch;margin-bottom:40px;">
+        Eight plugins, four free. Browse the catalog or jump straight to Pro for everything in one place.
+      </p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="/plugins" class="btn btn-coral" style="padding:16px 28px;font-size:16px;">
+          Browse plugins
+          <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="/pricing" class="btn" style="padding:16px 28px;font-size:16px;color:var(--cream);border:1px solid rgba(244,236,219,0.25);">
+          Get Pro
+        </a>
+      </div>
     </div>
   </section>
 
 </BaseLayout>
 
+<script>
+  // Count-up animation for stats
+  document.querySelectorAll('.count-up[data-target]').forEach(el => {
+    const target = parseInt((el as HTMLElement).dataset.target || '0');
+    const unit = el.querySelector('.unit')?.outerHTML || '';
+    const obs = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      obs.disconnect();
+      const start = performance.now();
+      const duration = 1400;
+      function tick(now: number) {
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const n = Math.round(target * eased);
+        el.innerHTML = n.toLocaleString() + unit;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }, { threshold: 0.4 });
+    obs.observe(el);
+  });
+</script>
+
 <style>
-  /* Hero */
-  .hero {
-    padding: 7rem 0 5rem;
-    background: linear-gradient(180deg, #eff6ff 0%, #fff 100%);
-    text-align: center;
+  .hero-wrap {
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 120px;
   }
-
-  .hero-badge {
-    display: inline-block;
-    background: #dbeafe;
-    color: var(--color-primary-dark);
-    font-size: 0.8125rem;
-    font-weight: 600;
-    padding: 0.375rem 0.875rem;
-    border-radius: 999px;
-    margin-bottom: 1.5rem;
+  .hero-content {
+    position: relative;
+    z-index: 2;
   }
-
-  .hero-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.05;
-    color: #0f172a;
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.02em;
+  .hero-h1 {
+    font-size: clamp(56px, 8.5vw, 132px);
+    max-width: 14ch;
+    margin-bottom: 32px;
   }
-
-  .hero-sub {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    color: #475569;
-    max-width: 48ch;
-    margin: 0 auto 2.5rem;
-    line-height: 1.6;
+  .hero-lede {
+    margin-bottom: 40px;
   }
-
-  .hero-actions {
+  .hero-btns {
     display: flex;
-    gap: 1rem;
-    justify-content: center;
+    gap: 14px;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
   }
 
-  .hero-trust {
-    font-size: 0.875rem;
-    color: #6b7280;
-  }
-
-  /* Pain */
-  .pain-card {
-    max-width: 65ch;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .pain-text {
-    font-size: clamp(1.125rem, 2vw, 1.375rem);
-    color: #374151;
-    line-height: 1.7;
-    font-style: italic;
-    border-left: 4px solid var(--color-primary);
-    padding-left: 1.5rem;
-    text-align: left;
-  }
-
-  /* Section title */
-  .section-title {
-    margin-bottom: 3rem;
-  }
-
-  /* Features */
-  .feature-card h3 {
-    font-size: 1.125rem;
-    margin: 1rem 0 0.5rem;
-  }
-
-  .feature-card p {
-    color: var(--color-text-light);
-    font-size: 0.9375rem;
-    line-height: 1.6;
-  }
-
-  /* Products */
-  .products-list {
+  .catalog-header {
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 56px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
-  .product-item {
+  .beliefs-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    align-items: start;
+    margin-bottom: 64px;
+  }
+  .beliefs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .belief-cell {
+    background: var(--cream);
+    padding: 36px;
+    min-height: 320px;
+  }
+
+  .platform-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    padding: 3rem;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: 1rem;
+    gap: 24px;
   }
 
-  .product-item.coming-soon {
-    opacity: 0.7;
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .studio-stats {
+    margin-top: 56px;
+    padding: 40px 48px;
+    background: var(--cream-2);
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
   }
 
-  .product-badge {
-    display: inline-block;
-    background: #dbeafe;
-    color: var(--color-primary-dark);
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.25rem 0.625rem;
-    border-radius: 4px;
-    margin-bottom: 0.75rem;
+  .cta-dark {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-h2 {
+    font-size: clamp(48px, 7vw, 96px);
+    max-width: 14ch;
+    margin-bottom: 32px;
+    color: var(--cream);
   }
 
-  .badge-soon {
-    background: #fef3c7;
-    color: #92400e;
+  @media (max-width: 900px) {
+    .tiles-grid { grid-template-columns: repeat(2, 1fr); }
+    .beliefs-header { grid-template-columns: 1fr; gap: 24px; }
+    .beliefs-grid { grid-template-columns: 1fr; }
+    .platform-grid { grid-template-columns: 1fr; }
+    .principles-grid { grid-template-columns: 1fr; }
+    .studio-stats { grid-template-columns: repeat(2, 1fr); }
   }
-
-  .product-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .product-content p {
-    color: var(--color-text-light);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-  }
-
-  .product-actions {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-  }
-
-  .visual-box {
-    background: #f8fafc;
-    border: 1px solid var(--color-border);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    font-size: 0.875rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.625rem;
-  }
-
-  .visual-row {
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-  }
-
-  .visual-row.muted {
-    color: #9ca3af;
-    font-style: italic;
-    padding-left: 1.375rem;
-  }
-
-  .visual-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .visual-dot.green {
-    background: #22c55e;
-    box-shadow: 0 0 6px rgba(34,197,94,0.4);
-  }
-
-  /* CTA */
-  .cta-section {
-    background: #0f172a;
-    color: #fff;
-  }
-
-  .cta-section h2 {
-    color: #fff;
-    margin-bottom: 1rem;
-  }
-
-  .cta-sub {
-    color: #94a3b8;
-    margin-bottom: 2rem;
-    font-size: 1.125rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero {
-      padding: 4rem 0 3rem;
-    }
-
-    .product-item {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 1.5rem;
-    }
-
-    .product-visual {
-      order: -1;
-    }
+  @media (max-width: 600px) {
+    .tiles-grid { grid-template-columns: 1fr; }
+    .studio-stats { grid-template-columns: 1fr 1fr; padding: 28px; }
   }
 </style>

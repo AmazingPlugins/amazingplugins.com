@@ -11,8 +11,8 @@ interface Props {
 
 const {
   title,
-  description = 'WordPress plugins built by a developer who uses them. No crippled free versions, no bait-and-switch pricing.',
-  image = '/images/og-default.png',
+  description = 'Small, sharp accessibility plugins for Shopify and WooCommerce. Some free, some paid, all crafted.',
+  image = '/images/og-default.svg',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -43,15 +43,33 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
 
-    <!-- Canonical -->
+    <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Theme init — run before paint to prevent flash -->
+    <script is:inline>
+      (function() {
+        try {
+          var saved = localStorage.getItem('ap-theme') || 'system';
+          var resolved = saved === 'system'
+            ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            : saved;
+          document.documentElement.dataset.theme = resolved;
+        } catch(e) {}
+      })();
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <Header />
-    <main id="main-content">
+    <main id="main-content" class="page">
       <slot />
     </main>
     <Footer />
