@@ -1,7 +1,7 @@
 ---
 const navLinks = [
   { href: '/plugins', label: 'Plugins' },
-  { href: '/pricing', label: 'Pricing' },
+  { href: '/pricing', label: 'Get PRO', highlight: true },
   { href: '/blog', label: 'Blog' },
   { href: '/privacy', label: 'Privacy' },
 ];
@@ -22,7 +22,7 @@ const currentPath = Astro.url.pathname;
           <li>
             <a
               href={link.href}
-              class:list={['nav-link', { active: currentPath.startsWith(link.href) }]}
+              class:list={['nav-link', { active: currentPath.startsWith(link.href), 'nav-highlight': link.highlight }]}
               aria-current={currentPath.startsWith(link.href) ? 'page' : undefined}
             >
               {link.label}
@@ -95,6 +95,17 @@ const currentPath = Astro.url.pathname;
     background: var(--color-bg-alt);
     color: var(--color-primary);
     text-decoration: none;
+  }
+
+  .nav-highlight {
+    background: var(--color-primary);
+    color: white !important;
+    font-weight: 600;
+  }
+
+  .nav-highlight:hover {
+    background: var(--color-primary-dark);
+    color: white !important;
   }
 
   .btn-sm {
