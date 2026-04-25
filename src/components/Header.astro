@@ -37,11 +37,22 @@ function isActive(href: string) {
           </button>
         </div>
       </div>
-      <a href="/pricing" class="btn btn-primary" style="padding:10px 18px;font-size:14px;">
+      <a href="/pricing" class="btn btn-primary nav-cta-btn" style="padding:10px 18px;font-size:14px;">
         Get started
         <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
+      <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <a href="/plugins" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
+    <a href="/blog" class:list={[{ active: isActive('/blog') }]}>Blog</a>
+    <a href="/pricing" class:list={[{ active: isActive('/pricing') }]}>Pricing</a>
+    <a href="/pricing" class="btn btn-primary" style="margin-top:8px;">Get started</a>
   </div>
 </nav>
 
@@ -100,6 +111,44 @@ function isActive(href: string) {
     });
   }
 
+  // Mobile nav
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMobileMenu() {
+    if (!hamburgerBtn || !mobileMenu) return;
+    hamburgerBtn.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+    hamburgerBtn.setAttribute('aria-label', 'Open menu');
+    mobileMenu.hidden = true;
+  }
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+      const open = hamburgerBtn.classList.toggle('open');
+      hamburgerBtn.setAttribute('aria-expanded', String(open));
+      hamburgerBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      mobileMenu.hidden = !open;
+    });
+
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!hamburgerBtn.contains(e.target as Node) && !mobileMenu.contains(e.target as Node)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMobileMenu();
+    });
+  }
+
   init();
 </script>
 
@@ -150,4 +199,51 @@ function isActive(href: string) {
   }
   .theme-menu button:hover { background: var(--cream-2); }
   .theme-menu button[aria-checked="true"] { background: var(--cream-2); }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 220ms ease, opacity 220ms ease;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  /* Mobile menu */
+  .mobile-menu {
+    border-top: 1px solid var(--line-2);
+    padding: 16px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .mobile-menu[hidden] { display: none; }
+  .mobile-menu a {
+    padding: 10px 0;
+    font-size: 15px;
+    color: var(--ink-2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line-2);
+    transition: color 150ms;
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu a:hover,
+  .mobile-menu a.active { color: var(--ink); }
 </style>

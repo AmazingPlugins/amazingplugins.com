@@ -415,8 +415,12 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links { display: none; }
+  .nav-cta-btn { display: none; }
+  .hamburger { display: flex; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
+  .tiers-grid { grid-template-columns: 1fr; }
+  .hero-h1 { font-size: clamp(40px, 10vw, 72px); }
 }
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
