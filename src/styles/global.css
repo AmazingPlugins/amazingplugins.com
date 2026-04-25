@@ -163,6 +163,7 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   display: flex;
   align-items: center;
   height: 68px;
+  position: relative;
 }
 .brand {
   display: flex;
@@ -186,7 +187,9 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   display: flex;
   align-items: center;
   gap: 28px;
-  margin-left: 56px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 14px;
   color: var(--ink-2);
 }
