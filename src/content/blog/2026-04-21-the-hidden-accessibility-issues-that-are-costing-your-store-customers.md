@@ -10,7 +10,7 @@ tags:
   - WCAG
 ---
 
-# The Hidden Accessibility Issues Costing Your Store Customers
+# The Hidden Accessibility Issues That Are Costing Your Store Customers
 
 |-----------------|---------------------|---------|
 | 3.0% | 300 | $15,000 |

@@ -10,5 +10,5 @@ tags:
   - User Experience
 ---
 
-# Keyboard Navigation: The Simplest Accessibility Win You're Missing
+# Why Keyboard Navigation Matters More Than You Think
 

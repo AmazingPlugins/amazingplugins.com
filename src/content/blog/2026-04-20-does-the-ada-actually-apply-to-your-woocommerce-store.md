@@ -10,5 +10,5 @@ tags:
   - WooCommerce
 ---
 
-# How to Prepare Your WooCommerce Store for ADA Compliance in 2026
+# Does the ADA Actually Apply to Your WooCommerce Store?
 
