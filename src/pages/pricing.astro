@@ -15,92 +15,191 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
     <div class="wrap" style="position:relative;text-align:center;">
       <div class="eyebrow" style="margin-bottom:16px;">Pricing</div>
-      <h1 class="display" style="font-size:clamp(56px,8vw,112px);max-width:14ch;margin:0 auto 24px;">
-        Honest pricing. <em>Boring</em> renewals.
+      <h1 class="display" style="font-size:clamp(48px,8vw,96px);max-width:16ch;margin:0 auto 24px;">
+        Pick your plugin. <em>Pay</em> as you go.
       </h1>
       <p class="lede" style="margin:0 auto 36px;text-align:center;max-width:52ch;">
-        Same price next year as this year. No surprise increases. Cancel anytime — your reports are yours, exported on your way out.
+        No contracts. No surprise renewals. Cancel any time. Your data is exported automatically on the way out.
       </p>
-      <div id="billing-toggle" style="display:inline-flex;background:var(--cream-2);padding:4px;border-radius:999px;gap:4px;">
-        <button id="btn-monthly" class="toggle-btn" style="padding:10px 20px;border-radius:999px;font-size:14px;">Monthly</button>
-        <button id="btn-yearly" class="toggle-btn toggle-active" style="padding:10px 20px;border-radius:999px;font-size:14px;display:flex;gap:8px;align-items:center;">
-          Yearly <span style="font-family:var(--font-mono);font-size:11px;color:var(--coral);">−20%</span>
-        </button>
-      </div>
     </div>
   </section>
 
-  <!-- Tiers -->
+  <!-- Plugins + Plans -->
   <section style="padding-bottom:100px;">
     <div class="wrap">
-      <div class="tiers-grid">
 
-        <!-- Starter -->
-        <div class="card tier-card">
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px;">For small stores</div>
-          <h2 class="display" style="font-size:36px;margin-bottom:8px;">Starter</h2>
-          <p style="font-size:14px;color:var(--ink-2);margin-bottom:28px;min-height:42px;">For stores under 500 SKUs and 5,000 monthly visits.</p>
-          <div style="margin-bottom:28px;display:flex;align-items:baseline;gap:6px;">
-            <span class="display tier-price" data-mo="19" data-yr="15" style="font-size:64px;letter-spacing:-0.03em;">$15</span>
-            <span class="tier-cadence" style="font-size:13px;color:var(--ink-3);">/mo billed annually</span>
+      <!-- WooCommerce -->
+      <div style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
+          <div style="width:40px;height:40px;background:#7B438F;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
           </div>
-          <a href="/plugins" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:28px;">Start free trial</a>
-          <ul class="features-list">
-            <li>1 store</li>
-            <li>Up to 500 products</li>
-            <li>Weekly scans</li>
-            <li>Email support</li>
-            <li>Basic remediation</li>
-            <li>12-month report history</li>
-          </ul>
+          <div>
+            <h2 class="display" style="font-size:28px;margin:0;">WooCommerce Accessibility Fixer</h2>
+            <p style="font-size:14px;color:var(--ink-2);margin:4px 0 0;">Scan, fix, and monitor your WordPress store</p>
+          </div>
         </div>
 
-        <!-- Growth (highlight) -->
-        <div class="card tier-card tier-highlight">
-          <span class="chip solid" style="position:absolute;top:-12px;left:36px;background:var(--coral);color:#fff;border-color:var(--coral);">Most popular</span>
-          <div style="font-family:var(--font-mono);font-size:11px;color:rgba(244,236,219,0.6);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px;">Most popular</div>
-          <h2 class="display" style="font-size:36px;margin-bottom:8px;">Growth</h2>
-          <p style="font-size:14px;color:rgba(244,236,219,0.7);margin-bottom:28px;min-height:42px;">For growing stores. Daily scans, advanced remediation, priority support.</p>
-          <div style="margin-bottom:28px;display:flex;align-items:baseline;gap:6px;">
-            <span class="display tier-price" data-mo="49" data-yr="39" style="font-size:64px;letter-spacing:-0.03em;">$39</span>
-            <span class="tier-cadence" style="font-size:13px;color:rgba(244,236,219,0.6);">/mo billed annually</span>
-          </div>
-          <a href="/plugins" class="btn" style="width:100%;justify-content:center;margin-bottom:28px;background:var(--coral);color:#fff;">Start free trial</a>
-          <ul class="features-list features-dark">
-            <li>Up to 3 stores</li>
-            <li>Unlimited products</li>
-            <li>Daily scans</li>
-            <li>Priority chat support</li>
-            <li>Advanced remediation</li>
-            <li>Unlimited report history</li>
-            <li>Audit-trail PDF export</li>
-            <li>Slack notifications</li>
-          </ul>
-        </div>
+        <div class="plugin-grid">
 
-        <!-- Scale -->
-        <div class="card tier-card">
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px;">For Shopify Plus &amp; multi-store</div>
-          <h2 class="display" style="font-size:36px;margin-bottom:8px;">Scale</h2>
-          <p style="font-size:14px;color:var(--ink-2);margin-bottom:28px;min-height:42px;">For multi-store and high-traffic operations.</p>
-          <div style="margin-bottom:28px;display:flex;align-items:baseline;gap:6px;">
-            <span class="display tier-price" data-mo="149" data-yr="119" style="font-size:64px;letter-spacing:-0.03em;">$119</span>
-            <span class="tier-cadence" style="font-size:13px;color:var(--ink-3);">/mo billed annually</span>
+          <!-- WooCommerce Pro -->
+          <div class="card">
+            <div class="plan-label">Pro</div>
+            <h3 class="display" style="font-size:24px;margin-bottom:6px;">WooCommerce Pro</h3>
+            <p style="font-size:13px;color:var(--ink-2);margin-bottom:24px;">Everything a growing store needs.</p>
+            <div style="margin-bottom:24px;display:flex;align-items:baseline;gap:6px;">
+              <span class="display plan-price" data-mo="19" data-yr="15" style="font-size:52px;letter-spacing:-0.03em;">$19</span>
+              <span class="plan-cadence" style="font-size:13px;color:var(--ink-3);">/mo</span>
+            </div>
+            <a href="https://app.amazingplugins.com/billing/woo-accessibility-pro" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:20px;">Get started</a>
+            <ul class="feat-list">
+              <li>1 store</li>
+              <li>Unlimited scans</li>
+              <li>Unlimited fixes per month</li>
+              <li>PDF reports</li>
+              <li>Email support</li>
+              <li>5 sites</li>
+            </ul>
           </div>
-          <a href="mailto:support@amazingplugins.com" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:28px;">Talk to sales</a>
-          <ul class="features-list">
-            <li>Unlimited stores</li>
-            <li>Unlimited products</li>
-            <li>Continuous scanning</li>
-            <li>Dedicated CSM</li>
-            <li>Custom remediation rules</li>
-            <li>SAML SSO</li>
-            <li>API access</li>
-            <li>White-label reports</li>
-          </ul>
-        </div>
 
+          <!-- WooCommerce Agency -->
+          <div class="card">
+            <div class="plan-label">Agency</div>
+            <h3 class="display" style="font-size:24px;margin-bottom:6px;">WooCommerce Agency</h3>
+            <p style="font-size:13px;color:var(--ink-2);margin-bottom:24px;">For agencies managing multiple client stores.</p>
+            <div style="margin-bottom:24px;display:flex;align-items:baseline;gap:6px;">
+              <span class="display plan-price" data-mo="49" data-yr="39" style="font-size:52px;letter-spacing:-0.03em;">$49</span>
+              <span class="plan-cadence" style="font-size:13px;color:var(--ink-3);">/mo</span>
+            </div>
+            <a href="https://app.amazingplugins.com/billing/woo-accessibility-agency" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:20px;">Get started</a>
+            <ul class="feat-list">
+              <li>1 store</li>
+              <li>Unlimited scans</li>
+              <li>Unlimited fixes per month</li>
+              <li>PDF reports + white-label</li>
+              <li>Priority support</li>
+              <li>25 sites</li>
+            </ul>
+          </div>
+
+        </div>
       </div>
+
+      <!-- Shopify -->
+      <div style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
+          <div style="width:40px;height:40px;background:#95BF47;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/></svg>
+          </div>
+          <div>
+            <h2 class="display" style="font-size:28px;margin:0;">Shopify Accessibility Fixer</h2>
+            <p style="font-size:14px;color:var(--ink-2);margin:4px 0 0;">Accessibility compliance for Shopify stores</p>
+          </div>
+        </div>
+
+        <div class="plugin-grid">
+
+          <!-- Shopify Pro -->
+          <div class="card">
+            <div class="plan-label">Pro</div>
+            <h3 class="display" style="font-size:24px;margin-bottom:6px;">Shopify Pro</h3>
+            <p style="font-size:13px;color:var(--ink-2);margin-bottom:24px;">Everything a growing store needs.</p>
+            <div style="margin-bottom:24px;display:flex;align-items:baseline;gap:6px;">
+              <span class="display plan-price" data-mo="19" data-yr="15" style="font-size:52px;letter-spacing:-0.03em;">$19</span>
+              <span class="plan-cadence" style="font-size:13px;color:var(--ink-3);">/mo</span>
+            </div>
+            <a href="https://app.amazingplugins.com/billing/shopify-accessibility-pro" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:20px;">Get started</a>
+            <ul class="feat-list">
+              <li>1 store</li>
+              <li>Unlimited scans</li>
+              <li>Unlimited fixes per month</li>
+              <li>PDF reports</li>
+              <li>Email support</li>
+              <li>5 sites</li>
+            </ul>
+          </div>
+
+          <!-- Shopify Agency -->
+          <div class="card">
+            <div class="plan-label">Agency</div>
+            <h3 class="display" style="font-size:24px;margin-bottom:6px;">Shopify Agency</h3>
+            <p style="font-size:13px;color:var(--ink-2);margin-bottom:24px;">For agencies managing multiple client stores.</p>
+            <div style="margin-bottom:24px;display:flex;align-items:baseline;gap:6px;">
+              <span class="display plan-price" data-mo="49" data-yr="39" style="font-size:52px;letter-spacing:-0.03em;">$49</span>
+              <span class="plan-cadence" style="font-size:13px;color:var(--ink-3);">/mo</span>
+            </div>
+            <a href="https://app.amazingplugins.com/billing/shopify-accessibility-agency" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:20px;">Get started</a>
+            <ul class="feat-list">
+              <li>1 store</li>
+              <li>Unlimited scans</li>
+              <li>Unlimited fixes per month</li>
+              <li>PDF reports + white-label</li>
+              <li>Priority support</li>
+              <li>25 sites</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Order Fixer -->
+      <div style="margin-bottom:64px;">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:28px;">
+          <div style="width:40px;height:40px;background:var(--coral);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l4.59-4.58L18 11l-6 6z"/></svg>
+          </div>
+          <div>
+            <h2 class="display" style="font-size:28px;margin:0;">Order Fixer for WooCommerce</h2>
+            <p style="font-size:14px;color:var(--ink-2);margin:4px 0 0;">Fix broken confirmation emails, refund errors, and order chaos</p>
+          </div>
+        </div>
+
+        <div class="plugin-grid" style="max-width:400px;">
+          <div class="card">
+            <div class="plan-label">Pro</div>
+            <h3 class="display" style="font-size:24px;margin-bottom:6px;">Order Fixer Pro</h3>
+            <p style="font-size:13px;color:var(--ink-2);margin-bottom:24px;">Reliable order emails and refund handling.</p>
+            <div style="margin-bottom:24px;display:flex;align-items:baseline;gap:6px;">
+              <span class="display plan-price" data-mo="9" data-yr="7" style="font-size:52px;letter-spacing:-0.03em;">$9</span>
+              <span class="plan-cadence" style="font-size:13px;color:var(--ink-3);">/mo</span>
+            </div>
+            <a href="https://app.amazingplugins.com/billing/order-fixer-pro" class="btn btn-primary" style="width:100%;justify-content:center;margin-bottom:20px;">Get started</a>
+            <ul class="feat-list">
+              <li>1 store</li>
+              <li>Unlimited email fixes</li>
+              <li>Refund error detection</li>
+              <li>Order confirmation fixes</li>
+              <li>5 sites</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bundle (highlighted) -->
+      <div>
+        <div class="card tier-highlight" style="padding:48px;position:relative;text-align:center;max-width:600px;margin:0 auto;">
+          <div class="chip solid" style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--coral);color:#fff;border-color:var(--coral);white-space:nowrap;">
+            Save $9/mo vs buying separately
+          </div>
+          <div style="font-family:var(--font-mono);font-size:11px;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:14px;color:rgba(244,236,219,0.6);">Best value</div>
+          <h3 class="display" style="font-size:36px;margin-bottom:8px;color:var(--cream);">WooCommerce + Shopify Bundle</h3>
+          <p style="font-size:14px;color:rgba(244,236,219,0.7);margin-bottom:28px;">Both plugins. One subscription. Everything you need to keep both platforms compliant.</p>
+          <div style="margin-bottom:28px;display:flex;align-items:baseline;gap:6px;justify-content:center;">
+            <span class="display plan-price" data-mo="29" data-yr="23" style="font-size:64px;letter-spacing:-0.03em;color:var(--cream);">$29</span>
+            <span class="plan-cadence" style="font-size:13px;color:rgba(244,236,219,0.6);">/mo</span>
+          </div>
+          <a href="https://app.amazingplugins.com/billing/woo-shopify-bundle" class="btn btn-coral" style="padding:14px 32px;font-size:16px;margin-bottom:28px;">Get the bundle</a>
+          <ul class="feat-list" style="text-align:left;max-width:320px;margin:0 auto;">
+            <li>Everything in both Pro plans</li>
+            <li>WooCommerce Accessibility Fixer Pro</li>
+            <li>Shopify Accessibility Fixer Pro</li>
+            <li>Unlimited scans and fixes</li>
+            <li>PDF reports for both platforms</li>
+            <li>5 sites per platform</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -116,28 +215,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="faq-list">
           <details>
-            <summary>Do you offer discounts for non-profits?<span>+</span></summary>
-            <p>Yes — 50% off any plan. Email us a copy of your registration and we'll set it up the same day.</p>
+            <summary>Do I need an account to buy?<span>+</span></summary>
+            <p>No. You can pay with your email address — we'll ask you to create a password after checkout. If you prefer to sign up first, that's fine too.</p>
           </details>
           <details>
-            <summary>What happens if my store has more SKUs than my plan allows?<span>+</span></summary>
-            <p>Nothing breaks. We'll ping you and you can either upgrade or decide which products to exclude from scanning.</p>
+            <summary>What happens if my store has more sites than my plan allows?<span>+</span></summary>
+            <p>Nothing breaks. We'll let you know and you can upgrade or choose which stores to cover.</p>
           </details>
           <details>
             <summary>Will the plugin slow down my store?<span>+</span></summary>
-            <p>No. Scans run on our servers — your store sees a single crawler request per page, like Googlebot. Remediation runs at build/save time.</p>
+            <p>No. Scans run on our servers — your store sees a single crawler request per page, like Googlebot. Remediation runs at save time, not at checkout.</p>
           </details>
           <details>
             <summary>Can I cancel any time?<span>+</span></summary>
-            <p>Yes. Pro-rated refund on yearly plans, no questions asked. Your reports are exported as PDF + CSV on cancellation.</p>
+            <p>Yes. No questions asked. Your reports are exported as PDF on cancellation.</p>
+          </details>
+          <details>
+            <summary>Do you offer discounts for non-profits?<span>+</span></summary>
+            <p>Yes — 50% off any plan. Email us your registration and we'll set it up the same day.</p>
           </details>
           <details>
             <summary>Are you ADA compliant yourselves?<span>+</span></summary>
             <p>We try to be. amazingplugins.com scores 100/100 on Lighthouse and 0 issues on axe. If you find something, email accessibility@amazingplugins.com.</p>
-          </details>
-          <details>
-            <summary>Do you support headless Shopify (Hydrogen)?<span>+</span></summary>
-            <p>Yes. We have a Hydrogen integration that runs at build time. Setup walkthrough is in the docs.</p>
           </details>
         </div>
       </div>
@@ -155,18 +254,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
     <div class="wrap" style="position:relative;">
       <h2 class="display" style="font-size:clamp(48px,7vw,96px);max-width:14ch;margin-bottom:32px;color:var(--cream);">
-        Find the plugin you actually <em>need</em>.
+        Ready to fix your store's accessibility?
       </h2>
       <p style="font-size:18px;color:rgba(244,236,219,0.7);max-width:50ch;margin-bottom:40px;">
-        Two plugins live. More coming. Browse the catalog or jump straight to Pro for everything in one place.
+        Two plugins live. Pick the one you need, or bundle and save.
       </p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
-        <a href="/plugins" class="btn btn-coral" style="padding:16px 28px;font-size:16px;">
-          Browse plugins
+        <a href="#woo-accessibility" class="btn btn-coral" style="padding:16px 28px;font-size:16px;">
+          See pricing
           <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </a>
         <a href="/plugins" class="btn" style="padding:16px 28px;font-size:16px;color:var(--cream);border:1px solid rgba(244,236,219,0.25);">
-          Get Pro
+          Browse plugins
         </a>
       </div>
     </div>
@@ -174,67 +273,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 </BaseLayout>
 
-<script>
-  let yearly = true;
-
-  function updatePrices() {
-    document.querySelectorAll<HTMLElement>('.tier-price').forEach(el => {
-      const val = yearly ? el.dataset.yr : el.dataset.mo;
-      el.textContent = '$' + val;
-    });
-    document.querySelectorAll<HTMLElement>('.tier-cadence').forEach(el => {
-      el.textContent = yearly ? '/mo billed annually' : '/mo';
-    });
-    const btnM = document.getElementById('btn-monthly');
-    const btnY = document.getElementById('btn-yearly');
-    if (btnM && btnY) {
-      btnM.classList.toggle('toggle-active', !yearly);
-      btnY.classList.toggle('toggle-active', yearly);
-    }
-  }
-
-  document.getElementById('btn-monthly')?.addEventListener('click', () => { yearly = false; updatePrices(); });
-  document.getElementById('btn-yearly')?.addEventListener('click',  () => { yearly = true;  updatePrices(); });
-</script>
-
 <style>
-  .tiers-grid {
+  .plugin-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  .tier-card { padding: 36px; position: relative; }
+
+  .card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+  }
+
   .tier-highlight {
     background: var(--ink);
     color: var(--cream);
     border-color: var(--ink);
   }
 
-  .toggle-btn {
-    background: transparent;
-    color: var(--ink-2);
-    cursor: pointer;
-    transition: all 160ms;
-  }
-  .toggle-active {
-    background: var(--ink);
-    color: var(--cream);
+  .plan-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--coral);
+    margin-bottom: 10px;
   }
 
-  .features-list {
+  .feat-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
-  .features-list li {
+
+  .feat-list li {
     display: flex;
     gap: 10px;
     font-size: 14px;
     align-items: flex-start;
     color: var(--ink-2);
   }
-  .features-list li::before {
+
+  .feat-list li::before {
     content: '';
     display: inline-block;
     width: 14px;
@@ -245,6 +329,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     background-repeat: no-repeat;
     background-size: contain;
   }
+
   .features-dark li { color: rgba(244,236,219,0.85); }
 
   .faq-layout {
@@ -252,11 +337,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     grid-template-columns: 1fr 2fr;
     gap: 64px;
   }
+
   .faq-list details {
     border-top: 1px solid var(--line);
     padding: 20px 0;
   }
+
   .faq-list details:last-child { border-bottom: 1px solid var(--line); }
+
   .faq-list summary {
     cursor: pointer;
     font-size: 18px;
@@ -267,6 +355,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     justify-content: space-between;
     align-items: center;
   }
+
   .faq-list summary::-webkit-details-marker { display: none; }
   .faq-list summary span {
     font-family: var(--font-mono);
@@ -274,6 +363,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     color: var(--ink-3);
     flex-shrink: 0;
   }
+
   .faq-list details[open] summary span { transform: rotate(45deg); }
   .faq-list p { margin-top: 14px; color: var(--ink-2); max-width: 60ch; }
 
@@ -285,8 +375,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     overflow: hidden;
   }
 
-  @media (max-width: 900px) {
-    .tiers-grid { grid-template-columns: 1fr; }
+  @media (max-width: 768px) {
+    .plugin-grid { grid-template-columns: 1fr; }
     .faq-layout { grid-template-columns: 1fr; gap: 32px; }
   }
 </style>
