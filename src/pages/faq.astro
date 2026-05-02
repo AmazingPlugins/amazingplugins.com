@@ -65,12 +65,37 @@ const shopifyFaqs = [
     a: "Search 'Accessibility Fixer' in the Shopify App Store, or visit amazingplugins.com and click the Shopify install link. You'll be redirected to authorize the app in your Shopify admin.",
   },
 ];
+
+// Build FAQ schema for SEO
+const allFaqs = [
+  {
+    q: "What regulations apply to my e-commerce store?",
+    a: "In the US, ADA Title III is the main driver. Courts have consistently ruled that commercial websites are places of public accommodation. In the EU, EN 301 549 and the EU Accessibility Act require WCAG 2.1 AA compliance for e-commerce.",
+  },
+  ...generalFaqs,
+  ...wooFaqs,
+  ...shopifyFaqs,
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": allFaqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a,
+    },
+  })),
+};
 ---
 
 <BaseLayout
   title="FAQ"
   description="Frequently asked questions about AmazingPlugins accessibility fixers for WooCommerce and Shopify."
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <section class="page-hero">
     <div class="container">
       <h1>Frequently Asked Questions</h1>
