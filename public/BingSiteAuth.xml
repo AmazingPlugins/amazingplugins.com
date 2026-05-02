@@ -1,0 +1,11 @@
+<!--
+  IMPORTANT: Replace YOUR_VERIFICATION_CODE with the actual content
+  from Bing Webmaster Tools. Get it from:
+  Bing Webmaster Tools → Verify Site → HTML Meta Tag
+  Then paste the content value from the meta tag here.
+  
+  After filling in, push to GitHub to deploy.
+-->
+<users>
+  <user>YOUR_VERIFICATION_CODE</user>
+</users>

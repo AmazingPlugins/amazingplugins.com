@@ -20,6 +20,17 @@ const formattedDate = pubDate.toLocaleDateString('en-US', {
 ---
 
 <BaseLayout title={title} description={description}>
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={Astro.url} />
+  <meta property="article:published_time" content={pubDate.toISOString()} />
+  <meta property="article:author" content={author} />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <article class="blog-post">
     <header class="post-header">
       <div class="container">
