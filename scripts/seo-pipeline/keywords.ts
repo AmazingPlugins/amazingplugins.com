@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-interface KeywordEntry {
+export interface KeywordEntry {
   keyword: string;
   intent?: string;
   competition?: string;
@@ -99,17 +99,19 @@ export function getTopKeywords(category: string, limit: number = 10): string[] {
 /**
  * Get all unique keywords
  */
-export function getAllKeywords(): string[] {
+export function getAllKeywords(): KeywordEntry[] {
   const files = getKeywordFiles();
-  const allKeywords = new Set<string>();
-  
+  const allKeywords = new Map<string, KeywordEntry>(); // dedupe by keyword string
+
   for (const file of files) {
     const parsed = parseKeywordFile(file);
     if (!parsed) continue;
     for (const kw of parsed.keywords) {
-      allKeywords.add(kw.keyword);
+      if (!allKeywords.has(kw.keyword.toLowerCase())) {
+        allKeywords.set(kw.keyword.toLowerCase(), kw);
+      }
     }
   }
-  
-  return Array.from(allKeywords);
+
+  return Array.from(allKeywords.values());
 }
