@@ -14,3 +14,12 @@ node_modules/
 *.log
 npm-debug.log*
 gsc-health-report.json
+<<<<<<< HEAD
+
+# SEO Pipeline
+scripts/seo-pipeline/post-state.json
+scripts/seo-pipeline/*.log
+gsc-health-report.json
+broken-links-report.md
+=======
+>>>>>>> bf4bddd (feat: add SEO content pipeline)
