@@ -10,6 +10,9 @@ const blog = defineCollection({
     updatedDate: z.date().optional(),
     author: z.string().default('Harun Ray'),
     tags: z.array(z.string()).optional(),
+    seoKeywords: z.array(z.string()).optional(),
+    seoCategory: z.string().optional(),
+    gscSubmitted: z.boolean().optional().default(false),
   }),
 });
 
