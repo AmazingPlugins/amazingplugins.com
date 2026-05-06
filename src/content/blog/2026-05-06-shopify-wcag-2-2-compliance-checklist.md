@@ -15,7 +15,7 @@ seoKeywords:
   - shopify store wcag 2.2 compliance
 seoCategory: "Guides"
 canonicalUrl: "https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist"
-gscSubmitted: false
+gscSubmitted: pending_gsc_setup
 ---
 
 # Your Shopify WCAG 2.2 Compliance Checklist (Everything You Need to Fix)

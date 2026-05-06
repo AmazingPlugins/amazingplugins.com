@@ -16,7 +16,7 @@ seoKeywords:
   - Shopify accessibility requirements sell to EU customers
 seoCategory: "Guides"
 canonicalUrl: "https://amazingplugins.com/blog/how-to-make-your-shopify-store-eaa-compliant"
-gscSubmitted: false
+gscSubmitted: pending_gsc_setup
 ---
 
 # How to Make Your Shopify Store EAA Compliant (2026)
