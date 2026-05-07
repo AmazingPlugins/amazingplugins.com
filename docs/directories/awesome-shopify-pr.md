@@ -1,5 +1,5 @@
 # LeCoupa/awesome-shopify — PR Draft
-**Product:** AmazingPlugins Shopify Accessibility Fixer
+**Product:** AmazingPlugins Accessibility Fixer
 **Status:** Draft — PR not yet submitted
 **Target:** https://github.com/LeCoupa/awesome-shopify
 **Date:** 2026-04-18
@@ -7,13 +7,13 @@
 ---
 
 ## PR Title
-[ADD] AmazingPlugins Shopify Accessibility Fixer to Shopify apps > Useful tools
+[ADD] AmazingPlugins Accessibility Fixer to Shopify apps > Useful tools
 
 ## Proposed Addition
 Add under `### Shopify apps > #### Useful tools`:
 
 ```
-- ⚙️ [AmazingPlugins Shopify Accessibility Fixer](https://github.com/AmazingPlugins/shopify-accessibility-fixer): Auto-fixes WCAG 2.1 AA accessibility issues on Shopify stores. Real code-level fixes — not an overlay widget. Covers missing alt text, keyboard traps, form labels, color contrast, focus indicators, and heading hierarchy.
+- ⚙️ [AmazingPlugins Accessibility Fixer](https://github.com/AmazingPlugins/shopify-accessibility-fixer): Auto-fixes WCAG 2.1 AA accessibility issues on Shopify stores. Real code-level fixes — not an overlay widget. Covers missing alt text, keyboard traps, form labels, color contrast, focus indicators, and heading hierarchy.
 ```
 
 ## Alternative: New Accessibility Category
@@ -22,15 +22,15 @@ Propose a new `#### Accessibility` sub-section under `### Shopify apps`:
 ```
 #### Accessibility
 
-- ⚙️ [AmazingPlugins Shopify Accessibility Fixer](https://github.com/AmazingPlugins/shopify-accessibility-fixer): Auto-fixes WCAG 2.1 AA accessibility issues on Shopify stores. Real code-level fixes — not an overlay widget. Covers missing alt text, keyboard traps, form labels, color contrast, focus indicators, and heading hierarchy.
+- ⚙️ [AmazingPlugins Accessibility Fixer](https://github.com/AmazingPlugins/shopify-accessibility-fixer): Auto-fixes WCAG 2.1 AA accessibility issues on Shopify stores. Real code-level fixes — not an overlay widget. Covers missing alt text, keyboard traps, form labels, color contrast, focus indicators, and heading hierarchy.
 ```
 
 ## PR Description
 
 ```markdown
-## Add AmazingPlugins Shopify Accessibility Fixer
+## Add AmazingPlugins Accessibility Fixer
 
-This PR adds the AmazingPlugins Shopify Accessibility Fixer to the Shopify apps section.
+This PR adds the AmazingPlugins Accessibility Fixer to the Shopify apps section.
 
 ### Why this belongs
 

@@ -81,7 +81,7 @@ Use `grunt-wp-deploy` or GitHub Actions workflow:
 
 ## 2026-04-21 Night #6/? — Directory Submissions
 - **Task:** Directory submissions
-- **awesome-shopify PR submitted:** https://github.com/LeCoupa/awesome-shopify/pull/3 — Added AmazingPlugins Shopify Accessibility Fixer under `Shopify apps > Useful tools`. GitHub-based listing, no live site required.
+- **awesome-shopify PR submitted:** https://github.com/LeCoupa/awesome-shopify/pull/3 — Added AmazingPlugins Accessibility Fixer under `Shopify apps > Useful tools`. GitHub-based listing, no live site required.
 - **WordPress.org:** Not yet listed (submission ~April 11 in review queue, 2-4 week typical). GitHub repo public ✓, readme.txt properly formatted ✓.
 - **Site status:** amazingplugins.com still returns HTTP 000 (connection error). All directory submissions requiring a live site remain blocked.
 - **Remaining blocked:** AlternativeTo, G2, WebAIM, Accessibility.com, Shopify App Store, Product Hunt — all require live site.
