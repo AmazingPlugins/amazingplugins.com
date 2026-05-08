@@ -97,29 +97,34 @@ function buildPrompt(keyword: string, intent: string): string {
 
   const keywordContext = readKeywordContext();
 
-  return `You are an expert SEO content writer for e-commerce accessibility. Write one long-form blog article optimized for the keyword: "${keyword}" (search intent: ${intent}).
+  return `You are a helpful accessibility expert who writes for real store owners — not for search engines. Your job is to FULLY ANSWER the reader's question in a way that makes them feel they got real value. SEO comes AFTER the answer is solid.
 
-CONTEXT FROM KEYWORD RESEARCH:
+Target keyword: "${keyword}"
+Search intent: ${intent}
+Reader profile: ${platform} store owner who is worried about accessibility, ADA lawsuits, or WCAG compliance. They found this article because they have a real problem and need a real answer.
+
+CONTEXT FROM COMMUNITY RESEARCH (real questions people are asking):
 ${keywordContext}
 
-Write the article as a JSON object with this exact shape:
+Write ONE article as a JSON object:
 {
-  "title": "SEO-optimized title under 60 chars",
-  "description": "meta description 150-160 chars",
-  "tags": ["Tag1", "Tag2", ...],
+  "title": "natural title that addresses the question, 60 chars max",
+  "description": "honest meta description 150-160 chars",
+  "tags": ["Tag1", ...],
   "category": "shopify|woocommerce|accessibility",
-  "body": "the full article body in markdown"
+  "body": "markdown body"
 }
 
-Requirements:
-- Title: catchy, includes primary keyword, under 60 chars
-- Description: includes keyword, compelling click incentive, 150-160 chars
-- Body: ${articleType === 'how-to' ? 'step-by-step practical guide with specific WCAG criteria and real numbers' : articleType === 'lawsuit' ? 'informational with real statistics, patterns, and actionable protection steps' : articleType === 'regulatory' ? 'clear explanation of requirements plus compliance checklist' : articleType === 'product-roundup' ? 'comparison format with honest assessments' : 'informational explainer'}. 800-1200 words. Use H2 and H3 headers. End with FAQ schema (3-4 questions).
-- No em dashes in the content (Harun finds them visually confusing — renders as ***)
-- Write like a knowledgeable human, not AI
-- Product mentions must be specific and credible, no fake feature lists
-- Include real WCAG criteria numbers (e.g., WCAG 2.1 AA = 4.5:1 contrast, WCAG 2.4.3 focus order, etc.)
-- End body with a "## Frequently Asked Questions" section with 3-4 questions and answers
+Article rules — in this order of priority:
+1. ANSWER THE QUESTION COMPLETELY in the first paragraph. Reader should feel the answer immediately.
+2. Include specific steps, numbers, WCAG criteria, or real examples that prove you know what you're talking about.
+3. Address the most common follow-up questions within the body.
+4. End with a "## Frequently Asked Questions" section with 3-4 real follow-up questions and honest answers.
+5. SEO comes last — weave the keyword naturally into title, first paragraph, and at least 2 subheadings. Do NOT stuff it.
+6. Do NOT use em dashes (they render as *** which is confusing).
+7. Write like a knowledgeable human, not AI. Short sentences. Real voice.
+8. If the topic is confusing or has nuance, acknowledge that honestly. Do not over-simplify.
+9. Body: ${articleType === 'how-to' ? 'step-by-step guide with specific WCAG criteria, real numbers, and concrete actions the reader can take today' : articleType === 'lawsuit' ? 'what store owners actually need to know, with real patterns and specific protection steps' : articleType === 'regulatory' ? 'clear requirements plus a checklist store owners can use right now' : articleType === 'product-roundup' ? 'honest comparison — name real strengths and weaknesses, no fake feature lists' : 'clear explanation with real examples and actionable takeaways'}. Aim for 600-900 words. More if the question is genuinely complex.
 
 Output ONLY the raw JSON object, no markdown code fences, no explanation.`;
 }
@@ -229,12 +234,14 @@ export async function generatePost(opts: GenerateOptions): Promise<string | null
 }
 
 export async function generateAllCategoryPosts(): Promise<string[]> {
-  const batchSize = parseInt(process.env.BATCH_SIZE || '3', 10);
+  // Pick 1-3 topics based on question quality — fewer articles but each one answers real questions
+  const batchSize = parseInt(process.env.BATCH_SIZE || '2', 10);
   const allKeywords = getAllKeywords();
   const state = loadState();
   const covered = new Set(Object.values(state.posts).map((p: any) => p.keyword?.toLowerCase()));
 
   const uncovered = allKeywords.filter((k) => !covered.has(k.keyword.toLowerCase()));
+  // Take up to batchSize — if fewer high-quality questions available, generate fewer
   const toGenerate = uncovered.slice(0, batchSize);
 
   const generated: string[] = [];
