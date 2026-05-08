@@ -11,7 +11,8 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-import { getAllKeywords, KeywordEntry } from './keywords';
+import { getAllKeywords } from './keywords';
+import type { KeywordEntry } from './keywords';
 import { updatePostState, loadState } from './state-store';
 
 const BLOG_DIR = path.join(process.cwd(), 'src/content/blog');
@@ -116,6 +117,8 @@ function findRelevantExistingPosts(topic: string, currentSlug: string): Array<{ 
   scored.sort((a, b) => b.score - a.score);
   return scored.slice(0, 5).map(({ slug, title, url }) => ({ slug, title, url }));
 }
+
+function guessTags(keyword: string, angle: string): string[] {
   const combined = (keyword + ' ' + angle).toLowerCase();
   const tags: string[] = ['Accessibility'];
   if (combined.includes('shopify')) tags.push('Shopify');
@@ -306,14 +309,14 @@ function writeBlogPost(filename: string, data: any, keyword: string, angle: stri
 
 function generateWithClaude(opts: GenerateOptions): any {
   const prompt = buildPrompt(opts);
-  const cmd = `claude --print --model opus --no-input ${JSON.stringify(prompt)}`;
-
+  const cmd = `claude --print --model opus --input-format text`;
   try {
     const output = execSync(cmd, {
       encoding: 'utf-8',
       timeout: 180000,
       maxBuffer: 50 * 1024 * 1024,
       cwd: process.cwd(),
+      input: prompt,
     }).trim();
 
     const cleaned = output.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
@@ -418,6 +421,6 @@ export async function main(): Promise<void> {
   console.log(`\nGenerated ${results.length} article(s): ${results.join(', ')}`);
 }
 
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch(console.error);
 }
