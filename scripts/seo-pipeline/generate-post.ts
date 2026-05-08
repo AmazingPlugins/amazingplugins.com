@@ -1,76 +1,71 @@
 /**
- * SEO Blog Post Generator
- * Uses Claude Code Opus to generate high-quality, SEO-optimized articles.
- * Each article: title, meta description, H1-H3, 800-1200 words, FAQ schema, OG tags.
+ * SEO Blog Post Generator — Deep Dive Model
+ *
+ * Strategy: ONE topic per run, MULTIPLE rich articles from different angles.
+ * Each article answers one specific question people actually have about that topic.
+ * No cap on articles — generate however many it takes to fully cover the topic.
+ *
+ * Context sources: keyword research, QA triage, Reddit discussions,
+ * competitor analysis, GSC query data, community research.
  */
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-import { getAllKeywords, getTopKeywords, KeywordEntry } from './keywords';
+import { getAllKeywords, KeywordEntry } from './keywords';
 import { updatePostState, loadState } from './state-store';
 
 const BLOG_DIR = path.join(process.cwd(), 'src/content/blog');
-const KEYWORD_FILES = [
-  '/Users/ray/Work/amazingplugins/community/keyword-harvest-2026-04-22.md',
-  '/Users/ray/Work/amazingplugins/community/keyword-harvest-2026-04-23.md',
-  '/Users/ray/Work/amazingplugins/community/keyword-harvest-2026-04-24.md',
+const COMMUNITY_DIR = '/Users/ray/Work/amazingplugins/community';
+
+// All community research sources — each one tells us what real people are asking
+const COMMUNITY_FILES = [
+  'keyword-harvest-2026-04-22.md',
+  'keyword-harvest-2026-04-23.md',
+  'keyword-harvest-2026-04-24.md',
+  'qa-triage-2026-04-22.md',
+  'qa-triage-2026-04-24.md',
+  'reddit-triage-2026-04-22.md',
+  'reddit-triage-2026-04-23.md',
+  'reddit-triage-2026-04-24.md',
+  'reddit-triage-2026-04-25.md',
+  'competitor-watch-2026-04-22.md',
+  'competitor-watch-2026-04-23.md',
+  'competitor-watch-2026-04-24.md',
+  'competitor-watch-2026-04-25.md',
+  'content-briefs-2026-04-24.md',
+  'content-briefs-2026-04-25.md',
 ];
 
 export interface GenerateOptions {
   keyword: string;
   intent: string;
   competition: string;
+  // Additional context from community research
+  context?: string;
+  // What angle this specific article covers
+  angle?: string;
 }
 
-function makeSlug(keyword: string): string {
-  const date = new Date().toISOString().slice(0, 10);
-  const safe = keyword
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .slice(0, 55);
-  return `${date}-${safe}`;
-}
-
-function readKeywordContext(): string {
+function getCommunityContext(): string {
   let context = '';
-  for (const f of KEYWORD_FILES) {
+  for (const f of COMMUNITY_FILES) {
+    const filePath = path.join(COMMUNITY_DIR, f);
     try {
-      context += fs.readFileSync(f, 'utf-8') + '\n\n';
-    } catch {}
+      const content = fs.readFileSync(filePath, 'utf-8');
+      // Include headers and key content — not full files
+      const lines = content.split('\n');
+      const excerpt = lines.slice(0, 80).join('\n'); // First 80 lines = intro + key data
+      context += `=== ${f} ===\n${excerpt}\n\n`;
+    } catch { }
   }
-  return context.slice(0, 8000); // cap at 8k chars for prompt
+  return context.slice(0, 12000); // Cap at 12k chars — enough for deep research
 }
 
-function formatTitle(keyword: string): string {
-  const kw = keyword.toLowerCase();
-  const titles: Record<string, string> = {
-    'shopify accessibility fixer': 'The 10 Best Shopify Accessibility Fixers in 2026 (Tested)',
-    'woocommerce accessibility fixer': 'The 10 Best WooCommerce Accessibility Plugins in 2026 (Tested)',
-    'shopify accessibility checker': 'How to Check Your Shopify Store for Accessibility Issues (Free Guide)',
-    'woocommerce accessibility checker': 'How to Check Your WooCommerce Store for Accessibility Issues (Free Guide)',
-    'shopify ada compliance app': 'Shopify ADA Compliance App: What Works and What Doesn\'t in 2026',
-    'woocommerce ada compliance plugin': 'WooCommerce ADA Compliance Plugin: What Works and What Doesn\'t in 2026',
-    'how to make shopify store ada compliant': 'How to Make Your Shopify Store ADA Compliant in 2026 (Step by Step)',
-    'how to make woocommerce store ada compliant': 'How to Make Your WooCommerce Store ADA Compliant in 2026 (Step by Step)',
-    'ada lawsuit shopify store': 'ADA Lawsuits Against Shopify Stores: What You Need to Know in 2026',
-    'wcag 2.2 shopify': 'WCAG 2.2 for Shopify Stores: What Changed and What It Means for You',
-    'european accessibility act shopify': 'European Accessibility Act and Shopify: What Stores Need to Do Now',
-  };
-  if (titles[kw]) return titles[kw];
-  return keyword.charAt(0).toUpperCase() + keyword.slice(1);
-}
-
-function guessTags(keyword: string): string[] {
-  const kw = keyword.toLowerCase();
-  const tags: string[] = ['Accessibility'];
-  if (kw.includes('shopify')) tags.push('Shopify');
-  if (kw.includes('woocommerce') || kw.includes('woo')) tags.push('WooCommerce');
-  if (kw.includes('ada')) tags.push('ADA');
-  if (kw.includes('wcag')) tags.push('WCAG');
-  if (kw.includes('european') || kw.includes('eaa')) tags.push('EAA', 'EU');
-  if (kw.includes('lawsuit') || kw.includes('legal')) tags.push('Legal');
-  return tags;
+function makeSlug(keyword: string, angle: string): string {
+  const date = new Date().toISOString().slice(0, 10);
+  const safeKw = keyword.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').slice(0, 40);
+  const safeAngle = angle.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').slice(0, 30);
+  return `${date}-${safeKw}-${safeAngle}`;
 }
 
 function guessCategory(keyword: string): string {
@@ -80,7 +75,71 @@ function guessCategory(keyword: string): string {
   return 'accessibility';
 }
 
-function buildPrompt(keyword: string, intent: string): string {
+function guessTags(keyword: string, angle: string): string[] {
+  const combined = (keyword + ' ' + angle).toLowerCase();
+  const tags: string[] = ['Accessibility'];
+  if (combined.includes('shopify')) tags.push('Shopify');
+  if (combined.includes('woocommerce') || combined.includes('woo')) tags.push('WooCommerce');
+  if (combined.includes('ada')) tags.push('ADA');
+  if (combined.includes('wcag')) tags.push('WCAG');
+  if (combined.includes('european') || combined.includes('eaa')) tags.push('EAA', 'EU');
+  if (combined.includes('lawsuit') || combined.includes('legal')) tags.push('Legal');
+  return tags;
+}
+
+/**
+ * Given ONE topic and all available context, figure out:
+ * What are the different angles/questions people have about this topic?
+ * Return a list of article specs — one per angle.
+ */
+function planArticleAngles(keyword: string, intent: string, context: string): GenerateOptions[] {
+  const platform = keyword.toLowerCase().includes('shopify') ? 'Shopify' : 'WooCommerce';
+  const isHowTo = keyword.toLowerCase().startsWith('how to');
+  const isLawsuit = keyword.toLowerCase().includes('lawsuit');
+  const isWcag = keyword.toLowerCase().includes('wcag');
+  const isEaa = keyword.toLowerCase().includes('european accessibility') || keyword.toLowerCase().includes('eaa');
+  const isProduct = keyword.toLowerCase().includes('fixer') || keyword.toLowerCase().includes('checker');
+
+  // Default angles based on topic type — these are the real sub-questions people ask
+  const angles: GenerateOptions[] = [];
+
+  if (isHowTo || isProduct) {
+    // "How to make Shopify store ADA compliant" — people ask:
+    angles.push({ keyword, intent, competition: '', angle: 'step-by-step-guide', context });
+    angles.push({ keyword, intent, competition: '', angle: 'common-mistakes', context });
+    angles.push({ keyword, intent, competition: '', angle: 'wcag-checklist', context });
+  }
+
+  if (isLawsuit) {
+    // "ADA lawsuit Shopify store" — people ask:
+    angles.push({ keyword, intent, competition: '', angle: 'lawsuit-explained', context });
+    angles.push({ keyword, intent, competition: '', angle: 'protection-steps', context });
+    angles.push({ keyword, intent, competition: '', angle: 'real-examples', context });
+  }
+
+  if (isWcag || isEaa) {
+    // "WCAG 2.2 Shopify" — people ask:
+    angles.push({ keyword, intent, competition: '', angle: 'what-changed', context });
+    angles.push({ keyword, intent, competition: '', angle: 'checklist', context });
+    angles.push({ keyword, intent, competition: '', angle: 'deadline', context });
+  }
+
+  if (isProduct) {
+    // "Shopify accessibility fixer" — people ask:
+    angles.push({ keyword, intent, competition: '', angle: 'what-it-actually-does', context });
+    angles.push({ keyword, intent, competition: '', angle: 'how-it-compares', context });
+  }
+
+  // Fallback — just one deep article if no specific angles match
+  if (angles.length === 0) {
+    angles.push({ keyword, intent, competition: '', angle: 'full-guide', context });
+  }
+
+  return angles;
+}
+
+function buildPrompt(opts: GenerateOptions): string {
+  const { keyword, intent, angle, context } = opts;
   const platform = keyword.toLowerCase().includes('shopify') ? 'Shopify' : 'WooCommerce';
   const isHowTo = keyword.toLowerCase().startsWith('how to');
   const isLawsuit = keyword.toLowerCase().includes('lawsuit');
@@ -92,45 +151,64 @@ function buildPrompt(keyword: string, intent: string): string {
   if (isLawsuit) articleType = 'lawsuit';
   else if (isEaa) articleType = 'regulatory';
   else if (isWcag) articleType = 'explainer';
-  else if (isProduct) articleType = 'product-roundup';
+  else if (isProduct) articleType = 'product-explainer';
   else if (isHowTo) articleType = 'how-to';
 
-  const keywordContext = readKeywordContext();
+  // Angle-specific instruction
+  const angleInstructions: Record<string, string> = {
+    'step-by-step-guide': 'This is a practical step-by-step guide. Lead with the exact steps the reader needs to take. Be specific — name the buttons they click, the numbers they need to meet, the order that matters.',
+    'common-mistakes': 'This is a cautionary article. Focus on what goes wrong and why. Name the specific mistakes store owners make, the consequences, and how to avoid them. Be direct — no fluff.',
+    'wcag-checklist': 'This is a checklist/reference article. Make it scannable and actionable. Each item should be something the reader can check or do right now.',
+    'lawsuit-explained': 'Explain the legal situation clearly and calmly. What actually happens in an ADA lawsuit? What are the real numbers? What does the plaintiff have to prove? No fear-mongering — just facts.',
+    'protection-steps': 'Focus on what store owners can actually do right now to protect themselves. Practical, specific, prioritized by impact.',
+    'real-examples': 'Use real patterns from actual cases. What did those stores do wrong? What happened? What could they have done differently? Specific > general.',
+    'what-changed': 'Focus on what is NEW in WCAG 2.2 or the new regulations. What did they add? What changed from 2.1? What matters most for store owners?',
+    'checklist': 'Make it a practical checklist. Store owner should be able to go through it and know where they stand. Each item: what to check, what the standard is, what to do if failing.',
+    'deadline': 'This is a deadline/action article. When does something need to be done? What happens if they miss it? What is the cheapest/fastest way to comply?',
+    'what-it-actually-does': 'Explain clearly what an accessibility fixer actually does under the hood. What does it change in the code? What does it NOT fix? Be honest about limitations.',
+    'how-it-compares': 'Compare honestly. What are the options? What are the tradeoffs? Name real differences — not fake feature lists. Help the reader decide.',
+    'full-guide': 'Comprehensive guide. Cover the topic fully — definition, implications, action steps, FAQ. The reader should feel they got everything they needed in one article.',
+  };
 
-  return `You are a helpful accessibility expert who writes for real store owners — not for search engines. Your job is to FULLY ANSWER the reader's question in a way that makes them feel they got real value. SEO comes AFTER the answer is solid.
+  const angleInstruction = angleInstructions[angle!] || angleInstructions['full-guide'];
 
-Target keyword: "${keyword}"
+  return `You are a helpful ${platform} accessibility expert who writes for real store owners. Your job is to FULLY ANSWER one specific question the reader has. SEO is secondary — if the answer is genuinely useful, the SEO follows.
+
+TOPIC: "${keyword}"
+THIS ARTICLE'S ANGLE: "${angle}"
 Search intent: ${intent}
-Reader profile: ${platform} store owner who is worried about accessibility, ADA lawsuits, or WCAG compliance. They found this article because they have a real problem and need a real answer.
 
-CONTEXT FROM COMMUNITY RESEARCH (real questions people are asking):
-${keywordContext}
+Reader profile: ${platform} store owner. They have a question about accessibility, ADA compliance, or WCAG. They found this article because they need a real answer, not a sales pitch.
+
+RESEARCH CONTEXT — real questions and data from multiple sources:
+${context}
+
+${angleInstruction}
 
 Write ONE article as a JSON object:
 {
-  "title": "natural title that addresses the question, 60 chars max",
-  "description": "honest meta description 150-160 chars",
+  "title": "clear title that matches what someone would search to find this answer, under 60 chars",
+  "description": "honest meta description, 150-160 chars, no clickbait",
   "tags": ["Tag1", ...],
   "category": "shopify|woocommerce|accessibility",
   "body": "markdown body"
 }
 
-Article rules — in this order of priority:
-1. ANSWER THE QUESTION COMPLETELY in the first paragraph. Reader should feel the answer immediately.
-2. Include specific steps, numbers, WCAG criteria, or real examples that prove you know what you're talking about.
-3. Address the most common follow-up questions within the body.
-4. End with a "## Frequently Asked Questions" section with 3-4 real follow-up questions and honest answers.
-5. SEO comes last — weave the keyword naturally into title, first paragraph, and at least 2 subheadings. Do NOT stuff it.
-6. Do NOT use em dashes (they render as *** which is confusing).
-7. Write like a knowledgeable human, not AI. Short sentences. Real voice.
-8. If the topic is confusing or has nuance, acknowledge that honestly. Do not over-simplify.
-9. Body: ${articleType === 'how-to' ? 'step-by-step guide with specific WCAG criteria, real numbers, and concrete actions the reader can take today' : articleType === 'lawsuit' ? 'what store owners actually need to know, with real patterns and specific protection steps' : articleType === 'regulatory' ? 'clear requirements plus a checklist store owners can use right now' : articleType === 'product-roundup' ? 'honest comparison — name real strengths and weaknesses, no fake feature lists' : 'clear explanation with real examples and actionable takeaways'}. Aim for 600-900 words. More if the question is genuinely complex.
+Rules:
+1. ANSWER THE QUESTION IN THE FIRST PARAGRAPH. The reader should feel they got the answer immediately.
+2. Include real specifics: WCAG criteria numbers, step sequences, dollar amounts, percentages, dates.
+3. Do NOT use em dashes (they render as ***).
+4. Write like a knowledgeable human. Short paragraphs. Real voice. No AI filler.
+5. If something is nuanced or has tradeoffs, say so honestly. Do not oversimplify.
+6. SEO: weave the topic keyword naturally into title, first paragraph, and 2+ subheadings. Do not stuff.
+7. End with "## Frequently Asked Questions" — 3-4 real follow-up questions with honest answers.
+8. Word count: 600-1200 depending on complexity. More if the angle genuinely needs it.
+9. Body type: ${articleType === 'how-to' ? 'step-by-step with specific WCAG criteria and exact actions' : articleType === 'lawsuit' ? 'legal patterns, real numbers, specific protection steps' : articleType === 'regulatory' ? 'requirement clarity + actionable checklist' : articleType === 'product-explainer' ? 'honest what-it-does + comparisons' : 'thorough explainer with actionable takeaways'}.
 
-Output ONLY the raw JSON object, no markdown code fences, no explanation.`;
+Output ONLY the raw JSON object, no markdown fences, no explanation.`;
 }
 
 function humanizeContent(content: string): string {
-  // Basic humanization: short sentences, remove AI-isms, vary paragraph length
   return content
     .replace(/In conclusion,/g, 'Bottom line,')
     .replace(/It is important to note that/g, 'Here\'s the thing:')
@@ -151,16 +229,16 @@ function humanizeContent(content: string): string {
     .replace(/\}/g, '');
 }
 
-function writeBlogPost(filename: string, data: any, keyword: string): string {
-  const slug = filename.replace('.md', '');
+function writeBlogPost(filename: string, data: any, keyword: string, angle: string): string {
   const frontmatter = {
     title: data.title,
     description: data.description,
     pubDate: new Date().toISOString(),
     author: 'Harun Ray',
-    tags: data.tags || ['Accessibility'],
+    tags: data.tags || guessTags(keyword, angle),
     seoKeywords: [keyword],
-    seoCategory: data.category || 'accessibility',
+    seoCategory: guessCategory(keyword),
+    articleAngle: angle,
     gscSubmitted: false,
   };
 
@@ -173,89 +251,123 @@ function writeBlogPost(filename: string, data: any, keyword: string): string {
     .join('\n');
 
   const content = `---\n${fm}\n---\n\n${body}\n`;
-  fs.writeFileSync(path.join(BLOG_DIR, filename), content);
+  const filePath = path.join(BLOG_DIR, filename);
+  fs.writeFileSync(filePath, content);
   return filename;
 }
 
-function generateWithClaude(keyword: string, intent: string): any {
-  const prompt = buildPrompt(keyword, intent);
+function generateWithClaude(opts: GenerateOptions): any {
+  const prompt = buildPrompt(opts);
   const cmd = `claude --print --model opus --no-input ${JSON.stringify(prompt)}`;
 
   try {
     const output = execSync(cmd, {
       encoding: 'utf-8',
-      timeout: 120000,
+      timeout: 180000,
       maxBuffer: 50 * 1024 * 1024,
       cwd: process.cwd(),
     }).trim();
 
-    // Strip any markdown code fences if present
     const cleaned = output.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
     return JSON.parse(cleaned);
   } catch (error: any) {
-    console.error(`Claude generation failed for "${keyword}": ${error.message}`);
-    // Fallback: return null so caller can skip this keyword
+    console.error(`Claude generation failed for "${opts.keyword}" (${opts.angle}): ${error.message}`);
     return null;
   }
 }
 
-export async function generatePost(opts: GenerateOptions): Promise<string | null> {
-  const { keyword, intent, competition } = opts;
-  const slug = makeSlug(keyword);
-  const filename = `${slug}.md`;
-  const filePath = path.join(BLOG_DIR, filename);
+/**
+ * Generate articles for ONE topic — multiple angles, deep coverage.
+ * No cap on how many articles. Generate however many angles the topic needs.
+ */
+export async function generateForTopic(topic: KeywordEntry): Promise<string[]> {
+  const context = getCommunityContext();
+  const angles = planArticleAngles(topic.keyword, topic.intent || 'informational', context);
 
-  // Skip if already exists
-  if (fs.existsSync(filePath)) {
-    console.log(`Skipping "${keyword}" — already exists`);
-    return null;
-  }
-
-  console.log(`Generating: "${keyword}"...`);
-  const data = generateWithClaude(keyword, intent);
-
-  if (!data || !data.title || !data.body) {
-    console.error(`Failed to generate content for "${keyword}"`);
-    return null;
-  }
-
-  writeBlogPost(filename, data, keyword);
-  console.log(`Created: ${filename}`);
-
-  updatePostState(slug, {
-    slug,
-    title: data.title,
-    seoKeywords: [keyword],
-    seoCategory: data.category || guessCategory(keyword),
-    gscSubmitted: false,
-  });
-
-  return filename;
-}
-
-export async function generateAllCategoryPosts(): Promise<string[]> {
-  // Pick 1-3 topics based on question quality — fewer articles but each one answers real questions
-  const batchSize = parseInt(process.env.BATCH_SIZE || '2', 10);
-  const allKeywords = getAllKeywords();
-  const state = loadState();
-  const covered = new Set(Object.values(state.posts).map((p: any) => p.keyword?.toLowerCase()));
-
-  const uncovered = allKeywords.filter((k) => !covered.has(k.keyword.toLowerCase()));
-  // Take up to batchSize — if fewer high-quality questions available, generate fewer
-  const toGenerate = uncovered.slice(0, batchSize);
+  console.log(`\n=== Topic: "${topic.keyword}" ===`);
+  console.log(`Planning ${angles.length} article angle(s): ${angles.map(a => a.angle).join(', ')}`);
 
   const generated: string[] = [];
-  for (const kw of toGenerate) {
-    const result = await generatePost(kw);
-    if (result) generated.push(result);
+  for (const opts of angles) {
+    const slug = makeSlug(opts.keyword, opts.angle!);
+    const filename = `${slug}.md`;
+    const filePath = path.join(BLOG_DIR, filename);
+
+    // Skip if already exists
+    if (fs.existsSync(filePath)) {
+      console.log(`Skipping "${opts.angle}" — already exists`);
+      continue;
+    }
+
+    console.log(`Generating: [${opts.angle}]...`);
+    const data = generateWithClaude(opts);
+
+    if (!data || !data.title || !data.body) {
+      console.error(`Failed to generate "${opts.angle}"`);
+      continue;
+    }
+
+    writeBlogPost(filename, data, opts.keyword, opts.angle!);
+    console.log(`Created: ${filename}`);
+
+    updatePostState(slug, {
+      slug,
+      title: data.title,
+      topic: opts.keyword,
+      angle: opts.angle,
+      seoKeywords: [opts.keyword],
+      seoCategory: guessCategory(opts.keyword),
+      gscSubmitted: false,
+    });
+
+    generated.push(filename);
   }
 
   return generated;
 }
 
+/**
+ * Pick ONE topic per run from the keyword queue.
+ * Prioritize topics that have the most community research context available.
+ * Generate multiple rich articles for that one topic.
+ */
+export async function generateAllCategoryPosts(): Promise<string[]> {
+  const allKeywords = getAllKeywords();
+  const state = loadState();
+  const covered = new Set(
+    Object.values(state.posts)
+      .filter((p: any) => p.topic) // Only topics we've fully covered
+      .map((p: any) => p.topic?.toLowerCase())
+  );
+
+  // Filter to uncovered topics
+  const uncovered = allKeywords.filter(k => !covered.has(k.keyword.toLowerCase()));
+
+  if (uncovered.length === 0) {
+    console.log('All topics covered. Checking for new angles on existing topics...');
+    // Check if any existing topic needs additional angle articles
+    const existingTopics = new Set(Object.values(state.posts).map((p: any) => p.topic?.toLowerCase()));
+    if (existingTopics.size > 0) {
+      const topicToRefresh = allKeywords.find(k => existingTopics.has(k.keyword.toLowerCase()));
+      if (topicToRefresh) {
+        console.log(`Refreshing topic: ${topicToRefresh.keyword}`);
+        return generateForTopic(topicToRefresh);
+      }
+    }
+    return [];
+  }
+
+  // Pick the first uncovered topic — keyword files are already sorted by priority
+  const selectedTopic = uncovered[0];
+  console.log(`\nSelected topic: "${selectedTopic.keyword}"`);
+
+  // Generate multiple articles for this one topic
+  return generateForTopic(selectedTopic);
+}
+
 export async function main(): Promise<void> {
   const results = await generateAllCategoryPosts();
-  console.log(`\nGenerated ${results.length} post(s): ${results.join(', ')}`);
+  console.log(`\nGenerated ${results.length} article(s): ${results.join(', ')}`);
 }
 
 if (require.main === module) {
