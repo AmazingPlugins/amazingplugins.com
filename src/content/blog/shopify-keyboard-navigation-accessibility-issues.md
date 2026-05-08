@@ -16,7 +16,7 @@ seoKeywords:
   - shopify checkout keyboard navigation
 seoCategory: "Guides"
 canonicalUrl: "https://amazingplugins.com/blog/shopify-keyboard-navigation-accessibility-issues"
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 Pull up your Shopify store, unplug your mouse, and try to buy something using only Tab and Enter. How far did you get? Most Shopify stores break within the first three tabs.

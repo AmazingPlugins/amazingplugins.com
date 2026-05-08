@@ -17,7 +17,7 @@ seoKeywords:
   - ADA compliance shopify woocommerce 2026
 seoCategory: "Guides"
 canonicalUrl: "https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce"
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 ADA web accessibility lawsuits hit ecommerce hard in 2025. Over 5,000 cases filed. The good news: the violations are predictable and fixable. Here is what you actually need to do.

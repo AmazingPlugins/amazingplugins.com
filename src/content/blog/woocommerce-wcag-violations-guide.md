@@ -16,7 +16,7 @@ seoKeywords:
   - woocommerce checkout accessibility
 seoCategory: "Guides"
 canonicalUrl: "https://amazingplugins.com/blog/woocommerce-wcag-violations-guide"
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 WooCommerce sites fail accessibility audits for a handful of predictable reasons. Most store owners and developers discover these issues the hard way, usually after receiving a compliance complaint or failing an automated scan. The good news is that once you know what breaks WCAG compliance in WooCommerce, you can systematically track down and fix each problem.

@@ -17,7 +17,7 @@ seoKeywords:
   - wordpress accessibility 2026
 seoCategory: "Guides"
 canonicalUrl: "https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements"
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 WCAG 2.2 became the recommended standard in 2023. If your site was audited against 2.1 AA, you may already be failing some 2.2 requirements. Here is what is new and what it means for WooCommerce.
