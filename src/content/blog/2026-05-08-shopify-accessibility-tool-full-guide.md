@@ -1,5 +1,5 @@
 ---
-title: Shopify Accessibility Tool: Full Guide for Store Owners (2026)
+title: "Shopify Accessibility Tool: Full Guide for Store Owners (2026)"
 description: What a Shopify accessibility tool actually does, which type to pick (scanner, overlay, code fixer), and how to use one without getting sued.
 pubDate: 2026-05-08T06:10:39.302Z
 author: Harun Ray
@@ -10,7 +10,7 @@ tags:
   - ADA Compliance
   - Tools
 seoKeywords:
-  - `shopify accessibility tool`
+  - shopify accessibility tool
 seoCategory: shopify
 articleAngle: full-guide
 gscSubmitted: false
