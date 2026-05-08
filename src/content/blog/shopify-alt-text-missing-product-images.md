@@ -2,6 +2,7 @@
 title: "Why Your Shopify Product Images Are Missing Alt Text (And How It Puts You at Risk)"
 description: "Learn why Shopify product images commonly lack alt text, how this violates WCAG 2.1 AA and ADA requirements, and how to fix hundreds of images automatically."
 date: 2026-05-09
+pubDate: 2026-05-09
 seoKeywords: ["shopify product images alt text missing", "shopify alt text accessibility", "WCAG alt text shopify", "ADA alt text ecommerce"]
 seoCategory: "Shopify Accessibility"
 canonicalUrl: "https://amazingplugins.com/blog/shopify-alt-text-missing-product-images/"

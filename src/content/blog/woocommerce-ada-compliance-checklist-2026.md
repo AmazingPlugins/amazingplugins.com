@@ -2,6 +2,7 @@
 title: "Your WooCommerce ADA Compliance Checklist for 2026 (Everything You Need to Fix)"
 description: "A practical ADA compliance checklist for WooCommerce store owners in 2026. Learn what to fix, why it matters legally, and how to automate the process."
 date: 2026-05-09
+pubDate: 2026-05-09
 seoKeywords: ["woocommerce ADA compliance checklist 2026", "woocommerce ADA compliance", "ADA compliance woocommerce 2026", "WCAG woocommerce store"]
 seoCategory: "WooCommerce Accessibility"
 canonicalUrl: "https://amazingplugins.com/blog/woocommerce-ada-compliance-checklist-2026/"
