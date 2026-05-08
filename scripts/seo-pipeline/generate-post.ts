@@ -75,7 +75,47 @@ function guessCategory(keyword: string): string {
   return 'accessibility';
 }
 
-function guessTags(keyword: string, angle: string): string[] {
+/**
+ * Scan existing blog posts and return a list relevant to the given topic.
+ * Used to build internal linking context for new articles.
+ */
+function findRelevantExistingPosts(topic: string, currentSlug: string): Array<{ slug: string; title: string; url: string }> {
+  if (!fs.existsSync(BLOG_DIR)) return [];
+
+  const currentTopic = topic.toLowerCase();
+  const files = fs.readdirSync(BLOG_DIR).filter(f => f.endsWith('.md') && f !== `${currentSlug}.md`);
+
+  const scored: Array<{ slug: string; title: string; url: string; score: number }> = [];
+
+  for (const file of files) {
+    const filePath = path.join(BLOG_DIR, file);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+
+    // Extract title from frontmatter
+    const titleMatch = raw.match(/^title:\s*"?([^"\n]+)"?/m);
+    const title = titleMatch ? titleMatch[1] : file.replace('.md', '');
+
+    // Score by keyword overlap
+    let score = 0;
+    const lower = raw.toLowerCase();
+    const topicWords = currentTopic.split(/\s+/);
+    for (const word of topicWords) {
+      if (word.length > 3 && lower.includes(word)) score++;
+    }
+
+    // Extract slug for URL construction
+    const slug = file.replace('.md', '');
+    const url = `https://amazingplugins.com/blog/${slug}`;
+
+    if (score > 0) {
+      scored.push({ slug, title, url, score });
+    }
+  }
+
+  // Sort by relevance score, return top 5 for prompt context
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, 5).map(({ slug, title, url }) => ({ slug, title, url }));
+}
   const combined = (keyword + ' ' + angle).toLowerCase();
   const tags: string[] = ['Accessibility'];
   if (combined.includes('shopify')) tags.push('Shopify');
@@ -172,6 +212,12 @@ function buildPrompt(opts: GenerateOptions): string {
 
   const angleInstruction = angleInstructions[angle!] || angleInstructions['full-guide'];
 
+  // Build internal links context for the prompt
+  const relevantPosts = findRelevantExistingPosts(keyword, '');
+  const internalLinksContext = relevantPosts.length > 0
+    ? `INTERNAL LINKS — link to these existing articles where relevant:\n${relevantPosts.map(p => `- [${p.title}](${p.url})`).join('\n')}\n\nAdd 1-3 of these links naturally into the body where they add value for the reader. Use descriptive link text, not "click here".`
+    : '';
+
   return `You are a helpful ${platform} accessibility expert who writes for real store owners. Your job is to FULLY ANSWER one specific question the reader has. SEO is secondary — if the answer is genuinely useful, the SEO follows.
 
 TOPIC: "${keyword}"
@@ -182,6 +228,8 @@ Reader profile: ${platform} store owner. They have a question about accessibilit
 
 RESEARCH CONTEXT — real questions and data from multiple sources:
 ${context}
+
+${internalLinksContext}
 
 ${angleInstruction}
 
