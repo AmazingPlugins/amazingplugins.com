@@ -6,7 +6,7 @@ pubDate: 2026-05-09
 seoKeywords: ["shopify product images alt text missing", "shopify alt text accessibility", "WCAG alt text shopify", "ADA alt text ecommerce"]
 seoCategory: "Shopify Accessibility"
 canonicalUrl: "https://amazingplugins.com/blog/shopify-alt-text-missing-product-images/"
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 Maria had been running her Shopify store for three years. She had 847 product images. When she got an accessibility notice, she discovered that 612 of them had empty alt text fields.
