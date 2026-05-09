@@ -14,6 +14,7 @@ import { execSync } from 'child_process';
 import { getAllKeywords } from './keywords';
 import type { KeywordEntry } from './keywords';
 import { updatePostState, loadState } from './state-store';
+import { getProductContextForPlatform, validateGeneratedArticle } from './content-quality';
 
 const BLOG_DIR = path.join(process.cwd(), 'src/content/blog');
 const COMMUNITY_DIR = '/Users/ray/Work/amazingplugins/community';
@@ -221,6 +222,8 @@ function buildPrompt(opts: GenerateOptions): string {
     ? `INTERNAL LINKS — link to these existing articles where relevant:\n${relevantPosts.map(p => `- [${p.title}](${p.url})`).join('\n')}\n\nAdd 1-3 of these links naturally into the body where they add value for the reader. Use descriptive link text, not "click here".`
     : '';
 
+  const productContext = getProductContextForPlatform(platform);
+
   return `You are a helpful ${platform} accessibility expert who writes for real store owners. Your job is to FULLY ANSWER one specific question the reader has. SEO is secondary — if the answer is genuinely useful, the SEO follows.
 
 TOPIC: "${keyword}"
@@ -228,6 +231,9 @@ THIS ARTICLE'S ANGLE: "${angle}"
 Search intent: ${intent}
 
 Reader profile: ${platform} store owner. They have a question about accessibility, ADA compliance, or WCAG. They found this article because they need a real answer, not a sales pitch.
+
+PRODUCT CONTEXT — connect the article naturally to what AmazingPlugins already sells:
+${productContext}
 
 RESEARCH CONTEXT — real questions and data from multiple sources:
 ${context}
@@ -252,9 +258,13 @@ Rules:
 4. Write like a knowledgeable human. Short paragraphs. Real voice. No AI filler.
 5. If something is nuanced or has tradeoffs, say so honestly. Do not oversimplify.
 6. SEO: weave the topic keyword naturally into title, first paragraph, and 2+ subheadings. Do not stuff.
-7. End with "## Frequently Asked Questions" — 3-4 real follow-up questions with honest answers.
-8. Word count: 600-1200 depending on complexity. More if the angle genuinely needs it.
-9. Body type: ${articleType === 'how-to' ? 'step-by-step with specific WCAG criteria and exact actions' : articleType === 'lawsuit' ? 'legal patterns, real numbers, specific protection steps' : articleType === 'regulatory' ? 'requirement clarity + actionable checklist' : articleType === 'product-explainer' ? 'honest what-it-does + comparisons' : 'thorough explainer with actionable takeaways'}.
+7. Include a "## Quick answer" or equivalent section near the top.
+8. Include a "## People also ask" or "## Frequently asked questions" section with 3-5 real questions written as H3 headings.
+9. Include at least one practical checklist, example, or step-by-step workflow.
+10. Include a natural "How AmazingPlugins helps" section when relevant. Mention concrete product capabilities, not generic marketing.
+11. Add 1-3 useful markdown links from the internal-links list if provided, plus product links when useful.
+12. Word count: 1200-2200. Shorter articles are rejected by the quality gate.
+13. Body type: ${articleType === 'how-to' ? 'step-by-step with specific WCAG criteria and exact actions' : articleType === 'lawsuit' ? 'legal patterns, real numbers, specific protection steps' : articleType === 'regulatory' ? 'requirement clarity + actionable checklist' : articleType === 'product-explainer' ? 'honest what-it-does + comparisons' : 'thorough explainer with actionable takeaways'}.
 
 Output ONLY the raw JSON object, no markdown fences, no explanation.`;
 }
@@ -356,6 +366,23 @@ export async function generateForTopic(topic: KeywordEntry): Promise<string[]> {
     if (!data || !data.title || !data.body) {
       console.error(`Failed to generate "${opts.angle}"`);
       continue;
+    }
+
+    const quality = validateGeneratedArticle(data, {
+      keyword: opts.keyword,
+      platform: opts.keyword.toLowerCase().includes('shopify') ? 'Shopify' : 'WooCommerce',
+      angle: opts.angle!,
+    });
+
+    if (!quality.ok) {
+      console.error(`Quality gate failed for "${opts.angle}" (${quality.wordCount} words):`);
+      for (const error of quality.errors) console.error(`- ${error}`);
+      continue;
+    }
+
+    if (quality.warnings.length > 0) {
+      console.warn(`Quality warnings for "${opts.angle}":`);
+      for (const warning of quality.warnings) console.warn(`- ${warning}`);
     }
 
     writeBlogPost(filename, data, opts.keyword, opts.angle!);

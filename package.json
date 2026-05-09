@@ -15,7 +15,9 @@
     "seo:health": "tsx scripts/seo-pipeline/gsc-health.ts",
     "seo:fix": "tsx scripts/seo-pipeline/fix-404s.ts",
     "seo:pipeline": "tsx scripts/seo-pipeline/index.ts",
-    "seo:keywords": "tsx scripts/seo-pipeline/keywords.ts"
+    "seo:keywords": "tsx scripts/seo-pipeline/keywords.ts",
+    "test:seo-quality": "tsx scripts/seo-pipeline/content-quality.test.ts",
+    "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^13.1.10",
