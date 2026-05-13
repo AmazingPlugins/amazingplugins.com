@@ -1,7 +1,10 @@
 ---
-title: "How to Audit Your Shopify Store for Accessibility (Step by Step)"
-description: "Run a full accessibility audit on your Shopify store in under an hour. This step-by-step guide covers automated scanners, keyboard tests, screen reader checks, and what to fix first."
-pubDate: 2026-05-06
+title: How to Audit Your Shopify Store for Accessibility (Step by Step)
+description: >-
+  Run a full accessibility audit on your Shopify store in under an hour. This
+  step-by-step guide covers automated scanners, keyboard tests, screen reader
+  checks, and what to fix first.
+pubDate: 2026-05-06T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -13,9 +16,10 @@ seoKeywords:
   - shopify accessibility audit tool
   - free shopify accessibility test
   - shopify wcag 2.2 checklist
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/how-to-audit-your-shopify-store-for-accessibility"
-gscSubmitted: pending_gsc_setup
+seoCategory: Guides
+canonicalUrl: >-
+  https://amazingplugins.com/blog/how-to-audit-your-shopify-store-for-accessibility
+gscSubmitted: true
 ---
 
 # How to Audit Your Shopify Store for Accessibility (Step by Step)

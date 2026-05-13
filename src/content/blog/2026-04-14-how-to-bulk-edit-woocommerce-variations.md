@@ -1,12 +1,16 @@
 ---
-title: "How to Bulk Edit WooCommerce Variations (The Complete Guide)"
-description: "Everything you need to know about bulk editing variable product variations in WooCommerce — including attributes, prices, stock, and shipping classes across hundreds of variants at once."
-pubDate: 2026-04-14
+title: How to Bulk Edit WooCommerce Variations (The Complete Guide)
+description: >-
+  Everything you need to know about bulk editing variable product variations in
+  WooCommerce — including attributes, prices, stock, and shipping classes across
+  hundreds of variants at once.
+pubDate: 2026-04-14T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
   - Bulk Edit
   - Variations
+gscSubmitted: true
 ---
 
 |---|---|

@@ -1,12 +1,17 @@
 ---
-title: "WooCommerce EAA Compliance Plugin Guide for 2026"
-description: "What WooCommerce merchants need from an EAA compliance plugin in 2026, including WCAG checks, checkout fixes, and documentation."
-date: 2026-05-10
-pubDate: 2026-05-10
-seoKeywords: ["WooCommerce EAA compliance plugin", "European Accessibility Act WooCommerce", "EAA compliance WooCommerce"]
-seoCategory: "WooCommerce Accessibility"
-canonicalUrl: "https://amazingplugins.com/blog/woocommerce-eaa-compliance-plugin-guide-2026/"
-gscSubmitted: false
+title: WooCommerce EAA Compliance Plugin Guide for 2026
+description: >-
+  What WooCommerce merchants need from an EAA compliance plugin in 2026,
+  including WCAG checks, checkout fixes, and documentation.
+date: 2026-05-10T00:00:00.000Z
+pubDate: 2026-05-10T00:00:00.000Z
+seoKeywords:
+  - WooCommerce EAA compliance plugin
+  - European Accessibility Act WooCommerce
+  - EAA compliance WooCommerce
+seoCategory: WooCommerce Accessibility
+canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-eaa-compliance-plugin-guide-2026/'
+gscSubmitted: true
 ---
 
 # WooCommerce EAA compliance plugin guide for 2026

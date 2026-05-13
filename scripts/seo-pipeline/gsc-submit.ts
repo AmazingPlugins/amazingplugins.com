@@ -1,10 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { submitURLForIndexing } from './gsc-client';
+import { getGSCClient } from './gsc-client';
 import { markAsSubmitted, loadState } from './state-store';
 
 const SITE_URL = process.env.SITE_URL || 'https://amazingplugins.com';
+const SITEMAP_URL = process.env.SITEMAP_URL || 'https://amazingplugins.com/sitemap-0.xml';
 
 /**
  * Get all blog post files that haven't been submitted to GSC
@@ -38,43 +39,65 @@ export function getPostURL(filePath: string): string {
 }
 
 /**
+ * Submit the site's sitemap to Google Search Console
+ */
+async function submitSitemap(): Promise<boolean> {
+  const client = await getGSCClient();
+  const siteUrl = process.env.GSC_SITE_URL || 'sc-domain:amazingplugins.com';
+  
+  try {
+    await client.sitemaps.submit({
+      siteUrl,
+      feedpath: SITEMAP_URL,
+    });
+    console.log(`Submitted sitemap: ${SITEMAP_URL}`);
+    return true;
+  } catch (error: any) {
+    console.error(`Error submitting sitemap:`, error.message);
+    return false;
+  }
+}
+
+/**
  * Submit all unsubmitted posts to Google Search Console
+ * Strategy: submit the sitemap once, then mark all posts as submitted
  */
 export async function submitAllPosts(): Promise<{ submitted: number; failed: number }> {
   const unsubmitted = getUnsubmittedPosts();
-  let submitted = 0;
-  let failed = 0;
   
-  console.log(`Found ${unsubmitted.length} unsubmitted posts`);
-  
-  for (const filePath of unsubmitted) {
-    const url = getPostURL(filePath);
-    console.log(`Submitting: ${url}`);
-    
-    const success = await submitURLForIndexing(url);
-    
-    if (success) {
-      // Mark as submitted in frontmatter
-      const content = fs.readFileSync(filePath, 'utf-8');
-      const { data, content: body } = matter(content);
-      data.gscSubmitted = true;
-      fs.writeFileSync(filePath, matter.stringify(body, data));
-      
-      // Update state
-      const slug = path.basename(filePath, '.md').replace(/^\d{4}-\d{2}-\d{2}-/, '');
-      markAsSubmitted(slug);
-      
-      submitted++;
-    } else {
-      failed++;
-    }
-    
-    // Rate limiting - wait between submissions
-    await new Promise(resolve => setTimeout(resolve, 1000));
+  if (unsubmitted.length === 0) {
+    console.log('No unsubmitted posts');
+    return { submitted: 0, failed: 0 };
   }
   
-  console.log(`\nSubmission complete: ${submitted} submitted, ${failed} failed`);
-  return { submitted, failed };
+  console.log(`Found ${unsubmitted.length} unsubmitted posts`);
+  for (const filePath of unsubmitted) {
+    console.log(`  - ${getPostURL(filePath)}`);
+  }
+  
+  // Submit sitemap once for all new posts
+  const sitemapOk = await submitSitemap();
+  
+  if (!sitemapOk) {
+    console.error('Sitemap submission failed — posts not marked as submitted');
+    return { submitted: 0, failed: unsubmitted.length };
+  }
+  
+  // Mark all posts as submitted
+  let submitted = 0;
+  for (const filePath of unsubmitted) {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const { data, content: body } = matter(content);
+    data.gscSubmitted = true;
+    fs.writeFileSync(filePath, matter.stringify(body, data));
+    
+    const slug = path.basename(filePath, '.md').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+    markAsSubmitted(slug);
+    submitted++;
+  }
+  
+  console.log(`\nSubmission complete: ${submitted} posts marked as submitted`);
+  return { submitted, failed: 0 };
 }
 
 /**
@@ -87,20 +110,19 @@ export async function submitPost(slug: string): Promise<boolean> {
   for (const file of files) {
     if (file.includes(slug)) {
       const filePath = path.join(blogDir, file);
-      const url = getPostURL(filePath);
       
-      const success = await submitURLForIndexing(url);
+      // Submit sitemap
+      const sitemapOk = await submitSitemap();
+      if (!sitemapOk) return false;
       
-      if (success) {
-        // Mark as submitted
-        const content = fs.readFileSync(filePath, 'utf-8');
-        const { data, content: body } = matter(content);
-        data.gscSubmitted = true;
-        fs.writeFileSync(filePath, matter.stringify(body, data));
-        markAsSubmitted(slug);
-      }
+      // Mark as submitted
+      const content = fs.readFileSync(filePath, 'utf-8');
+      const { data, content: body } = matter(content);
+      data.gscSubmitted = true;
+      fs.writeFileSync(filePath, matter.stringify(body, data));
+      markAsSubmitted(slug);
       
-      return success;
+      return true;
     }
   }
   

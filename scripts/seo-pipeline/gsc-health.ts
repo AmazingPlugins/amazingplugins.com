@@ -37,7 +37,7 @@ export async function getGSCHealth(): Promise<HealthReport> {
     scopes: ['https://www.googleapis.com/auth/webmasters'],
   });
   
-  const gsc = google.webmasters({ version: 'v3', auth });
+  const gsc = google.searchconsole({ version: 'v1', auth });
   
   const endDate = new Date().toISOString().split('T')[0];
   const startDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]; // 30 days ago

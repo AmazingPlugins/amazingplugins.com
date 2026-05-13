@@ -1,12 +1,17 @@
 ---
-title: "Shopify Accessibility Statement Template for 2026"
-description: "A practical Shopify accessibility statement template for 2026, plus what to include, what to avoid, and how to keep it honest."
-date: 2026-05-10
-pubDate: 2026-05-10
-seoKeywords: ["shopify accessibility statement template 2026", "accessibility statement Shopify", "Shopify accessibility statement"]
-seoCategory: "Shopify Accessibility"
-canonicalUrl: "https://amazingplugins.com/blog/shopify-accessibility-statement-template-2026/"
-gscSubmitted: false
+title: Shopify Accessibility Statement Template for 2026
+description: >-
+  A practical Shopify accessibility statement template for 2026, plus what to
+  include, what to avoid, and how to keep it honest.
+date: 2026-05-10T00:00:00.000Z
+pubDate: 2026-05-10T00:00:00.000Z
+seoKeywords:
+  - shopify accessibility statement template 2026
+  - accessibility statement Shopify
+  - Shopify accessibility statement
+seoCategory: Shopify Accessibility
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-accessibility-statement-template-2026/'
+gscSubmitted: true
 ---
 
 # Shopify accessibility statement template for 2026

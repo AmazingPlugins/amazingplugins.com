@@ -1,7 +1,10 @@
 ---
-title: "How to Make Your Shopify Store EAA Compliant (2026)"
-description: "The European Accessibility Act affects Shopify stores selling to EU customers. This guide covers what EAA compliance means, what you need to fix, and how to audit your store."
-pubDate: 2026-05-06
+title: How to Make Your Shopify Store EAA Compliant (2026)
+description: >-
+  The European Accessibility Act affects Shopify stores selling to EU customers.
+  This guide covers what EAA compliance means, what you need to fix, and how to
+  audit your store.
+pubDate: 2026-05-06T00:00:00.000Z
 author: Harun Ray
 tags:
   - EAA
@@ -14,9 +17,9 @@ seoKeywords:
   - European Accessibility Act Shopify
   - EAA compliance checklist ecommerce
   - Shopify accessibility requirements sell to EU customers
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/how-to-make-your-shopify-store-eaa-compliant"
-gscSubmitted: pending_gsc_setup
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/how-to-make-your-shopify-store-eaa-compliant'
+gscSubmitted: true
 ---
 
 # How to Make Your Shopify Store EAA Compliant (2026)

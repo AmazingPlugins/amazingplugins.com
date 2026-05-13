@@ -25,7 +25,7 @@ export async function getGSCClient(): Promise<any> {
     scopes: ['https://www.googleapis.com/auth/webmasters'],
   });
   
-  gscClient = google.webmasters({ version: 'v3', auth });
+  gscClient = google.searchconsole({ version: 'v1', auth });
   return gscClient;
 }
 
@@ -121,12 +121,10 @@ export async function submitURLForIndexing(url: string): Promise<boolean> {
   const siteUrl = process.env.GSC_SITE_URL || 'sc-domain:amazingplugins.com';
   
   try {
-    await client.urlInspection.index({
+    await client.urlInspection.index().inspect({
       siteUrl,
-      requestBody: {
-        inspectionUrl: url,
-        languageCode: 'en-US',
-      },
+      inspectionUrl: url,
+      languageCode: 'en-US',
     });
     console.log(`Submitted URL for indexing: ${url}`);
     return true;

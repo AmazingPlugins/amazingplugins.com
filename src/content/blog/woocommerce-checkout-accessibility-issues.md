@@ -1,12 +1,17 @@
 ---
-title: "WooCommerce Checkout Accessibility Issues to Fix First"
-description: "A practical guide to WooCommerce checkout accessibility issues: labels, keyboard traps, errors, payment plugins, and WCAG fixes."
-date: 2026-05-10
-pubDate: 2026-05-10
-seoKeywords: ["WooCommerce checkout accessibility issues", "WooCommerce checkout accessibility", "accessible WooCommerce checkout"]
-seoCategory: "WooCommerce Accessibility"
-canonicalUrl: "https://amazingplugins.com/blog/woocommerce-checkout-accessibility-issues/"
-gscSubmitted: false
+title: WooCommerce Checkout Accessibility Issues to Fix First
+description: >-
+  A practical guide to WooCommerce checkout accessibility issues: labels,
+  keyboard traps, errors, payment plugins, and WCAG fixes.
+date: 2026-05-10T00:00:00.000Z
+pubDate: 2026-05-10T00:00:00.000Z
+seoKeywords:
+  - WooCommerce checkout accessibility issues
+  - WooCommerce checkout accessibility
+  - accessible WooCommerce checkout
+seoCategory: WooCommerce Accessibility
+canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-checkout-accessibility-issues/'
+gscSubmitted: true
 ---
 
 # WooCommerce checkout accessibility issues to fix first

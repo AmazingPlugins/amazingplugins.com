@@ -1,7 +1,10 @@
 ---
-title: "WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?"
-description: "WCAG 2.2 added new requirements around focus visibility, target size, and dragging movements. Here's what changed from 2.1 and what it means for your WooCommerce store."
-pubDate: 2026-05-08
+title: WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?
+description: >-
+  WCAG 2.2 added new requirements around focus visibility, target size, and
+  dragging movements. Here's what changed from 2.1 and what it means for your
+  WooCommerce store.
+pubDate: 2026-05-08T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -15,8 +18,8 @@ seoKeywords:
   - wcag 2.2 requirements
   - woocommerce wcag 2.2
   - wordpress accessibility 2026
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements"
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements'
 gscSubmitted: true
 ---
 

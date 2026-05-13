@@ -1,7 +1,10 @@
 ---
-title: "Why Your Shopify Store Fails Keyboard Navigation Tests (And How to Fix It)"
-description: "Most Shopify stores fail keyboard navigation accessibility within the first three tabs. Here's why it breaks, how to test it yourself, and what to fix first."
-pubDate: 2026-05-08
+title: Why Your Shopify Store Fails Keyboard Navigation Tests (And How to Fix It)
+description: >-
+  Most Shopify stores fail keyboard navigation accessibility within the first
+  three tabs. Here's why it breaks, how to test it yourself, and what to fix
+  first.
+pubDate: 2026-05-08T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -14,8 +17,9 @@ seoKeywords:
   - wcag keyboard shopify
   - shopify keyboard trap
   - shopify checkout keyboard navigation
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/shopify-keyboard-navigation-accessibility-issues"
+seoCategory: Guides
+canonicalUrl: >-
+  https://amazingplugins.com/blog/shopify-keyboard-navigation-accessibility-issues
 gscSubmitted: true
 ---
 

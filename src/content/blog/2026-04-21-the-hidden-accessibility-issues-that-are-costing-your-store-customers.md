@@ -1,13 +1,17 @@
 ---
-title: "The Hidden Accessibility Issues That Are Costing Your Store Customers"
-description: "The overlooked accessibility barriers that cause real customer drop-off — including keyboard traps, unclear form errors, and missing focus indicators — and why fixing them grows your addressable market."
-pubDate: 2026-04-21
+title: The Hidden Accessibility Issues That Are Costing Your Store Customers
+description: >-
+  The overlooked accessibility barriers that cause real customer drop-off —
+  including keyboard traps, unclear form errors, and missing focus indicators —
+  and why fixing them grows your addressable market.
+pubDate: 2026-04-21T00:00:00.000Z
 author: Harun Ray
 tags:
   - Accessibility
   - User Experience
   - Conversion
   - WCAG
+gscSubmitted: true
 ---
 
 # The Hidden Accessibility Issues That Are Costing Your Store Customers

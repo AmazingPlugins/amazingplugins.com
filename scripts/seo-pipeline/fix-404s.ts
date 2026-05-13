@@ -76,7 +76,7 @@ export async function getGSC404Pages(): Promise<string[]> {
       scopes: ['https://www.googleapis.com/auth/webmasters'],
     });
     
-    const gsc = google.webmasters({ version: 'v3', auth });
+    const gsc = google.searchconsole({ version: 'v1', auth });
     const siteUrl = process.env.GSC_SITE_URL || 'sc-domain:amazingplugins.com';
     
     // Query for 404 pages

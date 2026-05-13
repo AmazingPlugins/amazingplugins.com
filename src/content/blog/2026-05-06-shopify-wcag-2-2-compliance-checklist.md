@@ -1,7 +1,9 @@
 ---
-title: "Your Shopify WCAG 2.2 Compliance Checklist (Everything You Need to Fix)"
-description: "WCAG 2.2 added 9 new success criteria. Run this exact Shopify checklist to find out what's broken on your store and what to fix first."
-pubDate: 2026-05-06
+title: Your Shopify WCAG 2.2 Compliance Checklist (Everything You Need to Fix)
+description: >-
+  WCAG 2.2 added 9 new success criteria. Run this exact Shopify checklist to
+  find out what's broken on your store and what to fix first.
+pubDate: 2026-05-06T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -13,9 +15,9 @@ seoKeywords:
   - wcag 2.2 new requirements ecommerce
   - shopify accessibility checklist
   - shopify store wcag 2.2 compliance
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist"
-gscSubmitted: pending_gsc_setup
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist'
+gscSubmitted: true
 ---
 
 # Your Shopify WCAG 2.2 Compliance Checklist (Everything You Need to Fix)

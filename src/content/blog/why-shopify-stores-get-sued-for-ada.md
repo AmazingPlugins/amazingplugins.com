@@ -1,11 +1,17 @@
 ---
-title: "Why Your Shopify Store Can Get Sued for ADA Accessibility"
-description: "Understand why Shopify stores face ADA accessibility lawsuits, which violations trigger legal action, and what to fix first."
-date: 2026-05-09
-pubDate: 2026-05-09
-seoKeywords: ["why do Shopify stores get sued for ADA accessibility", "shopify ADA lawsuit risk", "ADA lawsuit shopify store", "ADA Title III ecommerce shopify"]
-seoCategory: "Shopify Accessibility"
-canonicalUrl: "https://amazingplugins.com/blog/why-shopify-stores-get-sued-for-ada/"
+title: Why Your Shopify Store Can Get Sued for ADA Accessibility
+description: >-
+  Understand why Shopify stores face ADA accessibility lawsuits, which
+  violations trigger legal action, and what to fix first.
+date: 2026-05-09T00:00:00.000Z
+pubDate: 2026-05-09T00:00:00.000Z
+seoKeywords:
+  - why do Shopify stores get sued for ADA accessibility
+  - shopify ADA lawsuit risk
+  - ADA lawsuit shopify store
+  - ADA Title III ecommerce shopify
+seoCategory: Shopify Accessibility
+canonicalUrl: 'https://amazingplugins.com/blog/why-shopify-stores-get-sued-for-ada/'
 gscSubmitted: true
 ---
 

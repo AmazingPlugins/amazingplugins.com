@@ -1,11 +1,17 @@
 ---
-title: "Your WooCommerce ADA Compliance Checklist for 2026"
-description: "A practical WooCommerce ADA compliance checklist for 2026, covering WCAG checks, product pages, checkout, plugins, and fixes."
-date: 2026-05-09
-pubDate: 2026-05-09
-seoKeywords: ["woocommerce ADA compliance checklist 2026", "woocommerce ADA compliance", "ADA compliance woocommerce 2026", "WCAG woocommerce store"]
-seoCategory: "WooCommerce Accessibility"
-canonicalUrl: "https://amazingplugins.com/blog/woocommerce-ada-compliance-checklist-2026/"
+title: Your WooCommerce ADA Compliance Checklist for 2026
+description: >-
+  A practical WooCommerce ADA compliance checklist for 2026, covering WCAG
+  checks, product pages, checkout, plugins, and fixes.
+date: 2026-05-09T00:00:00.000Z
+pubDate: 2026-05-09T00:00:00.000Z
+seoKeywords:
+  - woocommerce ADA compliance checklist 2026
+  - woocommerce ADA compliance
+  - ADA compliance woocommerce 2026
+  - WCAG woocommerce store
+seoCategory: WooCommerce Accessibility
+canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-ada-compliance-checklist-2026/'
 gscSubmitted: true
 ---
 

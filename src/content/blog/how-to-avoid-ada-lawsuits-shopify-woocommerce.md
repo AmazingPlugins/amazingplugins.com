@@ -1,7 +1,10 @@
 ---
-title: "How to Avoid an ADA Lawsuit With Your Shopify or WooCommerce Store"
-description: "ADA web accessibility lawsuits hit ecommerce stores hard. Here's what triggers them, what actually protects you, and the practical steps to get your Shopify or WooCommerce store compliant."
-pubDate: 2026-05-08
+title: How to Avoid an ADA Lawsuit With Your Shopify or WooCommerce Store
+description: >-
+  ADA web accessibility lawsuits hit ecommerce stores hard. Here's what triggers
+  them, what actually protects you, and the practical steps to get your Shopify
+  or WooCommerce store compliant.
+pubDate: 2026-05-08T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -15,8 +18,8 @@ seoKeywords:
   - woocommerce ADA compliance lawsuit
   - shopify accessibility lawsuit protection
   - ADA compliance shopify woocommerce 2026
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce"
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce'
 gscSubmitted: true
 ---
 

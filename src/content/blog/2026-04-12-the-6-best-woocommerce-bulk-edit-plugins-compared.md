@@ -1,12 +1,16 @@
 ---
-title: "The 6 Best WooCommerce Bulk Edit Plugins Compared (2026 Honest Review)"
-description: "An honest ranking of the six most downloaded WooCommerce bulk edit plugins, based on real testing with 500 products. Includes where each excels and where each fails."
-pubDate: 2026-04-12
+title: The 6 Best WooCommerce Bulk Edit Plugins Compared (2026 Honest Review)
+description: >-
+  An honest ranking of the six most downloaded WooCommerce bulk edit plugins,
+  based on real testing with 500 products. Includes where each excels and where
+  each fails.
+pubDate: 2026-04-12T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
   - Bulk Edit
   - Product Management
+gscSubmitted: true
 ---
 
 |---|---|---|---|---|---|---|

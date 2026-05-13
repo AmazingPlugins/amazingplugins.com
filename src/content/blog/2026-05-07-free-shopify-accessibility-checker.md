@@ -1,7 +1,12 @@
 ---
-title: "Free Shopify Accessibility Checker: What Actually Works (And What Is Just Noise)"
-description: "Most free accessibility checkers give you a score and a stack of generic warnings. Here is how to find a free tool that actually scans your rendered Shopify storefront and tells you what to fix."
-pubDate: 2026-05-07
+title: >-
+  Free Shopify Accessibility Checker: What Actually Works (And What Is Just
+  Noise)
+description: >-
+  Most free accessibility checkers give you a score and a stack of generic
+  warnings. Here is how to find a free tool that actually scans your rendered
+  Shopify storefront and tells you what to fix.
+pubDate: 2026-05-07T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -14,9 +19,9 @@ seoKeywords:
   - ADA compliance test shopify free
   - shopify wcag checker free
   - scan shopify store for accessibility issues free
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/free-shopify-accessibility-checker"
-gscSubmitted: false
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/free-shopify-accessibility-checker'
+gscSubmitted: true
 ---
 
 # Free Shopify Accessibility Checker: What Actually Works (And What Is Just Noise)

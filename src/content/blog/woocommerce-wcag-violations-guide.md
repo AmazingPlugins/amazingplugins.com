@@ -1,7 +1,10 @@
 ---
-title: "The Most Common WooCommerce WCAG Violations (And How to Fix Them)"
-description: "WooCommerce sites fail WCAG accessibility for a handful of predictable reasons. Here's what breaks compliance most often and how to fix each one before it costs you."
-pubDate: 2026-05-08
+title: The Most Common WooCommerce WCAG Violations (And How to Fix Them)
+description: >-
+  WooCommerce sites fail WCAG accessibility for a handful of predictable
+  reasons. Here's what breaks compliance most often and how to fix each one
+  before it costs you.
+pubDate: 2026-05-08T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -14,8 +17,8 @@ seoKeywords:
   - wcag compliance woocommerce
   - wordpress ecommerce accessibility
   - woocommerce checkout accessibility
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/woocommerce-wcag-violations-guide"
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-wcag-violations-guide'
 gscSubmitted: true
 ---
 

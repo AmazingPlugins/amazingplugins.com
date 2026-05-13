@@ -1,12 +1,16 @@
 ---
-title: "WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?"
-description: "A practical breakdown of WCAG conformance levels and what they mean for your online store — clarifying what AA compliance actually requires and whether AAA is worth pursuing."
-pubDate: 2026-04-21
+title: 'WCAG 2.1 AA vs AAA: What''s the Real Difference for E-commerce?'
+description: >-
+  A practical breakdown of WCAG conformance levels and what they mean for your
+  online store — clarifying what AA compliance actually requires and whether AAA
+  is worth pursuing.
+pubDate: 2026-04-21T00:00:00.000Z
 author: Harun Ray
 tags:
   - WCAG
   - Accessibility Standards
   - Compliance
+gscSubmitted: true
 ---
 
 # WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?

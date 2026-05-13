@@ -1,7 +1,10 @@
 ---
-title: "Your Shopify App Is Quietly Breaking WCAG Compliance. Here's How to Find It"
-description: "Your accessibility-certified theme passed. Your store still fails. The culprit is usually a third-party app injecting markup after load. Here's what to look for and how to fix it."
-pubDate: 2026-05-07
+title: Your Shopify App Is Quietly Breaking WCAG Compliance. Here's How to Find It
+description: >-
+  Your accessibility-certified theme passed. Your store still fails. The culprit
+  is usually a third-party app injecting markup after load. Here's what to look
+  for and how to fix it.
+pubDate: 2026-05-07T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -13,9 +16,9 @@ seoKeywords:
   - shopify apps breaking accessibility
   - wcag compliance third party apps shopify
   - shopify app accessibility checker
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations"
-gscSubmitted: false
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations'
+gscSubmitted: true
 ---
 
 # Your Shopify App Is Quietly Breaking WCAG Compliance. Here's How to Find It

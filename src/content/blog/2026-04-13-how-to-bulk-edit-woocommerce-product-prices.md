@@ -1,12 +1,16 @@
 ---
-title: "How to Bulk Edit WooCommerce Product Prices (Without Breaking Your Store)"
-description: "A practical guide to updating product prices in bulk in WooCommerce — covering percentage adjustments, fixed price changes, and how to avoid the most common mistakes."
-pubDate: 2026-04-13
+title: How to Bulk Edit WooCommerce Product Prices (Without Breaking Your Store)
+description: >-
+  A practical guide to updating product prices in bulk in WooCommerce — covering
+  percentage adjustments, fixed price changes, and how to avoid the most common
+  mistakes.
+pubDate: 2026-04-13T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
   - Bulk Edit
   - Pricing
+gscSubmitted: true
 ---
 
 |---------|--------------------|--------------------|--------------------|--------------------|

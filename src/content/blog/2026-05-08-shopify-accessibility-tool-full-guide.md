@@ -1,6 +1,8 @@
 ---
-title: "Shopify Accessibility Tool: Full Guide for Store Owners (2026)"
-description: What a Shopify accessibility tool actually does, which type to pick (scanner, overlay, code fixer), and how to use one without getting sued.
+title: 'Shopify Accessibility Tool: Full Guide for Store Owners (2026)'
+description: >-
+  What a Shopify accessibility tool actually does, which type to pick (scanner,
+  overlay, code fixer), and how to use one without getting sued.
 pubDate: 2026-05-08T06:10:39.302Z
 author: Harun Ray
 tags:
@@ -13,7 +15,7 @@ seoKeywords:
   - shopify accessibility tool
 seoCategory: shopify
 articleAngle: full-guide
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 A Shopify accessibility tool is software that scans your store for WCAG failures and either reports them, patches them at runtime, or fixes the underlying theme code. The right one for you depends on which of those three things you actually need. Scanners (like axe DevTools or Lighthouse) tell you what is broken. Overlays (like accessiBe or UserWay) inject a widget that tries to patch issues in the browser. Code fixers (like Accessibility Spark or our own Shopify Accessibility Fixer) edit the Liquid templates and theme files so the fixes are real and permanent. If you only do one thing after reading this article, do this: run a free scan first, then pick a tool category based on what the scan finds, not based on which app has the slickest landing page.

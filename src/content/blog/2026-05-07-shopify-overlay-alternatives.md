@@ -1,7 +1,12 @@
 ---
-title: "The FTC Called Out Accessibility Overlays. Here Are Real Alternatives for Shopify Stores"
-description: "Overlays do not fix WCAG violations. The FTC confirmed it. If you want real compliance on Shopify, here is what source-code fixes look like compared to overlay widgets."
-pubDate: 2026-05-07
+title: >-
+  The FTC Called Out Accessibility Overlays. Here Are Real Alternatives for
+  Shopify Stores
+description: >-
+  Overlays do not fix WCAG violations. The FTC confirmed it. If you want real
+  compliance on Shopify, here is what source-code fixes look like compared to
+  overlay widgets.
+pubDate: 2026-05-07T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -14,9 +19,9 @@ seoKeywords:
   - accessibility widget shopify vs source code fix
   - best overlay alternative shopify
   - why shopify overlay does not work
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/shopify-overlay-alternatives"
-gscSubmitted: false
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-overlay-alternatives'
+gscSubmitted: true
 ---
 
 # The FTC Called Out Accessibility Overlays. Here Are Real Alternatives for Shopify Stores
