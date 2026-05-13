@@ -104,7 +104,9 @@ export async function runPipeline(): Promise<PipelineResult> {
 }
 
 // Run if called directly
-if (require.main === module) {
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+if (process.argv[1] === __filename) {
   runPipeline()
     .then(result => {
       process.exit(result.success ? 0 : 1);
