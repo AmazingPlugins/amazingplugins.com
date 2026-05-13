@@ -1,8 +1,13 @@
 ---
-title: "Does Accessibility Affect SEO? What Shopify and WooCommerce Store Owners Need to Know in 2026"
-description: "Accessibility is not a direct Google ranking factor, but the same fixes improve Core Web Vitals, image search, and content structure. Here is how it works for Shopify and WooCommerce stores."
-date: 2026-05-13
-pubDate: 2026-05-13
+title: >-
+  Does Accessibility Affect SEO? What Shopify and WooCommerce Store Owners Need
+  to Know in 2026
+description: >-
+  Accessibility is not a direct Google ranking factor, but the same fixes
+  improve Core Web Vitals, image search, and content structure. Here is how it
+  works for Shopify and WooCommerce stores.
+date: 2026-05-13T00:00:00.000Z
+pubDate: 2026-05-13T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -18,9 +23,9 @@ seoKeywords:
   - does accessibility affect seo
   - accessibility and google ranking
   - wcag seo impact
-seoCategory: "Guides"
-canonicalUrl: "https://amazingplugins.com/blog/accessibility-seo-ranking-factor-ecommerce"
-gscSubmitted: false
+seoCategory: Guides
+canonicalUrl: 'https://amazingplugins.com/blog/accessibility-seo-ranking-factor-ecommerce'
+gscSubmitted: true
 ---
 
 A Shopify store owner I spoke with last month had been stuck at around 12,000 organic sessions per month for over a year. They were not chasing accessibility for SEO reasons. They got a demand letter from a plaintiff firm, panicked, and spent six weeks fixing alt text, heading hierarchy, form labels, and three popup apps that were injecting modals with no focus traps. Ninety days after the cleanup, organic traffic was at 17,400 sessions. Image search alone went from 380 visits a month to over 2,100. They did not add a single new blog post.

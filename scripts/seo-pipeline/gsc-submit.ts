@@ -129,3 +129,20 @@ export async function submitPost(slug: string): Promise<boolean> {
   console.error(`Post not found: ${slug}`);
   return false;
 }
+
+import { fileURLToPath } from 'url';
+
+// Run if called directly
+const __filename = fileURLToPath(import.meta.url);
+if (process.argv[1] === __filename) {
+  const slug = process.argv[2];
+  if (slug) {
+    submitPost(slug)
+      .then(ok => process.exit(ok ? 0 : 1))
+      .catch(() => process.exit(1));
+  } else {
+    submitAllPosts()
+      .then(({ submitted, failed }) => process.exit(failed > 0 ? 1 : 0))
+      .catch(() => process.exit(1));
+  }
+}
