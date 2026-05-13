@@ -30,6 +30,6 @@
   "devDependencies": {
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "wrangler": "^4.90.0"
+    "wrangler": "^3.114.17"
   }
 }

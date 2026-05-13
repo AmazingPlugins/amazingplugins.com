@@ -17,7 +17,8 @@ export function getUnsubmittedPosts(): string[] {
   
   for (const file of files) {
     const filePath = path.join(blogDir, file);
-    const { data } = matter(filePath);
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const { data } = matter(content);
     
     // Check if gscSubmitted is not true
     if (!data.gscSubmitted) {
