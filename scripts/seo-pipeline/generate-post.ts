@@ -287,6 +287,7 @@ function humanizeContent(content: string): string {
     .replace(/\breally\b/g, '')
     .replace(/\bquite\b/g, '')
     .replace(/\bessentially\b/g, '')
+    .replace(/[—–]/g, '-')
     .replace(/\{/g, '')
     .replace(/\}/g, '');
 }
@@ -307,7 +308,13 @@ function writeBlogPost(filename: string, data: any, keyword: string, angle: stri
   const body = humanizeContent(data.body || '');
   const fm = Object.entries(frontmatter)
     .map(([k, v]) => {
-      if (Array.isArray(v)) return `${k}:\n  ${v.map((i: string) => `- ${i}`).join('\n  ')}`;
+      if (Array.isArray(v)) {
+        return `${k}:\n  ${v.map((i: string) => `- ${JSON.stringify(i)}`).join('\n  ')}`;
+      }
+      if (typeof v === 'string') {
+        if (k === 'pubDate') return `${k}: ${v}`;
+        return `${k}: ${JSON.stringify(v)}`;
+      }
       return `${k}: ${v}`;
     })
     .join('\n');
@@ -410,7 +417,14 @@ export async function generateForTopic(topic: KeywordEntry): Promise<string[]> {
       continue;
     }
 
-    const quality = validateGeneratedArticle(data, {
+    const normalizedData = {
+      ...data,
+      title: humanizeContent(String(data.title || '')),
+      description: humanizeContent(String(data.description || '')),
+      body: humanizeContent(String(data.body || '')),
+    };
+
+    const quality = validateGeneratedArticle(normalizedData, {
       keyword: opts.keyword,
       platform: opts.keyword.toLowerCase().includes('shopify') ? 'Shopify' : 'WooCommerce',
       angle: opts.angle!,
@@ -427,12 +441,12 @@ export async function generateForTopic(topic: KeywordEntry): Promise<string[]> {
       for (const warning of quality.warnings) console.warn(`- ${warning}`);
     }
 
-    writeBlogPost(filename, data, opts.keyword, opts.angle!);
+    writeBlogPost(filename, normalizedData, opts.keyword, opts.angle!);
     console.log(`Created: ${filename}`);
 
     updatePostState(slug, {
       slug,
-      title: data.title,
+      title: normalizedData.title,
       topic: opts.keyword,
       angle: opts.angle,
       seoKeywords: [opts.keyword],
