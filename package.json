@@ -20,6 +20,7 @@
     "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
     "@astrojs/cloudflare": "^13.1.10",
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.1.8",

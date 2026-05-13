@@ -11,6 +11,7 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+import Anthropic from '@anthropic-ai/sdk';
 import { getAllKeywords } from './keywords';
 import type { KeywordEntry } from './keywords';
 import { updatePostState, loadState } from './state-store';
@@ -337,6 +338,47 @@ function generateWithClaude(opts: GenerateOptions): any {
   }
 }
 
+async function generateWithAnthropicAPI(opts: GenerateOptions): Promise<any> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    console.error('ANTHROPIC_API_KEY not set — skipping Anthropic API fallback');
+    return null;
+  }
+
+  const prompt = buildPrompt(opts);
+  const client = new Anthropic({ apiKey });
+
+  try {
+    const response = await client.messages.create({
+      model: 'claude-3-opus-20240229',
+      max_tokens: 4096,
+      temperature: 0.7,
+      messages: [{ role: 'user', content: prompt }],
+    });
+
+    const text = response.content
+      .filter((c): c is Anthropic.TextBlock => c.type === 'text')
+      .map(c => c.text)
+      .join('');
+
+    const cleaned = text.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
+    return JSON.parse(cleaned);
+  } catch (error: any) {
+    console.error(`Anthropic API generation failed for "${opts.keyword}" (${opts.angle}): ${error.message}`);
+    return null;
+  }
+}
+
+async function generateArticle(opts: GenerateOptions): Promise<any> {
+  // Try Claude CLI first (local dev / Hermes)
+  const claudeResult = generateWithClaude(opts);
+  if (claudeResult) return claudeResult;
+
+  // Fall back to Anthropic API (CI / GitHub Actions)
+  console.log('Falling back to Anthropic API...');
+  return generateWithAnthropicAPI(opts);
+}
+
 /**
  * Generate articles for ONE topic — multiple angles, deep coverage.
  * No cap on how many articles. Generate however many angles the topic needs.
@@ -361,7 +403,7 @@ export async function generateForTopic(topic: KeywordEntry): Promise<string[]> {
     }
 
     console.log(`Generating: [${opts.angle}]...`);
-    const data = generateWithClaude(opts);
+    const data = await generateArticle(opts);
 
     if (!data || !data.title || !data.body) {
       console.error(`Failed to generate "${opts.angle}"`);
