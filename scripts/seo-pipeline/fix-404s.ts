@@ -73,7 +73,7 @@ export async function getGSC404Pages(): Promise<string[]> {
     const auth = new JWT({
       email: credentials.client_email,
       key: credentials.private_key,
-      scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
+      scopes: ['https://www.googleapis.com/auth/webmasters'],
     });
     
     const gsc = google.webmasters({ version: 'v3', auth });

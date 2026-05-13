@@ -22,7 +22,7 @@ export async function getGSCClient(): Promise<any> {
   const auth = new JWT({
     email: credentials.client_email,
     key: credentials.private_key,
-    scopes: ['https://www.googleapis.com/auth/webmasters.readonly'],
+    scopes: ['https://www.googleapis.com/auth/webmasters'],
   });
   
   gscClient = google.webmasters({ version: 'v3', auth });
