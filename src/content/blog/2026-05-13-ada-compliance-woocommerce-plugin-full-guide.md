@@ -48,7 +48,7 @@ In practical terms, a WooCommerce store has to satisfy criteria like:
 - **3.3.2 Labels or Instructions**: checkout fields need visible labels, not just placeholder text.
 - **4.1.2 Name, Role, Value**: custom icons used as buttons (the cart icon, search icon, wishlist heart) need accessible names.
 
-If you want to go deeper on which level you actually need to hit, see [WCAG 2.1 AA vs AAA: what is the real difference for e-commerce](https://amazingplugins.com/blog/2026-04-21-wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce). For the 2.2 changes specifically, [WCAG 2.2 is here, what it means for WooCommerce](https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements) breaks down each new criterion.
+If you want to go deeper on which level you actually need to hit, see [WCAG 2.1 AA vs AAA: what is the real difference for e-commerce](https://amazingplugins.com/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/). For the 2.2 changes specifically, [WCAG 2.2 is here, what it means for WooCommerce](https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements/) breaks down each new criterion.
 
 ## What a real ADA compliance WooCommerce plugin should fix
 
@@ -100,7 +100,7 @@ Multiple "Read more" or "Buy now" links on a category page fail this. The plugin
 6. **Test on a staging site first.** Run the auto-fix on a clone of your store before touching production. Verify nothing visually broke.
 7. **Schedule a quarterly re-scan.** Themes update. WooCommerce updates. New products get added. Compliance is a maintenance job, not a one-time fix.
 
-For the broader compliance roadmap beyond the plugin choice, [How to make your WooCommerce store ADA compliant (2026 guide)](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant) walks through the policy, testing, and statement steps that pair with the technical fixes.
+For the broader compliance roadmap beyond the plugin choice, [How to make your WooCommerce store ADA compliant (2026 guide)](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/) walks through the policy, testing, and statement steps that pair with the technical fixes.
 
 ## How AmazingPlugins helps
 
@@ -133,7 +133,7 @@ A well-built one adds milliseconds, not seconds, because the work is mostly mark
 
 ### Does ADA compliance affect SEO?
 
-Yes, indirectly. Many WCAG fixes (alt text, heading structure, descriptive link text, valid HTML) are the same things Google's crawler rewards. See [Accessibility as an SEO ranking factor for e-commerce](https://amazingplugins.com/blog/2026-05-13-accessibility-seo-ranking-factor-ecommerce) for the overlap.
+Yes, indirectly. Many WCAG fixes (alt text, heading structure, descriptive link text, valid HTML) are the same things Google's crawler rewards. See [Accessibility as an SEO ranking factor for e-commerce](https://amazingplugins.com/blog/accessibility-seo-ranking-factor-ecommerce/) for the overlap.
 
 ### Can I just buy an accessibility statement instead of a plugin?
 

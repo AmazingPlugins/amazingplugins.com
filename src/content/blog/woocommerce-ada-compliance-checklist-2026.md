@@ -1,8 +1,6 @@
 ---
-title: Your WooCommerce ADA Compliance Checklist for 2026
-description: >-
-  A practical WooCommerce ADA compliance checklist for 2026, covering WCAG
-  checks, product pages, checkout, plugins, and fixes.
+title: "Your WooCommerce ADA Compliance Checklist for 2026"
+description: "A practical WooCommerce ADA compliance checklist for 2026, covering WCAG checks, product pages, checkout, plugins, and fixes."
 date: 2026-05-09T00:00:00.000Z
 pubDate: 2026-05-09T00:00:00.000Z
 seoKeywords:

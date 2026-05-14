@@ -64,7 +64,7 @@ Use this as a feature-by-feature scorecard when comparing Shopify accessibility 
 | 9 | Empty button text (e.g. icon-only buttons) | 4.1.2 Name, Role, Value (A) | Wishlist, cart, and social buttons frequently fail |
 | 10 | PDF audit report mapped to WCAG | n/a (legal evidence) | What you actually need if you get a demand letter |
 
-If you want a deeper walkthrough of these issues with examples, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites).
+If you want a deeper walkthrough of these issues with examples, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
 ## How to evaluate a Shopify accessibility app in 30 minutes
 
@@ -131,7 +131,7 @@ What it actually does:
 
 What it does not do, honestly: it cannot decide for you whether a decorative banner image should be marked decorative, write context-aware alt text for every artistic product photo, or replace a manual review of a complex custom checkout flow. Those still need a human pass, and we tell you which items need review in the report.
 
-If you want to see the broader step-by-step approach this app implements, the [step-by-step guide to making your Shopify store accessible](https://amazingplugins.com/blog/2026-04-17-how-to-make-your-shopify-store-accessible) walks through the same fixes manually.
+If you want to see the broader step-by-step approach this app implements, the [step-by-step guide to making your Shopify store accessible](https://amazingplugins.com/blog/how-to-make-your-shopify-store-accessible/) walks through the same fixes manually.
 
 ## A 7-item shortlist for picking the right app this week
 

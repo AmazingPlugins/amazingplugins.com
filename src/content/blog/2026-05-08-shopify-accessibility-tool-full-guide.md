@@ -36,7 +36,7 @@ There are three categories, and they are not interchangeable.
 
 - **You have not scanned your store yet.** Start with a free scanner. Run [axe DevTools](https://www.deque.com/axe/devtools/) or WAVE on your homepage, a collection page, a product page, and checkout. Note the issues.
 - **The scan shows fewer than 20 issues, mostly cosmetic.** A code fixer plus 2-3 hours of manual work will finish the job. Skip overlays.
-- **The scan shows 50+ issues across multiple pages.** You need a code fixer with auto-fix, plus a manual audit. See our [step-by-step Shopify accessibility guide](https://amazingplugins.com/blog/2026-04-17-how-to-make-your-shopify-store-accessible).
+- **The scan shows 50+ issues across multiple pages.** You need a code fixer with auto-fix, plus a manual audit. See our [step-by-step Shopify accessibility guide](https://amazingplugins.com/blog/how-to-make-your-shopify-store-accessible/).
 - **You are EU-facing and panicking about the European Accessibility Act (enforceable since June 28, 2025).** EAA uses WCAG 2.1 AA via EN 301 549. A scanner plus code fixer covers you. Overlays do not satisfy EAA.
 - **You received a demand letter.** Stop reading and call a lawyer. Then run a scan to document what you fix.
 
@@ -52,7 +52,7 @@ There are three categories, and they are not interchangeable.
 - **3.3.2 Labels or Instructions** (form fields need visible labels, not just placeholders)
 - **4.1.2 Name, Role, Value** (icon buttons need aria-label)
 
-These six cover the majority of issues flagged in our [10 common e-commerce accessibility issues breakdown](https://amazingplugins.com/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites).
+These six cover the majority of issues flagged in our [10 common e-commerce accessibility issues breakdown](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
 **Step 3: Test with a real screen reader.** Turn on VoiceOver (Mac: Cmd+F5) or NVDA (Windows, free) and try to add a product to cart with your eyes closed. If you cannot, the tool missed something.
 

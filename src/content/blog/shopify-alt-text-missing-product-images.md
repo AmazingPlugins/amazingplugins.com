@@ -1,8 +1,6 @@
 ---
-title: Why Shopify Product Images Are Missing Alt Text
-description: >-
-  Learn why Shopify product images lose alt text, how it affects WCAG and ADA
-  risk, and how to audit and fix your catalog faster.
+title: "Why Shopify Product Images Are Missing Alt Text"
+description: "Learn why Shopify product images lose alt text, how it affects WCAG and ADA risk, and how to audit and fix your catalog faster."
 date: 2026-05-09T00:00:00.000Z
 pubDate: 2026-05-09T00:00:00.000Z
 seoKeywords:

@@ -84,4 +84,4 @@ Step 4 is to monitor for regressions. Shopify themes update. Apps update. Violat
 
 AmazingPlugins scans your live Shopify storefront with apps and themes active, identifies WCAG 2.2 AA violations, and tells you what to fix without overlaying anything. Run a free scan on your store to see what is actually there.
 
-[See how the Shopify scanner works](https://amazingplugins.com/products/shopify-accessibility-scanner)
+[See how the Shopify scanner works](https://amazingplugins.com/plugins/shopify-accessibility-fixer/)

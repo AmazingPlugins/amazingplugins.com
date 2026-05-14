@@ -84,4 +84,4 @@ AmazingPlugins offers a free accessibility scan for Shopify stores. It scans you
 
 Run a free scan to see what is actually on your store before your next customer does.
 
-[Run a free Shopify accessibility scan](https://amazingplugins.com/products/shopify-accessibility-scanner)
+[Run a free Shopify accessibility scan](https://amazingplugins.com/plugins/shopify-accessibility-fixer/)

@@ -48,7 +48,7 @@ The most commonly cited failures in Shopify lawsuits, based on demand letters an
 - **3.3.2 Labels or Instructions** - input fields without visible labels.
 - **4.1.2 Name, Role, Value** - icon-only buttons (search, cart, hamburger) with no accessible name.
 
-WCAG 2.2 (the current best practice in 2026) adds nine more criteria, including **2.4.11 Focus Not Obscured**, **2.5.7 Dragging Movements**, and **2.5.8 Target Size (Minimum)**. If you sell into the EU, the European Accessibility Act (enforceable since June 28, 2025) requires WCAG 2.1 AA via EN 301 549. For a full list of what 2.2 changes, see [your Shopify WCAG 2.2 compliance checklist](https://amazingplugins.com/blog/2026-05-06-shopify-wcag-2-2-compliance-checklist).
+WCAG 2.2 (the current best practice in 2026) adds nine more criteria, including **2.4.11 Focus Not Obscured**, **2.5.7 Dragging Movements**, and **2.5.8 Target Size (Minimum)**. If you sell into the EU, the European Accessibility Act (enforceable since June 28, 2025) requires WCAG 2.1 AA via EN 301 549. For a full list of what 2.2 changes, see [your Shopify WCAG 2.2 compliance checklist](https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist/).
 
 ## What to look for in a Shopify ADA compliance app
 
@@ -99,7 +99,7 @@ Here's the workflow I'd recommend to a store owner who has never thought about t
 
 ## How AmazingPlugins helps
 
-[Shopify Accessibility Fixer](https://amazingplugins.com/products) is built on the audit-plus-fix model, with one explicit difference from overlay tools: it modifies the storefront via Liquid/theme integration, not a runtime JavaScript widget. Concretely it covers:
+[Shopify Accessibility Fixer](https://amazingplugins.com/plugins/shopify-accessibility-fixer/) is built on the audit-plus-fix model, with one explicit difference from overlay tools: it modifies the storefront via Liquid/theme integration, not a runtime JavaScript widget. Concretely it covers:
 
 - **Alt text for product images** (with manual override so you can write descriptive copy)
 - **Keyboard navigation** fixes in menus, drawers, and modals
@@ -112,7 +112,7 @@ Here's the workflow I'd recommend to a store owner who has never thought about t
 - **Link distinguishing text** so "click here" doesn't repeat 14 times
 - **Accessible input names** mapped to fields
 
-The Pro tier adds batch scanning across all pages, an auto-fix mode for safe items, a downloadable PDF compliance report, and priority support. If you're juggling EU compliance too, see [how to make your Shopify store EAA compliant](https://amazingplugins.com/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant).
+The Pro tier adds batch scanning across all pages, an auto-fix mode for safe items, a downloadable PDF compliance report, and priority support. If you're juggling EU compliance too, see [how to make your Shopify store EAA compliant](https://amazingplugins.com/blog/how-to-make-your-shopify-store-eaa-compliant/).
 
 One thing I want to be honest about: no automated tool, ours included, can fully replace human review. Meaningful alt text, error message clarity, and complex custom checkout flows still need a human eye. Automation gets you from "obviously not compliant" to "defensibly compliant on the technical baseline." The judgment layer is yours.
 
@@ -132,7 +132,7 @@ No, and run from any vendor that says it will. What an app can do is dramaticall
 
 ### What's the difference between WCAG 2.1 and 2.2 for a Shopify store?
 
-WCAG 2.1 AA is the legal floor courts reference. WCAG 2.2 AA, finalized in October 2023 and the de facto standard in 2026, adds nine criteria, mostly around focus visibility, drag-and-drop alternatives, target size, and consistent help. If you're choosing a tool today, pick one that targets 2.2. For the AA vs AAA question, [this comparison covers the real difference for e-commerce](https://amazingplugins.com/blog/2026-04-21-wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce).
+WCAG 2.1 AA is the legal floor courts reference. WCAG 2.2 AA, finalized in October 2023 and the de facto standard in 2026, adds nine criteria, mostly around focus visibility, drag-and-drop alternatives, target size, and consistent help. If you're choosing a tool today, pick one that targets 2.2. For the AA vs AAA question, [this comparison covers the real difference for e-commerce](https://amazingplugins.com/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/).
 
 ### Are free Shopify ADA compliance apps any good?
 

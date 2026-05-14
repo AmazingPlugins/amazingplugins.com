@@ -1,8 +1,6 @@
 ---
-title: Why Your Shopify Store Can Get Sued for ADA Accessibility
-description: >-
-  Understand why Shopify stores face ADA accessibility lawsuits, which
-  violations trigger legal action, and what to fix first.
+title: "Why Your Shopify Store Can Get Sued for ADA Accessibility"
+description: "Understand why Shopify stores face ADA accessibility lawsuits, which violations trigger legal action, and what to fix first."
 date: 2026-05-09T00:00:00.000Z
 pubDate: 2026-05-09T00:00:00.000Z
 seoKeywords:

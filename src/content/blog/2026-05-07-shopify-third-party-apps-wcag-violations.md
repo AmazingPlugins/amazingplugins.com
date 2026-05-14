@@ -79,4 +79,4 @@ A one-time audit cannot catch this. Continuous monitoring can. Run scans on a sc
 
 AmazingPlugins scans your live Shopify storefront with apps active, identifies which app is responsible for which violation, and watches for regressions after every update. Run a scan after your next app install and see what is actually shipping to customers.
 
-[See how the Shopify scanner works](https://amazingplugins.com/products/shopify-accessibility-scanner)
+[See how the Shopify scanner works](https://amazingplugins.com/plugins/shopify-accessibility-fixer/)
