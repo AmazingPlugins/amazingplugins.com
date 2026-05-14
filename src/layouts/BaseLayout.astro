@@ -15,7 +15,8 @@ const {
   image = '/images/og-default.svg',
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const canonicalURL = new URL(canonicalPath, Astro.site);
 ---
 
 <!doctype html>
@@ -48,8 +49,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <!-- Bing Webmaster Tools verification — replace content with actual value from Bing WMT -->
-    <meta name="msvalidate.01" content="BING_VERIFICATION_CODE" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
