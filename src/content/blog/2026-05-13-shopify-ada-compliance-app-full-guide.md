@@ -1,19 +1,21 @@
 ---
-title: "Shopify ADA Compliance App: Full Guide (2026)"
-description: "What a Shopify ADA compliance app actually does, what to look for, what to avoid, and how to pick one that won't get your store sued in 2026."
+title: 'Shopify ADA Compliance App: Full Guide (2026)'
+description: >-
+  What a Shopify ADA compliance app actually does, what to look for, what to
+  avoid, and how to pick one that won't get your store sued in 2026.
 pubDate: 2026-05-13T11:16:03.901Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "ADA Compliance"
-  - "Accessibility"
-  - "WCAG"
-  - "Apps"
+  - Shopify
+  - ADA Compliance
+  - Accessibility
+  - WCAG
+  - Apps
 seoKeywords:
-  - "`shopify ada compliance app`"
-seoCategory: "shopify"
-articleAngle: "full-guide"
-gscSubmitted: false
+  - '`shopify ada compliance app`'
+seoCategory: shopify
+articleAngle: full-guide
+gscSubmitted: true
 ---
 
 A Shopify ADA compliance app is a third-party Shopify app that helps your store meet WCAG 2.1 AA (the legal floor) or WCAG 2.2 AA (current best practice) so it's usable by people with disabilities and harder to sue under the Americans with Disabilities Act. The good ones audit your theme, fix real HTML and CSS issues (alt text, focus indicators, ARIA labels, color contrast), and give you a report you can show a lawyer. The bad ones drop a JavaScript overlay widget on your site, change nothing underneath, and leave you exposed when a plaintiff's firm runs an automated scan.

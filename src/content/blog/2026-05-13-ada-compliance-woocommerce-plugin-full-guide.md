@@ -1,19 +1,21 @@
 ---
-title: "ADA Compliance WooCommerce Plugin: The Full 2026 Guide"
-description: "What an ADA compliance WooCommerce plugin actually does, the WCAG criteria that matter, real fixes vs overlays, and how to pick one in 2026."
+title: 'ADA Compliance WooCommerce Plugin: The Full 2026 Guide'
+description: >-
+  What an ADA compliance WooCommerce plugin actually does, the WCAG criteria
+  that matter, real fixes vs overlays, and how to pick one in 2026.
 pubDate: 2026-05-13T11:03:56.261Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Accessibility"
-  - "WooCommerce"
-  - "ADA Compliance"
-  - "WCAG"
-  - "Plugins"
+  - Accessibility
+  - WooCommerce
+  - ADA Compliance
+  - WCAG
+  - Plugins
 seoKeywords:
-  - "`ADA compliance woocommerce plugin`"
-seoCategory: "woocommerce"
-articleAngle: "full-guide"
-gscSubmitted: false
+  - '`ADA compliance woocommerce plugin`'
+seoCategory: woocommerce
+articleAngle: full-guide
+gscSubmitted: true
 ---
 
 An ADA compliance WooCommerce plugin is a WordPress plugin that detects and fixes accessibility issues on your WooCommerce store so it meets WCAG 2.1 AA (the legal floor in the US under the ADA) and ideally WCAG 2.2 AA (the 2026 best-practice standard). A good one writes real HTML, CSS, and ARIA fixes into your theme and WooCommerce templates. A bad one drops a JavaScript overlay on top of your site and calls it compliant. That difference is the whole article.
