@@ -94,5 +94,5 @@ A one-time audit is not the finish line. Every theme update, every new app, ever
 <div class="cta-box">
   <h3>Run a free Shopify accessibility scan</h3>
   <p>Get a full WCAG 2.2 AA audit of your live theme in under 10 minutes. No credit card required.</p>
-  <a href="/scan" class="cta-button">Run Free Scan</a>
+  <a href="/plugins/shopify-accessibility-fixer/" class="cta-button">Run Free Scan</a>
 </div>

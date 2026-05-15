@@ -82,5 +82,5 @@ AmazingPlugins scans your Shopify theme source code, not just rendered pages, so
 <div class="cta-box">
   <h3>Get an EAA compliance scan of your Shopify store</h3>
   <p>Find every WCAG 2.1 AA issue in your theme code in under 10 minutes. Free for your first scan.</p>
-  <a href="/scan" class="cta-button">Run Free Scan</a>
+  <a href="/plugins/shopify-accessibility-fixer/" class="cta-button">Run Free Scan</a>
 </div>
