@@ -17,7 +17,7 @@ seoKeywords:
   - wcag compliance third party apps shopify
   - shopify app accessibility checker
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations'
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations/'
 gscSubmitted: true
 ---
 

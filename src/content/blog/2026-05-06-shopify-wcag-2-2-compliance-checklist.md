@@ -16,7 +16,7 @@ seoKeywords:
   - shopify accessibility checklist
   - shopify store wcag 2.2 compliance
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist'
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist/'
 gscSubmitted: true
 ---
 

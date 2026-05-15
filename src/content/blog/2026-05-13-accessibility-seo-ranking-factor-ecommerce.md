@@ -24,7 +24,7 @@ seoKeywords:
   - accessibility and google ranking
   - wcag seo impact
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/accessibility-seo-ranking-factor-ecommerce'
+canonicalUrl: 'https://amazingplugins.com/blog/accessibility-seo-ranking-factor-ecommerce/'
 gscSubmitted: true
 ---
 
@@ -68,19 +68,19 @@ The data does not leave much room for interpretation. Sites with more accessibil
 
 Shopify themes are a mixed bag. Dawn and other newer official themes ship with reasonable semantic markup. The problem starts as soon as you customize. Heading hierarchy is the most common issue. Theme editors let merchants drop H2 sections wherever they want, which often produces pages with multiple H1s or H2s that skip straight to H4. **Google uses heading hierarchy to understand content priority. Screen readers use it to navigate.** Breaking it breaks both.
 
-Missing alt text on product images is the second big one. Shopify makes alt text optional, and most stores import products from CSVs or supplier feeds that ship with no descriptions. The result is a catalog with hundreds of images that are invisible to Google Image Search and unusable for screen reader shoppers. We have a deeper breakdown in [why Shopify product images keep losing alt text](/blog/shopify-alt-text-missing-product-images), including the CSV import workflow that causes most of the damage.
+Missing alt text on product images is the second big one. Shopify makes alt text optional, and most stores import products from CSVs or supplier feeds that ship with no descriptions. The result is a catalog with hundreds of images that are invisible to Google Image Search and unusable for screen reader shoppers. We have a deeper breakdown in [why Shopify product images keep losing alt text](/blog/shopify-alt-text-missing-product-images/), including the CSV import workflow that causes most of the damage.
 
-Third-party apps are the third major source. Popup apps, review widgets, currency converters, and chat tools inject HTML into the storefront after page load. Many of them inject modals without focus traps, dialogs without `aria-modal`, and triggers without proper button semantics. The same script that breaks WCAG 2.4.3 also causes layout shift, which hurts CLS, which hurts page experience scoring. We cover the testing process in [how Shopify apps quietly break WCAG compliance](/blog/shopify-third-party-apps-wcag-violations).
+Third-party apps are the third major source. Popup apps, review widgets, currency converters, and chat tools inject HTML into the storefront after page load. Many of them inject modals without focus traps, dialogs without `aria-modal`, and triggers without proper button semantics. The same script that breaks WCAG 2.4.3 also causes layout shift, which hurts CLS, which hurts page experience scoring. We cover the testing process in [how Shopify apps quietly break WCAG compliance](/blog/shopify-third-party-apps-wcag-violations/).
 
-Shopify's own [Accessible Marketing guide](https://www.shopify.com/blog/accessible-marketing) was updated in 2025 to explicitly link accessibility improvements to organic reach. When the platform itself is making the connection in its own merchant education, you can stop treating it as a fringe SEO theory.
+Shopify's own [Accessible Marketing guide](https://www.shopify.com/blog/accessible-marketing/) was updated in 2025 to explicitly link accessibility improvements to organic reach. When the platform itself is making the connection in its own merchant education, you can stop treating it as a fringe SEO theory.
 
 ## WooCommerce-Specific SEO + Accessibility Connections
 
 WooCommerce gives you more control, which means more ways to break things. Product page templates from many popular themes use generic divs instead of labeled form elements. The "Add to Cart" form, the variation dropdowns, and the quantity input often lack proper `<label>` associations. **Voice search relies on form field labels to map natural language queries to interactive elements.** Break the labeling, and you break voice search exposure on the same page.
 
-Checkout is the other obvious problem. WooCommerce's default checkout is workable, but most stores customize it with one or more checkout plugins. Many of these plugins use custom field markup that breaks keyboard navigation. A keyboard user who cannot tab through your checkout abandons the cart. Higher abandonment means worse engagement signals from Search Console. Lower engagement signals feed back into ranking. We have the full checkout audit walkthrough in [common WooCommerce checkout accessibility issues](/blog/woocommerce-checkout-accessibility-issues).
+Checkout is the other obvious problem. WooCommerce's default checkout is workable, but most stores customize it with one or more checkout plugins. Many of these plugins use custom field markup that breaks keyboard navigation. A keyboard user who cannot tab through your checkout abandons the cart. Higher abandonment means worse engagement signals from Search Console. Lower engagement signals feed back into ranking. We have the full checkout audit walkthrough in [common WooCommerce checkout accessibility issues](/blog/woocommerce-checkout-accessibility-issues/).
 
-Plugin bloat is the third factor. Accessibility overlay plugins are the worst offenders. They add 100 to 300 KB of JavaScript, slow time to first byte if they include server-side components, and delay largest contentful paint by injecting their UI after the rest of the page renders. The overlay is supposed to make the site more accessible. It actually makes the underlying Core Web Vitals worse without fixing the WCAG failures it claims to address. For the full list of failure patterns to look for, see our [WooCommerce WCAG violations guide](/blog/woocommerce-wcag-violations-guide).
+Plugin bloat is the third factor. Accessibility overlay plugins are the worst offenders. They add 100 to 300 KB of JavaScript, slow time to first byte if they include server-side components, and delay largest contentful paint by injecting their UI after the rest of the page renders. The overlay is supposed to make the site more accessible. It actually makes the underlying Core Web Vitals worse without fixing the WCAG failures it claims to address. For the full list of failure patterns to look for, see our [WooCommerce WCAG violations guide](/blog/woocommerce-wcag-violations-guide/).
 
 With WooCommerce, the lesson is simpler: the WordPress plugin model amplifies both upside and downside. A clean theme plus clean plugins is one of the most accessible ecommerce setups available. A bloated theme plus six conflicting plugins is one of the worst.
 

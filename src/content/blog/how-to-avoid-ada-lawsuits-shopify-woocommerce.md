@@ -19,7 +19,7 @@ seoKeywords:
   - shopify accessibility lawsuit protection
   - ADA compliance shopify woocommerce 2026
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce'
+canonicalUrl: 'https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/'
 gscSubmitted: true
 ---
 

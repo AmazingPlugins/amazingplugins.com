@@ -99,7 +99,7 @@ Be skeptical of any Shopify app that claims:
 - "Legal protection guarantee." Vendors cannot guarantee that, and the few who tried have been sued themselves.
 - "AI fixes everything automatically." AI can draft alt text, detect contrast failures, and add ARIA labels in many cases. It cannot decide if a decorative image should be hidden from screen readers or marked up as content. That is your call.
 
-For a full breakdown of the alt text problem specifically (the single most cited failure in lawsuits), see [Why Shopify Product Images Are Missing Alt Text](https://amazingplugins.com/blog/shopify-alt-text-missing-product-images).
+For a full breakdown of the alt text problem specifically (the single most cited failure in lawsuits), see [Why Shopify Product Images Are Missing Alt Text](https://amazingplugins.com/blog/shopify-alt-text-missing-product-images/).
 
 ## Pricing reality check (2026)
 

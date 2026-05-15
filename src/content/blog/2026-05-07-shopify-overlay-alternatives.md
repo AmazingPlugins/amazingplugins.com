@@ -20,7 +20,7 @@ seoKeywords:
   - best overlay alternative shopify
   - why shopify overlay does not work
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/shopify-overlay-alternatives'
+canonicalUrl: 'https://amazingplugins.com/blog/shopify-overlay-alternatives/'
 gscSubmitted: true
 ---
 

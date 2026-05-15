@@ -18,7 +18,7 @@ seoKeywords:
   - wordpress ecommerce accessibility
   - woocommerce checkout accessibility
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-wcag-violations-guide'
+canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-wcag-violations-guide/'
 gscSubmitted: true
 ---
 

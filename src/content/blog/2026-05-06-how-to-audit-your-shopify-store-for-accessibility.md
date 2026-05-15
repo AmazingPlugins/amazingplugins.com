@@ -18,7 +18,7 @@ seoKeywords:
   - shopify wcag 2.2 checklist
 seoCategory: Guides
 canonicalUrl: >-
-  https://amazingplugins.com/blog/how-to-audit-your-shopify-store-for-accessibility
+  https://amazingplugins.com/blog/how-to-audit-your-shopify-store-for-accessibility/
 gscSubmitted: true
 ---
 

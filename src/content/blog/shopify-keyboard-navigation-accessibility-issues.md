@@ -19,7 +19,7 @@ seoKeywords:
   - shopify checkout keyboard navigation
 seoCategory: Guides
 canonicalUrl: >-
-  https://amazingplugins.com/blog/shopify-keyboard-navigation-accessibility-issues
+  https://amazingplugins.com/blog/shopify-keyboard-navigation-accessibility-issues/
 gscSubmitted: true
 ---
 

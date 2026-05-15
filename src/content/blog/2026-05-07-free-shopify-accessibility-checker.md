@@ -20,7 +20,7 @@ seoKeywords:
   - shopify wcag checker free
   - scan shopify store for accessibility issues free
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/free-shopify-accessibility-checker'
+canonicalUrl: 'https://amazingplugins.com/blog/free-shopify-accessibility-checker/'
 gscSubmitted: true
 ---
 

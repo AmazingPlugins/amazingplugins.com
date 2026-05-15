@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://amazingplugins.com',
+  trailingSlash: 'always',
   output: 'static',
   adapter: cloudflare({
     platformProxy: {
@@ -12,6 +13,14 @@ export default defineConfig({
     },
   }),
   integrations: [
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        if (item.url === '/') return item;
+        return {
+          ...item,
+          url: item.url.endsWith('/') ? item.url : `${item.url}/`,
+        };
+      },
+    }),
   ],
 });

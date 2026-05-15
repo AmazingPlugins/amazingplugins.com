@@ -108,7 +108,7 @@ function findRelevantExistingPosts(topic: string, currentSlug: string): Array<{ 
 
     // Extract slug for URL construction
     const slug = file.replace('.md', '');
-    const url = `https://amazingplugins.com/blog/${slug}`;
+    const url = `https://amazingplugins.com/blog/${slug}/`;
 
     if (score > 0) {
       scored.push({ slug, title, url, score });

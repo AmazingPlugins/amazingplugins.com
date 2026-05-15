@@ -115,7 +115,7 @@ AmazingPlugins **WooCommerce Accessibility Fixer** is built to do exactly the wo
 
 The Pro tier adds batch scanning across every product and page, auto-fix mode for the safe items, a PDF compliance report you can keep on file, and priority support. The plugin will not pretend to handle every judgment call (meaningful alt text on lifestyle photography, copy review on long descriptions still needs a human), and the dashboard tells you exactly which items it fixed and which it flagged for review.
 
-If you are also worried about the legal side, [How to avoid an ADA lawsuit with your Shopify or WooCommerce store](https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce) covers the demand-letter playbook and what insurance carriers want to see.
+If you are also worried about the legal side, [How to avoid an ADA lawsuit with your Shopify or WooCommerce store](https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/) covers the demand-letter playbook and what insurance carriers want to see.
 
 ## Frequently asked questions
 

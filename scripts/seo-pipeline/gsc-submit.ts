@@ -36,7 +36,7 @@ export function getPostURL(filePath: string): string {
   const fileName = path.basename(filePath, '.md');
   // Extract slug from filename (remove date prefix if present)
   const slug = fileName.replace(/^\d{4}-\d{2}-\d{2}-/, '');
-  return `${SITE_URL}/blog/${slug}`;
+  return `${SITE_URL}/blog/${slug}/`;
 }
 
 /**

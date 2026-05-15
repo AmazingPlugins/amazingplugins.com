@@ -77,7 +77,7 @@ WebAIM's 2026 Million report found 95.9 percent of home pages have detectable WC
 - **3.3.2 Labels or Instructions** - checkout fields with no programmatic label.
 - **4.1.2 Name, Role, Value** - icon-only buttons (close cart, remove item) with no accessible name.
 
-If you want the full breakdown of what changed in 2.2, see [WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?](https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements).
+If you want the full breakdown of what changed in 2.2, see [WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?](https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements/).
 
 ## A practical workflow: how to pick and install the right plugins
 
@@ -95,7 +95,7 @@ This is the order I would follow on a real store.
 
 **Step 6. Re-scan and document.** Run the scanner again. Save the report. If you ever get a demand letter, this trail of evidence matters more than the plugin you bought.
 
-For the full legal context behind this workflow, the [ADA Compliance WooCommerce Plugin: The Full 2026 Guide](https://amazingplugins.com/blog/2026-05-13-ada-compliance-woocommerce-plugin-full-guide) covers lawsuit trends and exposure for WooCommerce stores specifically.
+For the full legal context behind this workflow, the [ADA Compliance WooCommerce Plugin: The Full 2026 Guide](https://amazingplugins.com/blog/2026-05-13-ada-compliance-woocommerce-plugin-full-guide/) covers lawsuit trends and exposure for WooCommerce stores specifically.
 
 ## How AmazingPlugins helps
 

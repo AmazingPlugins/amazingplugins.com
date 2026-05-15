@@ -19,7 +19,7 @@ seoKeywords:
   - woocommerce wcag 2.2
   - wordpress accessibility 2026
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements'
+canonicalUrl: 'https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-requirements/'
 gscSubmitted: true
 ---
 
