@@ -16,6 +16,8 @@
     "seo:fix": "tsx scripts/seo-pipeline/fix-404s.ts",
     "seo:pipeline": "tsx scripts/seo-pipeline/index.ts",
     "seo:keywords": "tsx scripts/seo-pipeline/keywords.ts",
+    "seo:bing:health": "tsx scripts/seo-pipeline/bing-health.ts",
+    "seo:bing:submit": "tsx scripts/seo-pipeline/bing-submit.ts",
     "test:seo-quality": "tsx scripts/seo-pipeline/content-quality.test.ts",
     "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts"
   },
