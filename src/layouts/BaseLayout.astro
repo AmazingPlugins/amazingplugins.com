@@ -55,6 +55,14 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-Q3KPCF2RJT"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Q3KPCF2RJT');
+    </script>
+
     <!-- Theme init — run before paint to prevent flash -->
     <script is:inline>
       (function() {
