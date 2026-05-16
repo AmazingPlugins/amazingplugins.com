@@ -17,6 +17,7 @@ const {
 
 const canonicalPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
 const canonicalURL = new URL(canonicalPath, Astro.site);
+const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim();
 ---
 
 <!doctype html>
@@ -49,6 +50,7 @@ const canonicalURL = new URL(canonicalPath, Astro.site);
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
 
+    {bingVerificationCode && <meta name="msvalidate.01" content={bingVerificationCode} />}
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
