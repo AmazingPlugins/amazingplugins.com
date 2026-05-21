@@ -101,6 +101,7 @@ Sometimes it can help as a temporary layer for some users, but it should not be 
 - [Best WordPress accessibility plugin for WooCommerce](https://amazingplugins.com/blog/best-wordpress-accessibility-plugin-full-guide/)
 - [WooCommerce WCAG violations guide](https://amazingplugins.com/blog/woocommerce-wcag-violations-guide/)
 - [Why accessibility overlays do not protect you from ADA lawsuits](https://amazingplugins.com/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/)
+- [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
 
 ## Bottom line
 

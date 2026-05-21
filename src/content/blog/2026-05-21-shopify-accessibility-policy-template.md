@@ -103,9 +103,11 @@ Someone on the store side should own it, but theme developers, content editors, 
 ## Related pages
 
 - [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
-- [Shopify accessibility statement template 2026](https://amazingplugins.com/blog/shopify-accessibility-statement-template-2026/)
 - [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Best accessibility app for Shopify](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
 
 ## Bottom line
 
 If the statement is what customers see, the policy is what your team follows. Without the policy, the statement is just decoration.
+
+If you need the implementation side too, pair this policy with [how to make your Shopify store accessible](https://amazingplugins.com/blog/how-to-make-your-shopify-store-accessible/) so the rules match the work.
