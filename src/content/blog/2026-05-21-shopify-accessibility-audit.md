@@ -103,7 +103,7 @@ Start with keyboard traps, focus visibility, form labels, and button names. Thos
 
 ## Related guides
 
-- [How Shopify accessibility apps fit into a real audit](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
+- [Shopify accessibility app full guide](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
 - [Why Shopify third-party apps trigger WCAG violations](https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations/)
 - [Shopify accessibility statement template 2026](https://amazingplugins.com/blog/shopify-accessibility-statement-template-2026/)
 - [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
