@@ -32,6 +32,8 @@ There are three categories, and they are not interchangeable.
 
 **3. Code fixers.** These actually modify your theme. They add missing alt text to product images, fix heading hierarchy, add ARIA labels to icon buttons, ensure form fields have labels, and improve color contrast at the source. The fixes persist even if you uninstall the app. This is what you want if you care about real compliance.
 
+If you need the documentation layer around that work, use [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/) to scope the failures and [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/) to keep the public statement, internal policy, and fix log aligned.
+
 ## Which Type Do You Need? A Quick Decision Tree
 
 - **You have not scanned your store yet.** Start with a free scanner. Run [axe DevTools](https://www.deque.com/axe/devtools/) or WAVE on your homepage, a collection page, a product page, and checkout. Note the issues.

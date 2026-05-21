@@ -114,7 +114,11 @@ Here's the workflow I'd recommend to a store owner who has never thought about t
 
 The Pro tier adds batch scanning across all pages, an auto-fix mode for safe items, a downloadable PDF compliance report, and priority support. If you're juggling EU compliance too, see [how to make your Shopify store EAA compliant](https://amazingplugins.com/blog/how-to-make-your-shopify-store-eaa-compliant/).
 
+If you want the rollout doc that goes with the tool, pair the audit results with [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/) so your team has a clear fix order.
+
 One thing I want to be honest about: no automated tool, ours included, can fully replace human review. Meaningful alt text, error message clarity, and complex custom checkout flows still need a human eye. Automation gets you from "obviously not compliant" to "defensibly compliant on the technical baseline." The judgment layer is yours.
+
+If you are still scoping the work, start with [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/) and [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/) so the app choice fits the actual gap list.
 
 ## Frequently asked questions
 
