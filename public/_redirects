@@ -1,3 +1,4 @@
+/sitemap.xml /sitemap-index.xml 301
 /blog/2026-04-17-how-to-make-your-shopify-store-accessible* /blog/how-to-make-your-shopify-store-accessible/ 301
 /blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites* /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
 /blog/2026-04-21-wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce* /blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/ 301
@@ -7,3 +8,4 @@
 /blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant* /blog/how-to-make-your-shopify-store-eaa-compliant/ 301
 /products/shopify-accessibility-scanner* /plugins/shopify-accessibility-fixer/ 301
 /products* /plugins/ 301
+/plugin* /plugins/ 301
