@@ -1,0 +1,96 @@
+---
+title: "Shopify accessibility policy template"
+description: "A practical Shopify accessibility policy template for internal ownership, review cadence, app change triggers, and evidence capture."
+pubDate: 2026-05-21T10:05:00.000Z
+author: "Harun Ray"
+tags:
+  - "Shopify"
+  - "Accessibility"
+  - "Template"
+  - "Compliance"
+  - "Policy"
+seoKeywords:
+  - "Shopify accessibility policy template"
+  - "accessibility policy for Shopify"
+  - "internal accessibility policy"
+seoCategory: "shopify"
+gscSubmitted: false
+---
+
+A Shopify accessibility policy is not the same thing as a public accessibility statement. The policy is the internal rulebook. It tells your team what standard to follow, who owns updates, and what happens when an app, theme, or content change introduces a new issue.
+
+If you want a policy that actually gets used, keep it short, specific, and tied to the store workflow.
+
+## What the policy should cover
+
+- The accessibility standard you target, usually WCAG 2.2 AA
+- The parts of the storefront in scope, including theme, content, apps, and checkout paths you control
+- Who owns accessibility fixes
+- How often the store gets re-scanned
+- What happens when a new app is installed or a theme changes
+- How issues are logged, tracked, and closed
+- Where evidence is kept
+
+## Copy and paste template
+
+### Purpose
+
+This store aims to keep its customer-facing pages usable with keyboard, screen reader, and low-vision workflows. We target WCAG 2.2 AA for our storefront, product pages, collections, cart, and content pages we publish.
+
+### Scope
+
+This policy covers the Shopify theme, custom sections, app embeds, content pages, forms, popups, and any storefront feature that can affect customer access.
+
+### Ownership
+
+- Store owner, approves the policy and the audit cadence
+- Theme developer, fixes code-level issues
+- Content editor, writes alt text, link text, and page copy
+- App owner or vendor, fixes markup injected by third-party apps
+
+### Review cadence
+
+- Full audit after major theme changes
+- Full audit after any app install that injects markup
+- Monthly re-scan of key storefront pages
+- Manual keyboard review after checkout or navigation changes
+
+### Change triggers
+
+We re-check accessibility when we:
+
+- install or update a third-party app
+- change the theme or a section library
+- launch new product templates or landing pages
+- edit navigation, forms, popups, or cart behavior
+
+### Evidence
+
+We keep screenshots, scan exports, and remediation notes for each issue we close. If an issue needs human judgment, we record that too.
+
+## What not to put in the policy
+
+- Legal fluff that nobody can follow
+- Promises like "fully compliant" or "always accessible"
+- Long paragraphs about values with no process
+- Marketing language about being the best or most innovative
+
+A policy should tell the team what to do on Tuesday afternoon, not sound good in a footer.
+
+## Good policy habits
+
+- Keep it to one page if you can
+- Name real owners
+- Use the same WCAG target everywhere
+- Review it after each major storefront change
+- Link the public statement from the footer, but keep the policy internal
+
+## Related pages
+
+- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/2026-05-21-shopify-accessibility-statement-vs-policy-vs-remediation-log/)
+- [Shopify accessibility statement template 2026](https://amazingplugins.com/blog/shopify-accessibility-statement-template-2026/)
+- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+
+## Bottom line
+
+If the statement is what customers see, the policy is what your team follows. Without the policy, the statement is just decoration.

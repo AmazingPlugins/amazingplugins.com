@@ -112,6 +112,8 @@ No automated tool catches everything in keyboard flow. Tab through your homepage
 
 Link it in the footer. Include the standard you're targeting (WCAG 2.2 AA), the date of last audit, known limitations, and a contact email for accessibility feedback. This is cheap, and it shows up in court.
 
+If you need the supporting artifacts around the statement, see [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/), [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/), and [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/).
+
 ### 7. Re-scan and schedule (Ongoing)
 
 Run a scan at least monthly and every time you change themes, add a new page template, or install a new app that injects markup. New violations creep in fast.
@@ -143,6 +145,8 @@ The [Shopify Accessibility Fixer](https://amazingplugins.com/) is built around r
 Honest caveat: automated tools catch the bulk of common WCAG failures but they don't replace judgment for things like meaningful alt text on lifestyle imagery or complex custom checkout flows. Plan for a few hours of human review on first rollout.
 
 If ADA is the angle you care about most, the deeper write-up is here: [Shopify ADA Compliance App: Full Guide (2026)](https://amazingplugins.com/blog/2026-05-13-shopify-ada-compliance-app-full-guide/).
+
+For the process pages that go with the app work, use [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/), [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/), and [EU Accessibility Act ecommerce checklist 2026](https://amazingplugins.com/blog/eu-accessibility-act-ecommerce-checklist-2026/).
 
 ## Frequently asked questions
 
