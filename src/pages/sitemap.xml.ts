@@ -1,15 +1,3 @@
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://amazingplugins.com/sitemap-index.xml</loc>
-  </sitemap>
-</sitemapindex>
-`;
-
 export function GET() {
-  return new Response(xml, {
-    headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
-    },
-  });
+  return Response.redirect('https://amazingplugins.com/sitemap-index.xml', 301);
 }
