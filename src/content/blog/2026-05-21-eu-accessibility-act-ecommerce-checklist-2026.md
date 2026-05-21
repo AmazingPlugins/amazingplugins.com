@@ -106,6 +106,8 @@ Start with keyboard access, focus visibility, labels, and anything that blocks c
 - [How Shopify accessibility apps fit into EAA work](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
 - [How to run a Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
 - [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
+- [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
+- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
 
 ## Bottom line
 

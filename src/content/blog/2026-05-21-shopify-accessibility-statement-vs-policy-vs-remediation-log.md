@@ -113,7 +113,10 @@ Each entry should capture the issue, the page or template, the WCAG criterion, t
 - [Shopify accessibility statement template 2026](https://amazingplugins.com/blog/shopify-accessibility-statement-template-2026/)
 - [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
 - [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
+- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
 
 ## Bottom line
 
 If you want the simplest rule, use this: the statement talks to customers, the policy guides your team, and the remediation log proves the work happened.
+
+If you want the implementation sequence behind those documents, start with the audit, write the policy, then keep the remediation log current after each fix.
