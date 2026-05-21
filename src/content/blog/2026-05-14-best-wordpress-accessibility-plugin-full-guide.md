@@ -101,6 +101,8 @@ For the full legal context behind this workflow, the [ADA Compliance WooCommerce
 
 If you want the direct comparison between a real WooCommerce accessibility plugin and a widget overlay, read [WooCommerce plugin vs widget accessibility](https://amazingplugins.com/blog/woocommerce-plugin-vs-widget-accessibility/).
 
+If you need the rollout plan after you pick a tool, use [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/) so the fixes, owners, and re-scan dates are written down.
+
 ## How AmazingPlugins helps
 
 WooCommerce Accessibility Fixer was built because the generic plugins above leave the WooCommerce-specific failures untouched. Concretely, it:
