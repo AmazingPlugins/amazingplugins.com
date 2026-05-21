@@ -17,9 +17,7 @@ seoCategory: "compliance"
 gscSubmitted: false
 ---
 
-A remediation plan is the document that turns a scan into work.
-
-Without it, you have a list of problems. With it, you have ownership, dates, and proof.
+Use this ADA ecommerce remediation plan template to turn a scan into work. Without it, you have a list of problems. With it, you have ownership, dates, and proof.
 
 ## What the template should track
 
@@ -94,6 +92,21 @@ That order is not fancy, but it saves time.
 - Do not leave owners blank
 - Do not use "misc" as a status
 - Do not close items before the live check passes
+
+## Quick FAQs
+
+### What fields should every remediation item include?
+At minimum, capture the page or template, issue summary, WCAG criterion, severity, owner, fix plan, evidence, due date, and status.
+
+### Is this the same as a remediation log?
+Close, but not identical. A remediation plan is the work queue. A remediation log is the record of what was actually fixed.
+
+### How often should I update the plan?
+Update it whenever you finish a fix, discover a new issue, or re-scan after a theme or app change.
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What fields should every remediation item include?", "acceptedAnswer": {"@type": "Answer", "text": "At minimum, capture the page or template, issue summary, WCAG criterion, severity, owner, fix plan, evidence, due date, and status."}}, {"@type": "Question", "name": "Is this the same as a remediation log?", "acceptedAnswer": {"@type": "Answer", "text": "Close, but not identical. A remediation plan is the work queue. A remediation log is the record of what was actually fixed."}}, {"@type": "Question", "name": "How often should I update the plan?", "acceptedAnswer": {"@type": "Answer", "text": "Update it whenever you finish a fix, discover a new issue, or re-scan after a theme or app change."}}]}
+</script>
 
 ## Related pages
 

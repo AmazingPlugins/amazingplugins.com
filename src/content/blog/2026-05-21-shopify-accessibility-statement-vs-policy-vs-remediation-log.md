@@ -17,7 +17,7 @@ seoCategory: "shopify"
 gscSubmitted: false
 ---
 
-People keep using these three things as if they mean the same thing. They do not.
+If you're building a Shopify accessibility program, keep these three documents separate. The statement talks to customers, the policy guides your team, and the remediation log proves the work happened.
 
 ## The short version
 
@@ -92,6 +92,21 @@ That gives you something you can maintain without turning it into paperwork thea
 - Writing a policy nobody can find or use
 - Logging issues but never closing the loop
 - Putting the same paragraph in all three documents
+
+## Quick FAQs
+
+### Which one goes in the footer?
+The accessibility statement usually lives in the footer because customers need a simple way to find it.
+
+### Which one should stay internal?
+The accessibility policy should usually stay internal. It is the operating rulebook for your team.
+
+### What belongs in a remediation log?
+Each entry should capture the issue, the page or template, the WCAG criterion, the owner, the fix, the date, and the evidence that the issue is gone.
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which one goes in the footer?", "acceptedAnswer": {"@type": "Answer", "text": "The accessibility statement usually lives in the footer because customers need a simple way to find it."}}, {"@type": "Question", "name": "Which one should stay internal?", "acceptedAnswer": {"@type": "Answer", "text": "The accessibility policy should usually stay internal. It is the operating rulebook for your team."}}, {"@type": "Question", "name": "What belongs in a remediation log?", "acceptedAnswer": {"@type": "Answer", "text": "Each entry should capture the issue, the page or template, the WCAG criterion, the owner, the fix, the date, and the evidence that the issue is gone."}}]}
+</script>
 
 ## Related pages
 

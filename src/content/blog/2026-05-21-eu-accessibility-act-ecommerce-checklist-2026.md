@@ -17,9 +17,7 @@ seoCategory: "compliance"
 gscSubmitted: false
 ---
 
-If you sell to consumers in the EU, the European Accessibility Act is not a theory piece. It is a practical compliance problem, and most stores still handle it like a vague legal headline.
-
-This checklist keeps it simple.
+This EU Accessibility Act ecommerce checklist helps Shopify and WooCommerce stores selling to EU consumers stay organized. It keeps the work simple: confirm scope, fix blockers, keep proof, repeat.
 
 ## First, confirm whether you are in scope
 
@@ -88,10 +86,25 @@ That is the part most teams skip. Then they scramble later.
 - Do not publish a statement and stop there
 - Do not wait until the deadline to learn where the barriers are
 
+## Quick FAQs
+
+### Does the EAA apply if my store is based outside the EU?
+Possibly, yes. What matters most is whether you sell to EU consumers and whether your storefront is a consumer-facing digital service.
+
+### What proof should I keep?
+Keep scan exports, screenshots, remediation log entries, owner notes, review dates, and a public accessibility statement link.
+
+### What should I fix first?
+Start with keyboard access, focus visibility, labels, and anything that blocks checkout or core navigation.
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the EAA apply if my store is based outside the EU?", "acceptedAnswer": {"@type": "Answer", "text": "Possibly, yes. What matters most is whether you sell to EU consumers and whether your storefront is a consumer-facing digital service."}}, {"@type": "Question", "name": "What proof should I keep?", "acceptedAnswer": {"@type": "Answer", "text": "Keep scan exports, screenshots, remediation log entries, owner notes, review dates, and a public accessibility statement link."}}, {"@type": "Question", "name": "What should I fix first?", "acceptedAnswer": {"@type": "Answer", "text": "Start with keyboard access, focus visibility, labels, and anything that blocks checkout or core navigation."}}]}
+</script>
+
 ## Related pages
 
-- [Shopify accessibility app: full guide](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
-- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [How Shopify accessibility apps fit into EAA work](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
+- [How to run a Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
 - [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
 
 ## Bottom line
