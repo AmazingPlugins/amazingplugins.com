@@ -8,4 +8,6 @@
 /blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant* /blog/how-to-make-your-shopify-store-eaa-compliant/ 301
 /products/shopify-accessibility-scanner* /plugins/shopify-accessibility-fixer/ 301
 /products* /plugins/ 301
-/plugin* /plugins/ 301
+/plugin /plugins/ 301
+/plugin/ /plugins/ 301
+/plugin/* /plugins/:splat 301
