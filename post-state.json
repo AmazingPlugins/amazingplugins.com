@@ -179,6 +179,42 @@
       ],
       "seoCategory": "shopify",
       "gscSubmitted": false
+    },
+    "2026-05-22-wcag-22-compliance-woocommerce-what-changed": {
+      "slug": "2026-05-22-wcag-22-compliance-woocommerce-what-changed",
+      "lastUpdated": "2026-05-22T13:02:00.826Z",
+      "title": "WCAG 2.2 Compliance for WooCommerce: What Changed",
+      "topic": "`WCAG 2.2 compliance woocommerce`",
+      "angle": "what-changed",
+      "seoKeywords": [
+        "`WCAG 2.2 compliance woocommerce`"
+      ],
+      "seoCategory": "woocommerce",
+      "gscSubmitted": false
+    },
+    "2026-05-22-wcag-22-compliance-woocommerce-checklist": {
+      "slug": "2026-05-22-wcag-22-compliance-woocommerce-checklist",
+      "lastUpdated": "2026-05-22T13:03:41.050Z",
+      "title": "WCAG 2.2 Compliance WooCommerce: The Full Checklist",
+      "topic": "`WCAG 2.2 compliance woocommerce`",
+      "angle": "checklist",
+      "seoKeywords": [
+        "`WCAG 2.2 compliance woocommerce`"
+      ],
+      "seoCategory": "woocommerce",
+      "gscSubmitted": false
+    },
+    "2026-05-22-wcag-22-compliance-woocommerce-deadline": {
+      "slug": "2026-05-22-wcag-22-compliance-woocommerce-deadline",
+      "lastUpdated": "2026-05-22T13:05:07.507Z",
+      "title": "WCAG 2.2 WooCommerce Deadline: What's Due When",
+      "topic": "`WCAG 2.2 compliance woocommerce`",
+      "angle": "deadline",
+      "seoKeywords": [
+        "`WCAG 2.2 compliance woocommerce`"
+      ],
+      "seoCategory": "woocommerce",
+      "gscSubmitted": false
     }
   },
   "lastRun": "",
