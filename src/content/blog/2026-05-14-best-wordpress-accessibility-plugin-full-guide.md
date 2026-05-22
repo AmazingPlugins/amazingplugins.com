@@ -97,7 +97,7 @@ This is the order I would follow on a real store.
 
 **Step 6. Re-scan and document.** Run the scanner again. Save the report. If you ever get a demand letter, this trail of evidence matters more than the plugin you bought.
 
-For the full legal context behind this workflow, the [ADA Compliance WooCommerce Plugin: The Full 2026 Guide](https://amazingplugins.com/blog/2026-05-13-ada-compliance-woocommerce-plugin-full-guide/) covers lawsuit trends and exposure for WooCommerce stores specifically.
+For the full legal context behind this workflow, the [ADA Compliance WooCommerce Plugin: The Full 2026 Guide](https://amazingplugins.com/blog/ada-compliance-woocommerce-plugin-full-guide/) covers lawsuit trends and exposure for WooCommerce stores specifically.
 
 If you want the direct comparison between a real WooCommerce accessibility plugin and a widget overlay, read [WooCommerce plugin vs widget accessibility](https://amazingplugins.com/blog/woocommerce-plugin-vs-widget-accessibility/).
 

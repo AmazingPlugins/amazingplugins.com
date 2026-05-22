@@ -113,7 +113,7 @@ These three categories get confused constantly, and the wrong choice costs real 
 - **The lawsuit problem:** Stores using overlays are still getting sued. The FTC settled with accessiBe in 2024 over misleading claims. Plaintiffs' lawyers specifically target overlay-using sites because the underlying code is still inaccessible.
 - **Verdict:** Skip these. They don't fix anything; they just hide problems from automated scanners while real assistive tech users still can't use the site.
 
-If you want the full comparison framework, our [step-by-step buying guide](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-step-by-step-guide/) walks through the decision tree.
+If you want the full comparison framework, our [step-by-step buying guide](https://amazingplugins.com/blog/accessibility-checker-tool-buy-step-by-step-guide/) walks through the decision tree.
 
 ## A realistic before-and-after example
 
@@ -167,7 +167,7 @@ Before you click buy on any accessibility checker or fixer, run through these qu
 - [ ] Is there a free trial or money-back guarantee? (90 days minimum is reasonable.)
 - [ ] Does the vendor publish their own VPAT or accessibility statement?
 
-For more on what to avoid, our writeup on [9 buying mistakes to avoid when choosing an accessibility checker tool](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-common-mistakes/) covers the traps that catch most first-time buyers.
+For more on what to avoid, our writeup on [9 buying mistakes to avoid when choosing an accessibility checker tool](https://amazingplugins.com/blog/accessibility-checker-tool-buy-common-mistakes/) covers the traps that catch most first-time buyers.
 
 ## How AmazingPlugins helps
 

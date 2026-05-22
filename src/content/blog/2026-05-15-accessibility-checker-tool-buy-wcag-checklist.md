@@ -107,7 +107,7 @@ A homepage scan tells you almost nothing. Run any candidate tool against:
 
 If the tool only scans the homepage on the free tier, that is a marketing demo, not a real evaluation.
 
-For a deeper walkthrough of the buying process itself, see our [step-by-step buying guide for accessibility checker tools](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-step-by-step-guide/), and the [9 buying mistakes to avoid](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-common-mistakes/) before you commit to a yearly contract.
+For a deeper walkthrough of the buying process itself, see our [step-by-step buying guide for accessibility checker tools](https://amazingplugins.com/blog/accessibility-checker-tool-buy-step-by-step-guide/), and the [9 buying mistakes to avoid](https://amazingplugins.com/blog/accessibility-checker-tool-buy-common-mistakes/) before you commit to a yearly contract.
 
 ## Detection vs fix: the comparison that actually matters
 
