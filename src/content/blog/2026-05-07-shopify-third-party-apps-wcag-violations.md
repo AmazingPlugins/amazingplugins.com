@@ -61,6 +61,8 @@ Step 2. Check the vendor's own demo store. Most Shopify apps have a public demo.
 
 Step 3. Read the app changelog. Search for "a11y", "accessibility", "WCAG", "ARIA", "keyboard", "screen reader". Vendors that take this seriously mention it in release notes. Vendors that do not have not. The app listing in the Shopify App Store also has a "Last updated" date. If the app has not shipped in 18 months, it is unlikely to be patching anything.
 
+If you need the remediation paperwork around the problem app, start with [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/), then pair it with [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/) and [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/) so the investigation and the fix log stay aligned.
+
 ## What to Do After You Identify the Problem App
 
 Contact the vendor first. Send the violation, the WCAG success criterion it fails, the URL where you reproduced it, and a screenshot. Ask for a remediation timeline in writing. Reasonable vendors will give you one. Unreasonable vendors will give you a generic reply about how accessibility is important to them. The reply you get is itself the answer about whether to keep using the app.
