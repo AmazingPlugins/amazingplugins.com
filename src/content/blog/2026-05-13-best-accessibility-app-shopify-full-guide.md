@@ -66,7 +66,7 @@ Use this as a feature-by-feature scorecard when comparing Shopify accessibility 
 
 If you want a deeper walkthrough of these issues with examples, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
-If you need the implementation path, use [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/) to find the gaps, then pair it with [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/) and [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/) so the fixes and the documentation stay in sync.
+If you need the implementation path, use [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/) to find the gaps, then pair it with [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/), [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/), and [Your Shopify App Is Quietly Breaking WCAG Compliance. Here's How to Find It](https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations/) so the fixes and the documentation stay in sync.
 
 ## How to evaluate a Shopify accessibility app in 30 minutes
 
