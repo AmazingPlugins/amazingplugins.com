@@ -139,7 +139,7 @@ The **Pro tier** adds batch scanning across all products, an auto-fix mode where
 
 What it will not do, honestly: write meaningful alt text for a complex lifestyle photo of your product in use (a human still has to write 'Woman wearing the navy raincoat in the rain at a London bus stop'), or fix accessibility bugs in a custom checkout flow built by a developer who left no documentation. For those, you need a human reviewer, and the Pro PDF report is built to make that review fast.
 
-For a wider list of issues this catches, see our breakdown of [10 common accessibility issues on e-commerce sites and how to fix them](https://amazingplugins.com/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites/).
+For a wider list of issues this catches, see our breakdown of [10 common accessibility issues on e-commerce sites and how to fix them](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
 ## Frequently asked questions
 

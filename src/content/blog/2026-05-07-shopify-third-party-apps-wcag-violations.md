@@ -71,6 +71,15 @@ If a fix is coming but not soon, version-pin. Some apps let you stay on a known-
 
 If no fix is coming, replace the app. There is almost always an accessible alternative in the same category, and switching is cheaper than litigation. The European Accessibility Act took effect in June 2025, and demand letters for non-compliant ecommerce sites are no longer rare in the US either.
 
+## Related guides
+
+- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
+- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
+- [Shopify Accessibility Tool: Full Guide for Store Owners (2026)](https://amazingplugins.com/blog/shopify-accessibility-tool-full-guide/)
+- [WCAG 2.2 Compliance Shopify: The Full Checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/)
+- [Best Accessibility App for Shopify (2026 Buyer's Guide)](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
+
 ## How to Monitor App Accessibility After Each Update
 
 Apps update silently. The vendor pushes a new version, your store loads it on the next page view, and any accessibility work the previous version had can be gone. There is no changelog popup, no email, no warning. Your store just starts failing again.
