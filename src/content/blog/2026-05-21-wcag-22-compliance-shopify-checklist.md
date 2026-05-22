@@ -112,7 +112,7 @@ Here is the order I'd work in for a real Shopify store:
 
 [Shopify Accessibility Fixer](https://apps.shopify.com/) is built around this checklist. Instead of overlaying a widget on top of your site, it injects real fixes into your theme: missing alt text on product images, ARIA form labels in the newsletter signup, visible focus indicators where the theme stripped them, skip links, the lang attribute, and distinguishing text on links that only differed by URL. The Pro tier adds batch scanning across all pages, an auto-fix mode for the safe-to-change items, and a PDF compliance report you can keep on file.
 
-Be honest with yourself: an app will not write meaningful alt text for a complex lifestyle product image, and it cannot judge whether your checkout flow makes sense to someone using only a keyboard. Use the tool for the 30 to 50 percent it solves cleanly, and budget time for the rest. If you want a wider view of options before deciding, the [Best Accessibility App for Shopify guide](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/) compares the main players.
+For a wider product comparison, see the [Best Accessibility App for Shopify (2026 Buyer's Guide)](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/).
 
 For stores selling into the EU, WCAG 2.1 AA is the technical standard under the European Accessibility Act, which became enforceable June 28, 2025. The [Shopify EAA compliance guide](https://amazingplugins.com/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant/) covers what's different from US ADA expectations.
 

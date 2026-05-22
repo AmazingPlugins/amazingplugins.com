@@ -89,7 +89,7 @@ Most accessibility tool vendors push annual billing. Do not commit until you hav
 3. Run a free scan on your checkout page.
 4. Read the resulting report and confirmed it actually identifies real issues with real WCAG references.
 
-If the free scan returns only generic warnings ("images may be missing alt text" without telling you which images), the paid version is unlikely to be more specific. The [Accessibility Checker Tool: Step-by-Step Buying Guide](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-step-by-step-guide/) walks through this evaluation process.
+If the free scan returns only generic warnings ("images may be missing alt text" without telling you which images), the paid version is unlikely to be more specific. The [Accessibility Checker Tool: Step-by-Step Buying Guide](https://amazingplugins.com/blog/accessibility-checker-tool-buy-step-by-step-guide/) walks through this evaluation process.
 
 ## Mistake 6: Ignoring batch scanning when you have hundreds of products
 
@@ -169,7 +169,7 @@ What it handles automatically:
 
 Pro adds batch scanning across the whole catalog, auto-fix mode for the deterministic issues, a PDF compliance report you can hand to a lawyer or auditor, and priority support. You still need to review judgment calls (meaningful alt text for unique products, custom checkout flows), but the mechanical work is done for you.
 
-If you are still comparing options or want to understand what an honest accessibility-checker purchase looks like, the [Accessibility Checker Tool: Step-by-Step Buying Guide](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-step-by-step-guide/) breaks down the evaluation process in more detail.
+If you are still comparing options or want to understand what an honest accessibility-checker purchase looks like, the [Accessibility Checker Tool: Step-by-Step Buying Guide](https://amazingplugins.com/blog/accessibility-checker-tool-buy-step-by-step-guide/) breaks down the evaluation process in more detail.
 
 ## Frequently asked questions
 

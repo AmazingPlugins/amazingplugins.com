@@ -58,7 +58,7 @@ Most WooCommerce stores need a scanner plus a code-level fixer. Overlays should 
 
 **Where they fall short:** This is the honest part. In 2025 the FTC fined accessiBe $1 million for misleading claims. Overlay-using sites still account for a meaningful share of ADA lawsuits in 2025 (5,114+ federal lawsuits filed, roughly 20% YoY growth). The widgets don't fix the underlying HTML, so screen readers, keyboard users, and assistive tech still hit the same broken markup. Many disability advocates actively block overlays.
 
-**Best for:** Honestly, not much in 2026. If your reason for buying one is "reduce legal risk," it does the opposite at this point. The [common buying mistakes article](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-common-mistakes/) covers why this category should usually be skipped.
+**Best for:** Honestly, not much in 2026. If your reason for buying one is "reduce legal risk," it does the opposite at this point. The [common buying mistakes article](https://amazingplugins.com/blog/accessibility-checker-tool-buy-common-mistakes/) covers why this category should usually be skipped.
 
 ### 3. Code-level fixer plugins (the WooCommerce-native category)
 
@@ -70,7 +70,7 @@ Most WooCommerce stores need a scanner plus a code-level fixer. Overlays should 
 
 **Where they fall short:** Automated fixes can only go so far. A plugin can add an alt attribute, but only a human knows whether "red ceramic mug, 12oz, with handle" is meaningful for a specific product photo. Plugins handle the mechanical 60-70% of WCAG. The remaining content judgment is on you.
 
-**Best for:** WooCommerce store owners who want their store to actually be accessible without rewriting their theme. This is the [category most WooCommerce buyers should be in](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-what-it-actually-does/).
+**Best for:** WooCommerce store owners who want their store to actually be accessible without rewriting their theme. This is the [category most WooCommerce buyers should be in](https://amazingplugins.com/blog/accessibility-checker-tool-buy-what-it-actually-does/).
 
 ### 4. Human audits (consultants, agencies, WCAG-certified testers)
 
@@ -107,10 +107,10 @@ If you're a WooCommerce store owner trying to decide what to actually buy, here'
 1. **Run a free scan first.** Use WAVE or axe DevTools on your home page, a product page, cart, and checkout. Write down the WCAG numbers that come up most: 1.1.1, 1.4.3, 2.4.7, 3.3.2, 4.1.2 are typical.
 2. **Count the patterns.** If you see the same failure 50+ times (missing alt text, missing form labels, low contrast buttons), that's a fixer-plugin job. If you see 5 weird custom-checkout issues, that's a human job.
 3. **Skip overlays.** I know they have aggressive sales teams. The legal and accessibility communities have moved against them. Don't waste the budget.
-4. **Buy a code-level fixer next.** Look for one that lists specific WCAG criteria it addresses, not vague "AI-powered compliance." The [WCAG 2.2 buyer's checklist](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-wcag-checklist/) is a good reference list.
+4. **Buy a code-level fixer next.** Look for one that lists specific WCAG criteria it addresses, not vague "AI-powered compliance." The [WCAG 2.2 buyer's checklist](https://amazingplugins.com/blog/accessibility-checker-tool-buy-wcag-checklist/) is a good reference list.
 5. **Add a human audit if your revenue or risk justifies it.** Generally above $500K/year, or if you operate in healthcare, finance, education, or government-adjacent niches.
 
-This is the same sequence the [step-by-step buying guide](https://amazingplugins.com/blog/2026-05-15-accessibility-checker-tool-buy-step-by-step-guide/) walks through in more detail.
+This is the same sequence the [step-by-step buying guide](https://amazingplugins.com/blog/accessibility-checker-tool-buy-step-by-step-guide/) walks through in more detail.
 
 ## How AmazingPlugins fits in this comparison
 
