@@ -104,7 +104,7 @@ Someone on the store side should own it, but theme developers, content editors, 
 
 - [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
 - [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
-- [Best accessibility app for Shopify](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
+- [Best Accessibility App for Shopify (2026 Buyer’s Guide)](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
 
 ## Bottom line
 
