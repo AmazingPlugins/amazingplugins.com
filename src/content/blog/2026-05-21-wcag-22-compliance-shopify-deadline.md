@@ -54,7 +54,7 @@ W3C published WCAG 2.2 on October 5, 2023 and added nine new success criteria. N
 - **3.3.7 Redundant Entry** - do not ask for the same info twice in checkout if you already collected it.
 - **3.3.8 Accessible Authentication (Minimum)** - no cognitive function test for login (no "transcribe this image," no math puzzle CAPTCHA).
 
-For the full breakdown of what 2.2 adds versus 2.1, see [WCAG 2.2 Compliance for Shopify: What Actually Changed](https://amazingplugins.com/blog/2026-05-21-wcag-22-compliance-shopify-what-changed/).
+For the full breakdown of what 2.2 adds versus 2.1, see [WCAG 2.2 Compliance for Shopify: What Actually Changed](https://amazingplugins.com/blog/wcag-22-compliance-shopify-what-changed/).
 
 ## What happens if you miss the deadlines
 
@@ -104,7 +104,7 @@ Automated tools catch roughly 30-40% of WCAG failures. The rest need human judgm
 
 New product photos arrive without alt text. New apps inject inaccessible widgets. New themes ship with focus-style regressions. The mistake is treating compliance as a one-time project. It is a maintenance discipline like SEO or inventory.
 
-For the full criterion-by-criterion checklist, see [WCAG 2.2 Compliance Shopify: The Full Checklist](https://amazingplugins.com/blog/2026-05-21-wcag-22-compliance-shopify-checklist/).
+For the full criterion-by-criterion checklist, see [WCAG 2.2 Compliance Shopify: The Full Checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/).
 
 ## What you can stop worrying about
 

@@ -35,7 +35,7 @@ WCAG 2.2 added 9 new success criteria. Six are Level A or AA and matter for lega
 - **3.3.8 Accessible Authentication (Minimum) AA**: do not require users to solve cognitive puzzles to log in. Affects custom login pages with CAPTCHA only.
 - **3.3.9 Accessible Authentication (Enhanced) AAA**: AAA version, optional.
 
-For a deeper read on the changes, see [WCAG 2.2 Compliance for Shopify: What Actually Changed](https://amazingplugins.com/blog/2026-05-21-wcag-22-compliance-shopify-what-changed/).
+For a deeper read on the changes, see [WCAG 2.2 Compliance for Shopify: What Actually Changed](https://amazingplugins.com/blog/wcag-22-compliance-shopify-what-changed/).
 
 ## The full WCAG 2.2 Shopify checklist
 
