@@ -67,7 +67,7 @@ For WooCommerce specifically, you want a tool that:
 - Understands WordPress media library alt text and can fill gaps
 - Works with your existing theme without breaking checkout
 
-Generic tools that just inject JavaScript will not touch your real templates, and that is exactly what the lawsuits target. For more on this trap, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites/).
+Generic tools that just inject JavaScript will not touch your real templates, and that is exactly what the lawsuits target. For more on this trap, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
 ## Step 4: Compare on features, not marketing
 

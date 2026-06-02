@@ -76,7 +76,7 @@ A missing `<html lang="en">` is a quick automated-test failure. The tool sets it
 
 Detects "Read more" or "Click here" links and adds context via `aria-label`, like `aria-label="Read more about Red Leather Shoes"`. This one is partly judgment-based, so a careful tool will offer a suggestion rather than overwriting silently.
 
-For a deeper walkthrough of these specific issues, see our breakdown of [10 common accessibility issues on e-commerce sites and how to fix them](https://amazingplugins.com/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites/).
+For a deeper walkthrough of these specific issues, see our breakdown of [10 common accessibility issues on e-commerce sites and how to fix them](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
 ## What an accessibility checker tool does NOT fix
 

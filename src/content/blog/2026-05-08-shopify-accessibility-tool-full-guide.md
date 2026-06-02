@@ -75,6 +75,15 @@ These six cover the majority of issues flagged in our [10 common e-commerce acce
 
 No tool catches everything. Automated scanners detect roughly 30-40% of WCAG issues. The rest, things like "is this alt text actually descriptive?" or "does the focus order make sense?", require a human. If you sell to the US or EU and your revenue is meaningful, budget for one professional manual audit per year on top of your tool. A solo founder doing $100K/year can usually skip the audit and rely on a code fixer plus monthly self-tests. A store doing $5M+ should not.
 
+## Related guides
+
+- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
+- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
+- [Your Shopify App Is Quietly Breaking WCAG Compliance. Here's How to Find It](https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations/)
+- [WCAG 2.2 Compliance Shopify: The Full Checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/)
+- [Best Accessibility App for Shopify (2026 Buyer's Guide)](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
+
 ## Frequently Asked Questions
 
 **Is the Shopify Accessibility Checker built into Shopify enough?**

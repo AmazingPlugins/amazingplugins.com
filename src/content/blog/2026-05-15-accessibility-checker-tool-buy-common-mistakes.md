@@ -42,7 +42,7 @@ Buying the wrong checker does not just waste your subscription fee. It leaves yo
 
 Overlays (the floating accessibility icon in the corner) are JavaScript widgets that try to patch your site at runtime. They do not change your HTML. Screen reader users frequently report they make things worse, and there is a well-documented track record of stores using overlays still getting sued.
 
-If a tool's main value proposition is "install one line of code and become compliant," that is a red flag. Real fixes happen in the theme files, the product templates, and the checkout markup, not in a widget. For a longer breakdown, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites/).
+If a tool's main value proposition is "install one line of code and become compliant," that is a red flag. Real fixes happen in the theme files, the product templates, and the checkout markup, not in a widget. For a longer breakdown, see [10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)](https://amazingplugins.com/blog/10-common-accessibility-issues-on-e-commerce-sites/).
 
 ## Mistake 2: Trusting the vendor's own "compliance score"
 

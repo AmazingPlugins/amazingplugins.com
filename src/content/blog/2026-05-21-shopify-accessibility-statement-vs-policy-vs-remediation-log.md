@@ -114,6 +114,8 @@ Each entry should capture the issue, the page or template, the WCAG criterion, t
 - [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
 - [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
 - [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Shopify Accessibility Tool: Full Guide for Store Owners (2026)](https://amazingplugins.com/blog/shopify-accessibility-tool-full-guide/)
+- [WCAG 2.2 Compliance Shopify: The Full Checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/)
 
 ## Bottom line
 

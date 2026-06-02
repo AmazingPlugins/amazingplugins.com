@@ -35,7 +35,7 @@ WCAG 2.2 added 9 new success criteria. Six are Level A or AA and matter for lega
 - **3.3.8 Accessible Authentication (Minimum) AA**: do not require users to solve cognitive puzzles to log in. Affects custom login pages with CAPTCHA only.
 - **3.3.9 Accessible Authentication (Enhanced) AAA**: AAA version, optional.
 
-For a deeper read on the changes, see [WCAG 2.2 Compliance for Shopify: What Actually Changed](https://amazingplugins.com/blog/2026-05-21-wcag-22-compliance-shopify-what-changed/).
+For a deeper read on the changes, see [WCAG 2.2 Compliance for Shopify: What Actually Changed](https://amazingplugins.com/blog/wcag-22-compliance-shopify-what-changed/).
 
 ## The full WCAG 2.2 Shopify checklist
 
@@ -114,7 +114,16 @@ Here is the order I'd work in for a real Shopify store:
 
 For a wider product comparison, see the [Best Accessibility App for Shopify (2026 Buyer's Guide)](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/).
 
-For stores selling into the EU, WCAG 2.1 AA is the technical standard under the European Accessibility Act, which became enforceable June 28, 2025. The [Shopify EAA compliance guide](https://amazingplugins.com/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant/) covers what's different from US ADA expectations.
+For stores selling into the EU, WCAG 2.1 AA is the technical standard under the European Accessibility Act, which became enforceable June 28, 2025. The [Shopify EAA compliance guide](https://amazingplugins.com/blog/how-to-make-your-shopify-store-eaa-compliant/) covers what's different from US ADA expectations.
+
+## Related pages
+
+- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
+- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
+- [Shopify Accessibility Tool: Full Guide for Store Owners (2026)](https://amazingplugins.com/blog/shopify-accessibility-tool-full-guide/)
+- [Your Shopify App Is Quietly Breaking WCAG Compliance. Here's How to Find It](https://amazingplugins.com/blog/shopify-third-party-apps-wcag-violations/)
+- [Best Accessibility App for Shopify (2026 Buyer's Guide)](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
 
 ## Frequently asked questions
 
