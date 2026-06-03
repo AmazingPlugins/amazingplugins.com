@@ -1,19 +1,21 @@
 ---
-title: "Website Accessibility Plugin: Full 2026 Guide for WooCommerce"
-description: "What a website accessibility plugin actually does, what it cannot fix, and how to pick one that prevents ADA lawsuits instead of attracting them."
+title: 'Website Accessibility Plugin: Full 2026 Guide for WooCommerce'
+description: >-
+  What a website accessibility plugin actually does, what it cannot fix, and how
+  to pick one that prevents ADA lawsuits instead of attracting them.
 pubDate: 2026-05-26T13:12:43.588Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "WooCommerce"
-  - "Accessibility"
-  - "WCAG"
-  - "ADA Compliance"
-  - "WordPress"
+  - WooCommerce
+  - Accessibility
+  - WCAG
+  - ADA Compliance
+  - WordPress
 seoKeywords:
-  - "`website accessibility plugin`"
-seoCategory: "accessibility"
-articleAngle: "full-guide"
-gscSubmitted: false
+  - '`website accessibility plugin`'
+seoCategory: accessibility
+articleAngle: full-guide
+gscSubmitted: true
 ---
 
 A website accessibility plugin is a WordPress add-on that scans your site against the WCAG 2.1 or 2.2 AA standard and fixes (or helps you fix) the issues it finds, things like missing alt text, broken keyboard navigation, low color contrast, unlabeled form fields, and missing skip links. The good ones edit your actual HTML and CSS. The bad ones load a JavaScript overlay on top of your site, change nothing underneath, and have a track record of getting stores sued anyway.

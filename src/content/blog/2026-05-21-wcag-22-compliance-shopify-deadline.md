@@ -1,19 +1,21 @@
 ---
-title: "WCAG 2.2 Compliance Shopify Deadline: What's Due When"
-description: "The real WCAG 2.2 compliance Shopify deadlines: EAA (already enforced), ADA lawsuit risk, and what to fix this week versus this quarter."
+title: 'WCAG 2.2 Compliance Shopify Deadline: What''s Due When'
+description: >-
+  The real WCAG 2.2 compliance Shopify deadlines: EAA (already enforced), ADA
+  lawsuit risk, and what to fix this week versus this quarter.
 pubDate: 2026-05-21T13:05:27.046Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "WCAG 2.2"
-  - "ADA Compliance"
-  - "EAA"
-  - "Accessibility"
+  - Shopify
+  - WCAG 2.2
+  - ADA Compliance
+  - EAA
+  - Accessibility
 seoKeywords:
-  - "`WCAG 2.2 compliance shopify`"
-seoCategory: "shopify"
-articleAngle: "deadline"
-gscSubmitted: false
+  - '`WCAG 2.2 compliance shopify`'
+seoCategory: shopify
+articleAngle: deadline
+gscSubmitted: true
 ---
 
 There is no single "WCAG 2.2 compliance Shopify deadline" the way there is a tax deadline. The honest answer is that two deadlines have already passed and a third one (the lawsuit you have not gotten yet) shows up on its own schedule. The European Accessibility Act became enforceable on **June 28, 2025**. WCAG 2.2 was published by W3C on **October 5, 2023** and is now treated as the working standard in 2026. The US ADA does not list a date at all, which is why 5,114+ digital accessibility lawsuits were filed in 2025 against stores that thought they had time.

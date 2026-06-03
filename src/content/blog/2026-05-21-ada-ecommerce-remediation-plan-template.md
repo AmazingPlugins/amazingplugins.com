@@ -1,20 +1,23 @@
 ---
-title: "ADA ecommerce remediation plan template"
-description: "A working ADA ecommerce remediation plan template for Shopify and WooCommerce stores, with fields for issue, WCAG criterion, owner, fix, evidence, and due date."
+title: ADA ecommerce remediation plan template
+description: >-
+  A working ADA ecommerce remediation plan template for Shopify and WooCommerce
+  stores, with fields for issue, WCAG criterion, owner, fix, evidence, and due
+  date.
 pubDate: 2026-05-21T10:20:00.000Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "ADA"
-  - "Ecommerce"
-  - "Template"
-  - "Accessibility"
-  - "Compliance"
+  - ADA
+  - Ecommerce
+  - Template
+  - Accessibility
+  - Compliance
 seoKeywords:
-  - "ADA ecommerce remediation plan template"
-  - "accessibility remediation plan template"
-  - "ecommerce remediation log template"
-seoCategory: "compliance"
-gscSubmitted: false
+  - ADA ecommerce remediation plan template
+  - accessibility remediation plan template
+  - ecommerce remediation log template
+seoCategory: compliance
+gscSubmitted: true
 ---
 
 Use this ADA ecommerce remediation plan template to turn a scan into work. Without it, you have a list of problems. With it, you have ownership, dates, and proof.

@@ -1,20 +1,22 @@
 ---
-title: "Shopify accessibility statement vs policy vs remediation log"
-description: "A clear explanation of the difference between a public accessibility statement, an internal policy, and a remediation log for Shopify stores."
+title: Shopify accessibility statement vs policy vs remediation log
+description: >-
+  A clear explanation of the difference between a public accessibility
+  statement, an internal policy, and a remediation log for Shopify stores.
 pubDate: 2026-05-21T10:10:00.000Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "Accessibility"
-  - "Compliance"
-  - "FAQ"
-  - "Policy"
+  - Shopify
+  - Accessibility
+  - Compliance
+  - FAQ
+  - Policy
 seoKeywords:
-  - "Shopify accessibility statement vs policy vs remediation log"
-  - "accessibility statement policy remediation log"
-  - "Shopify accessibility statement vs policy"
-seoCategory: "shopify"
-gscSubmitted: false
+  - Shopify accessibility statement vs policy vs remediation log
+  - accessibility statement policy remediation log
+  - Shopify accessibility statement vs policy
+seoCategory: shopify
+gscSubmitted: true
 ---
 
 If you're building a Shopify accessibility program, keep these three documents separate. The statement talks to customers, the policy guides your team, and the remediation log proves the work happened.

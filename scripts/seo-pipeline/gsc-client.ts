@@ -1,6 +1,7 @@
 import { google } from 'googleapis';
 import { JWT } from 'google-auth-library';
 import path from 'path';
+import { loadSeoPipelineEnv } from './env-bootstrap';
 
 // GSC service account email from context
 const SERVICE_ACCOUNT_EMAIL = 'gsc-agent@crontinel.iam.gserviceaccount.com';
@@ -9,6 +10,8 @@ const SERVICE_ACCOUNT_EMAIL = 'gsc-agent@crontinel.iam.gserviceaccount.com';
 let gscClient: any = null;
 
 export async function getGSCClient(): Promise<any> {
+  loadSeoPipelineEnv();
+
   if (gscClient) return gscClient;
   
   // Get credentials from environment variable (base64 encoded JSON)

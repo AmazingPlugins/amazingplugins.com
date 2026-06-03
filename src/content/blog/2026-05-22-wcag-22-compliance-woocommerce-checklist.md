@@ -1,19 +1,21 @@
 ---
-title: "WCAG 2.2 Compliance WooCommerce: The Full Checklist"
-description: "A WooCommerce-specific WCAG 2.2 AA checklist. Every new criterion, what to check on your store, and how to fix it if you're failing."
+title: 'WCAG 2.2 Compliance WooCommerce: The Full Checklist'
+description: >-
+  A WooCommerce-specific WCAG 2.2 AA checklist. Every new criterion, what to
+  check on your store, and how to fix it if you're failing.
 pubDate: 2026-05-22T13:03:41.048Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "WooCommerce"
-  - "Accessibility"
-  - "WCAG 2.2"
-  - "Compliance"
-  - "Checklist"
+  - WooCommerce
+  - Accessibility
+  - WCAG 2.2
+  - Compliance
+  - Checklist
 seoKeywords:
-  - "`WCAG 2.2 compliance woocommerce`"
-seoCategory: "woocommerce"
-articleAngle: "checklist"
-gscSubmitted: false
+  - '`WCAG 2.2 compliance woocommerce`'
+seoCategory: woocommerce
+articleAngle: checklist
+gscSubmitted: true
 ---
 
 If you run a WooCommerce store and you want to know whether you meet WCAG 2.2 AA, the short answer is this: you need to pass the 50 WCAG 2.1 AA criteria you already had to pass, plus six new ones that landed in WCAG 2.2 (four at AA, two at A). For a WooCommerce shop, the criteria most likely to fail you are the new ones around focus visibility (2.4.11), tap target size on mobile (2.5.8), the cognitive accessibility rules (3.2.6, 3.3.7, 3.3.8), and the dragging rule (2.5.7). The rest of this WCAG 2.2 compliance WooCommerce checklist walks you through every item with the exact place to look in your store and what to do if it fails.

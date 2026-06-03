@@ -1,19 +1,21 @@
 ---
-title: "WCAG 2.2 WooCommerce Deadline: What's Due When"
-description: "When WCAG 2.2 compliance is due for WooCommerce stores, what happens if you miss it, and the fastest path to fix the highest-risk issues."
+title: 'WCAG 2.2 WooCommerce Deadline: What''s Due When'
+description: >-
+  When WCAG 2.2 compliance is due for WooCommerce stores, what happens if you
+  miss it, and the fastest path to fix the highest-risk issues.
 pubDate: 2026-05-22T13:05:07.505Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "WCAG 2.2"
-  - "WooCommerce"
-  - "Accessibility"
-  - "ADA Compliance"
-  - "EAA"
+  - WCAG 2.2
+  - WooCommerce
+  - Accessibility
+  - ADA Compliance
+  - EAA
 seoKeywords:
-  - "`WCAG 2.2 compliance woocommerce`"
-seoCategory: "woocommerce"
-articleAngle: "deadline"
-gscSubmitted: false
+  - '`WCAG 2.2 compliance woocommerce`'
+seoCategory: woocommerce
+articleAngle: deadline
+gscSubmitted: true
 ---
 
 If you sell anything to EU consumers, the WCAG 2.2 compliance WooCommerce deadline already passed. The European Accessibility Act (EAA) has been enforceable since **June 28, 2025**, and it points to **EN 301 549**, which adopts **WCAG 2.1 AA** as the technical floor with WCAG 2.2 AA as the de facto best practice for 2026. In the US there is no single federal "WCAG 2.2 deadline" for private WooCommerce stores, but courts treat WCAG 2.1 AA as the bar today and plaintiffs are starting to cite **WCAG 2.2** in 2026 complaints. So the honest answer is: yesterday for EU, ongoing for US, and the lawsuit cost (~$25K per settlement) is now higher than the cost of fixing the store.

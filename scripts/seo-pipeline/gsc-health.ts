@@ -2,6 +2,7 @@ import { google } from 'googleapis';
 import { JWT } from 'google-auth-library';
 import fs from 'fs';
 import path from 'path';
+import { loadSeoPipelineEnv } from './env-bootstrap';
 
 const SERVICE_ACCOUNT_EMAIL = 'gsc-agent@crontinel.iam.gserviceaccount.com';
 
@@ -20,6 +21,8 @@ export interface HealthReport {
  * Get GSC health metrics for the site
  */
 export async function getGSCHealth(): Promise<HealthReport> {
+  loadSeoPipelineEnv();
+
   const siteUrl = process.env.GSC_SITE_URL || 'sc-domain:amazingplugins.com';
   const errors: string[] = [];
   

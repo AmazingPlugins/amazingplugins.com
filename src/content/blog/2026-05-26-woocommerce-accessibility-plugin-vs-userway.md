@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce accessibility plugin vs UserWay: overlay or real fix?"
+title: 'WooCommerce accessibility plugin vs UserWay: overlay or real fix?'
 description: >-
   Compare a WooCommerce accessibility plugin with UserWay. See the difference
   between a widget-led approach and a real code-level fix for WCAG and ADA risk.
@@ -18,7 +18,7 @@ seoKeywords:
   - accessibility widget vs code level fix
 seoCategory: woocommerce
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # WooCommerce accessibility plugin vs UserWay

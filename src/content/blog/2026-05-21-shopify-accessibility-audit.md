@@ -1,20 +1,23 @@
 ---
-title: "Shopify accessibility audit"
-description: "A merchant-focused Shopify accessibility audit that finds app embeds, modals, chat widgets, review tools, and theme issues, then turns them into a fix list you can actually use."
+title: Shopify accessibility audit
+description: >-
+  A merchant-focused Shopify accessibility audit that finds app embeds, modals,
+  chat widgets, review tools, and theme issues, then turns them into a fix list
+  you can actually use.
 pubDate: 2026-05-21T10:00:00.000Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "Accessibility"
-  - "Audit"
-  - "WCAG"
-  - "Compliance"
+  - Shopify
+  - Accessibility
+  - Audit
+  - WCAG
+  - Compliance
 seoKeywords:
-  - "Shopify app accessibility audit"
-  - "third-party Shopify app WCAG fixes"
-  - "Shopify accessibility audit"
-seoCategory: "shopify"
-gscSubmitted: false
+  - Shopify app accessibility audit
+  - third-party Shopify app WCAG fixes
+  - Shopify accessibility audit
+seoCategory: shopify
+gscSubmitted: true
 ---
 
 A Shopify accessibility audit is the fastest way to find why a store still fails after a theme update. The theme is usually only part of the problem. App embeds, chat bubbles, review widgets, quiz tools, popups, cookie banners, and custom sections are where the real breakage usually lives.

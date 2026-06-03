@@ -1,5 +1,7 @@
 ---
-title: "WooCommerce accessibility plugin vs accessiBe: which one actually fixes your store?"
+title: >-
+  WooCommerce accessibility plugin vs accessiBe: which one actually fixes your
+  store?
 description: >-
   Compare a WooCommerce accessibility plugin with accessiBe. See the difference
   between an overlay and a real code-level fix for WCAG and ADA risk.
@@ -18,7 +20,7 @@ seoKeywords:
   - accessibility widget vs code level fix
 seoCategory: woocommerce
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # WooCommerce accessibility plugin vs accessiBe

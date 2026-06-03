@@ -1,20 +1,22 @@
 ---
-title: "Shopify accessibility policy template"
-description: "A practical Shopify accessibility policy template for internal ownership, review cadence, app change triggers, and evidence capture."
+title: Shopify accessibility policy template
+description: >-
+  A practical Shopify accessibility policy template for internal ownership,
+  review cadence, app change triggers, and evidence capture.
 pubDate: 2026-05-21T10:05:00.000Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "Accessibility"
-  - "Template"
-  - "Compliance"
-  - "Policy"
+  - Shopify
+  - Accessibility
+  - Template
+  - Compliance
+  - Policy
 seoKeywords:
-  - "Shopify accessibility policy template"
-  - "accessibility policy for Shopify"
-  - "internal accessibility policy"
-seoCategory: "shopify"
-gscSubmitted: false
+  - Shopify accessibility policy template
+  - accessibility policy for Shopify
+  - internal accessibility policy
+seoCategory: shopify
+gscSubmitted: true
 ---
 
 Use this Shopify accessibility policy template to define ownership, review cadence, and change triggers before problems pile up. The policy is the internal rulebook. It tells your team what standard to follow, who owns updates, and what happens when an app, theme, or content change introduces a new issue.

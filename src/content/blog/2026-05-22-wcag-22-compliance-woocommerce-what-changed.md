@@ -1,19 +1,21 @@
 ---
-title: "WCAG 2.2 Compliance for WooCommerce: What Changed"
-description: "What WCAG 2.2 actually changed for WooCommerce stores. The 9 new success criteria, what they mean for checkout, and what to fix first."
+title: 'WCAG 2.2 Compliance for WooCommerce: What Changed'
+description: >-
+  What WCAG 2.2 actually changed for WooCommerce stores. The 9 new success
+  criteria, what they mean for checkout, and what to fix first.
 pubDate: 2026-05-22T13:02:00.824Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "WCAG 2.2"
-  - "WooCommerce"
-  - "Accessibility"
-  - "ADA Compliance"
-  - "What Changed"
+  - WCAG 2.2
+  - WooCommerce
+  - Accessibility
+  - ADA Compliance
+  - What Changed
 seoKeywords:
-  - "`WCAG 2.2 compliance woocommerce`"
-seoCategory: "woocommerce"
-articleAngle: "what-changed"
-gscSubmitted: false
+  - '`WCAG 2.2 compliance woocommerce`'
+seoCategory: woocommerce
+articleAngle: what-changed
+gscSubmitted: true
 ---
 
 WCAG 2.2 added **nine new success criteria** on top of WCAG 2.1, and for WooCommerce store owners the most important ones touch checkout, login, focus visibility, and how big your buttons are. The standard was finalized in October 2023, and by 2026 it has become the de facto best-practice level that auditors, EU regulators, and US plaintiffs' lawyers reference. WCAG 2.1 AA is still the legal floor in most jurisdictions, but WCAG 2.2 AA is what you should be aiming for if you sell online today.
