@@ -1,19 +1,21 @@
 ---
-title: "WCAG 2.2 Compliance for Shopify: What Actually Changed"
-description: "WCAG 2.2 adds 9 new success criteria that affect Shopify checkout, focus, and touch targets. Here's what changed from 2.1 and what to fix first."
+title: 'WCAG 2.2 Compliance for Shopify: What Actually Changed'
+description: >-
+  WCAG 2.2 adds 9 new success criteria that affect Shopify checkout, focus, and
+  touch targets. Here's what changed from 2.1 and what to fix first.
 pubDate: 2026-05-21T13:02:24.558Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "WCAG 2.2"
-  - "Shopify"
-  - "Accessibility"
-  - "ADA Compliance"
-  - "WCAG"
+  - WCAG 2.2
+  - Shopify
+  - Accessibility
+  - ADA Compliance
+  - WCAG
 seoKeywords:
-  - "`WCAG 2.2 compliance shopify`"
-seoCategory: "shopify"
-articleAngle: "what-changed"
-gscSubmitted: false
+  - '`WCAG 2.2 compliance shopify`'
+seoCategory: shopify
+articleAngle: what-changed
+gscSubmitted: true
 ---
 
 WCAG 2.2 added **nine new success criteria** on top of WCAG 2.1, and six of them directly affect things your Shopify store already does: checkout forms, sticky headers, cart drawers, mobile tap targets, and any login or account flow. The biggest changes for store owners are 2.4.11 Focus Not Obscured, 2.5.7 Dragging Movements, 2.5.8 Target Size (Minimum), 3.2.6 Consistent Help, 3.3.7 Redundant Entry, and 3.3.8 Accessible Authentication. If your theme has a sticky announcement bar that covers focused fields, a slider you can only drag, or a checkout that asks for the same address twice, you have WCAG 2.2 work to do.

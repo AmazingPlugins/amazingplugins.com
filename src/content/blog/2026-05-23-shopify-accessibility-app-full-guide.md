@@ -1,19 +1,21 @@
 ---
-title: "Shopify Accessibility App: The Full 2026 Guide"
-description: "What a Shopify accessibility app actually does, which WCAG issues it can fix, lawsuit risk, and how to pick one that does real fixes, not an overlay."
+title: 'Shopify Accessibility App: The Full 2026 Guide'
+description: >-
+  What a Shopify accessibility app actually does, which WCAG issues it can fix,
+  lawsuit risk, and how to pick one that does real fixes, not an overlay.
 pubDate: 2026-05-23T13:02:35.722Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "Accessibility"
-  - "ADA Compliance"
-  - "WCAG"
-  - "Apps"
+  - Shopify
+  - Accessibility
+  - ADA Compliance
+  - WCAG
+  - Apps
 seoKeywords:
-  - "`shopify accessibility app`"
-seoCategory: "shopify"
-articleAngle: "full-guide"
-gscSubmitted: false
+  - '`shopify accessibility app`'
+seoCategory: shopify
+articleAngle: full-guide
+gscSubmitted: true
 ---
 
 A Shopify accessibility app is a tool you install on your store that finds WCAG failures in your theme and either reports them or fixes them automatically. The good ones edit your Liquid, CSS, and HTML so screen readers, keyboards, and assistive tech actually work. The bad ones drop a JavaScript overlay on top of your store and hope nobody notices. In 2026, with 5,114+ ADA digital accessibility lawsuits filed in 2025 and Shopify stores making up roughly 32% of them, the difference between those two approaches is the difference between real compliance and a demand letter.

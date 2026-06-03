@@ -1,5 +1,7 @@
 ---
-title: "Shopify accessibility app vs AudioEye: enterprise accessibility or real storefront fixes?"
+title: >-
+  Shopify accessibility app vs AudioEye: enterprise accessibility or real
+  storefront fixes?
 description: >-
   Compare a Shopify accessibility app with AudioEye. Learn the difference
   between managed accessibility services, reporting, and real code-level fixes.
@@ -18,7 +20,7 @@ seoKeywords:
   - accessibility service vs code level fix
 seoCategory: shopify
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # Shopify accessibility app vs AudioEye

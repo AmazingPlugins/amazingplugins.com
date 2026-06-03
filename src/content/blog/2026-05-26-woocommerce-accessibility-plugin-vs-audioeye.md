@@ -1,5 +1,7 @@
 ---
-title: "WooCommerce accessibility plugin vs AudioEye: enterprise accessibility or real storefront fixes?"
+title: >-
+  WooCommerce accessibility plugin vs AudioEye: enterprise accessibility or real
+  storefront fixes?
 description: >-
   Compare a WooCommerce accessibility plugin with AudioEye. Learn the difference
   between managed accessibility services, reporting, and real code-level fixes.
@@ -18,7 +20,7 @@ seoKeywords:
   - accessibility service vs code level fix
 seoCategory: woocommerce
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # WooCommerce accessibility plugin vs AudioEye

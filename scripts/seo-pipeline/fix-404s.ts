@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { google } from 'googleapis';
 import { JWT } from 'google-auth-library';
+import { loadSeoPipelineEnv } from './env-bootstrap';
 
 const SITE_URL = process.env.SITE_URL || 'https://amazingplugins.com';
 const REPORT_FILE = path.join(process.cwd(), 'broken-links-report.md');
@@ -61,6 +62,8 @@ async function checkURL(url: string): Promise<{ url: string; statusCode: number;
  * Get pages with 404s from GSC data
  */
 export async function getGSC404Pages(): Promise<string[]> {
+  loadSeoPipelineEnv();
+
   const keyBase64 = process.env.GSC_SERVICE_ACCOUNT_KEY;
   if (!keyBase64) {
     console.warn('GSC credentials not available, skipping GSC 404 check');

@@ -1,9 +1,9 @@
 ---
-title: "Shopify accessibility app comparison: widget vs checker vs code-level fix"
+title: 'Shopify accessibility app comparison: widget vs checker vs code-level fix'
 description: >-
   Compare Shopify accessibility widgets, scanners, and code-level fixers so you
   can choose the right path for WCAG, checkout, and ADA risk.
-pubDate: 2026-05-26T03:59:17Z
+pubDate: 2026-05-26T03:59:17.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -17,7 +17,7 @@ seoKeywords:
   - '`shopify overlay alternative`'
 seoCategory: shopify
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 If you are comparing Shopify accessibility apps in 2026, there are really only three buckets that matter:

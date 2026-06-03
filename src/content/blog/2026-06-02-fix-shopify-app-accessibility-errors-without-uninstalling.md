@@ -1,14 +1,30 @@
 ---
-title: "How to fix Shopify app accessibility errors without uninstalling them"
-description: "A practical guide to isolate app-injected accessibility issues, fix what you can in the theme, push the rest back to the vendor, and keep a clean remediation log."
-pubDate: 2026-06-02T13:05:32Z
-author: "Harun Ray"
-tags: ["shopify", "accessibility", "wcag", "third-party-apps", "remediation"]
-seoKeywords: ["shopify app accessibility", "fix shopify app accessibility issues", "third party app wcag", "shopify accessibility remediation", "app injected accessibility errors"]
-seoCategory: "shopify"
-articleAngle: "Practical remediation playbook for merchants dealing with app-injected accessibility issues"
-canonicalUrl: "https://amazingplugins.com/blog/fix-shopify-app-accessibility-errors-without-uninstalling/"
-gscSubmitted: false
+title: How to fix Shopify app accessibility errors without uninstalling them
+description: >-
+  A practical guide to isolate app-injected accessibility issues, fix what you
+  can in the theme, push the rest back to the vendor, and keep a clean
+  remediation log.
+pubDate: 2026-06-02T13:05:32.000Z
+author: Harun Ray
+tags:
+  - shopify
+  - accessibility
+  - wcag
+  - third-party-apps
+  - remediation
+seoKeywords:
+  - shopify app accessibility
+  - fix shopify app accessibility issues
+  - third party app wcag
+  - shopify accessibility remediation
+  - app injected accessibility errors
+seoCategory: shopify
+articleAngle: >-
+  Practical remediation playbook for merchants dealing with app-injected
+  accessibility issues
+canonicalUrl: >-
+  https://amazingplugins.com/blog/fix-shopify-app-accessibility-errors-without-uninstalling/
+gscSubmitted: true
 ---
 
 You ran an audit, or a customer emailed you, or a scanner flagged your storefront, and the trail leads back to an app. Not your theme. Not your custom code. An app you installed because it does something you actually need, like a chat widget, a reviews block, a popup, a shipping estimator, or a subscription toggle on the product page. Now that app is injecting accessibility errors into pages you do not fully control, and you do not want to lose the functionality.

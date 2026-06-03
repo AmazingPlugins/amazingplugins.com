@@ -1,8 +1,8 @@
 ---
-title: "Shopify accessibility app vs UserWay: overlay or real fix?"
+title: 'Shopify accessibility app vs UserWay: overlay or real fix?'
 description: >-
-  Compare a Shopify accessibility app with UserWay. See the difference between
-  a widget-led approach and a real code-level fix for WCAG and ADA risk.
+  Compare a Shopify accessibility app with UserWay. See the difference between a
+  widget-led approach and a real code-level fix for WCAG and ADA risk.
 pubDate: 2026-05-26T18:20:00.000Z
 author: Harun Ray
 tags:
@@ -18,7 +18,7 @@ seoKeywords:
   - accessibility widget vs code level fix
 seoCategory: shopify
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # Shopify accessibility app vs UserWay

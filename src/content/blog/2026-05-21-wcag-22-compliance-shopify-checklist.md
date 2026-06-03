@@ -1,19 +1,21 @@
 ---
-title: "WCAG 2.2 Compliance Shopify: The Full Checklist"
-description: "A practical WCAG 2.2 compliance checklist for Shopify store owners. Check every criterion, see what to fix, and know where you actually stand in 2026."
+title: 'WCAG 2.2 Compliance Shopify: The Full Checklist'
+description: >-
+  A practical WCAG 2.2 compliance checklist for Shopify store owners. Check
+  every criterion, see what to fix, and know where you actually stand in 2026.
 pubDate: 2026-05-21T13:03:55.824Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "Shopify"
-  - "Accessibility"
-  - "WCAG 2.2"
-  - "ADA Compliance"
-  - "Checklist"
+  - Shopify
+  - Accessibility
+  - WCAG 2.2
+  - ADA Compliance
+  - Checklist
 seoKeywords:
-  - "`WCAG 2.2 compliance shopify`"
-seoCategory: "shopify"
-articleAngle: "checklist"
-gscSubmitted: false
+  - '`WCAG 2.2 compliance shopify`'
+seoCategory: shopify
+articleAngle: checklist
+gscSubmitted: true
 ---
 
 If you run a Shopify store and want a real WCAG 2.2 compliance checklist you can work through this afternoon, this is it. WCAG 2.2 AA is now the de facto best practice for Shopify in 2026, while WCAG 2.1 AA remains the legal floor courts and EU regulators use. To be compliant, your storefront needs to pass the 50 Level A and AA success criteria of WCAG 2.1 plus the 9 new criteria added in WCAG 2.2. This checklist walks through every item that actually breaks on real Shopify themes, what the standard says, and what to do when you find a failure.

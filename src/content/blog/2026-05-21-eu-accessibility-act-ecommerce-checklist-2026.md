@@ -1,20 +1,23 @@
 ---
-title: "EU Accessibility Act ecommerce checklist 2026"
-description: "A practical EU Accessibility Act ecommerce checklist for Shopify and WooCommerce stores that sell to EU consumers, with scope, proof, and WCAG-focused next steps."
+title: EU Accessibility Act ecommerce checklist 2026
+description: >-
+  A practical EU Accessibility Act ecommerce checklist for Shopify and
+  WooCommerce stores that sell to EU consumers, with scope, proof, and
+  WCAG-focused next steps.
 pubDate: 2026-05-21T10:25:00.000Z
-author: "Harun Ray"
+author: Harun Ray
 tags:
-  - "EAA"
-  - "EU"
-  - "Accessibility"
-  - "Checklist"
-  - "Compliance"
+  - EAA
+  - EU
+  - Accessibility
+  - Checklist
+  - Compliance
 seoKeywords:
-  - "EU Accessibility Act ecommerce checklist 2026"
-  - "EAA ecommerce checklist"
-  - "European Accessibility Act checklist"
-seoCategory: "compliance"
-gscSubmitted: false
+  - EU Accessibility Act ecommerce checklist 2026
+  - EAA ecommerce checklist
+  - European Accessibility Act checklist
+seoCategory: compliance
+gscSubmitted: true
 ---
 
 This EU Accessibility Act ecommerce checklist helps Shopify and WooCommerce stores selling to EU consumers stay organized. It keeps the work simple: confirm scope, fix blockers, keep proof, repeat.

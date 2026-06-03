@@ -1,9 +1,9 @@
 ---
-title: "Shopify checkout accessibility fixes: what to check before launch"
+title: 'Shopify checkout accessibility fixes: what to check before launch'
 description: >-
   A practical Shopify checkout accessibility checklist for labels, focus order,
   errors, buttons, and app conflicts before you go live.
-pubDate: 2026-05-26T03:59:17Z
+pubDate: 2026-05-26T03:59:17.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -17,7 +17,7 @@ seoKeywords:
   - '`shopify checkout labels focus errors`'
 seoCategory: shopify
 articleAngle: checklist
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 Checkout is where accessibility problems get expensive.

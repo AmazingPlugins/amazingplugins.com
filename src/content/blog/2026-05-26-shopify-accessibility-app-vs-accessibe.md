@@ -1,5 +1,5 @@
 ---
-title: "Shopify accessibility app vs accessiBe: which one actually fixes your store?"
+title: 'Shopify accessibility app vs accessiBe: which one actually fixes your store?'
 description: >-
   Compare a Shopify accessibility app with accessiBe. See the difference between
   an overlay and a real code-level fix, plus the tradeoffs that matter for WCAG
@@ -19,7 +19,7 @@ seoKeywords:
   - accessibility widget vs code level fix
 seoCategory: shopify
 articleAngle: comparison
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # Shopify accessibility app vs accessiBe

@@ -1,8 +1,11 @@
 ---
-title: "Shopify cart drawer accessibility fixes: aria-live, focus, and keyboard checks"
-description: "A practical guide to Shopify cart drawer accessibility fixes for keyboard focus, aria-live updates, remove buttons, quantity changes, upsells, and app widgets."
-date: 2026-06-03
-pubDate: 2026-06-03
+title: 'Shopify cart drawer accessibility fixes: aria-live, focus, and keyboard checks'
+description: >-
+  A practical guide to Shopify cart drawer accessibility fixes for keyboard
+  focus, aria-live updates, remove buttons, quantity changes, upsells, and app
+  widgets.
+date: 2026-06-03T00:00:00.000Z
+pubDate: 2026-06-03T00:00:00.000Z
 author: Harun Ray
 tags:
   - Shopify
@@ -16,8 +19,8 @@ seoKeywords:
   - '`Shopify cart drawer keyboard accessibility`'
 seoCategory: shopify
 articleAngle: component-guide
-gscSubmitted: false
-canonical: "https://amazingplugins.com/blog/shopify-cart-drawer-accessibility-fixes/"
+gscSubmitted: true
+canonical: 'https://amazingplugins.com/blog/shopify-cart-drawer-accessibility-fixes/'
 ---
 
 The Shopify cart drawer is one of the busiest, most overlooked components on a storefront. It slides in, updates totals, shows upsells, runs discount apps, sometimes injects a shipping protection widget, and then asks the shopper to keep moving toward checkout. When it works for a mouse user, most merchants ship it. When it breaks for a keyboard user or a screen reader user, nobody notices until a complaint email or a demand letter arrives.
