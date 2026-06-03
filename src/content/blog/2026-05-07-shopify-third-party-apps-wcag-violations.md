@@ -74,6 +74,7 @@ If no fix is coming, replace the app. There is almost always an accessible alter
 ## Related guides
 
 - [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Shopify cart drawer accessibility fixes](https://amazingplugins.com/blog/shopify-cart-drawer-accessibility-fixes/)
 - [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
 - [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
 - [Shopify Accessibility Tool: Full Guide for Store Owners (2026)](https://amazingplugins.com/blog/shopify-accessibility-tool-full-guide/)
