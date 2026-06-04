@@ -71,6 +71,10 @@ function makeSlug(keyword: string, angle: string): string {
   return `${date}-${safeKw}-${safeAngle}`;
 }
 
+function toCanonicalBlogSlug(fileName: string): string {
+  return fileName.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-/, '');
+}
+
 function guessCategory(keyword: string): string {
   const kw = keyword.toLowerCase();
   if (kw.includes('shopify')) return 'shopify';
@@ -106,8 +110,8 @@ function findRelevantExistingPosts(topic: string, currentSlug: string): Array<{ 
       if (word.length > 3 && lower.includes(word)) score++;
     }
 
-    // Extract slug for URL construction
-    const slug = file.replace('.md', '');
+    // Extract canonical slug for URL construction
+    const slug = toCanonicalBlogSlug(file);
     const url = `https://amazingplugins.com/blog/${slug}/`;
 
     if (score > 0) {

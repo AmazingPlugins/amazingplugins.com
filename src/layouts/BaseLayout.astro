@@ -7,16 +7,18 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  canonicalPath?: string;
 }
 
 const {
   title,
   description = 'Small, sharp accessibility plugins for Shopify and WooCommerce. Some free, some paid, all crafted.',
   image = '/images/og-default.svg',
+  canonicalPath,
 } = Astro.props;
 
-const canonicalPath = Astro.url.pathname === '/' ? '/' : Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
-const canonicalURL = new URL(canonicalPath, Astro.site);
+const resolvedCanonicalPath = canonicalPath ?? (Astro.url.pathname === '/' ? '/' : Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`);
+const canonicalURL = new URL(resolvedCanonicalPath, Astro.site);
 const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim();
 ---
 
