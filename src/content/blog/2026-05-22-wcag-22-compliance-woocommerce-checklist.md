@@ -40,7 +40,7 @@ If you've already done the work for ADA / WCAG 2.1 AA on WooCommerce, you are ro
 
 WCAG 2.2 became a W3C Recommendation in October 2023 and is now the de facto best-practice standard for 2026. WCAG 2.1 AA is still the legal floor under the ADA in the US and EN 301 549 / the European Accessibility Act in the EU (enforceable since June 28, 2025), but plaintiffs' firms and EU regulators are starting to cite 2.2. WooCommerce core shipped over 140 accessibility enhancements in 2025 specifically aligned with WCAG 2.2 AA, which means the platform itself is mostly cooperating with you. Your theme, custom blocks, and checkout extensions are usually where the failures hide.
 
-If you want the full background on what changed between 2.1 and 2.2 for WooCommerce specifically, read [WCAG 2.2 compliance for WooCommerce: what changed](https://amazingplugins.com/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed/) before working through the list below.
+If you want the full background on what changed between 2.1 and 2.2 for WooCommerce specifically, read [WCAG 2.2 compliance for WooCommerce: what changed](https://amazingplugins.com/blog/wcag-22-compliance-woocommerce-what-changed/) before working through the list below.
 
 ## The WCAG 2.2 WooCommerce checklist
 
@@ -142,7 +142,7 @@ For this checklist specifically, the plugin handles:
 
 The Pro tier adds batch scanning across every product, an auto-fix mode for safe changes, and a PDF compliance report you can hand to your lawyer or attach to an accessibility statement. What it doesn't do: write genuinely meaningful alt text for product photography (that's a human judgment call) or restructure custom page builder layouts that conflict with the heading order. You still own those calls.
 
-If you want the broader 2026 picture, including legal exposure and the EAA deadline, see [WCAG 2.2 compliance for WooCommerce: what changed](https://amazingplugins.com/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed/).
+If you want the broader 2026 picture, including legal exposure and the EAA deadline, see [WCAG 2.2 compliance for WooCommerce: what changed](https://amazingplugins.com/blog/wcag-22-compliance-woocommerce-what-changed/).
 
 ## Frequently asked questions
 

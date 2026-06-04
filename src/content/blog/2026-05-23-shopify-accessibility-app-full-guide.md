@@ -131,7 +131,7 @@ What it handles automatically when safe:
 
 The Pro tier adds batch scanning, auto-fix mode where it is safe to apply changes without human review, a PDF compliance report you can hand to legal or your insurer, and priority support if a demand letter does land. We are deliberately honest about what still needs human review: meaningful alt text on lifestyle imagery, complex custom flows, and video captioning.
 
-If you are already deep into compliance work, our [Shopify ADA Compliance App full guide](https://amazingplugins.com/blog/2026-05-13-shopify-ada-compliance-app-full-guide/) digs deeper into the legal side.
+If you are already deep into compliance work, our [Shopify ADA Compliance App full guide](https://amazingplugins.com/blog/shopify-ada-compliance-app-full-guide/) digs deeper into the legal side.
 
 ## Frequently asked questions
 
