@@ -161,10 +161,10 @@ Often yes. If the product, cart, or checkout markup is broken, someone still has
 
 ## Related pages
 
-- [WooCommerce ADA compliance plugin full guide](https://amazingplugins.com/blog/2026-05-25-ada-compliance-plugin-full-guide/)
-- [WooCommerce accessibility audit](https://amazingplugins.com/blog/2026-05-21-woocommerce-accessibility-audit/)
+- [WooCommerce ADA compliance plugin full guide](https://amazingplugins.com/blog/ada-compliance-plugin-full-guide/)
+- [WooCommerce accessibility audit](https://amazingplugins.com/blog/woocommerce-accessibility-audit/)
 - [WooCommerce checkout accessibility issues](https://amazingplugins.com/blog/woocommerce-checkout-accessibility-issues/)
-- [WCAG 2.2 compliance WooCommerce checklist](https://amazingplugins.com/blog/2026-05-22-wcag-22-compliance-woocommerce-checklist/)
+- [WCAG 2.2 compliance WooCommerce checklist](https://amazingplugins.com/blog/wcag-22-compliance-woocommerce-checklist/)
 
 ## Bottom line
 

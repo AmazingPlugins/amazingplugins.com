@@ -14,12 +14,12 @@ tags:
   - WCAG
   - ADA Compliance
 seoKeywords:
-  - 'Shopify popup app accessibility fixes'
-  - 'Shopify modal accessibility WCAG'
-  - 'Shopify newsletter popup keyboard accessible'
+  - Shopify popup app accessibility fixes
+  - Shopify modal accessibility WCAG
+  - Shopify newsletter popup keyboard accessible
 seoCategory: shopify
 articleAngle: remediation-guide
-gscSubmitted: false
+gscSubmitted: true
 canonical: 'https://amazingplugins.com/blog/shopify-popup-app-accessibility-fixes/'
 ---
 

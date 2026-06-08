@@ -161,10 +161,10 @@ Often yes. If the product, cart, or checkout markup is broken, someone still has
 
 ## Related pages
 
-- [Shopify accessibility app full guide](https://amazingplugins.com/blog/2026-05-23-shopify-accessibility-app-full-guide/)
-- [Shopify accessibility audit](https://amazingplugins.com/blog/2026-05-21-shopify-accessibility-audit/)
-- [Shopify checkout accessibility fixes](https://amazingplugins.com/blog/2026-05-26-shopify-checkout-accessibility-fixes/)
-- [WCAG 2.2 compliance Shopify checklist](https://amazingplugins.com/blog/2026-05-21-wcag-22-compliance-shopify-checklist/)
+- [Shopify accessibility app full guide](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
+- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
+- [Shopify checkout accessibility fixes](https://amazingplugins.com/blog/shopify-checkout-accessibility-fixes/)
+- [WCAG 2.2 compliance Shopify checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/)
 
 ## Bottom line
 

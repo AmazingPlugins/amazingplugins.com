@@ -166,10 +166,10 @@ Not in the way merchants usually need. Checkout accessibility is about labels, f
 
 ## Related pages
 
-- [Shopify accessibility app full guide](https://amazingplugins.com/blog/2026-05-23-shopify-accessibility-app-full-guide/)
+- [Shopify accessibility app full guide](https://amazingplugins.com/blog/shopify-accessibility-app-full-guide/)
 - [Shopify overlay alternatives](https://amazingplugins.com/blog/shopify-overlay-alternatives/)
-- [Shopify checkout accessibility fixes](https://amazingplugins.com/blog/2026-05-26-shopify-checkout-accessibility-fixes/)
-- [WCAG 2.2 compliance Shopify checklist](https://amazingplugins.com/blog/2026-05-21-wcag-22-compliance-shopify-checklist/)
+- [Shopify checkout accessibility fixes](https://amazingplugins.com/blog/shopify-checkout-accessibility-fixes/)
+- [WCAG 2.2 compliance Shopify checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/)
 
 ## Bottom line
 

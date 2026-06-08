@@ -103,7 +103,7 @@ This is the order I'd actually work in for a typical Dawn-based store:
 5. **Walk through checkout end to end.** Note any field that asks for information already provided. That's 3.3.7.
 6. **Check the position of your chat or contact link across templates.** Same place on every page that has it, or you fail 3.2.6.
 
-If you want a fuller list with line-by-line checks, the [Shopify WCAG 2.2 compliance checklist](https://amazingplugins.com/blog/2026-05-06-shopify-wcag-2-2-compliance-checklist/) covers all 86 criteria, not just the 9 new ones.
+If you want a fuller list with line-by-line checks, the [Shopify WCAG 2.2 compliance checklist](https://amazingplugins.com/blog/shopify-wcag-2-2-compliance-checklist/) covers all 86 criteria, not just the 9 new ones.
 
 ## How AmazingPlugins helps with WCAG 2.2
 
