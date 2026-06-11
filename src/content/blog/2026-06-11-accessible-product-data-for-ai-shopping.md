@@ -1,8 +1,10 @@
 ---
-title: 'Accessible product data for AI shopping: what Shopify and WooCommerce stores need to expose'
+title: >-
+  Accessible product data for AI shopping: what Shopify and WooCommerce stores
+  need to expose
 description: >-
-  Product data only helps AI shopping tools when it is structured, labeled, and readable.
-  Here is the practical checklist for Shopify and WooCommerce stores.
+  Product data only helps AI shopping tools when it is structured, labeled, and
+  readable. Here is the practical checklist for Shopify and WooCommerce stores.
 date: 2026-06-11T00:00:00.000Z
 pubDate: 2026-06-11T00:00:00.000Z
 author: Harun Ray
@@ -18,7 +20,7 @@ seoKeywords:
   - Shopify product accessibility SEO AI
 seoCategory: ecommerce
 articleAngle: guide
-gscSubmitted: false
+gscSubmitted: true
 canonical: 'https://amazingplugins.com/blog/accessible-product-data-for-ai-shopping/'
 ---
 
