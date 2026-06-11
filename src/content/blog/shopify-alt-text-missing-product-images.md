@@ -181,11 +181,10 @@ For a small catalog, manual work is fine.
 6. Save.
 7. Repeat for every image that carries product information.
 
-For larger catalogs, export your products, add image alt text in the CSV, and import the updated file. Test on a small batch first. CSV updates are faster, but they are easier to mess up if your team is not careful with image order and variant mapping.
+For a larger catalog, export your products, add image alt text in the CSV, and import the updated file. Test on a small batch first. CSV updates are faster, but they are easier to mess up if your team is not careful with image order and variant mapping.
 
-After the fix, run another scan. Do not assume the import worked everywhere.
+After the fix, run another scan. Do not assume the import worked everywhere. If you want the broader product-page version of this workflow, see [accessible product data for AI shopping](/blog/accessible-product-data-for-ai-shopping/).
 
-## How AmazingPlugins helps
 
 [Shopify Accessibility Fixer](/plugins/shopify-accessibility-fixer/) is directly related to this problem. It checks product image alt text along with other common storefront issues, including keyboard navigation, focus indicators, ARIA form labels, color contrast, skip links, empty button labels, language attributes, link text, and accessible input names.
 

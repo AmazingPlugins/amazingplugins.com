@@ -102,7 +102,7 @@ The fixes that pay off twice are the ones to do first. Each item below solves an
 
 ## What This Means for Your Store
 
-Run a real accessibility scan first. Free tools like WAVE and axe DevTools will catch most automated-detectable issues. They will not catch everything, but they will give you a starting list. Map the failures back to the overlap items above and prioritize the ones that touch both accessibility and SEO. **Alt text and heading hierarchy are almost always the highest-leverage fixes for ecommerce stores** because they unlock image search and improve content understanding simultaneously.
+Run a real accessibility scan first. Free tools like WAVE and axe DevTools will catch most automated-detectable issues. They will not catch everything, but they will give you a starting list. Map the failures back to the overlap items above and prioritize the ones that touch both accessibility and SEO. **Alt text and heading hierarchy are almost always the highest-leverage fixes for ecommerce stores** because they unlock image search and improve content understanding simultaneously. If you want the product-page version of this idea, see [accessible product data for AI shopping](/blog/accessible-product-data-for-ai-shopping/).
 
 Do not buy an overlay. The FTC settlement made the legal case against them. The data makes the SEO case. They add page weight, hurt Core Web Vitals, and do not fix the underlying markup. The demand letters keep coming because the WCAG failures are still there.
 
