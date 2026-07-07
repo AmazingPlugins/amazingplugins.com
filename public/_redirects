@@ -45,7 +45,19 @@
 /blog/2026-06-05-shopify-review-app-accessibility-fixes/ /shopify/ 301
 /blog/2026-06-08-shopify-subscription-widget-accessibility-fixes/ /shopify/ 301
 
-# Non-dated Shopify blog posts
+# Non-dated Shopify blog posts (direct slugs + date-aliased variants in GSC index)
+/blog/free-shopify-accessibility-checker/ /shopify/ 301
+/blog/fix-shopify-app-accessibility-errors-without-uninstalling/ /shopify/ 301
+/blog/shopify-accessibility-app-vs-audioeye/ /shopify/ 301
+/blog/shopify-checkout-accessibility-fixes/ /shopify/ 301
+/blog/shopify-collection-filter-accessibility-fixes/ /shopify/ 301
+/blog/shopify-overlay-alternatives/ /shopify/ 301
+/blog/shopify-popup-app-accessibility-fixes/ /shopify/ 301
+/blog/shopify-review-app-accessibility-fixes/ /shopify/ 301
+/blog/shopify-subscription-widget-accessibility-fixes/ /shopify/ 301
+/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/ /shopify/ 301
+/blog/shopify-accessibility-audit/ /shopify/ 301
+/blog/shopify-accessibility-policy-template/ /shopify/ 301
 /blog/shopify-accessibility-statement-template-2026/ /shopify/ 301
 /blog/shopify-alt-text-missing-product-images/ /shopify/ 301
 /blog/shopify-keyboard-navigation-accessibility-issues/ /shopify/ 301
