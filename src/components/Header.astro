@@ -17,6 +17,7 @@ function isActive(href: string) {
     <div class="nav-links">
       <a href="/plugins/" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
       <a href="/blog/" class:list={[{ active: isActive('/blog') }]}>Blog</a>
+      <a href="/shopify/" class="nav-shopify">Shopify →</a>
     </div>
 
     <div class="nav-cta">
@@ -50,6 +51,7 @@ function isActive(href: string) {
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="/plugins/" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
     <a href="/blog/" class:list={[{ active: isActive('/blog') }]}>Blog</a>
+    <a href="/shopify/" class="nav-shopify-mobile">Shopify →</a>
     <a href="/plugins/" class="btn btn-primary" style="margin-top:8px;">View plugins</a>
   </div>
 </nav>
@@ -244,4 +246,22 @@ function isActive(href: string) {
   .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover,
   .mobile-menu a.active { color: var(--ink); }
+
+  .nav-shopify {
+    font-size: 13px;
+    color: var(--ink-3);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 150ms, background 150ms;
+  }
+  .nav-shopify:hover {
+    color: var(--coral);
+    background: var(--cream-2);
+  }
+  .nav-shopify-mobile {
+    font-size: 13px;
+    color: var(--ink-3);
+    text-decoration: none;
+  }
 </style>

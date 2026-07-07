@@ -5,50 +5,13 @@
 /plugin/ /plugins/ 301
 /plugin/* /plugins/:splat 301
 
-# Removed pages → best WooCommerce equivalents
+# Removed pages
 /pricing* /plugins/ 301
 /plugins/shopify-accessibility-fixer* /plugins/woocommerce-accessibility-fixer/ 301
 
-# Redirect old Shopify-focused blog posts with direct WooCommerce equivalents
-/blog/2026-06-04-shopify-collection-filter-accessibility-fixes/ /blog/ 301
-/blog/2026-06-05-shopify-review-app-accessibility-fixes/ /blog/ 301
-/blog/2026-06-08-shopify-subscription-widget-accessibility-fixes/ /blog/ 301
-/blog/2026-06-03-shopify-cart-drawer-accessibility-fixes/ /blog/ 301
-/blog/2026-06-03-shopify-popup-app-accessibility-fixes/ /blog/ 301
-/blog/2026-06-02-fix-shopify-app-accessibility-errors-without-uninstalling/ /blog/ 301
-/blog/2026-05-26-shopify-checkout-accessibility-fixes/ /blog/woocommerce-checkout-accessibility-issues/ 301
-/blog/2026-05-26-shopify-accessibility-app-vs-userway/ /blog/woocommerce-accessibility-plugin-vs-userway/ 301
-/blog/2026-05-26-shopify-accessibility-app-vs-audioeye/ /blog/woocommerce-accessibility-plugin-vs-audioeye/ 301
-/blog/2026-05-26-shopify-accessibility-app-vs-accessibe/ /blog/woocommerce-accessibility-plugin-vs-accessibe/ 301
-/blog/2026-05-26-shopify-accessibility-app-comparison-widget-vs-checker-vs-code-level-fix/ /blog/ 301
-/blog/2026-05-23-shopify-accessibility-app-full-guide/ /blog/website-accessibility-plugin-full-guide/ 301
-/blog/2026-05-21-wcag-22-compliance-shopify-what-changed/ /blog/wcag-22-compliance-woocommerce-what-changed/ 301
-/blog/2026-05-21-wcag-22-compliance-shopify-deadline/ /blog/wcag-22-compliance-woocommerce-deadline/ 301
-/blog/2026-05-21-wcag-22-compliance-shopify-checklist/ /blog/wcag-22-compliance-woocommerce-checklist/ 301
-/blog/2026-05-21-shopify-accessibility-statement-vs-policy-vs-remediation-log/ /blog/ 301
-/blog/2026-05-21-shopify-accessibility-policy-template/ /blog/ 301
-/blog/2026-05-21-shopify-accessibility-audit/ /blog/ 301
-/blog/2026-05-13-shopify-ada-compliance-app-full-guide/ /blog/ada-compliance-woocommerce-plugin-full-guide/ 301
-/blog/2026-05-13-best-accessibility-app-shopify-full-guide/ /blog/best-wordpress-accessibility-plugin-full-guide/ 301
-/blog/2026-05-08-shopify-accessibility-tool-full-guide/ /blog/website-accessibility-plugin-full-guide/ 301
-/blog/2026-05-07-shopify-third-party-apps-wcag-violations/ /blog/woocommerce-wcag-violations-guide/ 301
-/blog/2026-05-07-shopify-overlay-alternatives/ /blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/ 301
-/blog/2026-05-07-free-shopify-accessibility-checker/ /blog/website-accessibility-plugin-full-guide/ 301
-/blog/2026-05-06-shopify-wcag-2-2-compliance-checklist/ /blog/wcag-22-compliance-woocommerce-checklist/ 301
-/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant/ /blog/eu-accessibility-act-ecommerce-checklist-2026/ 301
-/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant /blog/eu-accessibility-act-ecommerce-checklist-2026/ 301
-/blog/2026-05-06-how-to-audit-your-shopify-store-for-accessibility/ /blog/ 301
-/blog/2026-04-17-how-to-make-your-shopify-store-accessible/ /blog/how-to-make-your-woocommerce-store-ada-compliant/ 301
-
-# Non-dated Shopify blog posts
-/blog/shopify-keyboard-navigation-accessibility-issues/ /blog/why-keyboard-navigation-matters-more-than-you-think/ 301
-/blog/shopify-alt-text-missing-product-images/ /blog/ 301
-/blog/shopify-accessibility-statement-template-2026/ /blog/ 301
-/blog/why-shopify-stores-get-sued-for-ada/ /blog/does-the-ada-actually-apply-to-your-woocommerce-store/ 301
-
-# Slugs with/without trailing slash variations still in index
-/blog/shopify-third-party-apps-wcag-violations /blog/woocommerce-wcag-violations-guide/ 301
-/blog/shopify-third-party-apps-wcag-violations/ /blog/woocommerce-wcag-violations-guide/ 301
-
-# Renamed post (was Shopify+WooCommerce, now only WooCommerce)
+# Renamed blog post (was Shopify+WooCommerce, now WooCommerce-only)
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
+
+# All old Shopify blog posts → /shopify/ page
+# These were deleted from the site. The /shopify/ page explains the move.
+/blog/*shopify* /shopify/ 301
