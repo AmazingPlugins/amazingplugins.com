@@ -60,7 +60,7 @@ const softwareSchema = {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "Free tier with 3 fixers; Pro $49/year for all 10 fixers"
+    "description": "Free, with all 10 fixers included"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -83,7 +83,6 @@ const softwareSchema = {
     <div class="container">
       <div class="hero-badge-row">
         <span class="badge badge-free">Free</span>
-        <span class="badge badge-pro">Pro $19/mo</span>
       </div>
       <h1>WooCommerce Accessibility Fixer</h1>
       <p class="hero-desc">Fix 10 common accessibility issues on your WooCommerce store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, color contrast, and more.</p>
@@ -166,61 +165,6 @@ const softwareSchema = {
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title text-center">Simple, Honest Pricing</h2>
-      <div class="pricing-grid">
-
-        <div class="pricing-card">
-          <div class="plan-name">Free</div>
-          <div class="plan-price">$0 <span>/ forever</span></div>
-          <p class="plan-desc">All 10 fixers. Manual application. No limit on how many products you fix.</p>
-          <ul class="plan-features">
-            <li>✓ All 10 accessibility fixers</li>
-            <li>✓ Manual fixer application</li>
-            <li>✓ PDF accessibility report</li>
-            <li>✓ No product limits</li>
-            <li> --  Batch scanning (Pro)</li>
-            <li> --  Priority support</li>
-          </ul>
-          <a href="https://wordpress.org/plugins/woocommerce-accessibility-fixer/" class="btn btn-outline" target="_blank" rel="noopener">Download Free</a>
-        </div>
-
-        <div class="pricing-card pricing-featured">
-          <div class="plan-badge">Best Value</div>
-          <div class="plan-name">Pro</div>
-          <div class="plan-price">$19 <span>/ month</span></div>
-          <p class="plan-desc">Everything in Free, plus batch scanning, auto-fix mode, and priority support.</p>
-          <ul class="plan-features">
-            <li>✓ All 10 accessibility fixers</li>
-            <li>✓ Manual + auto-fix mode</li>
-            <li>✓ Batch scan all products</li>
-            <li>✓ PDF accessibility report</li>
-            <li>✓ No product limits</li>
-            <li>✓ Priority email support</li>
-          </ul>
-          <a href="#get-pro" class="btn btn-primary">Get Pro Access</a>
-        </div>
-
-        <div class="pricing-card">
-          <div class="plan-name">Agency</div>
-          <div class="plan-price">$49 <span>/ month</span></div>
-          <p class="plan-desc">For agencies managing multiple client stores. Same as Pro, for unlimited sites.</p>
-          <ul class="plan-features">
-            <li>✓ Everything in Pro</li>
-            <li>✓ Unlimited client sites</li>
-            <li>✓ White-label reports</li>
-            <li>✓ Priority Slack support</li>
-            <li>✓ Onboarding call</li>
-          </ul>
-          <a href="#get-agency" class="btn btn-outline">Get Agency Access</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section class="section">
     <div class="container" style="max-width: 720px;">
@@ -277,7 +221,6 @@ const softwareSchema = {
   }
 
   .badge-free { background: #d1fae5; color: #065f46; }
-  .badge-pro { background: #fef3c7; color: #92400e; }
 
   .plugin-hero h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -334,83 +277,6 @@ const softwareSchema = {
     color: var(--color-text-light);
     font-size: 0.9rem;
     line-height: 1.6;
-  }
-
-  /* Pricing */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .pricing-card {
-    background: var(--color-bg);
-    border: 2px solid var(--color-border);
-    border-radius: 1rem;
-    padding: 2rem;
-    position: relative;
-  }
-
-  .pricing-featured {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 4px rgba(37,99,235,0.1);
-  }
-
-  .plan-badge {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--color-primary);
-    color: #fff;
-    font-size: 0.75rem;
-    font-weight: 700;
-    padding: 0.25rem 0.875rem;
-    border-radius: 999px;
-  }
-
-  .plan-name {
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--color-text-light);
-    margin-bottom: 0.5rem;
-  }
-
-  .plan-price {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--color-text);
-    margin-bottom: 0.75rem;
-  }
-
-  .plan-price span {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--color-text-light);
-  }
-
-  .plan-desc {
-    color: var(--color-text-light);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .plan-features {
-    list-style: none;
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  .plan-features li {
-    color: var(--color-text-light);
   }
 
   /* FAQ */

@@ -146,6 +146,6 @@ The best WordPress accessibility plugin for your WooCommerce store is whichever 
 If you need the next step, use [WooCommerce plugin vs widget accessibility](https://amazingplugins.com/blog/woocommerce-plugin-vs-widget-accessibility/) as the buying filter before you spend money on the wrong thing.
 
 If you are comparing specific vendors, use:
-- [WooCommerce accessibility plugin vs accessiBe](https://amazingplugins.com/blog/2026-05-26-woocommerce-accessibility-plugin-vs-accessibe/)
-- [WooCommerce accessibility plugin vs UserWay](https://amazingplugins.com/blog/2026-05-26-woocommerce-accessibility-plugin-vs-userway/)
-- [WooCommerce accessibility plugin vs AudioEye](https://amazingplugins.com/blog/2026-05-26-woocommerce-accessibility-plugin-vs-audioeye/)
+- [WooCommerce accessibility plugin vs accessiBe](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-accessibe/)
+- [WooCommerce accessibility plugin vs UserWay](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-userway/)
+- [WooCommerce accessibility plugin vs AudioEye](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-audioeye/)

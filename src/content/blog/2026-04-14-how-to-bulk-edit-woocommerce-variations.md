@@ -2,7 +2,7 @@
 title: How to Bulk Edit WooCommerce Variations (The Complete Guide)
 description: >-
   Everything you need to know about bulk editing variable product variations in
-  WooCommerce — including attributes, prices, stock, and shipping classes across
+  WooCommerce - including attributes, prices, stock, and shipping classes across
   hundreds of variants at once.
 pubDate: 2026-04-14T00:00:00.000Z
 author: Harun Ray
@@ -25,7 +25,7 @@ gscSubmitted: true
 
 Each attribute is stored as a separate meta row. So a single variation might have 8-10 rows in `wp_postmeta` in addition to its main product record.
 
-This is why CSV imports for variations are error-prone and why direct database edits for variations are particularly dangerous — you're touching multiple related rows per variation.
+This is why CSV imports for variations are error-prone and why direct database edits for variations are particularly dangerous - you're touching multiple related rows per variation.
 
 ---
 
@@ -35,7 +35,7 @@ If you're going to use a bulk edit tool, it needs to handle variations properly.
 
 ### 1. Variations visible as rows in the grid
 
-The tool should show each variation as its own row in the editing grid — not buried in a modal or hidden behind a product expand. You should be able to see all 30 variations for your t-shirt product simultaneously, scroll through them, and edit them inline.
+The tool should show each variation as its own row in the editing grid - not buried in a modal or hidden behind a product expand. You should be able to see all 30 variations for your t-shirt product simultaneously, scroll through them, and edit them inline.
 
 ### 2. Attribute-based filtering
 
@@ -43,7 +43,7 @@ The filter system should let you filter by attribute value. "Show me all variati
 
 ### 3. Inline editing at the variation level
 
-You should be able to click any cell in any variation's row and type the new value directly — no modal, no "Edit Variation" form, no page reload. It should work like a spreadsheet.
+You should be able to click any cell in any variation's row and type the new value directly - no modal, no "Edit Variation" form, no page reload. It should work like a spreadsheet.
 
 ### 4. Batch operations with formula support
 
@@ -51,7 +51,7 @@ Beyond individual cell edits, you need bulk formulas: "multiply all selected pri
 
 ### 5. Preview and undo
 
-Preview shows old vs new values before committing. Undo lets you roll back the last operation. Both are non-negotiable for variation editing — the complexity is too high for operations without a safety net.
+Preview shows old vs new values before committing. Undo lets you roll back the last operation. Both are non-negotiable for variation editing - the complexity is too high for operations without a safety net.
 
 ---
 
@@ -65,7 +65,7 @@ To edit variations individually:
 2. Click the variable product
 3. Scroll to the Product Data panel, select "Variable product"
 4. Click "Variations" in the left sidebar of the product data panel
-5. Click "Expand all" — this shows all 30 variations at once
+5. Click "Expand all" - this shows all 30 variations at once
 6. Click the arrow next to each variation to expand its fields
 7. Edit the fields you need to change
 8. Click "Save changes"

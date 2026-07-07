@@ -38,7 +38,7 @@ Be careful with plugins that only add overlays, floating toolbars, or font-size 
 
 ## What the EAA means for WooCommerce stores
 
-The EAA does not care that your store runs on WordPress, WooCommerce, Shopify, Magento, or custom code. It cares whether the customer-facing service is accessible.
+The EAA does not care that your store runs on WordPress, WooCommerce, Magento, or custom code. It cares whether the customer-facing service is accessible.
 
 For ecommerce, the practical scope includes:
 

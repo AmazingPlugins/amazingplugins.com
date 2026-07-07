@@ -113,7 +113,7 @@ What it actually does on a WooCommerce store:
 
 Where it cannot help honestly: complex custom checkout flows that need human review, third-party iframes from payment processors, and anything that requires content judgment like meaningful product descriptions for screen reader users. Those still need a human pass.
 
-If you want the full criterion list before deciding what to fix, see the [WCAG 2.2 Compliance WooCommerce: The Full Checklist](https://amazingplugins.com/blog/2026-05-22-wcag-22-compliance-woocommerce-checklist/). If you want the line-by-line diff between 2.1 and 2.2, see [WCAG 2.2 Compliance for WooCommerce: What Changed](https://amazingplugins.com/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed/).
+If you want the full criterion list before deciding what to fix, see the [WCAG 2.2 Compliance WooCommerce: The Full Checklist](https://amazingplugins.com/blog/wcag-22-compliance-woocommerce-checklist/). If you want the line-by-line diff between 2.1 and 2.2, see [WCAG 2.2 Compliance for WooCommerce: What Changed](https://amazingplugins.com/blog/wcag-22-compliance-woocommerce-what-changed/).
 
 ## People also ask
 

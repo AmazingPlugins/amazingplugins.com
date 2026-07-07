@@ -115,7 +115,7 @@ AmazingPlugins **WooCommerce Accessibility Fixer** is built to do exactly the wo
 
 The Pro tier adds batch scanning across every product and page, auto-fix mode for the safe items, a PDF compliance report you can keep on file, and priority support. The plugin will not pretend to handle every judgment call (meaningful alt text on lifestyle photography, copy review on long descriptions still needs a human), and the dashboard tells you exactly which items it fixed and which it flagged for review.
 
-If you are also worried about the legal side, [How to avoid an ADA lawsuit with your Shopify or WooCommerce store](https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/) covers the demand-letter playbook and what insurance carriers want to see.
+If you are also worried about the legal side, [How to avoid an ADA lawsuit with your WooCommerce store](https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-woocommerce-store/) covers the demand-letter playbook and what insurance carriers want to see.
 
 ## Frequently asked questions
 
@@ -136,9 +136,9 @@ A well-built one adds milliseconds, not seconds, because the work is mostly mark
 Yes, indirectly. Many WCAG fixes (alt text, heading structure, descriptive link text, valid HTML) are the same things Google's crawler rewards. See [Accessibility as an SEO ranking factor for e-commerce](https://amazingplugins.com/blog/accessibility-seo-ranking-factor-ecommerce/) for the overlap.
 
 If you are comparing specific tools, start with:
-- [WooCommerce accessibility plugin vs accessiBe](https://amazingplugins.com/blog/2026-05-26-woocommerce-accessibility-plugin-vs-accessibe/)
-- [WooCommerce accessibility plugin vs UserWay](https://amazingplugins.com/blog/2026-05-26-woocommerce-accessibility-plugin-vs-userway/)
-- [WooCommerce accessibility plugin vs AudioEye](https://amazingplugins.com/blog/2026-05-26-woocommerce-accessibility-plugin-vs-audioeye/)
+- [WooCommerce accessibility plugin vs accessiBe](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-accessibe/)
+- [WooCommerce accessibility plugin vs UserWay](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-userway/)
+- [WooCommerce accessibility plugin vs AudioEye](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-audioeye/)
 
 ### Can I just buy an accessibility statement instead of a plugin?
 

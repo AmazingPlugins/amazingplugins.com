@@ -4,27 +4,45 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({
-    params: { slug: post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '') },
-    props: { post },
-  }));
+  return posts.flatMap(post => {
+    const canonicalSlug = post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
+    const datedSlug = post.id.replace(/\.md$/, '');
+
+    const paths = [
+      {
+        params: { slug: canonicalSlug },
+        props: { post, canonicalSlug },
+      },
+    ];
+
+    if (datedSlug !== canonicalSlug) {
+      paths.push({
+        params: { slug: datedSlug },
+        props: { post, canonicalSlug },
+      });
+    }
+
+    return paths;
+  });
 }
 
 const { post } = Astro.props;
+const canonicalSlug = Astro.props.canonicalSlug ?? post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
 const { title, description, pubDate, author, tags } = post.data;
 const { Content } = await render(post);
+const canonicalPath = `/blog/${canonicalSlug}/`;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
   year: 'numeric', month: 'long', day: 'numeric'
 });
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} canonicalPath={canonicalPath}>
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content={Astro.url} />
+  <meta property="og:url" content={new URL(canonicalPath, Astro.site)} />
   <meta property="article:published_time" content={pubDate.toISOString()} />
   <meta property="article:author" content={author} />
   <!-- Twitter -->
