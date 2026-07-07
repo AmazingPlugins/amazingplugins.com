@@ -5,13 +5,52 @@
 /plugin/ /plugins/ 301
 /plugin/* /plugins/:splat 301
 
-# Removed pages
+# Deleted product/pricing pages
 /pricing* /plugins/ 301
 /plugins/shopify-accessibility-fixer* /plugins/woocommerce-accessibility-fixer/ 301
 
 # Renamed blog post (was Shopify+WooCommerce, now WooCommerce-only)
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 
-# All old Shopify blog posts → /shopify/ page
-# These were deleted from the site. The /shopify/ page explains the move.
-/blog/*shopify* /shopify/ 301
+# All old Shopify content → /shopify/ page (explains pivot to WooCommerce, links to appnary.com)
+# Date-prefixed blog posts
+/blog/2026-04-17-how-to-make-your-shopify-store-accessible/ /shopify/ 301
+/blog/2026-05-06-how-to-audit-your-shopify-store-for-accessibility/ /shopify/ 301
+/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant/ /shopify/ 301
+/blog/2026-05-06-how-to-make-your-shopify-store-eaa-compliant /shopify/ 301
+/blog/2026-05-06-shopify-wcag-2-2-compliance-checklist/ /shopify/ 301
+/blog/2026-05-07-free-shopify-accessibility-checker/ /shopify/ 301
+/blog/2026-05-07-shopify-overlay-alternatives/ /shopify/ 301
+/blog/2026-05-07-shopify-third-party-apps-wcag-violations/ /shopify/ 301
+/blog/2026-05-07-shopify-third-party-apps-wcag-violations /shopify/ 301
+/blog/2026-05-08-shopify-accessibility-tool-full-guide/ /shopify/ 301
+/blog/2026-05-13-best-accessibility-app-shopify-full-guide/ /shopify/ 301
+/blog/2026-05-13-shopify-ada-compliance-app-full-guide/ /shopify/ 301
+/blog/2026-05-21-shopify-accessibility-audit/ /shopify/ 301
+/blog/2026-05-21-shopify-accessibility-policy-template/ /shopify/ 301
+/blog/2026-05-21-shopify-accessibility-statement-vs-policy-vs-remediation-log/ /shopify/ 301
+/blog/2026-05-21-wcag-22-compliance-shopify-checklist/ /shopify/ 301
+/blog/2026-05-21-wcag-22-compliance-shopify-deadline/ /shopify/ 301
+/blog/2026-05-21-wcag-22-compliance-shopify-what-changed/ /shopify/ 301
+/blog/2026-05-23-shopify-accessibility-app-full-guide/ /shopify/ 301
+/blog/2026-05-26-shopify-accessibility-app-comparison-widget-vs-checker-vs-code-level-fix/ /shopify/ 301
+/blog/2026-05-26-shopify-accessibility-app-vs-accessibe/ /shopify/ 301
+/blog/2026-05-26-shopify-accessibility-app-vs-audioeye/ /shopify/ 301
+/blog/2026-05-26-shopify-accessibility-app-vs-userway/ /shopify/ 301
+/blog/2026-05-26-shopify-checkout-accessibility-fixes/ /shopify/ 301
+/blog/2026-06-02-fix-shopify-app-accessibility-errors-without-uninstalling/ /shopify/ 301
+/blog/2026-06-03-shopify-cart-drawer-accessibility-fixes/ /shopify/ 301
+/blog/2026-06-03-shopify-popup-app-accessibility-fixes/ /shopify/ 301
+/blog/2026-06-04-shopify-collection-filter-accessibility-fixes/ /shopify/ 301
+/blog/2026-06-05-shopify-review-app-accessibility-fixes/ /shopify/ 301
+/blog/2026-06-08-shopify-subscription-widget-accessibility-fixes/ /shopify/ 301
+
+# Non-dated Shopify blog posts
+/blog/shopify-accessibility-statement-template-2026/ /shopify/ 301
+/blog/shopify-alt-text-missing-product-images/ /shopify/ 301
+/blog/shopify-keyboard-navigation-accessibility-issues/ /shopify/ 301
+/blog/why-shopify-stores-get-sued-for-ada/ /shopify/ 301
+/blog/shopify-accessibility-tool-full-guide/ /shopify/ 301
+/blog/shopify-ada-compliance-app-full-guide/ /shopify/ 301
+/blog/shopify-accessibility-app-full-guide/ /shopify/ 301
+/blog/best-accessibility-app-shopify-full-guide/ /shopify/ 301
