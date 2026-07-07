@@ -8,19 +8,19 @@ const generalFaqs = [
   },
   {
     q: "Is this an overlay or JavaScript patch?",
-    a: "No. Both our WooCommerce plugin and Shopify app modify your actual HTML and CSS  --  they don't inject a JavaScript layer that sits on top of your page. Real code changes, real compliance documentation.",
+    a: "No. Our plugin modifies your actual HTML and CSS  --  it doesn't inject a JavaScript layer that sits on top of your page. Real code changes, real compliance documentation.",
   },
   {
-    q: "What happens when WooCommerce or Shopify updates?",
-    a: "Our fixers hook into platform-specific rendering events. If a platform update changes a hook or template pattern, some fixers might briefly pause and our system will flag which ones need re-verification. You can re-run a scan at any time from the dashboard.",
+    q: "What happens when WooCommerce updates?",
+    a: "Our fixers hook into WooCommerce rendering events. If a platform update changes a hook or template pattern, some fixers might briefly pause and our system will flag which ones need re-verification. You can re-run a scan at any time from the dashboard.",
   },
   {
     q: "Does the free version limit how many products I can fix?",
-    a: "No. The free version gives you all 10 fixers with no product cap. You can run as many scans and apply as many fixes as you want. The Pro upgrade adds PDF compliance reports, priority support, and multi-site management.",
+    a: "No. The free version gives you all 10 fixers with no product cap. You can run as many scans and apply as many fixes as you want.",
   },
   {
     q: "Will this slow down my store?",
-    a: "No runtime performance impact. The WooCommerce fixers run at PHP render time (server-side). The Shopify fixers run at Liquid template render time. Neither adds client-side JavaScript to your storefront.",
+    a: "No runtime performance impact. The fixers run at PHP render time (server-side). No client-side JavaScript is added to your storefront.",
   },
   {
     q: "What stores are most at risk of accessibility lawsuits?",
@@ -47,25 +47,6 @@ const wooFaqs = [
   },
 ];
 
-const shopifyFaqs = [
-  {
-    q: "Does this work with any Shopify theme?",
-    a: "Yes. Our Liquid snippet injection targets standard Shopify theme hooks. If you use a well-coded theme (Dawn, Prestige, Turbo, etc.) it works out of the box. Custom themes may need minor verification.",
-  },
-  {
-    q: "Do I need a Shopify developer account?",
-    a: "No. The app installs from the Shopify App Store like any other app. No developer tools, no custom setup, no code required on your end.",
-  },
-  {
-    q: "How is the Shopify app different from the WooCommerce plugin?",
-    a: "Same fixer logic, same 10 fixes, same compliance reports. The difference is the integration layer  --  WooCommerce uses PHP hooks, Shopify uses Liquid template injection. Both produce real HTML/CSS changes, not overlays.",
-  },
-  {
-    q: "How do I install the Shopify app?",
-    a: "Search 'Accessibility Fixer' in the Shopify App Store, or visit amazingplugins.com and click the Shopify install link. You'll be redirected to authorize the app in your Shopify admin.",
-  },
-];
-
 // Build FAQ schema for SEO
 const allFaqs = [
   {
@@ -74,7 +55,6 @@ const allFaqs = [
   },
   ...generalFaqs,
   ...wooFaqs,
-  ...shopifyFaqs,
 ];
 
 const faqSchema = {
@@ -93,13 +73,13 @@ const faqSchema = {
 
 <BaseLayout
   title="FAQ"
-  description="Frequently asked questions about AmazingPlugins accessibility fixers for WooCommerce and Shopify."
+  description="Frequently asked questions about AmazingPlugins accessibility fixers for WooCommerce."
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <section class="page-hero">
     <div class="container">
       <h1>Frequently Asked Questions</h1>
-      <p class="lead">Everything you need to know about making your store accessible.</p>
+      <p class="lead">Everything you need to know about making your WooCommerce store accessible.</p>
     </div>
   </section>
 
@@ -137,20 +117,6 @@ const faqSchema = {
           <summary class="faq-q">How do I install it?</summary>
           <p class="faq-a">Search 'WooCommerce Accessibility Fixer' in your WordPress admin → Plugins → Add New, or download from wordpress.org and upload manually. Once activated, go to <strong>WooCommerce → Accessibility Fixer</strong> to run your first scan.</p>
         </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Shopify App</h2>
-      <div class="faq-container">
-        {shopifyFaqs.map(faq => (
-          <details class="faq-item">
-            <summary class="faq-q">{faq.q}</summary>
-            <p class="faq-a">{faq.a}</p>
-          </details>
-        ))}
       </div>
     </div>
   </section>

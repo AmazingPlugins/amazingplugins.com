@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = 'Small, sharp accessibility plugins for Shopify and WooCommerce. Some free, some paid, all crafted.',
+  description = 'Small, sharp accessibility plugins for WooCommerce. Free, all crafted.',
   image = '/images/og-default.svg',
   canonicalPath,
 } = Astro.props;
@@ -67,7 +67,7 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
       gtag('config', 'G-Q3KPCF2RJT');
     </script>
 
-    <!-- Theme init — run before paint to prevent flash -->
+    <!-- Theme init - run before paint to prevent flash -->
     <script is:inline>
       (function() {
         try {

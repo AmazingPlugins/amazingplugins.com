@@ -17,7 +17,6 @@ function isActive(href: string) {
     <div class="nav-links">
       <a href="/plugins/" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
       <a href="/blog/" class:list={[{ active: isActive('/blog') }]}>Blog</a>
-      <a href="/pricing/" class:list={[{ active: isActive('/pricing') }]}>Pricing</a>
     </div>
 
     <div class="nav-cta">
@@ -37,8 +36,8 @@ function isActive(href: string) {
           </button>
         </div>
       </div>
-      <a href="/pricing/" class="btn btn-primary nav-cta-btn" style="padding:10px 18px;font-size:14px;">
-        Get started
+      <a href="/plugins/" class="btn btn-primary nav-cta-btn" style="padding:10px 18px;font-size:14px;">
+        View plugins
         <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
       </a>
       <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -51,8 +50,7 @@ function isActive(href: string) {
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="/plugins/" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
     <a href="/blog/" class:list={[{ active: isActive('/blog') }]}>Blog</a>
-    <a href="/pricing/" class:list={[{ active: isActive('/pricing') }]}>Pricing</a>
-    <a href="/pricing/" class="btn btn-primary" style="margin-top:8px;">Get started</a>
+    <a href="/plugins/" class="btn btn-primary" style="margin-top:8px;">View plugins</a>
   </div>
 </nav>
 

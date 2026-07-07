@@ -1,3 +1,5 @@
+import { loadSeoPipelineEnv } from './env-bootstrap';
+
 type BingJson = Record<string, any>;
 
 export interface BingSite {
@@ -21,6 +23,8 @@ export interface BingUrlSubmissionQuota {
 const BING_API_BASE = 'https://ssl.bing.com/webmaster/api.svc/json';
 
 function getApiKey(): string {
+  loadSeoPipelineEnv();
+
   const apiKey = process.env.BING_WEBMASTER_API_KEY?.trim();
   if (!apiKey) {
     throw new Error('BING_WEBMASTER_API_KEY environment variable not set');

@@ -1,8 +1,8 @@
 ---
 title: EU Accessibility Act ecommerce checklist 2026
 description: >-
-  A practical EU Accessibility Act ecommerce checklist for Shopify and
-  WooCommerce stores that sell to EU consumers, with scope, proof, and
+  A practical EU Accessibility Act ecommerce checklist for WooCommerce
+  stores that sell to EU consumers, with scope, proof, and
   WCAG-focused next steps.
 pubDate: 2026-05-21T10:25:00.000Z
 author: Harun Ray
@@ -20,11 +20,11 @@ seoCategory: compliance
 gscSubmitted: true
 ---
 
-This EU Accessibility Act ecommerce checklist helps Shopify and WooCommerce stores selling to EU consumers stay organized. It keeps the work simple: confirm scope, fix blockers, keep proof, repeat.
+This EU Accessibility Act ecommerce checklist helps WooCommerce stores selling to EU consumers stay organized. It keeps the work simple: confirm scope, fix blockers, keep proof, repeat.
 
 ## First, confirm whether you are in scope
 
-You are likely in scope if you sell consumer-facing goods or services into the EU, including through Shopify or WooCommerce storefronts.
+You are likely in scope if you sell consumer-facing goods or services into the EU, including through WooCommerce storefronts.
 
 Check:
 
@@ -106,11 +106,9 @@ Start with keyboard access, focus visibility, labels, and anything that blocks c
 
 ## Related pages
 
-- [How Shopify accessibility apps fit into EAA work](https://amazingplugins.com/blog/best-accessibility-app-shopify-full-guide/)
-- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
 - [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
-- [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
-- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
+- [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/)
+- [WooCommerce ADA Compliance Checklist 2026](https://amazingplugins.com/blog/woocommerce-ada-compliance-checklist-2026/)
 
 ## Bottom line
 
