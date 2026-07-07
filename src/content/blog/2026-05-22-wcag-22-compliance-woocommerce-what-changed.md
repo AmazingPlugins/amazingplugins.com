@@ -100,7 +100,7 @@ A stock WooCommerce install on a popular theme (Storefront, Astra, Kadence, Bloc
 - 2.5.7 Dragging - most WooCommerce galleries already support tap navigation
 - 3.3.8 Auth - if you're using reCAPTCHA v3 (invisible) instead of v2 (image puzzle)
 
-If you want a deeper checklist beyond just the 2.2 deltas, see our [WCAG 2.2 Compliance Shopify checklist](https://amazingplugins.com/blog/wcag-22-compliance-shopify-checklist/) (most items apply to WooCommerce too) and the broader [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/) guide.
+If you want a deeper checklist beyond just the 2.2 deltas, see our [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/) guide.
 
 ## A 30-minute audit for the WCAG 2.2 changes
 

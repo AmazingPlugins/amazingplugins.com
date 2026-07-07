@@ -157,7 +157,7 @@ No, and any vendor that claims this is misleading you. WebAIM and Deque both est
 
 ### Do I need an accessibility checker tool if I sell only in the US?
 
-Yes. The Department of Justice has confirmed Title III of the ADA applies to commercial websites, and 5,114 to 8,667 digital accessibility lawsuits were filed in the US in 2025 alone (sources vary on federal-only vs federal-plus-state counts). About 32% of those targeted Shopify or WooCommerce-style e-commerce sites. The lack of an official ADA technical standard makes WCAG 2.1 AA the courts' default reference.
+Yes. The Department of Justice has confirmed Title III of the ADA applies to commercial websites, and 5,114 to 8,667 digital accessibility lawsuits were filed in the US in 2025 alone (sources vary on federal-only vs federal-plus-state counts). About 32% of those targeted WooCommerce-style e-commerce sites. The lack of an official ADA technical standard makes WCAG 2.1 AA the courts' default reference.
 
 ### How do I test a checker tool's free trial properly?
 

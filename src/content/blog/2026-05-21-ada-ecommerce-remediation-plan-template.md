@@ -1,7 +1,7 @@
 ---
 title: ADA ecommerce remediation plan template
 description: >-
-  A working ADA ecommerce remediation plan template for Shopify and WooCommerce
+  A working ADA ecommerce remediation plan template for WooCommerce
   stores, with fields for issue, WCAG criterion, owner, fix, evidence, and due
   date.
 pubDate: 2026-05-21T10:20:00.000Z
@@ -113,9 +113,8 @@ Update it whenever you finish a fix, discover a new issue, or re-scan after a th
 
 ## Related pages
 
-- [Shopify accessibility audit](https://amazingplugins.com/blog/shopify-accessibility-audit/)
-- [Shopify accessibility statement vs policy vs remediation log](https://amazingplugins.com/blog/shopify-accessibility-statement-vs-policy-vs-remediation-log/)
-- [Shopify accessibility policy template](https://amazingplugins.com/blog/shopify-accessibility-policy-template/)
+- [Run a scan and fix violations](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/)
+- [Publish an accessibility statement template](https://amazingplugins.com/blog/ada-compliance-woocommerce-plugin-full-guide/)
 
 ## Bottom line
 
