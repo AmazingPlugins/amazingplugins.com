@@ -2,7 +2,7 @@
 title: How to Fix Keyboard Navigation in WooCommerce (Complete Guide)
 description: >-
   A practical guide to fixing the most common keyboard navigation issues in
-  WooCommerce stores — focus indicators, tab order, skip links, and more.
+  WooCommerce stores - focus indicators, tab order, skip links, and more.
 pubDate: 2026-07-08T00:00:00.000Z
 author: Harun Ray
 tags:
@@ -13,7 +13,7 @@ tags:
 gscSubmitted: false
 ---
 
-Keyboard navigation is the backbone of web accessibility. If a shopper can't move through your WooCommerce store using just the Tab key, you're losing customers — and potentially facing a lawsuit.
+Keyboard navigation is the backbone of web accessibility. If a shopper can't move through your WooCommerce store using just the Tab key, you're losing customers - and potentially facing a lawsuit.
 
 WCAG 2.1 AA requires that every interactive element be operable through a keyboard interface. For WooCommerce stores, this means checkout forms, product filters, add-to-cart buttons, menu navigation, and search bars all need to work without a mouse.
 
@@ -39,7 +39,7 @@ textarea:focus-visible {
 }
 ```
 
-Apply this in your theme's stylesheet or via a code snippet plugin. Test it by tabbing through your entire store — every focusable element should show a clear outline.
+Apply this in your theme's stylesheet or via a code snippet plugin. Test it by tabbing through your entire store - every focusable element should show a clear outline.
 
 ## 2. Skip Navigation Links
 
@@ -111,7 +111,7 @@ document.querySelectorAll('.menu-item-has-children > a').forEach(link => {
 
 ## 5. Product Filter and Search
 
-AJAX-powered product filters on shop and category pages often update the product list without moving keyboard focus. After a filter is applied, the keyboard focus stays on the filter control while the product list below changes — leaving users unsure what happened.
+AJAX-powered product filters on shop and category pages often update the product list without moving keyboard focus. After a filter is applied, the keyboard focus stays on the filter control while the product list below changes - leaving users unsure what happened.
 
 **The fix:** After a filter selection, move focus to the first product in the results or to a status announcement.
 
@@ -137,7 +137,7 @@ The WooCommerce checkout page is where keyboard navigation failures cost you rev
 - **Country/state select** dropdowns that lose focus on change
 - **Payment method selection** that traps keyboard focus
 
-**The fix:** Test your checkout flow with keyboard only. Each field should be reachable via Tab in a logical order. Avoid auto-submitting on selection change — let the user choose first, then move on.
+**The fix:** Test your checkout flow with keyboard only. Each field should be reachable via Tab in a logical order. Avoid auto-submitting on selection change - let the user choose first, then move on.
 
 ## 7. Modal and Cart Drawer Traps
 
@@ -167,16 +167,16 @@ function closeModal() {
 Here's a quick keyboard audit you can run right now:
 
 1. **Open your store** and unplug your mouse
-2. **Press Tab** repeatedly — every interactive element should receive focus in a logical order
-3. **Press Shift+Tab** to go backward — should work identically
-4. **Press Enter** on buttons, links, and form elements — they should activate
-5. **Press Space** on checkboxes, radio buttons, and dropdowns — they should toggle
-6. **Navigate every menu** — all submenu items should be reachable
-7. **Complete a purchase** — add to cart, view cart, go through checkout, all by keyboard
-8. **Test modals and popups** — they should open and close with keyboard controls
+2. **Press Tab** repeatedly - every interactive element should receive focus in a logical order
+3. **Press Shift+Tab** to go backward - should work identically
+4. **Press Enter** on buttons, links, and form elements - they should activate
+5. **Press Space** on checkboxes, radio buttons, and dropdowns - they should toggle
+6. **Navigate every menu** - all submenu items should be reachable
+7. **Complete a purchase** - add to cart, view cart, go through checkout, all by keyboard
+8. **Test modals and popups** - they should open and close with keyboard controls
 
 Write down every element that fails. The most common failures are focus indicator visibility, tab order, and modal focus traps.
 
 ## Our Plugin Does All This Automatically
 
-If auditing and fixing every issue sounds like too much manual work, the <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> plugin handles all of these fixes automatically — including keyboard navigation, focus indicators, skip links, ARIA labels, and more. It's free and works with any WooCommerce theme.
+If auditing and fixing every issue sounds like too much manual work, the <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> plugin handles all of these fixes automatically - including keyboard navigation, focus indicators, skip links, ARIA labels, and more. It's free and works with any WooCommerce theme.
