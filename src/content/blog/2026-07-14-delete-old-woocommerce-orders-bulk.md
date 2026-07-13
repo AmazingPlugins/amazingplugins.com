@@ -145,3 +145,5 @@ This is a good thing - your reports become a more accurate reflection of actual 
 ## The Safe Way
 
 The safest workflow is always: scan first (dry run), verify what will be deleted, then delete. This is exactly how the <a href="https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce">Stale Order Cleaner for WooCommerce</a> works. Scan, preview, confirm, done. No SQL, no WP-CLI, no risk of deleting the wrong orders.
+
+**Related reading:** <a href="/plugins/">All AmazingPlugins WordPress Plugins</a> - free tools for WooCommerce store owners.
