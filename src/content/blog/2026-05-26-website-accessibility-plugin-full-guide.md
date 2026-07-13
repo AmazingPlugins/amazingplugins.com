@@ -42,7 +42,7 @@ These crawl your pages and produce a report. You see what fails, on which page, 
 
 ### 2. Real fixer plugins (find AND fix at the code layer)
 
-These run as a WordPress plugin, integrate with WooCommerce templates, and apply fixes that survive in the page source. If you turn the plugin off, the broken parts come back, but while it is on the markup is genuinely accessible. The [WooCommerce Accessibility Fixer](https://amazingplugins.com/products/woocommerce-accessibility-fixer/) is in this category, and so are a few other WordPress-native tools.
+These run as a WordPress plugin, integrate with WooCommerce templates, and apply fixes that survive in the page source. If you turn the plugin off, the broken parts come back, but while it is on the markup is genuinely accessible. The [WooCommerce Accessibility Fixer](https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/) is in this category, and so are a few other WordPress-native tools.
 
 ### 3. Overlay widgets (load a JS layer on top of your site)
 
@@ -117,7 +117,7 @@ A fuller version of this workflow is in [How to Make Your WooCommerce Store ADA 
 
 ## How AmazingPlugins helps
 
-The [WooCommerce Accessibility Fixer](https://amazingplugins.com/products/woocommerce-accessibility-fixer/) is a WordPress plugin specifically for WooCommerce stores. It uses WordPress hooks and WooCommerce template filters, so the fixes are baked into your rendered HTML, not painted on top by JavaScript.
+The [WooCommerce Accessibility Fixer](https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/) is a WordPress plugin specifically for WooCommerce stores. It uses WordPress hooks and WooCommerce template filters, so the fixes are baked into your rendered HTML, not painted on top by JavaScript.
 
 What it handles automatically:
 
