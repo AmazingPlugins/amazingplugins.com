@@ -2,7 +2,8 @@
 title: How to Fix Missing Alt Text on WooCommerce Product Images (2026 Guide)
 description: >-
   A practical guide to finding and fixing missing alt text on WooCommerce
-  product images, gallery images, and variation images - with and without a plugin.
+  product images, gallery images, and variation images - with and without a
+  plugin.
 pubDate: 2026-07-13T00:00:00.000Z
 author: Harun Ray
 tags:
@@ -11,7 +12,7 @@ tags:
   - Product Images
   - Accessibility
   - SEO
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 Alt text (alternative text) is the hidden description attached to an image in HTML. Screen readers read it aloud for blind and visually impaired shoppers. Search engines use it to understand what your product images show. Missing alt text means you are failing both accessibility requirements and SEO best practices.
