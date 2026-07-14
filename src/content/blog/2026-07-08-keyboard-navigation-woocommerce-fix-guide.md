@@ -10,7 +10,7 @@ tags:
   - Keyboard Navigation
   - Accessibility
   - WCAG
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 Keyboard navigation is the backbone of web accessibility. If a shopper can't move through your WooCommerce store using just the Tab key, you're losing customers - and potentially facing a lawsuit.
