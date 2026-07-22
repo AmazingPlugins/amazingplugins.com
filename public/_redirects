@@ -12,6 +12,42 @@
 # Renamed blog post (was Shopify+WooCommerce, now WooCommerce-only)
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 
+# Dated blog post URLs → clean canonical URLs (duplicate content fix, GSC indexing)
+/blog/2026-04-12-the-6-best-woocommerce-bulk-edit-plugins-compared/ /blog/the-6-best-woocommerce-bulk-edit-plugins-compared/ 301
+/blog/2026-04-13-how-to-bulk-edit-woocommerce-product-prices/ /blog/how-to-bulk-edit-woocommerce-product-prices/ 301
+/blog/2026-04-14-how-to-bulk-edit-woocommerce-variations/ /blog/how-to-bulk-edit-woocommerce-variations/ 301
+/blog/2026-04-15-woocommerce-bulk-edit-not-working-here-s-why/ /blog/woocommerce-bulk-edit-not-working-here-s-why/ 301
+/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/ /blog/how-to-make-your-woocommerce-store-ada-compliant/ 301
+/blog/2026-04-18-10-common-accessibility-issues-on-e-commerce-sites/ /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
+/blog/2026-04-19-alt-text-keyboard-navigation-and-other-quick-accessibility-wins-for-e-commerce/ /blog/alt-text-keyboard-navigation-and-other-quick-accessibility-wins-for-e-commerce/ 301
+/blog/2026-04-20-does-the-ada-actually-apply-to-your-woocommerce-store/ /blog/does-the-ada-actually-apply-to-your-woocommerce-store/ 301
+/blog/2026-04-21-the-hidden-accessibility-issues-that-are-costing-your-store-customers/ /blog/the-hidden-accessibility-issues-that-are-costing-your-store-customers/ 301
+/blog/2026-04-21-wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/ /blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/ 301
+/blog/2026-04-22-why-keyboard-navigation-matters-more-than-you-think/ /blog/why-keyboard-navigation-matters-more-than-you-think/ 301
+/blog/2026-04-25-why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/ /blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/ 301
+/blog/2026-05-13-accessibility-seo-ranking-factor-ecommerce/ /blog/accessibility-seo-ranking-factor-ecommerce/ 301
+/blog/2026-05-13-ada-compliance-woocommerce-plugin-full-guide/ /blog/ada-compliance-woocommerce-plugin-full-guide/ 301
+/blog/2026-05-14-best-wordpress-accessibility-plugin-full-guide/ /blog/best-wordpress-accessibility-plugin-full-guide/ 301
+/blog/2026-05-15-accessibility-checker-tool-buy-common-mistakes/ /blog/accessibility-checker-tool-buy-common-mistakes/ 301
+/blog/2026-05-15-accessibility-checker-tool-buy-how-it-compares/ /blog/accessibility-checker-tool-buy-how-it-compares/ 301
+/blog/2026-05-15-accessibility-checker-tool-buy-step-by-step-guide/ /blog/accessibility-checker-tool-buy-step-by-step-guide/ 301
+/blog/2026-05-15-accessibility-checker-tool-buy-wcag-checklist/ /blog/accessibility-checker-tool-buy-wcag-checklist/ 301
+/blog/2026-05-15-accessibility-checker-tool-buy-what-it-actually-does/ /blog/accessibility-checker-tool-buy-what-it-actually-does/ 301
+/blog/2026-05-21-ada-ecommerce-remediation-plan-template/ /blog/ada-ecommerce-remediation-plan-template/ 301
+/blog/2026-05-21-eu-accessibility-act-ecommerce-checklist-2026/ /blog/eu-accessibility-act-ecommerce-checklist-2026/ 301
+/blog/2026-05-21-woocommerce-plugin-vs-widget-accessibility/ /blog/woocommerce-plugin-vs-widget-accessibility/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-checklist/ /blog/wcag-22-compliance-woocommerce-checklist/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-deadline/ /blog/wcag-22-compliance-woocommerce-deadline/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed/ /blog/wcag-22-compliance-woocommerce-what-changed/ 301
+/blog/2026-05-25-ada-compliance-plugin-full-guide/ /blog/ada-compliance-plugin-full-guide/ 301
+/blog/2026-05-26-website-accessibility-plugin-full-guide/ /blog/website-accessibility-plugin-full-guide/ 301
+/blog/2026-05-26-woocommerce-accessibility-plugin-vs-accessibe/ /blog/woocommerce-accessibility-plugin-vs-accessibe/ 301
+/blog/2026-05-26-woocommerce-accessibility-plugin-vs-audioeye/ /blog/woocommerce-accessibility-plugin-vs-audioeye/ 301
+/blog/2026-05-26-woocommerce-accessibility-plugin-vs-userway/ /blog/woocommerce-accessibility-plugin-vs-userway/ 301
+/blog/2026-07-08-keyboard-navigation-woocommerce-fix-guide/ /blog/keyboard-navigation-woocommerce-fix-guide/ 301
+/blog/2026-07-13-fix-missing-alt-text-woocommerce-product-images/ /blog/fix-missing-alt-text-woocommerce-product-images/ 301
+/blog/2026-07-14-delete-old-woocommerce-orders-bulk/ /blog/delete-old-woocommerce-orders-bulk/ 301
+
 # All old Shopify content → /shopify/ page (explains pivot to WooCommerce, links to appnary.com)
 # Date-prefixed blog posts
 /blog/2026-04-17-how-to-make-your-shopify-store-accessible/ /shopify/ 301

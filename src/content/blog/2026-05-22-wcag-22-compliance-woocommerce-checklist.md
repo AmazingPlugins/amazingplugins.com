@@ -34,7 +34,7 @@ Plus two at Level A you also need (because A is a prerequisite for AA):
 - **3.2.6 Consistent Help** - A
 - **3.3.7 Redundant Entry** - A
 
-If you've already done the work for ADA / WCAG 2.1 AA on WooCommerce, you are roughly 85% of the way there. The remaining 15% is mostly checkout, account login, and mobile button sizing. If you haven't done that earlier work, start with the [full WooCommerce ADA compliance guide](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/) first, then come back to this checklist.
+If you've already done the work for ADA / WCAG 2.1 AA on WooCommerce, you are roughly 85% of the way there. The remaining 15% is mostly checkout, account login, and mobile button sizing. If you haven't done that earlier work, start with the [full WooCommerce ADA compliance guide](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/) first, then come back to this checklist.
 
 ## Why this checklist exists
 

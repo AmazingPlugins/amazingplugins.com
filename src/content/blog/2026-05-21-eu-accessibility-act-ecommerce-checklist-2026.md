@@ -107,7 +107,7 @@ Start with keyboard access, focus visibility, labels, and anything that blocks c
 ## Related pages
 
 - [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
-- [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/)
+- [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/)
 - [WooCommerce ADA Compliance Checklist 2026](https://amazingplugins.com/blog/woocommerce-ada-compliance-checklist-2026/)
 
 ## Bottom line

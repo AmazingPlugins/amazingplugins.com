@@ -100,7 +100,7 @@ A stock WooCommerce install on a popular theme (Storefront, Astra, Kadence, Bloc
 - 2.5.7 Dragging - most WooCommerce galleries already support tap navigation
 - 3.3.8 Auth - if you're using reCAPTCHA v3 (invisible) instead of v2 (image puzzle)
 
-If you want a deeper checklist beyond just the 2.2 deltas, see our [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/) guide.
+If you want a deeper checklist beyond just the 2.2 deltas, see our [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/) guide.
 
 ## A 30-minute audit for the WCAG 2.2 changes
 
@@ -121,7 +121,7 @@ It's worth saying out loud: **2.2 is a superset of 2.1**. Everything in 2.1 stil
 
 If your store is already solid on WCAG 2.1 AA, you're 90% of the way to 2.2 AA. The new criteria are real, but they're focused additions, not a rewrite.
 
-For a comparison of how the levels stack up, see [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?](https://amazingplugins.com/blog/2026-04-21-wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/).
+For a comparison of how the levels stack up, see [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?](https://amazingplugins.com/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/).
 
 ## Why this matters in 2026
 

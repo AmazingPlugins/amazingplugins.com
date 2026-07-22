@@ -113,7 +113,7 @@ Update it whenever you finish a fix, discover a new issue, or re-scan after a th
 
 ## Related pages
 
-- [Run a scan and fix violations](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/)
+- [Run a scan and fix violations](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/)
 - [Publish an accessibility statement template](https://amazingplugins.com/blog/ada-compliance-woocommerce-plugin-full-guide/)
 
 ## Bottom line
