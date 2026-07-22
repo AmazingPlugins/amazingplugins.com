@@ -113,7 +113,7 @@ Here is what installing and running an accessibility plugin actually looks like 
 9. **Generate your compliance report.** Save it. Date it. If you get a demand letter, this is your evidence of good-faith effort.
 10. **Write your accessibility statement.** Most plugins generate one. Link it in your footer.
 
-A fuller version of this workflow is in [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/).
+A fuller version of this workflow is in [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/).
 
 ## How AmazingPlugins helps
 

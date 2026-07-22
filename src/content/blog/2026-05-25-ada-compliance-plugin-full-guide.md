@@ -126,7 +126,7 @@ After automated fixes:
 
 Your catalog changes. Themes update. New products get added without alt text. Schedule a monthly scan and re-export the PDF report. Keep the reports; if you ever get a demand letter, dated reports showing ongoing remediation are powerful evidence of good-faith effort.
 
-For the full end-to-end remediation workflow (not just plugin selection), see [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/2026-04-16-how-to-make-your-woocommerce-store-ada-compliant/).
+For the full end-to-end remediation workflow (not just plugin selection), see [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/).
 
 ## The 10 WCAG criteria your plugin must cover
 
@@ -191,7 +191,7 @@ WordPress core has gotten genuinely good on accessibility. WooCommerce shipped 1
 
 ### What about WCAG 2.2, do I need to upgrade?
 
-Legally, 2.1 AA is still the floor in 2026. Practically, 2.2 AA is what auditors and EAA enforcement bodies are starting to look at. The nine new 2.2 criteria mostly cover focus appearance, dragging movements, and authentication. If your plugin covers 2.2, take it. If it only covers 2.1, you're still on solid legal ground for now. See [WCAG 2.1 AA vs AAA: What's the Real Difference](https://amazingplugins.com/blog/2026-04-21-wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/) for where AA is enough and where AAA actually matters.
+Legally, 2.1 AA is still the floor in 2026. Practically, 2.2 AA is what auditors and EAA enforcement bodies are starting to look at. The nine new 2.2 criteria mostly cover focus appearance, dragging movements, and authentication. If your plugin covers 2.2, take it. If it only covers 2.1, you're still on solid legal ground for now. See [WCAG 2.1 AA vs AAA: What's the Real Difference](https://amazingplugins.com/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/) for where AA is enough and where AAA actually matters.
 
 ### Does an ADA compliance plugin slow my store down?
 
