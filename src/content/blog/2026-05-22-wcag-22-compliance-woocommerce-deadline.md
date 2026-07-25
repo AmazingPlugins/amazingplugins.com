@@ -140,3 +140,12 @@ No. Overlays have been called out by the FTC in the accessiBe case, named in pla
 ### How much does WooCommerce accessibility actually cost to fix?
 
 A reasonable DIY weekend gets you 80% of the way for under $200 in plugin costs. A full agency audit and remediation is $5,000 to $25,000. A lawsuit settlement is $10,000 to $25,000 plus your legal fees plus the remediation you have to do anyway. The cost-benefit math on fixing it before you get a letter is overwhelming.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/wcag-22-compliance-woocommerce-checklist/">WCAG 2.2 Compliance WooCommerce Checklist</a> - What changed and what to fix
+- <a href="/blog/ada-compliance-plugin-full-guide/">ADA Compliance Plugin Full Guide</a> - Deep dive into plugin options
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

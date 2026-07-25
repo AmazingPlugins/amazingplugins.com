@@ -173,3 +173,12 @@ No. Overlays inject JavaScript that toggles styles, but they don't fix the under
 
 For a small store (one theme, under 100 products, standard checkout), most owners can hit 2.1 AA in 4 to 8 hours of work plus a plugin, and 2.2 AA in another 2 to 4 hours on top. Larger catalogs or heavily customized checkout flows take proportionally longer. The 30-minute audit above will give you a realistic estimate for your specific store.
 
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/wcag-22-compliance-woocommerce-checklist/">WCAG 2.2 Compliance WooCommerce Checklist</a> - What changed and what to fix
+- <a href="/blog/wcag-22-compliance-woocommerce-deadline/">WCAG 2.2 Compliance: Deadline</a> - Timeline and compliance requirements
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+

@@ -210,3 +210,12 @@ An accessibility statement is a compliance signal, not a compliance shield. It's
 An ADA compliance plugin for WooCommerce is a real, practical risk-reduction tool, but only if it does real code work against WCAG 2.1 AA on your actual store templates. Avoid overlay widgets. Verify the plugin names the specific criteria it covers. Run a baseline scan, install on staging, do auto-fixes in batches, then do a human keyboard-and-screen-reader pass. Re-scan monthly and keep the reports.
 
 The technology can take you 60-80% of the way to compliance in an afternoon. The remaining work is judgment, and that's still on you, but it's a far smaller hill to climb than starting from scratch.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
+- <a href="/blog/website-accessibility-plugin-full-guide/">Website Accessibility Plugin Full Guide</a> - Understanding plugin options
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

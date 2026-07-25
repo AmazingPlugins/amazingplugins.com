@@ -123,3 +123,12 @@ Yes. Overlays inject 100 to 300 KB of JavaScript, cause layout shifts when they 
 **How long does it take to see SEO results from accessibility fixes?**
 
 Image search results usually move within four to eight weeks after Google recrawls product pages with new alt text. Core Web Vitals improvements show up in Search Console field data within 28 days. Ranking changes from improved page experience and content structure typically take two to three months to fully express across a catalog.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/">Why Accessibility Overlays Don't Protect You</a> - Why code-level fixes beat overlay widgets
+- <a href="/blog/woocommerce-accessibility-plugin-vs-accessibe/">WooCommerce Accessibility Plugin vs accessiBe</a> - Why code-level fixes beat overlay widgets
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

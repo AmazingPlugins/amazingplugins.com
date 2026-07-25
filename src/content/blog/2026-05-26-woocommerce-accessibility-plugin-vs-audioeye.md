@@ -173,3 +173,12 @@ If you want a managed accessibility platform with reporting, AudioEye is in that
 If you want the actual WooCommerce store to be more accessible, a code-level accessibility plugin is the better choice.
 
 Visibility is useful. Remediation is the goal.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/woocommerce-accessibility-plugin-vs-accessibe/">WooCommerce Accessibility Plugin vs accessiBe</a> - Another overlay comparison
+- <a href="/blog/woocommerce-accessibility-plugin-vs-userway/">WooCommerce Accessibility Plugin vs UserWay</a> - Another overlay comparison
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
