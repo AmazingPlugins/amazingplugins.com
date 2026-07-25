@@ -285,3 +285,7 @@ specific, well-documented, and mostly things you can start today. The stores
 that get hit hardest tend to be the ones that never looked.
 
 Don't be one of them.
+
+---
+
+**Want to protect your store?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> automatically detects and fixes WCAG violations before they become lawsuits. Free, no coding required.

@@ -81,3 +81,7 @@ When a form submission fails - wrong card number, missing address field - the er
 ## The Pattern Behind Most Failures
 
 These issues share a common root: building for what looks right rather than for what renders correctly in assistive technology. The fix is usually straightforward - the problem is knowing what to look for. An automated scanner like axe DevTools or WAVE will surface 70–80% of these issues in under a minute. Start there.
+
+---
+
+**Want to fix these issues automatically?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> detects and resolves most of these problems with one click. No coding required.
