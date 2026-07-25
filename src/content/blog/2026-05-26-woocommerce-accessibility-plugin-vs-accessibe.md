@@ -182,3 +182,12 @@ If you want a visible accessibility widget, accessiBe is in that lane.
 If you want the actual WooCommerce store to be more accessible, a code-level accessibility plugin is the better choice.
 
 Convenience is not the same thing as remediation.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/woocommerce-accessibility-plugin-vs-userway/">WooCommerce Accessibility Plugin vs UserWay</a> - Another overlay comparison
+- <a href="/blog/woocommerce-accessibility-plugin-vs-audioeye/">WooCommerce Accessibility Plugin vs AudioEye</a> - Another overlay comparison
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

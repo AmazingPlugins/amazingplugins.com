@@ -119,3 +119,12 @@ Update it whenever you finish a fix, discover a new issue, or re-scan after a th
 ## Bottom line
 
 A remediation plan is not paperwork for its own sake. It is how you stop accessibility work from turning into a pile of half-finished fixes.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
+- <a href="/blog/eu-accessibility-act-ecommerce-checklist-2026/">EU Accessibility Act Ecommerce Checklist 2026</a> - EU compliance requirements
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

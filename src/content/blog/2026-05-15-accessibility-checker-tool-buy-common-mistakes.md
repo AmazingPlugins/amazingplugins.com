@@ -193,3 +193,12 @@ Reasonable WooCommerce-focused tools run anywhere from $99 to $500 per year for 
 
 WCAG 2.1 AA is the legal floor in the US (DOJ guidance) and the EU (EAA via EN 301 549). WCAG 2.2 AA is the 2026 best practice and adds the focus, target-size, and authentication criteria that ecommerce sites trip on most. Buy a tool that checks against both.
 
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
+- <a href="/blog/accessibility-seo-ranking-factor-ecommerce/">Accessibility as an SEO Ranking Factor</a> - Why accessibility matters for search
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+

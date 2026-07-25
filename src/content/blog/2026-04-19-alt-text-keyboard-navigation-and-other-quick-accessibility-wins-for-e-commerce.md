@@ -103,3 +103,7 @@ The store owner or content manager is usually the best person to write alt text,
 None of these fixes is hard individually. Alt text: 30 seconds per image. Skip link: one link. Focus styles: four lines of CSS. But they compound. A store with 50 products and no alt text has 50 accessibility failures. Fix them all and you've removed the single most common WCAG violation on e-commerce sites.
 
 Start with the quickest wins - skip links and focus styles - and work through product images systematically. You don't need to fix everything at once.
+
+---
+
+**Want to fix these issues automatically?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> handles alt text, keyboard navigation, and focus indicators with one click. No coding required.

@@ -176,3 +176,12 @@ If this list feels like a lot, run it in this order and you'll cover the highest
 4. Fix the top 10 issues. Repeat. The first pass usually covers 70% of legal exposure.
 
 That's the checklist. Bookmark it, work through it once a quarter, and document what you've done in an accessibility statement on your store. That alone puts you ahead of 95.9% of websites, which is the share that still has WCAG 2 failures on their home page according to the 2026 WebAIM Million report.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/wcag-22-compliance-woocommerce-what-changed/">WCAG 2.2 Compliance: What Changed</a> - Understanding the new requirements
+- <a href="/blog/wcag-22-compliance-woocommerce-deadline/">WCAG 2.2 Compliance: Deadline</a> - Timeline and compliance requirements
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

@@ -73,3 +73,12 @@ The most legally significant part of your store. Checkout forms, order summaries
 You have two options: audit and fix manually, or use a plugin that handles the markup fixes automatically. Manual fixing is time-consuming, requires technical knowledge, and breaks whenever your theme updates. A purpose-built fixer plugin modifies the HTML output to meet WCAG standards - without changing your theme.
 
 The important thing is that it happens at the code level, not the display level. Overlay widgets that claim to "fix accessibility" do not change your underlying HTML and will not protect you in court.
+
+---
+
+## Related Reading
+
+- <a href="/blog/10-common-accessibility-issues-on-e-commerce-sites/">10 Common Accessibility Issues on E-commerce Sites</a> - The most frequent problems we find on WooCommerce stores
+- <a href="/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/">WCAG 2.1 AA vs AAA: What's the Real Difference</a> - Understanding the standards that matter
+- <a href="/blog/keyboard-navigation-woocommerce-fix-guide/">How to Fix Keyboard Navigation in WooCommerce</a> - Deep dive into one of the most critical fixes
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)

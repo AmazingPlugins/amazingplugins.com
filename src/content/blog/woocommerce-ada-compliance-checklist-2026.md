@@ -272,3 +272,12 @@ No plugin can honestly guarantee full compliance for every store. A good plugin 
 ### How often should I run a WooCommerce accessibility scan?
 
 Run a scan after theme updates, WooCommerce updates, plugin changes, checkout changes, product imports, and major campaign launches. If your store changes often, monthly scanning is a reasonable baseline.
+
+---
+
+## Related Reading
+
+- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/ada-ecommerce-remediation-plan-template/">ADA Ecommerce Remediation Plan Template</a> - Practical remediation planning
+- <a href="/blog/eu-accessibility-act-ecommerce-checklist-2026/">EU Accessibility Act Ecommerce Checklist 2026</a> - EU compliance requirements
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
