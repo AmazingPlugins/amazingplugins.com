@@ -1,8 +1,8 @@
 ---
 title: WooCommerce Checkout Accessibility Issues to Fix First
 description: >-
-  A practical guide to WooCommerce checkout accessibility issues: labels,
-  keyboard traps, errors, payment plugins, and WCAG fixes.
+  Fix WooCommerce checkout accessibility issues: missing labels, keyboard traps,
+  unclear errors, and WCAG compliance gaps.
 date: 2026-05-10T00:00:00.000Z
 pubDate: 2026-05-10T00:00:00.000Z
 seoKeywords:

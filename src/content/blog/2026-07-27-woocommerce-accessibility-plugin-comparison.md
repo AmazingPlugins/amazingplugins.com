@@ -1,6 +1,8 @@
 ---
 title: "WooCommerce Accessibility Plugin Comparison: Which One Actually Works?"
-description: "Compare the top WooCommerce accessibility plugins - accessiBe, UserWay, AudioEye, and our own Accessibility Fixer. See which one actually fixes issues vs just overlaying a widget."
+description: >-
+  Compare WooCommerce accessibility plugins: accessiBe, UserWay, AudioEye, and
+  Accessibility Fixer. See which one truly fixes issues.
 pubDate: 2026-07-27T00:00:00.000Z
 author: Harun Ray
 tags:

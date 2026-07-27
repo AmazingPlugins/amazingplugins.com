@@ -1,9 +1,8 @@
 ---
 title: WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?
 description: >-
-  WCAG 2.2 added new requirements around focus visibility, target size, and
-  dragging movements. Here's what changed from 2.1 and what it means for your
-  WooCommerce store.
+  WCAG 2.2 added new requirements for focus visibility, target size, and
+  dragging. See what changed and what it means for WooCommerce.
 pubDate: 2026-05-08T00:00:00.000Z
 author: Harun Ray
 tags:

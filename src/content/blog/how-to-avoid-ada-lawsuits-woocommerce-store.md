@@ -1,9 +1,8 @@
 ---
 title: How to Avoid an ADA Lawsuit With Your WooCommerce Store
 description: >-
-  ADA web accessibility lawsuits hit ecommerce stores hard. Here's what triggers
-  them, what actually protects you, and the practical steps to get your
-  WooCommerce store compliant.
+  How to avoid ADA lawsuits on your WooCommerce store: what triggers them, what
+  actually protects you, and practical steps to get compliant.
 pubDate: 2026-05-08T00:00:00.000Z
 author: Harun Ray
 tags:

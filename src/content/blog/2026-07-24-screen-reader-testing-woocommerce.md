@@ -1,9 +1,8 @@
 ---
 title: 'Why Most WooCommerce Stores Fail a Screen Reader Test (And How to Fix Yours)'
 description: >-
-  94% of websites fail WCAG 2.1. I ran a screen reader over a dozen
-  WooCommerce stores and found the same failures every time. Here's the
-  15-minute test, what it catches, and how to fix what it finds.
+  94% of sites fail WCAG 2.1. Run a 15-minute screen reader test on your
+  WooCommerce store to find and fix common failures.
 pubDate: 2026-07-24T00:00:00.000Z
 author: Harun Ray
 tags:
