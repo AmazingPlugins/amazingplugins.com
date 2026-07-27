@@ -1,8 +1,8 @@
 ---
 title: WooCommerce EAA Compliance Plugin Guide for 2026
 description: >-
-  What WooCommerce merchants need from an EAA compliance plugin in 2026,
-  including WCAG checks, checkout fixes, and documentation.
+  What WooCommerce merchants need from an EAA compliance plugin in 2026, from
+  WCAG checks and checkout fixes to documentation.
 date: 2026-05-10T00:00:00.000Z
 pubDate: 2026-05-10T00:00:00.000Z
 seoKeywords:
