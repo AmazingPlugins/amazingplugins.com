@@ -119,4 +119,10 @@ Not every image needs alt text. Background images, decorative borders, and visua
 
 If scanning 500 products and checking every image sounds like too much manual work, the <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> handles it automatically. It scans your entire catalog, detects images missing alt text, and applies product-based descriptions in one click. It is free and works with any WooCommerce theme.
 
-**Related reading:** <a href="/blog/keyboard-navigation-woocommerce-fix-guide/">How to Fix Keyboard Navigation in WooCommerce</a> - make your store fully navigable without a mouse.
+## Related Reading
+
+- [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
+- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [Screen Reader Testing for WooCommerce: The 15-Minute Guide](/blog/screen-reader-testing-woocommerce-guide/)
+- [What an Accessibility Checker Tool Actually Does (Before You Buy)](/blog/accessibility-checker-tool-buy-what-it-actually-does/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

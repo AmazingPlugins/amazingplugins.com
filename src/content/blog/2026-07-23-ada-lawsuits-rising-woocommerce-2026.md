@@ -289,3 +289,11 @@ Don't be one of them.
 ---
 
 **Want to protect your store?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> automatically detects and fixes WCAG violations before they become lawsuits. Free, no coding required.
+
+## Related Reading
+
+- [How to Avoid an ADA Lawsuit With Your WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
+- [Does the ADA Actually Apply to Your WooCommerce Store?](/blog/does-the-ada-actually-apply-to-your-woocommerce-store/)
+- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

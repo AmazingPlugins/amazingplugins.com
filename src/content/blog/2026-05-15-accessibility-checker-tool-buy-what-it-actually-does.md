@@ -215,3 +215,11 @@ Yes, if you sell to EU customers. The European Accessibility Act became enforcea
 An accessibility checker tool is one piece of a compliance program, not the whole thing. A good fixer plugin handles the 8 to 12 most common WCAG failures automatically. That covers a lot of ground, and it's the difference between an obviously broken site and a defensibly accessible one. But it's not a shield from lawsuits, and any vendor who says it is should make you nervous.
 
 Buy a tool. Use the tool. Then schedule one hour every quarter to actually test your store with the keyboard and a screen reader. That combination, automated fixes plus periodic human review, is what real accessibility looks like.
+
+## Related Reading
+
+- [Accessibility Checker Tool: 9 Buying Mistakes to Avoid](/blog/accessibility-checker-tool-buy-common-mistakes/)
+- [Accessibility Checker Tool: Step-by-Step Buying Guide](/blog/accessibility-checker-tool-buy-step-by-step-guide/)
+- [WooCommerce Plugin vs Widget Accessibility](/blog/woocommerce-plugin-vs-widget-accessibility/)
+- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

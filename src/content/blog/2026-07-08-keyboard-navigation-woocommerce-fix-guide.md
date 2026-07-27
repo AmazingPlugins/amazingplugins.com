@@ -181,4 +181,10 @@ Write down every element that fails. The most common failures are focus indicato
 
 If auditing and fixing every issue sounds like too much manual work, the <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> plugin handles all of these fixes automatically - including keyboard navigation, focus indicators, skip links, ARIA labels, and more. It's free and works with any WooCommerce theme.
 
-**Related reading:** <a href="/blog/fix-missing-alt-text-woocommerce-product-images/">How to Fix Missing Alt Text on WooCommerce Product Images</a> - another critical accessibility fix you can automate.
+## Related Reading
+
+- [Why Keyboard Navigation Matters More Than You Think](/blog/why-keyboard-navigation-matters-more-than-you-think/)
+- [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
+- [How to Fix Missing Alt Text on WooCommerce Product Images](/blog/fix-missing-alt-text-woocommerce-product-images/)
+- [Screen Reader Testing for WooCommerce: The 15-Minute Guide](/blog/screen-reader-testing-woocommerce-guide/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
