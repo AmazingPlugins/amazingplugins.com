@@ -94,9 +94,10 @@ If you are serious about accessibility and ADA compliance, check out what Amazin
 
 ---
 
-## Related Reading
 
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
-- <a href="/blog/woocommerce-ada-compliance-checklist-2026/">WooCommerce ADA Compliance Checklist 2026</a> - Compliance requirements
-- <a href="/blog/woocommerce-checkout-accessibility-issues/">WooCommerce Checkout Accessibility Issues</a> - Fixing checkout flow problems
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+## Related Reading
+- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [WooCommerce ADA Compliance Checklist for 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
+- [WooCommerce Checkout Accessibility Issues](/blog/woocommerce-checkout-accessibility-issues/)
+- [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
