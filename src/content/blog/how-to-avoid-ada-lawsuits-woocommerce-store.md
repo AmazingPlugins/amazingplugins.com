@@ -78,9 +78,10 @@ If you need help implementing accessibility fixes across your WooCommerce store,
 
 ---
 
-## Related Reading
 
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
-- <a href="/blog/ada-ecommerce-remediation-plan-template/">ADA Ecommerce Remediation Plan Template</a> - Practical remediation planning
-- <a href="/blog/woocommerce-ada-compliance-checklist-2026/">WooCommerce ADA Compliance Checklist 2026</a> - Compliance requirements
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+## Related Reading
+- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [ADA Ecommerce Remediation Plan Template](/blog/ada-ecommerce-remediation-plan-template/)
+- [WooCommerce ADA Compliance Checklist for 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
+- [WCAG 2.2 Requirements for WordPress and WooCommerce](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

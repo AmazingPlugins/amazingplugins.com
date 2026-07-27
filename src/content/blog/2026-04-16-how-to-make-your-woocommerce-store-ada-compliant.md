@@ -76,9 +76,10 @@ The important thing is that it happens at the code level, not the display level.
 
 ---
 
-## Related Reading
 
-- <a href="/blog/10-common-accessibility-issues-on-e-commerce-sites/">10 Common Accessibility Issues on E-commerce Sites</a> - The most frequent problems we find on WooCommerce stores
-- <a href="/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/">WCAG 2.1 AA vs AAA: What's the Real Difference</a> - Understanding the standards that matter
-- <a href="/blog/keyboard-navigation-woocommerce-fix-guide/">How to Fix Keyboard Navigation in WooCommerce</a> - Deep dive into one of the most critical fixes
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+## Related Reading
+- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce](/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/)
+- [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
+- [WooCommerce ADA Compliance Checklist for 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

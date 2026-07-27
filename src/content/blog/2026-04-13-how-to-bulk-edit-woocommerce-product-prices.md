@@ -68,10 +68,11 @@ WooCommerce has aggressive object caching. After a bulk price update, clear the 
 
 ---
 
-## Related Reading
 
-- <a href="/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/">The 6 Best WooCommerce Bulk Edit Plugins Compared</a> - Feature comparison of top plugins
-- <a href="/blog/how-to-bulk-edit-woocommerce-variations/">How to Bulk Edit WooCommerce Variations</a> - Managing product variations
-- <a href="/blog/woocommerce-bulk-edit-not-working-here-s-why/">WooCommerce Bulk Edit Not Working</a> - Troubleshooting common issues
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate accessibility fixes with one plugin (free)
+## Related Reading
+- [The 6 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
+- [How to Bulk Edit WooCommerce Variations](/blog/how-to-bulk-edit-woocommerce-variations/)
+- [WooCommerce Bulk Edit Not Working? Here's Why](/blog/woocommerce-bulk-edit-not-working-here-s-why/)
+- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
 

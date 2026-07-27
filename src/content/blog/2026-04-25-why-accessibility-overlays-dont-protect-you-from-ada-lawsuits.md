@@ -25,9 +25,10 @@ None of this means accessibility is impossible to automate. It means the automat
 
 ---
 
-## Related Reading
 
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
-- <a href="/blog/woocommerce-accessibility-plugin-vs-accessibe/">WooCommerce Accessibility Plugin vs accessiBe</a> - Why code-level fixes beat overlay widgets
-- <a href="/blog/10-common-accessibility-issues-on-e-commerce-sites/">10 Common Accessibility Issues on E-commerce Sites</a> - The most frequent problems we find
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+## Related Reading
+- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [WooCommerce Accessibility Plugin vs accessiBe](/blog/woocommerce-accessibility-plugin-vs-accessibe/)
+- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [How to Avoid an ADA Lawsuit With Your WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

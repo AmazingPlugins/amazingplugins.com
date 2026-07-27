@@ -163,9 +163,10 @@ The lawsuits are real, the EAA deadline has passed, and WCAG 2.2 AA is now the s
 
 ---
 
-## Related Reading
 
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
-- <a href="/blog/accessibility-checker-tool-buy-common-mistakes/">Accessibility Checker Tool: Common Mistakes</a> - Avoid these pitfalls when choosing a tool
-- <a href="/blog/accessibility-checker-tool-buy-how-it-compares/">Accessibility Checker Tool: How It Compares</a> - Feature comparison of top tools
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+## Related Reading
+- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [Accessibility Checker Tool: Common Mistakes](/blog/accessibility-checker-tool-buy-common-mistakes/)
+- [Accessibility Checker Tool: How It Compares](/blog/accessibility-checker-tool-buy-how-it-compares/)
+- [WooCommerce ADA Compliance Checklist for 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
