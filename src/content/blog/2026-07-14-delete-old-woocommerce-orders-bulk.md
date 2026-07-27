@@ -146,8 +146,14 @@ This is a good thing - your reports become a more accurate reflection of actual 
 
 The safest workflow is always: scan first (dry run), verify what will be deleted, then delete. This is exactly how the <a href="https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce">Stale Order Cleaner for WooCommerce</a> works. Scan, preview, confirm, done. No SQL, no WP-CLI, no risk of deleting the wrong orders.
 
-**Related reading:** <a href="/plugins/">All AmazingPlugins WordPress Plugins</a> - free tools for WooCommerce store owners.
-
 ---
 
 **Need to make your store accessible?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> automatically detects and fixes WCAG violations. Free, no coding required.
+
+## Related Reading
+
+- [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
+- [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
+- [ADA Lawsuits Hit 5,114 in 2025: What WooCommerce Store Owners Need to Know](/blog/ada-lawsuits-rising-woocommerce-2026/)
+- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

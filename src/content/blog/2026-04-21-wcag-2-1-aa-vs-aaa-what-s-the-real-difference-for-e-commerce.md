@@ -38,3 +38,11 @@ Level A criteria are the non-negotiables. If you fail any of these, users with d
 | WooCommerce stores (WooCommerce + third party plugins) | AA |
 | WooCommerce extensions | AA |
 
+## Related Reading
+
+- [WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
+- [Does the ADA Actually Apply to Your WooCommerce Store?](/blog/does-the-ada-actually-apply-to-your-woocommerce-store/)
+- [The Most Common WooCommerce WCAG Violations (And How to Fix Them)](/blog/woocommerce-wcag-violations-guide/)
+- [WCAG 2.2 Compliance WooCommerce: The Full Checklist](/blog/wcag-22-compliance-woocommerce-checklist/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
+

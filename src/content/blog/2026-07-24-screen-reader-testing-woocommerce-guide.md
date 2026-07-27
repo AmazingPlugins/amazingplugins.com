@@ -125,3 +125,11 @@ Save this. Run through it once a month, or after any major theme or plugin updat
 - [ ] Note every issue you find and prioritize checkout and product pages first
 
 Fifteen minutes, once a month, is a small price for knowing whether your store actually works for the millions of people relying on a screen reader to shop online. Denise and everyone like her deserve to reach that "Place Order" button and hear it say something back.
+
+## Related Reading
+
+- [Why Most WooCommerce Stores Fail a Screen Reader Test (And How to Fix Yours)](/blog/screen-reader-testing-woocommerce/)
+- [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
+- [How to Fix Missing Alt Text on WooCommerce Product Images](/blog/fix-missing-alt-text-woocommerce-product-images/)
+- [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
+- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
