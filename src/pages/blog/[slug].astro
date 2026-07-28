@@ -1,4 +1,5 @@
 ---
+import FAQSchema from "../components/FAQSchema.astro";
 import BreadcrumbSchema from "../components/BreadcrumbSchema.astro";
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -48,12 +49,10 @@ const articleSchema = {
 ---
 
 <BaseLayout title={title} description={description} canonicalPath={canonicalPath}>
-  <!-- Breadcrumb Schema -->
-  <BreadcrumbSchema items={[
-    { name: "Home", url: "/" },
-    { name: "Blog", url: "/blog/" },
     { name: title, url: canonicalPath }
   ]} />
+  <!-- FAQ Schema -->
+  <FAQSchema questions={faqQuestions} />
   <!-- Article Schema -->
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <!-- Open Graph -->
@@ -206,3 +205,11 @@ const articleSchema = {
     margin: 2.5rem 0;
   }
 </style>
+
+// Extract FAQ content from post
+const content = post.body || '';
+const faqMatches = [...content.matchAll(/### (.+\?)\n\n(.+?)(?=\n###|\n##|\n---|\n$)/gs)];
+const faqQuestions = faqMatches.map(m => ({
+  question: m[1].trim(),
+  answer: m[2].trim().replace(/\n/g, ' ').substring(0, 300)
+})).slice(0, 5); // Limit to 5 questions
