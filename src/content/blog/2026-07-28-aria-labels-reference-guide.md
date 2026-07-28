@@ -1,6 +1,6 @@
 ---
 title: "ARIA Labels in WooCommerce: The Complete Reference Guide for Store Owners"
-description: "Master ARIA labels for WooCommerce accessibility. Learn the 10 essential ARIA attributes, common mistakes, and testing methods to make your store screen-reader friendly."
+description: "Learn the 10 essential ARIA attributes for WooCommerce, common mistakes, and how to test them so your store works with screen readers."
 pubDate: 2026-07-28T00:00:00.000Z
 author: "Harun Ray"
 tags: ["accessibility", "ARIA", "WooCommerce", "WCAG", "screen readers"]
@@ -334,7 +334,7 @@ We get it. ARIA labels are important, but going through every template, plugin, 
 
 It handles the heavy lifting automatically. It adds proper ARIA attributes to your product pages, checkout forms, navigation, and cart. It fixes the most common accessibility gaps so you can focus on running your store instead of rewriting your templates.
 
-If you want a hands-on approach, check out our guides on [keyboard navigation testing](/blog/keyboard-navigation-guide/) and [screen reader testing for WooCommerce](/blog/screen-reader-testing-guide/) to learn more about making your store work for everyone.
+If you want a hands-on approach, check out our guides on [keyboard navigation testing](/blog/keyboard-navigation-woocommerce-fix-guide/) and [screen reader testing for WooCommerce](/blog/screen-reader-testing-woocommerce-guide/) to learn more about making your store work for everyone.
 
 ## Your ARIA labels checklist
 
