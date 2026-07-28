@@ -9,29 +9,8 @@ tags:
   - WooCommerce
   - Bulk Edit
   - Product Management
+seoKeywords:
+  - "woocommerce bulk edit"
+  - "bulk edit plugins"
+  - "woocommerce product management"
 gscSubmitted: true
----
-
-|---|---|---|---|---|---|---|
-| Edit in free version | All core fields | Limited | 10/page | Premium only | Limited | Premium only |
-| Edit variations free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| Preview before save | ✓ | ✗ | ✗ | ✗ | ✓ | ✗ |
-| Undo/rollback free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| 500+ product speed | <5s | Slow | Slow | Medium | Medium | Slow |
-| Estimated price | $49/yr | $79/yr | $69/yr | $49/yr | $79/yr | $69/yr |
-| Free version actual use | ✓ Full tool | ✗ Crippled | ✗ Demo | ✗ Paywall | ✗ Demo | ✗ Paywall |
-
----
-
-## 1. WooCommerce Smart Bulk Editor by AmazingPlugins
-
----
-
-
-## Related Reading
-- [How to Bulk Edit WooCommerce Product Prices](/blog/how-to-bulk-edit-woocommerce-product-prices/)
-- [How to Bulk Edit WooCommerce Variations](/blog/how-to-bulk-edit-woocommerce-variations/)
-- [WooCommerce Bulk Edit Not Working? Here's Why](/blog/woocommerce-bulk-edit-not-working-here-s-why/)
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
-- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
-
