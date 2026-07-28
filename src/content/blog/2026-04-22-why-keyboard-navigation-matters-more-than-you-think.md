@@ -10,16 +10,8 @@ tags:
   - Accessibility
   - WCAG
   - User Experience
+seoKeywords:
+  - "keyboard navigation woocommerce"
+  - "keyboard accessibility"
+  - "wcag keyboard navigation"
 gscSubmitted: true
----
-
-# Why Keyboard Navigation Matters More Than You Think
-
-## Related Reading
-
-- [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
-- [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
-- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
-- [Screen Reader Testing for WooCommerce: The 15-Minute Guide](/blog/screen-reader-testing-woocommerce-guide/)
-- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
-
