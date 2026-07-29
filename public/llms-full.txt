@@ -1,0 +1,103 @@
+# AmazingPlugins - Full Site Index
+
+## Site Overview
+AmazingPlugins is a WooCommerce accessibility tool company. We provide free plugins and educational content to help store owners achieve WCAG 2.1 AA compliance.
+
+## Main Plugin
+### WooCommerce Accessibility Fixer
+- **Version:** 1.4.1
+- **Price:** Free
+- **Platform:** WordPress/WooCommerce
+- **URL:** https://wordpress.org/plugins/woocommerce-accessibility-fixer/
+
+**Features:**
+1. Alt Text Fixer - Adds missing alt text to product images
+2. Keyboard Navigation - Ensures keyboard accessibility
+3. Focus Indicator Fix - Adds visible focus states
+4. ARIA Labels - Adds proper ARIA attributes
+5. Color Contrast - Fixes contrast ratio issues
+6. Form Labels - Adds missing form labels
+7. Heading Hierarchy - Fixes heading structure
+8. Skip Links - Adds skip navigation
+9. Landmark Regions - Adds ARIA landmarks
+10. Error Messages - Improves error messaging
+
+## Blog Posts (47 total)
+
+### ADA Compliance
+- Does the ADA Actually Apply to Your WooCommerce Store?
+- ADA Compliance WooCommerce Plugin: The Full 2026 Guide
+- ADA Compliance Plugin for WooCommerce: Full 2026 Guide
+- How to Make Your WooCommerce Store ADA Compliant
+- How to Avoid an ADA Lawsuit With Your WooCommerce Store
+- ADA Lawsuits Hit 5,114 in 2025: What WooCommerce Store Owners Need to Know
+
+### WCAG Guidelines
+- WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?
+- WCAG 2.2 Compliance WooCommerce: The Full Checklist
+- WCAG 2.2 Compliance: What Changed
+- WCAG 2.2 Compliance: Deadline
+- Your WooCommerce ADA Compliance Checklist for 2026
+
+### Keyboard Navigation
+- Why Keyboard Navigation Matters More Than You Think
+- How to Fix Keyboard Navigation in WooCommerce
+- Keyboard Navigation WooCommerce Fix Guide
+
+### Screen Reader Testing
+- Screen Reader Testing for WooCommerce: The 15-Minute Guide
+- Screen Reader Testing for WooCommerce
+
+### Accessibility Issues
+- 10 Common Accessibility Issues on E-commerce Sites
+- The Hidden Accessibility Issues That Are Costing Your Store Customers
+- WooCommerce WCAG Violations Guide
+- WooCommerce Checkout Accessibility Issues
+- Fix Missing Alt Text on WooCommerce Product Images
+
+### Plugin Comparisons
+- WooCommerce Accessibility Plugin vs accessiBe
+- WooCommerce Accessibility Plugin vs UserWay
+- WooCommerce Accessibility Plugin vs AudioEye
+- WooCommerce Plugin vs Widget Accessibility
+
+### Tools and Guides
+- Website Accessibility Plugin Full Guide
+- Best WordPress Accessibility Plugin Full Guide
+- Accessibility Checker Tool Buy: Common Mistakes
+- Accessibility Checker Tool Buy: How It Compares
+- Accessibility Checker Tool Buy: Step-by-Step Guide
+- Accessibility Checker Tool Buy: WCAG Checklist
+- Accessibility Checker Tool Buy: What It Actually Does
+
+### EU Compliance
+- EU Accessibility Act Ecommerce Checklist 2026
+- WooCommerce EAA Compliance Plugin Guide 2026
+
+### Technical Guides
+- ARIA Labels Reference Guide
+- WooCommerce + Elementor: Why Your Accessibility Plugin Is Not Working
+- WooCommerce Bulk Edit Not Working: Here's Why
+- How to Bulk Edit WooCommerce Product Prices
+- How to Bulk Edit WooCommerce Variations
+- The 6 Best WooCommerce Bulk Edit Plugins Compared
+- Delete Old WooCommerce Orders in Bulk
+
+### SEO and Business
+- Accessibility as an SEO Ranking Factor for E-commerce
+- WooCommerce Accessibility Plugin Comparison
+
+## FAQ Topics
+1. What regulations apply to my e-commerce store?
+2. What WCAG level do I need to meet?
+3. How do I test my store for accessibility?
+4. What's the difference between overlays and plugins?
+5. How often should I scan my store?
+6. Can a plugin make my store fully compliant?
+7. What about third-party widgets and scripts?
+
+## Contact Information
+- Website: https://amazingplugins.com
+- Plugin: https://wordpress.org/plugins/woocommerce-accessibility-fixer/
+- FAQ: https://amazingplugins.com/faq/
+- Blog: https://amazingplugins.com/blog/

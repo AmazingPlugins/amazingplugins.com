@@ -1,8 +1,25 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Organization schema for homepage
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "AmazingPlugins",
+  "url": "https://amazingplugins.com",
+  "description": "Small, sharp tools that fix real problems for WooCommerce store owners.",
+  "sameAs": [],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://amazingplugins.com/faq/"
+  }
+};
 ---
 
 <BaseLayout title="AmazingPlugins - Plugins for WooCommerce" description="Small, sharp tools that fix real problems for WooCommerce store owners. Free, all crafted.">
+  <!-- Organization Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
   <!-- Hero -->
   <section class="hero-wrap" id="hero-section">

@@ -1,0 +1,24 @@
+---
+interface Props {
+  questions: Array<{ question: string; answer: string }>;
+}
+
+const { questions } = Astro.props;
+
+if (questions.length === 0) return null;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": questions.map(q => ({
+    "@type": "Question",
+    "name": q.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": q.answer
+    }
+  }))
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
