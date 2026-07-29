@@ -49,6 +49,10 @@ const articleSchema = {
 ---
 
 <BaseLayout title={title} description={description} canonicalPath={canonicalPath}>
+  <!-- Breadcrumb Schema -->
+  <BreadcrumbSchema items={[
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog/' },
     { name: title, url: canonicalPath }
   ]} />
   <!-- FAQ Schema -->
