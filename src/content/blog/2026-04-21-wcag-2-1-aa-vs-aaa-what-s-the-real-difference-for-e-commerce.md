@@ -9,39 +9,8 @@ tags:
   - WCAG
   - Accessibility Standards
   - Compliance
+seoKeywords:
+  - "wcag 2.1 aa vs aaa"
+  - "wcag compliance levels"
+  - "wcag aaa requirements"
 gscSubmitted: true
----
-
-# WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?
-
-|-------|---------|---------------|
-| **A** | Habitable | The minimum - the building won't collapse, but it's not comfortable |
-| **AA** | Code-compliant | Meets building codes; safe and usable for most people |
-| **AAA** | Luxury | Exceeds code; optimized for the best possible experience |
-
-Every WCAG success criterion falls into one of these levels. Level A has 30 criteria. Level AA adds 20 more (for 50 total at Level AA). Level AAA adds another 17 beyond that.
-
----
-
-## What Each Level Actually Requires
-
-### Level A - The Absolute Minimum
-
-Level A criteria are the non-negotiables. If you fail any of these, users with disabilities literally cannot access your content.
-
-|---------|---------------|
-| US federal ADA (most courts) | AA |
-| European Accessibility Act | AA |
-| US federal government sites | AA (Section 508) |
-| Most state accessibility laws | AA |
-| WooCommerce stores (WooCommerce + third party plugins) | AA |
-| WooCommerce extensions | AA |
-
-## Related Reading
-
-- [WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
-- [Does the ADA Actually Apply to Your WooCommerce Store?](/blog/does-the-ada-actually-apply-to-your-woocommerce-store/)
-- [The Most Common WooCommerce WCAG Violations (And How to Fix Them)](/blog/woocommerce-wcag-violations-guide/)
-- [WCAG 2.2 Compliance WooCommerce: The Full Checklist](/blog/wcag-22-compliance-woocommerce-checklist/)
-- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
-
