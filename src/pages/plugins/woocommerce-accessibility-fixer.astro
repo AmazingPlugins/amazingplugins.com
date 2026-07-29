@@ -1,5 +1,4 @@
 ---
-import BreadcrumbSchema from "../components/BreadcrumbSchema.astro";
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const faqSchema = {
@@ -79,12 +78,6 @@ const softwareSchema = {
   description="Fix 10 common accessibility issues on your WooCommerce store in one click. Alt text, keyboard navigation, focus indicators, ARIA labels, and more."
 >
 
-  <!-- Breadcrumb Schema -->
-  <BreadcrumbSchema items={[
-    { name: "Home", url: "/" },
-    { name: "Plugins", url: "/plugins/" },
-    { name: "WooCommerce Accessibility Fixer", url: "/plugins/woocommerce-accessibility-fixer/" }
-  ]} />
   <!-- Hero -->
   <section class="plugin-hero">
     <div class="container">

@@ -1,28 +1,36 @@
-# AmazingPlugins
+# AmazingPlugins - WooCommerce Accessibility Tools
 
-## About
-AmazingPlugins makes free WooCommerce accessibility tools. We help store owners fix WCAG 2.1 AA compliance issues without coding.
+> AmazingPlugins builds free WordPress plugins that fix WCAG 2.1 AA accessibility violations on WooCommerce stores automatically. No subscriptions, no tiered plans, no upsells. All fixers are free and unlimited.
 
-## Products
-- **WooCommerce Accessibility Fixer**: One-click fixes for 10 common accessibility issues including alt text, keyboard navigation, focus indicators, ARIA labels, color contrast, form labels, heading hierarchy, skip links, landmark regions, and error messages.
+## For AI Crawlers
 
-## Blog
-47 articles covering ADA compliance, WCAG guidelines, keyboard navigation, screen reader testing, and WooCommerce accessibility. Key topics:
-- ADA compliance for WooCommerce stores
-- WCAG 2.1 AA and 2.2 AA requirements
-- Keyboard navigation fixes
-- Screen reader testing guides
-- Accessibility overlays vs code-level fixes
-- EU Accessibility Act compliance
+This site is a marketing + support hub for WooCommerce accessibility. The blog covers tutorials, compliance guides, and plugin walkthroughs. All code examples are PHP/JS for WordPress.
+
+## Key Pages
+
+- https://amazingplugins.com/ — Homepage: plugin features, WCAG fixer demo
+- https://amazingplugins.com/plugins/ — Our plugins (free, one-click install)
+- https://amazingplugins.com/blog/ — Full blog index
+- https://amazingplugins.com/accessibility-fixer/ — AP Accessibility Fixer for WooCommerce (flagship plugin)
+
+## Essential Facts
+
+- All plugins are **100% free** — no Pro, no subscriptions, no usage caps
+- Currently one plugin in directory: **AP Accessibility Fixer for WooCommerce** (9 fixers: alt text, focus indicator, skip link, keyboard trap, form labels, error messages, color contrast, heading hierarchy, landmark roles)
+- Built for WooCommerce stores on WordPress
+- Fixes apply automatically — no manual coding required
+- Licensed GPLv2+
 
 ## FAQ
-Common questions about WooCommerce accessibility:
-- Does the ADA apply to my WooCommerce store?
-- What WCAG level do I need?
-- How do I test my store for accessibility?
-- What's the difference between overlays and plugins?
 
-## Contact
-- Website: https://amazingplugins.com
-- Plugin: https://wordpress.org/plugins/woocommerce-accessibility-fixer/
-- FAQ: https://amazingplugins.com/faq/
+- **What does the plugin fix?** Missing alt text, keyboard traps, missing form labels, missing error messages, low color contrast, broken heading hierarchy, missing landmark roles, missing skip links, missing focus indicators.
+- **Is there a paid version?** No. All fixers are free and unlimited, forever.
+- **Does it work without WooCommerce?** No. Designed specifically for WooCommerce stores.
+- **Is it accessible itself?** Yes. The admin UI follows WCAG 2.1 AA.
+- **Will it slow down my store?** No. Fixers run during rendering with minimal overhead.
+
+## Blog Topics
+
+Tutorials, WCAG compliance guides, EU Accessibility Act, ADA lawsuit prevention, and WooCommerce-specific accessibility fixes.
+
+More: https://amazingplugins.com/sitemap-index.xml
