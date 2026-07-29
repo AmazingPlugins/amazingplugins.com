@@ -46,6 +46,14 @@ const articleSchema = {
     "@id": new URL(canonicalPath, Astro.site).href
   }
 };
+
+// Extract FAQ content from post
+const content = post.body || '';
+const faqMatches = [...content.matchAll(/### (.+?)\n\n(.+?)(?=\n###|\n##|\n---|\n$)/gs)];
+const faqQuestions = faqMatches.map(m => ({
+  question: m[1].trim(),
+  answer: m[2].trim().replace(/\n/g, ' ').substring(0, 300)
+})).slice(0, 5); // Limit to 5 questions
 ---
 
 <BaseLayout title={title} description={description} canonicalPath={canonicalPath}>
@@ -209,11 +217,3 @@ const articleSchema = {
     margin: 2.5rem 0;
   }
 </style>
-
-// Extract FAQ content from post
-const content = post.body || '';
-const faqMatches = [...content.matchAll(/### (.+\?)\n\n(.+?)(?=\n###|\n##|\n---|\n$)/gs)];
-const faqQuestions = faqMatches.map(m => ({
-  question: m[1].trim(),
-  answer: m[2].trim().replace(/\n/g, ' ').substring(0, 300)
-})).slice(0, 5); // Limit to 5 questions
