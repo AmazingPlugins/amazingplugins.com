@@ -1,5 +1,5 @@
 ---
-title: How to Bulk Edit WooCommerce Product Prices (Without Breaking Your Store)
+title: "How to Bulk Edit WooCommerce Product Prices (Step-by-Step Guide)"
 description: >-
   Learn how to bulk edit WooCommerce product prices with percentage adjustments,
   fixed changes, and tips to avoid costly mistakes.

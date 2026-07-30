@@ -1,5 +1,5 @@
 ---
-title: Why Accessibility Overlays Don't Protect You from ADA Lawsuits
+title: "Why Accessibility Overlays Won't Protect You from ADA Lawsuits"
 description: >-
   The legal and technical reasons why accessibility overlay widgets don't
   protect you from ADA lawsuits - and what actually works.

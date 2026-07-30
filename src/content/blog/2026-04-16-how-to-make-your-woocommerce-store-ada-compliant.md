@@ -1,5 +1,5 @@
 ---
-title: How to Make Your WooCommerce Store ADA Compliant (2026 Guide)
+title: "How to Make Your WooCommerce Store ADA Compliant (2026 Checklist)"
 description: >-
   A step-by-step guide to making your WooCommerce store ADA compliant with 10
   WCAG 2.1 AA accessibility fixes you can implement today.

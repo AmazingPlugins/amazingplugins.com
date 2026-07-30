@@ -1,5 +1,5 @@
 ---
-title: 10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)
+title: "10 Common Accessibility Issues on E-commerce Sites (With Fixes)"
 description: >-
   The 10 accessibility violations found most often on e-commerce sites, from
   missing alt text to poor contrast, with actionable fixes.
