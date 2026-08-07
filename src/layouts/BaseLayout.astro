@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
+  noindex?: boolean;
   title: string;
   description?: string;
   image?: string;
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const {
+  noindex = false,
   title,
   description = 'Small, sharp accessibility plugins for WooCommerce. Free, all crafted.',
   image = '/images/og-default.svg',
@@ -30,6 +32,7 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
     <link rel="canonical" href={canonicalURL} />
     <title>{title} | AmazingPlugins</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph -->

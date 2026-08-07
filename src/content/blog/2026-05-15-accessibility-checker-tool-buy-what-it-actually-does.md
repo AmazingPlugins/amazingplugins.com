@@ -1,7 +1,7 @@
 ---
-title: What an Accessibility Checker Tool Actually Does (Before You Buy)
+title: "What an Accessibility Checker Tool Actually Does (Honest Review)"
 description: >-
-  An honest breakdown of what an accessibility checker tool changes in your
+  An honest breakdown of what an accessibility checker tool changes in your WooCommerce store, and what it can't fix.
   store's code, what it can't fix, and what you should expect before buying one.
 pubDate: 2026-05-15T13:07:18.494Z
 author: Harun Ray

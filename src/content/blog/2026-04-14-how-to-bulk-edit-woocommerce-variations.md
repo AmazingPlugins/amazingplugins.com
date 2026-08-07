@@ -1,5 +1,5 @@
 ---
-title: How to Bulk Edit WooCommerce Variations (The Complete Guide)
+title: "Bulk Edit WooCommerce Variations: The Complete 2026 Guide"
 description: >-
   Learn how to bulk edit WooCommerce variations: attributes, prices, stock, and
   shipping classes across hundreds of variants at once.

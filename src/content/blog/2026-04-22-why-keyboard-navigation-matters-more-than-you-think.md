@@ -1,5 +1,5 @@
 ---
-title: Why Keyboard Navigation Matters More Than You Think
+title: "Why Keyboard Navigation Is Your Highest-ROI Accessibility Fix"
 description: >-
   Why keyboard accessibility is the highest-ROI fix for e-commerce, benefiting
   screen reader users, motor impairments, and more.

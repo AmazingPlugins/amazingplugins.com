@@ -1,5 +1,5 @@
 ---
-title: WooCommerce Bulk Edit Not Working? Here's Why (And How to Fix It)
+title: "WooCommerce Bulk Edit Not Working? 7 Fixes That Actually Work"
 description: >-
   WooCommerce bulk edit not working? Here are the most common causes from memory
   limits to plugin conflicts and how to fix each.

@@ -1,5 +1,5 @@
 ---
-title: The Hidden Accessibility Issues That Are Costing Your Store Customers
+title: "Hidden Accessibility Issues Costing Your Store Customers"
 description: >-
   Hidden accessibility barriers cause real customer drop-off. Fix keyboard traps,
   unclear form errors, and missing focus indicators.
