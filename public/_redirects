@@ -48,34 +48,33 @@
 
 # Date-prefixed blog posts
 
-# Non-dated Shopify blog posts (direct slugs + date-aliased variants in GSC index)
-
-# Shopify content redirects (removed from amazingplugins.com)
-# Redirect all Shopify blog posts to Appnary
-
-# Shopify content redirects (all to Appnary)
-/shopify/ https://appnary.com/ 301
-/plugins/shopify-accessibility-fixer/ https://appnary.com/plugins/shopify-accessibility-fixer/ 301
-/blog/best-accessibility-app-shopify-full-guide/ https://appnary.com/blog/best-accessibility-app-shopify-full-guide/ 301
-/blog/fix-shopify-app-accessibility-errors-without-uninstalling/ https://appnary.com/blog/fix-shopify-app-accessibility-errors-without-uninstalling/ 301
-/blog/free-shopify-accessibility-checker/ https://appnary.com/blog/free-shopify-accessibility-checker/ 301
-/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/ https://appnary.com/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/ 301
-/blog/how-to-make-your-shopify-store-eaa-compliant/ https://appnary.com/blog/how-to-make-your-shopify-store-eaa-compliant/ 301
-/blog/shopify-accessibility-app-full-guide/ https://appnary.com/blog/shopify-accessibility-app-full-guide/ 301
-/blog/shopify-accessibility-app-vs-audioeye/ https://appnary.com/blog/shopify-accessibility-app-vs-audioeye/ 301
-/blog/shopify-accessibility-app-vs-userway/ https://appnary.com/blog/shopify-accessibility-app-vs-userway/ 301
-/blog/shopify-accessibility-policy-template/ https://appnary.com/blog/shopify-accessibility-policy-template/ 301
-/blog/shopify-accessibility-statement-template-2026/ https://appnary.com/blog/shopify-accessibility-statement-template-2026/ 301
-/blog/shopify-accessibility-tool-full-guide/ https://appnary.com/blog/shopify-accessibility-tool-full-guide/ 301
-/blog/shopify-ada-compliance-app-full-guide/ https://appnary.com/blog/shopify-ada-compliance-app-full-guide/ 301
-/blog/shopify-alt-text-missing-product-images/ https://appnary.com/blog/shopify-alt-text-missing-product-images/ 301
-/blog/shopify-cart-drawer-accessibility-fixes/ https://appnary.com/blog/shopify-cart-drawer-accessibility-fixes/ 301
-/blog/shopify-checkout-accessibility-fixes/ https://appnary.com/blog/shopify-checkout-accessibility-fixes/ 301
-/blog/shopify-collection-filter-accessibility-fixes/ https://appnary.com/blog/shopify-collection-filter-accessibility-fixes/ 301
-/blog/shopify-overlay-alternatives/ https://appnary.com/blog/shopify-overlay-alternatives/ 301
-/blog/shopify-popup-app-accessibility-fixes/ https://appnary.com/blog/shopify-popup-app-accessibility-fixes/ 301
-/blog/shopify-subscription-widget-accessibility-fixes/ https://appnary.com/blog/shopify-subscription-widget-accessibility-fixes/ 301
-/blog/shopify-third-party-apps-wcag-violations/ https://appnary.com/blog/shopify-third-party-apps-wcag-violations/ 301
-/blog/shopify-wcag-2-2-compliance-checklist/ https://appnary.com/blog/shopify-wcag-2-2-compliance-checklist/ 301
-/blog/wcag-22-compliance-shopify-deadline/ https://appnary.com/blog/wcag-22-compliance-shopify-deadline/ 301
-/blog/why-shopify-stores-get-sued-for-ada/ https://appnary.com/blog/why-shopify-stores-get-sued-for-ada/ 301
+# Discontinued Shopify content (AmazingPlugins is WooCommerce-only) -> /plugins/
+# Trailing `*` splat matches both the slash and non-slash form of each URL.
+/shopify* /plugins/ 301
+/plugins/shopify-accessibility-fixer* /plugins/ 301
+/blog/best-accessibility-app-shopify-full-guide* /plugins/ 301
+/blog/fix-shopify-app-accessibility-errors-without-uninstalling* /plugins/ 301
+/blog/free-shopify-accessibility-checker* /plugins/ 301
+/blog/how-to-audit-your-shopify-store-for-accessibility* /plugins/ 301
+/blog/how-to-avoid-ada-lawsuits-shopify-woocommerce* /plugins/ 301
+/blog/how-to-make-your-shopify-store-eaa-compliant* /plugins/ 301
+/blog/shopify-accessibility-app-full-guide* /plugins/ 301
+/blog/shopify-accessibility-app-vs-audioeye* /plugins/ 301
+/blog/shopify-accessibility-app-vs-userway* /plugins/ 301
+/blog/shopify-accessibility-audit* /plugins/ 301
+/blog/shopify-accessibility-policy-template* /plugins/ 301
+/blog/shopify-accessibility-statement-template-2026* /plugins/ 301
+/blog/shopify-accessibility-tool-full-guide* /plugins/ 301
+/blog/shopify-ada-compliance-app-full-guide* /plugins/ 301
+/blog/shopify-alt-text-missing-product-images* /plugins/ 301
+/blog/shopify-cart-drawer-accessibility-fixes* /plugins/ 301
+/blog/shopify-checkout-accessibility-fixes* /plugins/ 301
+/blog/shopify-collection-filter-accessibility-fixes* /plugins/ 301
+/blog/shopify-overlay-alternatives* /plugins/ 301
+/blog/shopify-popup-app-accessibility-fixes* /plugins/ 301
+/blog/shopify-subscription-widget-accessibility-fixes* /plugins/ 301
+/blog/shopify-third-party-apps-wcag-violations* /plugins/ 301
+/blog/shopify-wcag-2-2-compliance-checklist* /plugins/ 301
+/blog/wcag-22-compliance-shopify-checklist* /plugins/ 301
+/blog/wcag-22-compliance-shopify-deadline* /plugins/ 301
+/blog/why-shopify-stores-get-sued-for-ada* /plugins/ 301
