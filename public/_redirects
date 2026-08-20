@@ -8,9 +8,6 @@
 # Deleted product/pricing pages
 /pricing* /plugins/ 301
 
-# Post never made it to main (lost in a content pipeline incident); indexed by GSC anyway
-/blog/woocommerce-variation-swatches-accessibility-fixes* /blog/ 301
-
 # Renamed blog post (was Shopify+WooCommerce, now WooCommerce-only)
 
 # Dated blog post URLs -> clean canonical URLs (duplicate content fix, GSC indexing)
