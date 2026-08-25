@@ -17,9 +17,17 @@ jobs:
           set -euo pipefail
           curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
             "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains" \
-            | python3 -c 'import json,sys; d=json.load(sys.stdin); print("success", d.get("success"));
-print("errors", d.get("errors"));
-[print("-", x.get("name"), x.get("status"), x.get("verification_data")) for x in (d.get("result") or [])]'
+            > /tmp/domains.json
+          python3 <<'PY'
+          import json
+          d = json.load(open("/tmp/domains.json"))
+          print("success", d.get("success"))
+          print("errors", d.get("errors"))
+          for x in d.get("result") or []:
+              print("-", x.get("name"), x.get("status"))
+          if not d.get("success"):
+              raise SystemExit(1)
+          PY
 
       - name: Add www.amazingplugins.com if missing
         env:
@@ -27,19 +35,28 @@ print("errors", d.get("errors"));
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -euo pipefail
-          LIST=$(curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains")
-          if echo "$LIST" | python3 -c 'import json,sys; d=json.load(sys.stdin); names={x.get("name") for x in (d.get("result") or [])}; sys.exit(0 if "www.amazingplugins.com" in names else 1)'; then
+          curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains" \
+            > /tmp/domains.json
+          if python3 -c 'import json; d=json.load(open("/tmp/domains.json")); names={x.get("name") for x in (d.get("result") or [])}; raise SystemExit(0 if "www.amazingplugins.com" in names else 1)'; then
             echo "www.amazingplugins.com already attached"
             exit 0
           fi
-          RESP=$(curl -sS -X POST \
+          curl -sS -X POST \
             -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
             -H "Content-Type: application/json" \
             --data '{"name":"www.amazingplugins.com"}' \
-            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains")
-          echo "$RESP" | python3 -c 'import json,sys; d=json.load(sys.stdin); print("success", d.get("success")); print("errors", d.get("errors")); print("result", d.get("result"));
-sys.exit(0 if d.get("success") else 1)'
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains" \
+            > /tmp/add.json
+          python3 <<'PY'
+          import json
+          d = json.load(open("/tmp/add.json"))
+          print("success", d.get("success"))
+          print("errors", d.get("errors"))
+          print("result", d.get("result"))
+          if not d.get("success"):
+              raise SystemExit(1)
+          PY
 
       - name: Verify HTTPS after attach
         run: |
@@ -53,6 +70,5 @@ sys.exit(0 if d.get("success") else 1)'
             fi
             sleep 15
           done
-          echo "www still not healthy (may need DNS/SSL propagation)"
+          echo "www still not healthy yet (DNS/SSL may still be propagating)"
           curl -sSI --max-time 20 https://www.amazingplugins.com/ | head -15 || true
-          exit 0
