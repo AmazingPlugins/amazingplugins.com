@@ -1,0 +1,109 @@
+name: Redirect www to apex
+
+on:
+  workflow_dispatch:
+
+jobs:
+  redirect-www:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Create Single Redirect www → apex
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/zones?name=amazingplugins.com" > /tmp/zones.json
+          python3 <<'PY'
+          import json, os, urllib.request, urllib.error
+
+          token = os.environ["CLOUDFLARE_API_TOKEN"]
+          zones = json.load(open("/tmp/zones.json"))
+          print("zones success", zones.get("success"), zones.get("errors"))
+          if not zones.get("success") or not zones.get("result"):
+              raise SystemExit(1)
+          zone_id = zones["result"][0]["id"]
+          print("zone", zone_id)
+
+          def req(method, url, body=None):
+              data = None if body is None else json.dumps(body).encode()
+              r = urllib.request.Request(url, data=data, method=method, headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json",
+              })
+              try:
+                  with urllib.request.urlopen(r) as resp:
+                      return resp.getcode(), json.load(resp)
+              except urllib.error.HTTPError as e:
+                  raw = e.read().decode("utf-8", "replace")
+                  try:
+                      payload = json.loads(raw)
+                  except Exception:
+                      payload = {"raw": raw}
+                  return e.code, payload
+
+          # Read current dynamic redirect entrypoint
+          code, current = req(
+              "GET",
+              f"https://api.cloudflare.com/client/v4/zones/{zone_id}/rulesets/phases/http_request_dynamic_redirect/entrypoint",
+          )
+          print("get entrypoint", code, json.dumps(current)[:2000])
+
+          rules = []
+          if current.get("success") and current.get("result"):
+              rules = list(current["result"].get("rules") or [])
+
+          # Drop any prior www→apex rule we manage
+          MARKER = "ap-www-to-apex"
+          rules = [r for r in rules if MARKER not in (r.get("description") or "")]
+
+          www_rule = {
+              "description": f"{MARKER}: redirect www to apex",
+              "expression": '(http.host eq "www.amazingplugins.com")',
+              "action": "redirect",
+              "action_parameters": {
+                  "from_value": {
+                      "status_code": 301,
+                      "target_url": {
+                          "expression": 'concat("https://amazingplugins.com", http.request.uri.path)',
+                      },
+                      "preserve_query_string": True,
+                  }
+              },
+              "enabled": True,
+          }
+          rules.insert(0, www_rule)
+
+          body = {"rules": rules}
+          # PUT creates/updates the phase entrypoint ruleset
+          code, out = req(
+              "PUT",
+              f"https://api.cloudflare.com/client/v4/zones/{zone_id}/rulesets/phases/http_request_dynamic_redirect/entrypoint",
+              body,
+          )
+          print("put entrypoint", code, json.dumps(out)[:3000])
+          if code >= 400 or not out.get("success"):
+              raise SystemExit(1)
+          PY
+
+      - name: Verify www redirects to apex
+        run: |
+          set -euo pipefail
+          for i in 1 2 3 4 5 6 7 8; do
+            echo "=== attempt $i ==="
+            curl -sSI --max-time 20 https://www.amazingplugins.com/ | head -20 || true
+            CODE=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://www.amazingplugins.com/ || true)
+            LOC=$(curl -sSI --max-time 20 https://www.amazingplugins.com/ 2>/dev/null | awk 'tolower($1)=="location:"{print $2; exit}' | tr -d '\r' || true)
+            echo "code=$CODE location=$LOC"
+            if [ "$CODE" = "301" ] || [ "$CODE" = "302" ] || [ "$CODE" = "308" ]; then
+              echo "$LOC" | grep -q 'amazingplugins.com' && exit 0
+            fi
+            if [ "$CODE" = "200" ]; then
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "www still not redirecting/healthy"
+          exit 1
