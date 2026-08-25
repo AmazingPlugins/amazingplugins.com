@@ -1,0 +1,121 @@
+name: Fix www DNS for Pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-www-dns:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Resolve zone and inspect www DNS
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/zones?name=amazingplugins.com" > /tmp/zones.json
+          python3 <<'PY'
+          import json
+          d = json.load(open("/tmp/zones.json"))
+          print("success", d.get("success"), "errors", d.get("errors"))
+          if not d.get("success") or not d.get("result"):
+              raise SystemExit(1)
+          z = d["result"][0]
+          open("/tmp/zone_id.txt","w").write(z["id"])
+          print("zone", z["id"], z["name"], z.get("status"))
+          PY
+          ZONE_ID=$(cat /tmp/zone_id.txt)
+          curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/dns_records?name=www.amazingplugins.com" > /tmp/www-dns.json
+          python3 <<'PY'
+          import json
+          d = json.load(open("/tmp/www-dns.json"))
+          print("success", d.get("success"), "errors", d.get("errors"))
+          for r in d.get("result") or []:
+              print("-", r.get("id"), r.get("type"), r.get("name"), r.get("content"), "proxied", r.get("proxied"))
+          PY
+
+      - name: Point www CNAME to Pages project
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          ZONE_ID=$(cat /tmp/zone_id.txt)
+          TARGET="amazingplugins-com.pages.dev"
+          python3 <<'PY'
+          import json, os, urllib.request
+          token = os.environ["CLOUDFLARE_API_TOKEN"]
+          zone = open("/tmp/zone_id.txt").read().strip()
+          target = "amazingplugins-com.pages.dev"
+          d = json.load(open("/tmp/www-dns.json"))
+          records = d.get("result") or []
+
+          def req(method, url, body=None):
+              data = None if body is None else json.dumps(body).encode()
+              r = urllib.request.Request(url, data=data, method=method, headers={
+                  "Authorization": f"Bearer {token}",
+                  "Content-Type": "application/json",
+              })
+              with urllib.request.urlopen(r) as resp:
+                  return json.load(resp)
+
+          # Delete conflicting non-CNAME or wrong CNAME records for www
+          keep = None
+          for r in records:
+              if r.get("type") == "CNAME" and r.get("content") == target:
+                  keep = r
+                  continue
+              print("deleting", r.get("type"), r.get("id"), r.get("content"))
+              out = req("DELETE", f"https://api.cloudflare.com/client/v4/zones/{zone}/dns_records/{r['id']}")
+              print("delete success", out.get("success"), out.get("errors"))
+
+          if keep:
+              print("www already CNAMEs to", target, "id", keep.get("id"), "proxied", keep.get("proxied"))
+              if not keep.get("proxied"):
+                  out = req("PATCH", f"https://api.cloudflare.com/client/v4/zones/{zone}/dns_records/{keep['id']}", {
+                      "type": "CNAME",
+                      "name": "www",
+                      "content": target,
+                      "proxied": True,
+                      "ttl": 1,
+                  })
+                  print("proxy enable", out.get("success"), out.get("errors"))
+          else:
+              out = req("POST", f"https://api.cloudflare.com/client/v4/zones/{zone}/dns_records", {
+                  "type": "CNAME",
+                  "name": "www",
+                  "content": target,
+                  "proxied": True,
+                  "ttl": 1,
+              })
+              print("create", out.get("success"), out.get("errors"), out.get("result"))
+          PY
+
+      - name: Recheck Pages domain status and HTTPS
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+              "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains" > /tmp/domains.json
+            python3 <<'PY'
+          import json
+          d = json.load(open("/tmp/domains.json"))
+          for x in d.get("result") or []:
+              if x.get("name") == "www.amazingplugins.com":
+                  print("status", x.get("status"), "verification", x.get("verification_data"), "validation", x.get("validation_data"))
+          PY
+            CODE=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://www.amazingplugins.com/ || true)
+            echo "https code=$CODE"
+            if [ "$CODE" = "200" ] || [ "$CODE" = "301" ] || [ "$CODE" = "302" ] || [ "$CODE" = "308" ]; then
+              curl -sSI --max-time 20 https://www.amazingplugins.com/ | head -15
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "Still not healthy; dumping final headers"
+          curl -sSI --max-time 20 https://www.amazingplugins.com/ | head -20 || true
