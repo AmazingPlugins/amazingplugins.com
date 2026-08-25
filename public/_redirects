@@ -68,6 +68,7 @@
 /plugins/shopify-accessibility-fixer* /plugins/ 301
 /blog/2026-05-21-shopify-accessibility-statement-vs-policy-vs-remediation-log* /plugins/ 301
 /blog/2026-05-26-shopify-accessibility-app-vs-audioeye* /plugins/ 301
+/blog/2026-05-26-shopify-accessibility-app-comparison-widget-vs-checker-vs-code-level-fix* /plugins/ 301
 /blog/best-accessibility-app-shopify-full-guide* /plugins/ 301
 /blog/fix-shopify-app-accessibility-errors-without-uninstalling* /plugins/ 301
 /blog/free-shopify-accessibility-checker* /plugins/ 301
@@ -75,6 +76,7 @@
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce* /plugins/ 301
 /blog/how-to-make-your-shopify-store-accessible* /plugins/ 301
 /blog/how-to-make-your-shopify-store-eaa-compliant* /plugins/ 301
+/blog/shopify-accessibility-app-comparison-widget-vs-checker-vs-code-level-fix* /plugins/ 301
 /blog/shopify-accessibility-app-full-guide* /plugins/ 301
 /blog/shopify-accessibility-app-vs-audioeye* /plugins/ 301
 /blog/shopify-accessibility-app-vs-userway* /plugins/ 301
@@ -89,9 +91,14 @@
 /blog/shopify-collection-filter-accessibility-fixes* /plugins/ 301
 /blog/shopify-overlay-alternatives* /plugins/ 301
 /blog/shopify-popup-app-accessibility-fixes* /plugins/ 301
+/blog/shopify-review-app-accessibility-fixes* /plugins/ 301
 /blog/shopify-subscription-widget-accessibility-fixes* /plugins/ 301
 /blog/shopify-third-party-apps-wcag-violations* /plugins/ 301
 /blog/shopify-wcag-2-2-compliance-checklist* /plugins/ 301
 /blog/wcag-22-compliance-shopify-checklist* /plugins/ 301
 /blog/wcag-22-compliance-shopify-deadline* /plugins/ 301
 /blog/why-shopify-stores-get-sued-for-ada* /plugins/ 301
+
+# Legacy / unpublished paths still returning 404 in GSC (Aug 2026)
+/woocommerce-accessibility-fixer* /plugins/woocommerce-accessibility-fixer/ 301
+/blog/accessible-product-data-for-ai-shopping* /blog/accessibility-seo-ranking-factor-ecommerce/ 301
