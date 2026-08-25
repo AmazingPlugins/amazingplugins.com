@@ -1,0 +1,58 @@
+name: Add www custom domain
+
+on:
+  workflow_dispatch:
+
+jobs:
+  add-www:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: List current Pages domains
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains" \
+            | python3 -c 'import json,sys; d=json.load(sys.stdin); print("success", d.get("success"));
+print("errors", d.get("errors"));
+[print("-", x.get("name"), x.get("status"), x.get("verification_data")) for x in (d.get("result") or [])]'
+
+      - name: Add www.amazingplugins.com if missing
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          LIST=$(curl -sS -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains")
+          if echo "$LIST" | python3 -c 'import json,sys; d=json.load(sys.stdin); names={x.get("name") for x in (d.get("result") or [])}; sys.exit(0 if "www.amazingplugins.com" in names else 1)'; then
+            echo "www.amazingplugins.com already attached"
+            exit 0
+          fi
+          RESP=$(curl -sS -X POST \
+            -H "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data '{"name":"www.amazingplugins.com"}' \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/amazingplugins-com/domains")
+          echo "$RESP" | python3 -c 'import json,sys; d=json.load(sys.stdin); print("success", d.get("success")); print("errors", d.get("errors")); print("result", d.get("result"));
+sys.exit(0 if d.get("success") else 1)'
+
+      - name: Verify HTTPS after attach
+        run: |
+          set -euo pipefail
+          for i in 1 2 3 4 5 6 7 8; do
+            CODE=$(curl -sS -o /dev/null -w '%{http_code}' --max-time 20 https://www.amazingplugins.com/ || true)
+            echo "attempt $i: HTTP $CODE"
+            if [ "$CODE" = "200" ] || [ "$CODE" = "301" ] || [ "$CODE" = "302" ] || [ "$CODE" = "308" ]; then
+              curl -sSI --max-time 20 https://www.amazingplugins.com/ | head -15
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "www still not healthy (may need DNS/SSL propagation)"
+          curl -sSI --max-time 20 https://www.amazingplugins.com/ | head -15 || true
+          exit 0
