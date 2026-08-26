@@ -80,7 +80,7 @@ const faqQuestions = faqMatches.map(m => ({
   <meta name="twitter:description" content={description} />
   <article class="blog-post">
     <header class="post-header">
-      <div class="container">
+      <div class="container container-narrow">
         <div class="post-meta">
           <span class="post-tag">{tags?.[0] ?? 'Accessibility'}</span>
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
@@ -101,9 +101,10 @@ const faqQuestions = faqMatches.map(m => ({
 
 <style>
   .post-header {
-    background: var(--color-primary);
-    color: white;
+    background: var(--cream-2);
+    color: var(--ink);
     padding: 4rem 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .post-meta {
@@ -116,14 +117,15 @@ const faqQuestions = faqMatches.map(m => ({
   }
 
   .post-tag {
-    background: rgba(255,255,255,0.2);
+    background: var(--color-primary-bg);
+    color: var(--coral-deep);
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
     font-weight: 600;
   }
 
   .post-meta time, .post-author {
-    opacity: 0.85;
+    color: var(--ink-3);
   }
 
   .post-title {
@@ -134,7 +136,7 @@ const faqQuestions = faqMatches.map(m => ({
 
   .post-description {
     font-size: 1.15rem;
-    opacity: 0.9;
+    color: var(--ink-2);
     margin: 0;
     max-width: 680px;
     line-height: 1.6;
@@ -146,6 +148,9 @@ const faqQuestions = faqMatches.map(m => ({
 
   .container-narrow {
     max-width: 720px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   /* Blog content typography */
@@ -215,5 +220,26 @@ const faqQuestions = faqMatches.map(m => ({
     border: none;
     border-top: 1px solid var(--color-border);
     margin: 2.5rem 0;
+  }
+
+  .post-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .post-content :global(th),
+  .post-content :global(td) {
+    border: 1px solid var(--line);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .post-content :global(th) {
+    background: var(--cream-2);
+    color: var(--ink);
+    font-weight: 600;
   }
 </style>
