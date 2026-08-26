@@ -44,7 +44,7 @@ If you only install one thing and hope for "compliant," you'll be disappointed. 
 | WooCommerce fixer | WooCommerce Accessibility Fixer (ours) | Yes, Woo hooks/templates | Product alt text, cart/checkout labels, focus | Legal guarantees, copywriting |
 | Overlay / widget | accessiBe, UserWay, AudioEye (widget mode) | Usually no | Temporary visitor toolbar | Root-cause WCAG fixes |
 
-For a deeper look at plugin vs overlay, see [WooCommerce plugin vs widget accessibility](/blog/woocommerce-plugin-vs-widget-accessibility/) and [why overlays don't protect you from ADA lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/).
+For a deeper look at plugin vs overlay, see [WooCommerce plugin vs widget accessibility](/blog/woocommerce-plugin-vs-widget-accessibility/), the [WooCommerce accessibility widget comparison](/blog/woocommerce-accessibility-widget-compared/), and [why overlays don't protect you from ADA lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/).
 
 ## Scanners: best WCAG WordPress plugin for finding problems
 

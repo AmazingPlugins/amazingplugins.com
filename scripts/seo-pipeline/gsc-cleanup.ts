@@ -13,7 +13,7 @@ import { loadSeoPipelineEnv } from './env-bootstrap';
 loadSeoPipelineEnv();
 
 const SITE_URL = process.env.SITE_URL || 'https://amazingplugins.com';
-const SITEMAP_URL = 'https://amazingplugins.com/sitemap-0.xml';
+const SITEMAP_URL = 'https://amazingplugins.com/sitemap-index.xml';
 
 /**
  * Parse Shopify redirect URLs from _redirects

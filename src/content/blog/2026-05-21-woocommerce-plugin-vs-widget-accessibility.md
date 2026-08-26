@@ -84,6 +84,8 @@ For most stores, the sane setup is:
 
 That combination is boring, which is good. Boring is cheaper than a lawsuit.
 
+For a product-by-product take on the "woocommerce accessibility widget" search, see [WooCommerce accessibility widget vs plugin](/blog/woocommerce-accessibility-widget-compared/).
+
 ## Quick FAQs
 
 ### Are accessibility widgets enough for WooCommerce?
