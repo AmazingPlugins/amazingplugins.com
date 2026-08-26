@@ -3,9 +3,7 @@ import os from 'os';
 import path from 'path';
 
 const ENV_FILES = [
-  '/Users/ray/.openclaw/secrets/ap.env',
   path.join(os.homedir(), '.openclaw/secrets/ap.env'),
-  '/Users/ray/.hermes/.env',
   path.join(os.homedir(), '.hermes/.env'),
 ];
 

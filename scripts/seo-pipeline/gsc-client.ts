@@ -1,10 +1,6 @@
 import { google } from 'googleapis';
 import { JWT } from 'google-auth-library';
-import path from 'path';
 import { loadSeoPipelineEnv } from './env-bootstrap';
-
-// GSC service account email from context
-const SERVICE_ACCOUNT_EMAIL = 'gsc-agent@crontinel.iam.gserviceaccount.com';
 
 // Initialize GSC API client
 let gscClient: any = null;
@@ -34,14 +30,16 @@ export async function getGSCClient(): Promise<any> {
 
 export interface URLStatus {
   url: string;
-  indexed: boolean;
+  /** True when Search Analytics returned at least one row. Not URL Inspection / index coverage. */
+  hasSearchData: boolean;
   impressions: number;
   clicks: number;
   position: number;
 }
 
 /**
- * Check if a URL is indexed in Google
+ * Check whether a URL has Search Analytics rows.
+ * This is not an index-coverage check.
  */
 export async function checkURLStatus(url: string): Promise<URLStatus> {
   const client = await getGSCClient();
@@ -65,19 +63,19 @@ export async function checkURLStatus(url: string): Promise<URLStatus> {
       },
     });
     
-    const data = response.data.rows?.[0] || {};
+    const row = response.data.rows?.[0];
     return {
       url,
-      indexed: true,
-      impressions: data.impressions || 0,
-      clicks: data.clicks || 0,
-      position: data.position || 0,
+      hasSearchData: Boolean(row),
+      impressions: row?.impressions || 0,
+      clicks: row?.clicks || 0,
+      position: row?.position || 0,
     };
   } catch (error: any) {
     console.error(`Error checking URL status for ${url}:`, error.message);
     return {
       url,
-      indexed: false,
+      hasSearchData: false,
       impressions: 0,
       clicks: 0,
       position: 0,
@@ -129,7 +127,7 @@ export async function submitURLForIndexing(url: string): Promise<boolean> {
       inspectionUrl: url,
       languageCode: 'en-US',
     });
-    console.log(`Submitted URL for indexing: ${url}`);
+    console.log(`Inspected URL (does not request indexing): ${url}`);
     return true;
   } catch (error: any) {
     console.error(`Error submitting URL ${url}:`, error.message);

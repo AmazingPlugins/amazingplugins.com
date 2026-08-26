@@ -5,7 +5,7 @@ import { getGSCClient } from './gsc-client';
 import { markAsSubmitted, loadState } from './state-store';
 
 const SITE_URL = process.env.SITE_URL || 'https://amazingplugins.com';
-const SITEMAP_URL = process.env.SITEMAP_URL || 'https://amazingplugins.com/sitemap-0.xml';
+const SITEMAP_URL = process.env.SITEMAP_URL || 'https://amazingplugins.com/sitemap-index.xml';
 
 /**
  * Get all blog post files that haven't been submitted to GSC
