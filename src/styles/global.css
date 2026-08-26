@@ -24,6 +24,16 @@
   --max: 1280px;
   --gutter: clamp(20px, 4vw, 56px);
   --pad-section: clamp(72px, 10vh, 140px);
+
+  /* Aliases for pages still on the pre-redesign token names */
+  --color-primary: var(--coral);
+  --color-primary-bg: color-mix(in oklab, var(--coral) 16%, transparent);
+  --color-heading: var(--ink);
+  --color-text: var(--ink-2);
+  --color-text-light: var(--ink-2);
+  --color-bg: var(--cream);
+  --color-bg-alt: var(--cream-2);
+  --color-border: var(--line);
 }
 
 [data-theme="dark"] {
@@ -79,7 +89,8 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 .skip-link:focus { top: 0; }
 
 /* Layout */
-.wrap {
+.wrap,
+.container {
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
