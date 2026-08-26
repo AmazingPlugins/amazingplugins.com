@@ -1,10 +1,28 @@
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+function walkSecretsCandidates(startDir: string): string[] {
+  const files: string[] = [];
+  let dir = path.resolve(startDir);
+  for (let i = 0; i < 8; i++) {
+    files.push(path.join(dir, '.secrets', 'ap.env'));
+    const parent = path.dirname(dir);
+    if (parent === dir) break;
+    dir = parent;
+  }
+  return files;
+}
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 
 const ENV_FILES = [
-  path.join(os.homedir(), '.openclaw/secrets/ap.env'),
+  ...walkSecretsCandidates(process.cwd()),
+  ...walkSecretsCandidates(scriptDir),
+  path.join(os.homedir(), '.hermes/secrets/ap.env'),
   path.join(os.homedir(), '.hermes/.env'),
+  path.join(os.homedir(), '.openclaw/secrets/ap.env'),
 ];
 
 function applyEnvLine(line: string): void {
@@ -30,10 +48,13 @@ function applyEnvLine(line: string): void {
 }
 
 export function loadSeoPipelineEnv(): void {
+  const seen = new Set<string>();
   for (const envFile of ENV_FILES) {
-    if (!fs.existsSync(envFile)) continue;
+    const resolved = path.resolve(envFile);
+    if (seen.has(resolved) || !fs.existsSync(resolved)) continue;
+    seen.add(resolved);
 
-    const contents = fs.readFileSync(envFile, 'utf-8');
+    const contents = fs.readFileSync(resolved, 'utf-8');
     for (const line of contents.split(/\r?\n/)) {
       applyEnvLine(line);
     }
