@@ -102,3 +102,5 @@
 # Legacy / unpublished paths still returning 404 in GSC (Aug 2026)
 /woocommerce-accessibility-fixer* /plugins/woocommerce-accessibility-fixer/ 301
 /blog/accessible-product-data-for-ai-shopping* /blog/accessibility-seo-ranking-factor-ecommerce/ 301
+/blog/best-shopify-accessibility-app-compared* /plugins/ 301
+/accessible-product-data* /blog/accessibility-seo-ranking-factor-ecommerce/ 301
