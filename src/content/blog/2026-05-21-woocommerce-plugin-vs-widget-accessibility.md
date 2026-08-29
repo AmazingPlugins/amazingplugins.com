@@ -103,7 +103,9 @@ Sometimes it can help as a temporary layer for some users, but it should not be 
 
 ## Related pages
 
+- [WooCommerce accessibility widget vs plugin](https://amazingplugins.com/blog/woocommerce-accessibility-widget-compared/)
 - [Best WordPress accessibility plugin for WooCommerce](https://amazingplugins.com/blog/best-wordpress-accessibility-plugin-full-guide/)
+- [Best WCAG WordPress plugins compared](https://amazingplugins.com/blog/best-wcag-wordpress-plugins-compared/)
 - [WooCommerce WCAG violations guide](https://amazingplugins.com/blog/woocommerce-wcag-violations-guide/)
 - [WooCommerce accessibility plugin vs accessiBe](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-accessibe/)
 - [WooCommerce accessibility plugin vs UserWay](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-vs-userway/)
