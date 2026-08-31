@@ -24,5 +24,5 @@ Common questions about WooCommerce accessibility:
 
 ## Contact
 - Website: https://amazingplugins.com
-- Plugin: https://wordpress.org/plugins/woocommerce-accessibility-fixer/
+- Plugin: https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/
 - FAQ: https://amazingplugins.com/faq/

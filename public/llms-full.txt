@@ -5,10 +5,10 @@ AmazingPlugins is a WooCommerce accessibility tool company. We provide free plug
 
 ## Main Plugin
 ### WooCommerce Accessibility Fixer
-- **Version:** 1.4.1
+- **Version:** 1.5.1
 - **Price:** Free
 - **Platform:** WordPress/WooCommerce
-- **URL:** https://wordpress.org/plugins/woocommerce-accessibility-fixer/
+- **URL:** https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/
 
 **Features:**
 1. Alt Text Fixer - Adds missing alt text to product images
@@ -98,6 +98,6 @@ AmazingPlugins is a WooCommerce accessibility tool company. We provide free plug
 
 ## Contact Information
 - Website: https://amazingplugins.com
-- Plugin: https://wordpress.org/plugins/woocommerce-accessibility-fixer/
+- Plugin: https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/
 - FAQ: https://amazingplugins.com/faq/
 - Blog: https://amazingplugins.com/blog/
