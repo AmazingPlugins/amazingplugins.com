@@ -39,7 +39,8 @@ const wooFaqs = [
   },
   {
     q: "How do I install it?",
-    a: "Search 'WooCommerce Accessibility Fixer' in your WordPress admin → Plugins → Add New, or download from wordpress.org and upload manually. Once activated, go to WooCommerce → Accessibility Fixer to run your first scan.",
+    a: "Search 'AP Accessibility Fixer for WooCommerce' in your WordPress admin under Plugins → Add New, or install from https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/. Once activated, go to WooCommerce → Accessibility Fixer to run your first scan.",
+    html: "Search 'AP Accessibility Fixer for WooCommerce' in your WordPress admin under Plugins → Add New, or install from <a href=\"https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/\" target=\"_blank\" rel=\"noopener\">WordPress.org</a>. Once activated, go to <strong>WooCommerce → Accessibility Fixer</strong> to run your first scan.",
   },
   {
     q: "What WordPress and WooCommerce versions are supported?",
@@ -106,17 +107,9 @@ const faqSchema = {
         {wooFaqs.map(faq => (
           <details class="faq-item">
             <summary class="faq-q">{faq.q}</summary>
-            <p class="faq-a">{faq.a}</p>
+            <p class="faq-a" set:html={faq.html ?? faq.a} />
           </details>
         ))}
-        <details class="faq-item">
-          <summary class="faq-q">What WordPress and WooCommerce versions are supported?</summary>
-          <p class="faq-a">Requires WordPress 5.8+ and WooCommerce 6.0+. Tested up to WordPress 6.4 and WooCommerce 8.x.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-q">How do I install it?</summary>
-          <p class="faq-a">Search 'WooCommerce Accessibility Fixer' in your WordPress admin → Plugins → Add New, or download from wordpress.org and upload manually. Once activated, go to <strong>WooCommerce → Accessibility Fixer</strong> to run your first scan.</p>
-        </details>
       </div>
     </div>
   </section>
