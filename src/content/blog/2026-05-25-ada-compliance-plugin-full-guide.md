@@ -218,4 +218,4 @@ The technology can take you 60-80% of the way to compliance in an afternoon. The
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
 - <a href="/blog/website-accessibility-plugin-full-guide/">Website Accessibility Plugin Full Guide</a> - Understanding plugin options
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

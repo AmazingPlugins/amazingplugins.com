@@ -175,4 +175,4 @@ For a deeper walkthrough of the compliance side specifically, see the [ADA Compl
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/ada-compliance-plugin-full-guide/">ADA Compliance Plugin Full Guide</a> - Deep dive into plugin options
 - <a href="/blog/woocommerce-accessibility-plugin-vs-accessibe/">WooCommerce Accessibility Plugin vs accessiBe</a> - Why code-level fixes beat overlay widgets
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

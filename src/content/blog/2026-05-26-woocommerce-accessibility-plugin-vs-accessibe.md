@@ -190,4 +190,4 @@ Convenience is not the same thing as remediation.
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/woocommerce-accessibility-plugin-vs-userway/">WooCommerce Accessibility Plugin vs UserWay</a> - Another overlay comparison
 - <a href="/blog/woocommerce-accessibility-plugin-vs-audioeye/">WooCommerce Accessibility Plugin vs AudioEye</a> - Another overlay comparison
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

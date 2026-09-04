@@ -185,4 +185,4 @@ That's the checklist. Bookmark it, work through it once a quarter, and document 
 - <a href="/blog/wcag-22-compliance-woocommerce-what-changed/">WCAG 2.2 Compliance: What Changed</a> - Understanding the new requirements
 - <a href="/blog/wcag-22-compliance-woocommerce-deadline/">WCAG 2.2 Compliance: Deadline</a> - Timeline and compliance requirements
 - <a href="/blog/woocommerce-ada-compliance-checklist-2026/">Your WooCommerce ADA Compliance Checklist for 2026</a> - Complete checklist with detailed criteria
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

@@ -180,5 +180,4 @@ For a small store (one theme, under 100 products, standard checkout), most owner
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/wcag-22-compliance-woocommerce-checklist/">WCAG 2.2 Compliance WooCommerce Checklist</a> - What changed and what to fix
 - <a href="/blog/wcag-22-compliance-woocommerce-deadline/">WCAG 2.2 Compliance: Deadline</a> - Timeline and compliance requirements
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
-
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

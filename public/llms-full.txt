@@ -5,10 +5,10 @@ AmazingPlugins is a WooCommerce accessibility tool company. We provide free plug
 
 ## Main Plugin
 ### WooCommerce Accessibility Fixer
-- **Version:** 1.5.1
 - **Price:** Free
 - **Platform:** WordPress/WooCommerce
 - **URL:** https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/
+- **Current version:** See the WordPress.org listing.
 
 **Features:**
 1. Alt Text Fixer - Adds missing alt text to product images
@@ -22,7 +22,7 @@ AmazingPlugins is a WooCommerce accessibility tool company. We provide free plug
 9. Landmark Regions - Adds ARIA landmarks
 10. Error Messages - Improves error messaging
 
-## Blog Posts (47 total)
+## Blog Posts (58 total)
 
 ### ADA Compliance
 - Does the ADA Actually Apply to Your WooCommerce Store?
@@ -86,6 +86,19 @@ AmazingPlugins is a WooCommerce accessibility tool company. We provide free plug
 ### SEO and Business
 - Accessibility as an SEO Ranking Factor for E-commerce
 - WooCommerce Accessibility Plugin Comparison
+
+### Recent additions
+- [How to Add Skip Links to WooCommerce](https://amazingplugins.com/blog/how-to-add-skip-links-to-woocommerce/)
+- [What to Do With Pending Payment Orders in WooCommerce](https://amazingplugins.com/blog/woocommerce-pending-payment-orders/)
+- [WooCommerce Variation Swatches Accessibility Fixes](https://amazingplugins.com/blog/woocommerce-variation-swatches-accessibility-fixes/)
+- [WooCommerce Accessibility vs Shopify](https://amazingplugins.com/blog/woocommerce-vs-shopify-accessibility/)
+- [How to Clean Up Your WooCommerce Database Safely](https://amazingplugins.com/blog/how-to-clean-up-woocommerce-database-safely/)
+- [WooCommerce Color Contrast Issues and How to Fix Them](https://amazingplugins.com/blog/woocommerce-color-contrast-issues-fix/)
+- [The European Accessibility Act Is Live](https://amazingplugins.com/blog/european-accessibility-act-woocommerce/)
+- [WooCommerce Blocks vs Classic Checkout](https://amazingplugins.com/blog/woocommerce-blocks-vs-classic-checkout/)
+- [ARIA Labels in WooCommerce](https://amazingplugins.com/blog/aria-labels-reference-guide/)
+- [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](https://amazingplugins.com/blog/woocommerce-checkout-accessibility-fix-sales/)
+- [WooCommerce Accessibility Plugin Comparison](https://amazingplugins.com/blog/woocommerce-accessibility-plugin-comparison/)
 
 ## FAQ Topics
 1. What regulations apply to my e-commerce store?

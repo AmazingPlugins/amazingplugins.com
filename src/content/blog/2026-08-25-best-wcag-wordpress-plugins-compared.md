@@ -5,6 +5,7 @@ description: >-
   WooCommerce fixers, and overlays. What each can fix, and what still needs a
   human.
 pubDate: 2026-08-25T12:00:00.000Z
+updatedDate: 2026-09-04T00:00:00.000Z
 author: Harun Ray
 tags:
   - Accessibility
@@ -108,6 +109,12 @@ A practical stack for most WooCommerce stores:
 - Manual review of the top conversion paths with a keyboard and a screen reader
 
 More context in our [full WooCommerce accessibility plugin guide](/blog/best-wordpress-accessibility-plugin-full-guide/).
+
+## Verify the result on the real storefront
+
+Do not judge a WCAG plugin from its settings screen. Open the homepage, a product page, the cart, and checkout in a private browser window. Turn off browser extensions that change contrast or font size. Then test the page with a keyboard and at least one screen reader.
+
+Check that focus stays visible, labels still describe the right fields, quantity controls have useful names, and cart updates are announced. Run a scanner after the manual pass. AmazingPlugins's WooCommerce Accessibility Fixer can handle repeatable markup fixes, but it cannot decide whether product alt text is meaningful or whether a custom payment flow works for every customer.
 
 ## FAQ
 
