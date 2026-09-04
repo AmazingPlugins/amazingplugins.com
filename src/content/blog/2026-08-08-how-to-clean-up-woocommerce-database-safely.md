@@ -12,6 +12,7 @@ tags:
   - Performance
   - Cleanup
   - Optimization
+gscSubmitted: true
 ---
 
 If your WooCommerce store has been running for a year or more, there is a good chance your database is two to three times bigger than it needs to be. Not because you have that much real data. Because WordPress and WooCommerce quietly pile up junk in the background, and almost nobody goes back to clean it out.

@@ -9,6 +9,7 @@ tags:
   - accessibility
   - wcag
   - ecommerce
+gscSubmitted: true
 ---
 
 Over 70% of online stores fail basic WCAG 2.1 tests. That is a number from the WebAIM Million 2025 report, and it means the vast majority of ecommerce sites are essentially telling a large chunk of their visitors, "We did not build this for you." But here is the question nobody asks: if your store fails, which platform makes it easier to fix?

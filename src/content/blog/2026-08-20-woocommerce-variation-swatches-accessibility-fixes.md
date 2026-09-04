@@ -8,6 +8,7 @@ tags:
   - variation swatches
   - keyboard navigation
   - WCAG compliance
+gscSubmitted: true
 ---
 
 Plain WooCommerce variation dropdowns are ugly, so almost every store replaces them with color or size swatches, usually through a free plugin or a theme's built-in swatch feature. Visually, it's a clear win. Under the hood, most of these swatches are built the same broken way: a grid of `<div>` or `<span>` elements with a background color and a click handler, and nothing else.

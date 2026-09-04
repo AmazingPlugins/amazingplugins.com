@@ -17,6 +17,7 @@ seoKeywords:
   - screen reader checkout
 seoCategory: WooCommerce Accessibility
 canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-checkout-accessibility-fix-sales/'
+gscSubmitted: true
 ---
 
 # WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales

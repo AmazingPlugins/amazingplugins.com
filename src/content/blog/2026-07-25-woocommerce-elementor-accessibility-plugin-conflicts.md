@@ -10,7 +10,7 @@ tags:
   - Accessibility
   - WCAG
   - Page Builders
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 # WooCommerce + Elementor: Why Your Accessibility Plugin Is Not Working

@@ -11,6 +11,7 @@ tags:
   - Plugin Comparison
   - WCAG
   - WordPress
+gscSubmitted: true
 ---
 
 Choosing the right accessibility plugin for your WooCommerce store can feel overwhelming. There are dozens of options, each promising WCAG compliance with a single click. But which ones actually fix issues, and which just hide them behind an overlay widget?

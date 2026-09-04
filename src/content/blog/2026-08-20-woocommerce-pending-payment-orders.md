@@ -8,6 +8,7 @@ tags:
   - Orders
   - Store Management
   - Database Cleanup
+gscSubmitted: true
 ---
 
 Go to WooCommerce > Orders right now and filter by "Pending payment." If you've had your store running for more than a few months, that list is probably longer than you expect, and probably older than you expect too.
