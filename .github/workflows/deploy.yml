@@ -32,7 +32,13 @@ jobs:
           PUBLIC_BING_VERIFICATION_CODE: ${{ secrets.PUBLIC_BING_VERIFICATION_CODE }}
 
       - name: Deploy to Cloudflare Pages
-        run: npx wrangler pages deploy dist/client --project-name=amazingplugins-com
+        # Run outside the repository so Astro's Worker config is not auto-detected
+        # by the static Pages upload command.
+        run: |
+          "$GITHUB_WORKSPACE/node_modules/.bin/wrangler" pages deploy \
+            "$GITHUB_WORKSPACE/dist/client" \
+            --project-name=amazingplugins-com \
+            --cwd="$RUNNER_TEMP"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
