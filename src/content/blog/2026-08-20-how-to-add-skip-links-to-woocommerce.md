@@ -8,6 +8,7 @@ tags:
   - skip links
   - keyboard navigation
   - WCAG compliance
+gscSubmitted: true
 ---
 
 Tab through your own WooCommerce store right now. Logo, then main nav, then the search icon, then the cart icon, then maybe a top announcement bar, then finally the page content. That's 10, sometimes 20, key presses before a keyboard user reaches anything they actually came for.

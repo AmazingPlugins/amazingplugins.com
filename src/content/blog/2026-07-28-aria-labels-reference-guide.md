@@ -4,7 +4,7 @@ description: "Learn the 10 essential ARIA attributes for WooCommerce, common mis
 pubDate: 2026-07-28T00:00:00.000Z
 author: "Harun Ray"
 tags: ["accessibility", "ARIA", "WooCommerce", "WCAG", "screen readers"]
-gscSubmitted: false
+gscSubmitted: true
 ---
 
 ## Sarah lost 15% of her customers, and she never knew it

@@ -12,6 +12,7 @@ tags:
   - Lawsuits
   - WCAG
   - E-commerce Compliance
+gscSubmitted: true
 ---
 
 A store owner in Ohio got a demand letter last spring. Not a warning. Not a

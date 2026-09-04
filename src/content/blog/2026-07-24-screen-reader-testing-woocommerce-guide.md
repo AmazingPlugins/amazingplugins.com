@@ -11,6 +11,7 @@ tags:
   - Screen Readers
   - Testing
   - WCAG
+gscSubmitted: true
 ---
 
 A woman named Denise wants to buy her nephew a birthday gift. She's blind, she's been using a screen reader for over a decade, and she's good at it. She finds a WooCommerce store selling handmade wooden toys, picks one out, and gets three taps into checkout before her screen reader goes silent. Not because anything crashed. The "Place Order" button has no label. It's just a shape on the screen that says nothing when she lands on it.

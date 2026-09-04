@@ -11,6 +11,7 @@ tags:
   - Screen Readers
   - WCAG
   - Testing
+gscSubmitted: true
 ---
 
 I turned on NVDA and opened a client's WooCommerce store for the first time last month. Within about 40 seconds I'd already found three dealbreakers: a hero carousel that got announced as eleven identical unlabeled links, a product grid where every "Add to Cart" button read as just "button," and a checkout page where the screen reader skipped straight from the cart summary to a payment iframe with no warning. The store looked great. It converted fine for sighted mouse users. For anyone navigating by ear, it was close to unusable.

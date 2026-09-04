@@ -11,6 +11,7 @@ tags:
   - WooCommerce accessibility
   - WCAG compliance
   - EU accessibility law
+gscSubmitted: true
 ---
 
 Between 80 and 90 million people in the European Union live with some form of disability. That is more people than live in Germany. And since June 28, 2025, every one of them has a legal right to use your online store.

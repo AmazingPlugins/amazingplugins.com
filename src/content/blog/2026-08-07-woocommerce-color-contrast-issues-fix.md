@@ -8,6 +8,7 @@ tags:
   - color contrast
   - WCAG compliance
   - ADA compliance
+gscSubmitted: true
 ---
 
 # WooCommerce Color Contrast Issues and How to Fix Them (2026 Guide)
