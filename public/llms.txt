@@ -7,7 +7,8 @@ AmazingPlugins makes free WooCommerce accessibility tools. We help store owners 
 - **WooCommerce Accessibility Fixer**: One-click fixes for 10 common accessibility issues including alt text, keyboard navigation, focus indicators, ARIA labels, color contrast, form labels, heading hierarchy, skip links, landmark regions, and error messages.
 
 ## Blog
-47 articles covering ADA compliance, WCAG guidelines, keyboard navigation, screen reader testing, and WooCommerce accessibility. Key topics:
+58 articles covering ADA compliance, WCAG guidelines, keyboard navigation, screen reader testing, and WooCommerce accessibility. The blog index is the current list of published articles:
+- https://amazingplugins.com/blog/
 - ADA compliance for WooCommerce stores
 - WCAG 2.1 AA and 2.2 AA requirements
 - Keyboard navigation fixes

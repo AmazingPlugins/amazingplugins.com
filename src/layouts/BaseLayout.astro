@@ -8,6 +8,7 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  ogType?: 'website' | 'article';
   canonicalPath?: string;
 }
 
@@ -16,11 +17,13 @@ const {
   title,
   description = 'Small, sharp accessibility plugins for WooCommerce. Free, all crafted.',
   image = '/images/og-default.svg',
+  ogType = 'website',
   canonicalPath,
 } = Astro.props;
 
 const resolvedCanonicalPath = canonicalPath ?? (Astro.url.pathname === '/' ? '/' : Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`);
 const canonicalURL = new URL(resolvedCanonicalPath, Astro.site);
+const imageURL = new URL(image, Astro.site);
 const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim();
 ---
 
@@ -36,17 +39,17 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
     <meta name="generator" content={Astro.generator} />
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={`${title} | AmazingPlugins`} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={imageURL} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | AmazingPlugins`} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={imageURL} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

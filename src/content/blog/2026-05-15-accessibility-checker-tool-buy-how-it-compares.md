@@ -166,4 +166,4 @@ Before you buy any accessibility checker tool, name what category you actually n
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/accessibility-checker-tool-buy-common-mistakes/">Accessibility Checker Tool: Common Mistakes</a> - Avoid these pitfalls when choosing a tool
 - <a href="/blog/accessibility-seo-ranking-factor-ecommerce/">Accessibility as an SEO Ranking Factor</a> - Why accessibility matters for search
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

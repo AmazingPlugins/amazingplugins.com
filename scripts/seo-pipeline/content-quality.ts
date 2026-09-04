@@ -83,7 +83,7 @@ export function validateGeneratedArticle(article: GeneratedArticle, context: Qua
     errors.push('article must include at least 5 useful H2 sections');
   }
 
-  const hasPaa = /people also ask|frequently asked questions|^## faq|^## faqs/i.test(body);
+  const hasPaa = /people also ask|frequently asked questions|^## faq|^## faqs/im.test(body);
   if (!hasPaa || countMatches(body, /^### .+\?/gm) < 3) {
     errors.push('article must answer at least 3 People also ask / FAQ questions');
   }

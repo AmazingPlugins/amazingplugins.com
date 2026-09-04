@@ -156,4 +156,4 @@ A real ADA compliance WooCommerce plugin fixes code, not appearances. Look for W
 - <a href="/blog/ada-compliance-plugin-full-guide/">ADA Compliance Plugin for WooCommerce: Full 2026 Guide</a> - Plugin selection criteria and deep dive
 - <a href="/blog/10-common-accessibility-issues-on-e-commerce-sites/">10 Common Accessibility Issues on E-commerce Sites</a> - The most frequent problems we find
 - <a href="/blog/woocommerce-accessibility-plugin-vs-accessibe/">WooCommerce Accessibility Plugin vs accessiBe</a> - Why code-level fixes beat overlay widgets
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

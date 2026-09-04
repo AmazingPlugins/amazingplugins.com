@@ -164,4 +164,4 @@ If you are comparing specific vendors, use:
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
 - <a href="/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/">WCAG 2.1 AA vs AAA: What's the Real Difference</a> - Understanding the standards that matter
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

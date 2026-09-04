@@ -148,4 +148,4 @@ A reasonable DIY weekend gets you 80% of the way for under $200 in plugin costs.
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/wcag-22-compliance-woocommerce-checklist/">WCAG 2.2 Compliance WooCommerce Checklist</a> - What changed and what to fix
 - <a href="/blog/ada-compliance-plugin-full-guide/">ADA Compliance Plugin Full Guide</a> - Deep dive into plugin options
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)

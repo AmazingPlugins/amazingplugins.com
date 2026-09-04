@@ -176,4 +176,4 @@ Spend an hour on this checklist before you spend a dollar on the tool. It is the
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/accessibility-checker-tool-buy-common-mistakes/">Accessibility Checker Tool: Common Mistakes</a> - Avoid these pitfalls when choosing a tool
 - <a href="/blog/accessibility-checker-tool-buy-step-by-step-guide/">Accessibility Checker Tool: Step-by-Step Guide</a> - How to choose the right tool
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 9 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)
