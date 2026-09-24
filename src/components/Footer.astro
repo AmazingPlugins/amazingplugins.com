@@ -33,7 +33,14 @@
         <a href="mailto:accessibility@amazingplugins.com">Accessibility</a>
       </div>
     </div>
-    <div class="footer-badges" aria-label="Featured on LaunchIgniter, EarlyHunt, SaaSCity, IndieHunt, Fazier, Wired Business, ProductFame, ShowMeBestAI, Neeed Directory, SaaSBison, DodoDirectory, Twelve Tools, Launch Llama Tools, LaunchBoosts, ToolDirs, and TechTrendin">
+    <footer-logo-slider class="footer-badges">
+      <div class="footer-badges-heading">
+        <span id="footer-badges-label">Featured on</span>
+        <button type="button" class="footer-badges-toggle" aria-label="Pause logo slider" hidden>Pause</button>
+      </div>
+      <div class="footer-badges-viewport" role="region" aria-labelledby="footer-badges-label" tabindex="0">
+        <div class="footer-badges-track">
+          <div class="footer-badges-group">
       <a href="https://launchigniter.com/product/amazingplugins?ref=badge-amazingplugins" target="_blank" rel="noopener noreferrer">
         <img src="https://launchigniter.com/api/badge/amazingplugins?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
       </a>
@@ -66,11 +73,112 @@
         <img src="https://launchboosts.com/badges/featured-dark.svg" alt="Featured on LaunchBoosts" width="180" height="54" />
       </a>
       <a href="https://tooldirs.com" target="_blank" rel="noopener noreferrer"><img src="https://tooldirs.com/badge/badge_dark.svg" alt="Featured on ToolDirs" width="200" height="54"></a>
-      <a href="https://www.techtrendin.com/products/amazingplugins" target="_blank"><img src="https://www.techtrendin.com/badges/featured-light.png" alt="Featured on TechTrendin'" style="width: auto; height: 52px;" /></a>
-    </div>
+      <a href="https://www.techtrendin.com/products/amazingplugins" target="_blank"><img src="https://www.techtrendin.com/badges/featured-light.png" alt="Featured on TechTrendin'" /></a>
+          </div>
+        </div>
+      </div>
+    </footer-logo-slider>
     <div class="footer-bot">
       <span>&copy; {new Date().getFullYear()} AmazingPlugins.</span>
       <span>All systems normal</span>
     </div>
   </div>
 </footer>
+
+<script>
+  class FooterLogoSlider extends HTMLElement {
+    private cleanup?: () => void;
+
+    connectedCallback() {
+      const viewport = this.querySelector<HTMLElement>('.footer-badges-viewport')!;
+      const group = this.querySelector<HTMLElement>('.footer-badges-group')!;
+      const button = this.querySelector<HTMLButtonElement>('.footer-badges-toggle')!;
+      const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const controller = new AbortController();
+      const { signal } = controller;
+      const copy = group.cloneNode(true) as HTMLElement;
+      copy.setAttribute('aria-hidden', 'true');
+      copy.classList.add('footer-badges-copy');
+      copy.querySelectorAll('a').forEach((link) => { link.tabIndex = -1; });
+      group.after(copy);
+
+      let paused = false;
+      let hovered = false;
+      let touching = false;
+      let manualUntil = 0;
+      let position = viewport.scrollLeft;
+      let previousTime = 0;
+      let frame = 0;
+      let width = group.getBoundingClientRect().width;
+      const observer = new ResizeObserver(() => {
+        width = group.getBoundingClientRect().width;
+      });
+      observer.observe(group);
+
+      const updateMotion = () => {
+        button.hidden = motion.matches;
+        copy.hidden = motion.matches;
+        position = viewport.scrollLeft;
+      };
+      updateMotion();
+      motion.addEventListener('change', updateMotion, { signal });
+      button.addEventListener('click', () => {
+        paused = !paused;
+        button.textContent = paused ? 'Resume' : 'Pause';
+        button.setAttribute('aria-label', paused ? 'Resume logo slider' : 'Pause logo slider');
+      }, { signal });
+      this.addEventListener('pointerenter', (event) => {
+        hovered = event.pointerType === 'mouse';
+      }, { signal });
+      this.addEventListener('pointerleave', () => { hovered = false; }, { signal });
+      viewport.addEventListener('pointerdown', () => { touching = true; }, { signal });
+      const release = () => {
+        if (touching) manualUntil = performance.now() + 1500;
+        touching = false;
+      };
+      window.addEventListener('pointerup', release, { signal });
+      window.addEventListener('pointercancel', release, { signal });
+      viewport.addEventListener('wheel', () => {
+        manualUntil = performance.now() + 1500;
+      }, { signal, passive: true });
+      viewport.addEventListener('focusin', (event) => {
+        const link = event.target;
+        if (!(link instanceof HTMLAnchorElement)) return;
+        const bounds = viewport.getBoundingClientRect();
+        const badge = link.getBoundingClientRect();
+        if (badge.left < bounds.left || badge.right > bounds.right) {
+          viewport.scrollLeft += badge.left - bounds.left - (bounds.width - badge.width) / 2;
+        }
+        position = viewport.scrollLeft;
+      }, { signal });
+
+      const tick = (time: number) => {
+        const elapsed = previousTime ? Math.min(time - previousTime, 64) : 0;
+        previousTime = time;
+        if (paused || hovered || touching || motion.matches || document.hidden ||
+            this.matches(':focus-within') || time < manualUntil) {
+          position = viewport.scrollLeft;
+        } else if (width > 0) {
+          position = (position + elapsed * 0.032) % width;
+          viewport.scrollLeft = position;
+        }
+        frame = requestAnimationFrame(tick);
+      };
+      frame = requestAnimationFrame(tick);
+      this.cleanup = () => {
+        cancelAnimationFrame(frame);
+        observer.disconnect();
+        controller.abort();
+        copy.remove();
+      };
+    }
+
+    disconnectedCallback() {
+      this.cleanup?.();
+    }
+  }
+
+  if (!customElements.get('footer-logo-slider')) {
+    customElements.define('footer-logo-slider', FooterLogoSlider);
+  }
+</script>
