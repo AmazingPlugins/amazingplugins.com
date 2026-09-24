@@ -36,7 +36,6 @@
     <footer-logo-slider class="footer-badges">
       <div class="footer-badges-heading">
         <span id="footer-badges-label">Featured on</span>
-        <button type="button" class="footer-badges-toggle" aria-label="Pause logo slider" hidden>Pause</button>
       </div>
       <div class="footer-badges-viewport" role="region" aria-labelledby="footer-badges-label" tabindex="0">
         <div class="footer-badges-track">
@@ -92,7 +91,6 @@
     connectedCallback() {
       const viewport = this.querySelector<HTMLElement>('.footer-badges-viewport')!;
       const group = this.querySelector<HTMLElement>('.footer-badges-group')!;
-      const button = this.querySelector<HTMLButtonElement>('.footer-badges-toggle')!;
       const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
       const controller = new AbortController();
       const { signal } = controller;
@@ -102,7 +100,6 @@
       copy.querySelectorAll('a').forEach((link) => { link.tabIndex = -1; });
       group.after(copy);
 
-      let paused = false;
       let hovered = false;
       let touching = false;
       let manualUntil = 0;
@@ -116,17 +113,11 @@
       observer.observe(group);
 
       const updateMotion = () => {
-        button.hidden = motion.matches;
         copy.hidden = motion.matches;
         position = viewport.scrollLeft;
       };
       updateMotion();
       motion.addEventListener('change', updateMotion, { signal });
-      button.addEventListener('click', () => {
-        paused = !paused;
-        button.textContent = paused ? 'Resume' : 'Pause';
-        button.setAttribute('aria-label', paused ? 'Resume logo slider' : 'Pause logo slider');
-      }, { signal });
       this.addEventListener('pointerenter', (event) => {
         hovered = event.pointerType === 'mouse';
       }, { signal });
@@ -155,7 +146,7 @@
       const tick = (time: number) => {
         const elapsed = previousTime ? Math.min(time - previousTime, 64) : 0;
         previousTime = time;
-        if (paused || hovered || touching || motion.matches || document.hidden ||
+        if (hovered || touching || motion.matches || document.hidden ||
             this.matches(':focus-within') || time < manualUntil) {
           position = viewport.scrollLeft;
         } else if (width > 0) {

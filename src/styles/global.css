@@ -251,24 +251,12 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   margin-bottom: 32px;
 }
 .footer-badges-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 12px;
   font-family: var(--font-mono);
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--ink-3);
-}
-.footer-badges-toggle {
-  font: inherit;
-  color: var(--ink-2);
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 6px 10px;
-  cursor: pointer;
 }
 .footer-badges-viewport {
   overflow-x: auto;
