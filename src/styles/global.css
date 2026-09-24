@@ -246,25 +246,69 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 }
 .footer-col a:hover { color: var(--coral); }
 .footer-badges {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px 16px;
-  margin-bottom: 40px;
-  opacity: 0.72;
+  display: block;
+  min-width: 0;
+  margin-bottom: 32px;
 }
-.footer-badges a {
+.footer-badges-heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+}
+.footer-badges-toggle {
+  font: inherit;
+  color: var(--ink-2);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.footer-badges-viewport {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+.footer-badges-track,
+.footer-badges-group {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+.footer-badges-group {
+  flex-shrink: 0;
+  gap: 24px;
+  padding: 6px 24px 10px 0;
+}
+.footer-badges-copy[hidden] { display: none; }
+.footer-badges a {
+  flex: 0 0 180px;
+  width: 180px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
   transition: opacity 150ms;
 }
-.footer-badges a:hover { opacity: 0.9; }
+.footer-badges a:hover,
+.footer-badges a:focus-visible { opacity: 1; }
+.footer-badges :focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
 .footer-badges img {
   display: block;
   width: auto;
   max-width: 100%;
-  height: auto;
-  max-height: 60px;
+  height: 48px;
+  object-fit: contain;
 }
 .footer-bot {
   border-top: 1px solid var(--line);
@@ -456,6 +500,5 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 }
 @media (max-width: 600px) {
   .footer-grid { grid-template-columns: 1fr; }
-  .footer-badges { gap: 10px 12px; }
   .footer-bot { flex-direction: column; gap: 8px; text-align: center; }
 }
