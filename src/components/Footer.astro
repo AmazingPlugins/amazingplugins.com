@@ -1,5 +1,6 @@
 ---
 import { shippingTester } from '../data/shipping-rules-tester';
+import { footerBadges } from '../data/footer-badges.mjs';
 ---
 
 <footer class="footer">
@@ -7,7 +8,7 @@ import { shippingTester } from '../data/shipping-rules-tester';
     <div class="footer-grid">
       <div class="footer-col">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
-          <img src="/images/logo.jpg" alt="AmazingPlugins" width="28" height="28" style="border-radius:6px;object-fit:cover;" />
+          <img src="/images/logo.jpg" alt="" width="28" height="28" style="border-radius:6px;object-fit:cover;" />
           <strong style="font-size:15px;">AmazingPlugins</strong>
         </div>
         <p style="font-size:14px;color:var(--ink-3);max-width:280px;line-height:1.55;">
@@ -15,24 +16,24 @@ import { shippingTester } from '../data/shipping-rules-tester';
         </p>
       </div>
       <div class="footer-col">
-        <h5>Plugins</h5>
+        <h2>Plugins</h2>
         <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a>
         <a href={shippingTester.path}>{shippingTester.shortName} <small>({shippingTester.status})</small></a>
         <a href="/plugins/#stale-order-cleaner">Stale Order Cleaner</a>
         <a href="/plugins/">All Plugins</a>
       </div>
       <div class="footer-col">
-        <h5>Company</h5>
+        <h2>Company</h2>
         <a href="/blog/">Blog</a>
         <a href="/faq/">Frequently asked questions</a>
       </div>
       <div class="footer-col">
-        <h5>Legal</h5>
+        <h2>Legal</h2>
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
       </div>
       <div class="footer-col">
-        <h5>Support</h5>
+        <h2>Support</h2>
         <a href="mailto:support@amazingplugins.com">Email support</a>
         <a href="mailto:accessibility@amazingplugins.com">Accessibility</a>
       </div>
@@ -44,39 +45,11 @@ import { shippingTester } from '../data/shipping-rules-tester';
       <div class="footer-badges-viewport" role="region" aria-labelledby="footer-badges-label" tabindex="0">
         <div class="footer-badges-track">
           <div class="footer-badges-group">
-      <a href="https://launchigniter.com/product/amazingplugins?ref=badge-amazingplugins" target="_blank" rel="noopener noreferrer">
-        <img src="https://launchigniter.com/api/badge/amazingplugins?theme=light" alt="Featured on LaunchIgniter" width="212" height="55" />
-      </a>
-      <a href="https://earlyhunt.com/project/amazingplugins" target="_blank" rel="noopener noreferrer">
-        <img src="https://earlyhunt.com/badges/earlyhunt-badge-light.svg" alt="Featured on EarlyHunt" width="265" height="58" />
-      </a>
-      <a href="https://saascity.io" target="_blank" rel="noopener">
-        <img src="https://saascity.io/badges/featured-dark.svg" alt="Featured on SaaSCity" width="150" height="54" />
-      </a>
-      <a href="https://indiehunt.io" target="_blank" rel="noopener noreferrer">
-        <img src="https://indiehunt.io/badges/indiehunt-badge-light.svg" alt="Featured on IndieHunt" width="265" height="58" />
-      </a>
-      <a href="https://fazier.com/launches/amazingplugins.com" target="_blank"><img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light" width="120" alt="Fazier badge" /></a>
-      <a href="https://wired.business" target="_blank"><img src="https://wired.business/badge0-white.svg" alt="Featured on Wired Business" width="200" height="54"></a>
-      <a href="https://productfame.com" target="_blank" rel="noopener noreferrer">
-        <img src="https://productfame.com/badges/featured-light.svg" alt="Featured on ProductFame" width="245" height="54" />
-      </a>
-      <a href="https://showmebest.ai" target="_blank"><img src="https://showmebest.ai/badge/feature-badge-white.webp" alt="Featured on ShowMeBestAI" width="220" height="60"></a>
-      <a href="https://neeed.directory" target="_blank" rel="noopener noreferrer">
-        <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on Neeed Directory" />
-      </a>
-      <a href="https://saasbison.com" target="_blank" rel="dofollow"><img src="https://saasbison.com/badge.png" alt="Featured on SaaSBison" width="200" height="54" /></a>
-      <a href="https://dododirectory.com" target="_blank" rel="dofollow"><img src="https://dododirectory.com/badge-light.png" alt="Featured on DodoDirectory" width="200" height="54" /></a>
-      <a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54"></a>
-      <a href="https://tools.launchllama.co?utm_source=badge&utm_medium=referral" target="_blank" rel="noopener noreferrer">
-        <img src="https://tools.launchllama.co/featured-badge.png?v=2"
-          alt="Featured on Launch Llama Tools" width="200" height="54">
-      </a>
-      <a href="https://launchboosts.com/project/amazingplugins" target="_blank">
-        <img src="https://launchboosts.com/badges/featured-dark.svg" alt="Featured on LaunchBoosts" width="180" height="54" />
-      </a>
-      <a href="https://tooldirs.com" target="_blank" rel="noopener noreferrer"><img src="https://tooldirs.com/badge/badge_dark.svg" alt="Featured on ToolDirs" width="200" height="54"></a>
-      <a href="https://www.techtrendin.com/products/amazingplugins" target="_blank"><img src="https://www.techtrendin.com/badges/featured-light.png" alt="Featured on TechTrendin'" /></a>
+            {footerBadges.map((badge) => (
+              <a href={badge.href} target="_blank" rel="noopener noreferrer">
+                <img src={`/images/badges/${badge.id}.webp`} alt={`Featured on ${badge.name}`} width="180" height="48" loading="lazy" decoding="async" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -98,11 +71,15 @@ import { shippingTester } from '../data/shipping-rules-tester';
       const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
       const controller = new AbortController();
       const { signal } = controller;
-      const copy = group.cloneNode(true) as HTMLElement;
-      copy.setAttribute('aria-hidden', 'true');
-      copy.classList.add('footer-badges-copy');
-      copy.querySelectorAll('a').forEach((link) => { link.tabIndex = -1; });
-      group.after(copy);
+      let copy: HTMLElement | undefined;
+      const ensureCopy = () => {
+        if (copy) return;
+        copy = group.cloneNode(true) as HTMLElement;
+        copy.setAttribute('aria-hidden', 'true');
+        copy.classList.add('footer-badges-copy');
+        copy.querySelectorAll('a').forEach((link) => { link.tabIndex = -1; });
+        group.after(copy);
+      };
 
       let hovered = false;
       let touching = false;
@@ -110,14 +87,15 @@ import { shippingTester } from '../data/shipping-rules-tester';
       let position = viewport.scrollLeft;
       let previousTime = 0;
       let frame = 0;
-      let width = group.getBoundingClientRect().width;
+      let visible = false;
+      let width = 0;
       const observer = new ResizeObserver(() => {
         width = group.getBoundingClientRect().width;
       });
       observer.observe(group);
 
       const updateMotion = () => {
-        copy.hidden = motion.matches;
+        if (copy) copy.hidden = motion.matches;
         position = viewport.scrollLeft;
       };
       updateMotion();
@@ -157,14 +135,29 @@ import { shippingTester } from '../data/shipping-rules-tester';
           position = (position + elapsed * 0.032) % width;
           viewport.scrollLeft = position;
         }
-        frame = requestAnimationFrame(tick);
+        if (visible && !motion.matches && !document.hidden) frame = requestAnimationFrame(tick);
       };
-      frame = requestAnimationFrame(tick);
+      const updateAnimation = () => {
+        cancelAnimationFrame(frame);
+        previousTime = 0;
+        if (visible && !motion.matches && !document.hidden) {
+          ensureCopy();
+          frame = requestAnimationFrame(tick);
+        }
+      };
+      const visibility = new IntersectionObserver(([entry]) => {
+        visible = entry.isIntersecting;
+        updateAnimation();
+      });
+      visibility.observe(this);
+      motion.addEventListener('change', updateAnimation, { signal });
+      document.addEventListener('visibilitychange', updateAnimation, { signal });
       this.cleanup = () => {
         cancelAnimationFrame(frame);
+        visibility.disconnect();
         observer.disconnect();
         controller.abort();
-        copy.remove();
+        copy?.remove();
       };
     }
 

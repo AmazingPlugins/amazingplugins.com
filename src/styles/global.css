@@ -3,6 +3,7 @@
 :root {
   --coral: #F26B3A;
   --coral-deep: #D94B26;
+  --accent-text: #A63617;
   --pink: #E85A78;
   --amber: #F4A93C;
   --plum: #5B3A6B;
@@ -26,7 +27,7 @@
   --pad-section: clamp(72px, 10vh, 140px);
 
   /* Aliases for pages still on the pre-redesign token names */
-  --color-primary: var(--coral);
+  --color-primary: var(--accent-text);
   --color-primary-bg: color-mix(in oklab, var(--coral) 16%, transparent);
   --color-heading: var(--ink);
   --color-text: var(--ink-2);
@@ -37,6 +38,7 @@
 }
 
 [data-theme="dark"] {
+  --accent-text: #FFA478;
   --cream: #14110D;
   --cream-2: #1C1814;
   --cream-3: #25201A;
@@ -73,7 +75,7 @@ a { color: inherit; text-decoration: none; }
 
 button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; }
 
-::selection { background: var(--coral); color: var(--cream); }
+::selection { background: var(--coral); color: #1A1410; }
 
 /* Skip link */
 .skip-link {
@@ -81,7 +83,7 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   top: -100%;
   left: 0;
   background: var(--coral);
-  color: #fff;
+  color: #1A1410;
   padding: 0.5rem 1rem;
   z-index: 100;
   font-weight: 600;
@@ -148,7 +150,7 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   background: var(--ink);
   color: var(--cream);
 }
-.btn-primary:hover { background: var(--coral-deep); transform: translateY(-1px); text-decoration: none; }
+.btn-primary:hover { background: #A63617; color: #fff; transform: translateY(-1px); text-decoration: none; }
 .btn-ghost {
   border: 1px solid var(--line);
   color: var(--ink);
@@ -156,9 +158,9 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 .btn-ghost:hover { border-color: var(--ink); text-decoration: none; }
 .btn-coral {
   background: var(--coral);
-  color: #fff;
+  color: #1A1410;
 }
-.btn-coral:hover { background: var(--coral-deep); text-decoration: none; }
+.btn-coral:hover { background: #A63617; color: #fff; text-decoration: none; }
 
 /* Navigation */
 .nav {
@@ -227,7 +229,7 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   gap: 48px;
   margin-bottom: 56px;
 }
-.footer-col h5 {
+.footer-col h2 {
   font-family: var(--font-mono);
   font-size: 11px;
   text-transform: uppercase;
@@ -244,7 +246,7 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   transition: color 150ms;
   text-decoration: none;
 }
-.footer-col a:hover { color: var(--coral); }
+.footer-col a:hover { color: var(--accent-text); }
 .footer-badges {
   display: block;
   min-width: 0;
@@ -448,15 +450,6 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   opacity: 0.4;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-}
-
-/* Page transitions */
-.page {
-  animation: pageIn 280ms cubic-bezier(.2,.8,.2,1);
-}
-@keyframes pageIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Count-up */

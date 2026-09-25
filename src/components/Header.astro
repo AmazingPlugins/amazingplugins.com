@@ -10,7 +10,7 @@ function isActive(href: string) {
 <nav class="nav">
   <div class="wrap nav-inner">
     <a href="/" class="brand" aria-label="AmazingPlugins home">
-      <img class="brand-mark" src="/images/logo.jpg" alt="AmazingPlugins" width="30" height="30" />
+      <img class="brand-mark" src="/images/logo.jpg" alt="" width="30" height="30" />
       <span>Amazing<em style="font-family:var(--font-display);font-style:italic;font-weight:500">Plugins</em></span>
     </a>
 
@@ -20,18 +20,18 @@ function isActive(href: string) {
     </div>
 
     <div class="nav-cta">
-      <div class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-        <button id="theme-btn" title="Change theme" aria-haspopup="true" aria-expanded="false">
+      <div class="theme-toggle" id="theme-toggle">
+        <button id="theme-btn" title="Change theme" aria-label="Change theme" aria-haspopup="menu" aria-controls="theme-menu" aria-expanded="false">
           <span class="theme-icon" id="theme-icon"></span>
         </button>
-        <div class="theme-menu" id="theme-menu" role="menu" hidden>
-          <button role="menuitemradio" data-theme-opt="light">
+        <div class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" hidden>
+          <button role="menuitemradio" aria-checked="false" tabindex="-1" data-theme-opt="light">
             <span class="ti-light"></span> Light
           </button>
-          <button role="menuitemradio" data-theme-opt="dark">
+          <button role="menuitemradio" aria-checked="false" tabindex="-1" data-theme-opt="dark">
             <span class="ti-dark"></span> Dark
           </button>
-          <button role="menuitemradio" data-theme-opt="system">
+          <button role="menuitemradio" aria-checked="true" tabindex="-1" data-theme-opt="system">
             <span class="ti-system"></span> System
           </button>
         </div>
@@ -82,10 +82,39 @@ function isActive(href: string) {
     const menu = document.getElementById('theme-menu');
     if (!btn || !menu) return;
 
+    const options = Array.from(menu.querySelectorAll<HTMLButtonElement>('[data-theme-opt]'));
+    const openThemeMenu = () => {
+      menu.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      (options.find(option => option.getAttribute('aria-checked') === 'true') || options[0]).focus();
+    };
+
     btn.addEventListener('click', () => {
       const open = !menu.hidden;
       menu.hidden = open;
       btn.setAttribute('aria-expanded', String(!open));
+      if (!open) openThemeMenu();
+    });
+
+    btn.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        event.preventDefault();
+        openThemeMenu();
+      }
+    });
+    menu.addEventListener('keydown', (event) => {
+      const index = options.indexOf(document.activeElement as HTMLButtonElement);
+      if (['ArrowDown', 'ArrowUp', 'Home', 'End'].includes(event.key)) {
+        event.preventDefault();
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? options.length - 1
+          : (index + (event.key === 'ArrowDown' ? 1 : -1) + options.length) % options.length;
+        options[next].focus();
+      } else if (event.key === 'Escape' || event.key === 'Tab') {
+        menu.hidden = true;
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
+        if (event.key === 'Escape') event.preventDefault();
+      }
     });
 
     document.querySelectorAll('[data-theme-opt]').forEach(opt => {
@@ -93,6 +122,7 @@ function isActive(href: string) {
         applyTheme((opt as HTMLButtonElement).dataset.themeOpt!);
         menu.hidden = true;
         btn.setAttribute('aria-expanded', 'false');
+        btn.focus();
       });
     });
 
@@ -223,6 +253,10 @@ function isActive(href: string) {
   .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  @media (max-width: 900px) {
+    .hamburger { display: flex; }
+  }
 
   /* Mobile menu */
   .mobile-menu {
