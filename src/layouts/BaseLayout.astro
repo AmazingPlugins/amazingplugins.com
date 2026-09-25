@@ -71,9 +71,9 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
 
     <!-- Fonts -->
     <link rel="preload" href={interFont} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
+    {ogType !== 'article' && <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />}
     <link rel="preload" href={italicFont} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={monoFont} as="font" type="font/woff2" crossorigin />
+    {ogType !== 'article' && <link rel="preload" href={monoFont} as="font" type="font/woff2" crossorigin />}
 
     <script is:inline type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-Q3KPCF2RJT"></script>
     <script is:inline type="text/partytown">
