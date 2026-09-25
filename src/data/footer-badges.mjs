@@ -1,0 +1,18 @@
+export const footerBadges = [
+  { id: 'launchigniter', name: 'LaunchIgniter', href: 'https://launchigniter.com/product/amazingplugins?ref=badge-amazingplugins', source: 'https://launchigniter.com/api/badge/amazingplugins?theme=light' },
+  { id: 'earlyhunt', name: 'EarlyHunt', href: 'https://earlyhunt.com/project/amazingplugins', source: 'https://earlyhunt.com/badges/earlyhunt-badge-light.svg' },
+  { id: 'saascity', name: 'SaaSCity', href: 'https://saascity.io', source: 'https://saascity.io/badges/featured-dark.svg' },
+  { id: 'indiehunt', name: 'IndieHunt', href: 'https://indiehunt.io', source: 'https://indiehunt.io/badges/indiehunt-badge-light.svg' },
+  { id: 'fazier', name: 'Fazier', href: 'https://fazier.com/launches/amazingplugins.com', source: 'https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light' },
+  { id: 'wired', name: 'Wired Business', href: 'https://wired.business', source: 'https://wired.business/badge0-white.svg' },
+  { id: 'productfame', name: 'ProductFame', href: 'https://productfame.com', source: 'https://productfame.com/badges/featured-light.svg' },
+  { id: 'showmebest', name: 'ShowMeBestAI', href: 'https://showmebest.ai', source: 'https://showmebest.ai/badge/feature-badge-white.webp' },
+  { id: 'neeed', name: 'Neeed Directory', href: 'https://neeed.directory', source: 'https://neeed.directory/badges/neeed-badge-light.svg' },
+  { id: 'saasbison', name: 'SaaSBison', href: 'https://saasbison.com', source: 'https://saasbison.com/badge.png' },
+  { id: 'dodo', name: 'DodoDirectory', href: 'https://dododirectory.com', source: 'https://dododirectory.com/badge-light.png' },
+  { id: 'twelve', name: 'Twelve Tools', href: 'https://twelve.tools', source: 'https://twelve.tools/badge0-white.svg' },
+  { id: 'launchllama', name: 'Launch Llama Tools', href: 'https://tools.launchllama.co?utm_source=badge&utm_medium=referral', source: 'https://tools.launchllama.co/featured-badge.png?v=2' },
+  { id: 'launchboosts', name: 'LaunchBoosts', href: 'https://launchboosts.com/project/amazingplugins', source: 'https://launchboosts.com/badges/featured-dark.svg' },
+  { id: 'tooldirs', name: 'ToolDirs', href: 'https://tooldirs.com', source: 'https://tooldirs.com/badge/badge_dark.svg' },
+  { id: 'techtrendin', name: "TechTrendin'", href: 'https://www.techtrendin.com/products/amazingplugins', source: 'https://www.techtrendin.com/badges/featured-light.png' },
+];

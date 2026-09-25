@@ -1,6 +1,7 @@
 # Build output
 dist/
 node_modules/
+.lighthouse/
 .astro/
 .vite/
 .DS_Store
