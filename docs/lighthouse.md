@@ -47,6 +47,10 @@ The owner approved deployment and production verification on September 25, 2026.
 
 Fonts are served locally, with smaller subsets and preloads for the four above-the-fold faces. Font URLs include content hashes and use immutable caching. Critical styles are inlined. The page no longer fades in from invisible on each navigation. Google Analytics runs through Partytown in a worker.
 
+Cross-origin isolation headers let supported browsers use Partytown's shared-memory transport. This avoids its hidden service-worker iframe. GA4 page views were verified with HTTP 204 in this mode; browsers without isolation support retain Partytown's fallback transport.
+
+Shared header/footer scripts use cached modules. Mobile ribbons are static, with no blur filters, and the navigation uses a solid theme background on narrow screens. The hero noise texture is pre-rendered rather than computed with an SVG filter during page rendering.
+
 Footer badge artwork is served locally and lazy-loaded. Directory links stay intact. This removes badge requests that set third-party cookies. The badge slider only animates while visible, and stops for reduced motion or a hidden tab.
 
 The slider's duplicate is created on first view. Creating it during page startup caused Chrome to fetch offscreen badges despite their lazy-loading attributes. The shipping hero now has responsive image sizes, and the favicon uses a real 32-pixel image.
