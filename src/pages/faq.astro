@@ -1,179 +1,91 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import FAQSchema from '../components/FAQSchema.astro';
+import { shippingTester, shippingFAQs } from '../data/shipping-rules-tester';
 
-const generalFaqs = [
+const groups = [
   {
-    q: "What does WCAG 2.1 AA mean for my store?",
-    a: "WCAG 2.1 AA (Web Content Accessibility Guidelines) is the international standard for web accessibility. It requires things like alt text on images, keyboard navigation support, sufficient color contrast, and proper form labels. EN 301 549 (EU) and ADA Title III (US) both reference it. Meeting AA standards is the legal expectation for e-commerce stores in most jurisdictions.",
+    id: 'choosing-a-plugin', title: 'Choosing a plugin', href: '/plugins/', link: 'Compare all plugins',
+    questions: [
+      { question: 'Which plugin should I use?', answer: 'Accessibility Fixer addresses common storefront accessibility issues. Shipping Rules Tester helps investigate zones and local shipping rates. Stale Order Cleaner finds old orders by status and age for review before deletion. Install the tool that matches the problem you need to solve.' },
+      { question: 'Where do I find the current install links?', answer: 'Accessibility Fixer is available on WordPress.org. Shipping Rules Tester is submitted for review, with its source available on GitHub. Stale Order Cleaner is available through its GitHub repository. The plugin catalog links to each current install or source page.' },
+      { question: 'What should I include in a support request?', answer: 'Tell us the plugin name and version, your WordPress and WooCommerce versions, the steps you took, and what you expected to happen. Include a screenshot or error message if it helps explain the issue. Leave passwords, API keys, and customer information out of the message.' },
+    ],
+  },
+  { id: 'shipping-rules-tester', title: 'Shipping Rules Tester', href: shippingTester.path, link: 'Explore Shipping Rules Tester', questions: shippingFAQs },
+  {
+    id: 'accessibility-fixer', title: 'Accessibility Fixer', href: '/plugins/woocommerce-accessibility-fixer/', link: 'Explore Accessibility Fixer',
+    questions: [
+      { question: 'Does Accessibility Fixer replace an accessibility review?', answer: 'No. It helps address common issues such as missing image alt text and form labels. You still need to check whether descriptions are meaningful and whether visitors can complete your actual shopping and checkout flows. Installing a plugin does not certify compliance.' },
+      { question: 'Will it work with my theme and checkout?', answer: 'Theme overrides, custom templates, and other extensions can affect the result. Check the relevant storefront pages after applying fixes and after updates. If you find a conflict, contact support with the theme name, plugin versions, and steps to reproduce it.' },
+      { question: 'Where can I check compatibility before installing?', answer: 'Use the current WordPress.org listing for requirements, the changelog, and installation instructions. Check those requirements against your store before installing or updating.' },
+    ],
   },
   {
-    q: "Is this an overlay or JavaScript patch?",
-    a: "No. Our plugin modifies your actual HTML and CSS  --  it doesn't inject a JavaScript layer that sits on top of your page. Real code changes, real compliance documentation.",
-  },
-  {
-    q: "What happens when WooCommerce updates?",
-    a: "Our fixers hook into WooCommerce rendering events. If a platform update changes a hook or template pattern, some fixers might briefly pause and our system will flag which ones need re-verification. You can re-run a scan at any time from the dashboard.",
-  },
-  {
-    q: "Does the free version limit how many products I can fix?",
-    a: "No. The free version gives you all 10 fixers with no product cap. You can run as many scans and apply as many fixes as you want.",
-  },
-  {
-    q: "Will this slow down my store?",
-    a: "No runtime performance impact. The fixers run at PHP render time (server-side). No client-side JavaScript is added to your storefront.",
-  },
-  {
-    q: "What stores are most at risk of accessibility lawsuits?",
-    a: "US-based stores face the most ADA Title III litigation risk  --  demand letters and federal lawsuits targeting accessibility gaps are prolific, especially in California, New York, and Florida. EU-based stores face EN 301 549 and the EU Accessibility Act enforcement which began in June 2025. Both are real risks that good documentation (our PDF reports) helps mitigate.",
+    id: 'stale-order-cleaner', title: 'Stale Order Cleaner', href: '/plugins/#stale-order-cleaner', link: 'See order cleanup features',
+    questions: [
+      { question: 'Which orders can Stale Order Cleaner remove?', answer: 'It finds pending, failed, cancelled, draft, and trashed orders using status and minimum-age filters. Completed, processing, and on-hold orders are excluded from cleanup. Run a dry scan to review the matching records before deletion.' },
+      { question: 'Can I undo an order deletion?', answer: 'No. Deletion permanently removes matching order records. Review the dry-run results and keep a backup before cleanup. Deleting an order does not delete the customer account.' },
+      { question: 'Does Stale Order Cleaner work with HPOS?', answer: 'Yes. It supports both legacy WooCommerce order tables and High-Performance Order Storage (HPOS).' },
+    ],
   },
 ];
-
-const wooFaqs = [
-  {
-    q: "Does it work with my theme?",
-    a: "Yes. The plugin targets standard WooCommerce hooks and filters. If your theme is well-coded and follows WooCommerce conventions, the fixers work automatically. If you hit a conflict, contact support with your theme name and we'll investigate.",
-  },
-  {
-    q: "Will it break my checkout?",
-    a: "No. Each fixer is fully isolated and reversible. You can disable any individual fixer from the WordPress admin panel at any time. We also log every change so you can audit what was applied.",
-  },
-  {
-    q: "How do I install it?",
-    a: "Search 'AP Accessibility Fixer for WooCommerce' in your WordPress admin under Plugins → Add New, or install from https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/. Once activated, go to WooCommerce → Accessibility Fixer to run your first scan.",
-    html: "Search 'AP Accessibility Fixer for WooCommerce' in your WordPress admin under Plugins → Add New, or install from <a href=\"https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/\" target=\"_blank\" rel=\"noopener\">WordPress.org</a>. Once activated, go to <strong>WooCommerce → Accessibility Fixer</strong> to run your first scan.",
-  },
-  {
-    q: "What WordPress and WooCommerce versions are supported?",
-    a: "Requires WordPress 5.8+ and WooCommerce 6.0+. Tested up to WordPress 6.4 and WooCommerce 8.x.",
-  },
-];
-
-// Build FAQ schema for SEO
-const allFaqs = [
-  {
-    q: "What regulations apply to my e-commerce store?",
-    a: "In the US, ADA Title III is the main driver. Courts have consistently ruled that commercial websites are places of public accommodation. In the EU, EN 301 549 and the EU Accessibility Act require WCAG 2.1 AA compliance for e-commerce.",
-  },
-  ...generalFaqs,
-  ...wooFaqs,
-];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": allFaqs.map((faq) => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a,
-    },
-  })),
-};
 ---
 
-<BaseLayout
-  title="FAQ"
-  description="Frequently asked questions about AmazingPlugins accessibility fixers for WooCommerce."
->
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<BaseLayout title="WooCommerce Plugin FAQs" description="Answers about Shipping Rules Tester, Accessibility Fixer, and Stale Order Cleaner: installation, compatibility, read-only checks, and order cleanup.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'FAQ', url: '/faq/' }]} />
+  <FAQSchema questions={groups.flatMap(group => group.questions)} />
   <section class="page-hero">
-    <div class="container">
-      <h1>Frequently Asked Questions</h1>
-      <p class="lead">Everything you need to know about making your WooCommerce store accessible.</p>
+    <div class="wrap">
+      <div class="eyebrow">Before you install</div>
+      <h1 class="display">A few useful <em>answers.</em></h1>
+      <p class="lede">Find the right plugin, check what it supports, and know what to expect before running it on your store.</p>
+      <nav aria-label="FAQ topics" class="topic-links">
+        {groups.map(group => <a class="btn btn-ghost" href={`#${group.id}`}>{group.title}</a>)}
+      </nav>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container faq-container">
-      <details class="faq-item">
-        <summary class="faq-q">What regulations apply to my e-commerce store?</summary>
-        <p class="faq-a">In the US, <strong>ADA Title III</strong> is the main driver  --  courts have consistently ruled that commercial websites are "places of public accommodation." In the EU, <strong>EN 301 549</strong> and the <strong>EU Accessibility Act</strong> (enforced from June 2025) require WCAG 2.1 AA compliance for e-commerce. If you sell to customers in either jurisdiction, accessibility compliance applies to you.</p>
-      </details>
-
-      {generalFaqs.map(faq => (
-        <details class="faq-item">
-          <summary class="faq-q">{faq.q}</summary>
-          <p class="faq-a">{faq.a}</p>
-        </details>
-      ))}
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">WooCommerce Plugin</h2>
-      <div class="faq-container">
-        {wooFaqs.map(faq => (
-          <details class="faq-item">
-            <summary class="faq-q">{faq.q}</summary>
-            <p class="faq-a" set:html={faq.html ?? faq.a} />
+  {groups.map(group => (
+    <section class="section faq-group" id={group.id} aria-labelledby={`${group.id}-heading`}>
+      <div class="wrap faq-wrap">
+        <h2 class="display" id={`${group.id}-heading`}>{group.title}</h2>
+        {group.questions.map(faq => (
+          <details>
+            <summary>{faq.question}</summary>
+            <p>{faq.answer}</p>
           </details>
         ))}
+        <a class="text-link" href={group.href}>{group.link}</a>
+        {group.id === 'shipping-rules-tester' && <p class="guide-link">Working through a missing rate? Read <a class="text-link" href="/blog/how-to-test-woocommerce-shipping-zones-and-rates/">how to test WooCommerce shipping zones and rates</a>.</p>}
       </div>
-    </div>
-  </section>
+    </section>
+  ))}
 
-  <section class="section section-cta">
-    <div class="container" style="text-align:center">
-      <h2>Still have questions?</h2>
-      <p style="margin: 1rem 0 2rem">Reach out and we'll get back to you within one business day.</p>
-      <a href="mailto:support@amazingplugins.com" class="btn btn-primary">Contact Support</a>
+  <section class="section support">
+    <div class="wrap faq-wrap">
+      <h2 class="display">Still have a question?</h2>
+      <p>Tell us which plugin you're using and what you're trying to do.</p>
+      <a href="mailto:support@amazingplugins.com" class="btn btn-primary">Contact support</a>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .page-hero {
-    background: var(--color-primary, #1e3a5f);
-    color: white;
-    padding: 5rem 0 4rem;
-    text-align: center;
-  }
-  .page-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-  .lead { font-size: 1.25rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
-
-  .faq-container {
-    max-width: 720px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .faq-item {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-
-  .faq-q {
-    padding: 1rem 1.25rem;
-    font-weight: 600;
-    cursor: pointer;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: white;
-    transition: background 0.15s;
-  }
-  .faq-q::-webkit-details-marker { display: none; }
-  .faq-q::after { content: '+'; font-size: 1.5rem; color: var(--color-accent, #10b981); }
-  details[open] .faq-q::after { content: '−'; }
-  .faq-q:hover { background: #f9fafb; }
-
-  .faq-a {
-    padding: 1rem 1.25rem;
-    margin: 0;
-    background: #f9fafb;
-    border-top: 1px solid #e5e7eb;
-    color: #374151;
-    line-height: 1.7;
-  }
-
-  .section-cta {
-    background: #f0fdf4;
-    padding: 4rem 0;
-  }
+  .page-hero { background: var(--cream-2); padding: 64px 0; }
+  h1 { font-size: clamp(40px, 6vw, 76px); margin: 20px 0 28px; }
+  .topic-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+  .topic-links .btn { white-space: normal; }
+  .faq-wrap { max-width: 960px; }
+  .faq-group { scroll-margin-top: 68px; padding-top: 56px; padding-bottom: 24px; }
+  h2 { font-size: clamp(30px, 4vw, 44px); margin-bottom: 28px; }
+  details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+  details p { color: var(--ink-2); line-height: 1.7; margin-top: 16px; max-width: 72ch; }
+  .text-link { text-decoration: underline; text-underline-offset: 4px; }
+  .faq-wrap > .text-link { display: inline-block; margin-top: 24px; }
+  .guide-link { margin-top: 20px; color: var(--ink-2); }
+  .support { background: var(--cream-2); margin-top: 56px; }
+  .support p { margin: 20px 0 28px; color: var(--ink-2); }
 </style>
