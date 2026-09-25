@@ -10,8 +10,15 @@ from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
 from fontTools import subset
 
-destination = Path(__file__).resolve().parents[1] / 'public/fonts'
+root = Path(__file__).resolve().parents[1]
+destination = root / 'src/assets/fonts'
 destination.mkdir(parents=True, exist_ok=True)
+# Keep ASCII, common punctuation/currency, and every character used by the site.
+# Unbundled characters still use the CSS fallback fonts.
+characters = set(range(0x20, 0x7f)) | set(range(0x2000, 0x2070)) | {0xa0, 0xa3, 0xa9, 0xae, 0xb0, 0xb7, 0x20ac, 0x2122, 0x2197, 0x2212}
+for source_file in (root / 'src').rglob('*'):
+    if source_file.suffix in {'.astro', '.md', '.ts'}:
+        characters.update(map(ord, source_file.read_text()))
 fonts = [
     ('fraunces-normal', 'fraunces/v38/6NUV8FyLNQOQZAnv9ZwIlOkuy91B.woff2', {'opsz': 144, 'SOFT': 50, 'WONK': 0, 'wght': (400, 500)}),
     ('fraunces-italic', 'fraunces/v38/6NUT8FyLNQOQZAnv9ZwNpOskzP9Ddt0.woff2', {'opsz': 144, 'SOFT': 100, 'WONK': 1, 'wght': (400, 500)}),
@@ -24,7 +31,7 @@ for name, source, axes in fonts:
     options = subset.Options()
     options.flavor = 'woff2'
     subsetter = subset.Subsetter(options=options)
-    subsetter.populate(unicodes=list(range(0x20, 0x100)) + list(range(0x2000, 0x2070)) + [0x20ac, 0x2122, 0x2197, 0x2212])
+    subsetter.populate(unicodes=characters)
     subsetter.subset(font)
     if axes:
         font = instantiateVariableFont(font, {key: value for key, value in axes.items() if key in available})
@@ -35,4 +42,4 @@ for name, source, axes in fonts:
 
 for family in ['fraunces', 'inter', 'jetbrainsmono']:
     license_text = urlopen(f'https://raw.githubusercontent.com/google/fonts/main/ofl/{family}/OFL.txt').read().decode('utf-8')
-    (destination / (family + '-OFL.txt')).write_text('\n'.join(line.rstrip() for line in license_text.splitlines()) + '\n')
+    (root / 'public/fonts' / (family + '-OFL.txt')).write_text('\n'.join(line.rstrip() for line in license_text.splitlines()) + '\n')
