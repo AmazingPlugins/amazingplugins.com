@@ -2,6 +2,23 @@
 
 Target: at least 99 in Performance, Accessibility, Best Practices, and SEO on mobile and desktop.
 
+## Production results, September 25, 2026
+
+Google PageSpeed Insights reports reached **99 Performance / 100 Accessibility / 100 Best Practices / 100 SEO** on mobile for all six tested pages. Desktop reports scored **100 in all four categories**.
+
+- [Homepage](https://pagespeed.web.dev/analysis/https-amazingplugins-com/iu37ec22a5): verified after the final font-stability deployment.
+- [Plugin catalog](https://pagespeed.web.dev/analysis/https-amazingplugins-com-plugins/o5rhdv7jx9).
+- [Accessibility Fixer](https://pagespeed.web.dev/analysis/https-amazingplugins-com-plugins-woocommerce-accessibility-fixer/jtn9hkrb9v).
+- [Shipping Rules Tester](https://pagespeed.web.dev/analysis/https-amazingplugins-com-plugins-shipping-rules-tester-for-woocommerce/js5wmdujuz): verified after the final font-stability deployment.
+- [FAQ](https://pagespeed.web.dev/analysis/https-amazingplugins-com-faq/kanzohi2il).
+- [Shipping article](https://pagespeed.web.dev/analysis/https-amazingplugins-com-blog-how-to-test-woocommerce-shipping-zones-and-rates/g0nnnqvx05).
+
+These are measured results, not a guaranteed floor for future runs. Catalog, Accessibility Fixer, FAQ, and article links are from earlier deployments in this optimization series. Attempts to generate a fresh article report after the final deployment timed out in PageSpeed Insights.
+
+The final code deployment is `f906258e4865a62a53e4054d94d6d6048c87d0f1`, from PR #124; GitHub Actions run `36109702158` passed. Changes were deployed through PRs #118–124. The homepage's worker-transport fix reduced its measured Speed Index from about 4 seconds to 1.5–1.6 seconds. A subsequent shipping-page run exposed CLS 0.082; optional font display and an explicit screenshot aspect ratio resolved it. A browser test with every font delayed 800 ms recorded zero layout shift.
+
+Production analytics still sends GA4 page views successfully (HTTP 204). All six documents return HTTP 200 with the isolation headers needed by the worker transport. Full captured reports, including intermediate low scores, remain in the gitignored `.lighthouse/` directory.
+
 ## Run the audits
 
 ```bash
