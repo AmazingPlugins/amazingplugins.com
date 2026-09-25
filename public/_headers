@@ -1,3 +1,7 @@
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: credentialless
+
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
