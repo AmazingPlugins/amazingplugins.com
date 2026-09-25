@@ -1,0 +1,33 @@
+---
+import FAQSchema from './FAQSchema.astro';
+
+interface Props {
+  questions: Array<{ question: string; answer: string }>;
+  heading?: string;
+}
+const { questions, heading = 'Questions before you start' } = Astro.props;
+---
+
+<section class="section" aria-labelledby="faq-heading">
+  <div class="wrap faq-wrap">
+    <div class="eyebrow">A few useful answers</div>
+    <h2 id="faq-heading" class="display">{heading}</h2>
+    <div class="questions">
+      {questions.map(({ question, answer }) => (
+        <details>
+          <summary>{question}</summary>
+          <p>{answer}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+<FAQSchema questions={questions} />
+
+<style>
+  .faq-wrap { max-width: 960px; }
+  h2 { font-size: clamp(32px, 4vw, 52px); margin: 16px 0 32px; }
+  details { border-bottom: 1px solid var(--line); padding: 20px 0; }
+  summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+  details p { color: var(--ink-2); max-width: 72ch; margin-top: 16px; line-height: 1.7; }
+</style>

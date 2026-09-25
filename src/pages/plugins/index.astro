@@ -1,13 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
+import { shippingTester } from '../../data/shipping-rules-tester';
+
+const catalogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'WooCommerce plugins by AmazingPlugins',
+  itemListElement: [
+    { name: 'WooCommerce Accessibility Fixer', url: '/plugins/woocommerce-accessibility-fixer/' },
+    { name: shippingTester.name, url: shippingTester.path },
+    { name: 'Stale Order Cleaner for WooCommerce', url: '/plugins/#stale-order-cleaner' },
+  ].map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: new URL(item.url, Astro.site).href })),
+};
 ---
 
-<BaseLayout title="Plugins" description="WordPress plugins built by a developer who uses them. No crippled free versions, no bait-and-switch pricing.">
+<BaseLayout title="WooCommerce Plugin Catalog" description="Explore Accessibility Fixer, Shipping Rules Tester, and Stale Order Cleaner. Compare features and find current install links for your WooCommerce store.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Plugins', url: '/plugins/' }]} />
+  <script type="application/ld+json" set:html={JSON.stringify(catalogSchema)} />
 
   <section class="section" style="padding-bottom: 2rem;">
     <div class="container">
-      <h1>The Plugins</h1>
-      <p class="page-intro">Built for real WooCommerce stores. Free version available. No gimmicks.</p>
+      <h1>Free plugins for WooCommerce</h1>
+      <p class="page-intro">Fix storefront accessibility issues, investigate shipping rates, or review stale orders. Each tool has a separate job. Check its features and availability below.</p>
     </div>
   </section>
 
@@ -74,7 +89,35 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </div>
       </article>
 
-      <article class="plugin-card">
+      <article class="plugin-card" id="shipping-rules-tester">
+        <div class="plugin-header">
+          <div>
+            <div class="plugin-badges">
+              <span class="badge badge-free">Free</span>
+              <span class="badge badge-soon">{shippingTester.status}</span>
+            </div>
+            <h2>{shippingTester.name}</h2>
+            <p class="plugin-desc">{shippingTester.description}</p>
+          </div>
+        </div>
+        <div class="fixer-grid">
+          {[
+            'Match a destination to its shipping zone',
+            'Check built-in flat rate, free shipping, and local pickup',
+            'Use saved products or multi-item sample packages',
+            'Compare scenarios in the current browser tab',
+            'Understand skipped methods and missing rates',
+            'Read-only tests, with no external carrier calls',
+          ].map(text => <div class="fixer-item"><span class="fixer-check" aria-hidden="true">✓</span><span>{text}</span></div>)}
+        </div>
+        <p class="availability-note">WordPress 6.6+, PHP 7.4+, and WooCommerce required. Awaiting WordPress.org review. Methods that need live cart data are skipped.</p>
+        <div class="plugin-actions">
+          <a href={shippingTester.path} class="btn btn-primary">View plugin details</a>
+          <a href={shippingTester.source} class="btn btn-ghost">View source on GitHub</a>
+        </div>
+      </article>
+
+      <article class="plugin-card" id="stale-order-cleaner">
         <div class="plugin-header">
           <div>
             <div class="plugin-badges">
@@ -112,6 +155,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </div>
         </div>
 
+        <p class="availability-note">Run a dry scan before cleanup. Deletion is permanent and cannot be undone.</p>
         <div class="plugin-actions">
           <a href="https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
         </div>
@@ -151,10 +195,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-radius: 1rem;
     padding: 2.5rem;
     margin-bottom: 4rem;
+    scroll-margin-top: 90px;
   }
 
   .plugin-badges {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
   }
@@ -193,7 +239,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .fixer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
     gap: 0.75rem;
     margin-bottom: 2rem;
   }
@@ -222,6 +268,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     border-top: 1px solid var(--color-border);
   }
 
+  .plugin-actions .btn { white-space: normal; }
+  .availability-note { color: var(--ink-2); font-size: 14px; margin-bottom: 24px; max-width: 75ch; }
+  @media (max-width: 600px) {
+    .plugin-card { padding: 24px; }
+  }
+
   .coming-soon-section h2 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
@@ -229,7 +281,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   .coming-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: 1.5rem;
   }
 

@@ -13,9 +13,9 @@ GSC Errors: not checked, generation stopped before publish
 
 ## Blockers
 
-- Claude Code auth unavailable in the normalized cron shell.
-  - Command run: `export USER=ray LOGNAME=ray HOME=/Users/ray; claude auth status --text`
-  - Result: `Not logged in. Run claude auth login to authenticate.`
+- coding assistant auth unavailable in the normalized cron shell.
+  - Command run: `export USER=ray LOGNAME=ray HOME=/Users/ray; coding assistant auth status --text`
+  - Result: `Not logged in. Run coding assistant auth login to authenticate.`
 - GitHub CLI auth is also unavailable.
   - Command run: `export USER=ray LOGNAME=ray HOME=/Users/ray; gh auth status`
   - Result: active GitHub account `HarunRRayhan` has an invalid token and needs `gh auth login -h github.com`.
@@ -23,9 +23,9 @@ GSC Errors: not checked, generation stopped before publish
 ## What was attempted
 
 1. Normalized the cron shell with `USER=ray`, `LOGNAME=ray`, and `HOME=/Users/ray`.
-2. Checked Claude Code auth before topic selection or generation.
+2. Checked coding assistant auth before topic selection or generation.
 3. Checked GitHub CLI auth as a best-effort publishability preflight.
-4. Stopped before generation, as required, because interactive Claude login must not be attempted from cron.
+4. Stopped before generation, as required, because interactive coding assistant login must not be attempted from cron.
 
 ## Output
 
@@ -37,12 +37,12 @@ GSC Errors: not checked, generation stopped before publish
 
 ## Next action
 
-Re-authenticate Claude Code and GitHub CLI in an interactive shell on Ray's machine, then rerun the AmazingPlugins SEO pipeline.
+Re-authenticate coding assistant and GitHub CLI in an interactive shell on Ray's machine, then rerun the AmazingPlugins SEO pipeline.
 
 Suggested interactive checks after login:
 
 ```bash
 export USER=ray LOGNAME=ray HOME=/Users/ray
-claude auth status --text
+coding assistant auth status --text
 gh auth status
 ```

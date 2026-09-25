@@ -56,7 +56,7 @@
 **Best for:** "People also ask" data — question clusters around a topic
 **How to use:** Enter a keyword, get related questions grouped by intent
 
-### 9. ChatGPT / Claude (for brainstorming)
+### 9. ChatGPT / coding assistant (for brainstorming)
 **Cost:** Free/PRO
 **Best for:** Generating keyword clusters, content angles, related topics
 **How to use:** "Give me 20 long-tail keywords for [topic] targeting [audience]"

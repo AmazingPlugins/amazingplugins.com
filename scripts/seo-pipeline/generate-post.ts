@@ -329,9 +329,10 @@ function writeBlogPost(filename: string, data: any, keyword: string, angle: stri
   return filename;
 }
 
-function generateWithClaude(opts: GenerateOptions): any {
+function generateWithCommand(opts: GenerateOptions): any {
+  const cmd = process.env.SEO_GENERATOR_COMMAND?.trim();
+  if (!cmd) return null;
   const prompt = buildPrompt(opts);
-  const cmd = `claude --print --model opus --input-format text`;
   try {
     const output = execSync(cmd, {
       encoding: 'utf-8',
@@ -344,15 +345,16 @@ function generateWithClaude(opts: GenerateOptions): any {
     const cleaned = output.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
     return JSON.parse(cleaned);
   } catch (error: any) {
-    console.error(`Claude generation failed for "${opts.keyword}" (${opts.angle}): ${error.message}`);
+    console.error(`Configured generator failed for "${opts.keyword}" (${opts.angle}): ${error.message}`);
     return null;
   }
 }
 
 async function generateWithAnthropicAPI(opts: GenerateOptions): Promise<any> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    console.error('ANTHROPIC_API_KEY not set — skipping Anthropic API fallback');
+  const model = process.env.ANTHROPIC_MODEL?.trim();
+  if (!apiKey || !model) {
+    console.error('Set SEO_GENERATOR_COMMAND or both ANTHROPIC_API_KEY and ANTHROPIC_MODEL to generate articles.');
     return null;
   }
 
@@ -361,7 +363,7 @@ async function generateWithAnthropicAPI(opts: GenerateOptions): Promise<any> {
 
   try {
     const response = await client.messages.create({
-      model: 'claude-3-opus-20240229',
+      model,
       max_tokens: 4096,
       temperature: 0.7,
       messages: [{ role: 'user', content: prompt }],
@@ -381,9 +383,9 @@ async function generateWithAnthropicAPI(opts: GenerateOptions): Promise<any> {
 }
 
 async function generateArticle(opts: GenerateOptions): Promise<any> {
-  // Try Claude CLI first (local dev / Hermes)
-  const claudeResult = generateWithClaude(opts);
-  if (claudeResult) return claudeResult;
+  // Use an explicitly configured generator when available.
+  const commandResult = generateWithCommand(opts);
+  if (commandResult) return commandResult;
 
   // Fall back to Anthropic API (CI / GitHub Actions)
   console.log('Falling back to Anthropic API...');

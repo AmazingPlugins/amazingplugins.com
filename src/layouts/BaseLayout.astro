@@ -8,6 +8,7 @@ interface Props {
   title: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
   ogType?: 'website' | 'article';
   canonicalPath?: string;
 }
@@ -15,8 +16,9 @@ interface Props {
 const {
   noindex = false,
   title,
-  description = 'Small, sharp accessibility plugins for WooCommerce. Free, all crafted.',
-  image = '/images/og-default.svg',
+  description = 'Free WooCommerce plugins for accessibility fixes, shipping rule checks, and order cleanup. Explore features, requirements, and setup instructions.',
+  image = '/images/og-default.jpg',
+  imageAlt = 'AmazingPlugins: free tools for WooCommerce stores',
   ogType = 'website',
   canonicalPath,
 } = Astro.props;
@@ -44,12 +46,15 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
     <meta property="og:title" content={`${title} | AmazingPlugins`} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={imageURL} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta property="og:site_name" content="AmazingPlugins" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${title} | AmazingPlugins`} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={imageURL} />
+    <meta name="twitter:image:alt" content={imageAlt} />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />

@@ -1,5 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import FAQSection from '../components/FAQSection.astro';
+import { shippingTester } from '../data/shipping-rules-tester';
+
+const questions = [
+  { question: 'Which plugin should I start with?', answer: 'Use Accessibility Fixer for common accessibility issues in your WooCommerce storefront. Shipping Rules Tester helps investigate shipping zones and local rates. Stale Order Cleaner finds old pending, failed, cancelled, draft, or trashed orders for review before deletion.' },
+  { question: 'Where can I install the plugins?', answer: 'Accessibility Fixer is available on WordPress.org. Shipping Rules Tester has been submitted for review, with its source available on GitHub. Stale Order Cleaner is also available through its GitHub repository. Each plugin listing links to its current source or install page.' },
+  { question: 'Do I need all the plugins?', answer: 'No. Each plugin has a separate job. Choose the one that matches your store’s problem and check its requirements before installing.' },
+];
 
 // Organization schema for homepage
 const organizationSchema = {
@@ -7,7 +15,7 @@ const organizationSchema = {
   "@type": "Organization",
   "name": "AmazingPlugins",
   "url": "https://amazingplugins.com",
-  "description": "Small, sharp tools that fix real problems for WooCommerce store owners.",
+  "description": "Free WooCommerce plugins for accessibility fixes, shipping rule checks, and order cleanup.",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -16,7 +24,7 @@ const organizationSchema = {
 };
 ---
 
-<BaseLayout title="AmazingPlugins - Plugins for WooCommerce" description="Small, sharp tools that fix real problems for WooCommerce store owners. Free, all crafted.">
+<BaseLayout title="Free WooCommerce Plugins for Your Store" description="Fix accessibility issues, check shipping zones and local rates, or clean up stale orders. Explore free WooCommerce plugins with clear setup guides.">
   <!-- Organization Schema -->
   <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 
@@ -40,19 +48,20 @@ const organizationSchema = {
     <div class="wrap hero-content">
       <div class="chip" style="margin-bottom:36px;">
         <span class="chip-dot"></span>
-        <span>A small studio. More plugins coming.</span>
+        <span>Free tools for everyday store work.</span>
       </div>
       <h1 class="display hero-h1">
         A <em>house</em> of plugins for WooCommerce.
       </h1>
       <p class="lede hero-lede">
-        We build small, sharp tools that fix real problems for WooCommerce store owners. Free, all crafted with the patience of someone who runs a store too.
+        Fix common accessibility issues, investigate shipping rules, and clear out stale orders. Pick the tool for the job, right inside WooCommerce.
       </p>
       <div class="hero-btns">
         <a href="/plugins/" class="btn btn-primary" style="padding:16px 28px;font-size:16px;">
           Browse plugins
           <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </a>
+        <a href={shippingTester.path} class="btn btn-ghost">Explore Shipping Rules Tester</a>
       </div>
     </div>
   </section>
@@ -64,7 +73,7 @@ const organizationSchema = {
         <div>
           <div class="eyebrow" style="margin-bottom:16px;">The catalog</div>
           <h2 class="display" style="font-size:clamp(36px,5vw,72px);max-width:18ch;">
-            Built for WooCommerce. <em>More coming.</em>
+            A few store problems, <em>covered.</em>
           </h2>
         </div>
         <a href="/plugins/" class="btn btn-ghost">
@@ -73,30 +82,36 @@ const organizationSchema = {
         </a>
       </div>
       <div class="tiles-grid">
-        <a href="/plugins/woocommerce-accessibility-fixer/" class="tile tile-grad-2" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;">
+        <a href="/plugins/woocommerce-accessibility-fixer/" class="tile tile-accessibility" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;">
             <span style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.85;">01 · WooCommerce</span>
           </div>
-          <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Accessibility Fixer</h3>
+          <div>
+            <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Accessibility Fixer</h3>
+            <p class="tile-description">Address missing image alt text, form labels, and other common storefront accessibility issues.</p>
+            <span class="tile-action">View plugin details <span aria-hidden="true">↗</span></span>
+          </div>
         </a>
-        <div class="tile tile-coming" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;opacity:0.55;">
+        <a href={shippingTester.path} class="tile tile-grad-3 product-tile">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-            <span class="coming-badge">Coming Soon</span>
+            <span class="review-badge">{shippingTester.status}</span>
           </div>
           <div>
-            <h3 class="display" style="font-size:26px;letter-spacing:-0.02em;line-height:1.05;">Order Fixer</h3>
-            <p style="font-size:13px;color:var(--ink-3);margin-top:8px;">Edit orders inline with audit logging</p>
+            <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Shipping Rules Tester</h3>
+            <p class="tile-description">Check which zone and local rates match a sample package. Compare results without changing settings.</p>
+            <span class="tile-action">View plugin details <span aria-hidden="true">↗</span></span>
           </div>
-        </div>
-        <div class="tile tile-coming" style="padding:32px;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;opacity:0.55;">
+        </a>
+        <a href="/plugins/#stale-order-cleaner" class="tile tile-grad-cream product-tile">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;">
-            <span class="coming-badge">Coming Soon</span>
+            <span class="eyebrow">Source on GitHub</span>
           </div>
           <div>
-            <h3 class="display" style="font-size:26px;letter-spacing:-0.02em;line-height:1.05;">Smart Bulk Editor</h3>
-            <p style="font-size:13px;color:var(--ink-3);margin-top:8px;">Edit 10 or 10,000 products, preview before save</p>
+            <h3 class="display" style="font-size:32px;letter-spacing:-0.02em;line-height:1.05;">Stale Order Cleaner</h3>
+            <p class="tile-description">Find old pending, failed, and cancelled orders. Preview the matching records before permanent deletion.</p>
+            <span class="tile-action">View plugin details <span aria-hidden="true">↗</span></span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -107,24 +122,24 @@ const organizationSchema = {
       <div class="beliefs-header">
         <div><div class="eyebrow" style="margin-bottom:16px;">What we believe</div></div>
         <h2 class="display" style="font-size:clamp(36px,5vw,64px);max-width:20ch;">
-          Quiet plugins. Loud results. <em>No nonsense</em> in between.
+          Choose by the problem <em>in front of you.</em>
         </h2>
       </div>
       <div class="beliefs-grid">
         <div class="belief-cell">
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--coral);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">01 · Small</div>
-          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">Two people, one shared inbox.</h3>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">You write us, one of us writes back. Probably the person who built the thing you are asking about.</p>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">01 · Accessibility</div>
+          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">Make your storefront easier to use.</h3>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">Start with common markup issues such as missing alt text and form labels. Then test your store with a keyboard and assistive technology. A plugin doesn't replace a full accessibility review.</p>
         </div>
         <div class="belief-cell">
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--coral);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">02 · Sharp</div>
-          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">One plugin, one job.</h3>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">No suite, no upsell tabs inside the dashboard. Each plugin solves one specific problem and gets out of the way.</p>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">02 · Shipping</div>
+          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">Investigate a missing shipping rate.</h3>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">Try a customer's destination with a sample package. Inspect the matched zone, compare package values, and see which methods need live checkout data.</p>
         </div>
         <div class="belief-cell">
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--coral);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">03 · Free</div>
-          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">Actually free. No bait-and-switch.</h3>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">Every plugin is genuinely free. No product limits, no upgrade nagging, no hidden paywalls. Use it forever or move on - no hard feelings either way.</p>
+          <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-3);letter-spacing:0.14em;margin-bottom:28px;text-transform:uppercase;">03 · Order cleanup</div>
+          <h3 class="display" style="font-size:28px;margin-bottom:16px;letter-spacing:-0.02em;">Find the orders worth clearing out.</h3>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.55;">Filter stale orders by status and age. Run a dry scan before deleting anything. Completed, processing, and on-hold orders aren't included in cleanup.</p>
         </div>
       </div>
     </div>
@@ -133,42 +148,44 @@ const organizationSchema = {
   <!-- How we ship -->
   <section class="section" style="background:var(--cream-2);">
     <div class="wrap">
-      <div class="eyebrow" style="margin-bottom:16px;">How we ship</div>
+      <div class="eyebrow" style="margin-bottom:16px;">Know what each tool does</div>
       <h2 class="display" style="font-size:clamp(36px,5vw,64px);margin-bottom:56px;max-width:20ch;">
-        The promises behind every <em>plugin</em>.
+        Useful details, <em>before you install.</em>
       </h2>
       <div class="principles-grid">
         <div class="card" style="padding:36px;">
           <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
             <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">01</span>
-            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Real audits, not overlays</h3>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Fix common markup issues</h3>
           </div>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Our accessibility plugins fix the underlying markup. No iframe widget that hides issues from your audit but leaves them in your code.</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Accessibility Fixer works on storefront HTML. Review the individual fixes and choose what to apply to your store.</p>
         </div>
         <div class="card" style="padding:36px;">
           <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
             <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">02</span>
-            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Every plugin ships with rollback</h3>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Shipping checks are read-only</h3>
           </div>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Bulk operations preview their changes before they run, and one click reverts the whole batch. We refuse to ship destructive features without an undo.</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Shipping Rules Tester reads your configuration without changing settings or creating orders. It doesn't contact external shipping providers.</p>
         </div>
         <div class="card" style="padding:36px;">
           <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
             <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">03</span>
-            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Two-week release cadence</h3>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Preview before order cleanup</h3>
           </div>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Predictable, small, boring releases. Changelogs in plain English. No marketing blasts dressed up as product updates.</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Stale Order Cleaner's scan shows which records match your filters. Deletion is permanent, so review the preview and keep a backup before cleanup.</p>
         </div>
         <div class="card" style="padding:36px;">
           <div style="display:flex;gap:20px;align-items:baseline;margin-bottom:14px;">
             <span style="font-family:var(--font-mono);font-size:12px;color:var(--coral);letter-spacing:0.14em;">04</span>
-            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">You own your data on the way out</h3>
+            <h3 class="display" style="font-size:26px;letter-spacing:-0.015em;flex:1;">Check the scope first</h3>
           </div>
-          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Cancel a plugin and we hand back a clean export. No lock-in, no held-hostage settings, no confused renewal flows.</p>
+          <p style="font-size:15px;color:var(--ink-2);line-height:1.6;padding-left:44px;">Each listing explains the supported features and links to the current source or install page. Have a store-specific question? Email support@amazingplugins.com.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <FAQSection questions={questions} />
 
   <!-- CTA -->
   <section class="cta-dark">
@@ -183,14 +200,15 @@ const organizationSchema = {
       <h2 class="display cta-h2">
         Find the plugin you actually <em>need</em>.
       </h2>
-      <p style="font-size:18px;color:rgba(244,236,219,0.7);max-width:50ch;margin-bottom:40px;">
-        Every plugin is free. No trialware, no upsells, no surprises.
+      <p style="font-size:18px;color:var(--cream);max-width:50ch;margin-bottom:40px;">
+        Explore the features and requirements, or ask us which tool fits your store.
       </p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;">
         <a href="/plugins/" class="btn btn-coral" style="padding:16px 28px;font-size:16px;">
           Browse plugins
           <svg viewBox="0 0 16 16" fill="none" width="14" height="14"><path d="M3 8h10m-4-4 4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </a>
+        <a href="mailto:support@amazingplugins.com" class="btn btn-primary">Ask a question</a>
       </div>
     </div>
   </section>
@@ -221,6 +239,12 @@ const organizationSchema = {
     gap: 14px;
     flex-wrap: wrap;
   }
+  .hero-btns .btn { white-space: normal; }
+  .product-tile { padding: 32px; min-height: 300px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
+  .tile-description { font-size: 14px; line-height: 1.6; margin-top: 16px; }
+  .tile-accessibility { background: linear-gradient(135deg, #98405F, #5B3A6B); color: #fff; }
+  .tile-action { display: block; margin-top: 24px; font-size: 13px; font-weight: 600; }
+  .review-badge { padding: 5px 10px; border: 1px solid rgba(255,255,255,0.5); border-radius: 999px; font-size: 12px; }
   .catalog-header {
     display: flex;
     justify-content: space-between;
@@ -262,6 +286,7 @@ const organizationSchema = {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .principles-grid .card { min-width: 0; overflow-wrap: anywhere; }
 
   .cta-dark {
     background: var(--ink);
@@ -271,11 +296,13 @@ const organizationSchema = {
     overflow: hidden;
   }
   .cta-h2 {
+    /* The closing section uses an inverted surface in both themes. */
     font-size: clamp(48px, 7vw, 96px);
     max-width: 14ch;
     margin-bottom: 32px;
     color: var(--cream);
   }
+  .cta-dark .btn-primary { border: 1px solid var(--cream); }
 
   @media (max-width: 900px) {
     .tiles-grid { grid-template-columns: repeat(2, 1fr); }
@@ -287,24 +314,4 @@ const organizationSchema = {
     .tiles-grid { grid-template-columns: 1fr; }
   }
 
-  .tile-coming {
-    border: 1px dashed var(--line);
-    border-radius: 16px;
-    background: transparent;
-    cursor: default;
-    transition: opacity 0.2s;
-  }
-  .tile-coming:hover {
-    opacity: 0.7 !important;
-  }
-  .coming-badge {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 999px;
-    background: var(--cream-2);
-    color: var(--ink-3);
-  }
 </style>
