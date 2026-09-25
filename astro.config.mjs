@@ -9,6 +9,8 @@ export default defineConfig({
   trailingSlash: 'always',
   output: 'static',
   build: { inlineStylesheets: 'always' },
+  // Cache shared navigation/footer scripts without delaying the first HTML paint.
+  vite: { build: { assetsInlineLimit: 0 } },
   adapter: cloudflare({
     platformProxy: {
       enabled: true,
