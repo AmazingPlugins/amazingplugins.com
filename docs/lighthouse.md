@@ -41,11 +41,11 @@ Reports are saved in the gitignored `.lighthouse/` directory. `baseline/` contai
 
 The production build and existing SEO checks passed. Browser checks covered all six pages at 320, 390, 768, and 1440 pixels in light and dark themes, with no horizontal overflow. Axe found no violations in either theme after transitions settled. Keyboard theme selection, mobile navigation, FAQ disclosures, badge loading, and reduced-motion behavior passed. A separate browser check confirmed a worker-based GA4 `page_view` received HTTP 204.
 
-The owner approved deployment and production verification on September 25, 2026. Production results are pending.
+The owner approved deployment and production verification on September 25, 2026. PR #118 deployed successfully. Google's first [PageSpeed mobile report](https://pagespeed.web.dev/analysis/https-amazingplugins-com/hfk26au0wz?form_factor=mobile) scored **98 / 100 / 100 / 100**, with FCP 1.7 seconds, LCP 2.0 seconds, TBT 0 ms, and CLS 0. A follow-up reduces font bytes and preloads the monospace font to improve first paint.
 
 ## What changed
 
-Fonts are served locally, with smaller Latin subsets and preloads for the main text faces. Critical styles are inlined. The page no longer fades in from invisible on each navigation. Google Analytics runs through Partytown in a worker.
+Fonts are served locally, with smaller subsets and preloads for the four above-the-fold faces. Font URLs include content hashes and use immutable caching. Critical styles are inlined. The page no longer fades in from invisible on each navigation. Google Analytics runs through Partytown in a worker.
 
 Footer badge artwork is served locally and lazy-loaded. Directory links stay intact. This removes badge requests that set third-party cookies. The badge slider only animates while visible, and stops for reduced motion or a hidden tab.
 
@@ -62,4 +62,4 @@ python -m pip install 'fonttools[woff]'
 python scripts/prepare-fonts.py
 ```
 
-Run Python tooling in a virtual environment. Font sources are versioned in the script; their OFL licenses ship in `public/fonts/`. Badge source URLs are in `src/data/footer-badges.mjs`. Asset refreshes are manual, so builds don't depend on those external hosts.
+Run Python tooling in a virtual environment. Font sources are versioned in the script; their OFL licenses ship in `public/fonts/`. Generated fonts live in `src/assets/fonts/`. The subset includes ASCII, common punctuation, and every character in the current site sources. Run the font script when adding new non-ASCII text; unbundled characters use the CSS fallback fonts. Badge source URLs are in `src/data/footer-badges.mjs`. Asset refreshes are manual, so builds don't depend on those external hosts.

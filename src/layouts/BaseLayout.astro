@@ -3,6 +3,10 @@ import '../styles/global.css';
 import '../styles/fonts.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import interFont from '../assets/fonts/inter-latin.woff2?url';
+import displayFont from '../assets/fonts/fraunces-normal-latin.woff2?url';
+import italicFont from '../assets/fonts/fraunces-italic-latin.woff2?url';
+import monoFont from '../assets/fonts/jetbrains-mono-latin.woff2?url';
 
 interface Props {
   noindex?: boolean;
@@ -66,9 +70,10 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
     {bingVerificationCode && <meta name="msvalidate.01" content={bingVerificationCode} />}
 
     <!-- Fonts -->
-    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/fraunces-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/fraunces-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={italicFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={monoFont} as="font" type="font/woff2" crossorigin />
 
     <script is:inline type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-Q3KPCF2RJT"></script>
     <script is:inline type="text/partytown">
