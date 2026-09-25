@@ -1,4 +1,5 @@
 ---
+import { shippingTester } from '../data/shipping-rules-tester';
 ---
 
 <footer class="footer">
@@ -10,17 +11,20 @@
           <strong style="font-size:15px;">AmazingPlugins</strong>
         </div>
         <p style="font-size:14px;color:var(--ink-3);max-width:280px;line-height:1.55;">
-          A small studio building useful plugins for WooCommerce. Free, all crafted.
+          Free tools for WooCommerce stores. Fix accessibility issues, check shipping rules, and clean up stale orders.
         </p>
       </div>
       <div class="footer-col">
         <h5>Plugins</h5>
         <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a>
+        <a href={shippingTester.path}>{shippingTester.shortName} <small>({shippingTester.status})</small></a>
+        <a href="/plugins/#stale-order-cleaner">Stale Order Cleaner</a>
         <a href="/plugins/">All Plugins</a>
       </div>
       <div class="footer-col">
         <h5>Company</h5>
         <a href="/blog/">Blog</a>
+        <a href="/faq/">Frequently asked questions</a>
       </div>
       <div class="footer-col">
         <h5>Legal</h5>

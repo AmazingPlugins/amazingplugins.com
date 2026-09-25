@@ -13,26 +13,26 @@ GSC Errors: not checked, generation stopped before publish
 
 ## Blocker
 
-Claude Code authentication is unavailable in the normalized cron shell.
+coding assistant authentication is unavailable in the normalized cron shell.
 
 Preflight command used:
 
 ```bash
 export USER=ray LOGNAME=ray HOME=/Users/ray
-claude auth status --text
+coding assistant auth status --text
 ```
 
 Observed output:
 
 ```text
-Not logged in. Run claude auth login to authenticate.
+Not logged in. Run coding assistant auth login to authenticate.
 ```
 
-Per the nightly SEO instructions, cron must not attempt interactive Claude login. The run stopped before topic selection, content generation, commit, deploy, sitemap submission, or GSC checks.
+Per the nightly SEO instructions, cron must not attempt interactive coding assistant login. The run stopped before topic selection, content generation, commit, deploy, sitemap submission, or GSC checks.
 
 ## Additional preflight notes
 
-GitHub CLI auth is healthy for account `HarunRRayhan`, but publishability was not used because generation stopped at the Claude auth gate.
+GitHub CLI auth is healthy for account `HarunRRayhan`, but publishability was not used because generation stopped at the coding assistant auth gate.
 
 Current working copy was not on `main` at preflight:
 
@@ -46,9 +46,9 @@ No existing work was changed except writing this required archive.
 
 ## Next action
 
-Run `claude auth login` manually in Harun/Ray's normal interactive shell, then rerun the job. After login, verify with:
+Run `coding assistant auth login` manually in Harun/Ray's normal interactive shell, then rerun the job. After login, verify with:
 
 ```bash
 export USER=ray LOGNAME=ray HOME=/Users/ray
-claude auth status --text
+coding assistant auth status --text
 ```

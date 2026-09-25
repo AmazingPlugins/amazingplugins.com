@@ -1,0 +1,198 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
+import FAQSection from '../../components/FAQSection.astro';
+import { shippingTester as plugin, shippingFAQs } from '../../data/shipping-rules-tester';
+
+const features = [
+  { title: 'Find the matching zone', text: 'Enter a country, state, postcode, and city. See which shipping zone WooCommerce selects and the location rules behind it.' },
+  { title: 'Check local shipping rates', text: 'Calculate built-in flat rate, free shipping, and local pickup where sample-package data is enough. See explanations for disabled, no-rate, or skipped methods.' },
+  { title: 'Use products from your store', text: 'Read a saved product’s price, weight, dimensions, shipping class, and tax class without editing the product.' },
+  { title: 'Build a mixed package', text: 'Add multiple synthetic items or saved products with per-item quantities. Include shipping classes and dimensions for more detailed checks.' },
+  { title: 'Start with a quick scenario', text: 'Choose a standard order, free-shipping check, heavy parcel, or local pickup preset. Adjust the destination and package to fit your store.' },
+  { title: 'Compare results side by side', text: 'Keep a result and run another test with a different destination or package. Comparisons stay in the current browser tab, with nothing saved to your database.' },
+];
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: plugin.name,
+  url: new URL(plugin.path, Astro.site).href,
+  description: plugin.description,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'WordPress',
+  softwareRequirements: 'WordPress 6.6+, PHP 7.4+, WooCommerce',
+  softwareVersion: plugin.version,
+  license: 'https://www.gnu.org/licenses/gpl-2.0.html',
+  screenshot: new URL('/images/shipping-rules-tester/scenario-builder.webp', Astro.site).href,
+  author: { '@type': 'Organization', name: 'AmazingPlugins', url: 'https://amazingplugins.com/' },
+};
+---
+
+<BaseLayout
+  title="Shipping Rules Tester for WooCommerce"
+  description={plugin.description}
+  image="/images/shipping-rules-tester/social-preview.jpg"
+  imageAlt="Shipping Rules Tester interface showing destination and sample package controls"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
+  <BreadcrumbSchema items={[
+    { name: 'Home', url: '/' },
+    { name: 'Plugins', url: '/plugins/' },
+    { name: plugin.shortName, url: plugin.path },
+  ]} />
+
+  <section class="product-hero">
+    <div class="wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span>
+        <a href="/plugins/">Plugins</a><span aria-hidden="true">/</span>
+        <span aria-current="page">Shipping Rules Tester</span>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <div class="status-row"><span class="status">{plugin.status}</span><span class="eyebrow">Free · WooCommerce</span></div>
+          <h1 class="display">Shipping Rules Tester <em>for WooCommerce.</em></h1>
+          <p class="lede">Check which zone and local rates match a sample package. Find out why a method isn't returning a rate, without changing your shipping settings.</p>
+          <div class="actions">
+            <a href="#how-it-works" class="btn btn-primary">See how it works</a>
+            <a href={plugin.source} class="btn btn-ghost">View source on GitHub</a>
+          </div>
+          <p class="review-note">AP Shipping Rules Tester is awaiting WordPress.org review. Source code is available now; the directory install link will follow approval.</p>
+          <ul class="quick-facts" aria-label="Plugin requirements">
+            <li>WordPress 6.6+</li><li>PHP 7.4+</li><li>WooCommerce required</li>
+          </ul>
+        </div>
+        <figure class="hero-preview">
+          <a href="/images/shipping-rules-tester/scenario-builder.webp" aria-label="Open the full-size scenario builder screenshot">
+            <img src="/images/shipping-rules-tester/scenario-builder.webp" width="1078" height="903" fetchpriority="high" alt="Shipping Rules Tester destination fields, package value and weight inputs, and quick scenario presets" />
+          </a>
+          <figcaption>The scenario builder in version {plugin.version}. Select the image to view it full size.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tinted" id="how-it-works">
+    <div class="wrap">
+      <div class="eyebrow">From destination to diagnosis</div>
+      <h2 class="display section-heading">A shipping check in <em>three steps.</em></h2>
+      <ol class="steps">
+        <li><span class="step-number" aria-hidden="true">01</span><h3>Set the destination</h3><p>Use the address details a customer would enter. Change the postcode or state to investigate zone boundaries.</p></li>
+        <li><span class="step-number" aria-hidden="true">02</span><h3>Build the package</h3><p>Enter a value, weight, and quantity, select a saved product, or open the advanced builder for multiple items.</p></li>
+        <li><span class="step-number" aria-hidden="true">03</span><h3>Read and compare</h3><p>Choose <strong>Test shipping rules</strong>. Review the matched zone and method results, then keep the result to compare another scenario.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="eyebrow">What you can check</div>
+      <h2 class="display section-heading">Less guessing about <em>shipping rules.</em></h2>
+      <div class="feature-grid">
+        {features.map(feature => <article class="feature"><h3>{feature.title}</h3><p>{feature.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section tinted">
+    <div class="wrap results-grid">
+      <div>
+        <div class="eyebrow">Read the result, not just the rate</div>
+        <h2 class="display section-heading">See why a method <em>was skipped.</em></h2>
+        <p class="lede">A missing rate doesn't always mean a broken rule. Some methods need information a sample package can't provide.</p>
+        <ul class="example-list">
+          <li><strong>Unexpected zone?</strong> Compare nearby postcodes and inspect the matched zone's location rules.</li>
+          <li><strong>Free shipping missing?</strong> Compare package values around your configured threshold. Rules that need coupon or live-cart data are skipped.</li>
+          <li><strong>Different product, different rate?</strong> Use a saved product's shipping class and compare it with another package.</li>
+        </ul>
+        <p class="scope-note"><strong>Local checks only.</strong> External carrier rates, coupons, customer roles, subscriptions, and live-cart behavior need a separate checkout test.</p>
+      </div>
+      <figure>
+        <a href="/images/shipping-rules-tester/shipping-results.webp" aria-label="Open the full-size shipping results screenshot">
+          <img src="/images/shipping-rules-tester/shipping-results.webp" width="768" height="659" loading="lazy" decoding="async" alt="Example results showing a fallback shipping zone, a matched flat rate, and a free-shipping method skipped because it needs live cart or coupon context" />
+        </a>
+        <figcaption>Example store configuration: one local rate returned, one method skipped. Your rates depend on your settings.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="installation">
+    <div class="wrap install-grid">
+      <div>
+        <div class="eyebrow">Run it in your store admin</div>
+        <h2 class="display section-heading">Setup and <em>requirements.</em></h2>
+        <p class="lede">You'll need WordPress 6.6+, PHP 7.4+, and an active WooCommerce installation. The tester works with HPOS and uses your store's currency and weight unit.</p>
+        <p class="review-note">While directory review is pending, use the source repository's installation instructions for a manual setup.</p>
+        <a href={`${plugin.source}/blob/main/readme.txt`} class="text-link">Read the installation instructions on GitHub</a>
+      </div>
+      <ol class="install-steps">
+        <li>Install and activate WooCommerce if it isn't already active.</li>
+        <li>Place the plugin folder in <code>wp-content/plugins/</code>, following the repository instructions.</li>
+        <li>Activate <strong>AP Shipping Rules Tester for WooCommerce</strong> from the Plugins screen.</li>
+        <li>Open <strong>WooCommerce &gt; Shipping Rules Tester</strong> and run your first sample package.</li>
+      </ol>
+    </div>
+  </section>
+
+  <FAQSection questions={shippingFAQs} heading="Shipping tester questions" />
+
+  <section class="section tinted">
+    <div class="wrap closing">
+      <div>
+        <h2 class="display section-heading">Have a shipping rule <em>to investigate?</em></h2>
+        <p class="lede">Read the source and try a local check. If a result needs explaining, tell us which method and package you're testing.</p>
+      </div>
+      <div class="actions">
+        <a href={plugin.source} class="btn btn-primary">View source on GitHub</a>
+        <a href="mailto:support@amazingplugins.com?subject=Shipping%20Rules%20Tester" class="btn btn-ghost">Ask a question</a>
+      </div>
+      <p class="related">Checking the rest of your store? Explore <a class="text-link" href="/plugins/woocommerce-accessibility-fixer/">Accessibility Fixer</a> or <a class="text-link" href="/plugins/">all WooCommerce plugins</a>.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .product-hero { padding: 32px 0 80px; }
+  .breadcrumbs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; color: var(--ink-3); margin-bottom: 48px; }
+  .breadcrumbs a:hover, .text-link { text-decoration: underline; text-underline-offset: 4px; }
+  .hero-grid, .results-grid, .install-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .hero-grid > *, .results-grid > *, .install-grid > * { min-width: 0; }
+  .status-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 24px; }
+  .status { background: var(--cream-3); color: var(--ink-2); border: 1px solid var(--line); border-radius: 999px; font-size: 12px; padding: 6px 12px; font-weight: 600; }
+  h1 { font-size: clamp(42px, 5.3vw, 76px); margin-bottom: 28px; }
+  h1 em { display: block; font-size: 0.78em; line-height: 1.1; margin-top: 12px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn { white-space: normal; text-align: center; justify-content: center; }
+  .review-note, figcaption { font-size: 13px; line-height: 1.6; color: var(--ink-3); margin-top: 20px; }
+  .quick-facts { display: flex; flex-wrap: wrap; gap: 8px 20px; list-style: none; font-size: 12px; margin-top: 24px; color: var(--ink-2); }
+  figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 12px 32px rgba(26, 20, 16, 0.08); }
+  figcaption { margin-top: 12px; }
+  .tinted { background: var(--cream-2); }
+  .section-heading { font-size: clamp(32px, 4vw, 52px); max-width: 22ch; margin: 16px 0 32px; }
+  .steps { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .step-number { font-family: var(--font-mono); color: var(--ink-3); display: block; margin-bottom: 20px; }
+  h3 { font-size: 20px; margin-bottom: 12px; }
+  .steps p, .feature p, .example-list, .install-steps { color: var(--ink-2); line-height: 1.7; }
+  .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .feature { border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+  .example-list { padding-left: 20px; margin-top: 28px; }
+  .example-list li, .install-steps li { margin-bottom: 20px; padding-left: 4px; }
+  .scope-note { border-left: 3px solid var(--coral); padding: 16px 20px; margin-top: 28px; background: var(--cream); color: var(--ink-2); }
+  .install-steps { padding: 32px 32px 12px 52px; background: var(--cream-2); border-radius: 16px; }
+  code { overflow-wrap: anywhere; font-size: 14px; }
+  .install-grid .text-link { display: inline-block; margin-top: 20px; }
+  .closing { max-width: 960px; }
+  .related { margin-top: 32px; color: var(--ink-2); }
+  #how-it-works, #installation { scroll-margin-top: 90px; }
+  @media (max-width: 1000px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-preview { max-width: 760px; }
+    h1 { max-width: 17ch; }
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 700px) {
+    .results-grid, .install-grid, .steps, .feature-grid { grid-template-columns: 1fr; }
+    .product-hero { padding-bottom: 56px; }
+    .breadcrumbs { margin-bottom: 32px; }
+  }
+</style>
