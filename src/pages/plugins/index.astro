@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
 import { shippingTester } from '../../data/shipping-rules-tester';
+import { amazingSecurity } from '../../data/amazing-security';
 
 const catalogSchema = {
   '@context': 'https://schema.org',
@@ -11,23 +12,30 @@ const catalogSchema = {
     { name: 'WooCommerce Accessibility Fixer', url: '/plugins/woocommerce-accessibility-fixer/' },
     { name: shippingTester.name, url: shippingTester.path },
     { name: 'Stale Order Cleaner for WooCommerce', url: '/plugins/#stale-order-cleaner' },
+    { name: amazingSecurity.fullName, url: amazingSecurity.path },
   ].map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: new URL(item.url, Astro.site).href })),
 };
 ---
 
-<BaseLayout title="WooCommerce Plugin Catalog" description="Explore Accessibility Fixer, Shipping Rules Tester, and Stale Order Cleaner. Compare features and find current install links for your WooCommerce store.">
+<BaseLayout title="WordPress and WooCommerce Plugin Catalog" description="Explore AmazingPlugins tools for WordPress security, WooCommerce accessibility, shipping checks, and order cleanup. See current availability for each plugin.">
   <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Plugins', url: '/plugins/' }]} />
   <script type="application/ld+json" set:html={JSON.stringify(catalogSchema)} />
 
   <section class="section" style="padding-bottom: 2rem;">
     <div class="container">
-      <h1>Free plugins for WooCommerce</h1>
-      <p class="page-intro">Fix storefront accessibility issues, investigate shipping rates, or review stale orders. Each tool has a separate job. Check its features and availability below.</p>
+      <h1>Plugins for WordPress and WooCommerce</h1>
+      <p class="page-intro">Check storefront accessibility, investigate shipping rates, or review stale orders. We're also building a free WordPress security plugin. Check each tool's job and availability below.</p>
     </div>
   </section>
 
   <section class="section section-alt" style="padding-top: 0;">
     <div class="container">
+
+      <article class="plugin-card" id="amazing-security">
+        <div class="plugin-header"><div><div class="plugin-badges"><span class="badge badge-soon">In development</span></div><h2>Amazing Security</h2><p class="plugin-desc">A planned free WordPress security plugin for site checks, public-file verification, and AI-assisted review with WordPress-side approval for fixes.</p></div></div>
+        <p class="availability-note">There is no installable release yet. The product page explains the planned scope and its limits.</p>
+        <div class="plugin-actions"><a href={amazingSecurity.path} class="btn btn-primary">See the project</a></div>
+      </article>
 
       <article class="plugin-card">
         <div class="plugin-header">

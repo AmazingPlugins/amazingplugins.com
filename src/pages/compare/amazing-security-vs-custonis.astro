@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
+import '../../styles/amazing-security.css';
+
+const listing = 'https://wordpress.org/plugins/custonis-security-exposure-scanner/';
+const rows = [
+  { area: 'Public backup and log checks', custonis: 'Available; finds backup files, debug logs, and config copies', ours: 'Planned' },
+  { area: 'HTTP and soft-404 validation', custonis: 'Available per its release notes, including soft-404 handling', ours: 'Planned from an independent verifier service' },
+  { area: 'Scan history and exposure age', custonis: 'Available per its listing', ours: 'History and regression alerts planned' },
+  { area: 'Database health checks', custonis: 'Available for large tables, autoload size, transients, and revisions', ours: 'Not in the Amazing Security first release' },
+  { area: 'Firewall, login, malware, vulnerabilities', custonis: 'Not claimed as product features in the reviewed listing', ours: 'Planned as separate free modules' },
+  { area: 'External service and MCP', custonis: 'Local scans; listing says no external API calls', ours: 'Optional public verifier and MCP planned, each with explicit consent' },
+];
+---
+
+<BaseLayout title="Amazing Security vs Custonis: Public File Checks" description="Custonis already scans for publicly exposed WordPress files. See its released checks beside Amazing Security's planned independent verifier and broader security modules.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Amazing Security', url: '/plugins/amazing-security/' }, { name: 'Compare with Custonis', url: '/compare/amazing-security-vs-custonis/' }]} />
+  <section class="as-shell"><div class="wrap">
+    <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/plugins/amazing-security/">Amazing Security</a><span>/</span><span aria-current="page">Custonis comparison</span></nav>
+    <p class="as-kicker">Amazing Security: In development · Comparison reviewed September 28, 2026</p>
+    <h1 class="display as-title">Amazing Security vs Custonis.</h1>
+    <p class="as-lede">Custonis already checks for exposed WordPress files. It also documents HTTP validation and soft-404 handling. Amazing Security's independent verifier is a plan we still need to prove in a controlled comparison.</p>
+    <div class="as-note"><p><strong>Need an exposure scan now?</strong> Custonis is available on WordPress.org. Amazing Security is in development and has no download.</p></div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap">
+    <h2 class="as-heading">What each project covers</h2>
+    <div class="as-table-wrap"><table class="as-table"><thead><tr><th scope="col">Area</th><th scope="col">Custonis 1.1.7</th><th scope="col">Amazing Security</th></tr></thead><tbody>
+      {rows.map(row => <tr><th scope="row">{row.area}</th><td>{row.custonis}. <a href={listing}>Source</a></td><td>{row.ours}</td></tr>)}
+    </tbody></table></div>
+    <p class="as-method"><strong>Method and disclosure:</strong> AmazingPlugins is building Amazing Security. Custonis claims are from its <a href={listing}>WordPress.org listing and release notes</a>, reviewed September 28, 2026. In a local WordPress fixture, Custonis 1.1.7 found dummy public log and SQL files, then stopped reporting the log after it was removed. We did not complete an HTTPS/CDN mismatch or normal dashboard-flow comparison. This page does not claim one scanner is more accurate.</p>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">The difference we need to test</h2></div><div class="as-prose">
+    <p>Custonis runs locally and says it does not send data to an external API. Our proposed verifier would test from a separate network after explicit opt-in. That may help on hosting or CDN setups where the origin and a visitor see different responses. It also creates a privacy and service-availability tradeoff.</p>
+    <p>We need a controlled CDN-versus-origin test before saying that approach gives owners a clearer answer. The broader <a href="/plugins/amazing-security/">Amazing Security plan</a> also includes hardening checks, login protection, malware and vulnerability findings, and optional MCP. Those modules are not released. For practical steps today, see the <a href="/wordpress-security/">WordPress security checklist</a>.</p>
+  </div></div></section>
+</BaseLayout>

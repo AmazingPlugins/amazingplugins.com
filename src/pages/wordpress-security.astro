@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import '../styles/amazing-security.css';
+---
+
+<BaseLayout title="WordPress Security Checklist for Site Owners" description="A practical WordPress security checklist: updates, logins, public backups and logs, file integrity, and how to confirm a fix without assuming one scan proves safety.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'WordPress security checklist', url: '/wordpress-security/' }]} />
+  <section class="as-shell"><div class="wrap">
+    <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">WordPress security checklist</span></nav>
+    <p class="as-kicker">A checklist you can use today</p>
+    <h1 class="display as-title">Check your WordPress site's security.</h1>
+    <p class="as-lede">Start with the things you can verify: updates, administrator access, public files, and the result after a fix. Keep a record of what you checked and when.</p>
+    <p class="as-small as-status-line">Based on the <a class="as-text-link" href="https://developer.wordpress.org/advanced-administration/security/hardening/">WordPress hardening guide</a>. Reviewed September 28, 2026.</p>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">Start with updates and access.</h2></div><div class="as-prose">
+    <ol>
+      <li><strong>Update WordPress, plugins, and themes.</strong> Check the dashboard for available updates. Remove plugins and themes you no longer use. Make a backup before a major change and confirm it can be restored.</li>
+      <li><strong>Review administrator accounts.</strong> Remove access that nobody needs. Use unique passwords and turn on two-factor authentication for administrators through a released, well-maintained tool.</li>
+      <li><strong>Check login protection.</strong> Review failed-login controls and recovery steps. Don't turn on a rule that could lock out your only administrator without a way back in.</li>
+      <li><strong>Limit dashboard file editing.</strong> WordPress documents `DISALLOW_FILE_EDIT` as one layer that can reduce damage after an account compromise. It doesn't replace updates or access controls.</li>
+    </ol>
+  </div></div></section>
+
+  <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">Look for files the web should not serve.</h2></div><div class="as-prose">
+    <p>Old database exports, archive backups, debug logs, and configuration copies sometimes end up under a public WordPress directory. A file's presence is a reason to investigate; its public reachability is a separate question.</p>
+    <p>Use your host's file manager or a trusted security tool to identify candidates. Don't paste a suspected private file into a chatbot, and don't share a public link to it. If a file is exposed, remove it from the public directory or block access through your host, then verify the same path from an independent route.</p>
+    <p>A CDN can cache a file after it is removed at the origin. A login page, redirect, or generic “not found” page can also confuse simple scanners. Record the HTTP result and retest after each change.</p>
+    <div class="as-note"><p><strong>What a passing check means:</strong> the tested path was not confirmed exposed from that test route at that time. It does not cover every hostname, old cache, or unknown file.</p></div>
+  </div></div></section>
+
+  <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">Treat scanner output as evidence.</h2></div><div class="as-prose">
+    <p><a href="https://developer.wordpress.org/reference/functions/get_core_checksums/">WordPress core checksums</a> can show when a supported core file differs from the official copy. A mismatch needs investigation. Matching checksums do not prove there is no malicious file elsewhere, including in uploads or custom code.</p>
+    <p>For vulnerability alerts, check the installed version, the advisory's affected range, and whether a patched version exists. If a feed is stale or a premium plugin is not covered, “unknown” is the honest result.</p>
+    <p>Write down the issue, what you changed, and the result of the next check. If a tool claims to fix something automatically, review the exact change and its rollback first.</p>
+  </div></div></section>
+
+  <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">About Amazing Security.</h2></div><div class="as-prose">
+    <p><a href="/plugins/amazing-security/">Amazing Security</a> is a free WordPress plugin we're building around this evidence-first workflow. Planned areas include hardening checks, vulnerability and file findings, independent public-file verification, and an optional MCP connection for AI assistants.</p>
+    <p>It's in development and has no download yet. If your site needs protection now, use a released security plugin and follow your host's incident process. You can read our dated <a href="/compare/amazing-security-vs-wordfence/">Wordfence Free comparison</a> to see what a current option provides.</p>
+  </div></div></section>
+</BaseLayout>

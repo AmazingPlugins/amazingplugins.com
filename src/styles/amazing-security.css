@@ -1,0 +1,48 @@
+.as-shell { padding: clamp(58px, 8vw, 110px) 0; }
+.as-shell + .as-shell { border-top: 1px solid var(--line); }
+.as-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(310px, .9fr); gap: clamp(34px, 6vw, 96px); align-items: center; }
+.as-kicker { color: #23624f; font-weight: 700; font-size: 14px; margin-bottom: 22px; }
+[data-theme="dark"] .as-kicker { color: #8fd9b8; }
+.as-title { font-size: clamp(50px, 7vw, 105px); max-width: 11ch; margin-bottom: 28px; }
+.as-lede { font-size: clamp(18px, 1.7vw, 22px); line-height: 1.5; color: var(--ink-2); max-width: 57ch; }
+.as-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; }
+.as-small { color: var(--ink-3); font-size: 14px; line-height: 1.55; }
+.as-actions + .as-small { margin-top: 18px; }
+.as-receipt { border: 1px solid #91ae9f; background: color-mix(in oklab, var(--cream) 94%, #23624f); box-shadow: 13px 13px 0 color-mix(in oklab, #23624f 14%, transparent); padding: clamp(24px, 3vw, 38px); }
+.as-receipt-head { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid #91ae9f; padding-bottom: 18px; margin-bottom: 22px; font-size: 14px; font-weight: 650; }
+.as-verdict { display: inline-block; background: #f8e2bb; color: #56310d; padding: 5px 10px; border-radius: 4px; font-size: 13px; font-weight: 700; }
+.as-receipt h2 { font-size: clamp(22px, 2.4vw, 31px); line-height: 1.15; margin: 20px 0; }
+.as-evidence { width: 100%; border-collapse: collapse; font-size: 14px; }
+.as-evidence th, .as-evidence td { border-top: 1px solid var(--line); text-align: left; padding: 10px 0; vertical-align: top; overflow-wrap: anywhere; }
+.as-evidence th { width: 36%; font-weight: 550; color: var(--ink-3); }
+.as-receipt figcaption { border-top: 1px solid var(--line); padding-top: 16px; margin-top: 20px; color: var(--ink-3); font-size: 13px; }
+.as-heading { font-family: var(--font-display); font-weight: 400; font-size: clamp(36px, 4.5vw, 64px); line-height: 1.08; letter-spacing: -.025em; max-width: 17ch; margin-bottom: 22px; }
+.as-intro { max-width: 67ch; color: var(--ink-2); font-size: 18px; margin-bottom: 35px; }
+.as-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 42px; border-top: 1px solid var(--line); }
+.as-list article { padding: 27px 0 30px; border-bottom: 1px solid var(--line); }
+.as-list h3 { font-size: 19px; line-height: 1.3; margin-bottom: 8px; }
+.as-list p { color: var(--ink-2); max-width: 55ch; }
+.as-tag { color: #23624f; font-size: 13px; font-weight: 700; }
+[data-theme="dark"] .as-tag { color: #8fd9b8; }
+.as-split { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 7vw, 105px); }
+.as-split p + p { margin-top: 16px; }
+.as-prose { max-width: 72ch; }
+.as-prose p, .as-prose li { color: var(--ink-2); line-height: 1.7; }
+.as-prose p + p, .as-prose p + ul, .as-prose p + ol { margin-top: 18px; }
+.as-prose ul, .as-prose ol { padding-left: 1.3em; }
+.as-prose li + li { margin-top: 12px; }
+.as-prose a, .as-table a, .as-text-link { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.as-table-wrap { overflow-x: auto; margin: 28px 0; }
+.as-table { border-collapse: collapse; width: 100%; min-width: 580px; line-height: 1.5; }
+.as-table th, .as-table td { padding: 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.as-table thead th { border-top: 2px solid var(--ink); }
+.as-table tbody th { font-weight: 650; width: 23%; }
+.as-method { border-left: 4px solid #23624f; padding: 16px 20px; background: var(--cream-2); font-size: 14px; line-height: 1.6; }
+.as-crumbs { font-size: 14px; color: var(--ink-3); margin-bottom: 34px; }
+.as-crumbs a { text-decoration: underline; text-underline-offset: 3px; }
+.as-crumbs span { margin: 0 8px; }
+.as-note { background: var(--cream-2); border: 1px solid var(--line); padding: 23px; margin-top: 27px; }
+.as-note p + p { margin-top: 10px; }
+.as-status-line { margin-bottom: 24px; }
+@media (max-width: 850px) { .as-hero, .as-split { grid-template-columns: 1fr; } .as-title { max-width: none; } .as-receipt { max-width: 640px; } }
+@media (max-width: 630px) { .as-list { grid-template-columns: 1fr; } .as-shell { padding: 56px 0; } .as-table { min-width: 560px; } }

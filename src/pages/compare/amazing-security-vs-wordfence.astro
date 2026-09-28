@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
+import '../../styles/amazing-security.css';
+
+const rows = [
+  { area: 'Firewall and rate limits', wordfence: 'Available in Wordfence Free', source: 'https://www.wordfence.com/help/wordfence-free/', ours: 'Planned; no protection is active yet' },
+  { area: 'Malware and file checks', wordfence: 'Malware scanning and file-integrity checks available', source: 'https://www.wordfence.com/help/wordfence-free/', ours: 'Planned; detection coverage is untested' },
+  { area: 'Known vulnerabilities', wordfence: 'Alerts for vulnerable core, plugins, and themes', source: 'https://www.wordfence.com/help/wordfence-free/', ours: 'Planned with a sourced, dated feed' },
+  { area: 'Login protection', wordfence: 'Two-factor authentication and other login controls available', source: 'https://www.wordfence.com/help/wordfence-free/', ours: 'TOTP and rate limits planned' },
+  { area: 'Multi-site management', wordfence: 'Wordfence Central is available for free', source: 'https://www.wordfence.com/products/wordfence-free/', ours: 'No fleet management in the current plan' },
+  { area: 'Independent public-file verification', wordfence: 'This comparison has not tested Wordfence for this workflow', source: 'https://www.wordfence.com/help/wordfence-free/', ours: 'Planned with post-fix rechecks' },
+  { area: 'AI assistant via MCP', wordfence: 'No claim here about Wordfence MCP support', source: 'https://www.wordfence.com/help/wordfence-free/', ours: 'Planned; fixes would require approval in WordPress' },
+];
+---
+
+<BaseLayout title="Amazing Security vs Wordfence Free: What Is Available?" description="A dated comparison of Wordfence Free's released firewall, scanner, login tools, and Central with the planned Amazing Security plugin. No head-to-head protection claim.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Amazing Security', url: '/plugins/amazing-security/' }, { name: 'Compare with Wordfence Free', url: '/compare/amazing-security-vs-wordfence/' }]} />
+  <section class="as-shell"><div class="wrap">
+    <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/plugins/amazing-security/">Amazing Security</a><span>/</span><span aria-current="page">Wordfence Free comparison</span></nav>
+    <p class="as-kicker">Amazing Security: In development · Comparison reviewed September 28, 2026</p>
+    <h1 class="display as-title">Amazing Security vs Wordfence Free.</h1>
+    <p class="as-lede">Wordfence Free is a released security plugin. Amazing Security is still in development. This table compares what Wordfence says it offers today with what we're planning, so you can choose a tool you can use now.</p>
+    <div class="as-note"><p><strong>If your site needs protection today, use a released tool.</strong> Amazing Security has no installable version yet.</p></div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap">
+    <h2 class="as-heading">Available now and still planned</h2>
+    <p class="as-intro">“Planned” means there is no working Amazing Security feature to evaluate yet. It does not mean equivalent coverage or protection.</p>
+    <div class="as-table-wrap"><table class="as-table"><thead><tr><th scope="col">Area</th><th scope="col">Wordfence Free</th><th scope="col">Amazing Security</th></tr></thead><tbody>
+      {rows.map(row => <tr><th scope="row">{row.area}</th><td>{row.wordfence}. <a href={row.source}>Source</a></td><td>{row.ours}</td></tr>)}
+    </tbody></table></div>
+    <p class="as-method"><strong>Method and disclosure:</strong> AmazingPlugins is building Amazing Security. Wordfence statements come from its <a href="https://www.wordfence.com/help/wordfence-free/">Free help page</a> and <a href="https://www.wordfence.com/products/wordfence-free/">Free product page</a>, reviewed September 28, 2026. We installed Wordfence 9.0.1 in a local fixture, but its scan needed a free API key we did not have. This is a documentation comparison, not a head-to-head detection or performance test.</p>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">Where we intend to add something useful</h2></div><div class="as-prose">
+    <p>The planned independent verifier would check a suspected log or backup from outside the WordPress server, then let an owner recheck after a fix and watch for a later regression. The planned MCP connection would let an authenticated AI assistant read findings and request checks. Any supported fix would still require a separate approval inside WordPress.</p>
+    <p>Those are product goals, not measured advantages. We still need to test them against released tools and real hosting setups. Read the <a href="/plugins/amazing-security/">Amazing Security product plan</a> or use the <a href="/wordpress-security/">security checklist</a> today.</p>
+  </div></div></section>
+</BaseLayout>
