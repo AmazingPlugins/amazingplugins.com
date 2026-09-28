@@ -22,6 +22,8 @@ gscSubmitted: true
 
 This checklist is for teams assessing an ecommerce service under the European Accessibility Act (EAA). It is a work list, not a declaration that every WooCommerce store is covered. Reviewed September 28, 2026 against [Directive (EU) 2019/882](https://eur-lex.europa.eu/eli/dir/2019/882/oj). Check the law in the member states where you offer the service before making a legal compliance claim.
 
+If your checkout runs on WooCommerce, the [European Accessibility Act and WooCommerce guide](/blog/european-accessibility-act-woocommerce/) walks through the store-specific purchase path before you use this checklist.
+
 ## 1. Record the scope decision
 
 - [ ] Identify the service offered to consumers in the EU, the legal entity providing it, and the member states involved.

@@ -33,18 +33,18 @@ There isn't one best WCAG WordPress plugin. A serious site usually needs a stack
 1. **Scanner** to find issues (Equalize Digital Accessibility Checker, WAVE, axe DevTools)
 2. **Site-wide fixer** for generic WordPress gaps (WP Accessibility)
 3. **WooCommerce fixer** for issues it demonstrably covers in your store
-4. **Skip overlays** if your goal is durable WCAG fixes, not a toolbar on top of broken markup
+4. **Visitor widget**, if its controls solve a need you have tested; verify the purchase flow separately
 
 If you only install one thing and hope for "compliant," you'll be disappointed. WCAG is a mix of code, content, and design judgment.
 
 ## Comparison matrix
 
-| Type | Examples | Edits real HTML/CSS? | Best for | Weak at |
+| Type | Examples | What it does | Best for | Weak at |
 |------|----------|----------------------|----------|---------|
 | Scanner / checker | Equalize Digital Accessibility Checker, WAVE, axe | No (reports) | Finding issues in posts, pages, products | Auto-fixing checkout or theme bugs |
 | Site-wide fixer | WP Accessibility | Yes, limited | Skip links, `lang`, focus basics | WooCommerce templates |
 | WooCommerce fixer | AP Accessibility Fixer for WooCommerce (ours, 1.5.1) | Selected hooks, content filters, CSS, and inline scripts | Empty product-image alt fallback, selected focus styles, skip link | Full checkout repair, contrast measurement, legal guarantees |
-| Overlay / widget | accessiBe, UserWay, AudioEye (widget mode) | Usually no | Temporary visitor toolbar | Root-cause WCAG fixes |
+| Overlay / widget | accessiBe, UserWay, AudioEye (widget mode) | Adds visitor controls and may change the live DOM | Specific user controls that work on your store | Proving the whole purchase flow works |
 
 For a deeper look at plugin vs overlay, see [WooCommerce plugin vs widget accessibility](/blog/woocommerce-plugin-vs-widget-accessibility/), the [WooCommerce accessibility widget comparison](/blog/woocommerce-accessibility-widget-compared/), and [why overlays don't protect you from ADA lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/).
 
@@ -82,21 +82,17 @@ Disclosure: [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-access
 
 **Don't expect it to:** rewrite product descriptions, invent meaningful alt text for every photo without your input, or give you a legal certificate.
 
-## Overlays: why they rank for "WCAG plugin" and why that's misleading
+## Check what a visitor widget changes
 
-Overlay vendors bid hard on WCAG and ADA keywords. Search results often look like "install this and you're compliant."
+A browser script can change the live DOM and the accessibility tree a screen reader uses. The result depends on the product and the page. It may help with a specific control, miss a payment iframe, or interfere with focus in a cart drawer. Test the same purchase steps with the widget on and off.
 
-What they usually ship is a client-side widget that changes the experience for some visitors while the underlying HTML stays broken. Screen readers and crawlers still hit the real DOM. Lawsuit data and regulator actions have made that gap hard to ignore. Details: [why accessibility overlays don't protect you](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/).
-
-**Use an overlay only if:** you knowingly want a visitor toolbar and you still plan to fix source markup. That is rare.
-
-**Skip overlays if:** your goal is WCAG 2.2 AA in the actual page code.
+The [FTC's accessiBe order](https://www.ftc.gov/news-events/news/press-releases/2025/04/ftc-approves-final-order-requiring-accessibe-pay-1-million) addressed unsupported automated-compliance claims by that vendor. It did not rule that every widget is unlawful. Our [overlay and ADA guide](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/) explains the testing and legal limits.
 
 ## How to choose the best WCAG WordPress plugin for your site
 
 Ask four questions:
 
-1. **Does it edit the DOM, or only report / overlay?** Prefer edit or report. Be careful with overlay-only.
+1. **What does it change or report?** Ask the vendor for the specific controls and pages it covers.
 2. **Does it understand WooCommerce?** If you sell products, generic WordPress coverage is not enough.
 3. **Can you retest after a theme update?** You want a workflow, not a one-time toggle.
 4. **What still needs a human?** Alt text quality, heading sense, form instructions, and custom flows always do.
@@ -124,7 +120,7 @@ No. "Best" depends on whether you need detection, generic WordPress fixes, or Wo
 
 ### What's the difference between a WCAG WordPress plugin and an accessibility widget?
 
-A plugin (or code-level fixer) changes theme or template output. A widget usually sits on top of the page. For WCAG, the code-level path is the one that lasts. See [plugin vs widget](/blog/woocommerce-plugin-vs-widget-accessibility/).
+A plugin may change server output, add styles or scripts, or report issues. A widget usually adds visitor controls and can change the live page. Test either approach on the same product and checkout tasks. See [plugin vs widget](/blog/woocommerce-plugin-vs-widget-accessibility/).
 
 ### Can a free WordPress accessibility plugin make my site WCAG 2.2 AA compliant?
 
@@ -132,10 +128,10 @@ Free tools can fix real issues and surface many more. Full AA still needs theme 
 
 ### Do I need a WooCommerce-specific WCAG plugin?
 
-If checkout, cart, or product variations are part of the site, yes. Those templates are where stores fail audits and where generic plugins often stop.
+Not automatically. First test checkout, cart, and product variations with your theme and extensions. Choose a WooCommerce-specific tool only when it addresses a barrier you have found and can verify.
 
-## Bottom line
+## Test before keeping a tool
 
-The best WCAG WordPress "plugin" search should end in a short stack: scan honestly, fix WordPress basics in the DOM, fix WooCommerce where you sell, and skip overlay shortcuts when you care about durable compliance.
+Use a scanner to find candidates, fix the component producing each barrier, and test the result. Keep a widget or plugin only for the specific change it delivers on your store.
 
 Start with a keyboard pass of your homepage, product page, and checkout. Then pick the tool type that matches the failures you actually see.
