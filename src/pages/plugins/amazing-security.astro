@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
+import { amazingSecurity as product } from '../../data/amazing-security';
+import '../../styles/amazing-security.css';
+---
+
+<BaseLayout title="Amazing Security for WordPress" description="Amazing Security is a free WordPress security plugin in development. See planned site checks, public-file verification, and an MCP workflow that requires WordPress approval for fixes.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Plugins', url: '/plugins/' }, { name: product.name, url: product.path }]} />
+  <section class="as-shell">
+    <div class="wrap">
+      <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/plugins/">Plugins</a><span>/</span><span aria-current="page">Amazing Security</span></nav>
+      <div class="as-hero">
+        <div>
+          <p class="as-kicker">{product.status} · Planned free WordPress plugin</p>
+          <h1 class="display as-title">Amazing Security.</h1>
+          <p class="as-lede">See what your WordPress site is exposing. We're building a free plugin that brings security checks, public-file verification, and AI-assisted review into one dashboard.</p>
+          <div class="as-actions"><a href="#planned-checks" class="btn btn-primary">See the planned checks</a><a href="mailto:info@amazingplugins.com?subject=Amazing%20Security" class="btn btn-ghost">Ask about the project</a></div>
+          <p class="as-small">{product.availability} Built by AmazingPlugins. Name and requirements may change before release.</p>
+        </div>
+        <figure class="as-receipt">
+          <div class="as-receipt-head"><span>Example finding</span><span>Public file check</span></div>
+          <span class="as-verdict">Example: publicly reachable</span>
+          <h2>A log file can be opened from the web</h2>
+          <table class="as-evidence"><tbody>
+            <tr><th scope="row">Path</th><td><code>/wp-content/debug.log</code></td></tr>
+            <tr><th scope="row">Evidence</th><td>Public request returned file-like content, unlike a missing path.</td></tr>
+            <tr><th scope="row">Next step</th><td>Remove public access, then run the check again.</td></tr>
+          </tbody></table>
+          <figcaption>Illustrative interface, not a scan of your site. A real result would include the test time, host, and uncertainty.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="as-shell" id="planned-checks"><div class="wrap">
+    <h2 class="as-heading">The free release we're building</h2>
+    <p class="as-intro">Each area will report what it checked, when it checked, and what it couldn't confirm. These features are planned, not available to install today.</p>
+    <div class="as-list">{product.capabilities.map(capability => <article><p class="as-tag">{capability.state}</p><h3>{capability.label}</h3><p>{capability.description}</p></article>)}</div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split">
+    <div><h2 class="as-heading">A public check needs a public vantage.</h2></div>
+    <div class="as-prose"><p>A file can exist on your server without being reachable by a visitor. It can also look blocked from inside the server while a CDN still serves an old copy. The planned verifier will test candidate URLs from outside your WordPress installation after you opt in.</p><p>The service will receive your site hostname and candidate URL paths. It will inspect a small response prefix to judge the result, then discard it. It won't store file contents. A timeout, login page, or challenge will be marked inconclusive rather than safe.</p><p>The check will cover tested paths and one public route at a recorded time. It won't certify your whole site. Read the <a href="/wordpress-security/">WordPress security checklist</a> for steps you can take today.</p></div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split">
+    <div><h2 class="as-heading">AI can suggest. You approve.</h2></div>
+    <div class="as-prose"><p>On supported WordPress versions, the planned MCP connection will let an authenticated assistant read findings and request a bounded scan. If it suggests a supported fix, you'll see the exact proposed change in WordPress first.</p><p>The assistant won't be able to approve its own proposal or run arbitrary commands. Some findings will still need a manual fix. MCP is planned for WordPress 6.9+ with the official MCP Adapter; the standard dashboard is targeted at WordPress 6.6+ and PHP 8.1+.</p><p>Have an urgent security issue now? Use a released security plugin while Amazing Security is in development. Our <a href="/compare/amazing-security-vs-wordfence/">Wordfence Free comparison</a> and <a href="/compare/amazing-security-vs-custonis/">Custonis comparison</a> show the current differences.</p></div>
+  </div></section>
+</BaseLayout>
