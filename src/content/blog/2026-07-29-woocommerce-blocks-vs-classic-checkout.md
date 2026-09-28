@@ -154,5 +154,5 @@ Use this checklist to audit your checkout page, whether you are using Classic or
 - [Screen Reader Testing for WooCommerce: The 15-Minute Guide](/blog/screen-reader-testing-woocommerce-guide/)
 - [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
 - [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
-- [What WCAG 2.2 Means for Your Online Store](/blog/wcag-2-2-online-store-guide/)
+- [What WCAG 2.2 Means for Your WordPress or WooCommerce Store](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
 - [WooCommerce Accessibility Fixer: How It Works](/plugins/woocommerce-accessibility-fixer/)

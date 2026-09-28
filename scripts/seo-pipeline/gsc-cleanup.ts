@@ -1,19 +1,17 @@
 /**
  * GSC Cleanup Script
- * - Gets all indexed pages from Google Search Console
+ * - Gets pages with Search Analytics data from Google Search Console
  * - Cross-references against Shopify redirect URLs from _redirects
- * - Reports which old URLs are still in the index
- * - Submits sitemap to speed up re-crawling of 301s
+ * - Reports which old URLs still have search impressions; this is not index coverage
  */
 import fs from 'fs';
 import path from 'path';
-import { getGSCClient, getIndexedPages } from './gsc-client';
+import { getPagesWithSearchData } from './gsc-client';
 import { loadSeoPipelineEnv } from './env-bootstrap';
 
 loadSeoPipelineEnv();
 
 const SITE_URL = process.env.SITE_URL || 'https://amazingplugins.com';
-const SITEMAP_URL = 'https://amazingplugins.com/sitemap-index.xml';
 
 /**
  * Parse Shopify redirect URLs from _redirects
@@ -57,22 +55,6 @@ function toFullUrls(paths: string[]): string[] {
   return paths.map(p => `${SITE_URL}${p}`);
 }
 
-/**
- * Submit sitemap to help Google recrawl 301s
- */
-async function submitSitemap(): Promise<boolean> {
-  const client = await getGSCClient();
-  const siteUrl = process.env.GSC_SITE_URL || 'sc-domain:amazingplugins.com';
-  try {
-    await client.sitemaps.submit({ siteUrl, feedpath: SITEMAP_URL });
-    console.log(`  Sitemap submitted: ${SITEMAP_URL}`);
-    return true;
-  } catch (e: any) {
-    console.error(`  Sitemap error: ${e.message}`);
-    return false;
-  }
-}
-
 async function main() {
   console.log('=== GSC Cleanup: Shopify 301 URLs ===\n');
 
@@ -80,65 +62,55 @@ async function main() {
   const shopifyPaths = getShopifyRedirectUrls();
   console.log(`Shopify redirect paths found: ${shopifyPaths.length}`);
 
-  // Step 2: Get all indexed pages from GSC
-  console.log('\nFetching indexed pages from GSC...');
-  let indexedPages: string[] = [];
+  // Step 2: Get pages with search data. This does not establish index status.
+  console.log('\nFetching pages with Search Analytics rows...');
+  let pagesWithSearchData: string[] = [];
   try {
-    indexedPages = await getIndexedPages();
-    console.log(`  Total indexed pages found: ${indexedPages.length}`);
+    pagesWithSearchData = await getPagesWithSearchData();
+    console.log(`  Pages with search data: ${pagesWithSearchData.length}`);
   } catch (e: any) {
-    console.error(`  Could not get indexed pages: ${e.message}`);
+    console.error(`  Could not get Search Analytics pages: ${e.message}`);
+    process.exitCode = 1;
+    return;
   }
 
-  // Step 3: Cross-reference — check which Shopify URLs are still in the index
+  // Step 3: Cross-reference exact old URLs with Search Analytics rows.
   const shopifyFullUrls = toFullUrls(shopifyPaths);
-  const stillIndexed: string[] = [];
+  const stillSeenInSearch: string[] = [];
 
-  console.log('\nChecking Shopify URLs against GSC index...');
-  if (indexedPages.length > 0) {
+  console.log('\nChecking Shopify URLs against search data...');
+  if (pagesWithSearchData.length > 0) {
     for (const url of shopifyFullUrls) {
-      const matched = indexedPages.filter(ip => ip.includes(url) || url.includes(ip));
-      if (matched.length > 0) {
-        stillIndexed.push(url);
+      if (pagesWithSearchData.includes(url)) {
+        stillSeenInSearch.push(url);
       }
     }
   }
 
-  console.log(`\n  Old Shopify URLs still in index: ${stillIndexed.length}`);
-  for (const url of stillIndexed.slice(0, 10)) {
+  console.log(`\n  Old Shopify URLs with search data: ${stillSeenInSearch.length}`);
+  for (const url of stillSeenInSearch.slice(0, 10)) {
     console.log(`    ${url}`);
   }
-  if (stillIndexed.length > 10) {
-    console.log(`    ... and ${stillIndexed.length - 10} more`);
+  if (stillSeenInSearch.length > 10) {
+    console.log(`    ... and ${stillSeenInSearch.length - 10} more`);
   }
-
-  // Step 4: Submit sitemap to speed up re-crawling
-  console.log('\nSubmitting sitemap to help Google recrawl 301s...');
-  await submitSitemap();
 
   // Step 5: Summary
   console.log(`\n=== Results ===`);
   console.log(`Total Shopify redirects:   ${shopifyPaths.length}`);
-  console.log(`Still in GSC index:        ${stillIndexed.length}`);
-  console.log(`Not yet found by GSC:      ${shopifyPaths.length - stillIndexed.length}`);
+  console.log(`With search data:          ${stillSeenInSearch.length}`);
+  console.log(`Without search data:       ${shopifyPaths.length - stillSeenInSearch.length}`);
   console.log(``);
   
-  if (stillIndexed.length > 0) {
-    console.log(`Next steps:`);
-    console.log(`1. Sitemap submitted — Google will recrawl and discover 301s`);
-    console.log(`2. Old URLs will drop from index within 1-4 weeks`);
-    console.log(`3. If urgently needed, use GSC web UI → Removals → Temporary Removals`);
-  } else {
-    console.log(`All Shopify URLs have already dropped from the index.`);
-  }
+  console.log('Use URL Inspection to check whether a specific old URL remains indexed.');
 
   // Export the list for potential further use
-  if (stillIndexed.length > 0) {
+  if (stillSeenInSearch.length > 0) {
     fs.writeFileSync(
       path.join(process.cwd(), 'scripts/seo-pipeline/old-shopify-urls.json'),
-      JSON.stringify(stillIndexed, null, 2)
+      JSON.stringify(stillSeenInSearch, null, 2)
     );
-    console.log(`\nStill-indexed URLs exported: scripts/seo-pipeline/old-shopify-urls.json`);
+    console.log(`\nURLs with search data exported: scripts/seo-pipeline/old-shopify-urls.json`);
   }
 }
 

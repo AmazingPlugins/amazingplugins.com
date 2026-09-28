@@ -4,22 +4,19 @@
  * Orchestrates the complete SEO content workflow:
  * 1. Parse keywords from harvest files
  * 2. Generate/update blog posts
- * 3. Submit to Google Search Console
- * 4. Generate health reports
+ * 3. Generate health reports
+ * Submit the live sitemap separately, after deployment, with seo:submit.
  */
 
 import { generateAllCategoryPosts } from './generate-post';
-import { submitAllPosts } from './gsc-submit';
 import { getGSCHealth, logHealthReport, saveHealthReport } from './gsc-health';
 import { generateBrokenLinksReport } from './fix-404s';
 import { setLastRun } from './state-store';
-import fs from 'fs';
 import path from 'path';
 
 export interface PipelineResult {
   success: boolean;
   generated: number;
-  submitted: number;
   health: any;
   brokenLinks: number;
   errors: string[];
@@ -29,7 +26,6 @@ export async function runPipeline(): Promise<PipelineResult> {
   const result: PipelineResult = {
     success: false,
     generated: 0,
-    submitted: 0,
     health: null,
     brokenLinks: 0,
     errors: [],
@@ -49,22 +45,12 @@ export async function runPipeline(): Promise<PipelineResult> {
       console.error('Generate error:', error.message);
     }
     
-    // Step 2: Submit to GSC
-    console.log('Step 2: Submitting to Google Search Console...');
-    try {
-      const { submitted } = await submitAllPosts();
-      result.submitted = submitted;
-      console.log(`Submitted ${submitted} posts\n`);
-    } catch (error: any) {
-      result.errors.push(`Submit error: ${error.message}`);
-      console.error('Submit error:', error.message);
-    }
-    
-    // Step 3: Check health
-    console.log('Step 3: Checking GSC health...');
+    // Step 2: Check health. New posts are still local at this point.
+    console.log('Step 2: Checking GSC health...');
     try {
       const health = await getGSCHealth();
       result.health = health;
+      result.errors.push(...health.errors.map(error => `Health check error: ${error}`));
       logHealthReport(health);
       saveHealthReport(health, path.join(process.cwd(), 'gsc-health-report.json'));
       console.log('');
@@ -73,8 +59,8 @@ export async function runPipeline(): Promise<PipelineResult> {
       console.error('Health check error:', error.message);
     }
     
-    // Step 4: Check for broken links
-    console.log('Step 4: Checking for broken links...');
+    // Step 3: Check for broken links
+    console.log('Step 3: Checking for broken links...');
     try {
       const brokenLinks = await generateBrokenLinksReport();
       result.brokenLinks = brokenLinks.length;
@@ -91,7 +77,6 @@ export async function runPipeline(): Promise<PipelineResult> {
     
     console.log('\n=== Pipeline Complete ===');
     console.log(`Generated: ${result.generated}`);
-    console.log(`Submitted: ${result.submitted}`);
     console.log(`Broken Links: ${result.brokenLinks}`);
     console.log(`Errors: ${result.errors.length}`);
     

@@ -19,6 +19,7 @@
     "seo:bing:health": "tsx scripts/seo-pipeline/bing-health.ts",
     "seo:bing:submit": "tsx scripts/seo-pipeline/bing-submit.ts",
     "test:seo-quality": "tsx scripts/seo-pipeline/content-quality.test.ts",
+    "test:gsc-reporting": "node --import tsx --test scripts/seo-pipeline/gsc-reporting.test.ts",
     "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts"
   },
   "dependencies": {

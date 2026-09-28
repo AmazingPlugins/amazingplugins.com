@@ -1,11 +1,11 @@
 ---
-title: Best WCAG WordPress Plugins Compared (2026)
+title: WCAG WordPress Plugins Compared by What They Fix (2026)
 description: >-
   Compare the best WCAG WordPress plugins by type: scanners, site-wide fixers,
   WooCommerce fixers, and overlays. What each can fix, and what still needs a
   human.
 pubDate: 2026-08-25T12:00:00.000Z
-updatedDate: 2026-09-04T00:00:00.000Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
 tags:
   - Accessibility
@@ -22,9 +22,9 @@ seoCategory: accessibility
 gscSubmitted: true
 ---
 
-If you're searching for the best WCAG WordPress plugin, you're usually comparing apples to oranges. Scanners, site-wide fixers, WooCommerce fixers, and overlay widgets all show up in the same SERP, and they solve different problems.
+If you're choosing a WCAG WordPress plugin, compare what each tool actually changes. A scanner reports possible issues, a fixer changes selected output, and a visitor widget adds controls to the page. Those jobs need different checks.
 
-This comparison groups them by what they actually do to your HTML, then tells you when each type is useful for a WordPress or WooCommerce site aiming at WCAG 2.2 AA.
+This comparison uses publicly described features and, for our plugin, a review of the released 1.5.1 code on September 28, 2026. It is not a hands-on test of every vendor. If you need a step-by-step selection process, use the [WordPress accessibility plugin guide](/blog/best-wordpress-accessibility-plugin-full-guide/).
 
 ## Quick answer
 
@@ -32,7 +32,7 @@ There isn't one best WCAG WordPress plugin. A serious site usually needs a stack
 
 1. **Scanner** to find issues (Equalize Digital Accessibility Checker, WAVE, axe DevTools)
 2. **Site-wide fixer** for generic WordPress gaps (WP Accessibility)
-3. **WooCommerce fixer** if you sell products (checkout, product images, cart controls)
+3. **WooCommerce fixer** for issues it demonstrably covers in your store
 4. **Skip overlays** if your goal is durable WCAG fixes, not a toolbar on top of broken markup
 
 If you only install one thing and hope for "compliant," you'll be disappointed. WCAG is a mix of code, content, and design judgment.
@@ -43,7 +43,7 @@ If you only install one thing and hope for "compliant," you'll be disappointed. 
 |------|----------|----------------------|----------|---------|
 | Scanner / checker | Equalize Digital Accessibility Checker, WAVE, axe | No (reports) | Finding issues in posts, pages, products | Auto-fixing checkout or theme bugs |
 | Site-wide fixer | WP Accessibility | Yes, limited | Skip links, `lang`, focus basics | WooCommerce templates |
-| WooCommerce fixer | WooCommerce Accessibility Fixer (ours) | Yes, Woo hooks/templates | Product alt text, cart/checkout labels, focus | Legal guarantees, copywriting |
+| WooCommerce fixer | AP Accessibility Fixer for WooCommerce (ours, 1.5.1) | Selected hooks, content filters, CSS, and inline scripts | Empty product-image alt fallback, selected focus styles, skip link | Full checkout repair, contrast measurement, legal guarantees |
 | Overlay / widget | accessiBe, UserWay, AudioEye (widget mode) | Usually no | Temporary visitor toolbar | Root-cause WCAG fixes |
 
 For a deeper look at plugin vs overlay, see [WooCommerce plugin vs widget accessibility](/blog/woocommerce-plugin-vs-widget-accessibility/), the [WooCommerce accessibility widget comparison](/blog/woocommerce-accessibility-widget-compared/), and [why overlays don't protect you from ADA lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/).
@@ -76,7 +76,7 @@ Ecommerce fails WCAG in predictable places: product images without alt text, unl
 
 A WooCommerce accessibility plugin should hook into those templates and fix markup, not inject a floating toolbar.
 
-Disclosure: [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) is our plugin. It targets product image alt text, ARIA and labels on cart/checkout controls, focus indicators, skip links, and accessible names on add-to-cart and quantity UI. It uses WordPress hooks and WooCommerce filters. No overlay script.
+Disclosure: [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) is our plugin. The public 1.5.1 release has nine free fixers. They cover a fallback for missing product-image alt text, selected focus and error styles, form labels in post content, a skip link, and other limited changes. Some fixes use inline scripts. The release does not demonstrate general cart or checkout label repair.
 
 **Use a WooCommerce fixer when:** scanners keep flagging product and checkout issues that generic WordPress plugins ignore.
 
@@ -105,7 +105,7 @@ A practical stack for most WooCommerce stores:
 
 - Equalize Digital or axe for scanning
 - WP Accessibility for WordPress basics
-- A WooCommerce fixer for cart, checkout, and product UI
+- A WooCommerce fixer for the product and storefront issues its released code covers
 - Manual review of the top conversion paths with a keyboard and a screen reader
 
 More context in our [full WooCommerce accessibility plugin guide](/blog/best-wordpress-accessibility-plugin-full-guide/).

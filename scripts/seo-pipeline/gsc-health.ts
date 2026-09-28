@@ -7,13 +7,28 @@ import { loadSeoPipelineEnv } from './env-bootstrap';
 export interface HealthReport {
   timestamp: string;
   siteUrl: string;
+  currentPeriod: { startDate: string; endDate: string };
+  priorPeriod: { startDate: string; endDate: string };
   /** Pages that had Search Analytics rows in the window. Not index coverage. */
   pagesWithSearchData: number;
   totalImpressions: number;
   totalClicks: number;
   avgPosition: number;
+  priorImpressions: number;
+  priorClicks: number;
+  priorAvgPosition: number;
   errors: string[];
   topPages: Array<{ url: string; impressions: number; clicks: number; position: number }>;
+}
+
+/** Compare two completed 28-day UTC windows, allowing three days for GSC data to settle. */
+export function completedPeriods(now = new Date()) {
+  const day = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  const shifted = (days: number) => new Date(day.getTime() + days * 86_400_000).toISOString().slice(0, 10);
+  return {
+    current: { startDate: shifted(-30), endDate: shifted(-3) },
+    prior: { startDate: shifted(-58), endDate: shifted(-31) },
+  };
 }
 
 /**
@@ -42,41 +57,45 @@ export async function getGSCHealth(): Promise<HealthReport> {
 
   const gsc = google.searchconsole({ version: 'v1', auth });
 
-  const endDate = new Date().toISOString().split('T')[0];
-  const startDate = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  const { current, prior } = completedPeriods();
 
   const emptyReport = (): HealthReport => ({
     timestamp: new Date().toISOString(),
     siteUrl,
+    currentPeriod: current,
+    priorPeriod: prior,
     pagesWithSearchData: 0,
     totalImpressions: 0,
     totalClicks: 0,
     avgPosition: 0,
+    priorImpressions: 0,
+    priorClicks: 0,
+    priorAvgPosition: 0,
     errors,
     topPages: [],
   });
 
   try {
-    const [totalsResponse, pagesResponse] = await Promise.all([
+    const [totalsResponse, pagesResponse, priorResponse] = await Promise.all([
       gsc.searchanalytics.query({
         siteUrl,
         requestBody: {
-          startDate,
-          endDate,
+          ...current,
         },
       }),
       gsc.searchanalytics.query({
         siteUrl,
         requestBody: {
-          startDate,
-          endDate,
+          ...current,
           dimensions: ['page'],
           rowLimit: 250,
         },
       }),
+      gsc.searchanalytics.query({ siteUrl, requestBody: { ...prior } }),
     ]);
 
     const totals = totalsResponse.data.rows?.[0];
+    const priorTotals = priorResponse.data.rows?.[0];
     const pageRows = pagesResponse.data.rows || [];
     const topPages: HealthReport['topPages'] = [];
 
@@ -94,10 +113,15 @@ export async function getGSCHealth(): Promise<HealthReport> {
     return {
       timestamp: new Date().toISOString(),
       siteUrl,
+      currentPeriod: current,
+      priorPeriod: prior,
       pagesWithSearchData: pageRows.length,
       totalImpressions: totals?.impressions || 0,
       totalClicks: totals?.clicks || 0,
       avgPosition: totals?.position || 0,
+      priorImpressions: priorTotals?.impressions || 0,
+      priorClicks: priorTotals?.clicks || 0,
+      priorAvgPosition: priorTotals?.position || 0,
       errors,
       topPages,
     };
@@ -110,10 +134,10 @@ export async function getGSCHealth(): Promise<HealthReport> {
 /**
  * Check if GSC API is accessible
  */
-export async function checkAPIAccess(): Promise<boolean> {
+export async function checkAPIAccess(getHealth: () => Promise<Pick<HealthReport, 'errors'>> = getGSCHealth): Promise<boolean> {
   try {
-    await getGSCHealth();
-    return true;
+    const report = await getHealth();
+    return report.errors.length === 0;
   } catch (error: any) {
     console.error('GSC API Health Check Failed:', error.message);
     return false;
@@ -135,10 +159,12 @@ export function logHealthReport(report: HealthReport): void {
   console.log('\n=== GSC Health Report ===');
   console.log(`Timestamp: ${report.timestamp}`);
   console.log(`Site URL: ${report.siteUrl}`);
-  console.log(`Pages with search data (30d): ${report.pagesWithSearchData}`);
-  console.log(`Total Impressions: ${report.totalImpressions}`);
-  console.log(`Total Clicks: ${report.totalClicks}`);
-  console.log(`Average Position: ${report.avgPosition.toFixed(2)}`);
+  console.log(`Current completed period: ${report.currentPeriod.startDate} to ${report.currentPeriod.endDate}`);
+  console.log(`Prior completed period: ${report.priorPeriod.startDate} to ${report.priorPeriod.endDate}`);
+  console.log(`Pages with search data (current period): ${report.pagesWithSearchData}`);
+  console.log(`Impressions: ${report.totalImpressions} (prior: ${report.priorImpressions})`);
+  console.log(`Clicks: ${report.totalClicks} (prior: ${report.priorClicks})`);
+  console.log(`Average Position: ${report.avgPosition.toFixed(2)} (prior: ${report.priorAvgPosition.toFixed(2)})`);
 
   if (report.errors.length > 0) {
     console.log('\nErrors:');

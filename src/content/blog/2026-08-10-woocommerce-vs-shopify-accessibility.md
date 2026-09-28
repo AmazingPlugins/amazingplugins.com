@@ -52,7 +52,7 @@ Shopify's Dawn theme handled NVDA better overall. Product galleries were announc
 
 ### VoiceOver (macOS and iOS)
 
-VoiceOver testing revealed the biggest differences between the two platforms. On WooCommerce, the checkout flow was particularly rough. Form fields sometimes lacked associated labels, meaning VoiceOver would announce "edit text" instead of "first name" or "email address." This is a common WooCommerce issue that [our color contrast fix guide](/blog/2026-08-07-woocommerce-color-contrast-issues-fix/) touches on, since contrast and label issues often appear together.
+VoiceOver testing revealed the biggest differences between the two platforms. On WooCommerce, the checkout flow was particularly rough. Form fields sometimes lacked associated labels, meaning VoiceOver would announce "edit text" instead of "first name" or "email address." This is a common WooCommerce issue that [our color contrast fix guide](/blog/woocommerce-color-contrast-issues-fix/) touches on, since contrast and label issues often appear together.
 
 Shopify's checkout was cleaner with VoiceOver. Form fields had associated labels, and the order summary section used appropriate heading levels. The main issue we found was with Shopify's dynamic content updates. When items were added to the cart, VoiceOver did not always announce the change, leaving users uncertain about what happened.
 
@@ -194,11 +194,11 @@ For WooCommerce stores, start with the [ADA compliance checklist](/blog/woocomme
 
 ## Related Reading
 
-- [WooCommerce Keyboard Navigation Fix Guide](/blog/2026-07-08-keyboard-navigation-woocommerce-fix-guide/)
-- [How to Fix Missing Alt Text on WooCommerce Product Images](/blog/2026-07-13-fix-missing-alt-text-woocommerce-product-images/)
-- [Screen Reader Testing Guide for WooCommerce](/blog/2026-07-24-screen-reader-testing-woocommerce-guide/)
-- [WooCommerce Color Contrast Issues and How to Fix Them](/blog/2026-08-07-woocommerce-color-contrast-issues-fix/)
-- [WooCommerce Accessibility Plugin Comparison](/blog/2026-07-27-woocommerce-accessibility-plugin-comparison/)
+- [WooCommerce Keyboard Navigation Fix Guide](/blog/keyboard-navigation-woocommerce-fix-guide/)
+- [How to Fix Missing Alt Text on WooCommerce Product Images](/blog/fix-missing-alt-text-woocommerce-product-images/)
+- [Screen Reader Testing Guide for WooCommerce](/blog/screen-reader-testing-woocommerce-guide/)
+- [WooCommerce Color Contrast Issues and How to Fix Them](/blog/woocommerce-color-contrast-issues-fix/)
+- [WooCommerce Accessibility Plugin Comparison](/blog/woocommerce-accessibility-plugin-comparison/)
 - [WooCommerce ADA Compliance Checklist 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
-- [European Accessibility Act and WooCommerce](/blog/2026-07-30-european-accessibility-act-woocommerce/)
-- [WooCommerce Blocks vs Classic Checkout](/blog/2026-07-29-woocommerce-blocks-vs-classic-checkout/)
+- [European Accessibility Act and WooCommerce](/blog/european-accessibility-act-woocommerce/)
+- [WooCommerce Blocks vs Classic Checkout](/blog/woocommerce-blocks-vs-classic-checkout/)
