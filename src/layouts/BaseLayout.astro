@@ -82,6 +82,31 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
       gtag('js', new Date());
       gtag('config', 'G-Q3KPCF2RJT');
     </script>
+    <script is:inline>
+      // Count clicks to our WordPress.org listing once, regardless of which page links to it.
+      document.addEventListener('click', function(event) {
+        if (!(event.target instanceof Element)) return;
+        var link = event.target.closest('a[href]');
+        if (!link) return;
+
+        var destination = new URL(link.href);
+        if (destination.origin !== 'https://wordpress.org') return;
+        var match = destination.pathname.match(/^\/plugins\/([^/]+)\/?$/);
+        if (!match || match[1] !== 'amazingplugins-accessibility-fixer-for-woocommerce') return;
+
+        // Partytown forwards dataLayer.push to the GA4 worker.
+        window.dataLayer = window.dataLayer || [];
+        function sendEvent() { window.dataLayer.push(arguments); }
+        sendEvent(
+          'event',
+          'plugin_directory_click',
+          {
+            plugin_slug: match[1],
+            source_page: window.location.pathname,
+          }
+        );
+      });
+    </script>
 
     <!-- Theme init - run before paint to prevent flash -->
     <script is:inline>

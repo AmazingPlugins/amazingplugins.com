@@ -1,9 +1,10 @@
 ---
 title: 'WCAG 2.2 Compliance for WooCommerce: What Changed'
 description: >-
-  What WCAG 2.2 actually changed for WooCommerce stores. The 9 new success
-  criteria, what they mean for checkout, and what to fix first.
+  The nine WCAG 2.2 additions, their levels, and how to check focus, touch
+  targets, checkout, and account sign-in on a WooCommerce store.
 pubDate: 2026-05-22T13:02:00.824Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
 tags:
   - WCAG 2.2
@@ -18,166 +19,71 @@ articleAngle: what-changed
 gscSubmitted: true
 ---
 
-WCAG 2.2 added **nine new success criteria** on top of WCAG 2.1, and for WooCommerce store owners the most important ones touch checkout, login, focus visibility, and how big your buttons are. The standard was finalized in October 2023, and by 2026 it has become the de facto best-practice level that auditors, EU regulators, and US plaintiffs' lawyers reference. WCAG 2.1 AA is still the legal floor in most jurisdictions, but WCAG 2.2 AA is what you should be aiming for if you sell online today.
+WCAG 2.2 adds nine success criteria to WCAG 2.1 and removes 4.1.1 Parsing. For a WooCommerce store, the useful question is where those changes show up in a real shopping session: sticky headers hiding focus, controls that only work by dragging, small tap targets, repeated checkout fields, and account sign-in that blocks password managers.
 
-If you only have 10 minutes to understand what changed, this article gives you the practical version: what's new, what got removed, what's likely to break on a default WooCommerce theme, and where to start fixing.
+This technical guide was reviewed on September 28, 2026 against the [W3C standard](https://www.w3.org/TR/WCAG22/) and its [guide to the additions](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/). WCAG publication is not itself a legal deadline. See the separate [deadline and scope guide](/blog/wcag-22-compliance-woocommerce-deadline/) for that question.
 
-## Quick answer
+## The nine additions, by level
 
-WCAG 2.2 adds nine new success criteria and removes one. The additions focus on:
+| Criterion | Level | What to check on a store |
+| --- | --- | --- |
+| **2.4.11 Focus Not Obscured (Minimum)** | AA | A sticky header, cart drawer, or banner must not completely hide the keyboard-focused control. |
+| **2.4.12 Focus Not Obscured (Enhanced)** | AAA | No part of the focused component is hidden by author-created content. |
+| **2.4.13 Focus Appearance** | AAA | The visible focus indicator meets the criterion's size and contrast requirements. Check the full [W3C text](https://www.w3.org/TR/WCAG22/#focus-appearance), including its alternatives and exceptions, before judging an outline by thickness alone. |
+| **2.5.7 Dragging Movements** | AA | A gallery, slider, or reorder control that uses dragging also has a single-pointer method without dragging, unless an exception applies. |
+| **2.5.8 Target Size (Minimum)** | AA | Small controls meet the 24 by 24 CSS pixel rule **or one of its exceptions**, including sufficient spacing. Measure quantity buttons and gallery dots in context. |
+| **3.2.6 Consistent Help** | A | Help mechanisms that appear on several pages in the same set stay in the same relative order. The criterion does not require adding help to every page. |
+| **3.3.7 Redundant Entry** | A | Information requested again during the same purchase process is prefilled or available to select, unless an exception applies. |
+| **3.3.8 Accessible Authentication (Minimum)** | AA | Account sign-in does not require a memory, transcription, or puzzle task without an allowed alternative or assistance mechanism. |
+| **3.3.9 Accessible Authentication (Enhanced)** | AAA | A stricter version of authentication that does not use the object-recognition or personal-content exceptions. |
 
-- **Focus visibility** (you can actually see where your keyboard is)
-- **Drag alternatives** (no checkout step should require dragging)
-- **Target size** (buttons big enough to tap)
-- **Cognitive load at login** (no memory puzzles, no re-entering data)
-- **Help that stays in the same place across pages**
+That is nine new criteria, but only the Level A and AA entries are needed for a WCAG 2.2 AA target. The AAA entries are still useful design prompts; they are not extra AA requirements.
 
-The one criterion that was removed is **4.1.1 Parsing**, because modern browsers handle malformed HTML well enough that it stopped being a real barrier.
+## Check the cases that are easy to misread
 
-For a WooCommerce store, the practical impact lands on three areas: the checkout flow, the My Account login, and any product page that uses sliders, drag-to-zoom, or small icon buttons.
+**A missing help link on checkout is not automatically a 3.2.6 failure.** The [W3C explanation](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html) says the rule governs the order of help mechanisms on pages where they appear. It does not force a store to add the same help mechanism to every page.
 
-## The nine new WCAG 2.2 success criteria
+**Separate billing and shipping addresses are not automatically redundant entry.** Buyers may need different addresses. If your flow asks them to enter the *same* information again, make the earlier entry available, for example with a “same as billing” option. W3C's [3.3.7 guidance](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html) also lists essential, security, and invalid-information exceptions. The process can extend to a third-party payment page.
 
-Here is the full list, with the WCAG number, the level, and what it means in plain English for an online store.
+**Passwords are allowed.** Under [3.3.8](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html), an account login can use a password if people can use assistance such as a password manager or copy and paste. An object-recognition challenge is an AA exception, although it can still exclude users. Do not recommend an invisible CAPTCHA brand as proof of conformance. Test the actual login, including any fallback challenge and verification code.
 
-### 2.4.11 Focus Not Obscured (Minimum) - Level AA
+**Small targets have exceptions.** A quantity control under 24 by 24 CSS pixels is a test candidate, not an automatic failure. The [2.5.8 criterion](https://www.w3.org/TR/WCAG22/#target-size-minimum) includes spacing and other exceptions. Measure the rendered target and nearby targets at the viewport you are testing.
 
-When a keyboard user tabs to an element, the focus indicator must not be **completely hidden** by other content. Sticky headers, cookie banners, chat widgets, and announcement bars are the usual offenders on WooCommerce sites. If your sticky header covers the input field a user just tabbed to, that's a 2.4.11 failure.
+**Parsing was removed, not good markup.** W3C marks [4.1.1 Parsing as obsolete](https://www.w3.org/WAI/WCAG22/Understanding/parsing). A duplicate ID or malformed component can still create an accessibility problem under another criterion, including 1.3.1 or 4.1.2. Keep testing the accessible name, role, value, and relationships that users actually receive.
 
-### 2.4.12 Focus Not Obscured (Enhanced) - Level AAA
+## A practical WooCommerce test pass
 
-Same idea, but stricter: **no part** of the focused element can be obscured. AAA is optional, but worth knowing.
+You cannot infer the result from a theme name or a default WooCommerce install. Test the version and extensions you run.
 
-### 2.4.13 Focus Appearance - Level AAA
+1. **Product page:** Tab into the image gallery and variation controls. If a gallery requires dragging, look for a usable click or tap alternative. Measure small gallery and quantity controls with the spacing rule in mind.
+2. **Cart and checkout:** Follow keyboard focus while sticky headers, notices, and cart drawers are present. If checkout has several steps, check whether previously entered information can be reused when it is requested again.
+3. **Account sign-in:** Try a password manager and pasting into password and code fields. Trigger the challenge or recovery flow if one exists.
+4. **Help across the flow:** Where phone, contact, chat, or self-help mechanisms recur, compare their relative order on pages in the same set.
+5. **Repeat after changes:** Recheck the affected path after a theme, checkout, payment, or login-plugin update. Record the viewport, browser, input method, and result.
 
-The focus indicator must be at least 2 CSS pixels thick around the element, with a contrast ratio of at least 3:1 against adjacent colors. AAA, but the principle is the same as 1.4.11: a barely-visible blue outline that the browser ships with is not enough on a busy product page.
+Automated checks can flag some candidates. A keyboard pass and an assistive-technology pass are needed to see whether the task is usable. A passing scan on the product page says little about a payment dialog later in checkout.
 
-### 2.5.7 Dragging Movements - Level AA
+## Where AP Accessibility Fixer helps
 
-Any function that uses a dragging movement must also work with a single-pointer click or tap. The common WooCommerce trip-ups here: image zoom sliders, color picker sliders for variable products, and product gallery carousels that only respond to swipe.
+**Disclosure:** AmazingPlugins publishes [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/). We reviewed the public WordPress.org 1.5.1 release and code on September 28, 2026. It has nine free fixers and no Pro tier.
 
-### 2.5.8 Target Size (Minimum) - Level AA
+The release adds selected focus styles, a skip link, product-image alt fallback, and other limited changes. Its scanner samples up to three published product pages in addition to configured WooCommerce pages. It does **not** implement a dedicated audit of the nine WCAG 2.2 additions. A visible outline style alone cannot prove 2.4.11 when a sticky element covers the focused control. The plugin also cannot establish that a dragging alternative, target spacing, help order, redundant-entry behavior, or authentication flow passes. Check these yourself on the rendered store.
 
-Interactive targets must be at least **24x24 CSS pixels**, unless there's enough spacing around them. The previous AAA version (2.5.5) asked for 44x44, which most themes already fail. The new AA bar at 24x24 is reachable, but you'll still see failures on quantity steppers (+/-), social share icons, and pagination dots.
+## Questions store owners ask
 
-### 3.2.6 Consistent Help - Level A
+### Do I need all nine additions for WCAG 2.2 AA?
 
-If your store offers help (a contact link, a chat widget, a support phone number), it must appear in **the same relative order on every page**. WooCommerce stores often have a help link in the footer on the storefront but not on the checkout page, which is now a failure.
+No. Three of the nine are Level AAA: 2.4.12, 2.4.13, and 3.3.9. The other six are Level A or AA. A WCAG 2.2 AA target also includes the applicable earlier Level A and AA criteria, apart from obsolete 4.1.1.
 
-### 3.3.7 Redundant Entry - Level A
+### Does every gallery need a drag alternative?
 
-Users shouldn't have to re-enter information they already provided in the same session. Classic WooCommerce failure: a multi-step checkout that asks for the billing address, then asks again for the shipping address with no "same as billing" option pre-filled.
+If dragging is required for a function, [2.5.7](https://www.w3.org/TR/WCAG22/#dragging-movements) generally calls for a single-pointer method without dragging, subject to the criterion's exception. Test the actual gallery controls; a swipe gesture may already have usable arrows or thumbnails.
 
-### 3.3.8 Accessible Authentication (Minimum) - Level AA
+### How long will this take to fix?
 
-No cognitive function tests at login. That means no "what was the name of your first pet" puzzle, no "transcribe this distorted text," no math problem. You **can** use CAPTCHAs that test for object recognition ("select all images with a bus"), and you **can** require passwords if the user is allowed to paste from a password manager.
+There is no reliable universal estimate. A standard store with accessible components may need little work. A custom checkout, account flow, or product configurator can take longer. Audit the actual barriers first, then estimate each fix and retest.
 
-For WooCommerce, the practical fix is: don't use CAPTCHA plugins that ask for character transcription on the My Account login or the checkout. Use reCAPTCHA v3 or hCaptcha invisible mode instead.
+## Related reading
 
-### 3.3.9 Accessible Authentication (Enhanced) - Level AAA
-
-Stricter version: no object recognition either. AAA, so optional.
-
-## What was removed: 4.1.1 Parsing
-
-WCAG 2.1's 4.1.1 required HTML to be well-formed. In WCAG 2.2, this criterion is **obsolete and removed**. Modern browsers and screen readers handle parsing issues consistently enough that the criterion no longer mapped to a real accessibility barrier.
-
-If you've ever been told to fix duplicate IDs or unclosed tags for accessibility, that's no longer a WCAG requirement (though it's still good hygiene). Other criteria, like 4.1.2 Name, Role, Value, still apply.
-
-## What this means for a default WooCommerce store
-
-A stock WooCommerce install on a popular theme (Storefront, Astra, Kadence, Blocksy) will typically pass some of the new 2.2 criteria and fail others. Here's where the failures usually land:
-
-**Likely fails out of the box:**
-
-- Quantity stepper buttons (+/- on the cart and product page) under 24x24px → 2.5.8
-- Sticky header covers the focused field on checkout → 2.4.11
-- Help link in footer not visible during checkout → 3.2.6
-- Shipping address form doesn't pre-fill from billing → 3.3.7
-
-**Usually passes:**
-
-- 2.5.7 Dragging - most WooCommerce galleries already support tap navigation
-- 3.3.8 Auth - if you're using reCAPTCHA v3 (invisible) instead of v2 (image puzzle)
-
-If you want a deeper checklist beyond just the 2.2 deltas, see our [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/) guide.
-
-## A 30-minute audit for the WCAG 2.2 changes
-
-You don't need a full audit to know where you stand on the new criteria. Here's a fast pass:
-
-1. **Tab through your checkout.** Use only the Tab and Shift+Tab keys. Note any field where the focus ring goes behind your sticky header. That's 2.4.11.
-2. **Measure your quantity buttons.** Open dev tools, hover over the +/- buttons, check the computed width and height. Under 24px without spacing? 2.5.8 failure.
-3. **Open your checkout in mobile view.** Look for the help link or contact info. If it's in the footer on the storefront but missing on /checkout, that's 3.2.6.
-4. **Place a test order.** Does the shipping address auto-fill from billing, or do you re-type it? Re-typing is 3.3.7.
-5. **Log out, then log in.** Did you have to solve a puzzle, transcribe distorted text, or answer a memory question? If yes, 3.3.8.
-6. **Try dragging a product image to zoom.** Now try just tapping or clicking. If only drag works, that's 2.5.7.
-
-This won't catch everything, but it will catch the WCAG 2.2-specific issues on your store in about 30 minutes.
-
-## WCAG 2.1 vs 2.2: what's the same
-
-It's worth saying out loud: **2.2 is a superset of 2.1**. Everything in 2.1 still applies. Alt text, color contrast (4.5:1 for normal text), keyboard navigation, form labels, page language, skip links - all of that is unchanged.
-
-If your store is already solid on WCAG 2.1 AA, you're 90% of the way to 2.2 AA. The new criteria are real, but they're focused additions, not a rewrite.
-
-For a comparison of how the levels stack up, see [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?](https://amazingplugins.com/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/).
-
-## Why this matters in 2026
-
-A few numbers that make the case:
-
-- **5,114 to 8,667** ADA digital accessibility lawsuits were filed in 2025 (sources vary on whether they count federal only or federal plus state).
-- The average settlement cost is around **$25,000**, before legal fees.
-- The **European Accessibility Act** became enforceable on **June 28, 2025**, and it uses EN 301 549, which maps to WCAG 2.1 AA. EU enforcement bodies and audit firms increasingly reference 2.2 as the working standard.
-- **95.9%** of home pages have detectable WCAG failures (WebAIM Million 2026).
-
-WCAG 2.2 isn't legally required in most jurisdictions yet, but if you're being audited, sued, or asked for documentation, 2.2 AA is what reviewers will look at.
-
-## How AmazingPlugins helps
-
-The [WooCommerce Accessibility Fixer](https://amazingplugins.com/woocommerce-accessibility-fixer/) is built around the issues most likely to fail WCAG 2.1 and 2.2 on a WooCommerce store. It's a plugin, not an overlay, so the fixes happen at the HTML and CSS layer:
-
-- **Focus indicators** that meet 2.4.11 visibility requirements, with a configurable outline thickness and contrast
-- **ARIA form labels** on checkout fields that ship without them in some themes
-- **Alt text scanning** for product images, with a flag for empty alt attributes
-- **Color contrast detection** for text against your theme's backgrounds
-- **Skip links** so keyboard users can bypass the header
-- **Empty button text** detection (common on icon-only buttons that fail 4.1.2)
-- **Lang attribute** verification on the html element
-- **Accessible input names** on quantity steppers and search fields
-
-The Pro version adds batch scanning across your full catalog, an auto-fix mode for cases where the fix is safe to apply automatically, and a PDF compliance report you can hand to a lawyer or auditor.
-
-What the plugin won't do: write meaningful alt text for you, fix a fundamentally broken checkout flow, or replace human review for judgment calls. Automated tools handle the common, mechanical WCAG failures well. The judgment-based work, like writing alt text that actually describes the product in context, still needs you.
-
-## People also ask
-
-### Is WCAG 2.2 legally required for WooCommerce stores?
-
-Not yet, in most jurisdictions. The US ADA doesn't name a specific WCAG version, but plaintiffs typically reference WCAG 2.1 AA. The European Accessibility Act references EN 301 549, which aligns with WCAG 2.1 AA. WCAG 2.2 AA is the best-practice target, and auditors increasingly use it, but the legal floor is still 2.1 AA in 2026.
-
-### What's the biggest WCAG 2.2 change for ecommerce specifically?
-
-**3.3.7 Redundant Entry** and **3.3.8 Accessible Authentication**. Both directly affect checkout and account creation, which is where ecommerce sites lose customers and get sued. If you can't fix everything, fix these two first.
-
-### Does my theme need to be updated for WCAG 2.2?
-
-Probably yes, at least partially. Most popular WooCommerce themes were built against WCAG 2.1 AA. Check your theme changelog: many of them (Storefront, Astra, Kadence) have shipped 2.2-related updates since late 2024. Update first, then test the new criteria against your live site.
-
-### Will an accessibility overlay make my store WCAG 2.2 compliant?
-
-No. Overlays inject JavaScript that toggles styles, but they don't fix the underlying HTML. Plaintiffs' law firms and accessibility consultants now explicitly target sites using overlays. The FTC's 2024 case against accessiBe made this position clear. Use a fixer that edits the real markup, not a widget that paints over it.
-
-### How long does it take to fix a WooCommerce store for WCAG 2.2?
-
-For a small store (one theme, under 100 products, standard checkout), most owners can hit 2.1 AA in 4 to 8 hours of work plus a plugin, and 2.2 AA in another 2 to 4 hours on top. Larger catalogs or heavily customized checkout flows take proportionally longer. The 30-minute audit above will give you a realistic estimate for your specific store.
-
----
-
-## Related Reading
-
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
-- <a href="/blog/wcag-22-compliance-woocommerce-checklist/">WCAG 2.2 Compliance WooCommerce Checklist</a> - What changed and what to fix
-- <a href="/blog/wcag-22-compliance-woocommerce-deadline/">WCAG 2.2 Compliance: Deadline</a> - Timeline and compliance requirements
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)
+- [WCAG 2.2 deadline and legal scope for WooCommerce](/blog/wcag-22-compliance-woocommerce-deadline/)
+- [Choosing an ADA accessibility plugin for WooCommerce](/blog/ada-compliance-plugin-full-guide/)

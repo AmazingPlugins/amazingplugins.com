@@ -37,7 +37,8 @@ const articleSchema = {
   ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
   "author": {
     "@type": "Person",
-    "name": author
+    "name": author,
+    "url": "https://harun.dev/bio"
   },
   "publisher": {
     "@type": "Organization",
@@ -71,7 +72,7 @@ const articleSchema = {
           <span class="post-tag">{tags?.[0] ?? 'Accessibility'}</span>
           <time datetime={pubDate.toISOString()}>{formattedDate}</time>
           {updatedDate && <time datetime={updatedDate.toISOString()}>Updated {formattedUpdatedDate}</time>}
-          <span class="post-author">by {author}</span>
+          <span class="post-author">by <a href="https://harun.dev/bio" rel="author">{author}</a></span>
         </div>
         <h1 class="post-title">{title}</h1>
         <p class="post-description">{description}</p>
@@ -81,12 +82,31 @@ const articleSchema = {
     <div class="post-content">
       <div class="container container-narrow">
         <Content />
+        <aside class="author-note" aria-label="About the author">
+          <h2>About the author</h2>
+          <p><a href="https://harun.dev/bio" rel="author">Harun Ray</a> writes about WooCommerce tools for AmazingPlugins. His public bio lists AmazingPlugins among his projects. Where an article describes testing, check its stated method and date before treating the result as current.</p>
+        </aside>
       </div>
     </div>
   </article>
 </BaseLayout>
 
 <style>
+  .author-note {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .author-note h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .author-note p { margin: 0; }
+
   .post-header {
     background: var(--cream-2);
     color: var(--ink);

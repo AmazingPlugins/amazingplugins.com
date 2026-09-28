@@ -77,9 +77,9 @@ Fixing missing alt text requires auditing every product image. For manual fixes,
 
 Contrast issues require checking your current color scheme against WCAG ratios. Tools like the WebAIM Contrast Checker help you identify failing combinations. You may need to adjust theme styles or override plugin CSS that injects low-contrast colors.
 
-Empty form labels require adding proper label elements to every input. In WooCommerce, check your checkout template files and any plugins that modify checkout fields. Each form field should have a visible label element with a for attribute matching the input ID.
+Empty form labels require adding proper label elements to every input. In WooCommerce, check your checkout template files and any plugins that modify checkout fields. Each form field should have a visible label element with a for attribute matching the input ID. Use the [ARIA labels reference guide](/blog/aria-labels-reference-guide/) when you need to check how a control gets its accessible name.
 
-Keyboard traps often stem from JavaScript libraries or poorly coded plugins. Test your checkout flow by pressing Tab repeatedly from start to finish. If you encounter any situation where you cannot proceed or cannot escape an element, investigate the responsible code.
+Keyboard traps often stem from JavaScript libraries or poorly coded plugins. Test your checkout flow by pressing Tab repeatedly from start to finish. If you encounter any situation where you cannot proceed or cannot escape an element, investigate the responsible code. [Variation swatches need their own keyboard check](/blog/woocommerce-variation-swatches-accessibility-fixes/) because themes often replace native controls there.
 
 Non-descriptive links can be found by searching your theme and content for generic phrases. Replace vague link text with specific descriptions. For icon-only buttons, add aria-label attributes to explain their purpose.
 
@@ -87,9 +87,9 @@ Hidden focus indicators require checking your CSS for outline: none declarations
 
 ## Make Accessibility Easier with AmazingPlugins
 
-Auditing and fixing these issues across an entire WooCommerce store takes time, especially when you factor in theme updates, new plugins, and product additions. AmazingPlugins offers a dedicated WooCommerce accessibility solution that automatically detects and resolves common WCAG violations, monitors for new issues, and keeps your store compliant as it grows.
+Auditing and fixing these issues across an entire WooCommerce store takes time, especially after theme and plugin updates. [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) has nine free fixers for selected issues, including product-image alt text fallback, focus styles, and a skip link. It does not verify that your whole store conforms to WCAG; test the rendered pages yourself.
 
-If you are serious about accessibility and ADA compliance, check out what AmazingPlugins can do for your store.
+If you use Elementor, also check the [WooCommerce and Elementor accessibility conflict guide](/blog/woocommerce-elementor-accessibility-plugin-conflicts/) before attributing a broken control to one plugin.
 
 ---
 

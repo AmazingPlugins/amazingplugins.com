@@ -1,10 +1,10 @@
 ---
 title: EU Accessibility Act ecommerce checklist 2026
 description: >-
-  A practical EU Accessibility Act ecommerce checklist for WooCommerce
-  stores that sell to EU consumers, with scope, proof, and
-  WCAG-focused next steps.
+  A working EAA checklist for ecommerce teams: confirm scope, test the buying
+  path, document barriers, and check national requirements.
 pubDate: 2026-05-21T10:25:00.000Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
 tags:
   - EAA
@@ -20,105 +20,59 @@ seoCategory: compliance
 gscSubmitted: true
 ---
 
-This EU Accessibility Act ecommerce checklist helps WooCommerce stores selling to EU consumers stay organized. It keeps the work simple: confirm scope, fix blockers, keep proof, repeat.
+This checklist is for teams assessing an ecommerce service under the European Accessibility Act (EAA). It is a work list, not a declaration that every WooCommerce store is covered. Reviewed September 28, 2026 against [Directive (EU) 2019/882](https://eur-lex.europa.eu/eli/dir/2019/882/oj). Check the law in the member states where you offer the service before making a legal compliance claim.
 
-## First, confirm whether you are in scope
+## 1. Record the scope decision
 
-You are likely in scope if you sell consumer-facing goods or services into the EU, including through WooCommerce storefronts.
+- [ ] Identify the service offered to consumers in the EU, the legal entity providing it, and the member states involved.
+- [ ] Check whether it is an ecommerce service within the [directive's scope](https://eur-lex.europa.eu/eli/dir/2019/882/oj). The directive applies to covered services provided to consumers after June 28, 2025; that date is not a universal WCAG 2.2 deadline.
+- [ ] Check whether the microenterprise service exemption or another provision applies. Record the facts used for the decision. Do not infer an exemption from store size alone without checking the directive's definition and local law.
+- [ ] Assign an owner to confirm applicable national rules and any questions about transition, enforcement, or disproportionate burden. Do not put “we installed a plugin” in this field.
 
-Check:
+## 2. Map the complete buying path
 
-- where your customers are located
-- whether your storefront is public-facing
-- whether your product pages, checkout, and support flows are usable with assistive tech
-- whether any app embed or widget changes the user flow
+List the pages and providers a buyer encounters: search or category, product, options, cart, checkout, payment, confirmation, account, returns, and support. Include mobile views, cookie consent, chat, and third-party widgets. Mark who can change each component.
 
-If you are selling to EU consumers, do not assume the platform covers you.
+For each key task, check:
 
-## What to check on the storefront
+- [ ] It works with a keyboard. Focus remains visible and reaches every control in a sensible order.
+- [ ] Controls have useful names, roles, instructions, and error messages for screen-reader users.
+- [ ] Product images and other non-text content have appropriate alternatives. Decorative images do not need descriptive prose.
+- [ ] Text and controls remain usable at the relevant viewport sizes and zoom levels.
+- [ ] Product variations, filters, cart drawers, and payment controls work without a mouse-only gesture.
+- [ ] Captions, documents, and support information needed for the service are accessible.
 
-- Keyboard access on menus, filters, product cards, and checkout
-- Focus visibility on every interactive element
-- Alt text on important product and content images
-- Labels on all forms and search inputs
-- Contrast on buttons, links, and price badges
-- Headings in a logical order
-- Skip links to the main content area
-- Modals, popups, and cookie banners that can be closed with a keyboard
-- No widget or app embed that creates a new barrier
+Use [WCAG 2.2](https://www.w3.org/TR/WCAG22/) as a technical testing reference where relevant. It does not replace the directive's own requirements or national implementing law.
 
-## Proof pack to keep
+## 3. Keep evidence tied to actual tests
 
-If you need to show the work later, keep:
+- [ ] Record the URL, date, browser, viewport, keyboard or assistive technology used, steps to reproduce, and observed barrier.
+- [ ] Record the fix owner, change, retest date, and remaining issue. Keep examples of successful and failed checkout states.
+- [ ] Keep scan exports with their coverage limits. A scan of three product pages is not a scan of the whole catalog.
+- [ ] Review the directive's service-information duties, including [Annex V](https://eur-lex.europa.eu/eli/dir/2019/882/oj), and prepare the information required by the law that applies to your service. An accessibility statement alone is not a substitute for accessible operation.
+- [ ] Recheck after changing the theme, catalog templates, checkout, payment provider, or support widget.
 
-- scan exports
-- screenshots of issues before and after
-- remediation log entries
-- notes on who fixed each issue
-- last review date
-- accessibility statement link
+There is no useful fixed “three-week compliance plan” for every store. Work first on a task the buyer cannot finish, then on issues that recur across the store. Assign a date and owner to each remaining item.
 
-That is the part most teams skip. Then they scramble later.
+## Where a plugin can help
 
-## Simple rollout plan
+**Disclosure:** AmazingPlugins publishes [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/). We reviewed its public WordPress.org 1.5.1 release on September 28, 2026. It is free and has nine fixers. The scanner covers configured WooCommerce pages plus up to three randomly selected published products per run. The release includes a product-image alt fallback, a skip link, and selected form and focus changes. It does not audit every EAA requirement, every product, or your complete payment and support flow. Its report download is HTML. Check each result on your actual store.
 
-### Week 1
+## Common scope questions
 
-- run a baseline scan
-- fix keyboard and focus problems
-- clean up forms and buttons
-- review app embeds and popups
+### Does a store based outside the EU automatically fall under the EAA?
 
-### Week 2
+No automatic answer follows from where the business is incorporated or from a single EU visitor. The directive defines service providers making offers to EU consumers and specifies the covered services. Assess the actual offer, any exception, and the relevant national law.
 
-- repair alt text and link text
-- test checkout manually
-- update the accessibility statement
-- write down open items in the remediation log
+### Is WCAG 2.2 AA mandatory for every covered store?
 
-### Week 3
+The directive sets accessibility requirements for covered services; it does not make a blanket “WCAG 2.2 AA by 2026” statement for every store. W3C recommends 2.2 as a current technical target. Match the applicable legal requirement and document which technical criteria you tested.
 
-- re-scan the site
-- close anything that regressed
-- set a monthly review cadence
+### What is the first useful test?
 
-## What not to do
+Try to buy a product with a keyboard, then repeat with a screen reader. Include the payment step. Record the first barrier that prevents completion and who owns it.
 
-- Do not treat the EAA as a wording exercise
-- Do not hide behind an overlay widget
-- Do not publish a statement and stop there
-- Do not wait until the deadline to learn where the barriers are
+## Related reading
 
-## Quick FAQs
-
-### Does the EAA apply if my store is based outside the EU?
-Possibly, yes. What matters most is whether you sell to EU consumers and whether your storefront is a consumer-facing digital service.
-
-### What proof should I keep?
-Keep scan exports, screenshots, remediation log entries, owner notes, review dates, and a public accessibility statement link.
-
-### What should I fix first?
-Start with keyboard access, focus visibility, labels, and anything that blocks checkout or core navigation.
-
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the EAA apply if my store is based outside the EU?", "acceptedAnswer": {"@type": "Answer", "text": "Possibly, yes. What matters most is whether you sell to EU consumers and whether your storefront is a consumer-facing digital service."}}, {"@type": "Question", "name": "What proof should I keep?", "acceptedAnswer": {"@type": "Answer", "text": "Keep scan exports, screenshots, remediation log entries, owner notes, review dates, and a public accessibility statement link."}}, {"@type": "Question", "name": "What should I fix first?", "acceptedAnswer": {"@type": "Answer", "text": "Start with keyboard access, focus visibility, labels, and anything that blocks checkout or core navigation."}}]}
-</script>
-
-## Related pages
-
-- [ADA ecommerce remediation plan template](https://amazingplugins.com/blog/ada-ecommerce-remediation-plan-template/)
-- [How to Make Your WooCommerce Store ADA Compliant](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/)
-- [WooCommerce ADA Compliance Checklist 2026](https://amazingplugins.com/blog/woocommerce-ada-compliance-checklist-2026/)
-
-## Bottom line
-
-The EU Accessibility Act is easier to handle if you treat it like an operations problem. Audit the storefront, fix the blockers, keep proof, and repeat.
-
----
-
-## Related Reading
-
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
-- <a href="/blog/ada-ecommerce-remediation-plan-template/">ADA Ecommerce Remediation Plan Template</a> - Practical remediation planning
-- <a href="/blog/wcag-22-compliance-woocommerce-checklist/">WCAG 2.2 Compliance WooCommerce Checklist</a> - What changed and what to fix
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)
+- [Choosing a WooCommerce EAA accessibility plugin](/blog/woocommerce-eaa-compliance-plugin-guide-2026/)
+- [WCAG 2.2 changes for WooCommerce](/blog/wcag-22-compliance-woocommerce-what-changed/)

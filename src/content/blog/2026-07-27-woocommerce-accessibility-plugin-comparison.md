@@ -1,9 +1,10 @@
 ---
-title: "WooCommerce Accessibility Plugin Comparison: Which One Actually Works?"
+title: "WooCommerce Accessibility Tools Compared: Fixers, Widgets, and Audits"
 description: >-
-  Compare WooCommerce accessibility plugins: accessiBe, UserWay, AudioEye, and
-  Accessibility Fixer. See which one truly fixes issues.
+  Compare how AP Accessibility Fixer, accessWidget, UserWay, and AudioEye work.
+  See what their public documentation says and what to test on your own store.
 pubDate: 2026-07-27T00:00:00.000Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -14,271 +15,49 @@ tags:
 gscSubmitted: true
 ---
 
-Choosing the right accessibility plugin for your WooCommerce store can feel overwhelming. There are dozens of options, each promising WCAG compliance with a single click. But which ones actually fix issues, and which just hide them behind an overlay widget?
+The most useful question in a WooCommerce accessibility comparison is where a tool makes its changes. Does it change WordPress output, add an adjustment layer in the browser, report issues for a developer, or combine those approaches? The answer affects what you need to test after installation.
 
-In this guide, we compare the top WooCommerce accessibility plugins on real-world performance, not marketing claims.
+**Disclosure and method:** AmazingPlugins publishes AP Accessibility Fixer for WooCommerce. We reviewed its public 1.5.1 release and the vendors' linked documentation on September 28, 2026. We did not install and run all four products on the same store. The table describes documented approaches, not measured WCAG pass rates or a winner in a controlled test. For a broader guide to choosing a tool, see [WCAG WordPress plugins compared](/blog/best-wcag-wordpress-plugins-compared/).
 
-## The Big Four: Quick Overview
+## How the tools differ
 
-| Plugin | Type | Price | Approach |
-|--------|------|-------|----------|
-| accessiBe | Overlay | $49/mo | AI-powered widget |
-| UserWay | Overlay | Free-$49/mo | Widget + manual fixes |
-| AudioEye | Overlay | $99+/mo | AI + human review |
-| WooCommerce Accessibility Fixer | Code-level | Free | Direct CSS/HTML fixes |
+| Tool | Publicly described approach | What to verify on WooCommerce |
+| --- | --- | --- |
+| [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) | Nine free fixers in the public 1.5.1 release. Uses WordPress hooks, content filters, CSS, and some inline JavaScript. | Whether its specific fixes work on your theme. It does not provide a general text-contrast checker or repair every checkout field. |
+| [accessWidget](https://support.accessibe.com/hc/en-us/articles/20590637170450-How-does-accessWidget-work) | Visitor interface plus AI-driven page adjustments, according to accessiBe. | Test the default page, the adjusted page, and customized checkout controls. The vendor [lists limits for custom components and documents](https://support.accessibe.com/hc/en-us/articles/25109109077010-What-are-accessWidget-s-technological-limitations). |
+| [UserWay Accessibility Widget](https://userway.org/widget/) | Visitor controls and automated remediation, according to UserWay. | Check which features require activation, what changes automatically, and whether your product and checkout flows remain usable. |
+| [AudioEye Automated Accessibility Platform](https://www.audioeye.com/solution/automated-accessibility-platform/) | Automated fixes and monitoring; AudioEye also describes [expert reporting](https://www.audioeye.com/solution/expert-reporting/). | Confirm the scope of the plan you choose and test actual WooCommerce templates, payment fields, and third-party widgets. |
 
-## What Each Plugin Actually Does
+These vendors offer different products and service levels. A documentation matrix cannot tell you whether a particular theme, gateway, or page builder will work. Prices and package terms change, so check each vendor directly before buying.
 
-### accessiBe
+## What the AP release actually covers
 
-accessiBe uses an AI-powered overlay widget that sits on top of your store. It claims to fix accessibility issues automatically.
+The public [WordPress.org listing](https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/) says all nine fixers are free and there is no Pro version. We checked the 1.5.1 package rather than relying only on its marketing description. It fills empty product-image alt text from image or product titles, adds selected focus and error styles, adds a skip link, and makes other narrow changes. Its form-label fixer filters post content; it is not proof of checkout-template coverage. The color-contrast fixer adds CSS for selected focus and error states; it does not calculate text/background ratios. Some fixers add inline scripts.
 
-**What it fixes:**
-- Adds aria labels to buttons
-- Adjusts color contrast
-- Provides keyboard navigation controls
-- Screen reader optimization
+A product title used as alt text may still be unhelpful. Review it against the image. Test keyboard behavior in your own cart and checkout rather than assuming a fixer handles every interactive control.
 
-**What it doesn't fix:**
-- Missing alt text on product images
-- Broken heading hierarchy
-- Form label issues
-- Checkout flow accessibility
+## A test that makes the comparison useful
 
-**Verdict:** Good for quick compliance, but doesn't address root causes.
+Use the same staging store and record its theme, WooCommerce version, payment gateways, and each tool's version or plan. Save a baseline before enabling a tool.
 
-### UserWay
+1. Try a variable product, cart, account login, and checkout using a keyboard only. Note focus order, traps, and controls that cannot be reached.
+2. Repeat with a screen reader. Check names and error announcements, including fields added by payment and shipping plugins.
+3. Run an automated scanner on the same pages. Treat its findings as candidates to inspect, not a compliance score.
+4. Enable one tool, repeat the same steps, and record what changed in the rendered page. For visitor widgets, test both before and after a visitor activates the controls.
+5. Disable the tool and check whether a claimed fix was a change to the site's output or an adjustment supplied while the tool runs.
+6. Re-test after theme, checkout, or gateway updates.
 
-UserWay offers both a free widget and paid plans with more features.
+Use the [WooCommerce screen-reader testing guide](/blog/screen-reader-testing-woocommerce-guide/) for a repeatable manual pass. If the issue is in checkout, the [checkout accessibility guide](/blog/woocommerce-checkout-accessibility-issues/) lists the controls to inspect.
 
-**What it fixes:**
-- Basic keyboard navigation
-- Screen reader compatibility
-- Color contrast adjustments
-- Font size controls
+## About compliance claims
 
-**What it doesn't fix:**
-- Product gallery accessibility
-- Cart drawer issues
-- Mobile menu accessibility
-- Form validation errors
+No entry in this comparison establishes that a store conforms to WCAG or meets its legal obligations. The [FTC's accessiBe case](https://www.ftc.gov/legal-library/browse/cases-proceedings/2223156-accessibe-inc) resulted in a $1 million settlement over deceptive claims about making any website compliant. That case concerns the claims in the order; it is not a test result for your store or a verdict on every product above.
 
-**Verdict:** Free tier is decent for basic compliance, but limited for WooCommerce.
+Choose the tool that addresses issues you can reproduce, document the remaining barriers, and get qualified advice for legal questions. If you want to start with our plugin, read the [nine-fixer scope and limitations](/plugins/woocommerce-accessibility-fixer/) before installing it.
 
-### AudioEye
+## Related reading
 
-AudioEye combines AI with human review for more thorough fixes.
-
-**What it fixes:**
-- Automated WCAG fixes
-- Human expert review
-- Ongoing monitoring
-- Custom remediation
-
-**What it doesn't fix:**
-- WooCommerce-specific issues
-- Product variation accessibility
-- Checkout flow problems
-- Custom theme conflicts
-
-**Verdict:** Most thorough of the overlays, but expensive and not WooCommerce-focused.
-
-### WooCommerce Accessibility Fixer
-
-Our plugin takes a different approach - direct code-level fixes instead of an overlay.
-
-**What it fixes:**
-- Missing alt text on product images
-- Keyboard navigation for all interactive elements
-- Form labels and ARIA attributes
-- Color contrast issues
-- Focus indicators
-- Screen reader compatibility
-- Checkout flow accessibility
-- Product gallery navigation
-
-**What it doesn't fix:**
-- Custom theme issues (requires theme modifications)
-- Third-party plugin conflicts (may need additional fixes)
-
-**Verdict:** Most comprehensive WooCommerce-specific solution, but requires installation.
-
-## Real-World Test Results
-
-We tested each plugin on a sample WooCommerce store with common accessibility issues:
-
-| Issue | accessiBe | UserWay | AudioEye | Our Fixer |
-|-------|-----------|---------|----------|-----------|
-| Missing alt text | Partial | Partial | Partial | Fixed |
-| Keyboard navigation | Fixed | Fixed | Fixed | Fixed |
-| Form labels | Partial | Partial | Fixed | Fixed |
-| Color contrast | Fixed | Fixed | Fixed | Fixed |
-| Focus indicators | Fixed | Fixed | Fixed | Fixed |
-| Checkout accessibility | Partial | Partial | Partial | Fixed |
-| Product gallery | Not fixed | Not fixed | Not fixed | Fixed |
-
-## The Overlay Problem
-
-Overlay widgets like accessiBe, UserWay, and AudioEye have a fundamental limitation: they can only modify what's visible on the page. They can't fix:
-
-1. **Server-side issues** - Missing alt text in database
-2. **Structural problems** - Broken heading hierarchy
-3. **Form accessibility** - Missing labels in checkout
-4. **Dynamic content** - AJAX cart updates
-5. **Mobile-specific issues** - Touch target sizes
-
-These issues require direct code changes, which overlays can't provide.
-
-## When to Use Each Plugin
-
-**Use accessiBe if:**
-- You need quick compliance for legal reasons
-- You have a small store with few products
-- Budget is not a concern
-
-**Use UserWay if:**
-- You want a free basic solution
-- Your store is simple with few customizations
-- You need basic screen reader support
-
-**Use AudioEye if:**
-- You need ongoing monitoring
-- You have a large enterprise store
-- Budget allows for premium service
-
-**Use WooCommerce Accessibility Fixer if:**
-- You want to actually fix accessibility issues
-- You need WooCommerce-specific solutions
-- You prefer free, open-source tools
-- You want long-term compliance, not just a band-aid
-
-## Our Recommendation
-
-For most WooCommerce stores, we recommend a hybrid approach:
-
-1. **Install WooCommerce Accessibility Fixer** to fix core issues
-2. **Add manual fixes** for theme-specific problems
-3. **Test with screen readers** to verify compliance
-4. **Monitor with GSC** for ongoing issues
-
-This approach addresses root causes rather than symptoms, providing lasting accessibility compliance.
-
-## Pricing Comparison
-
-| Plugin | Free Tier | Paid Plans | Annual Cost |
-|--------|-----------|------------|-------------|
-| accessiBe | No | $49/mo - $99/mo | $588 - $1,188 |
-| UserWay | Yes (basic) | $49/mo - $99/mo | $0 - $1,188 |
-| AudioEye | No | $99/mo - $299/mo | $1,188 - $3,588 |
-| WooCommerce Accessibility Fixer | Yes (full) | N/A | $0 |
-
-**Key insight:** The free tier of UserWay is limited. For full features, you need the paid plan. Our plugin is completely free with no restrictions.
-
-## Ease of Installation
-
-**accessiBe:** Install plugin, add JavaScript snippet, wait for AI to scan. Takes 5-10 minutes.
-
-**UserWay:** Add JavaScript widget to header. Takes 2-5 minutes. No plugin required.
-
-**AudioEye:** Install plugin, configure settings, wait for human review. Takes 1-2 business days.
-
-**WooCommerce Accessibility Fixer:** Install plugin, activate, run scan. Takes 2-3 minutes. No configuration needed.
-
-## Ongoing Maintenance
-
-**Overlays (accessiBe, UserWay, AudioEye):**
-- Require monthly subscription
-- Widget updates may break your site
-- New content needs re-scanning
-- No guarantee of WCAG compliance
-
-**Code-level (WooCommerce Accessibility Fixer):**
-- Free forever
-- Fixes persist across updates
-- New content automatically fixed
-- PDF compliance report for legal protection
-
-## Common Questions
-
-**Q: Can I use an overlay AND a code-level fixer together?**
-A: Yes, but it's redundant. Code-level fixers address root causes, making overlays unnecessary.
-
-**Q: Will an overlay pass a professional accessibility audit?**
-A: Unlikely. Auditors check for overlay code and often flag it as a violation itself.
-
-**Q: How quickly do overlays fix issues?**
-A: accessiBe claims 48 hours. UserWay is instant. AudioEye takes 1-2 business days for human review.
-
-**Q: Do code-level fixers work with any theme?**
-A: Most yes. Some heavily customized themes may need additional manual fixes.
-
-## The Legal Reality
-
-Recent court rulings have clarified that overlay widgets alone don't provide legal protection:
-
-- **Robles v. Domino's (2019):** Websites must be accessible regardless of technology used
-- **Virtually every ADA lawsuit settlement** requires code-level fixes, not widget installation
-- **DOJ guidance** emphasizes WCAG 2.1 AA compliance, not specific technologies
-
-This means installing an overlay without fixing underlying issues leaves you legally exposed.
-
-## How to Test Each Plugin
-
-Before committing to any plugin, run this quick test:
-
-1. **Install the plugin** on a staging site
-2. **Run a screen reader test** (NVDA on Windows, VoiceOver on Mac)
-3. **Check keyboard navigation** (Tab through all interactive elements)
-4. **Test checkout flow** (Add to cart, proceed to checkout, complete purchase)
-5. **Verify with Lighthouse** (Chrome DevTools > Lighthouse > Accessibility)
-
-If the plugin doesn't pass these basic tests, it won't protect you from lawsuits.
-
-## Real Store Results
-
-We tested each plugin on a WooCommerce store with 500 products:
-
-**accessiBe:**
-- Lighthouse score: 85/100 (before: 45/100)
-- Screen reader: Partial fixes, some elements still inaccessible
-- Keyboard nav: Improved, but checkout still problematic
-
-**UserWay:**
-- Lighthouse score: 78/100 (before: 45/100)
-- Screen reader: Basic fixes, complex interactions broken
-- Keyboard nav: Better, but product galleries still inaccessible
-
-**AudioEye:**
-- Lighthouse score: 92/100 (before: 45/100)
-- Screen reader: Good fixes, but WooCommerce-specific issues remain
-- Keyboard nav: Most issues fixed, some edge cases
-
-**WooCommerce Accessibility Fixer:**
-- Lighthouse score: 98/100 (before: 45/100)
-- Screen reader: All issues fixed
-- Keyboard nav: Full accessibility including checkout and galleries
-
-## Our Recommendation
-
-For most WooCommerce stores, we recommend a hybrid approach:
-
-1. **Install WooCommerce Accessibility Fixer** to fix core issues
-2. **Add manual fixes** for theme-specific problems
-3. **Test with screen readers** to verify compliance
-4. **Monitor with GSC** for ongoing issues
-
-This approach addresses root causes rather than symptoms, providing lasting accessibility compliance.
-
-## Getting Started
-
-Ready to fix your WooCommerce store's accessibility issues? Start with our free plugin:
-
-[WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
-
-## Related Reading
-
-- [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
-- [ADA Lawsuits Rising: 5,114 Cases in 2025](/blog/ada-lawsuits-rising-woocommerce-2026/)
-- [Screen Reader Testing for WooCommerce: The 15-Minute Guide](/blog/screen-reader-testing-woocommerce-guide/)
-- [Why Accessibility Overlays Don't Protect You From ADA Lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/)
-- [WooCommerce Accessibility Fixer Plugin](/plugins/woocommerce-accessibility-fixer/)
+- [WCAG WordPress plugins compared by what they fix](/blog/best-wcag-wordpress-plugins-compared/)
+- [WooCommerce accessibility widget compared with fixers](/blog/woocommerce-accessibility-widget-compared/)
+- [WooCommerce plugin versus widget: how fixes work](/blog/woocommerce-plugin-vs-widget-accessibility/)
+- [WooCommerce checkout accessibility issues](/blog/woocommerce-checkout-accessibility-issues/)

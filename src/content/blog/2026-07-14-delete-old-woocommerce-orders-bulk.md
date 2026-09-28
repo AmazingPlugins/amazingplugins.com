@@ -148,12 +148,12 @@ The safest workflow is always: scan first (dry run), verify what will be deleted
 
 ---
 
-**Need to make your store accessible?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> automatically detects and fixes WCAG violations. Free, no coding required.
+**Also checking storefront accessibility?** The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> has nine targeted fixes. Test your theme, product controls, and checkout separately.
 
 ## Related Reading
 
 - [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
 - [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
-- [ADA Lawsuits Hit 5,114 in 2025: What WooCommerce Store Owners Need to Know](/blog/ada-lawsuits-rising-woocommerce-2026/)
+- [ADA website claims and WooCommerce: how to check your store](/blog/ada-lawsuits-rising-woocommerce-2026/)
 - [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

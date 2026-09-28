@@ -102,7 +102,7 @@ Start with the quickest wins - skip links and focus styles - and work through pr
 
 ---
 
-**Want to fix these issues automatically?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> handles alt text, keyboard navigation, and focus indicators with one click. No coding required.
+The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> includes a product-image alt text fallback, selected focus styles, and a handler for some modal interactions. Check the rendered pages after enabling each fix; it does not replace a keyboard audit or hand-written alt text.
 
 ## Related Reading
 

@@ -36,11 +36,11 @@ A practical order is:
 9. PDF or audit documentation.
 10. Ongoing scans after updates.
 
-[WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) is built around these recurring checks.
+The [AP Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) can help with some of these checks. The list is a store audit, not a list of plugin features.
 
 ## What ADA compliance means for WooCommerce
 
-The ADA does not list WooCommerce by name. It does not need to. If your store sells to the public, the website can be treated as part of the customer experience. Courts, demand letters, auditors, and settlement agreements usually rely on WCAG as the technical yardstick.
+The ADA covers businesses open to the public, including the goods and services they offer online. For private businesses, the DOJ has [not set a single detailed WCAG rule](https://www.ada.gov/resources/web-guidance/). WCAG is a useful technical framework for testing the store; it isn't a legal certificate.
 
 For WooCommerce stores, accessibility is affected by several layers:
 
@@ -231,11 +231,9 @@ Document what you find. A simple spreadsheet with issue, page, WCAG criterion, s
 
 ## How AmazingPlugins helps WooCommerce stores
 
-[WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) targets the common failures this checklist covers: product image alt text, keyboard navigation, focus indicators, ARIA form labels, color contrast, skip links, empty button text, language attributes, link text, and accessible input names.
+The released [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) can add product-image alt text from product data, focus styles, a skip link, and several other scoped fixes. It includes scan results and a downloadable HTML report. As checked against version 1.5.1 on September 28, 2026, its contrast fixer styles selected focus and error borders; it does not measure text contrast. Its form-label fixer runs on post content, so you still need to inspect rendered checkout fields. Its keyboard script targets certain modal patterns, not every variation or payment widget.
 
-It is not an overlay. The plugin works through WooCommerce and WordPress output where possible, flags issues that need review, and gives you a PDF accessibility report. That report helps you track what was checked and what changed.
-
-Automation will not replace judgment. You still need a human to decide whether an alt text description is accurate or whether a custom checkout step makes sense. But automation can catch the repetitive issues that store owners miss, especially after product imports and plugin updates.
+Review generated alt text for meaning, then test your actual buying flow with a keyboard and screen reader. Treat the downloadable HTML report as a list of checks, not proof of WCAG or ADA compliance. See the [WordPress.org listing](https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/) for the current release.
 
 ## What to prioritize if you are short on time
 
@@ -267,7 +265,7 @@ Checkout blockers are usually the most urgent because they stop purchases. Missi
 
 ### Can a plugin fix all ADA compliance issues?
 
-No plugin can honestly guarantee full compliance for every store. A good plugin can scan, fix common technical problems, report issues, and reduce risk. You still need review for content quality, complex custom flows, and third-party widgets.
+No plugin can honestly guarantee full compliance for every store. A plugin can help find and fix scoped technical issues. You still need review for content quality, complex custom flows, and third-party widgets.
 
 ### How often should I run a WooCommerce accessibility scan?
 

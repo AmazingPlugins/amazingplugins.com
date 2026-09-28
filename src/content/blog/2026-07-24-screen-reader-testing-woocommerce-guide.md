@@ -104,7 +104,7 @@ Bring back a visible focus indicator anywhere your theme removed it, even if it'
 
 None of this requires you to become a developer. But going through every product, every theme file, and every checkout field by hand takes real time, especially if your catalog has more than a handful of products.
 
-The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> plugin is built to close this gap. It scans your store for the issues covered in this post, missing alt text, unlabeled buttons and form fields, keyboard navigation gaps, and fixes what it can automatically from your WordPress dashboard. Running a 15-minute manual test first still matters, because it teaches you what these problems actually sound and feel like from a real user's perspective. But once you know what you're looking for, the plugin handles the repetitive, catalog-wide cleanup so you're not manually editing alt text on 800 products one at a time.
+The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> provides nine targeted fixes, including a fallback for empty product-image alt text and selected focus styles. Its page scanner samples up to three product pages per run; it does not perform catalog-wide cleanup or fix every button and checkout label. Use the manual test above to check what changed and record what remains.
 
 Think of the manual test as your diagnosis and the plugin as your treatment. You want both. A quick monthly test keeps you honest about what's actually happening on your live site, and the plugin keeps the baseline solid without eating your whole weekend.
 

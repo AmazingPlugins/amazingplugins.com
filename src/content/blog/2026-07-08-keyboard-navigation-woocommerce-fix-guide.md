@@ -177,9 +177,9 @@ Here's a quick keyboard audit you can run right now:
 
 Write down every element that fails. The most common failures are focus indicator visibility, tab order, and modal focus traps.
 
-## Our Plugin Does All This Automatically
+## Where Our Plugin Can Help
 
-If auditing and fixing every issue sounds like too much manual work, the <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> plugin handles all of these fixes automatically - including keyboard navigation, focus indicators, skip links, ARIA labels, and more. It's free and works with any WooCommerce theme.
+The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> adds focus styles to selected controls, a skip link, and an Escape handler for selected modal patterns. It does not establish correct tab order or keyboard operation for every theme and extension. Run the purchase test above after enabling it.
 
 ## Related Reading
 

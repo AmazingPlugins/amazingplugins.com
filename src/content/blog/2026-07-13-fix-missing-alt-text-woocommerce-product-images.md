@@ -88,7 +88,7 @@ For stores with more than 50 products, manual per-image fixes do not scale. Here
 3. **Generate** - Auto-generate alt text based on product name, category, or SKU
 4. **Apply** - Fix all missing alt text in one click
 
-The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> handles steps 1-4 automatically. It scans your product catalog, identifies images with missing or empty alt text, and applies fixes based on product data - all from your WooCommerce dashboard.
+The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> supplies a fallback for empty product-image alt text using an existing image or product title. Its page scanner samples up to three products; it is not a catalog-wide alt-text inventory. Review each generated description, since a product title might not describe what distinguishes an image.
 
 ## How to Write Good Alt Text for Product Images
 
@@ -117,7 +117,7 @@ Not every image needs alt text. Background images, decorative borders, and visua
 
 ## The Automated Fix
 
-If scanning 500 products and checking every image sounds like too much manual work, the <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> handles it automatically. It scans your entire catalog, detects images missing alt text, and applies product-based descriptions in one click. It is free and works with any WooCommerce theme.
+For a large catalog, export an image inventory or review products in batches. The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> can provide a fallback for empty product-image alt attributes, but it does not audit every catalog image or write a checked description for each one. Test the rendered alt text with your theme and improve product images manually where the fallback is vague.
 
 ## Related Reading
 

@@ -119,6 +119,6 @@ A one-time cleanup buys you a tidier orders screen for a few months, then the pi
 
 ---
 
-**Also worried about accessibility compliance?** The [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) automatically detects and fixes WCAG violations across your store. Free, no coding required.
+**Also reviewing storefront accessibility?** The free [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) has nine targeted fixes. Test product pages and checkout with your own theme and payment gateway.
 
 Pending payment orders aren't a sign something's broken. They're a normal side effect of running a checkout. The only mistake is letting them sit untouched for a year, because at that point cleaning them up by hand is a much bigger job than it needed to be.

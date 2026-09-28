@@ -207,7 +207,7 @@ A clean database will not fix every performance problem on its own, but it remov
 
 ---
 
-**Running a WooCommerce store?** The [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) automatically detects and fixes WCAG violations across your catalog and checkout. Free, no coding required.
+**Also reviewing storefront accessibility?** The free [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) provides nine targeted fixes. Test product and checkout flows separately; the plugin does not audit the whole catalog or guarantee WCAG conformance.
 
 ## Related Reading
 

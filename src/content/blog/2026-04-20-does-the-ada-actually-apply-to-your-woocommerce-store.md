@@ -83,7 +83,7 @@ If you sell to the US or the EU, assume ADA Title III and the EAA apply to the s
 ## Related Reading
 
 - [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
-- [ADA Lawsuits Hit 5,114 in 2025: What WooCommerce Store Owners Need to Know](/blog/ada-lawsuits-rising-woocommerce-2026/)
+- [ADA website claims and WooCommerce: how to check your store](/blog/ada-lawsuits-rising-woocommerce-2026/)
 - [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?](/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/)
 - [How to Avoid an ADA Lawsuit With Your WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

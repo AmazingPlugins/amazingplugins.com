@@ -2,20 +2,15 @@
 title: "ARIA Labels in WooCommerce: The Complete Reference Guide for Store Owners"
 description: "Learn the 10 essential ARIA attributes for WooCommerce, common mistakes, and how to test them so your store works with screen readers."
 pubDate: 2026-07-28T00:00:00.000Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: "Harun Ray"
 tags: ["accessibility", "ARIA", "WooCommerce", "WCAG", "screen readers"]
 gscSubmitted: true
 ---
 
-## Sarah lost 15% of her customers, and she never knew it
+An icon-only cart link needs an accessible name. A visible Add to Cart button already has one. Knowing that difference helps you fix a real screen reader problem without adding ARIA everywhere.
 
-Sarah ran a WooCommerce store selling handmade ceramics. Her shop looked beautiful. She had gorgeous product photography, a clean layout, and her conversion rate for sighted visitors was solid. Then she ran an accessibility audit.
-
-Her product pages were missing labels on buttons. Her cart icon had no text alternative. Her checkout form fields were unlabeled. For the 15 to 20 percent of users who rely on screen readers, her store was essentially invisible. Products they couldn't navigate. Buttons they couldn't find. A checkout they couldn't complete.
-
-Sarah was losing a significant chunk of potential revenue, and she had no idea. The good news? Once she learned about ARIA labels, most of the fixes were straightforward.
-
-This guide is for store owners like Sarah. You don't need to be a developer to understand what ARIA labels do. You just need to know what to ask your developer to fix, or what you can handle yourself with the right plugin.
+**Review method, September 28, 2026:** This guide uses the [W3C WAI-ARIA Authoring Practices](https://www.w3.org/WAI/ARIA/apg/) and [WCAG 2.2](https://www.w3.org/TR/WCAG22/). The customer story and revenue figures previously published here were illustrative, not documented research or a measured store outcome, and have been removed. AmazingPlugins publishes the plugin discussed below.
 
 ## What are ARIA labels, and why should you care?
 
@@ -25,9 +20,7 @@ ARIA labels are invisible text tags that you add to elements on your website. Th
 
 Without ARIA labels, a screen reader might announce "button" when your customer tabs to the "Add to Cart" button. With proper labels, it says "Add Blue Ceramic Mug to Cart." That's the difference between a confused visitor and a confident buyer.
 
-Here's why this matters. Research shows that 94 percent of websites have WCAG failures. E-commerce sites are the number one target for accessibility lawsuits, with 70 to 80 percent of ADA lawsuits landing on online stores. The average settlement? Between $25,000 and $75,000. And that's before you factor in the lost sales from customers who simply leave because your store is unusable for them.
-
-ARIA labels aren't a nice-to-have. They're a business necessity.
+Use native HTML when it supplies the right name and behavior. Add an ARIA attribute only when the rendered control needs it, then test with a keyboard and screen reader.
 
 ## The 10 ARIA attributes every WooCommerce store needs
 
@@ -43,13 +36,7 @@ The `role` attribute tells screen readers how to interpret an element. Is it a b
 <div onclick="addToCart()">Add to Cart</div>
 ```
 
-**Right:**
-
-```html
-<div role="button" tabindex="0" onclick="addToCart()">Add to Cart</div>
-```
-
-Or better yet, just use a real button:
+**Right:** Use a real button, which already supports keyboard activation:
 
 ```html
 <button type="submit">Add to Cart</button>
@@ -332,7 +319,7 @@ Here's a handy table you can share with your developer or keep bookmarked.
 
 We get it. ARIA labels are important, but going through every template, plugin, and custom code snippet on your store is a big task. That's exactly why we built the [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/).
 
-It handles the heavy lifting automatically. It adds proper ARIA attributes to your product pages, checkout forms, navigation, and cart. It fixes the most common accessibility gaps so you can focus on running your store instead of rewriting your templates.
+The public 1.5.1 release has nine targeted fixers. Its form-label fixer filters post content, and its error-message script associates selected WooCommerce errors with fields. It does not prove that every product widget, navigation control, cart, or checkout field has a correct name. Test the examples in this guide on the rendered page.
 
 If you want a hands-on approach, check out our guides on [keyboard navigation testing](/blog/keyboard-navigation-woocommerce-fix-guide/) and [screen reader testing for WooCommerce](/blog/screen-reader-testing-woocommerce-guide/) to learn more about making your store work for everyone.
 

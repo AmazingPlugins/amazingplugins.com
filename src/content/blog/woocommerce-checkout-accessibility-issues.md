@@ -168,7 +168,7 @@ If you already have a broader WooCommerce checklist, connect checkout work to it
 
 ## How AmazingPlugins helps
 
-[WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) focuses on the recurring issues that store owners miss after plugins and themes change the storefront. For checkout, that means scanning for label problems, keyboard blockers, weak focus states, form issues, and plugin-injected markup that needs review.
+[AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) addresses selected storefront issues, including focus styles on some WooCommerce fields. Its released 1.5.1 form-label fixer runs on post content; it does not establish that every checkout field is repaired. Keep the manual checkout tests above.
 
 It does not turn a messy checkout into a compliant one by magic. No plugin should promise that. The useful thing is a repeatable process: find the issue, understand the page area, fix what can be fixed automatically, and document what needs a theme or plugin change.
 
@@ -190,6 +190,8 @@ Yes. Payment plugins can inject fields, iframes, wallet buttons, and error messa
 
 Use the version that works best with your theme and plugins after testing. Checkout blocks can improve some patterns, but they do not automatically fix inaccessible payment gateways or custom fields.
 
+For the differences you should test, see [WooCommerce Blocks versus Classic checkout accessibility](/blog/woocommerce-blocks-vs-classic-checkout/).
+
 ## Bottom line
 
 Checkout is where accessibility stops being abstract. If a keyboard user cannot choose shipping, if a screen reader user cannot understand a card error, or if a disabled shopper cannot place the order, the store is broken.
@@ -203,4 +205,4 @@ Fix checkout first. It protects revenue, reduces support load, and gives you a c
 - <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/woocommerce-ada-compliance-checklist-2026/">WooCommerce ADA Compliance Checklist 2026</a> - Compliance requirements
 - <a href="/blog/woocommerce-wcag-violations-guide/">WooCommerce WCAG Violations Guide</a> - Common violations and fixes
-- <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> - Automate all 10 fixes with one plugin (free)
+- <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> - Nine free fixers and their limits

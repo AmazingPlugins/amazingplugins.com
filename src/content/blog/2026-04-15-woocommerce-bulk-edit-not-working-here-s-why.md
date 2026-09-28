@@ -50,6 +50,8 @@ Products edited directly in the database - via SQL, CSV imports, or other tools 
 
 **Fix:** Use a plugin that validates and repairs metadata, or run a database check on `wp_postmeta` for orphaned or malformed entries.
 
+Before changing database records, follow the [WooCommerce database cleanup and backup steps](/blog/how-to-clean-up-woocommerce-database-safely/).
+
 ## 5. AJAX vs. Direct Post
 
 WooCommerce's native bulk actions use `admin-post.php` - a direct POST request. If your server is behind a proxy, load balancer, or aggressive CDN, the request body might get truncated or rewritten.

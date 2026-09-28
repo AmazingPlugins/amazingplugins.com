@@ -1,9 +1,8 @@
 ---
-title: "Hidden Accessibility Issues Costing Your Store Customers"
-description: >-
-  Hidden accessibility barriers cause real customer drop-off. Fix keyboard traps,
-  unclear form errors, and missing focus indicators.
+title: "Hidden Accessibility Barriers in a WooCommerce Purchase"
+description: "Find keyboard traps, unclear checkout errors, missing focus indicators, and other barriers that a visual review of your WooCommerce store can miss."
 pubDate: 2026-04-21T00:00:00.000Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
 tags:
   - Accessibility
@@ -13,50 +12,23 @@ tags:
 gscSubmitted: true
 ---
 
-# The Hidden Accessibility Issues That Are Costing Your Store Customers
+A customer reaches your product page but cannot select a size by keyboard. Another reaches checkout but cannot tell which field failed validation. A screenshot review will miss both problems.
 
-|-----------------|---------------------|---------|
-| 3.0% | 300 | $15,000 |
-| 3.5% | 350 | $17,500 |
-| **Difference** | **50 extra orders** | **$2,500/month** |
+**Review method, September 28, 2026:** This is a store-testing checklist based on [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [WooCommerce's accessibility guidance](https://woocommerce.com/document/accessibility-features-in-woocommerce/). We have no measured conversion lift from fixing these issues. The sales figures previously shown here were an illustrative calculation and have been removed. AmazingPlugins publishes the plugin linked below.
 
-A 0.5% improvement in conversion rate - achievable by fixing form errors, navigation confusion, and keyboard traps - is worth $30,000/year in this example. That's before you account for disabled users who literally cannot purchase at all on an inaccessible store.
+## Run a short audit on the purchase path
 
----
+Open the homepage, a product page, cart, and checkout. Use [WAVE](https://wave.webaim.org/extension/) or the [axe browser extension](https://www.deque.com/axe/browser-extensions/) to look for errors. Then use a keyboard to try the complete path. An automated scan cannot tell whether a customer can complete payment.
 
-## Quick Audit: Finding Your Store's Accessibility Problems
+| Barrier to check | Where it often appears |
+| --- | --- |
+| Image with no useful alternative | Product and variation galleries |
+| Control with no accessible name | Icon-only cart, filter, or quantity buttons |
+| Low text or control contrast | Sale prices, placeholder text, focus outlines |
+| Focus that disappears or gets trapped | Popups, cart drawers, sticky headers |
+| Error that does not identify the field | Checkout and account forms |
+| Update that is not announced | Cart count, shipping total, stock message |
 
-You don't need a consultant to find the biggest accessibility problems on your store. Here's a practical self-audit you can run in under 30 minutes.
+Start at a product page and press Tab. Use Shift+Tab to go backward and Enter or Space to activate controls. Select a variation, add it to cart, change a quantity, and attempt checkout with an empty required field. Write down the URL and the exact step where the path breaks. Retest after the theme or checkout extension changes.
 
-### The 5-Minute Automated Scan
-
-Install the [WAVE browser extension](https://wave.webaim.org/extension/) or [axe DevTools](https://www.deque.com/axe/browser-extensions/). Visit your homepage, a product page, your cart, and your checkout. Note every error.
-
-|-------|--------|----------------|
-| Missing alt text | Screen reader users can't understand images | Easy |
-| Missing form labels | Users don't know what to enter in fields | Easy |
-| Low contrast | Text hard to read in bright light, for colorblind users | Easy |
-| Empty links | Screen readers read out nothing useful | Easy |
-| Skipped heading levels | Confusing page structure for screen readers | Medium |
-| Missing document language | Screen readers can't use the right pronunciation | Easy |
-
-### The 5-Minute Keyboard Test
-
-Unplug your mouse. Open your store. Try to complete the entire purchase flow using only:
-
-- **Tab** - move forward through interactive elements
-- **Shift+Tab** - move backward
-- **Enter** - activate links and buttons
-- **Spacebar** - activate buttons
-- **Arrow keys** - navigate within dropdowns and radio button groups
-
----
-
-
-## Related Reading
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
-- [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
-- [Why Accessibility Overlays Don't Protect You from ADA Lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/)
-- [The Most Common WooCommerce WCAG Violations](/blog/woocommerce-wcag-violations-guide/)
-- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
-
+The free [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) offers nine targeted fixes in its 1.5.1 release, including an empty product-image alt fallback and selected focus styles. It does not measure conversion or repair every checkout control. Use the [screen reader testing guide](/blog/screen-reader-testing-woocommerce-guide/) for a deeper pass and the [checkout guide](/blog/woocommerce-checkout-accessibility-issues/) to investigate payment barriers.

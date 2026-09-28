@@ -83,7 +83,7 @@ These issues share a common root: building for what looks right rather than for 
 
 ---
 
-**Want to fix these issues automatically?** The <a href="/plugins/woocommerce-accessibility-fixer/">WooCommerce Accessibility Fixer</a> detects and resolves most of these problems with one click. No coding required.
+**Use WooCommerce?** [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) addresses selected issues, such as missing product-image alt text and focus styles. Test the rest of this checklist yourself. For a practical assistive-technology pass, use the [WooCommerce screen-reader testing guide](/blog/screen-reader-testing-woocommerce/).
 
 ## Related Reading
 

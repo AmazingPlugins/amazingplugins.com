@@ -1,9 +1,10 @@
 ---
-title: WCAG 2.2 Is Here. What Does It Mean for Your WordPress or WooCommerce Store?
+title: WCAG 2.2 Requirements for WordPress and WooCommerce
 description: >-
-  WCAG 2.2 added new requirements for focus visibility, target size, and
-  dragging. See what changed and what it means for WooCommerce.
+  Where WCAG 2.2 checks land in a WordPress store, who owns each component,
+  and how to test product, checkout, and account flows.
 pubDate: 2026-05-08T00:00:00.000Z
+updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -22,76 +23,52 @@ canonicalUrl: 'https://amazingplugins.com/blog/wcag-2-2-wordpress-woocommerce-re
 gscSubmitted: true
 ---
 
-WCAG 2.2 became the recommended standard in 2023. If your site was audited against 2.1 AA, you may already be failing some 2.2 requirements. Here is what is new and what it means for WooCommerce.
+WCAG 2.2 is a web-content standard, not a WordPress plugin setting. A store's result depends on the rendered theme, WooCommerce templates, extensions, content, and payment flow together. A component that passes in a demo can fail after a sticky header, chat button, or custom checkout is added.
 
-## What Changed From WCAG 2.1 to 2.2
+Reviewed September 28, 2026 against the [W3C WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/) and its [guide to what changed](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/). This page maps checks to the parts of a WordPress store. For all nine new criteria and their levels, see [what changed for WooCommerce](/blog/wcag-22-compliance-woocommerce-what-changed/). For legal timelines, see the [deadline guide](/blog/wcag-22-compliance-woocommerce-deadline/).
 
-WCAG 2.2 introduced nine new success criteria, with four directly impacting how ecommerce sites function. The previous version focused heavily on text alternatives, color contrast, and keyboard navigation. Version 2.2 shifts attention toward motor accessibility and consistent user experiences.
+## Set a target, then map ownership
 
-The four criteria most relevant to WordPress and WooCommerce are:
+WCAG 2.2 adds nine success criteria to 2.1 and removes obsolete 4.1.1 Parsing. The new Level A and AA criteria include focus not being completely obscured, alternatives to dragging, minimum pointer target size with exceptions, consistent help, redundant entry, and accessible authentication. Three additions are Level AAA. A WCAG 2.2 AA target also includes the applicable earlier A and AA criteria. Publishing the standard did not create one legal deadline for every private store.
 
-**2.4.11 Focus Not Obscured (minimum)** requires that when a user navigates via keyboard, the focus indicator must not be completely hidden by other content. If a sticky header or modal overlays your focused element, you have a violation.
+Map each customer task to the code that controls it:
 
-**2.5.7 Dragging Movements** states that any function using a dragging gesture must have a single-pointer alternative. This affects WooCommerce product sorting, cart updates, and any drag-and-drop page builders.
+| Task | Likely owner | Test question |
+| --- | --- | --- |
+| Navigate the catalog | Theme, filters, search extension | Can a keyboard user reach filters, operate them, and find the updated results? |
+| Choose a product | WooCommerce template, gallery, variation extension | Are options named, and does a drag-only gallery have a single-pointer alternative? |
+| Add to cart | Theme, cart drawer extension | Is focus visible and usable when a drawer or notice opens? |
+| Check out | Checkout, shipping, payment providers | Can someone recover from errors and reuse information already given in the same process? |
+| Sign in | Account and authentication extensions | Can a password manager fill fields or can a user paste credentials and codes? |
+| Get help | Theme, chat, support pages | Where help appears on pages in the same set, is it in a consistent relative order? |
 
-**2.5.8 Target Size (minimum)** mandates interactive targets measure at least 24 by 24 CSS pixels. Small buttons, checkboxes, and links that fall below this threshold fail compliance.
+A failed test needs an owner. “WordPress issue” is too broad to tell the team what to change.
 
-**3.2.6 Consistent Help** requires help mechanisms such as contact links, chat widgets, or FAQ sections to appear in consistent locations across pages. A help link in the header should not jump to the footer on certain pages.
+## Test the 2.2 additions in context
 
-## Why This Matters for WooCommerce
+**Focus behind persistent UI (2.4.11, AA):** Tab through navigation, product options, cart, and checkout while sticky headers, cookie banners, and chat controls are present. The focused component must not be completely hidden by author-created content. A focus outline from a plugin does not solve a control covered by a header. [W3C explains the criterion](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum).
 
-WooCommerce sites face unique challenges because of their interactive nature and the complexity of checkout flows. Here are the specific areas where most stores fail.
+**Dragging (2.5.7, AA):** Try galleries, sliders, and custom reorder controls with a single pointer without dragging. An arrow or button may provide the same function. The criterion has exceptions for essential dragging or unmodified user-agent behavior; do not label every swipe interaction a failure without testing its alternatives. [Read the W3C criterion](https://www.w3.org/TR/WCAG22/#dragging-movements).
 
-### Product Filters and Sort Dropdowns
+**Pointer targets (2.5.8, AA):** Inspect the *clickable area*, not only the visible icon, on quantity controls, variation swatches, pagination dots, and close buttons. The minimum is 24 by 24 CSS pixels unless an exception applies, including adequate spacing, an equivalent control, inline text, an unmodified user-agent control, or an essential presentation. A small checkbox is a candidate to inspect, not an automatic failure. [W3C's target-size explanation](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum) shows how to judge spacing.
 
-Many WooCommerce themes use small dropdown arrows for filtering products. These arrows often measure below 24 pixels and violate the target size requirement. Store owners who rely on plugins for layered navigation frequently overlook that the filter checkboxes and radio buttons are too small for touch users.
+**Repeated data (3.3.7, A):** If a multi-step checkout asks for information already entered in that same process, prefill it or offer it for selection unless an exception applies. Different billing and shipping addresses are legitimate; asking for the same one twice without reuse is the case to investigate. The process can cross into a third-party payment service. [W3C's redundant-entry explanation](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html) covers the exceptions.
 
-The dragging movement requirement also impacts sort dropdowns. Some themes implement drag-to-reorder product displays or wishlist items. If a user cannot complete these actions with a single tap or click, you need an alternative method.
+**Authentication (3.3.8, AA):** Test account sign-in, recovery, and any verification challenge. A password is allowed when a mechanism such as password-manager support or copy and paste reduces the memory burden. Do not block paste into one-time-code fields. Object recognition is an AA exception, although W3C advises against relying on it where possible. [W3C's authentication explanation](https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html) sets out the rule.
 
-### Add-to-Cart Buttons
+**Consistent help (3.2.6, A):** Compare the relative order of recurring contact, chat, or self-help mechanisms across pages in the same set. [W3C says](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html) the criterion does not require putting help on every page.
 
-The add-to-cart button is the most critical conversion element on any WooCommerce site. Theme developers sometimes style these with padding that makes the visual button large but leaves the actual clickable area undersized. A button that measures 44 pixels wide with 2 pixels of actual interactive area fails target size requirements.
+## Run and record a repeatable check
 
-Mobile users suffer most from this issue. A thumb tapping a small button near the edge of the screen may accidentally trigger the wrong action or miss the target entirely.
+Pick one simple product, one variable product, cart, checkout, account sign-in, and the payment step. Test desktop and narrow layouts with a keyboard. Use a screen reader to check what each control announces and whether status changes make sense. Use automated tools to flag issues they can detect, then inspect the rendered result yourself.
 
-### Checkout Form Fields
+Record the page, viewport, browser, input method, issue, code owner, fix, and retest. Repeat after theme or extension updates that affect the path. A scan of a homepage cannot establish whether the checkout meets WCAG 2.2 AA.
 
-The checkout page combines multiple accessibility challenges. Error messages that appear above the form can obscure focused fields. Address auto-complete popups often block the next input. Form validation messages must remain visible and readable after appearing.
+## What our plugin covers
 
-Many checkout plugins also use small checkboxes for terms acceptance and newsletter signup. These default browser checkboxes are often styled below the 24-pixel threshold by the time CSS adjustments finish.
+**Disclosure:** AmazingPlugins publishes [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/). We reviewed the public WordPress.org 1.5.1 release and code on September 28, 2026. It is free, with nine fixers and no Pro tier. It scans configured WooCommerce pages and samples up to three published products per run. Fixers include a product-image alt fallback, a skip link, and selected focus and error styles. The release does not provide dedicated checks or automatic fixes for 2.5.8 target size, 2.5.7 dragging alternatives, 3.3.7 repeated entry, or 3.3.8 authentication. Test those criteria on your actual store.
 
-### Mobile Responsiveness Failures
+## Related reading
 
-WooCommerce sites that pass desktop audits frequently fail on mobile. The viewport changes everything. A button that measures 24 by 24 pixels on desktop might shrink to 18 by 18 on mobile due to responsive scaling. Touch targets that work for a mouse pointer become frustrating for finger navigation.
-
-Slide-out cart drawers, mobile menus, and hamburger icons commonly violate focus visibility rules when they overlay other content.
-
-## How to Audit for 2.2 Issues on WordPress/WooCommerce
-
-Start with automated testing before manual review. WAVE, Axe DevTools, and Lighthouse can catch obvious violations like missing focus indicators and undersized targets. However, automated tools miss context-specific issues such as consistent help placement.
-
-For manual testing, use only your keyboard to navigate through the entire purchase flow. Tab through product listings, apply filters, add an item to cart, and complete checkout without touching your mouse. Note any places where you lose track of focus or cannot complete an action.
-
-Measure touch targets on mobile using browser developer tools. Inspect element on interactive elements and check the computed CSS dimensions. Anything below 24 by 24 pixels needs adjustment.
-
-Test dragging movements by disabling trackpad or mouse input on a tablet. Attempt to sort products, reorder wishlist items, or use any drag-based interface. If the action fails or requires workarounds, you need an alternative.
-
-Review your help mechanisms. Find every instance of help text, contact links, and support widgets. Verify they appear in the same location across your product pages, cart, checkout, and account areas.
-
-## Get Help Making Your Store Compliant
-
-WooCommerce accessibility requires ongoing attention as you add products, change themes, and install new plugins. Each update can introduce new violations.
-
-[AmazingPlugins offers a WooCommerce accessibility solution](https://amazingplugins.com) that addresses the most common 2.2 failures. The plugin works with most themes and automatically fixes target sizes, ensures focus visibility, and adds proper keyboard alternatives for drag interactions.
-
-Preparing for 2026 enforcement does not have to mean rebuilding your store. A targeted approach that addresses the specific criteria that affect ecommerce converts compliance into a competitive advantage.
-
----
-
-
-## Related Reading
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
-- [WCAG 2.2 Compliance WooCommerce Checklist](/blog/wcag-22-compliance-woocommerce-checklist/)
-- [WooCommerce ADA Compliance Checklist for 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
-- [The Most Common WooCommerce WCAG Violations](/blog/woocommerce-wcag-violations-guide/)
-- [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
+- [All nine WCAG 2.2 changes for WooCommerce](/blog/wcag-22-compliance-woocommerce-what-changed/)
+- [WooCommerce accessibility plugin selection guide](/blog/ada-compliance-plugin-full-guide/)
