@@ -78,9 +78,9 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
     <script is:inline type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-Q3KPCF2RJT"></script>
     <script is:inline type="text/partytown">
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-Q3KPCF2RJT');
+      window.gtag = function gtag(){dataLayer.push(arguments);};
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-Q3KPCF2RJT');
     </script>
     <script is:inline>
       // Count clicks to our WordPress.org listing once, regardless of which page links to it.
@@ -94,10 +94,8 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
         var match = destination.pathname.match(/^\/plugins\/([^/]+)\/?$/);
         if (!match || match[1] !== 'amazingplugins-accessibility-fixer-for-woocommerce') return;
 
-        // Partytown forwards dataLayer.push to the GA4 worker.
-        window.dataLayer = window.dataLayer || [];
-        function sendEvent() { window.dataLayer.push(arguments); }
-        sendEvent(
+        // Forward the named Google tag call to the Partytown worker.
+        window.gtag?.(
           'event',
           'plugin_directory_click',
           {

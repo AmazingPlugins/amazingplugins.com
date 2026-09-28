@@ -17,7 +17,7 @@ export default defineConfig({
     },
   }),
   integrations: [
-    partytown({ config: { forward: ['dataLayer.push'] } }),
+    partytown({ config: { forward: ['dataLayer.push', 'gtag'] } }),
     sitemap({
       serialize(item) {
         if (item.url === '/') return item;
