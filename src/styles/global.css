@@ -287,6 +287,19 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
   opacity: 0.75;
   transition: opacity 150ms;
 }
+.footer-badges a.footer-badge-card {
+  flex: 0 0 auto;
+  width: max-content;
+  height: auto;
+}
+.footer-badges a.footer-badge-text {
+  color: var(--ink-2);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 .footer-badges a:hover,
 .footer-badges a:focus-visible { opacity: 1; }
 .footer-badges :focus-visible {

@@ -45,11 +45,53 @@ import { footerBadges } from '../data/footer-badges.mjs';
       <div class="footer-badges-viewport" role="region" aria-labelledby="footer-badges-label" tabindex="0">
         <div class="footer-badges-track">
           <div class="footer-badges-group">
-            {footerBadges.map((badge) => (
-              <a href={badge.href} target="_blank" rel="noopener noreferrer">
-                <img src={`/images/badges/${badge.id}.webp`} alt={`Featured on ${badge.name}`} width="180" height="48" loading="lazy" decoding="async" />
-              </a>
-            ))}
+            {footerBadges.map((badge) => {
+              if (badge.kind === 'image') {
+                return (
+                  <a href={badge.href} target="_blank" rel="noopener noreferrer" title={badge.title} aria-label={badge.ariaLabel}>
+                    <img src={badge.src} alt={badge.alt} width={badge.width} height={badge.height} loading="lazy" decoding="async" />
+                  </a>
+                );
+              }
+
+              if (badge.kind === 'topaitools4u') {
+                return (
+                  <a data-topaitools4u-badge="verified-listing" class="footer-badge-card" href={badge.href} target="_blank" rel="noopener" aria-label="Listed on TopAITools4U" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #d9d9d9;border-radius:12px;background:#ffffff;color:#111111;font-family:Inter,Arial,sans-serif;text-decoration:none;">
+                    <img src="https://www.topaitools4u.site/logo.svg" alt="TopAITools4U" width="32" height="32" style="display:block;width:32px;height:32px;border-radius:9px;" />
+                    <span style="display:flex;flex-direction:column;line-height:1.15;">
+                      <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;">Listed on</span>
+                      <span style="font-size:15px;font-weight:700;">TopAITools4U</span>
+                    </span>
+                  </a>
+                );
+              }
+
+              if (badge.kind === 'agenthunter') {
+                return (
+                  <a class="footer-badge-card" href={badge.href} target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #fffbeb; border: 1px solid #fbbf24; padding: 0.5rem 0.75rem; border-radius: 0.5rem; text-decoration: none; font-family: sans-serif;">
+                    <img src="https://www.agenthunter.io/logo-light.svg" alt="AgentHunter Badge" style="height: 2.5rem; width: 2.5rem;" />
+                    <span style="display: flex; flex-direction: column;">
+                      <span style="margin: 0; font-size: 0.75rem; color: #92400e;">AgentHunter</span>
+                      <span style="margin: 0; font-size: 0.875rem; color: #451a03; font-weight: 600;">Featured AI Agent</span>
+                    </span>
+                  </a>
+                );
+              }
+
+              if (badge.kind === 'text') {
+                return (
+                  <a class="footer-badge-text" href={badge.href} target="_blank" rel="noopener noreferrer">
+                    {badge.label}
+                  </a>
+                );
+              }
+
+              return (
+                <a href={badge.href} target="_blank" rel="noopener noreferrer">
+                  <img src={`/images/badges/${badge.id}.webp`} alt={`Featured on ${badge.name}`} width="180" height="48" loading="lazy" decoding="async" />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
