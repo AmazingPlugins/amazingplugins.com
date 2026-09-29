@@ -48,8 +48,22 @@ import { footerBadges } from '../data/footer-badges.mjs';
             {footerBadges.map((badge) => {
               if (badge.kind === 'image') {
                 return (
-                  <a href={badge.href} target="_blank" rel="noopener noreferrer" title={badge.title} aria-label={badge.ariaLabel}>
-                    <img src={badge.src} alt={badge.alt} width={badge.width} height={badge.height} loading="lazy" decoding="async" />
+                  <a
+                    href={badge.href}
+                    target="_blank"
+                    rel={badge.rel ?? 'noopener noreferrer'}
+                    title={badge.title}
+                    aria-label={badge.ariaLabel}
+                  >
+                    <img
+                      src={badge.src}
+                      alt={badge.alt}
+                      width={badge.width}
+                      height={badge.height}
+                      loading={badge.loading === null ? undefined : (badge.loading ?? 'lazy')}
+                      decoding={badge.decoding === null ? undefined : (badge.decoding ?? 'async')}
+                      style={badge.imgStyle}
+                    />
                   </a>
                 );
               }
