@@ -34,6 +34,9 @@ jobs:
         env:
           PUBLIC_BING_VERIFICATION_CODE: ${{ secrets.PUBLIC_BING_VERIFICATION_CODE }}
 
+      - name: Verify footer directory badges
+        run: npm run test:footer-badges
+
       - name: Deploy to Cloudflare Pages
         # Run outside the repository so Astro's Worker config is not auto-detected
         # by the static Pages upload command.
