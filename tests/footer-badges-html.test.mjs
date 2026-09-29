@@ -24,6 +24,11 @@ const imageBadges = [
   { domain: 'sumodir.com', href: 'https://sumodir.com', src: 'https://sumodir.com/badge.png', alt: 'Featured on SumoDir', width: '200', height: '54' },
   { domain: 'mydentify.com', href: 'https://mydentify.com/', src: 'https://mydentify.com/badges/listed-on-mydentify.svg', alt: 'Listed on Mydentify', width: '176', height: '32', ariaLabel: 'Listed on Mydentify' },
   { domain: 'vantaige.io', href: 'https://vantaige.io/?utm_source=badge&utm_medium=embed', src: 'https://vantaige.io/badges/vantaige-badge-dark.svg', alt: 'Featured on Vantaige.io', width: '200', height: '56' },
+  { domain: 'findly.tools', href: 'https://findly.tools/amazingplugins?utm_source=amazingplugins', src: 'https://findly.tools/badges/findly-tools-badge-light.svg', alt: 'Featured on Findly.tools', width: '175', height: '55', loading: null, decoding: null },
+  { domain: 'codehype.ai', href: 'https://codehype.ai/product/amazingplugins?utm_source=codehype_badge', src: 'https://codehype.ai/badges/amazingplugins.svg?variant=find-us&v=20', alt: 'Featured on CodeHype', width: '180', height: '65', loading: 'lazy', decoding: 'async', style: 'display:inline-block;border:0;width:100%;max-width:180px;height:auto;max-height:65px;' },
+  { domain: 'startuptrusted.com', href: 'https://startuptrusted.com?ref=amazingplugins.com', src: 'https://startuptrusted.com/api/badge?type=featured&style=light', alt: 'AmazingPlugins on StartupTrusted', width: '240', height: '54', rel: 'noopener', loading: null, decoding: null },
+  { domain: 'saasfame.com', href: 'https://saasfame.com/item/amazingplugins', src: 'https://saasfame.com/badge-light.svg', alt: 'Featured on saasfame.com', style: 'height: 54px; width: auto;', rel: 'noopener noreferrer', loading: null, decoding: null },
+  { domain: 'uno.directory', href: 'https://uno.directory', src: 'https://uno.directory/uno-directory.svg', alt: 'Listed on Uno Directory', width: '120', height: '30', rel: 'noopener', loading: null, decoding: null },
 ];
 
 const textBadges = [
@@ -50,16 +55,17 @@ test('preserves each supplied image URL, alt text, and dimensions', () => {
     assert.ok(anchor, `${expected.domain} anchor should exist`);
     assert.equal(hrefOf(anchor), expected.href);
     assert.equal(attributeOf(anchor, 'target'), '_blank');
-    assert.equal(attributeOf(anchor, 'rel'), 'noopener noreferrer');
+    assert.equal(attributeOf(anchor, 'rel'), expected.rel ?? 'noopener noreferrer');
     if (expected.title) assert.equal(attributeOf(anchor, 'title'), expected.title);
     if (expected.ariaLabel) assert.equal(attributeOf(anchor, 'aria-label'), expected.ariaLabel);
     const img = imgTagOf(anchor);
     assert.equal(attributeOf(img, 'src'), expected.src);
     assert.equal(attributeOf(img, 'alt'), expected.alt);
-    assert.equal(attributeOf(img, 'width'), expected.width);
-    assert.equal(attributeOf(img, 'height'), expected.height);
-    assert.equal(attributeOf(img, 'loading'), 'lazy');
-    assert.equal(attributeOf(img, 'decoding'), 'async');
+    assert.equal(attributeOf(img, 'width'), expected.width ?? '');
+    assert.equal(attributeOf(img, 'height'), expected.height ?? '');
+    assert.equal(attributeOf(img, 'style'), expected.style ?? '');
+    assert.equal(attributeOf(img, 'loading'), expected.loading === null ? '' : (expected.loading ?? 'lazy'));
+    assert.equal(attributeOf(img, 'decoding'), expected.decoding === null ? '' : (expected.decoding ?? 'async'));
   }
 });
 
