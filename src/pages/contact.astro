@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/info-pages.css';
+---
+<BaseLayout title="Contact" description="Contact AmazingPlugins about plugin support, general questions, privacy, or accessibility.">
+  <section class="section info-page">
+    <div class="wrap">
+      <div class="info-heading">
+        <h1 class="display">Contact AmazingPlugins</h1>
+        <p class="lede">A question about a plugin? Something on the site isn't working? Here's how to reach us.</p>
+      </div>
+      <div class="info-columns">
+        <div>
+          <h2>Get in touch by email</h2>
+          <p>Choose what you need help with, then complete the quick verification to see our email address. This helps keep automated spam out of our inbox.</p>
+          <form id="contact-form" aria-label="Reveal a contact email">
+            <label for="contact-topic">What is your message about?</label>
+            <select id="contact-topic" name="topic">
+              <option value="support">Plugin support</option>
+              <option value="general">General questions or privacy</option>
+              <option value="accessibility">Accessibility</option>
+            </select>
+            <div id="contact-challenge"></div>
+            <button class="btn btn-primary" id="contact-submit" type="submit" disabled>Reveal email</button>
+            <button class="btn btn-ghost" id="contact-retry" type="button" hidden>Try again</button>
+            <p id="contact-status" role="status" aria-live="polite">Loading verification…</p>
+            <div id="contact-result" hidden>
+              <p>Your email address for <strong id="contact-result-topic"></strong>:</p>
+              <a id="contact-email"></a>
+              <p class="contact-note">Select the address to open your email app, or copy it into a new message.</p>
+            </div>
+          </form>
+          <noscript><p>JavaScript is needed to protect our email addresses from automated spam. Please enable it and reload this page. For public plugin questions, you can also use the <a href="https://wordpress.org/support/plugin/amazingplugins-accessibility-fixer-for-woocommerce/">WordPress.org support forum</a>. Don't post private information there.</p></noscript>
+          <p class="contact-note">Verification is provided by Cloudflare Turnstile. See our <a href="/privacy/">privacy policy</a>.</p>
+        </div>
+        <aside class="info-aside" aria-label="Before you send a message">
+          <h2>Help us understand the issue</h2>
+          <p>For plugin support, include the plugin name and version, your WordPress and WooCommerce versions, and what happened. Steps to reproduce the problem are useful too.</p>
+          <p>Please don't send passwords, API keys, payment details, or customer data.</p>
+          <h2>Looking for a quick answer?</h2>
+          <p>Check the <a href="/faq/">frequently asked questions</a> or the setup details on your <a href="/plugins/">plugin's page</a>.</p>
+          <h2>Accessibility feedback</h2>
+          <p>If you're having trouble using this site, choose Accessibility. Tell us which page or action caused the problem and which browser or assistive technology you use.</p>
+          <p>If verification isn't accessible to you, the <a href="https://wordpress.org/support/plugin/amazingplugins-accessibility-fixer-for-woocommerce/">public support forum</a> is another way to reach us. Keep personal details out of your post.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<script>
+  import '../scripts/contact';
+</script>
+<style>
+  form { margin: 28px 0; }
+  label { display: block; font-weight: 600; margin-bottom: 10px; }
+  select { width: 100%; max-width: 460px; font: inherit; color: var(--ink); background: var(--cream-2); border: 1px solid var(--line); padding: 14px; border-radius: 6px; }
+  #contact-challenge { margin-top: 24px; }
+  button:disabled { opacity: .55; cursor: not-allowed; }
+  [hidden] { display: none !important; }
+  #contact-status { margin: 18px 0; }
+  #contact-result { border-top: 1px solid var(--line); padding-top: 24px; margin-top: 24px; }
+  #contact-email { display: inline-block; font-size: clamp(19px, 3vw, 26px); overflow-wrap: anywhere; margin-bottom: 16px; }
+  .contact-note { font-size: 14px; margin-top: 16px; }
+</style>

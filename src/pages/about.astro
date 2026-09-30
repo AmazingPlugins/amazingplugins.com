@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/info-pages.css';
+---
+<BaseLayout title="About" description="AmazingPlugins makes free WooCommerce tools for accessibility fixes, shipping checks, and order cleanup.">
+  <section class="section info-page">
+    <div class="wrap">
+      <div class="info-heading">
+        <h1 class="display">About AmazingPlugins</h1>
+        <p class="lede">Practical tools for the work behind your WooCommerce store.</p>
+      </div>
+      <div class="info-columns">
+        <div class="info-copy">
+          <h2>Small tools. Specific jobs.</h2>
+          <p>Running a store means looking after more than the products. A checkout needs to work with a keyboard. Shipping rates need to match the cart. Old orders need attention.</p>
+          <p>AmazingPlugins builds free WooCommerce tools for these everyday tasks. Each plugin focuses on a particular problem, with its features and requirements explained before you install it.</p>
+          <h2>Know what you're installing</h2>
+          <p>Our plugin pages link to the available downloads or source code and explain the current release status. You can see what a tool does and decide whether it fits your store.</p>
+          <p>Test changes on a staging site first. Plugins can help with specific accessibility issues, but they don't replace checking how your whole store works for its customers.</p>
+          <a class="btn btn-primary" href="/plugins/">Explore the plugins</a>
+        </div>
+        <aside class="info-aside" aria-label="More from AmazingPlugins">
+          <h2>Working on your store?</h2>
+          <p>The blog covers WooCommerce setup, troubleshooting, and accessibility checks you can work through yourself.</p>
+          <a href="/blog/">Read the blog</a>
+          <h2>Tell us what's missing</h2>
+          <p>Have a plugin question, an idea, or trouble using this site? Get in touch and include the details that will help us understand it.</p>
+          <a href="/contact/">Contact AmazingPlugins</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

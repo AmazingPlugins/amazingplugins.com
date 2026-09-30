@@ -32,6 +32,9 @@ jobs:
       - name: Verify products routing
         run: node --test scripts/products-routing.test.mjs
 
+      - name: Test contact protection
+        run: npm run test:contact
+
       - name: Build
         run: npm run build
         env:
