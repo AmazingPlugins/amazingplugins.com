@@ -1,6 +1,5 @@
 # Existing redirects
 /sitemap.xml /sitemap-index.xml 301
-/products* /plugins/ 301
 /plugin /plugins/ 301
 /plugin/ /plugins/ 301
 /plugin/* /plugins/:splat 301
