@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
+import { products, productCategories } from '../data/products';
+---
+
+<BaseLayout title="Our products" description="Explore the other products from the team behind AmazingPlugins: CloudPloy, SkaleAgents, Crontinel, Toolblip, Appnary, and harun.dev.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Our products', url: '/products/' }]} />
+  <section class="products-intro wrap">
+    <a class="studio-link" href="https://binarylabssoft.com/products">From the Binary Labs team</a>
+    <h1>Our products</h1>
+    <div class="intro-bottom">
+      <p>We build more than WordPress plugins. Explore the other tools and projects from the people behind AmazingPlugins.</p>
+      <a class="catalog-link" href="/plugins/">Looking for our WooCommerce plugins? <span>Browse the plugin catalog</span></a>
+    </div>
+  </section>
+
+  <product-collection class="wrap collection">
+    <div class="collection-controls" hidden>
+      <div class="filters" role="group" aria-label="Filter products by category">
+        {['All products', ...productCategories].map((category, index) => (
+          <button type="button" data-category={index === 0 ? '' : category} aria-pressed={index === 0 ? 'true' : 'false'} aria-controls="product-grid">{category}</button>
+        ))}
+      </div>
+      <div class="search-field">
+        <label for="product-search">Find a product</label>
+        <input id="product-search" type="search" placeholder="Search products…" aria-controls="product-grid" />
+      </div>
+    </div>
+    <p class="result-count" role="status" aria-live="polite" aria-atomic="true">6 products shown</p>
+    <div id="product-grid" class="product-grid">
+      {products.map(product => (
+        <article class="product-card" data-product data-category={product.category} data-search={`${product.name} ${product.category} ${product.headline} ${product.description} ${product.domain}`.toLowerCase()} aria-labelledby={`${product.id}-name`}>
+          <div class={`product-art art-${product.id}`} aria-hidden="true">
+            {product.id === 'cloudploy' && <div class="deploy-art"><div class="terminal-bar"><i></i><i></i><i></i><span>your next deployment</span></div><div class="terminal-command"><span>❯</span> deploy with cloudploy<span class="cursor">▌</span></div><div class="terminal-foot">Your editor <span>→</span> Your cloud</div></div>}
+            {product.id === 'skaleagents' && <div class="agents-art"><div class="editor-box">⌘<span>Your editor</span></div><div class="agent-tasks"><span>Code review <b>↗</b></span><span>Security <b>↗</b></span><span>Infrastructure <b>↗</b></span></div></div>}
+            {product.id === 'crontinel' && <div class="monitor-art"><div class="monitor-title">Inside your application <span>Demo</span></div>{['Scheduled jobs', 'Queue workers', 'Agent runs'].map((label, row) => <div class="monitor-row"><span>{label}</span><div>{Array.from({length: 13}, (_, index) => <i class:list={{ 'bar-alert': row === 1 && index === 8 }} />)}</div></div>)}</div>}
+            {product.id === 'toolblip' && <div class="tools-art">{['{ }', 'Aa', '#', '↔', '</>', '◐'].map(symbol => <span>{symbol}</span>)}</div>}
+            {product.id === 'appnary' && <div class="shop-art"><svg width="60" height="68" viewBox="0 0 60 68" fill="none"><path d="M8 22h44l4 40H4l4-40Z" stroke="currentColor" stroke-width="3"/><path d="M19 26V15a11 11 0 0 1 22 0v11" stroke="currentColor" stroke-width="3"/><path d="m22 42 6 6 12-13" stroke="currentColor" stroke-width="3"/></svg><div><span>Made for Shopify</span><strong>One store.<br />Pixels connected.</strong></div></div>}
+            {product.id === 'harun' && <div class="notes-art"><span class="notes-name">harun.dev</span><span class="notes-line">Engineering notes</span><span class="notes-line">Ideas from the work</span><span class="signature">Build. Learn. Write.</span></div>}
+          </div>
+          <div class="product-body">
+            <div class="product-meta"><span>{product.category}</span>{product.status && <span class="product-status">{product.status}</span>}</div>
+            <h2 id={`${product.id}-name`}>{product.name}</h2>
+            <p class="product-headline">{product.headline}</p>
+            <p class="product-description">{product.description}</p>
+            <a class="product-link" href={`https://${product.domain}/`}><span>{product.domain}</span><span>Visit {product.name} <span aria-hidden="true">↗</span></span></a>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="empty-state" hidden>
+      <h2>No products found</h2>
+      <p>Try a different search or show all products.</p>
+      <button type="button" class="btn btn-primary" data-reset>Clear search and filters</button>
+    </div>
+    <div class="collection-end"><p>Different tools. The same team.</p><a class="text-link" href="https://binarylabssoft.com/">Meet Binary Labs</a></div>
+  </product-collection>
+</BaseLayout>
+
+<script>
+  class ProductCollection extends HTMLElement {
+    connectedCallback() {
+      const controls = this.querySelector<HTMLElement>('.collection-controls')!;
+      const search = this.querySelector<HTMLInputElement>('input')!;
+      const filters = [...this.querySelectorAll<HTMLButtonElement>('.filters button')];
+      const cards = [...this.querySelectorAll<HTMLElement>('[data-product]')];
+      const count = this.querySelector<HTMLElement>('.result-count')!;
+      const empty = this.querySelector<HTMLElement>('.empty-state')!;
+      let category = '';
+
+      const update = () => {
+        const query = search.value.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach(card => {
+          const matches = (!category || card.dataset.category === category) && card.dataset.search!.includes(query);
+          card.hidden = !matches;
+          if (matches) visible++;
+        });
+        filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
+        count.textContent = `${visible} ${visible === 1 ? 'product' : 'products'} shown`;
+        empty.hidden = visible !== 0;
+      };
+
+      filters.forEach(button => button.addEventListener('click', () => {
+        category = button.dataset.category!;
+        update();
+      }));
+      search.addEventListener('input', update);
+      this.querySelector<HTMLButtonElement>('[data-reset]')!.addEventListener('click', () => {
+        category = '';
+        search.value = '';
+        update();
+        search.focus();
+      });
+      update();
+      controls.hidden = false;
+    }
+  }
+  customElements.define('product-collection', ProductCollection);
+</script>
+
+<style>
+  .products-intro { padding-top: clamp(52px, 8vw, 104px); padding-bottom: 46px; }
+  .studio-link { font-size: 15px; color: var(--ink-3); text-decoration: underline; text-underline-offset: 4px; }
+  h1 { font-family: var(--font-display); font-size: clamp(52px, 8vw, 100px); font-weight: 500; line-height: 1.1; letter-spacing: -.045em; margin: 20px 0 26px; }
+  .intro-bottom { display: flex; justify-content: space-between; gap: 32px; align-items: flex-end; }
+  .intro-bottom > p { max-width: 600px; font-size: clamp(18px, 2vw, 21px); color: var(--ink-2); line-height: 1.6; }
+  .catalog-link { max-width: 260px; font-size: 14px; color: var(--ink-3); }
+  .catalog-link span { display: block; color: var(--accent-text); text-decoration: underline; text-underline-offset: 4px; margin-top: 5px; }
+  .collection { display: block; padding-bottom: 70px; }
+  .collection-controls { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding: 26px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; }
+  .filters button { font: inherit; font-size: 14px; padding: 10px 15px; background: transparent; border: 1px solid var(--line); border-radius: 24px; color: var(--ink-2); cursor: pointer; min-height: 44px; }
+  .filters button[aria-pressed='true'] { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+  .filters button:hover { border-color: var(--ink-3); }
+  .search-field { min-width: 210px; }
+  .search-field label { display: block; font-size: 12px; color: var(--ink-3); margin-bottom: 6px; }
+  input { width: 100%; font: inherit; font-size: 15px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--cream); color: var(--ink); min-height: 44px; }
+  input::placeholder { color: var(--ink-3); opacity: 1; }
+  :is(a, button, input):focus-visible { outline: 3px solid var(--accent-text); outline-offset: 4px; }
+  .result-count { color: var(--ink-3); font-size: 13px; padding: 20px 0; }
+  .product-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .product-card { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+  [hidden] { display: none !important; }
+  .product-art { height: 212px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 30px; }
+  .product-body { padding: 26px 30px 0; flex: 1; display: flex; flex-direction: column; }
+  .product-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 12px; color: var(--ink-3); min-height: 25px; }
+  .product-status { border: 1px solid var(--line); border-radius: 20px; padding: 3px 9px; color: var(--ink-2); }
+  h2 { font-family: var(--font-display); font-size: 34px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; margin: 14px 0 10px; }
+  .product-headline { font-weight: 600; font-size: 16px; margin-bottom: 10px; }
+  .product-description { color: var(--ink-3); font-size: 15px; line-height: 1.75; margin-bottom: 25px; max-width: 55ch; }
+  .product-link { margin-top: auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-top: 1px solid var(--line); padding: 18px 0; font-size: 14px; min-height: 62px; }
+  .product-link > span:first-child { color: var(--ink-3); }
+  .product-link > span:last-child { font-weight: 600; color: var(--accent-text); }
+  .product-link:hover > span:last-child { text-decoration: underline; text-underline-offset: 4px; }
+  .art-cloudploy { background: #dce8fa; color: #153658; }
+  .deploy-art { width: min(100%, 360px); background: #f5f8fd; border: 1px solid #a8bdd8; border-radius: 9px; padding: 15px 18px; box-shadow: 6px 7px 0 #c3d3ea; font-family: var(--font-mono); }
+  .terminal-bar { display: flex; align-items: center; gap: 5px; font-size: 9px; }
+  .terminal-bar i { width: 6px; height: 6px; background: #819cb9; border-radius: 50%; }
+  .terminal-bar span { margin-left: auto; }
+  .terminal-command { padding: 23px 0 20px; font-size: clamp(11px, 1.6vw, 16px); white-space: nowrap; }
+  .terminal-command > span { color: #426aa5; }
+  .terminal-foot { border-top: 1px solid #ccd8e8; padding-top: 10px; display: flex; justify-content: space-between; font-size: 10px; }
+  .art-skaleagents { background: #e5ddf0; color: #4c3169; }
+  .agents-art { display: flex; align-items: center; gap: 25px; width: min(100%, 330px); }
+  .editor-box { font-size: 54px; line-height: 1; text-align: center; padding: 18px; background: #f6f1fc; border: 1px solid #bba5d1; border-radius: 14px; }
+  .editor-box span { display: block; font: 11px var(--font-sans); margin-top: 12px; white-space: nowrap; }
+  .agent-tasks { display: grid; gap: 10px; flex: 1; }
+  .agent-tasks > span { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px solid #bba5d1; padding: 6px 0; font-size: 13px; }
+  .art-crontinel { background: #dce9e1; color: #244b3b; }
+  .monitor-art { width: min(100%, 350px); }
+  .monitor-title { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; margin-bottom: 18px; }
+  .monitor-title > span { font-size: 10px; font-weight: 400; }
+  .monitor-row { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 9px 0; border-top: 1px solid #b0caba; }
+  .monitor-row > span { font-size: 12px; white-space: nowrap; }
+  .monitor-row > div { display: flex; gap: 4px; }
+  .monitor-row i { width: 7px; height: 18px; background: #57806a; border-radius: 2px; }
+  .monitor-row i.bar-alert { background: #a44f2b; height: 12px; align-self: flex-end; }
+  .art-toolblip { background: #f7e3bb; color: #694119; }
+  .tools-art { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; transform: rotate(-5deg); }
+  .tools-art span { width: 66px; height: 61px; display: grid; place-items: center; font: 26px var(--font-mono); border: 1px solid #d5b77f; background: #fff4dd; border-radius: 9px; }
+  .tools-art span:nth-child(even) { background: #eed2a0; }
+  .art-appnary { background: #e6eccf; color: #405126; }
+  .shop-art { display: flex; align-items: center; gap: 25px; }
+  .shop-art span { font-size: 12px; }
+  .shop-art strong { display: block; font-size: 25px; line-height: 1.25; letter-spacing: -.025em; margin-top: 8px; }
+  .art-harun { background: #f0dcd4; color: #693e30; }
+  .notes-art { width: min(100%, 310px); padding: 12px 22px; border-left: 2px solid #bb8270; }
+  .notes-name { display: block; font: 34px var(--font-display); margin-bottom: 10px; }
+  .notes-line { display: block; font-size: 12px; padding: 5px 0; border-bottom: 1px solid #d9b9ad; }
+  .signature { display: block; font: italic 17px var(--font-display); margin-top: 10px; }
+  .empty-state { text-align: center; padding: 60px 20px; border: 1px solid var(--line); border-radius: 16px; }
+  .empty-state p { margin-bottom: 20px; color: var(--ink-3); }
+  .collection-end { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); margin-top: 50px; padding-top: 24px; font-size: 14px; }
+  .collection-end p { color: var(--ink-3); }
+  @media (max-width: 1000px) { .collection-controls { flex-direction: column; align-items: stretch; } .search-field { max-width: 350px; } }
+  @media (max-width: 640px) {
+    .intro-bottom { flex-direction: column; align-items: flex-start; gap: 22px; }
+    .catalog-link { max-width: none; }
+    .product-grid { grid-template-columns: 1fr; gap: 24px; }
+    .product-body { padding: 23px 22px 0; }
+    .product-art { height: 194px; padding: 24px; }
+    .terminal-command { font-size: 13px; }
+    .filters { gap: 6px; }
+    .filters button { padding: 9px 12px; font-size: 13px; }
+    .collection-end { flex-direction: column; gap: 8px; }
+    .monitor-row > div { gap: 3px; }
+    .monitor-row i { width: 5px; }
+    .shop-art strong { font-size: 22px; }
+  }
+</style>
