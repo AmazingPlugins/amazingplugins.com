@@ -2,7 +2,8 @@ export const SITE_ORIGIN = 'https://amazingplugins.com';
 export const SITEMAP_URL = `${SITE_ORIGIN}/sitemap-index.xml`;
 export const CONTENT_SIGNAL = 'Content-Signal: search=yes, ai-input=yes, ai-train=yes';
 
-export const INDEXNOW_KEY = '08a6cbc38c7089613bf5a19a62d4cd72';
+// Public IndexNow key. Bing checks it by fetching the matching file on the site.
+export const INDEXNOW_KEY = '08a6cbc38c7089613bf5a19a62d4cd72'; // gitleaks:allow
 export const INDEXNOW_KEY_URL = `${SITE_ORIGIN}/${INDEXNOW_KEY}.txt`;
 
 /** Background crawlers. Crawl-delay is a courtesy; only some clients honor it. */
