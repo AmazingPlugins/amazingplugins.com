@@ -7,7 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/build-contact-worker.mjs",
+    "build": "tsx scripts/ai-readiness/render-ai-files.ts && astro build && node scripts/build-contact-worker.mjs",
+    "ai:files": "tsx scripts/ai-readiness/render-ai-files.ts",
+    "ai:audit": "tsx scripts/ai-readiness/audit.ts",
+    "ai:rate-limit": "tsx scripts/ai-readiness/cloudflare-rate-limit.ts",
+    "ai:indexnow": "tsx scripts/ai-readiness/indexnow.ts",
     "preview": "astro preview",
     "astro": "astro",
     "seo:generate": "tsx scripts/seo-pipeline/generate-post.ts",
@@ -20,6 +24,7 @@
     "seo:bing:submit": "tsx scripts/seo-pipeline/bing-submit.ts",
     "test:seo-quality": "tsx scripts/seo-pipeline/content-quality.test.ts",
     "test:gsc-reporting": "node --import tsx --test scripts/seo-pipeline/gsc-reporting.test.ts",
+    "test:ai-readiness": "node --import tsx --test scripts/ai-readiness/ai-readiness.test.ts",
     "test:footer-badges": "node --test tests/footer-badges-html.test.mjs",
     "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts",
     "test:contact": "node --test tests/contact.test.mjs"

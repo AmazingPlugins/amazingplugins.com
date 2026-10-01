@@ -1,7 +1,10 @@
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { submitFeed, submitUrlBatch } from './bing-client';
 
 const SITE_URL = process.env.BING_SITE_URL || 'https://amazingplugins.com/';
-const SITEMAP_URL = process.env.BING_SITEMAP_URL || 'https://amazingplugins.com/sitemap.xml';
+export const DEFAULT_SITEMAP_URL = 'https://amazingplugins.com/sitemap-index.xml';
+const SITEMAP_URL = process.env.BING_SITEMAP_URL || DEFAULT_SITEMAP_URL;
 
 const DEFAULT_URLS = [
   'https://amazingplugins.com/',
@@ -26,7 +29,12 @@ async function main() {
   }
 }
 
-main().catch(error => {
-  console.error(error instanceof Error ? error.message : String(error));
-  process.exit(1);
-});
+const invokedDirectly = process.argv[1]
+  && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href;
+
+if (invokedDirectly) {
+  main().catch(error => {
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  });
+}
