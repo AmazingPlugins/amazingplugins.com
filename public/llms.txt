@@ -1,26 +1,29 @@
 # AmazingPlugins
 
-> Free WooCommerce plugins for storefront accessibility fixes, shipping checks, and stale order cleanup.
+> Free WooCommerce plugins for storefront accessibility fixes, shipping checks, and stale order cleanup. Product pages are the source of truth. AP Accessibility Fixer has nine free fixers and no Pro version. It does not make a store fully accessible. Shipping Rules Tester only reads shipping settings. Stale Order Cleaner can delete old orders after a dry run. Deletion is permanent.
 
-Each plugin has a separate scope. Product pages describe its features and requirements.
+58 guides are listed in [llms-full.txt](https://amazingplugins.com/llms-full.txt).
 
 ## Plugins
 
-- [Plugin catalog](https://amazingplugins.com/plugins/): Compare the available tools and their current installation options.
-- [WooCommerce Accessibility Fixer](https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/): Features and scope for common storefront markup fixes.
+- [WordPress and WooCommerce Plugin Catalog](https://amazingplugins.com/plugins/): Explore AmazingPlugins tools for WordPress security, WooCommerce accessibility, shipping checks, and order cleanup. See current availability for each plugin.
+- [AP Accessibility Fixer for WooCommerce](https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/): Nine free fixers for WooCommerce accessibility issues, including missing image alt text, focus styles, form labels, and skip links.
 - [Accessibility Fixer on WordPress.org](https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/): Install the published plugin.
-- [Shipping Rules Tester](https://amazingplugins.com/plugins/shipping-rules-tester-for-woocommerce/): Read-only checks for shipping zones and local rates. Submitted for WordPress.org review.
-- [Shipping Rules Tester source](https://github.com/AmazingPlugins/shipping-rules-tester-for-woocommerce): Source code and manual installation instructions.
-- [Stale Order Cleaner](https://amazingplugins.com/plugins/#stale-order-cleaner): Review old orders before permanent deletion. Source available on GitHub.
+- [Shipping Rules Tester for WooCommerce](https://amazingplugins.com/plugins/shipping-rules-tester-for-woocommerce/): Check WooCommerce shipping zones and local rates with sample destinations and packages. Compare scenarios without changing your store settings.
+- [Shipping Rules Tester source](https://github.com/AmazingPlugins/shipping-rules-tester-for-woocommerce): Source and manual installation notes. Directory status: Submitted for review.
+- [Stale Order Cleaner](https://amazingplugins.com/plugins/#stale-order-cleaner): Find old pending, failed, cancelled, draft, or trashed orders. Preview before deletion. Deletion is permanent.
+- [Stale Order Cleaner source](https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce): Source on GitHub.
+- [Amazing Security for WordPress](https://amazingplugins.com/plugins/amazing-security/): Amazing Security is a free WordPress security plugin in development. See planned site checks, public-file verification, and an MCP workflow that requires WordPress approval for fixes.
 
 ## Guides and support
 
-- [Blog](https://amazingplugins.com/blog/): The current list of WooCommerce guides.
-- [How to test WooCommerce shipping zones and rates](https://amazingplugins.com/blog/how-to-test-woocommerce-shipping-zones-and-rates/): Zone matching, free-shipping thresholds, sample packages, and final checkout checks.
-- [Frequently asked questions](https://amazingplugins.com/faq/): Plugin requirements, supported features, and support details.
-- [AmazingPlugins homepage](https://amazingplugins.com/): Project overview and contact information.
+- [Blog](https://amazingplugins.com/blog/): Guides, tutorials, and insights on WooCommerce, accessibility, and running an online store.
+- [How to Test WooCommerce Shipping Zones and Rates](https://amazingplugins.com/blog/how-to-test-woocommerce-shipping-zones-and-rates/): Check WooCommerce shipping zone order, missing rates, free-shipping thresholds, and product classes with sample packages and a final checkout test.
+- [WooCommerce Plugin FAQs](https://amazingplugins.com/faq/): Answers about Shipping Rules Tester, Accessibility Fixer, and Stale Order Cleaner: installation, compatibility, read-only checks, and order cleanup.
+- [Free WooCommerce Plugins for Your Store](https://amazingplugins.com/): Fix accessibility issues, check shipping zones and local rates, or clean up stale orders. Explore free WooCommerce plugins with clear setup guides.
+- [Our products](https://amazingplugins.com/products/): Explore the other products from the team behind AmazingPlugins: CloudPloy, SkaleAgents, Crontinel, Toolblip, Appnary, and harun.dev.
 
 ## Policies
 
-- [Privacy policy](https://amazingplugins.com/privacy/)
-- [Terms](https://amazingplugins.com/terms/)
+- [Privacy Policy](https://amazingplugins.com/privacy/): Privacy policy for AmazingPlugins.
+- [Terms of Service](https://amazingplugins.com/terms/): Terms of service for AmazingPlugins.
