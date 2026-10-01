@@ -35,6 +35,9 @@ jobs:
       - name: Verify products routing
         run: node --test scripts/products-routing.test.mjs
 
+      - name: Test contact protection
+        run: npm run test:contact
+
       - name: Build
         run: npm run build
         env:
@@ -50,7 +53,12 @@ jobs:
           "$GITHUB_WORKSPACE/node_modules/.bin/wrangler" pages deploy \
             "$GITHUB_WORKSPACE/dist/client" \
             --project-name=amazingplugins-com \
+            --branch="$DEPLOY_BRANCH" \
+            --commit-hash="$DEPLOY_SHA" \
+            --commit-dirty=false \
             --cwd="$RUNNER_TEMP"
         env:
+          DEPLOY_BRANCH: ${{ github.head_ref || github.ref_name }}
+          DEPLOY_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

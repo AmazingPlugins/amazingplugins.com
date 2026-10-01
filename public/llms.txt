@@ -21,6 +21,8 @@
 - [How to Test WooCommerce Shipping Zones and Rates](https://amazingplugins.com/blog/how-to-test-woocommerce-shipping-zones-and-rates/): Check WooCommerce shipping zone order, missing rates, free-shipping thresholds, and product classes with sample packages and a final checkout test.
 - [WooCommerce Plugin FAQs](https://amazingplugins.com/faq/): Answers about Shipping Rules Tester, Accessibility Fixer, and Stale Order Cleaner: installation, compatibility, read-only checks, and order cleanup.
 - [Free WooCommerce Plugins for Your Store](https://amazingplugins.com/): Fix accessibility issues, check shipping zones and local rates, or clean up stale orders. Explore free WooCommerce plugins with clear setup guides.
+- [About](https://amazingplugins.com/about/): AmazingPlugins makes free WooCommerce tools for accessibility fixes, shipping checks, and order cleanup.
+- [Contact](https://amazingplugins.com/contact/): Contact AmazingPlugins about plugin support, general questions, privacy, or accessibility.
 - [Our products](https://amazingplugins.com/products/): Explore the other products from the team behind AmazingPlugins: CloudPloy, SkaleAgents, Crontinel, Toolblip, Appnary, and harun.dev.
 
 ## Policies

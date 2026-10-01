@@ -17,6 +17,8 @@ function isActive(href: string) {
     <div class="nav-links">
       <a href="/plugins/" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
       <a href="/blog/" class:list={[{ active: isActive('/blog') }]}>Blog</a>
+      <a href="/about/" class:list={[{ active: isActive('/about') }]}>About</a>
+      <a href="/contact/" class:list={[{ active: isActive('/contact') }]}>Contact</a>
     </div>
 
     <div class="nav-cta">
@@ -50,6 +52,8 @@ function isActive(href: string) {
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="/plugins/" class:list={[{ active: isActive('/plugins') }]}>Plugins</a>
     <a href="/blog/" class:list={[{ active: isActive('/blog') }]}>Blog</a>
+    <a href="/about/" class:list={[{ active: isActive('/about') }]}>About</a>
+    <a href="/contact/" class:list={[{ active: isActive('/contact') }]}>Contact</a>
     <a href="/plugins/" class="btn btn-primary" style="margin-top:8px;">View plugins</a>
   </div>
 </nav>

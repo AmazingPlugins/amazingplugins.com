@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "tsx scripts/ai-readiness/render-ai-files.ts && astro build",
+    "build": "tsx scripts/ai-readiness/render-ai-files.ts && astro build && node scripts/build-contact-worker.mjs",
     "ai:files": "tsx scripts/ai-readiness/render-ai-files.ts",
     "ai:audit": "tsx scripts/ai-readiness/audit.ts",
     "ai:rate-limit": "tsx scripts/ai-readiness/cloudflare-rate-limit.ts",
@@ -26,7 +26,8 @@
     "test:gsc-reporting": "node --import tsx --test scripts/seo-pipeline/gsc-reporting.test.ts",
     "test:ai-readiness": "node --import tsx --test scripts/ai-readiness/ai-readiness.test.ts",
     "test:footer-badges": "node --test tests/footer-badges-html.test.mjs",
-    "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts"
+    "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts",
+    "test:contact": "node --test tests/contact.test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

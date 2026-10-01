@@ -37,9 +37,11 @@ Source: https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce
 ## Pages
 
 - [Free WooCommerce Plugins for Your Store](https://amazingplugins.com/): Fix accessibility issues, check shipping zones and local rates, or clean up stale orders. Explore free WooCommerce plugins with clear setup guides.
+- [About](https://amazingplugins.com/about/): AmazingPlugins makes free WooCommerce tools for accessibility fixes, shipping checks, and order cleanup.
 - [Blog](https://amazingplugins.com/blog/): Guides, tutorials, and insights on WooCommerce, accessibility, and running an online store.
 - [Amazing Security vs Custonis: Public File Checks](https://amazingplugins.com/compare/amazing-security-vs-custonis/): Custonis already scans for publicly exposed WordPress files. See its released checks beside Amazing Security's planned independent verifier and broader security modules.
 - [Amazing Security vs Wordfence Free: What Is Available?](https://amazingplugins.com/compare/amazing-security-vs-wordfence/): A dated comparison of Wordfence Free's released firewall, scanner, login tools, and Central with the planned Amazing Security plugin. No head-to-head protection claim.
+- [Contact](https://amazingplugins.com/contact/): Contact AmazingPlugins about plugin support, general questions, privacy, or accessibility.
 - [WooCommerce Plugin FAQs](https://amazingplugins.com/faq/): Answers about Shipping Rules Tester, Accessibility Fixer, and Stale Order Cleaner: installation, compatibility, read-only checks, and order cleanup.
 - [WordPress and WooCommerce Plugin Catalog](https://amazingplugins.com/plugins/): Explore AmazingPlugins tools for WordPress security, WooCommerce accessibility, shipping checks, and order cleanup. See current availability for each plugin.
 - [Amazing Security for WordPress](https://amazingplugins.com/plugins/amazing-security/): Amazing Security is a free WordPress security plugin in development. See planned site checks, public-file verification, and an MCP workflow that requires WordPress approval for fixes.
