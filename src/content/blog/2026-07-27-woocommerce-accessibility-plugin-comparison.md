@@ -4,7 +4,7 @@ description: >-
   Compare how AP Accessibility Fixer, accessWidget, UserWay, and AudioEye work.
   See what their public documentation says and what to test on your own store.
 pubDate: 2026-07-27T00:00:00.000Z
-updatedDate: 2026-09-28T00:00:00.000Z
+updatedDate: 2026-10-02T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -32,7 +32,9 @@ These vendors offer different products and service levels. A documentation matri
 
 ## What the AP release actually covers
 
-The public [WordPress.org listing](https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/) says all nine fixers are free and there is no Pro version. We checked the 1.5.1 package rather than relying only on its marketing description. It fills empty product-image alt text from image or product titles, adds selected focus and error styles, adds a skip link, and makes other narrow changes. Its form-label fixer filters post content; it is not proof of checkout-template coverage. The color-contrast fixer adds CSS for selected focus and error states; it does not calculate text/background ratios. Some fixers add inline scripts.
+The nine fixers and their limits are on the [product page](/plugins/woocommerce-accessibility-fixer/). That page is the source for what the plugin does.
+
+Install the same 1.5.1 release from the [WordPress.org listing](https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/). All nine are free, and there is no Pro version. We checked the 1.5.1 package rather than relying only on directory marketing. It fills empty product-image alt text from image or product titles, adds selected focus and error styles, adds a skip link, and makes other narrow changes. Its form-label fixer filters post content; it is not proof of checkout-template coverage. The color-contrast fixer adds CSS for selected focus and error states; it does not calculate text/background ratios. Some fixers add inline scripts.
 
 A product title used as alt text may still be unhelpful. Review it against the image. Test keyboard behavior in your own cart and checkout rather than assuming a fixer handles every interactive control.
 
