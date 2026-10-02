@@ -27,7 +27,7 @@ function getApiKey(): string {
 
   const apiKey = process.env.BING_WEBMASTER_API_KEY?.trim();
   if (!apiKey) {
-    throw new Error('BING_WEBMASTER_API_KEY environment variable not set');
+    throw new Error('BING_WEBMASTER_API_KEY is not set. Add it to .secrets/bing.env.');
   }
   return apiKey;
 }

@@ -9,6 +9,7 @@ function walkSecretsCandidates(startDir: string): string[] {
   for (let i = 0; i < 8; i++) {
     files.push(path.join(dir, '.secrets', 'gsc.env'));
     files.push(path.join(dir, '.secrets', 'ap.env'));
+    files.push(path.join(dir, '.secrets', 'bing.env'));
     const parent = path.dirname(dir);
     if (parent === dir) break;
     dir = parent;
@@ -23,6 +24,7 @@ const ENV_FILES = [
   ...walkSecretsCandidates(scriptDir),
   path.join(os.homedir(), '.hermes/secrets/gsc.env'),
   path.join(os.homedir(), '.hermes/secrets/ap.env'),
+  path.join(os.homedir(), '.hermes/secrets/bing.env'),
   path.join(os.homedir(), '.hermes/.env'),
   path.join(os.homedir(), '.openclaw/secrets/ap.env'),
 ];
