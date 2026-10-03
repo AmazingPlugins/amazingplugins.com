@@ -126,4 +126,22 @@ export const footerBadges = [
     host: 'superlaun.ch',
     html: `<a href="https://www.superlaun.ch/products/3620" target="_blank" rel="noopener"><img src="https://www.superlaun.ch/badge.png" alt="Featured on Super Launch" width="300" height="300" /></a>`,
   },
+  {
+    id: 'launchvault',
+    kind: 'raw',
+    host: 'launchvault.dev',
+    html: `<a href="https://www.launchvault.dev" target="_blank" rel="noopener"><img src="https://www.launchvault.dev/images/badges/launch-valut-badge.svg" alt="Featured on LaunchVault" width="195"></a>`,
+  },
+  {
+    id: 'startupfame',
+    kind: 'raw',
+    host: 'startupfa.me',
+    html: `<a href="https://startupfa.me/s/amazingplugins?utm_source=amazingplugins.com" target="_blank"><img src="https://startupfa.me/badges/featured-badge-small.webp" alt="AmazingPlugins - Featured on Startup Fame" width="224" height="36" /></a>`,
+  },
+  {
+    id: 'turbo0',
+    kind: 'raw',
+    host: 'turbo0.com',
+    html: `<a href="https://turbo0.com/item/amazingplugins" target="_blank" rel="noopener noreferrer"> <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" style="height: 54px; width: auto;" /> </a>`,
+  },
 ];

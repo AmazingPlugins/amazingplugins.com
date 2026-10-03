@@ -187,7 +187,7 @@ test('keeps one homepage badge for every directory already on the site', () => {
 });
 
 test('prints each supplied raw badge snippet once', () => {
-  assert.equal(rawBadges.length, 14);
+  assert.equal(rawBadges.length, 17);
   for (const badge of rawBadges) {
     assert.equal(countOccurrences(html, badge.html), 1, `${badge.host} snippet should appear once`);
     assertUniqueHomepageBadge(html, badge.host);
