@@ -5,6 +5,7 @@ const { footerBadges } = await import('../src/data/footer-badges.mjs');
 const directory = new URL('../public/images/badges/', import.meta.url);
 await mkdir(directory, { recursive: true });
 for (const badge of footerBadges) {
+  if (!badge.source) continue;
   const response = await fetch(badge.source);
   if (!response.ok) throw new Error(`${badge.name}: ${response.status}`);
   const input = Buffer.from(await response.arrayBuffer());

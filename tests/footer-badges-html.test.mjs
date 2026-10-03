@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
+import { footerBadges } from '../src/data/footer-badges.mjs';
 
 const html = await readFile(new URL('../dist/client/index.html', import.meta.url), 'utf8');
 const footerHtml = html.match(/<footer-logo-slider\b[^>]*>([\s\S]*?)<\/footer-logo-slider>/i)?.[1] ?? '';
@@ -125,5 +126,70 @@ test('preserves the two verification cards and three plain text links', () => {
     assert.equal(attributeOf(anchor, 'rel'), 'noopener noreferrer');
     assert.equal(anchor.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim(), label);
     assert.equal(imgTagOf(anchor), '', `${domain} should remain a text link`);
+  }
+});
+
+const existingHosts = [
+  'agenthunter.io',
+  'aitoolsmarketer.com',
+  'aitoolzdir.com',
+  'aitop10.tools',
+  'codehype.ai',
+  'dododirectory.com',
+  'dofollow.tools',
+  'earlyhunt.com',
+  'fazier.com',
+  'findly.tools',
+  'huzzler.so',
+  'indiehunt.io',
+  'launchboosts.com',
+  'launchigniter.com',
+  'mydentify.com',
+  'neeed.directory',
+  'productfame.com',
+  'saasbison.com',
+  'saascity.io',
+  'saasfame.com',
+  'showmebest.ai',
+  'startuptrusted.com',
+  'sumodir.com',
+  'techtrendin.com',
+  'toolcurio.com',
+  'tooldirs.com',
+  'tools.launchllama.co',
+  'topaitools4u.site',
+  'twelve.tools',
+  'uno.directory',
+  'vantaige.io',
+  'whatsthebigdata.com',
+  'wired.business',
+];
+
+const rawBadges = footerBadges.filter((badge) => badge.kind === 'raw');
+
+const countOccurrences = (haystack, needle) => {
+  let count = 0;
+  let from = 0;
+  while (from <= haystack.length) {
+    const index = haystack.indexOf(needle, from);
+    if (index === -1) return count;
+    count += 1;
+    from = index + needle.length;
+  }
+  return count;
+};
+
+test('keeps one homepage badge for every directory already on the site', () => {
+  assert.equal(existingHosts.length, 33);
+  for (const domain of existingHosts) {
+    assertUniqueHomepageBadge(html, domain);
+  }
+});
+
+test('prints each supplied raw badge snippet once', () => {
+  assert.equal(rawBadges.length, 14);
+  for (const badge of rawBadges) {
+    assert.equal(countOccurrences(html, badge.html), 1, `${badge.host} snippet should appear once`);
+    assertUniqueHomepageBadge(html, badge.host);
   }
 });

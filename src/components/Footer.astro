@@ -103,6 +103,10 @@ import { footerBadges } from '../data/footer-badges.mjs';
                 );
               }
 
+              if (badge.kind === 'raw') {
+                return <Fragment set:html={badge.html} />;
+              }
+
               return (
                 <a href={badge.href} target="_blank" rel="noopener noreferrer">
                   <img src={`/images/badges/${badge.id}.webp`} alt={`Featured on ${badge.name}`} width="180" height="48" loading="lazy" decoding="async" />
