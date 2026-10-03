@@ -4,6 +4,7 @@ description: >-
   Learn how to safely delete old WooCommerce orders - pending, failed,
   cancelled, and draft orders - in bulk, with and without plugins.
 pubDate: 2026-07-14T00:00:00.000Z
+updatedDate: 2026-10-03T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -112,6 +113,8 @@ wp post delete $(wp post list --post_type=shop_order --post_status=wc-pending \
 ```
 
 ## Method 4: Free Plugin (Easiest for Most Store Owners)
+
+The preview and the delete are described on the [Stale Order Cleaner section](/plugins/#stale-order-cleaner).
 
 The <a href="https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce">Stale Order Cleaner for WooCommerce</a> plugin gives you a visual interface under WooCommerce > Order Cleaner. It shows exactly how many stale orders you have, lets you filter by status and minimum age, previews which orders will be deleted, and removes them in one click.
 
