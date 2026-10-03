@@ -4,7 +4,7 @@ description: >-
   What accessibility plugins can fix on a WooCommerce store, what needs manual
   testing, and how to evaluate scanners, widgets, and targeted fixes.
 pubDate: 2026-05-26T13:12:43.588Z
-updatedDate: 2026-09-28T00:00:00.000Z
+updatedDate: 2026-10-03T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -61,7 +61,9 @@ An audit report should say what was checked, what was fixed, and what remains. T
 
 ## Where our plugin fits
 
-[WooCommerce Accessibility Fixer](https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/) 1.5.1 is a free WordPress plugin with nine targeted fixers: alternative text, focus indicators, selected focus and error contrast styling, error messages, some form labels, heading hierarchy, selected modal keyboard behavior, landmarks, and skip links. These are implementation areas, not nine WCAG criteria certified as passing.
+The nine fixers and their limits are on the [product page](/plugins/woocommerce-accessibility-fixer/). That page is the source for what the plugin does.
+
+[WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) 1.5.1 is a free WordPress plugin with nine targeted fixers: alternative text, focus indicators, selected focus and error contrast styling, error messages, some form labels, heading hierarchy, selected modal keyboard behavior, landmarks, and skip links. These are implementation areas, not nine WCAG criteria certified as passing.
 
 The form-label fixer works on selected rendered content; it does not fix every checkout or payment field. The contrast fixer does not measure text contrast or recolor a theme to meet a ratio. Several fixers use inline JavaScript or CSS. There is no released Pro tier, catalog-wide scanner, PDF compliance report, or one-click WCAG certificate. Inspect each change on your own theme before relying on it.
 
