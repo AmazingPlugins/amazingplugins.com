@@ -144,4 +144,18 @@ export const footerBadges = [
     host: 'turbo0.com',
     html: `<a href="https://turbo0.com/item/amazingplugins" target="_blank" rel="noopener noreferrer"> <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" style="height: 54px; width: auto;" /> </a>`,
   },
+  {
+    id: 'launch-and-loop',
+    kind: 'raw',
+    host: 'launchandloop.com',
+    html: `<a href="https://www.launchandloop.com/product/amazingplugins" target="_blank" rel="dofollow">
+  <img src="https://www.launchandloop.com/api/badge/amazingplugins?theme=dark" alt="AmazingPlugins on Launch & Loop" width="170" height="46" />
+</a>`,
+  },
+  {
+    id: 'seo-optimization-directory',
+    kind: 'raw',
+    host: 'seooptimizationdirectory.com',
+    html: `<a href="https://seooptimizationdirectory.com/">SEO Optimization Directory .com</a>`,
+  },
 ];
