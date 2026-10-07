@@ -122,7 +122,10 @@ const catalogSchema = {
           ].map(text => <div class="fixer-item"><span class="fixer-check" aria-hidden="true">✓</span><span>{text}</span></div>)}
         </div>
         <p class="availability-note">Version {shippingTester.version} is the release on WordPress.org. You'll need WordPress 6.6+, PHP 7.4+, and WooCommerce. Methods that need live cart data are skipped.</p>
-        <p class="related"><a href="/blog/shipping-rules-tester-for-woocommerce-is-on-wordpress-org/">What it checks and skips</a>. <a href="/blog/how-to-test-woocommerce-shipping-zones-and-rates/">How to test zones and rates</a>.</p>
+        <p class="related">
+          <a href="/blog/shipping-rules-tester-for-woocommerce-is-on-wordpress-org/">What it checks and skips</a>
+          <a href="/blog/how-to-test-woocommerce-shipping-zones-and-rates/">How to test zones and rates</a>
+        </p>
         <div class="plugin-actions">
           <a href={shippingTester.path} class="btn btn-primary">View plugin details</a>
           <a href={shippingTester.directory} class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
@@ -281,7 +284,9 @@ const catalogSchema = {
   }
 
   .plugin-actions .btn { white-space: normal; }
-  .availability-note, .related { color: var(--ink-2); font-size: 14px; margin-bottom: 24px; max-width: 75ch; }
+  .availability-note { color: var(--ink-2); font-size: 14px; margin-bottom: 24px; max-width: 75ch; }
+  .availability-note:has(+ .related) { margin-bottom: 12px; }
+  .related { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--ink-2); font-size: 14px; margin-bottom: 24px; }
   .related a { text-decoration: underline; text-underline-offset: 3px; }
   @media (max-width: 600px) {
     .plugin-card { padding: 24px; }
