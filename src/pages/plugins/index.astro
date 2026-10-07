@@ -4,6 +4,11 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
 import { shippingTester } from '../../data/shipping-rules-tester';
 import { amazingSecurity } from '../../data/amazing-security';
 
+const accessibilityFixer = {
+  version: '1.5.3',
+  directory: 'https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/',
+};
+
 const catalogSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
@@ -42,6 +47,7 @@ const catalogSchema = {
           <div>
             <div class="plugin-badges">
               <span class="badge badge-free">Free</span>
+              <span class="badge badge-free">On WordPress.org</span>
             </div>
             <h2>WooCommerce Accessibility Fixer</h2>
             <p class="plugin-desc">Nine free, targeted fixes for WooCommerce, including product-image alt text fallbacks, selected focus styles, and a skip link. Review the result on your theme.</p>
@@ -87,9 +93,10 @@ const catalogSchema = {
           </div>
         </div>
 
+        <p class="availability-note">Version {accessibilityFixer.version} is the release on WordPress.org. All nine fixers are included. There is no Pro version.</p>
         <div class="plugin-actions">
           <a href="/plugins/woocommerce-accessibility-fixer/" class="btn btn-primary">View Full Details</a>
-          <a href="https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/" class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
+          <a href={accessibilityFixer.directory} class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
         </div>
       </article>
 
@@ -114,7 +121,11 @@ const catalogSchema = {
             'Read-only tests, with no external carrier calls',
           ].map(text => <div class="fixer-item"><span class="fixer-check" aria-hidden="true">✓</span><span>{text}</span></div>)}
         </div>
-        <p class="availability-note">WordPress 6.6+, PHP 7.4+, and WooCommerce required. Methods that need live cart data are skipped.</p>
+        <p class="availability-note">Version {shippingTester.version} is the release on WordPress.org. You'll need WordPress 6.6+, PHP 7.4+, and WooCommerce. Methods that need live cart data are skipped.</p>
+        <p class="related">
+          <a href="/blog/shipping-rules-tester-for-woocommerce-is-on-wordpress-org/">What it checks and skips</a>
+          <a href="/blog/how-to-test-woocommerce-shipping-zones-and-rates/">How to test zones and rates</a>
+        </p>
         <div class="plugin-actions">
           <a href={shippingTester.path} class="btn btn-primary">View plugin details</a>
           <a href={shippingTester.directory} class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
@@ -274,6 +285,9 @@ const catalogSchema = {
 
   .plugin-actions .btn { white-space: normal; }
   .availability-note { color: var(--ink-2); font-size: 14px; margin-bottom: 24px; max-width: 75ch; }
+  .availability-note:has(+ .related) { margin-bottom: 12px; }
+  .related { display: flex; flex-wrap: wrap; gap: 8px 20px; color: var(--ink-2); font-size: 14px; margin-bottom: 24px; }
+  .related a { text-decoration: underline; text-underline-offset: 3px; }
   @media (max-width: 600px) {
     .plugin-card { padding: 24px; }
   }
