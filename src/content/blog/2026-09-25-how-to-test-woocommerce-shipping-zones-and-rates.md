@@ -56,7 +56,7 @@ Use staging when a test requires changing rules. A read-only check can inspect t
 
 ## Run a sample package through Shipping Rules Tester
 
-[AP Shipping Rules Tester for WooCommerce](/plugins/shipping-rules-tester-for-woocommerce/) is our free, read-only tool for local shipping rules. Install version 1.2.7 from [WordPress.org](https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/).
+[AP Shipping Rules Tester for WooCommerce](/plugins/shipping-rules-tester-for-woocommerce/) is our free, read-only tool for local shipping rules. Install version 1.2.8 from [WordPress.org](https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/). [The announcement](/blog/shipping-rules-tester-for-woocommerce-is-on-wordpress-org/) covers what the tester checks and what it skips.
 
 Once installed, open **WooCommerce > Shipping Rules Tester**:
 
