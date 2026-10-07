@@ -2,7 +2,7 @@
 
 > Free WooCommerce plugins for storefront accessibility fixes, shipping checks, and stale order cleanup. Product pages are the source of truth. AP Accessibility Fixer has nine free fixers and no Pro version. It does not make a store fully accessible. Shipping Rules Tester only reads shipping settings. Stale Order Cleaner can delete old orders after a dry run. Deletion is permanent.
 
-58 guides are listed in [llms-full.txt](https://amazingplugins.com/llms-full.txt).
+59 guides are listed in [llms-full.txt](https://amazingplugins.com/llms-full.txt).
 
 ## Plugins
 
@@ -10,7 +10,7 @@
 - [AP Accessibility Fixer for WooCommerce](https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/): Nine free fixers for WooCommerce accessibility issues, including missing image alt text, focus styles, form labels, and skip links.
 - [Accessibility Fixer on WordPress.org](https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/): Install the published plugin.
 - [Shipping Rules Tester for WooCommerce](https://amazingplugins.com/plugins/shipping-rules-tester-for-woocommerce/): Check WooCommerce shipping zones and local rates with sample destinations and packages. Compare scenarios without changing your store settings.
-- [Shipping Rules Tester on WordPress.org](https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/): Install version 1.2.7.
+- [Shipping Rules Tester on WordPress.org](https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/): Install version 1.2.8.
 - [Shipping Rules Tester source](https://github.com/AmazingPlugins/shipping-rules-tester-for-woocommerce): Source code.
 - [Stale Order Cleaner](https://amazingplugins.com/plugins/#stale-order-cleaner): Find old pending, failed, cancelled, draft, or trashed orders. Preview before deletion. Deletion is permanent.
 - [Stale Order Cleaner source](https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce): Source on GitHub.

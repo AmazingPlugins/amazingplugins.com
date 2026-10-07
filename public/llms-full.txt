@@ -53,8 +53,9 @@ Source: https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce
 - [Terms of Service](https://amazingplugins.com/terms/): Terms of service for AmazingPlugins.
 - [WordPress Security Checklist for Site Owners](https://amazingplugins.com/wordpress-security/): A practical WordPress security checklist: updates, logins, public backups and logs, file integrity, and how to confirm a fix without assuming one scan proves safety.
 
-## Guides (58)
+## Guides (59)
 
+- [Shipping Rules Tester is on WordPress.org](https://amazingplugins.com/blog/shipping-rules-tester-for-woocommerce-is-on-wordpress-org/) (2026-10-07): Install AP Shipping Rules Tester 1.2.8 and check a sample package against your WooCommerce zones. It skips live-cart and carrier methods.
 - [How to Delete Old WooCommerce Orders in Bulk (Complete Guide)](https://amazingplugins.com/blog/delete-old-woocommerce-orders-bulk/) (2026-10-03): Learn how to safely delete old WooCommerce orders - pending, failed, cancelled, and draft orders - in bulk, with and without plugins.
 - [6 Best WooCommerce Bulk Edit Plugins Tested (2026 Comparison)](https://amazingplugins.com/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/) (2026-10-03): Ranking the 6 best WooCommerce bulk edit plugins based on real testing with 500 products. See where each excels and fails.
 - [Website Accessibility Plugin: Full 2026 Guide for WooCommerce](https://amazingplugins.com/blog/website-accessibility-plugin-full-guide/) (2026-10-03): What accessibility plugins can fix on a WooCommerce store, what needs manual testing, and how to evaluate scanners, widgets, and targeted fixes.
