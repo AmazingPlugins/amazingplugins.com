@@ -8,4 +8,4 @@ Source: `AmazingPlugins/shipping-rules-tester-for-woocommerce`, commit `dbbbc004
 
 WebP quality: 85. JPEG quality: 90. Screenshots show an example configuration, not promised shipping rates. The product page labels them accordingly.
 
-The plugin is submitted for review per the owner. Update `src/data/shipping-rules-tester.ts` and the visible availability copy after approval, using the verified directory URL.
+Published on WordPress.org on October 7, 2026 as version 1.2.7: https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/

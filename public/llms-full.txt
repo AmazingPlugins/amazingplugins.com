@@ -26,7 +26,8 @@ Page: https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/
 
 ## Other plugins
 
-AP Shipping Rules Tester for WooCommerce. Check WooCommerce shipping zones and local rates with sample destinations and packages. Compare scenarios without changing your store settings. Status: Submitted for review.
+AP Shipping Rules Tester for WooCommerce. Check WooCommerce shipping zones and local rates with sample destinations and packages. Compare scenarios without changing your store settings.
+Install: https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/
 Page: https://amazingplugins.com/plugins/shipping-rules-tester-for-woocommerce/
 Source: https://github.com/AmazingPlugins/shipping-rules-tester-for-woocommerce
 
