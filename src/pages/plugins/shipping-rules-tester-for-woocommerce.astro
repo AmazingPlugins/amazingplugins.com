@@ -22,6 +22,7 @@ const softwareSchema = {
   operatingSystem: 'WordPress',
   softwareRequirements: 'WordPress 6.6+, PHP 7.4+, WooCommerce',
   softwareVersion: plugin.version,
+  downloadUrl: plugin.directory,
   license: 'https://www.gnu.org/licenses/gpl-2.0.html',
   screenshot: new URL('/images/shipping-rules-tester/scenario-builder.webp', Astro.site).href,
   author: { '@type': 'Organization', name: 'AmazingPlugins', url: 'https://amazingplugins.com/' },
@@ -54,10 +55,9 @@ const softwareSchema = {
           <h1 class="display">Shipping Rules Tester <em>for WooCommerce.</em></h1>
           <p class="lede">Check which zone and local rates match a sample package. Find out why a method isn't returning a rate, without changing your shipping settings.</p>
           <div class="actions">
-            <a href="#how-it-works" class="btn btn-primary">See how it works</a>
-            <a href={plugin.source} class="btn btn-ghost">View source on GitHub</a>
+            <a href={plugin.directory} class="btn btn-primary" target="_blank" rel="noopener">Install free on WordPress.org</a>
+            <a href="#how-it-works" class="btn btn-ghost">See how it works</a>
           </div>
-          <p class="review-note">AP Shipping Rules Tester is awaiting WordPress.org review. Source code is available now; the directory install link will follow approval.</p>
           <ul class="quick-facts" aria-label="Plugin requirements">
             <li>WordPress 6.6+</li><li>PHP 7.4+</li><li>WooCommerce required</li>
           </ul>
@@ -122,13 +122,12 @@ const softwareSchema = {
         <div class="eyebrow">Run it in your store admin</div>
         <h2 class="display section-heading">Setup and <em>requirements.</em></h2>
         <p class="lede">You'll need WordPress 6.6+, PHP 7.4+, and an active WooCommerce installation. The tester works with HPOS and uses your store's currency and weight unit.</p>
-        <p class="review-note">While directory review is pending, use the source repository's installation instructions for a manual setup.</p>
-        <a href={`${plugin.source}/blob/main/readme.txt`} class="text-link">Read the installation instructions on GitHub</a>
+        <a href={plugin.directory} class="text-link" target="_blank" rel="noopener">Install it from WordPress.org</a>
       </div>
       <ol class="install-steps">
         <li>Install and activate WooCommerce if it isn't already active.</li>
-        <li>Place the plugin folder in <code>wp-content/plugins/</code>, following the repository instructions.</li>
-        <li>Activate <strong>AP Shipping Rules Tester for WooCommerce</strong> from the Plugins screen.</li>
+        <li>Install <strong>AP Shipping Rules Tester for WooCommerce</strong> from WordPress.org.</li>
+        <li>Activate it from the Plugins screen.</li>
         <li>Open <strong>WooCommerce &gt; Shipping Rules Tester</strong> and run your first sample package.</li>
       </ol>
     </div>
@@ -140,10 +139,10 @@ const softwareSchema = {
     <div class="wrap closing">
       <div>
         <h2 class="display section-heading">Have a shipping rule <em>to investigate?</em></h2>
-        <p class="lede">Read the source and try a local check. If a result needs explaining, tell us which method and package you're testing.</p>
+        <p class="lede">Install it and try a local check. If a result needs explaining, tell us which method and package you're testing.</p>
       </div>
       <div class="actions">
-        <a href={plugin.source} class="btn btn-primary">View source on GitHub</a>
+        <a href={plugin.directory} class="btn btn-primary" target="_blank" rel="noopener">Install free on WordPress.org</a>
         <a href="/contact/#support" class="btn btn-ghost">Ask a question</a>
       </div>
       <p class="related">Need a repeatable test process? Read <a class="text-link" href="/blog/how-to-test-woocommerce-shipping-zones-and-rates/">how to test WooCommerce shipping zones and rates</a>.</p>

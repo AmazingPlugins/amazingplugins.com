@@ -92,7 +92,11 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
         var destination = new URL(link.href);
         if (destination.origin !== 'https://wordpress.org') return;
         var match = destination.pathname.match(/^\/plugins\/([^/]+)\/?$/);
-        if (!match || match[1] !== 'amazingplugins-accessibility-fixer-for-woocommerce') return;
+        var ownedPlugins = {
+          'amazingplugins-accessibility-fixer-for-woocommerce': true,
+          'ap-shipping-rules-tester-for-woocommerce': true,
+        };
+        if (!match || !ownedPlugins[match[1]]) return;
 
         // Forward the named Google tag call to the Partytown worker.
         window.gtag?.(

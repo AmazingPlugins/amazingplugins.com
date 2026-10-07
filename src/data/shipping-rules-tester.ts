@@ -3,15 +3,16 @@ export const shippingTester = {
   shortName: 'Shipping Rules Tester',
   path: '/plugins/shipping-rules-tester-for-woocommerce/',
   source: 'https://github.com/AmazingPlugins/shipping-rules-tester-for-woocommerce',
-  status: 'Submitted for review',
-  version: '1.2.0',
+  directory: 'https://wordpress.org/plugins/ap-shipping-rules-tester-for-woocommerce/',
+  status: 'On WordPress.org',
+  version: '1.2.7',
   description: 'Check WooCommerce shipping zones and local rates with sample destinations and packages. Compare scenarios without changing your store settings.',
 };
 
 export const shippingFAQs = [
   {
     question: 'Is Shipping Rules Tester available on WordPress.org?',
-    answer: 'The plugin has been submitted for review. A WordPress.org install link will be added here after approval. You can view the source and installation instructions on GitHub now.',
+    answer: 'Yes. Install version 1.2.7 from the WordPress.org plugin directory. The source is also on GitHub.',
   },
   {
     question: 'Will a test change my shipping settings or create an order?',

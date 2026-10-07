@@ -98,7 +98,7 @@ const catalogSchema = {
           <div>
             <div class="plugin-badges">
               <span class="badge badge-free">Free</span>
-              <span class="badge badge-soon">{shippingTester.status}</span>
+              <span class="badge badge-free">{shippingTester.status}</span>
             </div>
             <h2>{shippingTester.name}</h2>
             <p class="plugin-desc">{shippingTester.description}</p>
@@ -114,10 +114,10 @@ const catalogSchema = {
             'Read-only tests, with no external carrier calls',
           ].map(text => <div class="fixer-item"><span class="fixer-check" aria-hidden="true">✓</span><span>{text}</span></div>)}
         </div>
-        <p class="availability-note">WordPress 6.6+, PHP 7.4+, and WooCommerce required. Awaiting WordPress.org review. Methods that need live cart data are skipped.</p>
+        <p class="availability-note">WordPress 6.6+, PHP 7.4+, and WooCommerce required. Methods that need live cart data are skipped.</p>
         <div class="plugin-actions">
           <a href={shippingTester.path} class="btn btn-primary">View plugin details</a>
-          <a href={shippingTester.source} class="btn btn-ghost">View source on GitHub</a>
+          <a href={shippingTester.directory} class="btn btn-outline" target="_blank" rel="noopener">Free on WordPress.org →</a>
         </div>
       </article>
 
