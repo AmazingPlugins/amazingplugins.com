@@ -158,4 +158,15 @@ export const footerBadges = [
     host: 'seooptimizationdirectory.com',
     html: `<a href="https://seooptimizationdirectory.com/">SEO Optimization Directory .com</a>`,
   },
+  {
+    id: 'letslaunch',
+    kind: 'themed',
+    name: 'LetsLaunch',
+    href: 'https://letslaunch.today/product/amazingplugins',
+    alt: 'AmazingPlugins on LetsLaunch',
+    width: 250,
+    height: 54,
+    srcLight: 'https://letslaunch.today/badge/amazingplugins.svg',
+    srcDark: 'https://letslaunch.today/badge/amazingplugins.svg?theme=dark',
+  },
 ];

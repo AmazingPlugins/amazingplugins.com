@@ -4,8 +4,18 @@ import test from 'node:test';
 import { footerBadges } from '../src/data/footer-badges.mjs';
 
 const html = await readFile(new URL('../dist/client/index.html', import.meta.url), 'utf8');
-const footerHtml = html.match(/<footer-logo-slider\b[^>]*>([\s\S]*?)<\/footer-logo-slider>/i)?.[1] ?? '';
-assert.ok(footerHtml, 'homepage footer badge strip should exist');
+const brandColMatch = html.match(/<div class="footer-col footer-col-brand">([\s\S]*?)<div class="footer-col">/i);
+assert.ok(brandColMatch, 'brand footer column should exist');
+const brandColHtml = brandColMatch[1];
+const footerBadgesMatch = brandColHtml.match(/<div class="footer-badges"[^>]*>([\s\S]*?)<\/div>\s*<\/div>\s*<div class="footer-col">/i)
+  ?? brandColHtml.match(/class="footer-badges"[^>]*>([\s\S]*)$/i);
+assert.ok(footerBadgesMatch || brandColHtml.includes('footer-badges'), 'homepage footer badge strip should live in the brand column');
+
+const primaryGroup = html.match(/<div class="footer-badges-group"(?![^>]*aria-hidden)[^>]*>([\s\S]*?)<\/div>\s*<div class="footer-badges-group" aria-hidden="true"/i)?.[1]
+  ?? html.match(/<div class="footer-badges-group"[^>]*>([\s\S]*?)<\/div>/i)?.[1]
+  ?? '';
+assert.ok(primaryGroup, 'primary footer badge group should exist');
+const footerHtml = primaryGroup;
 const anchors = [...footerHtml.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/gi)].map(([anchor]) => anchor);
 
 const attributeOf = (tag, name) => {
@@ -21,8 +31,10 @@ const hasAttribute = (tag, name) => {
 
 const hrefOf = (anchor) => attributeOf(anchor, 'href');
 const imgTagOf = (anchor) => anchor.match(/<img\b[^>]*>/i)?.[0] ?? '';
+const imgTagsOf = (anchor) => [...anchor.matchAll(/<img\b[^>]*>/gi)].map(([tag]) => tag);
 const anchorsIn = (markup) => [...markup.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/gi)].map(([anchor]) => anchor);
-const hasDirectoryDomain = (anchor, domain) => hrefOf(anchor).includes(domain) || attributeOf(imgTagOf(anchor), 'src').includes(domain);
+const hasDirectoryDomain = (anchor, domain) => hrefOf(anchor).includes(domain) || attributeOf(imgTagOf(anchor), 'src').includes(domain)
+  || imgTagsOf(anchor).some((img) => attributeOf(img, 'src').includes(domain));
 const assertUniqueHomepageBadge = (markup, domain) => {
   const count = anchorsIn(markup).filter((anchor) => hasDirectoryDomain(anchor, domain)).length;
   assert.equal(count, 1, `${domain} should have exactly one homepage badge`);
@@ -58,21 +70,26 @@ const textBadges = [
   { domain: 'aitop10.tools', href: 'https://aitop10.tools/', label: 'AiTop10 Tools' },
 ];
 
+test('places the badge slider in the brand column', () => {
+  assert.match(brandColHtml, /class="footer-badges"/);
+  assert.match(html, /footer-badges-group" aria-hidden="true"/);
+});
+
 test('renders every requested directory as exactly one homepage link', () => {
   for (const { domain } of imageBadges) {
-    assertUniqueHomepageBadge(html, domain);
+    assertUniqueHomepageBadge(footerHtml, domain);
   }
-  for (const domain of ['topaitools4u.site', 'agenthunter.io']) {
-    assertUniqueHomepageBadge(html, domain);
+  for (const domain of ['topaitools4u.site', 'agenthunter.io', 'letslaunch.today']) {
+    assertUniqueHomepageBadge(footerHtml, domain);
   }
   for (const { domain } of textBadges) {
-    assertUniqueHomepageBadge(html, domain);
+    assertUniqueHomepageBadge(footerHtml, domain);
   }
 });
 
 test('rejects a duplicate directory badge outside the footer slider', () => {
   const duplicateLink = `<a href="${imageBadges[0].href}">duplicate</a>`;
-  const duplicateHomepage = html.replace('</body>', `${duplicateLink}</body>`);
+  const duplicateHomepage = footerHtml + duplicateLink;
   assert.throws(() => assertUniqueHomepageBadge(duplicateHomepage, imageBadges[0].domain), /exactly one homepage badge/);
 });
 
@@ -129,6 +146,24 @@ test('preserves the two verification cards and three plain text links', () => {
   }
 });
 
+test('renders LetsLaunch light and dark theme images in one anchor', () => {
+  const anchor = anchors.find((item) => hrefOf(item).includes('letslaunch.today')) ?? '';
+  assert.equal(hrefOf(anchor), 'https://letslaunch.today/product/amazingplugins');
+  assert.equal(attributeOf(anchor, 'target'), '_blank');
+  assert.equal(attributeOf(anchor, 'rel'), 'noopener noreferrer');
+  const images = imgTagsOf(anchor);
+  assert.equal(images.length, 2);
+  const light = images.find((img) => attributeOf(img, 'class')?.includes('footer-badge-light'));
+  const dark = images.find((img) => attributeOf(img, 'class')?.includes('footer-badge-dark'));
+  assert.ok(light, 'light theme image should exist');
+  assert.ok(dark, 'dark theme image should exist');
+  assert.equal(attributeOf(light, 'src'), 'https://letslaunch.today/badge/amazingplugins.svg');
+  assert.equal(attributeOf(dark, 'src'), 'https://letslaunch.today/badge/amazingplugins.svg?theme=dark');
+  assert.equal(attributeOf(light, 'alt'), 'AmazingPlugins on LetsLaunch');
+  assert.equal(attributeOf(light, 'width'), '250');
+  assert.equal(attributeOf(light, 'height'), '54');
+});
+
 const existingHosts = [
   'agenthunter.io',
   'aitoolsmarketer.com',
@@ -144,6 +179,7 @@ const existingHosts = [
   'indiehunt.io',
   'launchboosts.com',
   'launchigniter.com',
+  'letslaunch.today',
   'mydentify.com',
   'neeed.directory',
   'productfame.com',
@@ -180,16 +216,16 @@ const countOccurrences = (haystack, needle) => {
 };
 
 test('keeps one homepage badge for every directory already on the site', () => {
-  assert.equal(existingHosts.length, 33);
+  assert.equal(existingHosts.length, 34);
   for (const domain of existingHosts) {
-    assertUniqueHomepageBadge(html, domain);
+    assertUniqueHomepageBadge(footerHtml, domain);
   }
 });
 
-test('prints each supplied raw badge snippet once', () => {
+test('prints each supplied raw badge snippet once in the primary group', () => {
   assert.equal(rawBadges.length, 19);
   for (const badge of rawBadges) {
-    assert.equal(countOccurrences(html, badge.html), 1, `${badge.host} snippet should appear once`);
-    assertUniqueHomepageBadge(html, badge.host);
+    assert.equal(countOccurrences(footerHtml, badge.html), 1, `${badge.host} snippet should appear once in the primary group`);
+    assertUniqueHomepageBadge(footerHtml, badge.host);
   }
 });
