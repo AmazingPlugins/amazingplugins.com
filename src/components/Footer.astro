@@ -6,7 +6,7 @@ import { footerBadges } from '../data/footer-badges.mjs';
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div class="footer-col">
+      <div class="footer-col footer-col-brand">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
           <img src="/images/logo.jpg" alt="" width="28" height="28" style="border-radius:6px;object-fit:cover;" />
           <strong style="font-size:15px;">AmazingPlugins</strong>
@@ -14,6 +14,114 @@ import { footerBadges } from '../data/footer-badges.mjs';
         <p style="font-size:14px;color:var(--ink-3);max-width:280px;line-height:1.55;">
           Free tools for WooCommerce stores. Fix accessibility issues, check shipping rules, and clean up stale orders.
         </p>
+        <div class="footer-badges" role="region" aria-label="Featured on directory sites">
+          <div class="footer-badges-track">
+            {[false, true].map((duplicate) => (
+              <div class="footer-badges-group" aria-hidden={duplicate ? 'true' : undefined}>
+                {footerBadges.map((badge) => {
+                  const tabIndex = duplicate ? -1 : undefined;
+
+                  if (badge.kind === 'image') {
+                    return (
+                      <a
+                        href={badge.href}
+                        target="_blank"
+                        rel={badge.rel ?? 'noopener noreferrer'}
+                        title={badge.title}
+                        aria-label={badge.ariaLabel}
+                        tabindex={tabIndex}
+                      >
+                        <img
+                          src={badge.src}
+                          alt={badge.alt}
+                          width={badge.width}
+                          height={badge.height}
+                          loading={badge.loading === null ? undefined : (badge.loading ?? 'lazy')}
+                          decoding={badge.decoding === null ? undefined : (badge.decoding ?? 'async')}
+                          style={badge.imgStyle}
+                        />
+                      </a>
+                    );
+                  }
+
+                  if (badge.kind === 'themed') {
+                    return (
+                      <a
+                        href={badge.href}
+                        target="_blank"
+                        rel={badge.rel ?? 'noopener noreferrer'}
+                        aria-label={badge.ariaLabel ?? badge.alt}
+                        tabindex={tabIndex}
+                      >
+                        <img
+                          class="footer-badge-light"
+                          src={badge.srcLight}
+                          alt={badge.alt}
+                          width={badge.width}
+                          height={badge.height}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <img
+                          class="footer-badge-dark"
+                          src={badge.srcDark}
+                          alt=""
+                          width={badge.width}
+                          height={badge.height}
+                          loading="lazy"
+                          decoding="async"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    );
+                  }
+
+                  if (badge.kind === 'topaitools4u') {
+                    return (
+                      <a data-topaitools4u-badge="verified-listing" class="footer-badge-card" href={badge.href} target="_blank" rel="noopener" aria-label="Listed on TopAITools4U" tabindex={tabIndex} style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #d9d9d9;border-radius:12px;background:#ffffff;color:#111111;font-family:Inter,Arial,sans-serif;text-decoration:none;">
+                        <img src="https://www.topaitools4u.site/logo.svg" alt="TopAITools4U" width="32" height="32" style="display:block;width:32px;height:32px;border-radius:9px;" />
+                        <span style="display:flex;flex-direction:column;line-height:1.15;">
+                          <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;">Listed on</span>
+                          <span style="font-size:15px;font-weight:700;">TopAITools4U</span>
+                        </span>
+                      </a>
+                    );
+                  }
+
+                  if (badge.kind === 'agenthunter') {
+                    return (
+                      <a class="footer-badge-card" href={badge.href} target="_blank" rel="noopener noreferrer" tabindex={tabIndex} style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #fffbeb; border: 1px solid #fbbf24; padding: 0.5rem 0.75rem; border-radius: 0.5rem; text-decoration: none; font-family: sans-serif;">
+                        <img src="https://www.agenthunter.io/logo-light.svg" alt="AgentHunter Badge" style="height: 2.5rem; width: 2.5rem;" />
+                        <span style="display: flex; flex-direction: column;">
+                          <span style="margin: 0; font-size: 0.75rem; color: #92400e;">AgentHunter</span>
+                          <span style="margin: 0; font-size: 0.875rem; color: #451a03; font-weight: 600;">Featured AI Agent</span>
+                        </span>
+                      </a>
+                    );
+                  }
+
+                  if (badge.kind === 'text') {
+                    return (
+                      <a class="footer-badge-text" href={badge.href} target="_blank" rel="noopener noreferrer" tabindex={tabIndex}>
+                        {badge.label}
+                      </a>
+                    );
+                  }
+
+                  if (badge.kind === 'raw') {
+                    return <Fragment set:html={badge.html} />;
+                  }
+
+                  return (
+                    <a href={badge.href} target="_blank" rel="noopener noreferrer" tabindex={tabIndex}>
+                      <img src={`/images/badges/${badge.id}.webp`} alt={`Featured on ${badge.name}`} width="180" height="48" loading="lazy" decoding="async" />
+                    </a>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div class="footer-col">
         <h2>Plugins</h2>
@@ -41,82 +149,6 @@ import { footerBadges } from '../data/footer-badges.mjs';
         <a href="/contact/#accessibility">Accessibility</a>
       </div>
     </div>
-    <footer-logo-slider class="footer-badges">
-      <div class="footer-badges-heading">
-        <span id="footer-badges-label">Featured on</span>
-      </div>
-      <div class="footer-badges-viewport" role="region" aria-labelledby="footer-badges-label" tabindex="0">
-        <div class="footer-badges-track">
-          <div class="footer-badges-group">
-            {footerBadges.map((badge) => {
-              if (badge.kind === 'image') {
-                return (
-                  <a
-                    href={badge.href}
-                    target="_blank"
-                    rel={badge.rel ?? 'noopener noreferrer'}
-                    title={badge.title}
-                    aria-label={badge.ariaLabel}
-                  >
-                    <img
-                      src={badge.src}
-                      alt={badge.alt}
-                      width={badge.width}
-                      height={badge.height}
-                      loading={badge.loading === null ? undefined : (badge.loading ?? 'lazy')}
-                      decoding={badge.decoding === null ? undefined : (badge.decoding ?? 'async')}
-                      style={badge.imgStyle}
-                    />
-                  </a>
-                );
-              }
-
-              if (badge.kind === 'topaitools4u') {
-                return (
-                  <a data-topaitools4u-badge="verified-listing" class="footer-badge-card" href={badge.href} target="_blank" rel="noopener" aria-label="Listed on TopAITools4U" style="display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid #d9d9d9;border-radius:12px;background:#ffffff;color:#111111;font-family:Inter,Arial,sans-serif;text-decoration:none;">
-                    <img src="https://www.topaitools4u.site/logo.svg" alt="TopAITools4U" width="32" height="32" style="display:block;width:32px;height:32px;border-radius:9px;" />
-                    <span style="display:flex;flex-direction:column;line-height:1.15;">
-                      <span style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;">Listed on</span>
-                      <span style="font-size:15px;font-weight:700;">TopAITools4U</span>
-                    </span>
-                  </a>
-                );
-              }
-
-              if (badge.kind === 'agenthunter') {
-                return (
-                  <a class="footer-badge-card" href={badge.href} target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: #fffbeb; border: 1px solid #fbbf24; padding: 0.5rem 0.75rem; border-radius: 0.5rem; text-decoration: none; font-family: sans-serif;">
-                    <img src="https://www.agenthunter.io/logo-light.svg" alt="AgentHunter Badge" style="height: 2.5rem; width: 2.5rem;" />
-                    <span style="display: flex; flex-direction: column;">
-                      <span style="margin: 0; font-size: 0.75rem; color: #92400e;">AgentHunter</span>
-                      <span style="margin: 0; font-size: 0.875rem; color: #451a03; font-weight: 600;">Featured AI Agent</span>
-                    </span>
-                  </a>
-                );
-              }
-
-              if (badge.kind === 'text') {
-                return (
-                  <a class="footer-badge-text" href={badge.href} target="_blank" rel="noopener noreferrer">
-                    {badge.label}
-                  </a>
-                );
-              }
-
-              if (badge.kind === 'raw') {
-                return <Fragment set:html={badge.html} />;
-              }
-
-              return (
-                <a href={badge.href} target="_blank" rel="noopener noreferrer">
-                  <img src={`/images/badges/${badge.id}.webp`} alt={`Featured on ${badge.name}`} width="180" height="48" loading="lazy" decoding="async" />
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    </footer-logo-slider>
     <div class="footer-bot">
       <span>&copy; {new Date().getFullYear()} AmazingPlugins.</span>
       <span>All systems normal</span>
@@ -125,111 +157,38 @@ import { footerBadges } from '../data/footer-badges.mjs';
 </footer>
 
 <script>
-  class FooterLogoSlider extends HTMLElement {
-    private cleanup?: () => void;
+  document.querySelectorAll<HTMLElement>('.footer-badges').forEach((slider) => {
+    const track = slider.querySelector<HTMLElement>('.footer-badges-track');
+    const group = track?.querySelector<HTMLElement>('.footer-badges-group');
+    const duplicate = track?.querySelector<HTMLElement>('.footer-badges-group[aria-hidden="true"]');
+    if (!track || !group) return;
 
-    connectedCallback() {
-      const viewport = this.querySelector<HTMLElement>('.footer-badges-viewport')!;
-      const group = this.querySelector<HTMLElement>('.footer-badges-group')!;
-      const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const controller = new AbortController();
-      const { signal } = controller;
-      let copy: HTMLElement | undefined;
-      const ensureCopy = () => {
-        if (copy) return;
-        copy = group.cloneNode(true) as HTMLElement;
-        copy.setAttribute('aria-hidden', 'true');
-        copy.classList.add('footer-badges-copy');
-        copy.querySelectorAll('a').forEach((link) => { link.tabIndex = -1; });
-        group.after(copy);
-      };
+    duplicate?.querySelectorAll('a').forEach((link) => {
+      link.tabIndex = -1;
+    });
 
-      let hovered = false;
-      let touching = false;
-      let manualUntil = 0;
-      let position = viewport.scrollLeft;
-      let previousTime = 0;
-      let frame = 0;
-      let visible = false;
-      let width = 0;
-      const observer = new ResizeObserver(() => {
-        width = group.getBoundingClientRect().width;
-      });
-      observer.observe(group);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-      const updateMotion = () => {
-        if (copy) copy.hidden = motion.matches;
-        position = viewport.scrollLeft;
-      };
-      updateMotion();
-      motion.addEventListener('change', updateMotion, { signal });
-      this.addEventListener('pointerenter', (event) => {
-        hovered = event.pointerType === 'mouse';
-      }, { signal });
-      this.addEventListener('pointerleave', () => { hovered = false; }, { signal });
-      viewport.addEventListener('pointerdown', () => { touching = true; }, { signal });
-      const release = () => {
-        if (touching) manualUntil = performance.now() + 1500;
-        touching = false;
-      };
-      window.addEventListener('pointerup', release, { signal });
-      window.addEventListener('pointercancel', release, { signal });
-      viewport.addEventListener('wheel', () => {
-        manualUntil = performance.now() + 1500;
-      }, { signal, passive: true });
-      viewport.addEventListener('focusin', (event) => {
-        const link = event.target;
-        if (!(link instanceof HTMLAnchorElement)) return;
-        const bounds = viewport.getBoundingClientRect();
-        const badge = link.getBoundingClientRect();
-        if (badge.left < bounds.left || badge.right > bounds.right) {
-          viewport.scrollLeft += badge.left - bounds.left - (bounds.width - badge.width) / 2;
-        }
-        position = viewport.scrollLeft;
-      }, { signal });
+    const setDuration = () => {
+      const width = group.scrollWidth;
+      if (width > 0) {
+        slider.style.setProperty('--footer-badges-duration', `${Math.max(50, width / 30)}s`);
+      }
+      slider.classList.add('is-ready');
+    };
+    setDuration();
+    new ResizeObserver(setDuration).observe(group);
+  });
 
-      const tick = (time: number) => {
-        const elapsed = previousTime ? Math.min(time - previousTime, 64) : 0;
-        previousTime = time;
-        if (hovered || touching || motion.matches || document.hidden ||
-            this.matches(':focus-within') || time < manualUntil) {
-          position = viewport.scrollLeft;
-        } else if (width > 0) {
-          position = (position + elapsed * 0.032) % width;
-          viewport.scrollLeft = position;
-        }
-        if (visible && !motion.matches && !document.hidden) frame = requestAnimationFrame(tick);
-      };
-      const updateAnimation = () => {
-        cancelAnimationFrame(frame);
-        previousTime = 0;
-        if (visible && !motion.matches && !document.hidden) {
-          ensureCopy();
-          frame = requestAnimationFrame(tick);
-        }
-      };
-      const visibility = new IntersectionObserver(([entry]) => {
-        visible = entry.isIntersecting;
-        updateAnimation();
-      });
-      visibility.observe(this);
-      motion.addEventListener('change', updateAnimation, { signal });
-      document.addEventListener('visibilitychange', updateAnimation, { signal });
-      this.cleanup = () => {
-        cancelAnimationFrame(frame);
-        visibility.disconnect();
-        observer.disconnect();
-        controller.abort();
-        copy?.remove();
-      };
-    }
-
-    disconnectedCallback() {
-      this.cleanup?.();
-    }
-  }
-
-  if (!customElements.get('footer-logo-slider')) {
-    customElements.define('footer-logo-slider', FooterLogoSlider);
-  }
+  document.querySelectorAll<HTMLImageElement>('.footer-badges a > img').forEach((image) => {
+    if (image.classList.contains('footer-badge-dark')) return;
+    const showFallback = () => {
+      const link = image.parentElement;
+      if (!link || link.classList.contains('footer-badge-text')) return;
+      link.classList.add('footer-badge-text');
+      link.textContent = image.alt || 'Featured listing';
+    };
+    image.addEventListener('error', showFallback, { once: true });
+    if (image.complete && image.naturalWidth === 0) showFallback();
+  });
 </script>
