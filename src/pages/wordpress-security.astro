@@ -4,7 +4,7 @@ import BreadcrumbSchema from '../components/BreadcrumbSchema.astro';
 import '../styles/amazing-security.css';
 ---
 
-<BaseLayout title="WordPress Security Checklist for Site Owners" description="A practical WordPress security checklist: updates, logins, public backups and logs, file integrity, and how to confirm a fix without assuming one scan proves safety.">
+<BaseLayout title="WordPress Security Checklist for Site Owners" description="A practical WordPress security checklist: updates, logins, public backups and logs, file integrity, and how to confirm a fix after a scan.">
   <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'WordPress security checklist', url: '/wordpress-security/' }]} />
   <section class="as-shell"><div class="wrap">
     <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">WordPress security checklist</span></nav>
@@ -38,6 +38,6 @@ import '../styles/amazing-security.css';
 
   <section class="as-shell"><div class="wrap as-split"><div><h2 class="as-heading">About Amazing Security.</h2></div><div class="as-prose">
     <p><a href="/plugins/amazing-security/">Amazing Security</a> is a free WordPress plugin we're building around this evidence-first workflow. Planned areas include hardening checks, vulnerability and file findings, independent public-file verification, and an optional MCP connection for AI assistants.</p>
-    <p>It's in development and has no download yet. If your site needs protection now, use a released security plugin and follow your host's incident process. You can read our dated <a href="/compare/amazing-security-vs-wordfence/">Wordfence Free comparison</a> to see what a current option provides.</p>
+    <p>It's in development and has no download yet. If your site needs protection now, use a released security plugin and follow your host's incident process. You can read our dated <a href="/compare/amazing-security-vs-wordfence/">Wordfence Free comparison</a> to see what a current option provides, or our <a href="/compare/amazing-security-vs-custonis/">Custonis comparison</a> for public file checks.</p>
   </div></div></section>
 </BaseLayout>

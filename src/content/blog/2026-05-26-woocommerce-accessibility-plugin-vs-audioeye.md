@@ -1,5 +1,5 @@
 ---
-title: 'WooCommerce accessibility plugin vs AudioEye: compare scope and support'
+title: "WooCommerce Accessibility Plugin vs AudioEye: Scope"
 description: >-
   AudioEye combines automated fixes, monitoring, and expert services. Compare
   that scope with a WooCommerce plugin and test the checkout either way.
@@ -21,8 +21,6 @@ seoCategory: woocommerce
 articleAngle: comparison
 gscSubmitted: true
 ---
-
-# WooCommerce accessibility plugin vs AudioEye
 
 AudioEye combines software and expert services. A WooCommerce plugin is a narrower tool. The sensible comparison is what each option will do for your product, cart, and checkout pages, and who handles the issues left over.
 

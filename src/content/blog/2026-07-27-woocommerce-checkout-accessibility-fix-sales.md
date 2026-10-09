@@ -1,6 +1,6 @@
 ---
-title: "WooCommerce Checkout Accessibility: Fix 5 Issues That Block Customers"
-description: "Check five WooCommerce checkout accessibility barriers, with practical keyboard, screen reader, and form tests."
+title: "WooCommerce Checkout Accessibility: 5 Issues to Fix"
+description: "Check five WooCommerce checkout accessibility barriers that cost sales, with practical keyboard, screen reader, and form tests you can run today."
 pubDate: 2026-07-27T00:00:00.000Z
 author: Harun Ray
 tags:
@@ -19,8 +19,6 @@ seoCategory: WooCommerce Accessibility
 canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-checkout-accessibility-fix-sales/'
 gscSubmitted: true
 ---
-
-# WooCommerce Checkout Accessibility: Fix 5 Issues That Block Customers
 
 A checkout can look fine with a mouse and still block someone using a keyboard or screen reader. Test the full purchase path before assuming the default WooCommerce checkout, a theme, or a payment widget handles it.
 

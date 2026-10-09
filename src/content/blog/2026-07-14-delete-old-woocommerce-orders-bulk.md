@@ -1,5 +1,5 @@
 ---
-title: How to Delete Old WooCommerce Orders in Bulk (Complete Guide)
+title: "How to Delete Old WooCommerce Orders in Bulk"
 description: >-
   Learn how to safely delete old WooCommerce orders - pending, failed,
   cancelled, and draft orders - in bulk, with and without plugins.
@@ -160,3 +160,4 @@ The safest workflow is always: scan first (dry run), verify what will be deleted
 - [ADA website claims and WooCommerce: how to check your store](/blog/ada-lawsuits-rising-woocommerce-2026/)
 - [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
+- [Pending payment orders in WooCommerce](/blog/woocommerce-pending-payment-orders/)

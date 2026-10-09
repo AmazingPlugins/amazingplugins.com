@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce Variation Swatches Are Probably Breaking Accessibility (Here's How to Check)"
+title: "Are WooCommerce Variation Swatches Hurting Accessibility?"
 description: "Most WooCommerce color and size swatch plugins render unlabeled divs instead of real form controls. Here's how to test your swatches and fix them."
 pubDate: 2026-08-20T00:00:00.000Z
 author: "Harun Ray"

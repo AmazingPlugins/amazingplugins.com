@@ -1,5 +1,5 @@
 ---
-title: 'WooCommerce accessibility plugin vs UserWay: compare the work each does'
+title: "WooCommerce Accessibility Plugin vs UserWay: What Each Does"
 description: >-
   Compare UserWay's widget and monitoring products with a WooCommerce-specific
   plugin, then test the result on product pages and checkout.
@@ -21,8 +21,6 @@ seoCategory: woocommerce
 articleAngle: comparison
 gscSubmitted: true
 ---
-
-# WooCommerce accessibility plugin vs UserWay
 
 UserWay sells more than a floating accessibility menu. Its widget offers visitor adjustments and automated remediation, while its separate Monitor product scans and tracks issues. Compare the particular UserWay product you plan to use with the work your store needs.
 

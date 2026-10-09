@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce Color Contrast Issues and How to Fix Them (2026 Guide)"
+title: "Fix WooCommerce Color Contrast Issues (2026 Guide)"
 description: "Fix WooCommerce color contrast problems that fail WCAG compliance. Learn the standards, test your store, and fix contrast issues step by step."
 pubDate: 2026-08-07T00:00:00.000Z
 author: "Harun Ray"
@@ -10,8 +10,6 @@ tags:
   - ADA compliance
 gscSubmitted: true
 ---
-
-# WooCommerce Color Contrast Issues and How to Fix Them (2026 Guide)
 
 WebAIM's [February 2026 Million study](https://webaim.org/projects/million/) found low-contrast text on 83.9% of the home pages it tested. That study covered popular home pages, not WooCommerce stores or checkout flows, but it shows how easily contrast slips through.
 

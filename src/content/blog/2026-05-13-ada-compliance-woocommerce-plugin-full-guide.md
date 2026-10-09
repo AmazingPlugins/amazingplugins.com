@@ -112,3 +112,4 @@ A statement can tell visitors how to report a problem and what you're working on
 - [WooCommerce ADA compliance checklist](/blog/woocommerce-ada-compliance-checklist-2026/)
 - [How to make your WooCommerce store more accessible](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
 - [AP Accessibility Fixer product page](/plugins/woocommerce-accessibility-fixer/)
+- [Does accessibility affect SEO?](/blog/accessibility-seo-ranking-factor-ecommerce/)

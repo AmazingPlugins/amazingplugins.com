@@ -1,8 +1,6 @@
 ---
-title: "10 Common Accessibility Issues on E-commerce Sites (With Fixes)"
-description: >-
-  The 10 accessibility violations found most often on e-commerce sites, from missing alt text to keyboard traps, with practical fixes for each.
-  missing alt text to poor contrast, with actionable fixes.
+title: "10 Common E-commerce Accessibility Issues (With Fixes)"
+description: "The 10 accessibility violations most common on e-commerce sites, from missing alt text to keyboard traps, with a practical fix for each one."
 pubDate: 2026-04-18T00:00:00.000Z
 author: Harun Ray
 tags:
@@ -12,8 +10,6 @@ tags:
   - Best Practices
 gscSubmitted: true
 ---
-
-# 10 Common Accessibility Issues on E-commerce Sites (And How to Fix Them)
 
 Most accessibility problems on e-commerce sites fall into a predictable set of categories. If you can fix these ten, you'll address the vast majority of real-world WCAG failures. Here's the list, starting with the most common.
 

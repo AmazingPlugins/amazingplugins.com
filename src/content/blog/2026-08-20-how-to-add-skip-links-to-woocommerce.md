@@ -1,5 +1,5 @@
 ---
-title: "How to Add Skip Links to WooCommerce (And Why Most Themes Get It Wrong)"
+title: "How to Add Skip Links to WooCommerce Themes"
 description: "Add a working skip link to your WooCommerce store so keyboard and screen reader users can bypass the header and jump straight to content."
 pubDate: 2026-08-20T00:00:00.000Z
 author: "Harun Ray"

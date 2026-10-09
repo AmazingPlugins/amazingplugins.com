@@ -19,8 +19,6 @@ articleAngle: step-by-step-guide
 gscSubmitted: true
 ---
 
-# How to buy an accessibility checker for WooCommerce
-
 Start with a problem on your own store, not a vendor's compliance score. A checker may report issues, apply selected fixes, or both. You still need to test a purchase with a keyboard and screen reader.
 
 **Disclosure and method (September 28, 2026):** AmazingPlugins publishes WooCommerce Accessibility Fixer. We reviewed the released 1.5.1 package and the W3C sources linked below. We did not run a controlled trial of competing products. This is a buying workflow, not a product ranking or legal assessment.

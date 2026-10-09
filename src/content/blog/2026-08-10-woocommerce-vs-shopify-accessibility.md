@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce vs Shopify Accessibility: What Store Owners Can Control"
+title: "WooCommerce vs Shopify Accessibility: What You Control"
 description: "Compare WooCommerce and Shopify accessibility by theme, checkout, extensions, and testing responsibilities, with links to each platform's current guidance."
 pubDate: 2026-08-10T00:00:00.000Z
 updatedDate: 2026-09-28T00:00:00.000Z

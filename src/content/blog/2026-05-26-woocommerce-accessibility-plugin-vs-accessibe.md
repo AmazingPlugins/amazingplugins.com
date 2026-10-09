@@ -1,5 +1,5 @@
 ---
-title: 'WooCommerce accessibility plugin vs accessiBe: what each can change'
+title: "WooCommerce Accessibility Plugin vs accessiBe: What Changes"
 description: >-
   Compare accessiBe's accessWidget with a WooCommerce-specific plugin. Check how
   each works, what to test in checkout, and what still needs human review.
@@ -21,8 +21,6 @@ seoCategory: woocommerce
 articleAngle: comparison
 gscSubmitted: true
 ---
-
-# WooCommerce accessibility plugin vs accessiBe
 
 accessiBe's accessWidget and a WooCommerce plugin can both change what a visitor encounters on a store. They work differently, but neither makes an untested checkout accessible by itself.
 

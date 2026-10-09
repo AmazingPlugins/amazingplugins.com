@@ -1,5 +1,5 @@
 ---
-title: "Alt Text, Keyboard Navigation, and Other Quick Accessibility Wins for E-commerce"
+title: "Quick E-commerce Accessibility Wins: Alt Text, Keyboard"
 description: >-
   Quick accessibility wins for e-commerce: alt text, skip links, focus indicators, and form labels that boost your score fast.
 pubDate: 2026-04-19T00:00:00.000Z
@@ -11,8 +11,6 @@ tags:
   - WCAG
 gscSubmitted: true
 ---
-
-# Alt Text, Keyboard Navigation, and Other Quick Accessibility Wins for E-commerce
 
 Most accessibility improvements don't require a rebuild. They're quick changes - a few minutes per page - that move the needle significantly. Here are the highest-impact ones for e-commerce stores.
 

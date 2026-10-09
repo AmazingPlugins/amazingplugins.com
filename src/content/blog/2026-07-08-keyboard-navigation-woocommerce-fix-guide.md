@@ -1,5 +1,5 @@
 ---
-title: How to Fix Keyboard Navigation in WooCommerce (Complete Guide)
+title: "How to Fix Keyboard Navigation in WooCommerce"
 description: >-
   A practical guide to fixing the most common keyboard navigation issues in
   WooCommerce stores - focus indicators, tab order, skip links, and more.

@@ -1,7 +1,5 @@
 ---
-title: >-
-  Does Accessibility Affect SEO? What WooCommerce Store Owners Need
-  to Know in 2026
+title: "Does Accessibility Affect SEO? A WooCommerce Guide (2026)"
 description: >-
   Accessibility isn't a direct ranking factor, but fixes improve Core Web
   Vitals, image search, and content structure for WooCommerce.

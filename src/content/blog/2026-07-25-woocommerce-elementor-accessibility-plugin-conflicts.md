@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce and Elementor Accessibility Plugin Conflicts: What to Check"
+title: "WooCommerce and Elementor Accessibility Plugin Conflicts"
 description: "Troubleshoot WooCommerce and Elementor accessibility problems in product widgets, popups, headings, and checkout without assuming a plugin fixes every issue."
 pubDate: 2026-07-25T00:00:00.000Z
 updatedDate: 2026-09-28T00:00:00.000Z

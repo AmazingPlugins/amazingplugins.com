@@ -14,8 +14,6 @@ canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-checkout-accessibilit
 gscSubmitted: true
 ---
 
-# WooCommerce checkout accessibility issues to fix first
-
 WooCommerce checkout accessibility issues usually come down to the same few problems: missing field labels, unclear error messages, weak focus styles, payment widgets that do not work by keyboard, and checkout customizations that screen readers cannot understand. If a shopper cannot complete checkout, the accessibility issue is also a revenue issue.
 
 Start at checkout because it is the highest-risk page in the store. A product page problem may frustrate someone. A checkout problem blocks the sale.
