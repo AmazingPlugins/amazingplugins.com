@@ -32,3 +32,5 @@ Open the homepage, a product page, cart, and checkout. Use [WAVE](https://wave.w
 Start at a product page and press Tab. Use Shift+Tab to go backward and Enter or Space to activate controls. Select a variation, add it to cart, change a quantity, and attempt checkout with an empty required field. Write down the URL and the exact step where the path breaks. Retest after the theme or checkout extension changes.
 
 The free [AP Accessibility Fixer for WooCommerce](/plugins/woocommerce-accessibility-fixer/) offers nine targeted fixes in its 1.5.1 release, including an empty product-image alt fallback and selected focus styles. It does not measure conversion or repair every checkout control. Use the [screen reader testing guide](/blog/screen-reader-testing-woocommerce-guide/) for a deeper pass and the [checkout guide](/blog/woocommerce-checkout-accessibility-issues/) to investigate payment barriers.
+
+Low contrast is one of the quietest barriers on this list, so check our guide to [fixing WooCommerce color contrast issues](/blog/woocommerce-color-contrast-issues-fix/).

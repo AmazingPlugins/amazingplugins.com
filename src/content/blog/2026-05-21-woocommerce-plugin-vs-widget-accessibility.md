@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce Accessibility Plugin vs Widget: How the Fixes Work"
+title: "WooCommerce Accessibility Plugin vs Widget: How They Work"
 description: >-
   A straight comparison of WooCommerce accessibility plugins versus widget
   overlays, with the tradeoffs, failure modes, and when each approach makes

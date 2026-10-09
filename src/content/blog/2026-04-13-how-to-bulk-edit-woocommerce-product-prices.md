@@ -1,8 +1,6 @@
 ---
 title: "How to Bulk Edit WooCommerce Prices (Step-by-Step Guide)"
-description: >-
-  Learn how to bulk edit WooCommerce product prices with percentage adjustments, fixed changes, and tips to avoid costly mistakes.
-  fixed changes, and tips to avoid costly mistakes.
+description: "Learn how to bulk edit WooCommerce product prices with percentage adjustments and fixed changes, plus tips to avoid costly mistakes."
 pubDate: 2026-04-13T00:00:00.000Z
 author: Harun Ray
 tags:
@@ -66,7 +64,6 @@ WooCommerce has aggressive object caching. After a bulk price update, clear the 
 ## FAQ: WooCommerce Bulk Price Editing
 
 ---
-
 
 ## Related Reading
 - [The 6 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)

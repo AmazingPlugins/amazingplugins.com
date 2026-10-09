@@ -1,5 +1,5 @@
 ---
-title: The Most Common WooCommerce WCAG Violations (And How to Fix Them)
+title: "Common WooCommerce WCAG Violations and How to Fix Them"
 description: >-
   WooCommerce sites fail WCAG for predictable reasons. Learn what breaks
   compliance most often and how to fix each violation.
@@ -93,10 +93,10 @@ If you use Elementor, also check the [WooCommerce and Elementor accessibility co
 
 ---
 
-
 ## Related Reading
 - [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
 - [WooCommerce ADA Compliance Checklist for 2026](/blog/woocommerce-ada-compliance-checklist-2026/)
 - [WooCommerce Checkout Accessibility Issues](/blog/woocommerce-checkout-accessibility-issues/)
 - [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
+- [WooCommerce color contrast issues and fixes](/blog/woocommerce-color-contrast-issues-fix/)

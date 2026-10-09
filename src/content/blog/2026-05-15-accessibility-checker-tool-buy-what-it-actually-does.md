@@ -1,8 +1,6 @@
 ---
-title: "What an Accessibility Checker Tool Actually Does (Honest Review)"
-description: >-
-  What a checker finds, what a fixer can change, and what still needs a person
-  to test on a WooCommerce store.
+title: "What an Accessibility Checker Tool Actually Does"
+description: "What a checker finds, what a fixer can change, and what still needs a person to test on a WooCommerce store, with examples of each."
 pubDate: 2026-05-15T13:07:18.494Z
 updatedDate: 2026-09-28T00:00:00.000Z
 author: Harun Ray
@@ -18,8 +16,6 @@ seoCategory: accessibility
 articleAngle: what-it-actually-does
 gscSubmitted: true
 ---
-
-# What an accessibility checker actually does
 
 A checker examines a page or site and reports possible accessibility barriers. It may point to a missing image alternative, a low contrast color pair, or an unnamed control. That report is a starting list. A separate fixer may change selected markup or behavior; some products combine both jobs.
 

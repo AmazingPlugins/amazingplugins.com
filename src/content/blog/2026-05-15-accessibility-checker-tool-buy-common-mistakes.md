@@ -19,8 +19,6 @@ articleAngle: common-mistakes
 gscSubmitted: true
 ---
 
-# Nine mistakes to avoid when buying an accessibility checker
-
 A checker can save time, but only if you know which pages it checks and what happens after it finds a problem. Here are nine ways WooCommerce merchants buy more confidence than evidence.
 
 **Disclosure and method (September 28, 2026):** AmazingPlugins publishes WooCommerce Accessibility Fixer. This guide uses [W3C evaluation guidance](https://www.w3.org/WAI/test-evaluate/tools/selecting/), public vendor documentation, and the released Fixer 1.5.1 package. We have not run a controlled comparison of vendors. The advice is a test plan, not a legal assessment.

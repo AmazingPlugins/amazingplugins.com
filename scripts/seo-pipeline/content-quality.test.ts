@@ -20,7 +20,7 @@ Alt text matters for accessibility.
 Add alt text to every product image.
 `;
 
-const strongBody = `# Shopify product image alt text checklist
+const strongBody = `Shopify product image alt text checklist, in short:
 
 Missing alt text blocks blind shoppers from understanding what you sell. For a Shopify store, fix product image alt text first because it is easy to miss during CSV imports, theme changes, and variant setup.
 

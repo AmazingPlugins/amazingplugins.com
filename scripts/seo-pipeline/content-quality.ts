@@ -67,16 +67,21 @@ export function validateGeneratedArticle(article: GeneratedArticle, context: Qua
   const errors: string[] = [];
   const warnings: string[] = [];
 
-  if (!article.title || article.title.length > 70) {
-    errors.push('title must exist and stay under 70 characters');
+  if (!article.title || article.title.length > 60) {
+    errors.push('title must exist and stay at 60 characters or fewer');
   }
 
-  if (!article.description || article.description.length < 120 || article.description.length > 170) {
-    errors.push('description must be a useful 120-170 character meta description');
+  if (!article.description || article.description.length < 120 || article.description.length > 160) {
+    errors.push('description must be a useful 120-160 character meta description');
   }
 
   if (wordCount < 1200) {
     errors.push(`word count must be at least 1200 words for an in-depth article, got ${wordCount}`);
+  }
+
+  const bodyOutsideFences = body.replace(/```[\s\S]*?```/g, '');
+  if (countMatches(bodyOutsideFences, /^# /gm) > 0) {
+    errors.push('article body must not contain an H1; the page template renders the title as the only H1');
   }
 
   if (countMatches(body, /^## /gm) < 5) {

@@ -1,5 +1,5 @@
 ---
-title: "Accessibility Overlays and ADA Claims: What Store Owners Should Verify"
+title: "Accessibility Overlays and ADA Claims: What to Verify"
 description: "An accessibility widget is no legal safe harbor. Check what it changes, then test your WooCommerce product and checkout flow with a keyboard and screen reader."
 pubDate: 2026-04-25T00:00:00.000Z
 updatedDate: 2026-09-28T00:00:00.000Z

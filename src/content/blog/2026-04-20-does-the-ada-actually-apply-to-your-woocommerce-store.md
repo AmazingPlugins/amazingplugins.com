@@ -1,5 +1,5 @@
 ---
-title: "Does the ADA Apply to Your WooCommerce Store? (Yes, Here's Why)"
+title: "Does the ADA Apply to Your WooCommerce Store?"
 description: >-
   Does the ADA apply to your WooCommerce store? Learn when ADA Title III,
   EN301549, and the EU Accessibility Act apply to you.
@@ -87,3 +87,4 @@ If you sell to the US or the EU, assume ADA Title III and the EAA apply to the s
 - [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?](/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/)
 - [How to Avoid an ADA Lawsuit With Your WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
+- [WooCommerce vs Shopify accessibility](/blog/woocommerce-vs-shopify-accessibility/)

@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce Accessibility Tools Compared: Fixers, Widgets, and Audits"
+title: "WooCommerce Accessibility Tools: Fixers, Widgets, Audits"
 description: >-
   Compare how AP Accessibility Fixer, accessWidget, UserWay, and AudioEye work.
   See what their public documentation says and what to test on your own store.

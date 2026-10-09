@@ -57,26 +57,9 @@ const faqSchema = {
   ]
 };
 
-const softwareSchema = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AP Accessibility Fixer for WooCommerce",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "WooCommerce",
-  "description": "Nine free fixers for specific accessibility issues on WooCommerce stores.",
-  "url": "https://amazingplugins.com/plugins/woocommerce-accessibility-fixer/",
-  "downloadUrl": "https://wordpress.org/plugins/amazingplugins-accessibility-fixer-for-woocommerce/",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD",
-    "description": "Free, with all nine fixers included"
-  },
-};
 ---
 
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
 
 <BaseLayout
   title="AP Accessibility Fixer for WooCommerce"

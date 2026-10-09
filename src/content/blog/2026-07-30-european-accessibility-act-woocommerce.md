@@ -1,5 +1,5 @@
 ---
-title: "European Accessibility Act and WooCommerce: Scope and Store Checklist"
+title: "European Accessibility Act and WooCommerce Checklist"
 description: "Understand how the European Accessibility Act can affect a WooCommerce store, then check product pages, checkout, support, and your service information."
 pubDate: 2026-07-30T00:00:00.000Z
 updatedDate: 2026-09-28T00:00:00.000Z
@@ -42,3 +42,5 @@ AmazingPlugins publishes the free [AP Accessibility Fixer for WooCommerce](/plug
 An automated scan is a useful way to find some issues. A completed purchase with keyboard and screen reader testing is also needed to learn whether the specific flow works. Keep a dated record of the pages tested, tools used, failures found, and fixes verified.
 
 For an action list focused on the law's service requirements, see the [EU accessibility ecommerce checklist](/blog/eu-accessibility-act-ecommerce-checklist-2026/).
+
+If you are comparing platforms before you commit, read how [WooCommerce and Shopify differ on accessibility](/blog/woocommerce-vs-shopify-accessibility/).

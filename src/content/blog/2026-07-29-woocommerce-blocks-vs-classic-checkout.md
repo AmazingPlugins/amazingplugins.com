@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce Blocks vs Classic Checkout: Accessibility Checks That Matter"
+title: "WooCommerce Blocks vs Classic Checkout: Accessibility"
 description: "Compare WooCommerce Blocks and Classic checkout by testing your payment gateway, keyboard flow, labels, errors, and screen reader announcements."
 pubDate: 2026-07-29T00:00:00.000Z
 updatedDate: 2026-09-28T00:00:00.000Z

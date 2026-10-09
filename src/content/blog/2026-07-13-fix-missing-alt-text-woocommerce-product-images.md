@@ -1,5 +1,5 @@
 ---
-title: How to Fix Missing Alt Text on WooCommerce Product Images (2026 Guide)
+title: "Fix Missing Alt Text on WooCommerce Product Images (2026)"
 description: >-
   A practical guide to finding and fixing missing alt text on WooCommerce
   product images, gallery images, and variation images - with and without a

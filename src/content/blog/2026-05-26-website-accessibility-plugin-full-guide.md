@@ -1,5 +1,5 @@
 ---
-title: 'Website Accessibility Plugin: Full 2026 Guide for WooCommerce'
+title: "Website Accessibility Plugin: 2026 Guide for WooCommerce"
 description: >-
   What accessibility plugins can fix on a WooCommerce store, what needs manual
   testing, and how to evaluate scanners, widgets, and targeted fixes.
@@ -18,8 +18,6 @@ seoCategory: accessibility
 articleAngle: full-guide
 gscSubmitted: true
 ---
-
-# Website accessibility plugins for WooCommerce: what they can do
 
 An accessibility plugin can find or change some problems on a website. It cannot tell you, by itself, whether customers can complete a purchase with a keyboard or screen reader. For a WooCommerce store, that distinction matters more than a score on a dashboard.
 

@@ -1,9 +1,6 @@
 ---
-title: How to Clean Up Your WooCommerce Database Safely (Without Breaking Anything)
-description: >-
-  Learn how to clean up a WooCommerce database the safe way. Remove orphaned
-  postmeta, expired transients, and old revisions with SQL or plugins,
-  without breaking your store.
+title: "How to Clean Up a WooCommerce Database Safely"
+description: "Clean up a WooCommerce database safely: remove orphaned postmeta, expired transients, and old revisions with SQL or plugins without breaking your store."
 pubDate: 2026-08-08T00:00:00.000Z
 author: Harun Ray
 tags:
@@ -214,3 +211,4 @@ A clean database will not fix every performance problem on its own, but it remov
 - [How to Delete Old WooCommerce Orders in Bulk (Complete Guide)](/blog/delete-old-woocommerce-orders-bulk/)
 - [The 6 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
+- [Pending payment orders in WooCommerce](/blog/woocommerce-pending-payment-orders/)

@@ -1,5 +1,5 @@
 ---
-title: "ARIA Labels in WooCommerce: The Complete Reference Guide for Store Owners"
+title: "ARIA Labels in WooCommerce: A Reference for Store Owners"
 description: "Learn the 10 essential ARIA attributes for WooCommerce, common mistakes, and how to test them so your store works with screen readers."
 pubDate: 2026-07-28T00:00:00.000Z
 updatedDate: 2026-09-28T00:00:00.000Z

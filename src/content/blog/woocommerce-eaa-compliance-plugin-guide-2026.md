@@ -15,8 +15,6 @@ canonicalUrl: 'https://amazingplugins.com/blog/woocommerce-eaa-compliance-plugin
 gscSubmitted: true
 ---
 
-# WooCommerce EAA compliance plugin guide for 2026
-
 A plugin can help find and remove accessibility barriers in a WooCommerce store. It cannot determine whether the European Accessibility Act (EAA) applies to your business or certify that your entire service meets it. Choose a tool by the parts of the shopping journey it actually checks, then test the results yourself.
 
 Reviewed September 28, 2026 against the [EAA directive](https://eur-lex.europa.eu/eli/dir/2019/882/oj), [W3C's WCAG 2.2 standard](https://www.w3.org/TR/WCAG22/), and the public AP Accessibility Fixer for WooCommerce 1.5.1 release. For a task list rather than plugin selection, use the [EAA ecommerce checklist](/blog/eu-accessibility-act-ecommerce-checklist-2026/).

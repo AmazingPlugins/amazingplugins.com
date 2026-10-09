@@ -12,21 +12,6 @@ const features = [
   { title: 'Start with a quick scenario', text: 'Choose a standard order, free-shipping check, heavy parcel, or local pickup preset. Adjust the destination and package to fit your store.' },
   { title: 'Compare results side by side', text: 'Keep a result and run another test with a different destination or package. Comparisons stay in the current browser tab, with nothing saved to your database.' },
 ];
-const softwareSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: plugin.name,
-  url: new URL(plugin.path, Astro.site).href,
-  description: plugin.description,
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'WordPress',
-  softwareRequirements: 'WordPress 6.6+, PHP 7.4+, WooCommerce',
-  softwareVersion: plugin.version,
-  downloadUrl: plugin.directory,
-  license: 'https://www.gnu.org/licenses/gpl-2.0.html',
-  screenshot: new URL('/images/shipping-rules-tester/scenario-builder.webp', Astro.site).href,
-  author: { '@type': 'Organization', name: 'AmazingPlugins', url: 'https://amazingplugins.com/' },
-};
 ---
 
 <BaseLayout
@@ -35,7 +20,6 @@ const softwareSchema = {
   image="/images/shipping-rules-tester/social-preview.jpg"
   imageAlt="Shipping Rules Tester interface showing destination and sample package controls"
 >
-  <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
   <BreadcrumbSchema items={[
     { name: 'Home', url: '/' },
     { name: 'Plugins', url: '/plugins/' },
