@@ -169,4 +169,166 @@ export const footerBadges = [
     srcLight: 'https://letslaunch.today/badge/amazingplugins.svg',
     srcDark: 'https://letslaunch.today/badge/amazingplugins.svg?theme=dark',
   },
+  {
+    id: 'web-review',
+    kind: 'raw',
+    host: 'web-review.com',
+    html: `<a href="https://web-review.com" target="_blank" rel="dofollow"><img src="https://web-review.com/badge.png" alt="Featured on Web Review" width="200" height="54" /></a>`,
+  },
+  {
+    id: 'marketingdb',
+    kind: 'raw',
+    host: 'marketingdb.live',
+    html: `<a href="https://marketingdb.live" target="_blank" rel="noopener noreferrer nofollow sponsored"><img src="https://marketingdb.live/badge.svg" alt="Launched on MarketingDB" width="190" height="44"/></a>`,
+  },
+  {
+    id: 'saasgrow',
+    kind: 'raw',
+    host: 'saasgrow.app',
+    html: `<a href="https://saasgrow.app/saas/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://saasgrow.app/api/badge?type=featured&style=light" alt="FEATURED ON SaaSGrow" width="240" height="54" /></a>`,
+  },
+  {
+    id: 'allinai',
+    kind: 'raw',
+    host: 'allinai.tools',
+    html: `<a title="All The Best AI Tools" href="https://allinai.tools">All in AI Tools</a>`,
+  },
+  {
+    id: 'doforai',
+    kind: 'raw',
+    host: 'doforai.tools',
+    html: `<a href="https://doforai.tools" target="_blank"><img src="https://doforai.tools/badge/feature-badge-white.webp" alt="Featured on doforai.tools" width="172" height="54"></a>`,
+  },
+  {
+    id: 'aitoolcenter',
+    kind: 'raw',
+    host: 'aitoolcenter.com',
+    html: `<a href="https://aitoolcenter.com/" title="AI Tool Center">AI Tool Center</a>`,
+  },
+  {
+    id: 'aihubs',
+    kind: 'raw',
+    host: 'aihubs.ai',
+    html: `<a href="https://aihubs.ai" title="AiHubs - Discover The Best AI Tools, You Don't Want to Miss">AiHubs - Discover The Best AI Tools, You Don't Want to Miss</a>`,
+  },
+  {
+    id: 'theaitoolsdir',
+    kind: 'raw',
+    host: 'theaitoolsdir.com',
+    html: `<a href="https://theaitoolsdir.com/product/amazingplugins?ref=badge" rel="dofollow">
+  <img src="https://theaitoolsdir.com/badge/amazingplugins.svg" alt="Featured on TheAIToolsDir" width="160" height="44">
+</a>`,
+  },
+  {
+    id: 'hiaitools',
+    kind: 'raw',
+    host: 'hiaitools.com',
+    html: `<a href="https://hiaitools.com" title="The latest AI Tools Directory">The latest AI Tools Diresctory</a>`,
+  },
+  {
+    id: 'ai-findr',
+    kind: 'raw',
+    host: 'ai-findr.com',
+    html: `<a href="https://ai-findr.com/" title="AI Findr Tools Directory">AI Findr Tools Diresctory</a>`,
+  },
+  {
+    id: 'aitoolfame',
+    kind: 'raw',
+    host: 'aitoolfame.com',
+    html: `<a href="https://aitoolfame.com" target="_blank" rel="noopener noreferrer">
+<img src="https://aitoolfame.com/badge-light.svg" alt="Featured on aitoolfame.com" style="height: 54px; width: auto;" />
+</a>`,
+  },
+  {
+    id: 'wtai',
+    kind: 'raw',
+    host: 'wtai.cc',
+    html: `<a href="https://wtai.cc/" target="_blank" rel="noopener">Featured on WTAI Navigation</a>`,
+  },
+  {
+    id: 'topaitoolsreview',
+    kind: 'raw',
+    host: 'topaitoolsreview.com',
+    html: `<a href="https://topaitoolsreview.com" target="_blank">Featured on Topaitoolsreview.com</a>`,
+  },
+  {
+    id: 'shipstry',
+    kind: 'raw',
+    host: 'shipstry.com',
+    html: `<a href="https://shipstry.com/" target="_blank" rel="noopener noreferrer">
+  <img src="https://shipstry.com/badges/featured.svg" alt="Featured on Shipstry" width="220" height="52">
+</a>`,
+  },
+  {
+    id: 'toolindex',
+    kind: 'raw',
+    host: 'toolindex.net',
+    html: `<a href="https://toolindex.net/?ref=listed" target="_blank" rel="nofollow noopener">Listed on Tool Index</a>`,
+  },
+  {
+    id: 'popwebtools',
+    kind: 'raw',
+    host: 'popwebtools.com',
+    html: `<a href="https://www.popwebtools.com" target="_blank" rel="noopener noreferrer">
+  <img src="https://www.popwebtools.com/images/featured-badge-light.png" alt="Featured on PopWebTools" width="240" height="86" style="display:block;border:0;" />
+</a>`,
+  },
+  {
+    id: 'buildlist',
+    kind: 'raw',
+    host: 'buildlist.io',
+    html: `<a href="https://buildlist.io" target="_blank" rel="noopener">
+  <img src="https://buildlist.io/badge.svg" alt="Featured on Buildlist" style="height:40px;width:auto;" />
+</a>`,
+  },
+  {
+    id: 'ls-saasgrave',
+    kind: 'raw',
+    host: 'ls.saasgrave.org',
+    html: `<a href="https://ls.saasgrave.org/products/amazingplugins?ref=badge" target="_blank" rel="noopener">
+  <img src="https://ls.saasgrave.org/api/badge?slug=amazingplugins&theme=light" alt="Featured on Saasgrave Launches" width="250" height="54" />
+</a>`,
+  },
+  {
+    id: 'xinquji',
+    kind: 'raw',
+    host: 'xinquji.com',
+    html: `<a href="https://xinquji.com" target="_blank" rel="noopener noreferrer"><img src="https://xinquji.com/badge" alt="Featured on Xinquji" style="width:200px;height:54px;" width="200" height="54" /></a>`,
+  },
+  {
+    id: 'artificin',
+    kind: 'raw',
+    host: 'artificin.com',
+    html: `<a href="https://artificin.com?utm_source=badge&utm_medium=referral&utm_campaign=featured_badge" target="_blank" rel="noopener">
+  <img src="https://artificin.com/badges/Artificin-badge.png"
+       alt="Featured on Artificin"
+       style="border: none; width: 175px; height: 50px;">
+</a>`,
+  },
+  {
+    id: 'in-sla',
+    kind: 'raw',
+    host: 'in-sla.org',
+    html: `<a href="https://in-sla.org/">In-SLA Directory</a>`,
+  },
+  {
+    id: 'inuidea',
+    kind: 'raw',
+    host: 'inuidea.com',
+    html: `<a href="https://inuidea.com/hunt" target="_blank" rel="noopener noreferrer">
+  <img src="https://inuidea.com/wp-content/uploads/Featured-on-Inuidea-Hunt-Badge.svg" alt="Featured on Inuidea Hunt" width="150">
+</a>`,
+  },
+  {
+    id: 'kdjingpai',
+    kind: 'raw',
+    host: 'kdjingpai.com',
+    html: `<a href="https://www.kdjingpai.com" target="_blank" title="AI生产力工具">AI生产力工具</a>`,
+  },
+  {
+    id: 'fridayhunt',
+    kind: 'raw',
+    host: 'fridayhunt.com',
+    html: `<a href="https://fridayhunt.com/" target="_blank" rel="noopener">Featured on FridayHunt</a>`,
+  },
 ];

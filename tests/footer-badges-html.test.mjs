@@ -33,8 +33,11 @@ const hrefOf = (anchor) => attributeOf(anchor, 'href');
 const imgTagOf = (anchor) => anchor.match(/<img\b[^>]*>/i)?.[0] ?? '';
 const imgTagsOf = (anchor) => [...anchor.matchAll(/<img\b[^>]*>/gi)].map(([tag]) => tag);
 const anchorsIn = (markup) => [...markup.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/gi)].map(([anchor]) => anchor);
-const hasDirectoryDomain = (anchor, domain) => hrefOf(anchor).includes(domain) || attributeOf(imgTagOf(anchor), 'src').includes(domain)
-  || imgTagsOf(anchor).some((img) => attributeOf(img, 'src').includes(domain));
+// Match whole hostnames so "toolfame.com" does not also match "aitoolfame.com".
+const hasDirectoryDomain = (anchor, domain) => {
+  const host = new RegExp(`//(?:[\\w-]+\\.)*${domain.replace(/\./g, '\\.')}(?![\\w.-])`, 'i');
+  return [hrefOf(anchor), ...imgTagsOf(anchor).map((img) => attributeOf(img, 'src'))].some((url) => host.test(url));
+};
 const assertUniqueHomepageBadge = (markup, domain) => {
   const count = anchorsIn(markup).filter((anchor) => hasDirectoryDomain(anchor, domain)).length;
   assert.equal(count, 1, `${domain} should have exactly one homepage badge`);
@@ -223,7 +226,7 @@ test('keeps one homepage badge for every directory already on the site', () => {
 });
 
 test('prints each supplied raw badge snippet once in the primary group', () => {
-  assert.equal(rawBadges.length, 19);
+  assert.equal(rawBadges.length, 43);
   for (const badge of rawBadges) {
     assert.equal(countOccurrences(footerHtml, badge.html), 1, `${badge.host} snippet should appear once in the primary group`);
     assertUniqueHomepageBadge(footerHtml, badge.host);
