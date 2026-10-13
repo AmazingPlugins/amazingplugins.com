@@ -632,7 +632,7 @@ export const footerBadges = [
     kind: 'raw',
     host: 'hiproducty.com',
     html: `<a href="https://hiproducty.com" target="_blank" rel="noopener noreferrer">
-  <img src="https://hiproducty.com/badge.svg" alt="Featured on Hiproducty" />
+  <img src="https://www.hiproducty.com/badge/hiproducty-recommend-light.svg" alt="Featured on Hiproducty" width="180" height="48" />
 </a>`,
   },
   {
