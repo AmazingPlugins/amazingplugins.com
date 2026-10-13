@@ -874,6 +874,60 @@ export const footerBadges = [
     host: 'toolsclaw.com',
     html: `<a href="https://toolsclaw.com" target="_blank" rel="noopener noreferrer"><img src="https://toolsclaw.com/badge/toolsclaw.com-badge.svg" alt="Featured on ToolsClaw" width="200" height="54" loading="lazy"></a>`,
   },
+  {
+    id: 'cloutstack',
+    kind: 'raw',
+    host: 'cloutstack.net',
+    html: `<a target="_blank" href="https://cloutstack.net/tool/your-tool"><img src="https://cloutstack.net/badge/badge.png" alt="Featured on CloutStack" height="54" loading="lazy"></a>`,
+  },
+  {
+    id: 'startupdirectory',
+    kind: 'raw',
+    host: 'startupdirectory.net',
+    html: `<a href="https://startupdirectory.net" rel="dofollow">
+  <img src="https://startupdirectory.net/badge/featured-light.svg" alt="Featured on StartupDirectory" width="300" />
+</a>`,
+  },
+  {
+    id: 'nextlaunch',
+    kind: 'raw',
+    host: 'nextlaunch.io',
+    html: `<a href="https://nextlaunch.io/projects/amazingplugins" target="_blank" title="Featured on Next Launch">
+  <img src="https://nextlaunch.io/images/badges/nextlaunch-badge-light.svg" alt="Featured on Next Launch" style="width: 175px; height: auto;" />
+</a>`,
+  },
+  {
+    id: 'aifinder',
+    kind: 'raw',
+    host: 'aifinder.site',
+    html: `<a href="https://aifinder.site" target="_blank" rel="noopener noreferrer">
+  <img src="https://aifinder.site/light-badge.png" alt="Discover more AI tools at aifinder.site" style="width: 200px; height: auto;">
+</a>`,
+  },
+  {
+    id: 'starterbest',
+    kind: 'raw',
+    host: 'starterbest.com',
+    html: `<a href="https://starterbest.com" target="_blank" rel="noopener noreferrer"><img src="https://starterbest.com/badages-awards.svg" alt="Featured on Starter Best" style="height: 54px; width: auto;"/></a>`,
+  },
+  {
+    id: 'theonestartup',
+    kind: 'raw',
+    host: 'theonestartup.com',
+    html: `<a href="https://theonestartup.com" target="_blank" rel="noopener noreferrer"><img src="https://theonestartup.com/badages-awards.svg" alt="Featured on The One Startup" style="height: 54px; width: auto;"/></a>`,
+  },
+  {
+    id: 'saascubes',
+    kind: 'raw',
+    host: 'saascubes.com',
+    html: `<a href="https://saascubes.com" rel="noopener" title="Listed on SaaS Cubes"><img src="https://saascubes.com/images/badges/badge-dark.png" alt="Listed on SaaS Cubes" width="175" height="54" /></a>`,
+  },
+  {
+    id: 'launchboard',
+    kind: 'raw',
+    host: 'launchboard.dev',
+    html: `<a href="https://launchboard.dev" target="_blank" rel="noopener"><img src="https://launchboard.dev/featured.svg" alt="Featured on LaunchBoard" width="240" height="60" /></a>`,
+  },
 ];
 
 // Raw directory snippets are pasted verbatim; lazy-load their images at render time so the footer doesn't fetch ~80 third-party origins on every page.
