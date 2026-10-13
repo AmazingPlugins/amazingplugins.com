@@ -1,6 +1,6 @@
 ---
 import { shippingTester } from '../data/shipping-rules-tester';
-import { footerBadges } from '../data/footer-badges.mjs';
+import { footerBadges, lazyImages } from '../data/footer-badges.mjs';
 ---
 
 <footer class="footer">
@@ -109,7 +109,7 @@ import { footerBadges } from '../data/footer-badges.mjs';
                   }
 
                   if (badge.kind === 'raw') {
-                    return <Fragment set:html={badge.html} />;
+                    return <Fragment set:html={lazyImages(badge.html)} />;
                   }
 
                   return (

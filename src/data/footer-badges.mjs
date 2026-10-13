@@ -827,3 +827,6 @@ export const footerBadges = [
     html: `<a href="https://youraihunt.com/" target="_blank" rel="noopener">Featured on Your AI Hunt</a>`,
   },
 ];
+
+// Raw directory snippets are pasted verbatim; lazy-load their images at render time so the footer doesn't fetch ~80 third-party origins on every page.
+export const lazyImages = (html) => html.replace(/<img(?![^>]*\bloading=)/gi, '<img loading="lazy" decoding="async"');
