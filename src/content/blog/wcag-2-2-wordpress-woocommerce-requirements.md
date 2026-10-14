@@ -71,4 +71,4 @@ Record the page, viewport, browser, input method, issue, code owner, fix, and re
 ## Related reading
 
 - [All nine WCAG 2.2 changes for WooCommerce](/blog/wcag-22-compliance-woocommerce-what-changed/)
-- [WooCommerce accessibility plugin selection guide](/blog/ada-compliance-plugin-full-guide/)
+- [WooCommerce accessibility plugin selection guide](/blog/ada-compliance-woocommerce-plugin-full-guide/)

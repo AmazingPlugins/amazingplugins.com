@@ -18,6 +18,21 @@ const { post } = Astro.props;
 const canonicalSlug = Astro.props.canonicalSlug ?? post.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
 const { title, description, pubDate, updatedDate, author, tags } = post.data;
 const { Content } = await render(post);
+
+// Related guides: rarer shared tags weigh more, so topical siblings beat generic "WooCommerce" overlap.
+const allPosts = await getCollection('blog');
+const tagCount = new Map<string, number>();
+allPosts.forEach(p => p.data.tags?.forEach(t => tagCount.set(t, (tagCount.get(t) ?? 0) + 1)));
+const related = allPosts
+  .filter(p => p.id !== post.id)
+  .map(p => ({
+    p,
+    score: (p.data.tags ?? []).filter(t => tags?.includes(t)).reduce((sum, t) => sum + 1 / (tagCount.get(t) ?? 1), 0),
+  }))
+  .filter(r => r.score > 0)
+  .sort((a, b) => b.score - a.score || b.p.data.pubDate.valueOf() - a.p.data.pubDate.valueOf())
+  .slice(0, 4)
+  .map(({ p }) => ({ title: p.data.title, href: `/blog/${p.id.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '')}/` }));
 const canonicalPath = `/blog/${canonicalSlug}/`;
 
 const formattedDate = pubDate.toLocaleDateString('en-US', {
@@ -82,6 +97,12 @@ const articleSchema = {
     <div class="post-content">
       <div class="container container-narrow">
         <Content />
+        {related.length > 0 && (
+          <aside class="related-guides" aria-labelledby="related-guides-heading">
+            <h2 id="related-guides-heading">Related guides</h2>
+            <ul>{related.map(r => <li><a href={r.href}>{r.title}</a></li>)}</ul>
+          </aside>
+        )}
         <aside class="author-note" aria-label="About the author">
           <h2>About the author</h2>
           <p><a href="https://harun.dev/bio" rel="author">Harun Ray</a> writes about WooCommerce tools for AmazingPlugins. His public bio lists AmazingPlugins among his projects. Where an article describes testing, check its stated method and date before treating the result as current.</p>
@@ -92,6 +113,12 @@ const articleSchema = {
 </BaseLayout>
 
 <style>
+  .related-guides {
+    margin-top: 3rem;
+  }
+
+  .related-guides h2 { margin-top: 0; }
+
   .author-note {
     margin-top: 3rem;
     padding-top: 1.5rem;
