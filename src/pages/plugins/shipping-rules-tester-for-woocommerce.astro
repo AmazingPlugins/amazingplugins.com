@@ -12,7 +12,24 @@ const features = [
   { title: 'Start with a quick scenario', text: 'Choose a standard order, free-shipping check, heavy parcel, or local pickup preset. Adjust the destination and package to fit your store.' },
   { title: 'Compare results side by side', text: 'Keep a result and run another test with a different destination or package. Comparisons stay in the current browser tab, with nothing saved to your database.' },
 ];
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: plugin.name,
+  description: plugin.description,
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'WordPress with WooCommerce',
+  softwareVersion: plugin.version,
+  url: new URL(plugin.path, Astro.site).href,
+  downloadUrl: plugin.directory,
+  sameAs: [plugin.source],
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  publisher: { '@type': 'Organization', name: 'AmazingPlugins', url: 'https://amazingplugins.com' },
+};
 ---
+
+<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
 
 <BaseLayout
   title="Shipping Rules Tester for WooCommerce"
