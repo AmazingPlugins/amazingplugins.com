@@ -19,6 +19,9 @@ const blogLastModified = new Map(
     }),
 );
 
+// Pre-launch Amazing Security pages: noindex in the layout and kept out of the sitemap. Remove at launch.
+const heldFromIndex = ['/plugins/amazing-security/', '/compare/amazing-security-vs-wordfence/', '/compare/amazing-security-vs-custonis/'];
+
 export default defineConfig({
   site: 'https://amazingplugins.com',
   trailingSlash: 'always',
@@ -34,6 +37,7 @@ export default defineConfig({
   integrations: [
     partytown({ config: { forward: ['dataLayer.push', 'gtag'] } }),
     sitemap({
+      filter: (page) => !heldFromIndex.includes(new URL(page).pathname),
       serialize(item) {
         const url = item.url.endsWith('/') ? item.url : `${item.url}/`;
         const articleDate = blogLastModified.get(new URL(url).pathname);
