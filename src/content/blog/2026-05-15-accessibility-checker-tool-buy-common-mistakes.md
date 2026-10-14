@@ -97,3 +97,4 @@ It is a useful starting point. You still need someone to act on findings and tes
 
 - [Step-by-step buying guide](/blog/accessibility-checker-tool-buy-step-by-step-guide/)
 - [WCAG 2.2 buyer's checklist](/blog/accessibility-checker-tool-buy-wcag-checklist/)
+- [Website accessibility checker pricing in 2026](/blog/website-accessibility-checker-pricing/)
