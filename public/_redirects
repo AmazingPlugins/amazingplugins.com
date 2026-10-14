@@ -40,7 +40,7 @@
 /blog/2026-05-22-wcag-22-compliance-woocommerce-checklist* /blog/wcag-22-compliance-woocommerce-checklist/ 301
 /blog/2026-05-22-wcag-22-compliance-woocommerce-deadline* /blog/wcag-22-compliance-woocommerce-deadline/ 301
 /blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed* /blog/wcag-22-compliance-woocommerce-what-changed/ 301
-/blog/2026-05-25-ada-compliance-plugin-full-guide* /blog/ada-compliance-plugin-full-guide/ 301
+/blog/2026-05-25-ada-compliance-plugin-full-guide* /blog/ada-compliance-woocommerce-plugin-full-guide/ 301
 /blog/2026-05-26-website-accessibility-plugin-full-guide* /blog/website-accessibility-plugin-full-guide/ 301
 /blog/2026-05-26-woocommerce-accessibility-plugin-vs-accessibe* /blog/woocommerce-accessibility-plugin-vs-accessibe/ 301
 /blog/2026-05-26-woocommerce-accessibility-plugin-vs-audioeye* /blog/woocommerce-accessibility-plugin-vs-audioeye/ 301
@@ -50,13 +50,13 @@
 /blog/2026-07-14-delete-old-woocommerce-orders-bulk* /blog/delete-old-woocommerce-orders-bulk/ 301
 /blog/2026-07-23-ada-lawsuits-rising-woocommerce-2026* /blog/ada-lawsuits-rising-woocommerce-2026/ 301
 /blog/2026-07-24-screen-reader-testing-woocommerce-guide* /blog/screen-reader-testing-woocommerce-guide/ 301
-/blog/2026-07-24-screen-reader-testing-woocommerce* /blog/screen-reader-testing-woocommerce/ 301
+/blog/2026-07-24-screen-reader-testing-woocommerce* /blog/screen-reader-testing-woocommerce-guide/ 301
 /blog/2026-07-25-woocommerce-elementor-accessibility-plugin-conflicts* /blog/woocommerce-elementor-accessibility-plugin-conflicts/ 301
 /blog/2026-07-27-woocommerce-accessibility-plugin-comparison* /blog/woocommerce-accessibility-plugin-comparison/ 301
 /blog/2026-07-27-woocommerce-checkout-accessibility-fix-sales* /blog/woocommerce-checkout-accessibility-fix-sales/ 301
 /blog/2026-07-28-aria-labels-reference-guide* /blog/aria-labels-reference-guide/ 301
 /blog/2026-07-29-woocommerce-blocks-vs-classic-checkout* /blog/woocommerce-blocks-vs-classic-checkout/ 301
-/blog/2026-07-30-european-accessibility-act-woocommerce* /blog/european-accessibility-act-woocommerce/ 301
+/blog/2026-07-30-european-accessibility-act-woocommerce* /blog/eu-accessibility-act-ecommerce-checklist-2026/ 301
 /blog/2026-08-07-woocommerce-color-contrast-issues-fix* /blog/woocommerce-color-contrast-issues-fix/ 301
 /blog/2026-08-08-how-to-clean-up-woocommerce-database-safely* /blog/how-to-clean-up-woocommerce-database-safely/ 301
 /blog/2026-08-10-woocommerce-vs-shopify-accessibility* /blog/woocommerce-vs-shopify-accessibility/ 301
@@ -110,3 +110,9 @@
 /blog/best-shopify-accessibility-app-compared* /plugins/ 301
 /accessible-product-data* /blog/accessibility-seo-ranking-factor-ecommerce/ 301
 /blog/woocommerce-accessibility-audit* /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
+
+# Duplicate posts merged into the stronger page (2026-10-14). Exact paths: a splat would also catch the -guide slug.
+/blog/screen-reader-testing-woocommerce /blog/screen-reader-testing-woocommerce-guide/ 301
+/blog/screen-reader-testing-woocommerce/ /blog/screen-reader-testing-woocommerce-guide/ 301
+/blog/ada-compliance-plugin-full-guide* /blog/ada-compliance-woocommerce-plugin-full-guide/ 301
+/blog/european-accessibility-act-woocommerce* /blog/eu-accessibility-act-ecommerce-checklist-2026/ 301

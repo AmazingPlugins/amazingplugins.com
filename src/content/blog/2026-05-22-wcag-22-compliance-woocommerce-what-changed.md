@@ -86,4 +86,4 @@ There is no reliable universal estimate. A standard store with accessible compon
 ## Related reading
 
 - [WCAG 2.2 deadline and legal scope for WooCommerce](/blog/wcag-22-compliance-woocommerce-deadline/)
-- [Choosing an ADA accessibility plugin for WooCommerce](/blog/ada-compliance-plugin-full-guide/)
+- [Choosing an ADA accessibility plugin for WooCommerce](/blog/ada-compliance-woocommerce-plugin-full-guide/)
