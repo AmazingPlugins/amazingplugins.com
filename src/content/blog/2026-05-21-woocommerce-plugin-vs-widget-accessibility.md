@@ -122,7 +122,7 @@ A plugin can fix the store. A widget can only decorate the problem.
 
 ## Related Reading
 
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/how-to-avoid-ada-lawsuits-woocommerce-store/">How to Reduce ADA Accessibility Risk on a WooCommerce Store</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/">Why Accessibility Overlays Don't Protect You</a> - Why code-level fixes beat overlay widgets
 - <a href="/blog/woocommerce-accessibility-plugin-vs-accessibe/">WooCommerce Accessibility Plugin vs accessiBe</a> - Feature comparison of top plugins
 - <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> - Nine free fixers and their limits

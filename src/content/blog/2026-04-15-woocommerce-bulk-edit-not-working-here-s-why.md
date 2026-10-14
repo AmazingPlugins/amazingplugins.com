@@ -72,5 +72,5 @@ The first step is always diagnosing correctly. Random "try this plugin" advice w
 - [The 6 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
 - [How to Bulk Edit WooCommerce Product Prices](/blog/how-to-bulk-edit-woocommerce-product-prices/)
 - [How to Bulk Edit WooCommerce Variations](/blog/how-to-bulk-edit-woocommerce-variations/)
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [How to Reduce ADA Accessibility Risk on a WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)

@@ -160,7 +160,7 @@ If you are comparing specific vendors, use:
 
 - <a href="/blog/best-wcag-wordpress-plugins-compared/">Best WCAG WordPress Plugins Compared</a> - Scanners, fixers, WooCommerce tools, and overlays side by side
 - <a href="/blog/woocommerce-accessibility-widget-compared/">WooCommerce Accessibility Widget Compared</a> - Product-by-product take on the widget search
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/how-to-avoid-ada-lawsuits-woocommerce-store/">How to Reduce ADA Accessibility Risk on a WooCommerce Store</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
 - <a href="/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/">WCAG 2.1 AA vs AAA: What's the Real Difference</a> - Understanding the standards that matter
 - <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> - Nine free fixers and their limits

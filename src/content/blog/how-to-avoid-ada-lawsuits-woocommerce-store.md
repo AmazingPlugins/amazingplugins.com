@@ -18,7 +18,7 @@ seoKeywords:
   - ADA compliance woocommerce 2026
   - woocommerce accessibility lawsuit protection
 seoCategory: Guides
-canonicalUrl: 'https://amazingplugins.com/blog/how-to-avoid-ada-lawsuits-woocommerce-store/'
+canonicalUrl: '/blog/how-to-avoid-ada-lawsuits-woocommerce-store/'
 gscSubmitted: true
 ---
 
@@ -76,6 +76,5 @@ You can publish a truthful statement with a contact method and known limitations
 
 ## Related reading
 
-- [How to make a WooCommerce store more accessible](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
 - [ADA ecommerce remediation plan template](/blog/ada-ecommerce-remediation-plan-template/)
 - [WCAG 2.2 requirements for WordPress and WooCommerce](/blog/wcag-2-2-wordpress-woocommerce-requirements/)

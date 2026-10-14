@@ -272,7 +272,7 @@ Run a scan after theme updates, WooCommerce updates, plugin changes, checkout ch
 ---
 
 ## Related Reading
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [How to Reduce ADA Accessibility Risk on a WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [ADA Ecommerce Remediation Plan Template](/blog/ada-ecommerce-remediation-plan-template/)
 - [EU Accessibility Act Ecommerce Checklist 2026](/blog/eu-accessibility-act-ecommerce-checklist-2026/)
 - [WCAG 2.2 Requirements for WordPress and WooCommerce](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
