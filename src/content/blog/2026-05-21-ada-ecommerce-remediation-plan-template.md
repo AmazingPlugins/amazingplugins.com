@@ -113,7 +113,7 @@ Update it whenever you finish a fix, discover a new issue, or re-scan after a th
 
 ## Related pages
 
-- [Run a scan and fix violations](https://amazingplugins.com/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [Run a scan and fix violations](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [Publish an accessibility statement template](https://amazingplugins.com/blog/ada-compliance-woocommerce-plugin-full-guide/)
 
 ## Bottom line
@@ -124,7 +124,7 @@ A remediation plan is not paperwork for its own sake. It is how you stop accessi
 
 ## Related Reading
 
-- <a href="/blog/how-to-make-your-woocommerce-store-ada-compliant/">How to Make Your WooCommerce Store ADA Compliant</a> - Step-by-step guide to the 10 most impactful fixes
+- <a href="/blog/how-to-avoid-ada-lawsuits-woocommerce-store/">How to Reduce ADA Accessibility Risk on a WooCommerce Store</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/ada-compliance-woocommerce-plugin-full-guide/">ADA Compliance WooCommerce Plugin Full Guide</a> - Deep dive into plugin options
 - <a href="/blog/eu-accessibility-act-ecommerce-checklist-2026/">EU Accessibility Act Ecommerce Checklist 2026</a> - EU compliance requirements
 - <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> - Nine free, targeted fixes; verify each change on your store

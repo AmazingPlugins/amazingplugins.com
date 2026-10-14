@@ -83,6 +83,6 @@ Review this. If it looks right, click Commit. The changes go live immediately.
 - [The 6 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
 - [How to Bulk Edit WooCommerce Product Prices](/blog/how-to-bulk-edit-woocommerce-product-prices/)
 - [WooCommerce Bulk Edit Not Working? Here's Why](/blog/woocommerce-bulk-edit-not-working-here-s-why/)
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
+- [How to Reduce ADA Accessibility Risk on a WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
 

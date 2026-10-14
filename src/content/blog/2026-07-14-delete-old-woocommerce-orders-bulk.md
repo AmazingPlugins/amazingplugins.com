@@ -157,7 +157,7 @@ The safest workflow is always: scan first (dry run), verify what will be deleted
 
 - [WooCommerce Checkout Accessibility: Fix the 5 Issues That Kill Sales](/blog/woocommerce-checkout-accessibility-fix-sales/)
 - [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
-- [ADA website claims and WooCommerce: how to check your store](/blog/ada-lawsuits-rising-woocommerce-2026/)
+- [How to reduce ADA accessibility risk on a WooCommerce store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
 - [Pending payment orders in WooCommerce](/blog/woocommerce-pending-payment-orders/)

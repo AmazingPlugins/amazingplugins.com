@@ -28,7 +28,7 @@ ADA Title III covers places of public accommodation. There is still no single fe
 
 Size is not a get-out. A one-product store that takes US orders can still be named. Location is not a get-out either. If US customers can buy from you, plaintiffs treat you as fair game even when the business sits outside the US.
 
-The volume is the reason people pay attention. Digital accessibility filings jumped again in 2025. Ecommerce shows up a lot because checkout and account forms collect money and personal data. For the current numbers, see [ADA lawsuits and WooCommerce in 2026](/blog/ada-lawsuits-rising-woocommerce-2026/).
+The volume is the reason people pay attention. Digital accessibility filings jumped again in 2025. Ecommerce shows up a lot because checkout and account forms collect money and personal data. For the current numbers, see [ADA lawsuits and WooCommerce in 2026](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/).
 
 ## When the European Accessibility Act covers you
 
@@ -70,7 +70,7 @@ You do not need a $5k audit to see if you have a problem.
 
 If any of those fail, you have work. Most of it is the same five Woo problems, not a unique snowflake theme.
 
-Step-by-step fixes live in [how to make your WooCommerce store ADA compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/). For the difference between AA and AAA, see [WCAG 2.1 AA vs AAA](/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/).
+Step-by-step fixes live in [how to make your WooCommerce store ADA compliant](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/). For the difference between AA and AAA, see [WCAG 2.1 AA vs AAA](/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/).
 
 [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/) automates the repeatable ones: product alt text, labels, focus, skip links. It is free. It is not a certificate and it will not write your product copy.
 
@@ -82,8 +82,6 @@ If you sell to the US or the EU, assume ADA Title III and the EAA apply to the s
 
 ## Related Reading
 
-- [How to Make Your WooCommerce Store ADA Compliant](/blog/how-to-make-your-woocommerce-store-ada-compliant/)
-- [ADA website claims and WooCommerce: how to check your store](/blog/ada-lawsuits-rising-woocommerce-2026/)
 - [WCAG 2.1 AA vs AAA: What's the Real Difference for E-commerce?](/blog/wcag-2-1-aa-vs-aaa-what-s-the-real-difference-for-e-commerce/)
 - [How to Avoid an ADA Lawsuit With Your WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
