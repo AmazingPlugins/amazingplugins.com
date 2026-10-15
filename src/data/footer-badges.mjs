@@ -651,7 +651,7 @@ export const footerBadges = [
     id: 'launchkiwi',
     kind: 'raw',
     host: 'launchkiwi.com',
-    html: `<a href="https://launchkiwi.com/" target="_blank" rel="noopener">Featured on LaunchKiwi</a>`,
+    html: `<a href="https://launchkiwi.com/p/amazingplugins" target="_blank" rel="noopener"><img src="https://launchkiwi.com/badge-light.svg" alt="Featured on LaunchKiwi" width="198" height="62" /></a>`,
   },
   {
     id: 'launchnest',
@@ -1035,6 +1035,24 @@ export const footerBadges = [
     kind: 'raw',
     host: 'saasearch.io',
     html: `<a href="https://saasearch.io/product/amazingplugins?utm_source=badge&utm_medium=referral&utm_campaign=featured_badge&ref=saasearch" target="_blank" rel="noopener"><img src="https://saasearch.io/api/badge/amazingplugins?theme=light" alt="Featured on SaaSearch" style="height:48px;width:auto;"/></a>`,
+  },
+  {
+    id: 'goodsaas',
+    kind: 'raw',
+    host: 'goodsaas.xyz',
+    html: `<a href="https://goodsaas.xyz/saas/amazingplugins" target="_blank" rel="noopener"><img src="https://goodsaas.xyz/badge/amazingplugins.svg?theme=dark" alt="AmazingPlugins on goodSaaS" /></a>`,
+  },
+  {
+    id: 'toolroots',
+    kind: 'raw',
+    host: 'toolroots.com',
+    html: `<a href="https://toolroots.com" target="_blank" rel="noopener"><img src="https://toolroots.com/badge.svg" alt="Featured on ToolRoots" width="181" height="32" /></a>`,
+  },
+  {
+    id: 'indieascent',
+    kind: 'raw',
+    host: 'indieascent.com',
+    html: `<a href="https://indieascent.com/p/amazingplugins" target="_blank" rel="noopener"><img src="https://indieascent.com/badge/standard-light.svg" alt="Featured on IndieAscent" width="200" height="54" /></a>`,
   },
 ];
 
