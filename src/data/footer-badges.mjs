@@ -1054,6 +1054,18 @@ export const footerBadges = [
     host: 'indieascent.com',
     html: `<a href="https://indieascent.com/p/amazingplugins" target="_blank" rel="noopener"><img src="https://indieascent.com/badge/standard-light.svg" alt="Featured on IndieAscent" width="200" height="54" /></a>`,
   },
+  {
+    id: 'thetoolpicker',
+    kind: 'raw',
+    host: 'thetoolpicker.com',
+    html: `<a href="https://www.thetoolpicker.com?ref=amazingplugins" target="_blank" rel="noopener">Featured on TheToolPicker</a>`,
+  },
+  {
+    id: 'softwarecomoservicio',
+    kind: 'raw',
+    host: 'softwarecomoservicio.com',
+    html: `<a href="https://softwarecomoservicio.com"><img src="https://softwarecomoservicio.com/badge/badge-dark.svg" alt="Featured on Software Como Servicio" width="178" height="40" /></a>`,
+  },
 ];
 
 // Raw directory snippets are pasted verbatim; lazy-load their images at render time so the footer doesn't fetch ~80 third-party origins on every page.
