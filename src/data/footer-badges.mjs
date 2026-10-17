@@ -1138,6 +1138,54 @@ export const footerBadges = [
     host: 'vibetoyou.com',
     html: `<a href="https://vibetoyou.com" target="_blank"><img src="https://vibetoyou.com/images/badge-light.svg" alt="Listed on VibeToYou" width="186" height="56" /></a>`,
   },
+  {
+    id: 'indiepocket',
+    kind: 'raw',
+    host: 'indiepocket.com',
+    html: `<a href="https://indiepocket.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on indiepocket.com</a>`,
+  },
+  {
+    id: 'launchgp',
+    kind: 'raw',
+    host: 'launchgp.io',
+    html: `<a href="https://launchgp.io" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on launchgp.io</a>`,
+  },
+  {
+    id: 'launchrove',
+    kind: 'raw',
+    host: 'launchrove.com',
+    html: `<a href="https://launchrove.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on launchrove.com</a>`,
+  },
+  {
+    id: 'launchwall',
+    kind: 'raw',
+    host: 'launchwall.online',
+    html: `<a href="https://launchwall.online" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on launchwall.online</a>`,
+  },
+  {
+    id: 'makerpocket',
+    kind: 'raw',
+    host: 'makerpocket.com',
+    html: `<a href="https://makerpocket.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on makerpocket.com</a>`,
+  },
+  {
+    id: 'superlaunchai',
+    kind: 'raw',
+    host: 'superlaunchai.com',
+    html: `<a href="https://superlaunchai.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on superlaunchai.com</a>`,
+  },
+  {
+    id: 'tooldirectory',
+    kind: 'raw',
+    host: 'tooldirectory.dev',
+    html: `<a href="https://tooldirectory.dev" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on tooldirectory.dev</a>`,
+  },
+  {
+    id: 'toolsnap',
+    kind: 'raw',
+    host: 'toolsnap.ai',
+    html: `<a href="https://toolsnap.ai" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on toolsnap.ai</a>`,
+  },
 ];
 
 // Raw directory snippets are pasted verbatim; lazy-load their images at render time so the footer doesn't fetch ~80 third-party origins on every page.
