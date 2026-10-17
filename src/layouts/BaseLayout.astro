@@ -72,6 +72,7 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     {bingVerificationCode && <meta name="msvalidate.01" content={bingVerificationCode} />}
+    {Astro.url.pathname === '/' && <meta name="legit-verify" content="legit-PumPolDn6AsJrMZtPzeKOmvSWlEt" />}
 
     <!-- Fonts -->
     <link rel="preload" href={interFont} as="font" type="font/woff2" crossorigin />

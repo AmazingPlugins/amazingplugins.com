@@ -323,7 +323,7 @@ export const footerBadges = [
     id: 'topaitoolsreview',
     kind: 'raw',
     host: 'topaitoolsreview.com',
-    html: `<a href="https://topaitoolsreview.com" target="_blank">Featured on Topaitoolsreview.com</a>`,
+    html: `<a href="https://topaitoolsreview.com" target="_blank" rel="noopener"><img src="https://cdn.topaitoolsreview.com/defaults/featured-on_light.svg" style="width: 200px; height: 50px;" width="200" height="50" alt="Featured on TopAIToolsReview"></a>`,
   },
   {
     id: 'shipstry',
@@ -601,7 +601,7 @@ export const footerBadges = [
     id: 'daniellaunches',
     kind: 'raw',
     host: 'daniellaunches.com',
-    html: `<a href="https://daniellaunches.com/" target="_blank" rel="noopener">Featured on DanielLaunches</a>`,
+    html: `<a href="https://daniellaunches.com" target="_blank" rel="noopener noreferrer"><img src="https://daniellaunches.com/badge-light.svg" alt="Featured on DanielLaunches" style="height:30px;width:auto"/></a>`,
   },
   {
     id: 'dirs',
@@ -657,7 +657,7 @@ export const footerBadges = [
     id: 'launchnest',
     kind: 'raw',
     host: 'launchnest.io',
-    html: `<a href="https://launchnest.io/" target="_blank" rel="noopener">Featured on LaunchNest</a>`,
+    html: `<a href="https://launchnest.io/p/amazingplugins" target="_blank"><img src="https://launchnest.io/badge/amazingplugins.svg?variant=featured" alt="AmazingPlugins on LaunchNest" width="220" height="56" /></a>`,
   },
   {
     id: 'launchpadly',
@@ -1065,6 +1065,78 @@ export const footerBadges = [
     kind: 'raw',
     host: 'softwarecomoservicio.com',
     html: `<a href="https://softwarecomoservicio.com"><img src="https://softwarecomoservicio.com/badge/badge-dark.svg" alt="Featured on Software Como Servicio" width="178" height="40" /></a>`,
+  },
+  {
+    id: 'agentwork',
+    kind: 'raw',
+    host: 'agentwork.tools',
+    html: `<a href="https://agentwork.tools" target="_blank" rel="noopener noreferrer"><img alt="Featured on AgentWork.Tools" width="200" height="54" src="https://agentwork.tools/badge/badge_dark.svg"></a>`,
+  },
+  {
+    id: 'aicavo',
+    kind: 'raw',
+    host: 'aicavo.com',
+    html: `<a href="https://aicavo.com/tools/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://aicavo.com/api/widgets/embed-image/v1/find-us.svg?slug=amazingplugins&theme=dark" alt="AICavo badge" width="200" height="54" loading="eager" /></a>`,
+  },
+  {
+    id: 'boringcashcow',
+    kind: 'raw',
+    host: 'boringcashcow.com',
+    html: `<a href="https://boringcashcow.com" target="_blank"><img src="https://boringcashcow.com/img/badge/boringcashcow-badge-light.svg" alt="AmazingPlugins - Featured on BoringCashCow" width="200" height="54"></a>`,
+  },
+  {
+    id: 'getseoo',
+    kind: 'raw',
+    host: 'directory.getseoo.com',
+    html: `<a href="https://directory.getseoo.com" target="_blank" rel="noopener"><img src="https://directory.getseoo.com/badges/getseoo-badge-dark.svg" alt="Featured on GetSEOO Directory" width="240" height="54" /></a>`,
+  },
+  {
+    id: 'rankcert',
+    kind: 'raw',
+    host: 'rankcert.com',
+    html: `<a href="https://rankcert.com/product/amazingplugins" target="_blank" rel="noopener"><img src="https://rankcert.com/badge/amazingplugins?style=card&theme=light" alt="AmazingPlugins on RankCert" width="240" height="64" /></a>`,
+  },
+  {
+    id: 'stork',
+    kind: 'raw',
+    host: 'stork.ai',
+    html: `<a href="https://www.stork.ai/" rel="nofollow" title="Stork Verified — stork.ai AI tools directory"><img src="https://www.stork.ai/badge/verified-dark.svg" alt="Stork Verified — stork.ai AI tools directory" width="216" height="44" /></a>`,
+  },
+  {
+    id: 'swipetolaunch',
+    kind: 'raw',
+    host: 'swipetolaunch.com',
+    html: `<a href="https://swipetolaunch.com/p/amazingplugins?ref=badge" target="_blank" rel="noopener"><img src="https://swipetolaunch.com/api/badge/amazingplugins" alt="Featured on SwipeToLaunch" width="220" height="48" loading="lazy" /></a>`,
+  },
+  {
+    id: 'toolquix',
+    kind: 'raw',
+    host: 'toolquix.com',
+    html: `<a href="https://toolquix.com"><img src="https://toolquix.com/assets/badge-featured.svg" alt="Featured on Toolquix" width="240" height="54"></a>`,
+  },
+  {
+    id: 'firmsrated',
+    kind: 'raw',
+    host: 'firmsrated.com',
+    html: `<a href="https://firmsrated.com" target="_blank" rel="dofollow"><img src="https://firmsrated.com/badge.png" alt="Rated on FirmsRated" /></a>`,
+  },
+  {
+    id: 'peerbear',
+    kind: 'raw',
+    host: 'peerbear.io',
+    html: `<a href="https://peerbear.io/p/amazingplugins" target="_blank" rel="noopener"><img src="https://peerbear.io/badge-light.svg" alt="Sniffed by PeerBear" width="198" height="62"></a>`,
+  },
+  {
+    id: 'tooltrim',
+    kind: 'raw',
+    host: 'tooltrim.com',
+    html: `<a target="_blank" href="https://tooltrim.com/?utm_source=amazingplugins&utm_medium=badge&utm_campaign=tool_submission"><img src="https://tooltrim.com/tooltrim-badge.svg" alt="Discover ToolTrim via AmazingPlugins" height="54" loading="lazy"></a>`,
+  },
+  {
+    id: 'vibetoyou',
+    kind: 'raw',
+    host: 'vibetoyou.com',
+    html: `<a href="https://vibetoyou.com" target="_blank"><img src="https://vibetoyou.com/images/badge-light.svg" alt="Listed on VibeToYou" width="186" height="56" /></a>`,
   },
 ];
 
