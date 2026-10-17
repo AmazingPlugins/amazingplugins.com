@@ -337,7 +337,7 @@ export const footerBadges = [
     id: 'toolindex',
     kind: 'raw',
     host: 'toolindex.net',
-    html: `<a href="https://toolindex.net/?ref=listed" target="_blank" rel="nofollow noopener">Listed on Tool Index</a>`,
+    html: `<a href="https://toolindex.net/tools/amazingplugins?ref=badge" target="_blank" rel="noopener noreferrer" title="Tool Index"><img alt="AmazingPlugins - Listed on Tool Index" decoding="async" height="50" loading="lazy" src="https://toolindex.net/badge/amazingplugins/medium.svg" width="180"/></a>`,
   },
   {
     id: 'popwebtools',
@@ -613,7 +613,7 @@ export const footerBadges = [
     id: 'easylaunch',
     kind: 'raw',
     host: 'easylaunch.dev',
-    html: `<a href="https://easylaunch.dev/" target="_blank" rel="noopener">Featured on EasyLaunch</a>`,
+    html: `<a href="https://easylaunch.dev/marketing/the-database-of-startups-built-by-indie-founders" target="_blank" rel="noopener noreferrer"><img src="https://www.easylaunch.dev/badge/easylaunch-badge-light.svg" alt="Featured on EasyLaunch" style="height:30px;width:auto"/></a>`,
   },
   {
     id: 'founder',
@@ -1185,6 +1185,36 @@ export const footerBadges = [
     kind: 'raw',
     host: 'toolsnap.ai',
     html: `<a href="https://toolsnap.ai" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on toolsnap.ai</a>`,
+  },
+  {
+    id: 'amzdir',
+    kind: 'raw',
+    host: 'amzdir.com',
+    html: `<a href="https://amzdir.com"><img src="https://amzdir.com/logo.png" alt="AMZdir" width="150" /></a>`,
+  },
+  {
+    id: 'backlinkdirs',
+    kind: 'raw',
+    host: 'backlinkdirs.com',
+    html: `<a href="https://backlinkdirs.com/item/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://backlinkdirs.com/badges/badge-listed-dark.svg" alt="Listed on Backlink Dirs" /></a>`,
+  },
+  {
+    id: 'mydirs',
+    kind: 'raw',
+    host: 'mydirs.com',
+    html: `<a href="https://mydirs.com">MyDirs</a>`,
+  },
+  {
+    id: 'getlaunchpod',
+    kind: 'raw',
+    host: 'getlaunchpod.com',
+    html: `<a href="https://getlaunchpod.com/product/amazingplugins-ead5e1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">AmazingPlugins on GetLaunchPod</a>`,
+  },
+  {
+    id: 'indiedeals',
+    kind: 'raw',
+    host: 'indie.deals',
+    html: `<a href="https://indie.deals?ref=https%3A%2F%2Famazingplugins.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on indie.deals</a>`,
   },
 ];
 
