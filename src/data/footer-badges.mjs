@@ -1058,7 +1058,7 @@ export const footerBadges = [
     id: 'thetoolpicker',
     kind: 'raw',
     host: 'thetoolpicker.com',
-    html: `<a href="https://www.thetoolpicker.com?ref=amazingplugins" target="_blank" rel="noopener">Featured on TheToolPicker</a>`,
+    html: `<a href="https://www.thetoolpicker.com?ref=amazingplugins" target="_blank" rel="noopener"><img src="/badges/thetoolpicker-featured.svg" alt="Featured on TheToolPicker" width="200" height="54" /></a>`,
   },
   {
     id: 'softwarecomoservicio',
@@ -1208,7 +1208,7 @@ export const footerBadges = [
     id: 'getlaunchpod',
     kind: 'raw',
     host: 'getlaunchpod.com',
-    html: `<a href="https://getlaunchpod.com/product/amazingplugins-ead5e1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">AmazingPlugins on GetLaunchPod</a>`,
+    html: `<a href="https://getlaunchpod.com/product/amazingplugins-ead5e1" target="_blank" rel="noopener"><img src="/badges/getlaunchpod-featured.svg" alt="Featured on GetLaunchPod" width="200" height="54" /></a>`,
   },
   {
     id: 'indiedeals',
@@ -1238,7 +1238,7 @@ export const footerBadges = [
     id: 'shipdirs',
     kind: 'raw',
     host: 'shipdirs.com',
-    html: `<a href="https://shipdirs.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on Shipdirs</a>`,
+    html: `<a href="https://shipdirs.com" target="_blank" rel="noopener"><img src="/badges/shipdirs-featured.svg" alt="Featured on Shipdirs" width="200" height="54" /></a>`,
   },
 ];
 
