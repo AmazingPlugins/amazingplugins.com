@@ -1234,6 +1234,12 @@ export const footerBadges = [
     host: 'dailylaunch.io',
     html: `<a href="https://dailylaunch.io/" target="_blank" rel="noopener"><img src="https://dailylaunch.io/badge/light.svg?v=a6cc2b9b" alt="Featured on DailyLaunch" width="200" height="54"></a>`,
   },
+  {
+    id: 'shipdirs',
+    kind: 'raw',
+    host: 'shipdirs.com',
+    html: `<a href="https://shipdirs.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on Shipdirs</a>`,
+  },
 ];
 
 // Raw directory snippets are pasted verbatim; lazy-load their images at render time so the footer doesn't fetch ~80 third-party origins on every page.
