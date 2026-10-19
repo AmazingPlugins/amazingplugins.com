@@ -595,7 +595,7 @@ export const footerBadges = [
     id: 'boostdomainrating',
     kind: 'raw',
     host: 'boostdomainrating.com',
-    html: `<a href="https://boostdomainrating.com/" target="_blank" rel="noopener">Featured on Boost Domain Rating</a>`,
+    html: `<a href="https://boostdomainrating.com/item/amazingplugins.com?utm_source=badge" target="_blank" rel="noopener noreferrer"><img src="https://boostdomainrating.com/api/badge/amazingplugins.com" alt="AmazingPlugins - Domain Rating" style="height: 54px; width: auto;"/></a>`,
   },
   {
     id: 'daniellaunches',
@@ -713,7 +713,7 @@ export const footerBadges = [
     id: 'postyourstartup',
     kind: 'raw',
     host: 'postyourstartup.co',
-    html: `<a href="https://postyourstartup.co/" target="_blank" rel="noopener">Featured on Post Your Startup</a>`,
+    html: `<a target="_blank" rel="noopener noreferrer" href="https://postyourstartup.co/startup/shipboost-1?ref=badge&amp;utm_source=shipboost&amp;utm_medium=referral&amp;utm_campaign=footer&amp;utm_content=Featured+on+PostYourStartup"><img src="https://postyourstartup.co/api/badge/shipboost-1?theme=light" alt="Featured on PostYourStartup" width="212" height="55" style="max-height:30px;width:auto;object-fit:contain"/></a>`,
   },
   {
     id: 'promptfrenzy',
@@ -766,19 +766,19 @@ export const footerBadges = [
     id: 'shipthing',
     kind: 'raw',
     host: 'shipthing.com',
-    html: `<a href="https://shipthing.com/" target="_blank" rel="noopener">Featured on ShipThing</a>`,
+    html: `<a href="https://shipthing.com/projects/amazingplugins?utm_source=badge" target="_blank" rel="noopener noreferrer"><img src="https://shipthing.com/shipthing/images/badges/featured-on-light.svg" alt="Featured on ShipThing" style="height:44px;width:auto"/></a>`,
   },
   {
     id: 'smolhunt',
     kind: 'raw',
     host: 'smolhunt.com',
-    html: `<a href="https://smolhunt.com/" target="_blank" rel="noopener">Featured on Smol Hunt</a>`,
+    html: `<a href="https://smolhunt.com/projects/amazingplugins?utm_source=badge" target="_blank" rel="noopener noreferrer"><img src="https://smolhunt.com/smolhunt/images/badges/featured-on-light.svg" alt="Featured on Smol Hunt" style="height:44px;width:auto"/></a>`,
   },
   {
     id: 'smolsaas',
     kind: 'raw',
     host: 'smolsaas.com',
-    html: `<a href="https://smolsaas.com/" target="_blank" rel="noopener">Featured on Smol Saas</a>`,
+    html: `<a href="https://smolsaas.com/projects/amazingplugins?utm_source=badge" target="_blank" rel="noopener noreferrer"><img src="https://smolsaas.com/smolsaas/images/badges/featured-on-light.svg" alt="Featured on Smol Saas" style="height:44px;width:auto"/></a>`,
   },
   {
     id: 'starthub',
@@ -1215,6 +1215,24 @@ export const footerBadges = [
     kind: 'raw',
     host: 'indie.deals',
     html: `<a href="https://indie.deals?ref=https%3A%2F%2Famazingplugins.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border:1px solid #d4d4d8;border-radius:10px;background:#fff;color:#111;font:600 13px/1 system-ui,sans-serif;text-decoration:none">Featured on indie.deals</a>`,
+  },
+  {
+    id: 'madewithstack',
+    kind: 'raw',
+    host: 'madewithstack.com',
+    html: `<a href="https://www.madewithstack.com" target="_blank" rel="noopener"><img src="https://www.madewithstack.com/listed-on-madewithstack.svg" alt="Listed on MadeWithStack" /></a>`,
+  },
+  {
+    id: 'saatlas',
+    kind: 'raw',
+    host: 'saatlas.com',
+    html: `<a href="https://saatlas.com/en/saas/amazingplugins/" title="Listed on Saatlas"><img src="https://saatlas.com/badge/amazingplugins.svg?lang=en" alt="Listed on Saatlas" width="260" height="42"></a>`,
+  },
+  {
+    id: 'dailylaunch',
+    kind: 'raw',
+    host: 'dailylaunch.io',
+    html: `<a href="https://dailylaunch.io/" target="_blank" rel="noopener"><img src="https://dailylaunch.io/badge/light.svg?v=a6cc2b9b" alt="Featured on DailyLaunch" width="200" height="54"></a>`,
   },
 ];
 
