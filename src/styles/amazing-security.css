@@ -28,7 +28,7 @@
 .as-split p + p { margin-top: 16px; }
 .as-prose { max-width: 72ch; }
 .as-prose p, .as-prose li { color: var(--ink-2); line-height: 1.7; }
-.as-prose p + p, .as-prose p + ul, .as-prose p + ol { margin-top: 18px; }
+.as-prose p + p, .as-prose p + ul, .as-prose p + ol, .as-prose ul + p { margin-top: 18px; }
 .as-prose ul, .as-prose ol { padding-left: 1.3em; }
 .as-prose li + li { margin-top: 12px; }
 .as-prose a, .as-table a, .as-text-link { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
