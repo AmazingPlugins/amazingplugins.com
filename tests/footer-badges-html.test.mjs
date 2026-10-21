@@ -57,18 +57,18 @@ const imageBadges = [
   { domain: 'toolcurio.com', href: 'https://toolcurio.com', src: 'https://toolcurio.com/badge-light.png', alt: 'Featured on Toolcurio', width: '200', height: '54' },
   { domain: 'huzzler.so', href: 'https://huzzler.so/products/419PZlEAMk/amazingplugins?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing', src: 'https://huzzler.so/assets/images/embeddable-badges/featured.png', alt: 'Huzzler Embed Badge', width: '159', height: '55' },
   { domain: 'aitoolsmarketer.com', href: 'https://aitoolsmarketer.com/', src: 'https://aitoolsmarketer.com/badges/badge-dark.svg', alt: 'Listed on AI Tools for Marketers', width: '153', height: '44' },
-  { domain: 'sumodir.com', href: 'https://sumodir.com', src: 'https://sumodir.com/badge.png', alt: 'Featured on SumoDir', width: '200', height: '54' },
-  { domain: 'mydentify.com', href: 'https://mydentify.com/', src: 'https://mydentify.com/badges/listed-on-mydentify.svg', alt: 'Listed on Mydentify', width: '176', height: '32', ariaLabel: 'Listed on Mydentify' },
+  { domain: 'sumodir.com', href: 'https://sumodir.com/item/amazingplugins', src: 'https://sumodir.com/badge.png', alt: 'Featured on SumoDir', width: '200', height: '54' },
+  { domain: 'mydentify.com', href: 'https://mydentify.com/products/amazingplugins', src: 'https://mydentify.com/badges/listed-on-mydentify.svg', alt: 'Listed on Mydentify', width: '176', height: '32', ariaLabel: 'Listed on Mydentify' },
   { domain: 'vantaige.io', href: 'https://vantaige.io/?utm_source=badge&utm_medium=embed', src: 'https://img.shields.io/badge/Featured%20on-Vantaige-2563eb?style=for-the-badge', alt: 'Featured on Vantaige.io', width: '200', height: '56' },
   { domain: 'findly.tools', href: 'https://findly.tools/amazingplugins?utm_source=amazingplugins', src: 'https://findly.tools/badges/findly-tools-badge-light.svg', alt: 'Featured on Findly.tools', width: '175', height: '55', loading: null, decoding: null },
   { domain: 'codehype.ai', href: 'https://codehype.ai/product/amazingplugins?utm_source=codehype_badge', src: 'https://codehype.ai/badges/amazingplugins.svg?variant=find-us&v=20', alt: 'Featured on CodeHype', width: '180', height: '65', loading: 'lazy', decoding: 'async', style: 'display:inline-block;border:0;width:100%;max-width:180px;height:auto;max-height:65px;' },
   { domain: 'startuptrusted.com', href: 'https://startuptrusted.com?ref=amazingplugins.com', src: 'https://startuptrusted.com/api/badge?type=featured&style=light', alt: 'AmazingPlugins on StartupTrusted', width: '240', height: '54', rel: 'noopener', loading: null, decoding: null },
   { domain: 'saasfame.com', href: 'https://saasfame.com/item/amazingplugins', src: 'https://saasfame.com/badge-light.svg', alt: 'Featured on saasfame.com', style: 'height: 54px; width: auto;', rel: 'noopener noreferrer', loading: null, decoding: null },
+  { domain: 'dofollow.tools', href: 'https://dofollow.tools/', src: 'https://dofollow.tools/badge/badge_transparent.svg', alt: 'Featured on Dofollow.Tools', width: '200', height: '54' },
   { domain: 'uno.directory', href: 'https://uno.directory', src: 'https://uno.directory/uno-directory.svg', alt: 'Listed on Uno Directory', width: '120', height: '30', rel: 'noopener', loading: null, decoding: null },
 ];
 
 const textBadges = [
-  { domain: 'dofollow.tools', href: 'https://dofollow.tools', label: 'Dofollow.Tools' },
   { domain: 'aitoolzdir.com', href: 'https://www.aitoolzdir.com', label: 'AI Toolz Dir' },
   { domain: 'aitop10.tools', href: 'https://aitop10.tools/', label: 'AiTop10 Tools' },
 ];
@@ -226,7 +226,7 @@ test('keeps one homepage badge for every directory already on the site', () => {
 });
 
 test('prints each supplied raw badge snippet once in the primary group', () => {
-  assert.equal(rawBadges.length, 212);
+  assert.equal(rawBadges.length, 241);
   for (const badge of rawBadges) {
     assert.equal(countOccurrences(footerHtml, lazyImages(badge.html)), 1, `${badge.host} snippet should appear once in the primary group`);
     assertUniqueHomepageBadge(footerHtml, badge.host);

@@ -73,6 +73,7 @@ const bingVerificationCode = import.meta.env.PUBLIC_BING_VERIFICATION_CODE?.trim
 
     {bingVerificationCode && <meta name="msvalidate.01" content={bingVerificationCode} />}
     {Astro.url.pathname === '/' && <meta name="legit-verify" content="legit-PumPolDn6AsJrMZtPzeKOmvSWlEt" />}
+    {Astro.url.pathname === '/' && <meta name="websitelaunches-verification" content="b9610e2580bddd27102d70dc1aeb10e2" />}
 
     <!-- Fonts -->
     <link rel="preload" href={interFont} as="font" type="font/woff2" crossorigin />
