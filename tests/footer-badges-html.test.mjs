@@ -122,7 +122,7 @@ test('distinguishes empty attributes from omitted attributes', () => {
   assert.throws(() => assertAttribute(malformedImage, 'decoding', null, 'test image'), /should omit decoding/);
 });
 
-test('preserves the two verification cards and three plain text links', () => {
+test('preserves the two verification cards and two plain text links', () => {
   const topAi = anchors.find((anchor) => hrefOf(anchor).includes('topaitools4u.site')) ?? '';
   assert.equal(hrefOf(topAi), 'https://www.topaitools4u.site');
   assert.equal(attributeOf(topAi, 'target'), '_blank');
