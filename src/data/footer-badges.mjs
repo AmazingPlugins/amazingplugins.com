@@ -12,23 +12,21 @@ export const footerBadges = [
     id: 'saascity',
     kind: 'raw',
     host: 'saascity.io',
-    html: `<a href="https://saascity.io" target="_blank" rel="noopener"> <img src="https://saascity.io/badges/featured-dark.svg" alt="Featured on SaaSCity" width="150" height="54" /> </a>`,
+    html: `<a href="https://saascity.io/live/amazingplugins" target="_blank" rel="noopener"><img src="https://saascity.io/badges/featured-dark.svg" alt="Featured on SaaSCity" width="150" height="54" /></a>`,
   },
-  { id: 'indiehunt', name: 'IndieHunt', href: 'https://indiehunt.io', source: 'https://indiehunt.io/badges/indiehunt-badge-light.svg' },
+  { id: 'indiehunt', name: 'IndieHunt', href: 'https://indiehunt.io/project/amazingplugins', source: 'https://indiehunt.io/badges/indiehunt-badge-light.svg' },
   { id: 'fazier', name: 'Fazier', href: 'https://fazier.com/launches/amazingplugins.com', source: 'https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=light' },
   {
     id: 'wired',
     kind: 'raw',
     host: 'wired.business',
-    html: `<a href="https://wired.business" target="_blank"><img src="https://wired.business/badge0-white.svg" alt="Featured on Wired Business" width="200" height="54"></a>`,
+    html: `<a href="https://wired.business/amazingplugins" target="_blank" rel="noopener"><img src="https://wired.business/badge0-white.svg" alt="Featured on Wired Business" width="200" height="54" /></a>`,
   },
   {
     id: 'productfame',
     kind: 'raw',
     host: 'productfame.com',
-    html: `<a href="https://productfame.com" target="_blank" rel="noopener noreferrer">
-  <img src="https://productfame.com/badges/featured-light.svg" alt="Featured on ProductFame" width="245" height="54" />
-</a>`,
+    html: `<a href="https://productfame.com/products/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://productfame.com/badges/featured-light.svg" alt="Featured on ProductFame" width="245" height="54" /></a>`,
   },
   {
     id: 'showmebest',
@@ -40,7 +38,7 @@ export const footerBadges = [
     id: 'neeed',
     kind: 'raw',
     host: 'neeed.directory',
-    html: `<a href="https://neeed.directory" target="_blank" rel="noopener"> <img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" width="139" /> </a>`,
+    html: `<a href="https://neeed.directory/products/amazingplugins" target="_blank" rel="noopener"><img src="https://neeed.directory/badges/neeed-badge-light.svg" alt="Featured on neeed.directory" width="139" /></a>`,
   },
   {
     id: 'saasbison',
@@ -58,7 +56,7 @@ export const footerBadges = [
     id: 'twelve',
     kind: 'raw',
     host: 'twelve.tools',
-    html: `<a href="https://twelve.tools" target="_blank"><img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54"></a>`,
+    html: `<a href="https://twelve.tools/amazingplugins" target="_blank"><img src="https://twelve.tools/badge0-white.svg" alt="Featured on Twelve Tools" width="200" height="54" /></a>`,
   },
   {
     id: 'launchllama',
@@ -95,9 +93,9 @@ export const footerBadges = [
   { id: 'topaitools4u', kind: 'topaitools4u', name: 'TopAITools4U', href: 'https://www.topaitools4u.site' },
   { id: 'aitoolsmarketer', kind: 'image', name: 'AI Tools Marketer', href: 'https://aitoolsmarketer.com/', src: 'https://aitoolsmarketer.com/badges/badge-dark.svg', alt: 'Listed on AI Tools for Marketers', width: 153, height: 44 },
   { id: 'agenthunter', kind: 'agenthunter', name: 'AgentHunter', href: 'https://www.agenthunter.io' },
-  { id: 'dofollow', kind: 'text', name: 'Dofollow.Tools', href: 'https://dofollow.tools', label: 'Dofollow.Tools' },
-  { id: 'sumodir', kind: 'image', name: 'SumoDir', href: 'https://sumodir.com', src: 'https://sumodir.com/badge.png', alt: 'Featured on SumoDir', width: 200, height: 54 },
-  { id: 'mydentify', kind: 'image', name: 'Mydentify', href: 'https://mydentify.com/', src: 'https://mydentify.com/badges/listed-on-mydentify.svg', alt: 'Listed on Mydentify', width: 176, height: 32, ariaLabel: 'Listed on Mydentify' },
+  { id: 'dofollow', kind: 'image', name: 'Dofollow.Tools', href: 'https://dofollow.tools/', src: 'https://dofollow.tools/badge/badge_transparent.svg', alt: 'Featured on Dofollow.Tools', width: 200, height: 54 },
+  { id: 'sumodir', kind: 'image', name: 'SumoDir', href: 'https://sumodir.com/item/amazingplugins', src: 'https://sumodir.com/badge.png', alt: 'Featured on SumoDir', width: 200, height: 54 },
+  { id: 'mydentify', kind: 'image', name: 'Mydentify', href: 'https://mydentify.com/products/amazingplugins', src: 'https://mydentify.com/badges/listed-on-mydentify.svg', alt: 'Listed on Mydentify', width: 176, height: 32, ariaLabel: 'Listed on Mydentify' },
   { id: 'aitoolzdir', kind: 'text', name: 'AI Toolz Dir', href: 'https://www.aitoolzdir.com', label: 'AI Toolz Dir' },
   { id: 'aitop10', kind: 'text', name: 'AiTop10 Tools', href: 'https://aitop10.tools/', label: 'AiTop10 Tools' },
   { id: 'vantaige', kind: 'image', name: 'Vantaige', href: 'https://vantaige.io/?utm_source=badge&utm_medium=embed', src: 'https://img.shields.io/badge/Featured%20on-Vantaige-2563eb?style=for-the-badge', alt: 'Featured on Vantaige.io', width: 200, height: 56 },
@@ -158,9 +156,7 @@ export const footerBadges = [
     id: 'webspot',
     kind: 'raw',
     host: 'webspot.app',
-    html: `<a href="https://webspot.app" target="_blank" rel="noopener noreferrer">
-  <img src="https://webspot.app/featured-light.svg" alt="Featured on Webspot" style="height: 54px; width: auto;" />
-</a>`,
+    html: `<a href="https://webspot.app/item/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://webspot.app/featured-light.svg" alt="Featured on Webspot" style="height: 54px; width: auto;" /></a>`,
   },
   {
     id: 'aiwizard',
@@ -180,7 +176,7 @@ export const footerBadges = [
     id: 'prolaunch',
     kind: 'raw',
     host: 'prolaunch.net',
-    html: `<a href="https://prolaunch.net" target="_blank" title="Pro Launch Featured Badge"> <img src="https://prolaunch.net/images/badges/featured-light.svg" alt="Pro Launch Featured Badge" style="width: 240px; height: auto;" /> </a>`,
+    html: `<a href="https://prolaunch.net/projects/amazingplugins" target="_blank" title="Pro Launch Featured Badge"><img src="https://prolaunch.net/images/badges/featured-light.svg" alt="Pro Launch Featured Badge" style="width: 240px; height: auto;" /></a>`,
   },
   {
     id: 'sideprojects',
@@ -204,7 +200,7 @@ export const footerBadges = [
     id: 'launchvault',
     kind: 'raw',
     host: 'launchvault.dev',
-    html: `<a href="https://www.launchvault.dev" target="_blank" rel="noopener"><img src="https://www.launchvault.dev/images/badges/launch-valut-badge.svg" alt="Featured on LaunchVault" width="195"></a>`,
+    html: `<a href="https://launchvault.dev/projects/amazingplugins" target="_blank" rel="noopener"><img src="https://www.launchvault.dev/images/badges/launch-valut-badge.svg" alt="Featured on LaunchVault" width="195"></a>`,
   },
   {
     id: 'startupfame',
@@ -259,7 +255,7 @@ export const footerBadges = [
     id: 'saasgrow',
     kind: 'raw',
     host: 'saasgrow.app',
-    html: `<a href="https://saasgrow.app/" target="_blank" rel="noopener noreferrer"><img src="https://saasgrow.app/api/badge?type=featured&style=light" alt="FEATURED ON SaaSGrow" width="240" height="54" /></a>`,
+    html: `<a href="https://saasgrow.app/saas/amazingplugins/badge" target="_blank" rel="noopener noreferrer"><img src="https://saasgrow.app/api/badge?type=featured&style=light" alt="FEATURED ON SaaSGrow" width="240" height="54" /></a>`,
   },
   {
     id: 'allinai',
@@ -323,7 +319,7 @@ export const footerBadges = [
     id: 'topaitoolsreview',
     kind: 'raw',
     host: 'topaitoolsreview.com',
-    html: `<a href="https://topaitoolsreview.com" target="_blank" rel="noopener"><img src="https://cdn.topaitoolsreview.com/defaults/featured-on_light.svg" style="width: 200px; height: 50px;" width="200" height="50" alt="Featured on TopAIToolsReview"></a>`,
+    html: `<a href="https://topaitoolsreview.com" target="_blank" rel="noopener"><img src="/badges/topaitoolsreview.svg" style="width: 200px; height: 50px;" width="200" height="50" alt="Featured on TopAIToolsReview"></a>`,
   },
   {
     id: 'shipstry',
@@ -403,7 +399,7 @@ export const footerBadges = [
     id: 'fridayhunt',
     kind: 'raw',
     host: 'fridayhunt.com',
-    html: `<a href="https://fridayhunt.com/" target="_blank" rel="noopener">Featured on FridayHunt</a>`,
+    html: `<a href="https://fridayhunt.com/projects/amazingplugins" target="_blank" rel="noopener">Featured on FridayHunt</a>`,
   },
   {
     id: 'aifinderplus',
@@ -493,13 +489,13 @@ export const footerBadges = [
     id: 'thedevtoolsdir',
     kind: 'raw',
     host: 'thedevtoolsdir.com',
-    html: `<a href="https://thedevtoolsdir.com/" rel="dofollow"><img src="https://thedevtoolsdir.com/badge/amazingplugins.svg" alt="Featured on TheDevToolsDir" width="182" height="46"></a>`,
+    html: `<a href="https://thedevtoolsdir.com/product/amazingplugins?ref=badge" rel="dofollow"><img src="https://thedevtoolsdir.com/badge/amazingplugins.svg" alt="Featured on TheDevToolsDir" width="182" height="46"></a>`,
   },
   {
     id: 'themicrosaasdir',
     kind: 'raw',
     host: 'themicrosaasdir.com',
-    html: `<a href="https://themicrosaasdir.com/" rel="dofollow"><img src="https://themicrosaasdir.com/badge/amazingplugins.svg" alt="Featured on TheMicroSaaSDir" width="182" height="46"></a>`,
+    html: `<a href="https://themicrosaasdir.com/product/amazingplugins?ref=badge" rel="dofollow"><img src="https://themicrosaasdir.com/badge/amazingplugins.svg" alt="Featured on TheMicroSaaSDir" width="182" height="46"></a>`,
   },
   {
     id: 'toolsify',
@@ -728,9 +724,7 @@ export const footerBadges = [
     id: 'saasdb',
     kind: 'raw',
     host: 'saasdb.net',
-    html: `<a href="https://saasdb.net" rel="dofollow">
-  <img src="https://saasdb.net/badge/featured-light.svg" alt="Featured on SaasDB" width="300" />
-</a>`,
+    html: `<a href="https://saasdb.net/amazingplugins" target="_blank" rel="dofollow"><img src="https://saasdb.net/badge/featured-light.svg" alt="Featured on SaasDB" width="300" /></a>`,
   },
   {
     id: 'sellwithboost',
@@ -816,7 +810,7 @@ export const footerBadges = [
     id: 'bestsky',
     kind: 'raw',
     host: 'bestsky.tools',
-    html: `<a href="https://bestsky.tools/" target="_blank" rel="noopener">Featured on BestskyTools</a>`,
+    html: `<a href="https://bestsky.tools/?utm_source=badge" target="_blank" rel="noopener"><img src="https://assets.bestsky.tools/badges/featured-light.svg" alt="Featured on BestskyTools" width="150" /></a>`,
   },
   {
     id: 'dayslaunch',
@@ -936,7 +930,7 @@ export const footerBadges = [
     id: 'webprojectlist',
     kind: 'raw',
     host: 'webprojectlist.com',
-    html: `<a href="https://www.webprojectlist.com/" target="_blank" rel="noopener"><img src="https://www.webprojectlist.com/static/backlink/webprojectlist_logo.f1f989d69d3a.webp" alt="WebProjectList Badge" width="40" height="40" /></a>`,
+    html: `<a href="https://www.webprojectlist.com/amazingplugins/amazingplugins/" target="_blank" rel="noopener"><img src="https://www.webprojectlist.com/static/backlink/webprojectlist_logo.f1f989d69d3a.webp" alt="WebProjectList Badge" width="40" height="40"></a>`,
   },
   {
     id: 'norohunt',
@@ -972,7 +966,7 @@ export const footerBadges = [
     id: 'indielineup',
     kind: 'raw',
     host: 'indielineup.com',
-    html: `<a href="https://indielineup.com/" rel="dofollow"><img src="https://indielineup.com/badge/amazingplugins.svg" alt="Featured on IndieLineup" width="182" height="46"></a>`,
+    html: `<a href="https://indielineup.com/product/amazingplugins?ref=badge" rel="dofollow"><img src="https://indielineup.com/badge/amazingplugins.svg" alt="Featured on IndieLineup" width="182" height="46"></a>`,
   },
   {
     id: 'outdr',
@@ -1248,7 +1242,7 @@ export const footerBadges = [
     id: 'curlship',
     kind: 'raw',
     host: 'curlship.com',
-    html: `<a href="https://curlship.com" rel="noopener noreferrer" target="_blank" title="CurlShip"><img alt="Listed on CurlShip" height="20" src="https://curlship.com/badge.svg" width="120"/></a>`,
+    html: `<a href="https://curlship.com/l/3989" rel="noopener noreferrer" target="_blank" title="CurlShip"><img alt="Listed on CurlShip" height="20" src="https://curlship.com/badge.svg" width="120"/></a>`,
   },
   {
     id: 'findgreatsites',
@@ -1311,12 +1305,6 @@ export const footerBadges = [
     html: `<a href="https://outclimbed.com/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Featured%20on-outclimbed.com-2563eb?style=for-the-badge" alt="Featured on outclimbed.com" height="28" /></a>`,
   },
   {
-    id: 'primadirectory',
-    kind: 'raw',
-    host: 'primadirectory.it',
-    html: `<a href="https://primadirectory.it/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Featured%20on-PrimaDirectory-2563eb?style=for-the-badge" alt="Featured on PrimaDirectory" height="28" /></a>`,
-  },
-  {
     id: 'productperch',
     kind: 'raw',
     host: 'productperch.com',
@@ -1350,19 +1338,199 @@ export const footerBadges = [
     id: 'truetier',
     kind: 'raw',
     host: 'truetier.app',
-    html: `<a href="https://truetier.app/"><img src="https://www.truetier.app/badge.php?s=amazingplugins&style=bar&theme=dark" alt="Checked daily by TrueTier"></a>`,
+    html: `<a href="https://www.truetier.app/p/amazingplugins"><img src="https://www.truetier.app/badge.php?s=amazingplugins&style=bar&theme=dark" alt="Checked daily by TrueTier"></a>`,
   },
   {
     id: 'unikt',
     kind: 'raw',
     host: 'unikt.fr',
-    html: `<a href="https://unikt.fr/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Featured%20on-unikt.fr-2563eb?style=for-the-badge" alt="Featured on unikt.fr" height="28" /></a>`,
+    html: `<a href="https://unikt.fr/startups/amazingplugins" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Featured%20on-unikt.fr-2563eb?style=for-the-badge" alt="Featured on unikt.fr" height="28" /></a>`,
   },
   {
     id: 'w3annuaire',
     kind: 'raw',
     host: 'w3-annuaire.com',
     html: `<a href="https://w3-annuaire.com/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/Featured%20on-W3%20Annuaire-2563eb?style=for-the-badge" alt="Featured on W3 Annuaire" height="28" /></a>`,
+  },
+  {
+    id: 'buildvoyage',
+    kind: 'raw',
+    host: 'buildvoyage.com',
+    html: `<a href="https://buildvoyage.com/" target="_blank" rel="noopener"><img src="https://buildvoyage.com/images/featured_badge.png" alt="Featured on BuildVoyage" height="54" /></a>`,
+  },
+  {
+    id: 'saaspage',
+    kind: 'raw',
+    host: 'saaspa.ge',
+    html: `<a href="https://www.saaspa.ge/product/cmu8mlbko0009l704tio1l4xy" target="_blank" rel="noopener"><img src="https://www.saaspa.ge/api/embed/product/cmu8mlbko0009l704tio1l4xy/badge.png?theme=orange" alt="Featured on Saaspa.ge" height="54" /></a>`,
+  },
+  {
+    id: 'verifiedtools',
+    kind: 'raw',
+    host: 'verifiedtools.info',
+    html: `<a href="https://www.verifiedtools.info/preview/f3091bca859e1ede33fa50ae83241473737871d5e0dff67a" target="_blank" rel="noopener"><img src="https://www.verifiedtools.info/badge.svg" alt="Featured on Verified Tools" height="54" /></a>`,
+  },
+  {
+    id: 'llmrelevance',
+    kind: 'raw',
+    host: 'llmrelevance.com',
+    html: `<a href="https://llmrelevance.com/" target="_blank" rel="noopener"><img src="https://www.llmrelevance.com/badges/llm-relevance-horizontal-light.svg" alt="Featured on LLM Relevance" height="54" /></a>`,
+  },
+  {
+    id: 'lifto',
+    kind: 'raw',
+    host: 'liftoapp.com',
+    html: `<a href="https://liftoapp.com/" target="_blank" rel="noopener"><img src="https://liftoapp.com/badges/featured-dark.svg" alt="Featured on Lifto" height="54" /></a>`,
+  },
+  {
+    id: 'auraplusplus',
+    kind: 'raw',
+    host: 'auraplusplus.com',
+    html: `<a href="https://auraplusplus.com/projects/amazingplugins" target="_blank" rel="noopener"><img src="https://auraplusplus.com/images/badges/featured-on-light.svg" alt="Featured on Aura++" height="54" /></a>`,
+  },
+  {
+    id: 'peerpush',
+    kind: 'raw',
+    host: 'peerpush.com',
+    html: `<a href="https://peerpush.com/p/amazingplugins" target="_blank" rel="noopener"><img src="https://peerpush.com/p/amazingplugins/badge.png" alt="Featured on PeerPush" height="54" /></a>`,
+  },
+  {
+    id: 'betterlaunch',
+    kind: 'raw',
+    host: 'betterlaunch.co',
+    html: `<a href="https://www.betterlaunch.co/product/amazingplugins" target="_blank" rel="noopener"><img src="https://www.betterlaunch.co/badge.svg" alt="Featured on Better Launch" height="54" /></a>`,
+  },
+  {
+    id: 'nxgntools',
+    kind: 'raw',
+    host: 'nxgntools.com',
+    html: `<a href="https://nxgntools.com/" target="_blank" rel="noopener"><img src="https://www.nxgntools.com/api/embed/amazingplugins?type=LAUNCHING_SOON_ON" alt="Featured on NextGen Tools" height="54" /></a>`,
+  },
+  {
+    id: 'smollaunch',
+    kind: 'raw',
+    host: 'smollaunch.com',
+    html: `<a href="https://smollaunch.com/" target="_blank" rel="noopener"><img src="https://smollaunch.com/badges/featured.svg" alt="Featured on Smol Launch" height="54" /></a>`,
+  },
+  {
+    id: 'publishyoursaas',
+    kind: 'raw',
+    host: 'publishyoursaas.com',
+    html: `<a href="https://publishyoursaas.com/" target="_blank" rel="noopener"><img src="https://publishyoursaas.com/publishyoursaas-badge.svg" alt="Featured on PublishYourSaaS" height="54" /></a>`,
+  },
+  {
+    id: 'toolverified',
+    kind: 'raw',
+    host: 'toolverified.com',
+    html: `<a href="https://toolverified.com/" target="_blank" rel="noopener">Featured on ToolVerified</a>`,
+  },
+  {
+    id: 'sidehunt',
+    kind: 'raw',
+    host: 'sidehunt.io',
+    html: `<a href="https://sidehunt.io/project/amazingplugins" target="_blank" rel="noopener"><img src="https://sidehunt.io/badges/sidehunt-badge-light.svg" alt="Featured on Sidehunt" height="54" /></a>`,
+  },
+  {
+    id: 'saashammer',
+    kind: 'raw',
+    host: 'saashammer.net',
+    html: `<a href="https://saashammer.net/project/amazingplugins" target="_blank" rel="noopener"><img src="https://saashammer.net/assets/badges/featured-on-light.svg" alt="Featured on SaaSHammer" height="54" /></a>`,
+  },
+  {
+    id: 'leanvibe',
+    kind: 'raw',
+    host: 'leanvibe.io',
+    html: `<a href="https://leanvibe.io/vibe/amazingplugins" target="_blank" rel="noopener"><img src="https://leanvibe.io/api/badge/amazingplugins?type=featured&view=light" alt="Featured on LeanVibe" height="54" /></a>`,
+  },
+  {
+    id: 'directree',
+    kind: 'raw',
+    host: 'directree.io',
+    html: `<a href="https://www.directree.io/tool/amazingplugins" target="_blank" rel="noopener">Featured on directree</a>`,
+  },
+  {
+    id: 'stackledge',
+    kind: 'raw',
+    host: 'stackledge.com',
+    html: `<a href="https://stackledge.com/" target="_blank" rel="noopener">Featured on StackLedge</a>`,
+  },
+  {
+    id: 'appstackbuilder',
+    kind: 'raw',
+    host: 'appstackbuilder.com',
+    html: `<a href="https://appstackbuilder.com/" target="_blank" rel="noopener"><img src="https://appstackbuilder.com/badge-light.svg" alt="Featured on App Stack Builder" height="54" /></a>`,
+  },
+  {
+    id: 'spotlitely',
+    kind: 'raw',
+    host: 'spotlitely.com',
+    html: `<a href="https://www.spotlitely.com/l/amazingplugins" target="_blank" rel="noopener">Featured on Spotlitely</a>`,
+  },
+  {
+    id: 'makerhunt',
+    kind: 'raw',
+    host: 'makerhunt.io',
+    html: `<a href="https://makerhunt.io/project/amazingplugins" target="_blank" rel="noopener"><img src="https://makerhunt.io/badges/makerhunt-badge-light.svg" alt="Featured on MakerHunt" height="54" /></a>`,
+  },
+  {
+    id: 'toolindexreplit',
+    kind: 'raw',
+    host: 'strategic-flow-audit.replit.app',
+    html: `<a href="https://strategic-flow-audit.replit.app/directory/amazingplugins-10240" target="_blank" rel="noopener">Featured on ToolIndex</a>`,
+  },
+  {
+    id: 'shareyourstartup',
+    kind: 'raw',
+    host: 'shareyourstartup.com',
+    html: `<a href="https://shareyourstartup.com/" target="_blank" rel="noopener">Featured on ShareYourStartup</a>`,
+  },
+  {
+    id: 'listyouridea',
+    kind: 'raw',
+    host: 'listyouridea.com',
+    html: `<a href="https://listyouridea.com/" target="_blank" rel="noopener"><img src="https://listyouridea.com/featured-on-listyouridea-badge.svg" alt="Featured on ListYourIdea" height="54" /></a>`,
+  },
+  {
+    id: 'verifieddr',
+    kind: 'raw',
+    host: 'verifieddr.com',
+    html: `<a href="https://verifieddr.com/" target="_blank" rel="noopener">Featured on VerifiedDR</a>`,
+  },
+  {
+    id: 'braginpublic',
+    kind: 'raw',
+    host: 'braginpublic.com',
+    html: `<a href="https://braginpublic.com/" target="_blank" rel="noopener"><img src="https://braginpublic.com/badge?theme=light" alt="Featured on Brag in Public" height="54" /></a>`,
+  },
+  {
+    id: 'indieshowcase',
+    kind: 'raw',
+    host: 'indieshowcase.io',
+    html: `<a href="https://indieshowcase.io/" target="_blank" rel="noopener"><img src="https://indieshowcase.io/badge/featured-light.svg" alt="Featured on IndieShowcase" height="54" /></a>`,
+  },
+  {
+    id: 'scrappystartups',
+    kind: 'raw',
+    host: 'scrappystartups.com',
+    html: `<a href="https://scrappystartups.com/" target="_blank" rel="noopener"><img src="https://scrappystartups.com/badge.svg?theme=blue" alt="Featured on ScrappyStartups" height="54" /></a>`,
+  },
+  {
+    id: 'listedfirm',
+    kind: 'raw',
+    host: 'listedfirm.com',
+    html: `<a href="https://listedfirm.com/" target="_blank" rel="noopener">Featured on listedfirm.com</a>`,
+  },
+  {
+    id: 'trymyapp',
+    kind: 'raw',
+    host: 'trymy.app',
+    html: `<a href="https://trymy.app/" target="_blank" rel="noopener">Featured on trymy.app</a>`,
+  },
+  {
+    id: 'flinks',
+    kind: 'raw',
+    host: 'flinks.de',
+    html: `<a href="https://flinks.de/" target="_blank" rel="noopener">Featured on flinks.de</a>`,
   },
 ];
 
