@@ -695,7 +695,7 @@ export const footerBadges = [
     id: 'postyourstartup',
     kind: 'raw',
     host: 'postyourstartup.co',
-    html: `<a target="_blank" rel="noopener noreferrer" href="https://postyourstartup.co/startup/shipboost-1?ref=badge&amp;utm_source=shipboost&amp;utm_medium=referral&amp;utm_campaign=footer&amp;utm_content=Featured+on+PostYourStartup"><img src="https://postyourstartup.co/api/badge/shipboost-1?theme=light" alt="Featured on PostYourStartup" width="212" height="55" style="max-height:30px;width:auto;object-fit:contain"/></a>`,
+    html: `<a href="https://postyourstartup.co/" target="_blank" rel="noopener">Featured on PostYourStartup</a>`,
   },
   {
     id: 'promptfrenzy',
