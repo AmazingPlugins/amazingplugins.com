@@ -14,3 +14,9 @@ test('the products page is not shadowed by a legacy redirect', () => {
     }
   }
 });
+
+test('wildcard redirects stay under the Cloudflare Pages limit of 100', () => {
+  // Pages silently ignores dynamic rules past the 100th, so old URLs start 404ing.
+  const dynamic = rules.filter(rule => /[*:]/.test(rule.split(/\s+/)[0]));
+  assert.ok(dynamic.length <= 100, `${dynamic.length} wildcard redirects`);
+});
