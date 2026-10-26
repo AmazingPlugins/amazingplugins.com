@@ -2,22 +2,15 @@
 /sitemap.xml /sitemap-index.xml 301
 /plugin /plugins/ 301
 /plugin/ /plugins/ 301
-/plugin/* /plugins/:splat 301
-
-# Deleted product/pricing pages
-/pricing* /plugins/ 301
 
 # Renamed blog post (was Shopify+WooCommerce, now WooCommerce-only)
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/ /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 
-# Guessed plugin URL; Stale Order Cleaner lives as a section on /plugins/
-/plugins/stale-order-cleaner* /plugins/ 301
-
 # Dated blog post URLs -> clean canonical URLs (duplicate content fix, GSC indexing)
 # Derived from src/content/blog filenames by stripping the ^\d{4}-\d{2}-\d{2}- prefix.
 # Each old URL gets an exact rule with and without the trailing slash. Don't use `*`
-# under /blog/: Cloudflare Pages ignores every wildcard rule past the 100th.
+# under /blog/; see the wildcard section at the end.
 /blog/2026-04-12-the-6-best-woocommerce-bulk-edit-plugins-compared /blog/the-6-best-woocommerce-bulk-edit-plugins-compared/ 301
 /blog/2026-04-12-the-6-best-woocommerce-bulk-edit-plugins-compared/ /blog/the-6-best-woocommerce-bulk-edit-plugins-compared/ 301
 /blog/2026-04-13-how-to-bulk-edit-woocommerce-product-prices /blog/how-to-bulk-edit-woocommerce-product-prices/ 301
@@ -112,16 +105,12 @@
 /blog/2026-08-10-woocommerce-vs-shopify-accessibility/ /blog/woocommerce-vs-shopify-accessibility/ 301
 
 # Discontinued Shopify content (AmazingPlugins is WooCommerce-only) -> /plugins/
-# Trailing `*` splat matches both the slash and non-slash form of each URL.
-/shopify* /plugins/ 301
-/products/shopify-* /plugins/ 301
 /blog/2026-06-02-fix-shopify-app-accessibility-errors-without-uninstalling /plugins/ 301
 /blog/2026-06-02-fix-shopify-app-accessibility-errors-without-uninstalling/ /plugins/ 301
 /blog/2026-05-07-free-shopify-accessibility-checker /plugins/ 301
 /blog/2026-05-07-free-shopify-accessibility-checker/ /plugins/ 301
 /blog/2026-05-26-shopify-checkout-accessibility-fixes /plugins/ 301
 /blog/2026-05-26-shopify-checkout-accessibility-fixes/ /plugins/ 301
-/plugins/shopify-accessibility-fixer* /plugins/ 301
 /blog/2026-05-21-shopify-accessibility-statement-vs-policy-vs-remediation-log /plugins/ 301
 /blog/2026-05-21-shopify-accessibility-statement-vs-policy-vs-remediation-log/ /plugins/ 301
 /blog/2026-05-26-shopify-accessibility-app-vs-audioeye /plugins/ 301
@@ -197,12 +186,10 @@
 /blog/keyboard-navigation-guide/ /blog/keyboard-navigation-woocommerce-fix-guide/ 301
 /blog/wcag-2-2-online-store-guide /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
 /blog/wcag-2-2-online-store-guide/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
-/woocommerce-accessibility-fixer* /plugins/woocommerce-accessibility-fixer/ 301
 /blog/accessible-product-data-for-ai-shopping /blog/accessibility-seo-ranking-factor-ecommerce/ 301
 /blog/accessible-product-data-for-ai-shopping/ /blog/accessibility-seo-ranking-factor-ecommerce/ 301
 /blog/best-shopify-accessibility-app-compared /plugins/ 301
 /blog/best-shopify-accessibility-app-compared/ /plugins/ 301
-/accessible-product-data* /blog/accessibility-seo-ranking-factor-ecommerce/ 301
 /blog/woocommerce-accessibility-audit /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
 /blog/woocommerce-accessibility-audit/ /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
 
@@ -219,7 +206,6 @@
 /blog/ada-lawsuits-rising-woocommerce-2026/ /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 
 # Older post URL forms (dated filenames, truncated early slugs, removed Shopify posts).
-# Exact rules: Cloudflare Pages allows only 100 wildcard rules, so keep /blog/ rules exact.
 /blog/10-common-accessibility-issues-on-e-commerce-sites-and-how-t /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
 /blog/10-common-accessibility-issues-on-e-commerce-sites-and-how-t/ /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
 /blog/2026-04-12-the-6-best-woocommerce-bulk-edit-plugins-compared-2026-hones /blog/the-6-best-woocommerce-bulk-edit-plugins-compared/ 301
@@ -348,3 +334,14 @@
 /blog/woocommerce-accessibility-checklist/ /blog/woocommerce-ada-compliance-checklist-2026/ 301
 /blog/woocommerce-bulk-edit-not-working-here-s-why-and-how-to-fix- /blog/woocommerce-bulk-edit-not-working-here-s-why/ 301
 /blog/woocommerce-bulk-edit-not-working-here-s-why-and-how-to-fix-/ /blog/woocommerce-bulk-edit-not-working-here-s-why/ 301
+
+# Wildcard rules. Keep them last: Cloudflare Pages counts every rule after the first
+# wildcard as dynamic and skips everything past 100 dynamic rules.
+/plugin/* /plugins/:splat 301
+/pricing* /plugins/ 301
+/plugins/stale-order-cleaner* /plugins/ 301
+/shopify* /plugins/ 301
+/products/shopify-* /plugins/ 301
+/plugins/shopify-accessibility-fixer* /plugins/ 301
+/woocommerce-accessibility-fixer* /plugins/woocommerce-accessibility-fixer/ 301
+/accessible-product-data* /blog/accessibility-seo-ranking-factor-ecommerce/ 301
