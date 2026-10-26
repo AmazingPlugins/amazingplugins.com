@@ -59,10 +59,10 @@
 /blog/2026-05-21-woocommerce-plugin-vs-widget-accessibility/ /blog/woocommerce-plugin-vs-widget-accessibility/ 301
 /blog/2026-05-22-wcag-22-compliance-woocommerce-checklist /blog/wcag-22-compliance-woocommerce-checklist/ 301
 /blog/2026-05-22-wcag-22-compliance-woocommerce-checklist/ /blog/wcag-22-compliance-woocommerce-checklist/ 301
-/blog/2026-05-22-wcag-22-compliance-woocommerce-deadline /blog/wcag-22-compliance-woocommerce-deadline/ 301
-/blog/2026-05-22-wcag-22-compliance-woocommerce-deadline/ /blog/wcag-22-compliance-woocommerce-deadline/ 301
-/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed /blog/wcag-22-compliance-woocommerce-what-changed/ 301
-/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed/ /blog/wcag-22-compliance-woocommerce-what-changed/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-deadline /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-deadline/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/2026-05-22-wcag-22-compliance-woocommerce-what-changed/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
 /blog/2026-05-25-ada-compliance-plugin-full-guide /blog/ada-compliance-woocommerce-plugin-full-guide/ 301
 /blog/2026-05-25-ada-compliance-plugin-full-guide/ /blog/ada-compliance-woocommerce-plugin-full-guide/ 301
 /blog/2026-05-26-website-accessibility-plugin-full-guide /blog/website-accessibility-plugin-full-guide/ 301
@@ -205,6 +205,12 @@
 /blog/ada-lawsuits-rising-woocommerce-2026 /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 /blog/ada-lawsuits-rising-woocommerce-2026/ /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 
+# WCAG 2.2 deadline and what-changed posts merged into the requirements guide (2026-10-26).
+/blog/wcag-22-compliance-woocommerce-deadline /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/wcag-22-compliance-woocommerce-deadline/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/wcag-22-compliance-woocommerce-what-changed /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/wcag-22-compliance-woocommerce-what-changed/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+
 # Older post URL forms (dated filenames, truncated early slugs, removed Shopify posts).
 /blog/10-common-accessibility-issues-on-e-commerce-sites-and-how-t /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
 /blog/10-common-accessibility-issues-on-e-commerce-sites-and-how-t/ /blog/10-common-accessibility-issues-on-e-commerce-sites/ 301
@@ -250,10 +256,10 @@
 /blog/2026-05-16-wcag-22-compliance-shopify-what-changed/ /plugins/ 301
 /blog/2026-05-18-wcag-22-compliance-woocommerce-checklist /blog/wcag-22-compliance-woocommerce-checklist/ 301
 /blog/2026-05-18-wcag-22-compliance-woocommerce-checklist/ /blog/wcag-22-compliance-woocommerce-checklist/ 301
-/blog/2026-05-18-wcag-22-compliance-woocommerce-deadline /blog/wcag-22-compliance-woocommerce-deadline/ 301
-/blog/2026-05-18-wcag-22-compliance-woocommerce-deadline/ /blog/wcag-22-compliance-woocommerce-deadline/ 301
-/blog/2026-05-18-wcag-22-compliance-woocommerce-what-changed /blog/wcag-22-compliance-woocommerce-what-changed/ 301
-/blog/2026-05-18-wcag-22-compliance-woocommerce-what-changed/ /blog/wcag-22-compliance-woocommerce-what-changed/ 301
+/blog/2026-05-18-wcag-22-compliance-woocommerce-deadline /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/2026-05-18-wcag-22-compliance-woocommerce-deadline/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/2026-05-18-wcag-22-compliance-woocommerce-what-changed /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
+/blog/2026-05-18-wcag-22-compliance-woocommerce-what-changed/ /blog/wcag-2-2-wordpress-woocommerce-requirements/ 301
 /blog/2026-05-19-shopify-accessibility-app-full-guide /plugins/ 301
 /blog/2026-05-19-shopify-accessibility-app-full-guide/ /plugins/ 301
 /blog/2026-05-20-ada-compliance-plugin-full-guide /blog/ada-compliance-woocommerce-plugin-full-guide/ 301

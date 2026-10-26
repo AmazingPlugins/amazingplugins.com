@@ -76,4 +76,4 @@ Start with a task a buyer cannot finish: choosing a product, adding it to the ca
 ## Related reading
 
 - [EU Accessibility Act ecommerce checklist](/blog/eu-accessibility-act-ecommerce-checklist-2026/)
-- [WCAG 2.2 changes for WooCommerce](/blog/wcag-22-compliance-woocommerce-what-changed/)
+- [WCAG 2.2 requirements, changes, and dates for WooCommerce](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
