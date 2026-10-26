@@ -76,5 +76,6 @@ You can publish a truthful statement with a contact method and known limitations
 
 ## Related reading
 
+- [Does the ADA apply to your WooCommerce store?](/blog/does-the-ada-actually-apply-to-your-woocommerce-store/)
 - [ADA ecommerce remediation plan template](/blog/ada-ecommerce-remediation-plan-template/)
 - [WCAG 2.2 requirements for WordPress and WooCommerce](/blog/wcag-2-2-wordpress-woocommerce-requirements/)

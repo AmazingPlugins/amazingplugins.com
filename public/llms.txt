@@ -2,7 +2,7 @@
 
 > Free WooCommerce plugins for storefront accessibility fixes, shipping checks, and stale order cleanup. Product pages are the source of truth. AP Accessibility Fixer has nine free fixers and no Pro version. It does not make a store fully accessible. Shipping Rules Tester only reads shipping settings. Stale Order Cleaner can delete old orders after a dry run. Deletion is permanent.
 
-55 guides are listed in [llms-full.txt](https://amazingplugins.com/llms-full.txt).
+53 guides are listed in [llms-full.txt](https://amazingplugins.com/llms-full.txt).
 
 ## Plugins
 
