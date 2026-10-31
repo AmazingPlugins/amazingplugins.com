@@ -19,8 +19,8 @@ const blogLastModified = new Map(
     }),
 );
 
-// Pre-launch Amazing Security pages: noindex in the layout and kept out of the sitemap. Remove at launch.
-const heldFromIndex = ['/plugins/amazing-security/', '/compare/amazing-security-vs-wordfence/', '/compare/amazing-security-vs-custonis/'];
+// Pre-launch AmSec Security Scanner pages: noindex in the layout and kept out of the sitemap. Remove at launch.
+const heldFromIndex = ['/plugins/amsec-security-scanner/', '/compare/amsec-security-scanner-vs-wordfence/', '/compare/amsec-security-scanner-vs-custonis/'];
 
 export default defineConfig({
   site: 'https://amazingplugins.com',

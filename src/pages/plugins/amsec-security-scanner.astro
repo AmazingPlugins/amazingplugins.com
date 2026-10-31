@@ -1,20 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
-import { amazingSecurity as product } from '../../data/amazing-security';
-import '../../styles/amazing-security.css';
+import { amsecSecurityScanner as product } from '../../data/amsec-security-scanner';
+import '../../styles/amsec-security-scanner.css';
 ---
 
-<BaseLayout noindex title="Amazing Security for WordPress" description="Amazing Security is a free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence.">
+<BaseLayout noindex title="AmSec Security Scanner for WordPress" description="AmSec Security Scanner is a free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence.">
   <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Plugins', url: '/plugins/' }, { name: product.name, url: product.path }]} />
   <section class="as-shell">
     <div class="wrap">
-      <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/plugins/">Plugins</a><span>/</span><span aria-current="page">Amazing Security</span></nav>
+      <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/plugins/">Plugins</a><span>/</span><span aria-current="page">AmSec Security Scanner</span></nav>
       <div class="as-hero">
         <div>
           <p class="as-kicker">{product.status} · Free WordPress plugin</p>
-          <h1 class="display as-title">Amazing Security.</h1>
-          <p class="as-lede">Security checks that show their evidence. Amazing Security scans your site and shows you what it found and where. Nothing changes until you approve it.</p>
+          <h1 class="display as-title">AmSec Security Scanner.</h1>
+          <p class="as-lede">Security checks that show their evidence. AmSec Security Scanner scans your site and shows you what it found and where. Nothing changes until you approve it.</p>
           <div class="as-actions"><a href="#features" class="btn btn-primary">See what it does</a><a href="/contact/#general" class="btn btn-ghost">Ask a question</a></div>
           <p class="as-small">{product.availability} {product.requirements}</p>
         </div>
@@ -51,6 +51,6 @@ import '../../styles/amazing-security.css';
 
   <section class="as-shell"><div class="wrap as-split">
     <div><h2 class="as-heading">What it doesn't do.</h2></div>
-    <div class="as-prose"><ul><li>It doesn't have a maintained malware signature feed. Its rules update with plugin releases.</li><li>It doesn't remove malware or rebuild a whole plugin.</li><li>It doesn't check from outside your server whether a file is publicly reachable.</li><li>It doesn't have a built-in authenticator app. It points you to the Two Factor plugin instead.</li><li>Daily scans run on WP-Cron, so a quiet site may run them late.</li></ul><p>If you need a managed firewall rule feed today, compare it with <a href="/compare/amazing-security-vs-wordfence/">Wordfence Free</a>. For public file checks, see the <a href="/compare/amazing-security-vs-custonis/">Custonis comparison</a>. The <a href="/wordpress-security/">WordPress security checklist</a> covers steps you can take on any site.</p></div>
+    <div class="as-prose"><ul><li>It doesn't have a maintained malware signature feed. Its rules update with plugin releases.</li><li>It doesn't remove malware or rebuild a whole plugin.</li><li>It doesn't check from outside your server whether a file is publicly reachable.</li><li>It doesn't have a built-in authenticator app. It points you to the Two Factor plugin instead.</li><li>Daily scans run on WP-Cron, so a quiet site may run them late.</li></ul><p>If you need a managed firewall rule feed today, compare it with <a href="/compare/amsec-security-scanner-vs-wordfence/">Wordfence Free</a>. For public file checks, see the <a href="/compare/amsec-security-scanner-vs-custonis/">Custonis comparison</a>. The <a href="/wordpress-security/">WordPress security checklist</a> covers steps you can take on any site.</p></div>
   </div></section>
 </BaseLayout>

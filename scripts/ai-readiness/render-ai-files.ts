@@ -143,7 +143,7 @@ export function renderLlms(pages: PublicPage[], articles: ArticleLink[]): string
     `${SITE_ORIGIN}/plugins/`,
     `${SITE_ORIGIN}/plugins/woocommerce-accessibility-fixer/`,
     `${SITE_ORIGIN}/plugins/shipping-rules-tester-for-woocommerce/`,
-    `${SITE_ORIGIN}/plugins/amazing-security/`,
+    `${SITE_ORIGIN}/plugins/amsec-security-scanner/`,
     `${SITE_ORIGIN}/faq/`,
     `${SITE_ORIGIN}/about/`,
     `${SITE_ORIGIN}/contact/`,
@@ -159,7 +159,7 @@ export function renderLlms(pages: PublicPage[], articles: ArticleLink[]): string
 
   const fixer = byUrl.get(`${SITE_ORIGIN}/plugins/woocommerce-accessibility-fixer/`)!;
   const shipping = byUrl.get(`${SITE_ORIGIN}/plugins/shipping-rules-tester-for-woocommerce/`)!;
-  const security = byUrl.get(`${SITE_ORIGIN}/plugins/amazing-security/`)!;
+  const security = byUrl.get(`${SITE_ORIGIN}/plugins/amsec-security-scanner/`)!;
 
   return [
     '# AmazingPlugins',
