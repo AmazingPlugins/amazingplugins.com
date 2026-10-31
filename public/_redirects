@@ -3,6 +3,14 @@
 /plugin /plugins/ 301
 /plugin/ /plugins/ 301
 
+# Amazing Security renamed to AmSec Security Scanner (WordPress.org review, 2026-10-31)
+/plugins/amazing-security /plugins/amsec-security-scanner/ 301
+/plugins/amazing-security/ /plugins/amsec-security-scanner/ 301
+/compare/amazing-security-vs-wordfence /compare/amsec-security-scanner-vs-wordfence/ 301
+/compare/amazing-security-vs-wordfence/ /compare/amsec-security-scanner-vs-wordfence/ 301
+/compare/amazing-security-vs-custonis /compare/amsec-security-scanner-vs-custonis/ 301
+/compare/amazing-security-vs-custonis/ /compare/amsec-security-scanner-vs-custonis/ 301
+
 # Renamed blog post (was Shopify+WooCommerce, now WooCommerce-only)
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301
 /blog/how-to-avoid-ada-lawsuits-shopify-woocommerce/ /blog/how-to-avoid-ada-lawsuits-woocommerce-store/ 301

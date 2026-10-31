@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
 import { shippingTester } from '../../data/shipping-rules-tester';
-import { amazingSecurity } from '../../data/amazing-security';
+import { amsecSecurityScanner } from '../../data/amsec-security-scanner';
 
 const accessibilityFixer = {
   version: '1.5.3',
@@ -17,7 +17,7 @@ const catalogSchema = {
     { name: 'WooCommerce Accessibility Fixer', url: '/plugins/woocommerce-accessibility-fixer/' },
     { name: shippingTester.name, url: shippingTester.path },
     { name: 'Stale Order Cleaner for WooCommerce', url: '/plugins/#stale-order-cleaner' },
-    { name: amazingSecurity.fullName, url: amazingSecurity.path },
+    { name: amsecSecurityScanner.fullName, url: amsecSecurityScanner.path },
   ].map((item, index) => ({ '@type': 'ListItem', position: index + 1, name: item.name, url: new URL(item.url, Astro.site).href })),
 };
 ---
@@ -29,17 +29,17 @@ const catalogSchema = {
   <section class="section" style="padding-bottom: 2rem;">
     <div class="container">
       <h1>Plugins for WordPress and WooCommerce</h1>
-      <p class="page-intro">Check storefront accessibility, investigate shipping rates, or review stale orders. Amazing Security, our free WordPress security plugin, is coming to WordPress.org. Check each tool's job and availability below.</p>
+      <p class="page-intro">Check storefront accessibility, investigate shipping rates, or review stale orders. AmSec Security Scanner, our free WordPress security plugin, is coming to WordPress.org. Check each tool's job and availability below.</p>
     </div>
   </section>
 
   <section class="section section-alt" style="padding-top: 0;">
     <div class="container">
 
-      <article class="plugin-card" id="amazing-security">
-        <div class="plugin-header"><div><div class="plugin-badges"><span class="badge badge-soon">Coming to WordPress.org</span></div><h2>Amazing Security</h2><p class="plugin-desc">A free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence, and nothing changes until you approve it.</p></div></div>
+      <article class="plugin-card" id="amsec-security-scanner">
+        <div class="plugin-header"><div><div class="plugin-badges"><span class="badge badge-soon">Coming to WordPress.org</span></div><h2>AmSec Security Scanner</h2><p class="plugin-desc">A free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence, and nothing changes until you approve it.</p></div></div>
         <p class="availability-note">Version 0.1.0 is built but isn't on WordPress.org yet. The product page lists what it does and what it doesn't.</p>
-        <div class="plugin-actions"><a href={amazingSecurity.path} class="btn btn-primary">See the plugin</a></div>
+        <div class="plugin-actions"><a href={amsecSecurityScanner.path} class="btn btn-primary">See the plugin</a></div>
       </article>
 
       <article class="plugin-card">

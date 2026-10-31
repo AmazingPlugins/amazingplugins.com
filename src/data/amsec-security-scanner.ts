@@ -1,7 +1,7 @@
-export const amazingSecurity = {
-  name: 'Amazing Security',
-  fullName: 'Amazing Security by AmazingPlugins',
-  path: '/plugins/amazing-security/',
+export const amsecSecurityScanner = {
+  name: 'AmSec Security Scanner',
+  fullName: 'AmSec Security Scanner by AmazingPlugins',
+  path: '/plugins/amsec-security-scanner/',
   version: '0.1.0',
   status: 'Version 0.1.0',
   availability: "It isn't on WordPress.org yet. The download link will appear here once the plugin is approved.",

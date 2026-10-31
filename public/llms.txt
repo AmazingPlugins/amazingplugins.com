@@ -14,7 +14,7 @@
 - [Shipping Rules Tester source](https://github.com/AmazingPlugins/shipping-rules-tester-for-woocommerce): Source code.
 - [Stale Order Cleaner](https://amazingplugins.com/plugins/#stale-order-cleaner): Find old pending, failed, cancelled, draft, or trashed orders. Preview before deletion. Deletion is permanent.
 - [Stale Order Cleaner source](https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce): Source on GitHub.
-- [Amazing Security for WordPress](https://amazingplugins.com/plugins/amazing-security/): Amazing Security is a free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence.
+- [AmSec Security Scanner for WordPress](https://amazingplugins.com/plugins/amsec-security-scanner/): AmSec Security Scanner is a free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence.
 
 ## Guides and support
 
