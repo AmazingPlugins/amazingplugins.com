@@ -1,7 +1,7 @@
-export const amsecSecurityScanner = {
-  name: 'AmSec Security Scanner',
-  fullName: 'AmSec Security Scanner by AmazingPlugins',
-  path: '/plugins/amsec-security-scanner/',
+export const ironlatchSecurityScanner = {
+  name: 'Ironlatch Security Scanner',
+  fullName: 'Ironlatch Security Scanner by AmazingPlugins',
+  path: '/plugins/ironlatch-security-scanner/',
   version: '0.1.0',
   status: 'Version 0.1.0',
   availability: "It isn't on WordPress.org yet. The download link will appear here once the plugin is approved.",
