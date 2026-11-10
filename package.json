@@ -26,6 +26,7 @@
     "test:gsc-reporting": "node --import tsx --test scripts/seo-pipeline/gsc-reporting.test.ts",
     "test:ai-readiness": "node --import tsx --test scripts/ai-readiness/ai-readiness.test.ts",
     "test:footer-badges": "node --test tests/footer-badges-html.test.mjs",
+    "test:seo-guards": "node --test tests/seo-guards.test.mjs",
     "test:seo-current": "tsx scripts/seo-pipeline/check-current-content.ts",
     "test:contact": "node --test tests/contact.test.mjs"
   },
