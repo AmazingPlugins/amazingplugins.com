@@ -122,7 +122,7 @@ export const footerBadges = [
     id: 'firstlook',
     kind: 'raw',
     host: 'firstlook.tools',
-    html: `<a href="https://firstlook.tools" target="_blank" rel="noopener noreferrer"><img src="https://firstlook.tools/badge/badge_dark.svg" alt="Featured on First Look" width="200" height="54"></a>`,
+    html: `<a href="https://firstlook.tools" target="_blank"><img src="https://firstlook.tools/badge/badge_dark.svg" alt="Featured on First Look" width="200" height="54" /></a>`,
   },
   {
     id: 'launch-list',
@@ -1590,7 +1590,7 @@ export const footerBadges = [
     id: 'saasdirectorylist',
     kind: 'raw',
     host: 'saasdirectorylist.com',
-    html: `<a href="https://saasdirectorylist.com/launch/amazingplugins" rel="nofollow" target="_blank"><img src="https://saasdirectorylist.com/badge/amazingplugins.svg?kind=listed&amp;shape=standard&amp;mode=auto&amp;size=m&amp;v=2" alt="Listed on SaaS Directory List" width="250" height="54" loading="lazy" decoding="async"></a>`,
+    html: `<a href="https://saasdirectorylist.com/launch/amazingplugins" rel="nofollow" target="_blank"><img src="https://saasdirectorylist.com/badge/amazingplugins.svg?kind=listed&amp;shape=standard&amp;mode=auto&amp;size=m&amp;v=2" alt="Listed on SaaS Directory List" width="250" height="54" loading="lazy" decoding="async"></a><script async src="https://saasdirectorylist.com/badge/amazingplugins.js"></script>`,
   },
   {
     id: 'shipnlaunch',
