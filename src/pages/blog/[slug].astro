@@ -238,6 +238,11 @@ const articleSchema = {
     font-size: 0.875rem;
   }
 
+  /* Shiki's github-dark comment colour (#6A737D) is under 4.5:1 on this background. */
+  .post-content :global(pre span[style*='#6A737D']) {
+    color: #959da5 !important;
+  }
+
   .post-content :global(code) {
     background: var(--color-bg-alt);
     padding: 0.15rem 0.35rem;
