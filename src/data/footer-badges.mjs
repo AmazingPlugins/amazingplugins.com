@@ -639,7 +639,7 @@ export const footerBadges = [
     id: 'launchnest',
     kind: 'raw',
     host: 'launchnest.io',
-    html: `<a href="https://launchnest.io/" target="_blank"><img src="https://launchnest.io/badge/amazingplugins.svg?variant=featured" alt="AmazingPlugins on LaunchNest" width="220" height="56" /></a>`,
+    html: `<a href="https://launchnest.io/p/amazingplugins" target="_blank"><img src="https://launchnest.io/badge/amazingplugins.svg?variant=featured" alt="AmazingPlugins on LaunchNest" width="220" height="56" /></a>`,
   },
   {
     id: 'launchpadly',
@@ -689,7 +689,7 @@ export const footerBadges = [
     id: 'ontoplist',
     kind: 'raw',
     host: 'ontoplist.com',
-    html: `<a href="https://www.ontoplist.com/web-development-companies/" target="_blank"><img src="https://www.ontoplist.com/images/ontoplist31.png?id=6ac380f51e468" alt="Top Web Development Companies in the US - OnToplist.com" border="0"></a>`,
+    html: `<a href="https://www.ontoplist.com/ecommerce-companies/" target="_blank"><img src="https://www.ontoplist.com/images/ontoplist31.png?id=6ad0e0fc3a881" alt="Top eCommerce Development Companies in the USA - OnToplist.com" border="0"></a>`,
   },
   {
     id: 'postyourstartup',
@@ -1068,7 +1068,7 @@ export const footerBadges = [
     id: 'swipetolaunch',
     kind: 'raw',
     host: 'swipetolaunch.com',
-    html: `<a href="https://swipetolaunch.com/" target="_blank" rel="noopener"><img src="https://swipetolaunch.com/api/badge/amazingplugins" alt="Featured on SwipeToLaunch" width="220" height="48" loading="lazy" /></a>`,
+    html: `<a href="https://swipetolaunch.com/p/amazingplugins?ref=badge" target="_blank" rel="noopener"><img src="https://swipetolaunch.com/api/badge/amazingplugins" alt="Featured on SwipeToLaunch" width="220" height="48" loading="lazy" /></a>`,
   },
   {
     id: 'toolquix',
@@ -1170,7 +1170,7 @@ export const footerBadges = [
     id: 'getlaunchpod',
     kind: 'raw',
     host: 'getlaunchpod.com',
-    html: `<a href="https://getlaunchpod.com/" target="_blank" rel="noopener"><img src="/badges/getlaunchpod-featured.svg" alt="Featured on GetLaunchPod" width="200" height="54" /></a>`,
+    html: `<a href="https://getlaunchpod.com/product/amazingplugins-98d5ea"><img src="https://getlaunchpod.com/badge/amazingplugins-98d5ea" alt="AmazingPlugins on GetLaunchPod" /></a>`,
   },
   {
     id: 'indiedeals',
@@ -1326,7 +1326,7 @@ export const footerBadges = [
     id: 'thedevtoolslist',
     kind: 'raw',
     host: 'thedevtoolslist.com',
-    html: `<a href="https://thedevtoolslist.com/" rel="dofollow"><img src="https://thedevtoolslist.com/badge/amazingplugins.svg" alt="Featured on TheDevToolsList" width="182" height="46"></a>`,
+    html: `<a href="https://thedevtoolslist.com/product/amazingplugins?ref=badge" rel="dofollow"><img src="https://thedevtoolslist.com/badge/amazingplugins.svg" alt="Featured on TheDevToolsList" width="182" height="46"></a>`,
   },
   {
     id: 'toolsroller',
@@ -1573,6 +1573,36 @@ export const footerBadges = [
     kind: 'raw',
     host: 'toolpilot.ai',
     html: `<a href="https://www.toolpilot.ai" target="_blank"><img src="https://www.toolpilot.ai/cdn/shop/files/f-b_20x4_crop_center.png?v=1695882701" alt="Featured on ToolPilot.ai" width="454" height="100"></a>`,
+  },
+  {
+    id: 'peeklaunch',
+    kind: 'raw',
+    host: 'peeklaunch.com',
+    html: `<a href="https://peeklaunch.com/products/amazingplugins?ref=badge" target="_blank" rel="noopener"> <img src="https://peeklaunch.com/api/badge/amazingplugins" alt="Featured on PeekLaunch" width="220" height="48" loading="lazy" /> </a>`,
+  },
+  {
+    id: 'saasaur',
+    kind: 'raw',
+    host: 'saasaur.com',
+    html: `<a href="https://saasaur.com/project/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://saasaur.com/assets/badges/featured-on-light.svg" alt="Featured on SaaSaur" width="200" height="60"></a>`,
+  },
+  {
+    id: 'saasdirectorylist',
+    kind: 'raw',
+    host: 'saasdirectorylist.com',
+    html: `<a href="https://saasdirectorylist.com/launch/amazingplugins" rel="nofollow" target="_blank"><img src="https://saasdirectorylist.com/badge/amazingplugins.svg?kind=listed&amp;shape=standard&amp;mode=auto&amp;size=m&amp;v=2" alt="Listed on SaaS Directory List" width="250" height="54" loading="lazy" decoding="async"></a><script async src="https://saasdirectorylist.com/badge/amazingplugins.js"></script>`,
+  },
+  {
+    id: 'shipnlaunch',
+    kind: 'raw',
+    host: 'shipnlaunch.com',
+    html: `<a href="https://www.shipnlaunch.com/" target="_blank" rel="noopener noreferrer"><img src="https://www.shipnlaunch.com/badges/featured-light.svg" alt="Featured on ShipNLaunch" width="240" height="56" /></a>`,
+  },
+  {
+    id: 'doitlaunch',
+    kind: 'raw',
+    host: 'doitlaunch.com',
+    html: `<a href="https://doitlaunch.com/products/amazingplugins" target="_blank" rel="noopener" style="width:200px;display:inline-block;"> <img src="https://doitlaunch.com/badge.png" alt="Launched on Do It Launch" style="width:200px;display:block;" /> </a>`,
   },
 ];
 
