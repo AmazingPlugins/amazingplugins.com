@@ -46,6 +46,9 @@ jobs:
       - name: Verify footer directory badges
         run: npm run test:footer-badges
 
+      - name: Verify canonicals, sitemap and Ironlatch hold
+        run: npm run test:seo-guards
+
       - name: Deploy to Cloudflare Pages
         # Run outside the repository so Astro's Worker config is not auto-detected
         # by the static Pages upload command.
