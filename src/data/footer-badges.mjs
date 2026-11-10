@@ -1590,7 +1590,7 @@ export const footerBadges = [
     id: 'saasdirectorylist',
     kind: 'raw',
     host: 'saasdirectorylist.com',
-    html: `<a href="https://saasdirectorylist.com/launch/amazingplugins" rel="nofollow" target="_blank"><img src="https://saasdirectorylist.com/badge/amazingplugins.svg?kind=listed&amp;shape=standard&amp;mode=auto&amp;size=m&amp;v=2" alt="Listed on SaaS Directory List" width="250" height="54" loading="lazy" decoding="async"></a><script async src="https://saasdirectorylist.com/badge/amazingplugins.js"></script>`,
+    html: `<a href="https://saasdirectorylist.com/launch/amazingplugins" rel="nofollow" target="_blank"><img src="https://saasdirectorylist.com/badge/amazingplugins.svg?kind=listed&amp;shape=standard&amp;mode=auto&amp;size=m&amp;v=2" alt="Listed on SaaS Directory List" width="250" height="54" loading="lazy" decoding="async"></a>`,
   },
   {
     id: 'shipnlaunch',
