@@ -45,5 +45,8 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "wrangler": "^4.91.0"
+  },
+  "overrides": {
+    "@qwik.dev/partytown": "1.0.5"
   }
 }
