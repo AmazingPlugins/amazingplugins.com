@@ -1,5 +1,5 @@
 // Guards the intentional SEO choices that were code-only: canonicals, sitemap contents, and the
-// pre-launch Ironlatch hold. Reads dist/, so run `npm run build` first.
+// pre-launch holds (Ironlatch, Tablewright). Reads dist/, so run `npm run build` first.
 import assert from 'node:assert/strict';
 import { readdir, readFile } from 'node:fs/promises';
 import test from 'node:test';
@@ -7,6 +7,7 @@ import test from 'node:test';
 const dist = new URL('../dist/client/', import.meta.url);
 const held = [
   '/plugins/ironlatch-security-scanner/',
+  '/plugins/tablewright-database-manager/',
   '/compare/ironlatch-security-scanner-vs-wordfence/',
   '/compare/ironlatch-security-scanner-vs-custonis/',
 ];
@@ -35,7 +36,7 @@ test('every page has one trailing-slash canonical on the apex that matches og:ur
   }
 });
 
-test('sitemap lists slash-terminated URLs and leaves out the held Ironlatch pages', async () => {
+test('sitemap lists slash-terminated URLs and leaves out the held pre-launch pages', async () => {
   const locs = [...(await read('sitemap-0.xml')).matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
   assert.ok(locs.length > 50, 'expected the sitemap to list the site');
   for (const loc of locs) assert.ok(loc.startsWith('https://amazingplugins.com/') && loc.endsWith('/'), loc);
@@ -44,7 +45,7 @@ test('sitemap lists slash-terminated URLs and leaves out the held Ironlatch page
   assert.match(await read('sitemap-index.xml'), /<loc>https:\/\/amazingplugins\.com\/sitemap-0\.xml<\/loc>/);
 });
 
-test('held Ironlatch pages are noindex, nofollow and no other page is', async () => {
+test('held pre-launch pages are noindex, nofollow and no other page is', async () => {
   for (const path of held) {
     assert.match(await read(`${path.slice(1)}index.html`), /<meta name="robots" content="noindex, nofollow"/, path);
   }

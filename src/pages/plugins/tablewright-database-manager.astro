@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro';
+import { tablewrightDatabaseManager as product } from '../../data/tablewright-database-manager';
+// The page layout is shared with the other free WordPress plugin page, so the stylesheet is too.
+import '../../styles/ironlatch-security-scanner.css';
+---
+
+<BaseLayout noindex title="Tablewright Database Manager for WordPress" description="Tablewright Database Manager is a free WordPress plugin that shows what makes your database big, who owns it, and what is safe to clean, with a trash you can restore from.">
+  <BreadcrumbSchema items={[{ name: 'Home', url: '/' }, { name: 'Plugins', url: '/plugins/' }, { name: product.name, url: product.path }]} />
+  <section class="as-shell">
+    <div class="wrap">
+      <nav class="as-crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/plugins/">Plugins</a><span>/</span><span aria-current="page">Tablewright Database Manager</span></nav>
+      <div class="as-hero">
+        <div>
+          <p class="as-kicker">{product.status} · Free WordPress plugin</p>
+          <h1 class="display as-title">Tablewright Database Manager.</h1>
+          <p class="as-lede">See what is making your database big, who owns it, and what is safe to do about it. Anything it removes goes to a trash for 30 days first, so you can put it back.</p>
+          <div class="as-actions"><a href="#features" class="btn btn-primary">See what it does</a><a href="/contact/#general" class="btn btn-ghost">Ask a question</a></div>
+          <p class="as-small">{product.availability} {product.requirements}</p>
+        </div>
+        <figure class="as-receipt">
+          <div class="as-receipt-head"><span>Example row</span><span>Options, biggest first</span></div>
+          <span class="as-verdict">Probably leftover</span>
+          <h2>3,000 options that start with example_cache_</h2>
+          <table class="as-evidence"><tbody>
+            <tr><th scope="row">Size</th><td>41 MB in 3,000 rows, all in one line.</td></tr>
+            <tr><th scope="row">Belongs to</th><td>Nothing installed. No active or inactive plugin or theme mentions this name.</td></tr>
+            <tr><th scope="row">Next step</th><td>Move them to the trash. Nothing is deleted for 30 days, and restore puts them back as they were.</td></tr>
+          </tbody></table>
+          <figcaption>Example layout, not a scan of your site.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="as-shell" id="features"><div class="wrap">
+    <h2 class="as-heading">What's in version {product.version}</h2>
+    <p class="as-intro">Nothing changes until you press a button, and every button shows its count first. A scan only reads your database and the files of your installed plugins.</p>
+    <div class="as-list">{product.capabilities.map(capability => <article><h3>{capability.label}</h3><p>{capability.description}</p></article>)}</div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split">
+    <div><h2 class="as-heading">Your data stays on your server.</h2></div>
+    <div class="as-prose"><p>The plugin makes no outside requests. A scan reads your database and the PHP files of your installed plugins and themes, and keeps the results on your site. It needs no account, and AmazingPlugins doesn't receive anything from your site.</p><p>Previews show names, counts and sizes. They never show a stored value, a customer name, a comment, or the arguments of a scheduled event.</p></div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split">
+    <div><h2 class="as-heading">A way back.</h2></div>
+    <div class="as-prose"><p>Core data can't be touched. Before anything moves you see the exact count, and if the numbers changed since you looked, nothing happens. Big groups and every table ask you to type the name to confirm.</p><p>The trash keeps what you removed for 30 days, and you can download a backup file of any group first. The few things that can't be undone, like old revisions or deleting a comment for good, say so on the button.</p></div>
+  </div></section>
+
+  <section class="as-shell"><div class="wrap as-split">
+    <div><h2 class="as-heading">What it doesn't do.</h2></div>
+    <div class="as-prose"><ul><li>It doesn't name plugins that are no longer installed. It tells you that nothing installed uses the data.</li><li>It doesn't change character sets or collations. It shows the statement and leaves the rest to you.</li><li>It doesn't clean by itself unless you switch that on. Five jobs can run daily, and all of them are off by default.</li><li>It has no paid version.</li></ul></div>
+  </div></section>
+</BaseLayout>
