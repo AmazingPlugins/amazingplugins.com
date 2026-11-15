@@ -1,0 +1,20 @@
+export const tablewrightDatabaseManager = {
+  name: 'Tablewright Database Manager',
+  fullName: 'Tablewright Database Manager by AmazingPlugins',
+  path: '/plugins/tablewright-database-manager/',
+  version: '0.11.0',
+  status: 'Version 0.11.0',
+  availability: "It isn't on WordPress.org yet. The download link will appear here once the plugin is approved.",
+  requirements: 'WordPress 6.6+ and PHP 8.1+. Tested on MariaDB 10.6 and 11 and MySQL 8.4. The WooCommerce features were tested on WooCommerce 9.3 and newer. AI assistant access needs WordPress 6.9+.',
+  capabilities: [
+    { label: 'What is big', description: 'Options and tables, largest first. Rows that share a prefix become one line with a count and a total size, so 3,000 cache options read as one row. Post, comment, term and user meta get the same treatment, key by key.' },
+    { label: 'Who owns it', description: 'Each group gets an owner and the evidence behind it: WordPress core, an active plugin or theme, an inactive one, or "nothing installed uses this". A name that only looks similar is never proof, and when the plugin can\'t tell, it says unknown.' },
+    { label: 'A trash you can restore from', description: 'Options, meta rows, duplicate meta, cron events and leftover tables go to a trash for 30 days first. Tables are renamed, not dropped. A restore puts everything back, including the autoload flag.' },
+    { label: 'Cleanups that show a count first', description: 'Expired transients, old revisions, Action Scheduler history, orphan meta, spam and trashed comments, auto-drafts and trashed posts, the oEmbed cache, orphan term links, stale edit locks and duplicate meta. Each one re-checks its count before it acts, caps what one click does, and asks you to type DELETE when it can\'t be undone.' },
+    { label: 'WooCommerce', description: 'Stale order cleaning for drafts, failed, cancelled and pending orders, plus expired sessions and rate limits. Orders that were ever paid, refunded or part of a subscription are never offered. Works with custom order tables and legacy posts.' },
+    { label: 'Reports that change nothing', description: 'The biggest meta keys and who uses them, what fills the cron option, and tables that use a different character set than WordPress. The last one shows the statement to run and leaves the rest to you.' },
+    { label: 'The command line', description: 'Every cleanup has a wp tablewright command. It only says what it would do until you add --yes.' },
+    { label: 'Automatic cleanup, off by default', description: 'Five jobs can run daily once you switch them on, each with a cap and a safety stop that holds back when the numbers look wrong. Deleting orders for good and posts is never automatic.' },
+    { label: 'AI assistant access, read only', description: 'Off by default. An administrator can let an assistant read scan results. It can\'t delete or change anything.' },
+  ],
+} as const;

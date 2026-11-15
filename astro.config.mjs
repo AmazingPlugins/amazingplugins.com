@@ -19,8 +19,8 @@ const blogLastModified = new Map(
     }),
 );
 
-// Pre-launch Ironlatch Security Scanner pages: noindex in the layout and kept out of the sitemap. Remove at launch.
-const heldFromIndex = ['/plugins/ironlatch-security-scanner/', '/compare/ironlatch-security-scanner-vs-wordfence/', '/compare/ironlatch-security-scanner-vs-custonis/'];
+// Pre-launch pages (Ironlatch Security Scanner, Tablewright Database Manager): noindex in the layout and kept out of the sitemap. Remove at launch.
+const heldFromIndex = ['/plugins/ironlatch-security-scanner/', '/plugins/tablewright-database-manager/', '/compare/ironlatch-security-scanner-vs-wordfence/', '/compare/ironlatch-security-scanner-vs-custonis/'];
 
 export default defineConfig({
   site: 'https://amazingplugins.com',

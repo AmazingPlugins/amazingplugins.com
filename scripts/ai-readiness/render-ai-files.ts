@@ -144,6 +144,7 @@ export function renderLlms(pages: PublicPage[], articles: ArticleLink[]): string
     `${SITE_ORIGIN}/plugins/woocommerce-accessibility-fixer/`,
     `${SITE_ORIGIN}/plugins/shipping-rules-tester-for-woocommerce/`,
     `${SITE_ORIGIN}/plugins/ironlatch-security-scanner/`,
+    `${SITE_ORIGIN}/plugins/tablewright-database-manager/`,
     `${SITE_ORIGIN}/faq/`,
     `${SITE_ORIGIN}/about/`,
     `${SITE_ORIGIN}/contact/`,
@@ -160,6 +161,7 @@ export function renderLlms(pages: PublicPage[], articles: ArticleLink[]): string
   const fixer = byUrl.get(`${SITE_ORIGIN}/plugins/woocommerce-accessibility-fixer/`)!;
   const shipping = byUrl.get(`${SITE_ORIGIN}/plugins/shipping-rules-tester-for-woocommerce/`)!;
   const security = byUrl.get(`${SITE_ORIGIN}/plugins/ironlatch-security-scanner/`)!;
+  const database = byUrl.get(`${SITE_ORIGIN}/plugins/tablewright-database-manager/`)!;
 
   return [
     '# AmazingPlugins',
@@ -179,6 +181,7 @@ export function renderLlms(pages: PublicPage[], articles: ArticleLink[]): string
     `- [Stale Order Cleaner](${SITE_ORIGIN}/plugins/#stale-order-cleaner): Find old pending, failed, cancelled, draft, or trashed orders. Preview before deletion. Deletion is permanent.`,
     `- [Stale Order Cleaner source](https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce): Source on GitHub.`,
     link(security),
+    link(database),
     '',
     '## Guides and support',
     '',

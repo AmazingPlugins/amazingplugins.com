@@ -15,6 +15,7 @@
 - [Stale Order Cleaner](https://amazingplugins.com/plugins/#stale-order-cleaner): Find old pending, failed, cancelled, draft, or trashed orders. Preview before deletion. Deletion is permanent.
 - [Stale Order Cleaner source](https://github.com/AmazingPlugins/stale-order-cleaner-for-woocommerce): Source on GitHub.
 - [Ironlatch Security Scanner for WordPress](https://amazingplugins.com/plugins/ironlatch-security-scanner/): Ironlatch Security Scanner is a free WordPress security plugin: hardening checks, a malware scan, file integrity, login protection and traffic controls. Every finding shows its evidence.
+- [Tablewright Database Manager for WordPress](https://amazingplugins.com/plugins/tablewright-database-manager/): Tablewright Database Manager is a free WordPress plugin that shows what makes your database big, who owns it, and what is safe to clean, with a trash you can restore from.
 
 ## Guides and support
 
