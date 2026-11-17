@@ -52,6 +52,59 @@ import '../../styles/ironlatch-security-scanner.css';
 
   <section class="as-shell"><div class="wrap as-split">
     <div><h2 class="as-heading">What it doesn't do.</h2></div>
-    <div class="as-prose"><ul><li>It doesn't name plugins that are no longer installed. It tells you that nothing installed uses the data.</li><li>It doesn't change character sets or collations. It shows the statement and leaves the rest to you.</li><li>It doesn't clean by itself unless you switch that on. Five jobs can run daily, and all of them are off by default.</li><li>It has no paid version.</li></ul></div>
+    <div class="as-prose"><ul><li>It doesn't guess when it isn't sure. If an installed plugin might use a name, it says "review it", never "leftover".</li><li>It doesn't change character sets or collations. It shows the statement and leaves the rest to you.</li><li>It doesn't clean by itself unless you switch that on. Five jobs can run daily, and all of them are off by default.</li><li>It has no paid version.</li></ul></div>
   </div></section>
+  <section class="as-shell" id="compare"><div class="wrap">
+    <h2 class="as-heading">How it compares</h2>
+    <p class="as-intro">The three most installed database cleaners on WordPress.org, from their own pages and support forums, checked on 16 November 2026. Prices change, so follow the links.</p>
+    <div class="tw-compare-wrap"><table class="tw-compare">
+      <thead><tr><th scope="col"></th><th scope="col">Tablewright</th><th scope="col">WP-Optimize</th><th scope="col">Advanced Database Cleaner</th><th scope="col">WP-Sweep</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Names the plugin that left data behind</th><td>Yes, free, for options, tables and meta</td><td>Tables only, matched by name (<a href="https://teamupdraft.com/wp-optimize/free-vs-premium/">source</a>)</td><td>Premium, from $39 a year (<a href="https://sigmaplugin.com/downloads/wordpress-advanced-database-cleaner">source</a>)</td><td>No (<a href="https://wordpress.org/plugins/wp-sweep/">source</a>)</td></tr>
+        <tr><th scope="row">Undo after you clean</th><td>Trash for 30 days, restore in one click</td><td>No, back up first (<a href="https://wordpress.org/plugins/wp-optimize/">source</a>)</td><td>No, back up first (<a href="https://wordpress.org/plugins/advanced-database-cleaner/">source</a>)</td><td>No, "there is no undo" (<a href="https://wordpress.org/plugins/wp-sweep/">source</a>)</td></tr>
+        <tr><th scope="row">Leftover tables of removed plugins</th><td>Renamed, not dropped, so they come back</td><td>Purging them is Premium (<a href="https://wordpress.org/support/topic/purge-orphaned-tables-and-rows-left-behind-by-deleted-plugins/">source</a>)</td><td>Ownership is Premium (<a href="https://wordpress.org/plugins/advanced-database-cleaner/">source</a>)</td><td>Not offered (<a href="https://wordpress.org/support/topic/old-database-tables-2/">source</a>)</td></tr>
+        <tr><th scope="row">Groups 3,000 rows of one prefix into one line</th><td>Yes</td><td colspan="3">Not seen in their documentation</td></tr>
+        <tr><th scope="row">WP-CLI</th><td>Yes</td><td>Premium (<a href="https://teamupdraft.com/wp-optimize/free-vs-premium/">source</a>)</td><td>Not documented</td><td>Yes (<a href="https://wordpress.org/plugins/wp-sweep/">source</a>)</td></tr>
+        <tr><th scope="row">Price</th><td>Free, no paid version</td><td>Free, Premium from $49 a year (<a href="https://teamupdraft.com/wp-optimize/pricing/">source</a>)</td><td>Free, Premium from $39 a year (<a href="https://sigmaplugin.com/downloads/wordpress-advanced-database-cleaner">source</a>)</td><td>Free</td></tr>
+      </tbody>
+    </table></div>
+    <p class="as-small">WP-Optimize also caches pages and compresses images, which Tablewright doesn't. If you need those, use both.</p>
+  </div></section>
+
+  <section class="as-shell" id="tested"><div class="wrap as-split">
+    <div><h2 class="as-heading">How we tested it.</h2></div>
+    <div class="as-prose">
+      <p>We installed the 200 most popular plugins on WordPress.org one at a time on a clean site and recorded every option and table each one created. A fifth of them were kept aside and never taught the plugin anything.</p>
+      <p>Then we installed those 29 together, scanned, uninstalled half the normal way and scanned again. With all of them active, Tablewright called none of their data leftover. After the uninstalls it found 94% of the groups they left behind (90% by size) and named the plugin for 66%.</p>
+      <p>The test runs again before every release, and a release that calls any live data leftover doesn't ship.</p>
+    </div>
+  </div></section>
+
+  <section class="as-shell" id="faq"><div class="wrap as-split">
+    <div><h2 class="as-heading">Questions.</h2></div>
+    <div class="as-prose">
+      <h3>Is "probably leftover" safe to remove?</h3>
+      <p>It means no installed code uses the name. Some plugins build names while they run, which can make data look unused. That's why removal goes to the trash first, and Restore puts it back.</p>
+      <h3>What can't be undone?</h3>
+      <p>Expired transients, old revisions, finished Action Scheduler history, and comments or posts deleted for good. Those are marked unsafe and ask you to confirm. Everything else goes to the trash.</p>
+      <h3>Does it clean anything by itself?</h3>
+      <p>Only if you switch it on. Five daily cleanups exist, each with a cap and a stop that holds back when the numbers look wrong. All are off by default.</p>
+      <h3>What about WooCommerce?</h3>
+      <p>It cleans orders that never became a sale (old checkout drafts, failed, cancelled and pending orders) into the WooCommerce trash first. Completed, processing, on-hold, refunded, paid and subscription orders are never offered. It works with custom order tables.</p>
+      <h3>Does it slow my site down?</h3>
+      <p>It does nothing until you press Scan, then works in short steps and shows its progress. A site with 100,000 options and a million meta rows scanned in about 2 seconds in our tests.</p>
+      <h3>Does it work on multisite?</h3>
+      <p>Yes, per site. A site admin sees only that site's tables, and shared user tables aren't cleaned from a subsite.</p>
+    </div>
+  </div></section>
+
+  <style>
+    .tw-compare-wrap { overflow-x: auto; border-top: 1px solid var(--line); }
+    .tw-compare { width: 100%; min-width: 720px; border-collapse: collapse; font-size: 14px; }
+    .tw-compare th, .tw-compare td { border-bottom: 1px solid var(--line); text-align: left; padding: 12px 14px 12px 0; vertical-align: top; }
+    .tw-compare thead th { font-weight: 600; color: var(--ink); }
+    .tw-compare tbody th { font-weight: 550; color: var(--ink-3); width: 24%; }
+    .tw-compare td:nth-child(2) { color: var(--ink); font-weight: 550; }
+    .tw-compare a { color: inherit; }
+  </style>
 </BaseLayout>
