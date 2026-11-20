@@ -57,10 +57,11 @@ src/
 Deployed automatically via GitHub Actions on push to `main`.
 
 1. Merge to `main` → GitHub Actions builds → Deploys to Cloudflare Pages
-2. Cloudflare Pages → Settings → Domain Management → Add `amazingplugins.com`
+2. The Pages project, the `amazingplugins.com` zone and the contact Turnstile widget are in the Binary Labs Cloudflare account. `amazingplugins.com` and `www` are custom domains on the project (`www` 301s to the apex).
 
-**Required Cloudflare token** (stored in repo secrets):
-- `CLOUDFLARE_API_TOKEN` — User API token with Pages edit permission
+**Required repo secrets:**
+- `CLOUDFLARE_ACCOUNT_ID` — the Binary Labs account ID (also in `wrangler.toml`)
+- `CLOUDFLARE_API_TOKEN` — account-owned token with Pages Write only
 
 ## Tech Stack
 
