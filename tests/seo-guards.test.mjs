@@ -54,3 +54,17 @@ test('held pre-launch pages are noindex, nofollow and no other page is', async (
     assert.doesNotMatch(await read(`${path}index.html`), /<meta name="robots" content="[^"]*noindex/, `${path || '/'} must stay indexable`);
   }
 });
+
+test('every checkbox on a blog page has an accessible name', async () => {
+  const posts = (await pagePaths()).filter((path) => path.startsWith('blog/') && path !== 'blog/');
+  let boxes = 0;
+  for (const path of posts) {
+    // Quote-aware: a label may contain ">" (for example "<html lang>").
+    for (const [input] of (await read(`${path}index.html`)).matchAll(/<input\b(?:[^>"]|"[^"]*")*>/g)) {
+      if (!input.includes('type="checkbox"')) continue;
+      boxes++;
+      assert.match(input, /aria-label="[^"]+"/, `${path} checkbox has no aria-label`);
+    }
+  }
+  assert.ok(boxes > 50, 'expected the checklist posts to render task-list checkboxes');
+});
