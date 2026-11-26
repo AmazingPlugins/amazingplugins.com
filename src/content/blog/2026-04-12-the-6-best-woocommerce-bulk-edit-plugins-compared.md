@@ -25,9 +25,9 @@ Here is what I found.
 |---|---|---|---|---|---|---|
 | Edit in free version | All core fields | Limited | Limited | 10/page | Premium only | Premium only |
 | Edit variations free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| Preview before save | ✓ | ✗ | ✗ | ✗ | ✓ | ✗ |
+| Preview before save | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | Undo/rollback free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| 500+ product speed | <5s | Slow | Slow | Medium | Medium | Slow |
+| 500+ product speed | <5s | Slow | Slow | Medium | Medium | Not tested |
 | Estimated price | Free for now | $79/yr | $69/yr | $49/yr | $79/yr | $69/yr |
 | Free version actual use | ✓ Full tool | ✗ Crippled | ✗ Demo | ✗ Paywall | ✗ Demo | ✗ Paywall |
 
