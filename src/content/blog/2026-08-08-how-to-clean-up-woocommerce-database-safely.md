@@ -209,6 +209,6 @@ A clean database will not fix every performance problem on its own, but it remov
 ## Related Reading
 
 - [How to Delete Old WooCommerce Orders in Bulk (Complete Guide)](/blog/delete-old-woocommerce-orders-bulk/)
-- [The 5 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
+- [WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
 - [WooCommerce Accessibility Fixer](/plugins/woocommerce-accessibility-fixer/)
 - [Pending payment orders in WooCommerce](/blog/woocommerce-pending-payment-orders/)
