@@ -49,6 +49,7 @@ test('free-plan rate limit counts document paths per IP for 10 seconds', () => {
   assert.deepEqual(rule.ratelimit.characteristics, ['ip.src']);
   assert.equal(rule.ratelimit.requests_per_period, RATE_LIMIT.requestsPerPeriod);
   assert.equal(rule.expression.includes('user_agent'), false);
+  assert.match(rule.expression, /and not cf\.client\.bot\)$/);
   for (const prefix of RATE_LIMIT.skippedPrefixes) {
     assert.match(rateLimitExpression(), new RegExp(prefix.replace('/', '\\/')));
   }

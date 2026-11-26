@@ -47,6 +47,7 @@ export const ALL_AGENTS = [...RETRIEVAL_AGENTS, ...LEARNING_AGENTS];
 /**
  * Cloudflare Free allows one rate-limit rule, a 10 second period, IP counting,
  * and path matching. User-agent matching needs a paid plan.
+ * Cloudflare-verified bots (cf.client.bot, e.g. Googlebot) are exempt so a crawl burst is never blocked.
  * 15 document requests / 10 seconds is enough to read the site and too low for a tight loop.
  */
 export const RATE_LIMIT = {
@@ -91,7 +92,7 @@ export function rateLimitExpression(): string {
   const skips = RATE_LIMIT.skippedPrefixes
     .map((prefix) => `not starts_with(http.request.uri.path, "${prefix}")`)
     .join(' and ');
-  return `(${skips})`;
+  return `(${skips} and not cf.client.bot)`;
 }
 
 export function rateLimitRule(): {
