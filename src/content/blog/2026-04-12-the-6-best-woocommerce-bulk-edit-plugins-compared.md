@@ -4,7 +4,7 @@ description: >-
   Ranking the 6 best WooCommerce bulk edit plugins based on real testing with
   500 products. See where each excels and fails.
 pubDate: 2026-04-12T00:00:00.000Z
-updatedDate: 2026-10-03T00:00:00.000Z
+updatedDate: 2026-11-26T00:00:00.000Z
 author: Harun Ray
 tags:
   - WooCommerce
@@ -27,7 +27,7 @@ Here is what I found.
 | Preview before save | ✓ | ✗ | ✗ | ✗ | ✓ | ✗ |
 | Undo/rollback free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | 500+ product speed | <5s | Slow | Slow | Medium | Medium | Slow |
-| Estimated price | $49/yr | $79/yr | $69/yr | $49/yr | $79/yr | $69/yr |
+| Estimated price | Free for now | $79/yr | $69/yr | $49/yr | $79/yr | $69/yr |
 | Free version actual use | ✓ Full tool | ✗ Crippled | ✗ Demo | ✗ Paywall | ✗ Demo | ✗ Paywall |
 
 Now let me break down each plugin.
@@ -38,13 +38,13 @@ This is our own plugin, so take that bias into account. But it is also the one I
 
 The core idea is simple: open a spreadsheet-like grid, see all your products in rows and columns, click any cell to edit it inline, and save. No modals, no page reloads, no "are you sure?" dialogs for every single change.
 
-**What the free version gives you:**
+**What you get:**
 
-The free version of Smart Bulk Editor lets you edit every core WooCommerce field: regular price, sale price, stock quantity, SKU, categories, tags, status, featured status, and more. There is no artificial limitation on which fields are visible. The only restriction is that the premium version adds formula-based bulk operations (like "increase all selected prices by 10%") and advanced filtering.
+Smart Bulk Editor lets you edit every core WooCommerce field: regular price, sale price, stock quantity, SKU, categories, tags, status, featured status, and more. There is no artificial limitation on which fields are visible. It's free for now.
 
 **Variation support:**
 
-Variable products show each variation as its own row in the grid. You can filter by attribute, edit specific variations, and batch-update prices or stock across selected variations. This works in the free version.
+Variable products show each variation as its own row in the grid. You can filter by attribute, edit specific variations, and batch-update prices or stock across selected variations. This is included.
 
 **Speed:**
 
@@ -52,10 +52,10 @@ On 500 products with variations, the grid loads in under 5 seconds. Bulk saves p
 
 **Preview and undo:**
 
-Preview shows you old vs. new values before anything goes live. Undo lets you roll back the last operation with one click. Both are available in the free version.
+Preview shows you old vs. new values before anything goes live. Undo lets you roll back the last operation with one click. Both are included.
 
 **Pros:**
-- Free version is genuinely useful, not a demo
+- Free for now, and genuinely useful, not a demo
 - Spreadsheet-style grid editing feels natural
 - Fast even with large catalogs
 - Preview and undo included free
@@ -63,9 +63,8 @@ Preview shows you old vs. new values before anything goes live. Undo lets you ro
 **Cons:**
 - Newer plugin, smaller community
 - No CSV import/export built in
-- Formula support is premium only
 
-**Price:** Free with premium from $49/year.
+**Price:** Free for now.
 
 I list Smart Bulk Editor on the [plugins page](/plugins/).
 
@@ -245,7 +244,7 @@ The results above reflect these real tests, not marketing claims.
 
 It depends on what you need.
 
-**If you want a free tool that actually works**, the WooCommerce Smart Bulk Editor by AmazingPlugins is the only option on this list where the free version is genuinely useful. You can edit all core fields, handle variations, and use preview and undo without paying anything.
+**If you want a free tool that actually works**, the WooCommerce Smart Bulk Editor by AmazingPlugins is the only option on this list where the free version is genuinely useful. You can edit all core fields, handle variations, and use preview and undo without paying anything. It's free for now.
 
 **If you already live in CSV workflows**, WP All Export makes sense for large-scale restructuring. It is not great for day-to-day edits, but for quarterly price reviews or catalog restructuring, the CSV approach has advantages.
 
@@ -253,7 +252,7 @@ It depends on what you need.
 
 **If you want something simple and familiar**, YITH or CodeRockz will do the job, but expect to upgrade to the premium version to get any real value.
 
-The common thread across all of these tools is that the free versions are either crippled or limited to a handful of products. If you are running a WooCommerce store with more than a few dozen products, you will almost certainly need to pay for a bulk edit tool.
+The common thread across the other tools here is that the free versions are either crippled or limited to a handful of products. If you are running a WooCommerce store with more than a few dozen products, expect to pay for any of them.
 
 The good news is that even the premium options here cost less than an hour of a developer's time. The bad news is that choosing the wrong one can cost you hours of frustration. Test the free version first, check that it handles your specific product types, and make sure it does not choke on your catalog size before you commit.
 
