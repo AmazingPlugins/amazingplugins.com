@@ -5,6 +5,7 @@ import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
 import matter from 'gray-matter';
+import rehypeTaskListLabels from './src/rehype-task-list-labels.mjs';
 
 const blogDirectory = new URL('./src/content/blog/', import.meta.url);
 const blogLastModified = new Map(
@@ -26,6 +27,7 @@ export default defineConfig({
   site: 'https://amazingplugins.com',
   trailingSlash: 'always',
   output: 'static',
+  markdown: { rehypePlugins: [rehypeTaskListLabels] },
   build: { inlineStylesheets: 'always' },
   // Cache shared navigation/footer scripts without delaying the first HTML paint.
   vite: { build: { assetsInlineLimit: 0 } },
