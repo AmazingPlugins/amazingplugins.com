@@ -21,8 +21,9 @@ Here is what I found.
 
 ## The Quick Comparison
 
-|---|---|---|---|---|---|---|---|
-| Edit in free version | All core fields | Limited | Limited | 10/page | Premium only | Limited | Premium only |
+| Feature | Smart Bulk Editor | YITH | CodeRockz | WP Sheet Editor | WP All Export Pro | Admin Columns Pro |
+|---|---|---|---|---|---|---|
+| Edit in free version | All core fields | Limited | Limited | 10/page | Premium only | Premium only |
 | Edit variations free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
 | Preview before save | ✓ | ✗ | ✗ | ✗ | ✓ | ✗ |
 | Undo/rollback free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
