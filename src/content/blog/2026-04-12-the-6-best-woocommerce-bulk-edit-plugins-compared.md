@@ -1,7 +1,7 @@
 ---
-title: "6 Best WooCommerce Bulk Edit Plugins Tested (2026)"
+title: "5 Best WooCommerce Bulk Edit Plugins Tested (2026)"
 description: >-
-  Ranking the 6 best WooCommerce bulk edit plugins based on real testing with
+  Ranking 5 of the best WooCommerce bulk edit plugins based on real testing with
   500 products. See where each excels and fails.
 pubDate: 2026-04-12T00:00:00.000Z
 updatedDate: 2026-11-26T00:00:00.000Z
@@ -15,61 +15,27 @@ gscSubmitted: true
 
 Managing hundreds of WooCommerce products one at a time is a fast route to burnout. You need a bulk edit plugin that actually works, and you need one that does not hold its best features hostage behind a paywall.
 
-I tested six of the most popular WooCommerce bulk edit plugins on a store with 500 products, including variable products with 10+ variations each. I checked how many fields the free version lets you edit, whether it handles variations, whether it has preview and undo, and how fast it processes large batches.
+I tested five of the most popular WooCommerce bulk edit plugins on a store with 500 products, including variable products with 10+ variations each. I checked how many fields the free version lets you edit, whether it handles variations, whether it has preview and undo, and how fast it processes large batches.
+
+Our own plugin, Smart Bulk Editor, is not released yet, so it is not in these tests. There is a note on it further down.
 
 Here is what I found.
 
 ## The Quick Comparison
 
-| Feature | Smart Bulk Editor | YITH | CodeRockz | WP Sheet Editor | WP All Export Pro | Admin Columns Pro |
-|---|---|---|---|---|---|---|
-| Edit in free version | All core fields | Limited | Limited | 10/page | Premium only | Premium only |
-| Edit variations free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| Preview before save | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| Undo/rollback free | ✓ | ✗ | ✗ | ✗ | ✗ | ✗ |
-| 500+ product speed | <5s | Slow | Slow | Medium | Medium | Not tested |
-| Estimated price | Free for now | $79/yr | $69/yr | $49/yr | $79/yr | $69/yr |
-| Free version actual use | ✓ Full tool | ✗ Crippled | ✗ Demo | ✗ Paywall | ✗ Demo | ✗ Paywall |
+| Feature | YITH | CodeRockz | WP Sheet Editor | WP All Export Pro | Admin Columns Pro |
+|---|---|---|---|---|---|
+| Edit in free version | Limited | Limited | 10/page | Premium only | Premium only |
+| Edit variations free | ✗ | ✗ | ✗ | ✗ | ✗ |
+| Preview before save | ✗ | ✗ | ✗ | ✗ | ✗ |
+| Undo/rollback free | ✗ | ✗ | ✗ | ✗ | ✗ |
+| 500+ product speed | Slow | Slow | Medium | Medium | Not tested |
+| Estimated price | $79/yr | $69/yr | $49/yr | $79/yr | $69/yr |
+| Free version actual use | ✗ Crippled | ✗ Demo | ✗ Paywall | ✗ Demo | ✗ Paywall |
 
 Now let me break down each plugin.
 
-## 1. WooCommerce Smart Bulk Editor by AmazingPlugins
-
-This is our own plugin, so take that bias into account. But it is also the one I know best, and it is the one I built specifically because the other options on this list kept frustrating me.
-
-The core idea is simple: open a spreadsheet-like grid, see all your products in rows and columns, click any cell to edit it inline, and save. No modals, no page reloads, no "are you sure?" dialogs for every single change.
-
-**What you get:**
-
-Smart Bulk Editor lets you edit every core WooCommerce field: regular price, sale price, stock quantity, SKU, categories, tags, status, featured status, and more. There is no artificial limitation on which fields are visible. It's free for now.
-
-**Variation support:**
-
-Variable products show each variation as its own row in the grid. You can filter by attribute, edit specific variations, and batch-update prices or stock across selected variations. This is included.
-
-**Speed:**
-
-On 500 products with variations, the grid loads in under 5 seconds. Bulk saves process in chunks of 20 products at a time, so you get progress feedback and the server does not choke on a single massive request. This is the same approach we recommend in our [WooCommerce bulk edit troubleshooting guide](/blog/woocommerce-bulk-edit-not-working-here-s-why/) for avoiding PHP memory errors.
-
-**Preview and undo:**
-
-Preview shows you old vs. new values before anything goes live. Undo lets you roll back the last operation with one click. Both are included.
-
-**Pros:**
-- Free for now, and genuinely useful, not a demo
-- Spreadsheet-style grid editing feels natural
-- Fast even with large catalogs
-- Preview and undo included free
-
-**Cons:**
-- Newer plugin, smaller community
-- No CSV import/export built in
-
-**Price:** Free for now.
-
-I list Smart Bulk Editor on the [plugins page](/plugins/).
-
-## 2. YITH WooCommerce Bulk Product Editing
+## 1. YITH WooCommerce Bulk Product Editing
 
 YITH is one of the biggest names in the WooCommerce ecosystem, and their bulk editor is polished. It adds custom columns to the products list and lets you select fields to edit from a sidebar. The interface is functional but feels more like a modified WordPress list table than a dedicated editing tool.
 
@@ -102,7 +68,7 @@ No preview. No undo. Changes apply directly when you click the button.
 
 **Price:** Free with premium at $79/year.
 
-## 3. WooCommerce Bulk Product Editing by CodeRockz
+## 2. WooCommerce Bulk Product Editing by CodeRockz
 
 This plugin takes a different approach: it adds a custom admin page with a product table and bulk edit controls. The interface is straightforward, with dropdown menus for selecting fields and values to apply.
 
@@ -131,7 +97,7 @@ Speed is comparable to YITH. The plugin processes products sequentially, which w
 
 **Price:** Free with premium at $69/year.
 
-## 4. WP Sheet Editor
+## 3. WP Sheet Editor
 
 WP Sheet Editor takes a unique approach by turning your products into an editable spreadsheet that lives inside WordPress. You can edit products in a grid, use formulas, and filter with a visual query builder. It is powerful, but the learning curve is steeper than simpler tools.
 
@@ -160,7 +126,7 @@ When it works, it is reasonably fast. The 10-product-per-page limit in the free 
 
 **Price:** Free with premium at $49/year per site.
 
-## 5. WP All Export Pro (with WooCommerce)
+## 4. WP All Export Pro (with WooCommerce)
 
 WP All Export is primarily a data export tool, but its "Update Existing Products" feature lets you do bulk edits through a CSV workflow. You export your products, edit the CSV in Excel or Google Sheets, then re-import with the update running. It is a round-trip approach.
 
@@ -190,7 +156,7 @@ For what it is, the speed is fine. CSV processing is handled server-side, so it 
 
 **Price:** Premium only at $79/year for the export + import bundle.
 
-## 6. Admin Columns Pro (with WooCommerce add-on)
+## 5. Admin Columns Pro (with WooCommerce add-on)
 
 Admin Columns Pro adds custom columns to the WordPress admin and lets you sort, filter, and inline-edit products directly in the list table. It is primarily a view customization tool that happens to include inline editing.
 
@@ -219,6 +185,12 @@ The list table itself is fast because it uses WordPress's native query system. B
 
 **Price:** Free with premium at $69/year.
 
+## Coming soon: WooCommerce Smart Bulk Editor
+
+We're building our own bulk editor, so take that bias into account. WooCommerce Smart Bulk Editor isn't released yet. It's not in the table above, and I haven't tested it against the plugins on this page. It's listed as coming soon on the [plugins page](/plugins/).
+
+The plan is a spreadsheet-style grid with inline editing, variations as their own rows, preview before save and one-click undo. It's free for now. Once it's released it will need to pass the same test as everything above.
+
 ## A Note on WooCommerce's Built-In Bulk Edit
 
 Before we get to recommendations, it is worth mentioning what WooCommerce gives you out of the box. The native bulk edit under Products > All Products lets you select products and apply a limited set of changes: sale price, categories, product type, and a few other fields. There is no way to edit regular price, stock, SKU, or most other fields from this screen.
@@ -245,7 +217,7 @@ The results above reflect these real tests, not marketing claims.
 
 It depends on what you need.
 
-**If you want a free tool that actually works**, the WooCommerce Smart Bulk Editor by AmazingPlugins is the only option on this list where the free version is genuinely useful. You can edit all core fields, handle variations, and use preview and undo without paying anything. It's free for now.
+**If you want a free tool that actually works**, none of the five gets you far on the free tier. WP Sheet Editor's free version stops at 10 products per page, and the others lock most fields behind premium. Our own Smart Bulk Editor is the free option we're building, but it isn't released yet.
 
 **If you already live in CSV workflows**, WP All Export makes sense for large-scale restructuring. It is not great for day-to-day edits, but for quarterly price reviews or catalog restructuring, the CSV approach has advantages.
 
@@ -253,7 +225,7 @@ It depends on what you need.
 
 **If you want something simple and familiar**, YITH or CodeRockz will do the job, but expect to upgrade to the premium version to get any real value.
 
-The common thread across the other tools here is that the free versions are either crippled or limited to a handful of products. If you are running a WooCommerce store with more than a few dozen products, expect to pay for any of them.
+The common thread across these tools is that the free versions are either crippled or limited to a handful of products. If you are running a WooCommerce store with more than a few dozen products, expect to pay for any of them.
 
 The good news is that even the premium options here cost less than an hour of a developer's time. The bad news is that choosing the wrong one can cost you hours of frustration. Test the free version first, check that it handles your specific product types, and make sure it does not choke on your catalog size before you commit.
 
