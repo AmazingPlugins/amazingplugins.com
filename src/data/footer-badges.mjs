@@ -1035,12 +1035,6 @@ export const footerBadges = [
     html: `<a href="https://agentwork.tools" target="_blank" rel="noopener noreferrer"><img alt="Featured on AgentWork.Tools" width="200" height="54" src="https://agentwork.tools/badge/badge_dark.svg"></a>`,
   },
   {
-    id: 'aicavo',
-    kind: 'raw',
-    host: 'aicavo.com',
-    html: `<a href="https://aicavo.com/tools/amazingplugins" target="_blank" rel="noopener noreferrer"><img src="https://aicavo.com/api/widgets/embed-image/v1/find-us.svg?slug=amazingplugins&theme=dark" alt="AICavo badge" width="200" height="54" loading="eager" /></a>`,
-  },
-  {
     id: 'boringcashcow',
     kind: 'raw',
     host: 'boringcashcow.com',
