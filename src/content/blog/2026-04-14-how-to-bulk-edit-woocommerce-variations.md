@@ -209,7 +209,7 @@ A bulk edit plugin with attribute-based filtering, inline editing, and formula s
 ---
 
 ## Related Reading
-- [The 5 Best WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
+- [WooCommerce Bulk Edit Plugins Compared](/blog/the-6-best-woocommerce-bulk-edit-plugins-compared/)
 - [How to Bulk Edit WooCommerce Product Prices](/blog/how-to-bulk-edit-woocommerce-product-prices/)
 - [WooCommerce Bulk Edit Not Working? Here's Why](/blog/woocommerce-bulk-edit-not-working-here-s-why/)
 - [How to Reduce ADA Accessibility Risk on a WooCommerce Store](/blog/how-to-avoid-ada-lawsuits-woocommerce-store/)
