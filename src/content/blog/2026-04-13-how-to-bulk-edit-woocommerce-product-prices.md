@@ -10,6 +10,17 @@ tags:
 gscSubmitted: true
 ---
 
+Say it's early November and you have 300 products. Regular prices need to go up 10%, and the sale price should land 15% under the new regular price. Doing that by hand takes hours, and one typo shows up on a price your customers will see.
+
+A bulk edit gets it done in one pass, but only if you can check the result before it goes live. This guide covers what a safe bulk price change needs, and the mistakes that cost stores money.
+
+## What a safe bulk price edit needs
+
+### Preview before you commit
+
+Start with a preview. It shows each product's current price next to the new one, so you can catch a wrong number before anything is saved. It looks like this:
+
+| Product | Regular price now | Regular price after | Sale price now | Sale price after |
 |---------|--------------------|--------------------|--------------------|--------------------|
 | Blue T-Shirt (S) | $24.99 | $27.49 | - | $22.99 |
 | Blue T-Shirt (M) | $24.99 | $27.49 | - | $22.99 |
@@ -58,10 +69,6 @@ A variable product's displayed price comes from its children. If you bulk-update
 ### Not checking your shop after a bulk update
 
 WooCommerce has aggressive object caching. After a bulk price update, clear the WooCommerce transient cache and verify the frontend reflects the new prices. This is especially important if you're using a caching plugin.
-
----
-
-## FAQ: WooCommerce Bulk Price Editing
 
 ---
 
