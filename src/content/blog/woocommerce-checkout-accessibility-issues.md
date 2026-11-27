@@ -203,4 +203,5 @@ Fix checkout first. It protects revenue, reduces support load, and gives you a c
 - <a href="/blog/how-to-avoid-ada-lawsuits-woocommerce-store/">How to Reduce ADA Accessibility Risk on a WooCommerce Store</a> - Step-by-step guide to the 10 most impactful fixes
 - <a href="/blog/woocommerce-ada-compliance-checklist-2026/">WooCommerce ADA Compliance Checklist 2026</a> - Compliance requirements
 - <a href="/blog/woocommerce-wcag-violations-guide/">WooCommerce WCAG Violations Guide</a> - Common violations and fixes
+- <a href="/blog/the-hidden-accessibility-issues-that-are-costing-your-store-customers/">Hidden accessibility barriers</a> - what a visual review cannot see
 - <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fixer for WooCommerce</a> - Nine free fixers and their limits
