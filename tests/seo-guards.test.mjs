@@ -69,6 +69,11 @@ const retired = [
   '/pricing',
   '/products/shopify-accessibility-scanner',
   '/~partytown/',
+  '/blog/accessibility-checker-tool-buy-common-mistakes/',
+  '/blog/accessibility-checker-tool-buy-how-it-compares/',
+  '/blog/accessibility-checker-tool-buy-step-by-step-guide/',
+  '/blog/accessibility-checker-tool-buy-wcag-checklist/',
+  '/blog/accessibility-checker-tool-buy-what-it-actually-does/',
 ];
 
 test('every retired URL redirects to a built page instead of 404ing', async () => {
