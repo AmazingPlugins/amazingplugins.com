@@ -105,6 +105,7 @@ The free <a href="/plugins/woocommerce-accessibility-fixer/">AP Accessibility Fi
 ## Related Reading
 
 - [10 Common Accessibility Issues on E-commerce Sites](/blog/10-common-accessibility-issues-on-e-commerce-sites/)
+- [Hidden Accessibility Barriers a Screenshot Review Misses](/blog/the-hidden-accessibility-issues-that-are-costing-your-store-customers/)
 - [How to Fix Missing Alt Text on WooCommerce Product Images](/blog/fix-missing-alt-text-woocommerce-product-images/)
 - [How to Fix Keyboard Navigation in WooCommerce](/blog/keyboard-navigation-woocommerce-fix-guide/)
 - [How to Buy an Accessibility Checker for WooCommerce](/blog/accessibility-checker-tool-buying-guide/)
