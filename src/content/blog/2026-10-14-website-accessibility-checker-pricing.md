@@ -80,7 +80,7 @@ Some vendors list litigation support or legal protection in their higher tiers. 
 3. Pay for a tool only for a job you can name: ongoing scans on several sites, monitoring, or a manual audit.
 4. Retest checkout with a keyboard after every paid change.
 
-Still choosing? [Best WCAG WordPress plugins compared](/blog/best-wcag-wordpress-plugins-compared/) and [9 buying mistakes to avoid](/blog/accessibility-checker-tool-buy-common-mistakes/) go through the options by what they do.
+Still choosing? [Best WCAG WordPress plugins compared](/blog/best-wcag-wordpress-plugins-compared/) and [how to buy an accessibility checker](/blog/accessibility-checker-tool-buying-guide/) go through the options by what they do.
 
 ## People also ask
 
