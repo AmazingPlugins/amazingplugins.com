@@ -79,3 +79,4 @@ Try to buy a product with a keyboard, then repeat with a screen reader. Include 
 - [Choosing a WooCommerce EAA accessibility plugin](/blog/woocommerce-eaa-compliance-plugin-guide-2026/)
 - [WCAG 2.2 requirements, changes, and dates for WooCommerce](/blog/wcag-2-2-wordpress-woocommerce-requirements/)
 - [Does accessibility affect SEO?](/blog/accessibility-seo-ranking-factor-ecommerce/)
+- [Does the ADA apply to your WooCommerce store?](/blog/does-the-ada-actually-apply-to-your-woocommerce-store/)

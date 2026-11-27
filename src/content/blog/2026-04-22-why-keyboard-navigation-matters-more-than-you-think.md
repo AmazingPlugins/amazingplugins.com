@@ -4,6 +4,7 @@ description: >-
   Why keyboard accessibility is the highest-ROI fix for e-commerce, benefiting
   screen reader users, motor impairments, and more.
 pubDate: 2026-04-22T00:00:00.000Z
+updatedDate: 2026-11-27T00:00:00.000Z
 author: Harun Ray
 tags:
   - Keyboard Navigation
@@ -71,6 +72,85 @@ Fix: visible labels, errors tied to the field, and a keyboard pass of the whole 
 **5. Galleries that only work on hover.** Extra images appear on mouseover. No buttons. No arrow keys.
 
 Fix: real controls, a focus ring, and arrow-key movement between thumbnails.
+
+## What WCAG 2.2 added to the keyboard story
+
+WCAG 2.1 gave us keyboard, no trap, and visible focus. WCAG 2.2 added three criteria that bite WooCommerce stores specifically:
+
+- **2.4.11 Focus Not Obscured (Minimum, AA):** a sticky header or a floating cart bar cannot cover the control that has focus. Test it on a long checkout form where the browser scrolls a field to the top of the viewport.
+- **2.5.7 Dragging Movements (AA):** if your store has drag-to-reorder, a slider for price filters, or a swipe-only gallery, there must be a single-pointer alternative. A keyboard user needs to do the same job with buttons or inputs.
+- **2.5.8 Target Size (Minimum, AA):** pointer targets need to be at least 24 by 24 CSS pixels, or fall under an exception such as inline text links. Quantity plus and minus controls are the usual offenders.
+
+None of these need a redesign. They need someone to open the theme on a phone-sized viewport and try the flow.
+
+## Focus management is the part themes get wrong
+
+A focus ring is only half of it. The other half is where focus goes when the page changes.
+
+When a mini-cart drawer opens, focus should move into the drawer. When it closes, focus should return to the button that opened it. Background content should be hidden from assistive technology while the drawer is open, usually with `aria-hidden` or `inert` on the page wrapper. If none of that happens, a keyboard user tabs behind the drawer into links they cannot see, and a screen reader user reads two pages at once.
+
+The same applies to:
+
+- **Quick view modals.** They open, but Tab walks straight out to the product grid behind.
+- **Variation pickers that swap images.** The visual state changes and nothing is announced.
+- **Coupon and validation errors.** Focus stays at the top of the form while the error sits three fields down.
+- **Mobile navigation.** The menu closes on navigation but focus lands back at the top of the document.
+
+Testing this takes a minute per component. Fixing it is usually a few lines: move focus on open, restore it on close, and give the dialog a name.
+
+## A control-by-control test list
+
+Tab through these in order and note anything that fails. This is the list I use before touching code, because it separates theme problems from plugin problems.
+
+| Where | What to try | Failure looks like |
+|---|---|---|
+| Header | Tab to the cart icon, press Enter | Icon is a `<div>` with a click handler, so Enter does nothing |
+| Mobile nav | Open it, then press Escape | Menu stays open, focus keeps moving behind it |
+| Variation picker | Arrow keys between options | Nothing moves, or the selection changes without announcement |
+| Quantity | Tab to minus, press Space | Control is a link to `#` or has no accessible name |
+| Mini-cart | Open, close, check focus | Focus drops to the top of the page |
+| Gallery | Arrow keys between thumbnails | Only mouseover works |
+| Checkout | Tab through billing fields | A field is skipped, or the label is not announced |
+| Payment | Tab into the payment iframe | Focus enters and never leaves |
+| Order confirmation | Land on the page | First Tab goes to the header, not the confirmation |
+
+A failure at the payment step is the one worth escalating fastest. If the payment provider controls the iframe, you can still fix the surrounding form and tell customers what to expect.
+
+## Fixes that do not require a redesign
+
+Most of this is a stylesheet and a handful of attributes.
+
+```css
+/* Keep the browser ring, make it visible on light and dark themes */
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+```
+
+```html
+<!-- First focusable element on the page -->
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main" tabindex="-1"> … </main>
+```
+
+For anything that opens a panel, the pattern is the same: move focus in, trap it while open, restore it on close. Native `<dialog>` gets much of this for free if your theme can use it. For buttons, use `<button>`, not `<div role="button">`. For the cart icon, use a link with text or an `aria-label` that says "Cart, 2 items".
+
+You can ship those changes one component at a time. Start with the drawer, because that is where people get stuck.
+
+## Questions store owners ask
+
+### Is a focus ring enough?
+
+No. It makes the keyboard visible, but a trap still blocks the purchase. Fix the ring and the trap together, then check that focus lands somewhere sensible after each interaction.
+
+### Our theme hides focus for design reasons. Can we just style it?
+
+You can style it, as long as it stays visible on every background you use. Removing it without a replacement is the failure. A 2px outline in a contrasting color is usually cheaper than the argument.
+
+### Do keyboard fixes help SEO too?
+
+Not directly, and no search engine gives you a keyboard score. They do force cleaner markup: real buttons, headings that mean something, links with text. That cleanup helps.
 
 ## Fifteen-minute test
 

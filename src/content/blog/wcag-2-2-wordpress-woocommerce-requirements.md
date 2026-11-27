@@ -124,3 +124,4 @@ A plugin can fix specific barriers. It can't judge every piece of content, custo
 
 - [WooCommerce WCAG 2.2 AA checklist](/blog/wcag-22-compliance-woocommerce-checklist/)
 - [WooCommerce accessibility plugin selection guide](/blog/ada-compliance-woocommerce-plugin-full-guide/)
+- [10 common e-commerce accessibility issues, with fixes](/blog/10-common-accessibility-issues-on-e-commerce-sites/)

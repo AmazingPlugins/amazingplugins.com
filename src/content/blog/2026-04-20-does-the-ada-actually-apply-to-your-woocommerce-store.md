@@ -4,6 +4,7 @@ description: >-
   Does the ADA apply to your WooCommerce store? Learn when ADA Title III,
   EN301549, and the EU Accessibility Act apply to you.
 pubDate: 2026-04-20T00:00:00.000Z
+updatedDate: 2026-11-27T00:00:00.000Z
 author: Harun Ray
 tags:
   - ADA
@@ -58,6 +59,68 @@ Courts in the US keep pointing at WCAG 2.1 AA. The EAA writes it down via EN 301
 accessiBe, UserWay, and similar tools sit on top of the page. They do not rewrite your Woo templates. A scanner can still fail the same product image after you install the widget. That is why overlays keep showing up in complaints as a shortcut, not as a fix. Longer version: [why overlays don't protect you from ADA lawsuits](/blog/why-accessibility-overlays-dont-protect-you-from-ada-lawsuits/).
 
 A WooCommerce plugin that hooks templates can put alt text, labels, focus styles, and a skip link into the HTML that VoiceOver and NVDA actually read.
+
+## Which US states add rules on top
+
+Federal law is only part of the picture. A few state laws matter for ecommerce:
+
+- **California:** the Unruh Civil Rights Act lets a plaintiff claim damages per offense, which makes it a favorite venue for website claims. California also has its own accessibility standard referenced in state contracting.
+- **New York:** the state and city human rights laws cover places of public accommodation, and NYC has been an active venue for web claims.
+- **Other states** mostly follow federal case law, but several have procurement rules that apply if you sell to government buyers.
+
+Practically: if you ship to California, you are in the most active jurisdiction regardless of where your company is registered. That is why "we are a small EU shop" is not a defense in a US demand letter.
+
+## What a demand letter usually asks for
+
+Most letters are short and predictable. They name a handful of specific failures, cite WCAG criteria, and ask for:
+
+1. A fix within a stated deadline, often 30 to 90 days.
+2. A written accessibility statement or policy.
+3. Sometimes a third-party audit and a period of monitoring.
+
+The amount of money involved is usually legal fees plus damages where state law allows them. The technical work is rarely the expensive part. Responding late, or publishing a statement while the checkout still traps keyboard focus, is what turns a letter into a filing.
+
+If you get one, the useful response is a dated remediation plan with the specific issues addressed and evidence that the flow works after the change. A widget installed the same week reads as a shortcut.
+
+## What evidence is worth keeping
+
+You do not need a binder. You need proof that you tested and fixed things on a schedule.
+
+- **A dated issue log** listing the page, the failure, the criterion, who fixed it, and when it was retested.
+- **Screenshots or recordings** of the failing state and the corrected state. A 20-second recording of a keyboard trap is worth more than a paragraph.
+- **A short scope statement** for each test round: which pages, which states, which assistive technology, which browser.
+- **Your accessibility statement**, kept honest. It should say what you have done and what is still open.
+
+That record is what makes a remediation plan credible, and it is cheap to maintain once the first pass exists.
+
+## The EAA in practice after June 2025
+
+The European Accessibility Act became enforceable on 28 June 2025. Two things surprised store owners:
+
+- **It reaches sellers outside the EU.** If you sell to EU consumers, the obligation follows the sale, not your registered address.
+- **Smaller businesses are not fully off the hook.** The microenterprise carve-out covers services under 10 employees and under 2 million euro turnover. Even then, a large B2B customer can put accessibility in a contract, and inaccessible checkout still costs you sales.
+
+Enforcement is national. Some member states have designated market surveillance authorities and set penalties; others are slower. Slow enforcement is not a reason to wait, because the same fixes are the ones that help conversion.
+
+The UK sits outside the EAA but has its own Equality Act 2010, with a similar practical outcome: services should be accessible, and reasonable adjustments are expected.
+
+## Questions store owners ask
+
+### Does the ADA apply if I have no physical store?
+
+Courts have generally treated commercial websites as covered. No physical location does not mean no exposure, especially for a store that takes US payments.
+
+### Is an accessibility statement enough?
+
+No. A statement describes what you have done. It does not fix a checkout that traps keyboard focus, and a statement claiming conformance you have not tested can make things worse.
+
+### How often should we re-test?
+
+Quarterly is a reasonable default for a small store, plus a retest after any theme, checkout, or payment update. A plugin update that changes markup can undo a fix quietly.
+
+### Does the EAA cover B2B sales?
+
+It covers services offered to consumers, and many B2B buyers now require accessibility in procurement. Treat a request from a large customer as a signal, not an exception.
 
 ## A one-hour self-check
 
