@@ -2,6 +2,15 @@
 
 Target: at least 99 in Performance, Accessibility, Best Practices, and SEO on mobile and desktop.
 
+## Production homepage results, September 29, 2026
+
+[Mobile report](https://pagespeed.web.dev/analysis/https-amazingplugins-com/t4377ui08w?form_factor=mobile) and [desktop report](https://pagespeed.web.dev/analysis/https-amazingplugins-com/t4377ui08w?form_factor=desktop), captured at 10:32 AM GMT+6 with Lighthouse 13.5.0. Both scored 100 for Performance, Accessibility, Best Practices, and SEO.
+
+- Mobile: FCP 1.5 s, LCP 1.5 s, TBT 0 ms, CLS 0, Speed Index 1.5 s.
+- Desktop: FCP 0.4 s, LCP 0.4 s, TBT 0 ms, CLS 0, Speed Index 0.7 s.
+
+Scores can vary between runs; these links record the current production measurement.
+
 ## Production results, September 25, 2026
 
 Google PageSpeed Insights reports reached **99 Performance / 100 Accessibility / 100 Best Practices / 100 SEO** on mobile for all six tested pages. Desktop reports scored **100 in all four categories**.
